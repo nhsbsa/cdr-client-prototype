@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <h1 class="nhsuk-heading-xl">
+    <span class="nhsuk-caption-l">
+                Name details
+      <span class="nhsuk-u-visually-hidden"> - </span>
+          </span>Insert VTM</h1>
+</div>
+<div class="nhsuk-grid-row">
+
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="name">VTM name</label>
+        <input class="nhsuk-input" id="name" name="name" type="text" autofocus>
+      <label class="nhsuk-label" for="name-basis">Name basis</label>
+      <select class="nhsuk-select search-type" id="name-basis">
+        <option value="1">rINN - Recommended International Non-proprietary</option>
+        <option value="2">BAN - British Approved Name</option>
+        <option value="3">BANM - British Approved Name (Modified)</option>
+        <option value="4">INNM - International Non-proprietary Name (Modified)</option>
+        <option value="5">pINN - Proposed International Non-proprietary Name</option>
+        <option value="6">USAN - United States Adopted Name</option>
+        <option value="7">Other</option>
+      </select>
+      <div id="abbreviated-name-container" style="display: none">
+        <label class="nhsuk-label" for="abbreviated-name">Abbreviated name</label>
+        <div class="nhsuk-hint">Provide an abbreviated name of 60 characters or less</div>
+        <input maxlength="60" class="nhsuk-input" id="abbreviated-name" name="abbreviatedName" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <a class="nhsuk-button" href="/tce-650/mandatory-attributes">
+        Continue
+      </a>
+    </div>
+  </div>
+  <script>
+    let name = document.getElementById('name');
+    let abbreviatedNameContainer = document.getElementById('abbreviated-name-container');
+    name.addEventListener('keyup', () => {
+      if ( name.value.length > 60 ) {
+        abbreviatedNameContainer.style.display = 'block';
+        return;
+      }
+      if ( abbreviatedNameContainer.style.display !== 'none' ) {
+        abbreviatedNameContainer.style.display = 'none'
+      }
+    });
+  </script>
+</div>
+{% endblock %}

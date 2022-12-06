@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <h1 class="nhsuk-heading-xl">
+    <span class="nhsuk-caption-l">
+                Non-mandatory attributes
+      <span class="nhsuk-u-visually-hidden"> - </span>
+          </span>Insert VTM</h1>
+</div>
+<div class="nhsuk-grid-row">
+
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Is this VTM extractable?
+          </h1>
+        </legend>
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+              Yes
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+              No
+            </label>
+          </div>
+
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <a class="nhsuk-button" href="/tce-650/summary">
+        Continue
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

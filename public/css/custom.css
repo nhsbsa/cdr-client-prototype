@@ -1,0 +1,135 @@
+fill-red{
+  fill: #d5281b !important;
+}
+
+fill-blue{
+  fill: #005eb8 !important;
+}
+
+.temporal-not-eligible {
+  background-color: #fff59d;
+}
+.temporal-not-eligible:hover {
+  background-color: #ded373 !important;
+}
+
+.temporal-historic {
+  background-color: #D1D5D7;
+}
+.temporal-historic:hover {
+  background-color: #C0C7C9 !important;
+}
+
+.temporal-future-dated {
+  background-color: #C1DCCB;
+}
+
+.temporal-future-dated:hover {
+  background-color: #B2D2BC !important;
+}
+
+// TCE-1105
+
+/*
+.double-row:hover tr {
+  background-color: #e7ebec;
+}
+*/
+
+@media only screen and (min-width: 58.0625em) {
+.mobile-view {
+   display: none;
+   }
+}
+
+@media only screen and (max-width: 58.0625em) {
+ .desktop-view {
+   display: none;
+   }
+ .double-row tr:nth-child(2n -1)  {
+   margin-bottom: 0 !important;
+ }
+ .double-row tr:nth-child(2n -1) .nhsuk-table__cell:last-child {
+   border-bottom: 1px solid #d8dde0 !important;
+ }
+ .double-row tr:nth-child(2n)  {
+    margin-bottom: 16px !important;
+  }
+ .nhsuk-checkboxes__item {
+   width: 40px;
+ }
+ .eligibility-text {
+ margin-top: 0px !important;
+ margin-bottom: 0px !important;
+ }
+ .name-header {
+  padding-left: 0px !important;
+ }
+ .name-detail {
+  padding-left: 0px !important;
+ }
+ .ineligible-colour {
+  border-color:#d8dde0 !important;
+ }
+ .ineligible-and-pending-colour {
+  border-color:#d8dde0 !important;
+ }
+ .pending-colour {
+  border-color:#d8dde0 !important;
+ }
+}
+
+.ineligible-colour {
+  background-color: #fff59d;
+  border-color: #4d4712;
+}
+
+.ineligible-colour--first {
+  border-top: 1px solid #4d4712;
+}
+
+.ineligible-colour:hover {
+  background-color: #FFF06B !important;
+}
+
+.ineligible-and-pending-colour {
+  background-color: #F7D4D1;
+  border-color: #004c23;
+}
+
+.ineligible-and-pending-colour:hover {
+  background-color: #F0B8B2 !important;
+}
+
+.pending-colour {
+  background-color: #cce5d8;
+  border-color: #004281;
+}
+
+.pending-colour:hover {
+  background-color: #99CCB4 !important;
+}
+
+.double-row:hover tr {
+  background-color: #e7ebec;
+}
+
+.eligibility-text {
+ margin-top: 24px
+}
+
+.name-header {
+ padding-left: 16px;
+}
+
+.name-detail {
+ padding-left: 16px;
+ }
+
+.double-row td {
+  max-width: 750px;
+}
+
+.single-row td {
+ max-width: 750px;
+}

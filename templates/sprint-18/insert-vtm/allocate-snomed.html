@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <h1>Insert VTM</h1>
+  <h2 class="nhsuk-heading-l">Allocate SNOMED</h2>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-form-group">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Would you like to search for a SNOMED code or allocate a generated code?
+        </h1>
+      </legend>
+
+      <div class="nhsuk-radios">
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes" checked="checked" autofocus>
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Search for a SNOMED
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            Allocate a generated code
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <a class="nhsuk-button" href="/sprint-18/insert-vtm/summary">
+        Continue
+      </a>
+    </div>
+  </div>
+  <script>
+
+  </script>
+</div>
+{% endblock %}

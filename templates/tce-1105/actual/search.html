@@ -1,0 +1,1377 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="search-supplier">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24" aria-hidden="true">
+          <path
+              d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Back to supplier search</a>
+    </div>
+    <h1 class="heading-xlarge">Actual Part IX Quick Price Update</h1>
+
+<!--    <table role="table" class="nhsuk-table-responsive mobile-view" style="margin-bottom: 56px">-->
+<!--      <caption class="nhsuk-table__caption">Results</caption>-->
+<!--      <thead role="rowgroup" class="nhsuk-table__head">-->
+<!--      <tr role="row">-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Name-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Update from-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Unrounded price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          GDP-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Update from-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Unrounded price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          GDP-->
+<!--        </th>-->
+<!--        <th role="columnheader" scope="col">-->
+<!--          Eligibility-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Select-->
+<!--        </th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody class="nhsuk-table__body">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing barrier ring 8805 48mm x 4.45mm (Hollister Ltd) 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current update from </span>-->
+<!--          01/03/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current price </span>-->
+<!--          2347-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current unrounded price </span>-->
+<!--          2346.6716-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current GDP</span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future price </span>-->
+<!--          2364-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future unrounded price </span>-->
+<!--          2363.7827-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select</span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing barrier ring 8815 48mm x 2.3mm (Hollister Ltd) 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2347-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2346.6716-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2364-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2363.7827-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;purple">-->
+<!--            IE & Pending-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing convex barrier ring 89520 20mm (Hollister Ltd) 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2356-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2355.5874-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2385-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2385.0322-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;aqua-green">-->
+<!--            Pending-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing convex barrier ring 89530 30mm (Hollister Ltd) 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2356-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2355.5874-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2385-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2385.0322-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;blue">-->
+<!--            Eligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+
+<!--    <table role="table" class="nhsuk-table-responsive desktop-view" style="margin-bottom: 56px;">-->
+<!--      <caption class="nhsuk-table__caption">Results for Hollister Ltd</caption>-->
+<!--      <thead role="rowgroup" class="nhsuk-table__head">-->
+<!--      <tr role="row">-->
+<!--        <th role="columnheader" class="columnheader-sticky" scope="col">-->
+<!--          Name-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="columnheader-sticky" scope="col">-->
+<!--          Update from-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="columnheader-sticky" scope="col">-->
+<!--          Price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="columnheader-sticky" scope="col">-->
+<!--          Unrounded price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="columnheader-sticky" scope="col">-->
+<!--          GDP-->
+<!--        </th>-->
+<!--        <th role="columnheader" scope="col" class="nhsuk-u-padding-left-3 columnheader-sticky">-->
+<!--          Eligibility-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="columnheader-sticky" scope="col" style="width:15px">-->
+<!--          Select-->
+<!--        </th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" scope="rowgroup" style="vertical-align: middle">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing convex barrier ring 89530 30mm 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from</span>-->
+<!--          01/03/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current Price </span>-->
+<!--          2347-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current Unrounded price </span>-->
+<!--          2346.6716-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current GDP </span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell nhsuk-u-padding-left-3" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select</span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="checkbox-table-one-1" name="example" type="checkbox" value="Adapt CeraRing barrier ring 8805 48mm x 4.45mm 10 device">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-table-one-1">-->
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Valid from</span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future Price </span>-->
+<!--          2364-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future Unrounded price </span>-->
+<!--          2363.7827-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--      </tr >-->
+<!--      </tbody>-->
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing barrier ring 8815 48mm x 2.3mm 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from live</span>-->
+<!--          01/03/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2347-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2346.6716-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell nhsuk-u-padding-left-3" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;purple">-->
+<!--            Ineligible and pending-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+
+<!--      <tr role="row" class="nhsuk-table__row double-row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from live</span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2364-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2363.7827-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" scope="rowgroup" style="vertical-align: middle">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing convex barrier ring 89520 20mm 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from live</span>-->
+<!--          01/06/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2356-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2355.5874-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell nhsuk-u-padding-left-3" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;aqua-green">-->
+<!--            Pending-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2385-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2385.0322-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      </tbody>-->
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" scope="rowgroup" style="vertical-align: middle">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing convex barrier ring 89530 30mm 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from live</span>-->
+<!--          01/06/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2356-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2355.5874-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell nhsuk-u-padding-left-3" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;blue">-->
+<!--            Eligable-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update from </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          2385-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded price </span>-->
+<!--          2385.0322-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p>Use this link to <a href="#" onclick="checkAllBoxes()">select all</a> appliances from page 1.</p>
+      <p>Use this link to <a href="#" onclick="removeAllBoxes()">remove all</a> selections</p>
+
+    </div>
+
+    <div class="nhsuk-body-m flex--space-between">
+      <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+      <div id="pageAndResultCount">Page 1 of 1 (10 results)</div>
+      <div class="nhsuk-u-text-align--right" style="display: flex">
+        <div id="tableSortControls" style="margin-right: 15px">
+          <span>Sort:</span>
+          <span><a aria-label="Sort results by price" href="">eligibility</a></span>
+
+          <span> | </span>
+
+          <span class="nhsuk-u-font-weight-bold">name</span>
+        </div>
+      </div>
+    </div>
+
+    <table role="table" class="nhsuk-table-responsive" style="margin-bottom: 24px;">
+      <caption class="nhsuk-table__caption nhsuk-u-margin-bottom-4">Results for Hollister Ltd</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col" style="width:15px">
+          Select
+        </th>
+        <th role="columnheader" scope="col">
+          Eligibility
+        </th>
+        <th role="columnheader" class="name-header" scope="col">
+          Name
+        </th>
+        <th role="columnheader" class="" scope="col"><span class="nhsuk-u-visually-hidden">Reimbursement</span>
+          Date
+        </th>
+        <th role="columnheader" class="" scope="col">
+          GDP
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Price
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Unrounded price
+        </th>
+      </tr>
+      </thead>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing convex barrier ring 89530 30mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell eligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Eligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          <span class="nhsuk-u-visually-hidden">The next 2 rows contain data for </span>Adapt CeraRing convex barrier ring 89530 30mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-05-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>2356
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>2355.5874
+        </td>
+      </tr>
+
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>2385
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price</span>2385.0322
+        </td>
+      </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing convex barrier ring 89530 30mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell eligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Eligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing convex barrier ring 89530 30mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-05-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2356
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2355.5874
+        </td>
+      </tr>
+
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2385
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price</span>
+          2385.0322
+        </td>
+      </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing barrier ring 8805 48mm x 4.45mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+
+
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell ineligible-colour ineligible-colour--first" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Ineligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing barrier ring 8805 48mm x 4.45mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-01-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2347
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2346.6716
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2364
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price </span>
+          2363.7827
+        </td>
+      </tr >
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing barrier ring 8805 48mm x 4.45mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell ineligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Ineligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing barrier ring 8805 48mm x 4.45mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-01-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2347
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2346.6716
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2364
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price</span>
+          2363.7827
+        </td>
+      </tr >
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing barrier ring 8805 48mm x 4.45mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell ineligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Ineligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing barrier ring 8805 48mm x 4.45mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-01-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2347
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2346.6716
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2364
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price</span>
+          2363.7827
+        </td>
+      </tr >
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing barrier ring 8815 48mm x 2.3mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell ineligible-and-pending-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Ineligible and pending
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing barrier ring 8815 48mm x 2.3mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-01-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2347
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2346.6716
+        </td>
+      </tr>
+
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2364
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price</span>
+          2363.7827
+        </td>
+      </tr>
+      </tbody><tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing barrier ring 8815 48mm x 2.3mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell ineligible-and-pending-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Ineligible and pending
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing barrier ring 8815 48mm x 2.3mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-01-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2347
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2346.6716
+        </td>
+      </tr>
+
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2364
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price </span>
+          2363.7827
+        </td>
+      </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing convex barrier ring 89520 20mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell pending-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Pending
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing convex barrier ring 89520 20mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-05-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2356
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2355.5874
+        </td>
+      </tr>
+
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2385
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price </span>
+          2385.0322
+        </td>
+      </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select </span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"
+                     aria-label="Select 'Adapt CeraRing convex barrier ring 89520 20mm 10 device' for price update">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell pending-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Pending
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Adapt CeraRing convex barrier ring 89520 20mm 10 device
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement date </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>
+          01-05-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP</span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>
+          2.12
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>
+          2356
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>
+          2355.5874
+        </td>
+      </tr>
+
+
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement date </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>
+          01-05-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>
+          2385
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price </span>
+          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price </span>
+          2385.0322
+        </td>
+      </tr>
+      </tbody>
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email"-->
+<!--                     aria-label="Select 'Adapt CeraRing convex barrier ring 89530 30mm 10 device' for price update">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <p class="eligibility-text">-->
+<!--            Eligible-->
+<!--          </p>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Adapt CeraRing convex barrier ring 89530 30mm 10 device-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current reimbursement date</span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Current reimbursement date</span>-->
+<!--          01-05-2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current reimbursement GDP </span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Current reimbursement GDP</span>-->
+<!--          2.12-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current reimbursement price </span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Current reimbursement price</span>-->
+<!--          2356-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current reimbursement unrounded price </span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Current reimbursement unrounded price</span>-->
+<!--          2355.5874-->
+<!--        </td>-->
+<!--      </tr>-->
+
+
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future reimbursement date </span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Future reimbursement date</span>-->
+<!--          01-05-2022-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future reimbursement GDP </span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Future reimbursement GDP</span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future reimbursement price </span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Future reimbursement price</span>-->
+<!--          2385-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future reimbursement unrounded price</span>-->
+<!--          <span class="nhsuk-u-visually-hidden">Future reimbursement unrounded price</span>-->
+<!--          2385.0322-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+    </table>
+
+    <div id="pagination">
+      <nav aria-label="Pagination Navigation">
+        <ul class="pagination nhsuk-u-margin-bottom-0">
+          <!-- Previous Button -->
+          <li class="pagination__item">Previous</li>
+          <li class="pagination__item">|</li>
+          <!-- First Page -->
+          <!-- Page Numbers -->
+          <li class="pagination__item">
+            <!-- Not this page! -->
+            <!-- This page! -->
+            <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true" id="1">1</p>
+          </li>
+          <li class="pagination__item">
+            <!-- Not this page! -->
+            <a class="pagination__link" href="/cdr-client/vtm?execution=e1s10&amp;_eventId=viewPage&amp;pageNumber=2" id="2">2</a>
+            <!-- This page! -->
+          </li>
+
+          <!-- Next Page -->
+
+          <li class="pagination__item">|</li>
+
+          <!-- Next Button -->
+          <li class="pagination__item"><a href="/cdr-client/vtm?execution=e1s10&amp;_eventId=viewPage&amp;pageNumber=2">Next</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <a class="nhsuk-button" href="date-amend-yes-or-no">Continue</a>
+  </div>
+</div>
+<script>
+  let checkAll = document.getElementsByClassName("nhsuk-checkboxes__input");
+
+  localStorage.setItem("not-all-selections", "yes");
+  localStorage.setItem("all-selections", "no");
+
+  function checkAllBoxes() {
+     localStorage.setItem("all-selections", "yes");
+     localStorage.setItem("not-all-selections", "no");
+     for (let i = 0; i < checkAll.length; i++) {
+       checkAll[i].checked = true;
+       console.log(checkAll[i]);
+     }
+  }
+
+  function removeAllBoxes() {
+   localStorage.setItem("not-all-selections", "yes");
+    localStorage.setItem("all-selections", "no");
+     for (let i = 0; i < checkAll.length; i++) {
+       checkAll[i].checked = false;
+     }
+  }
+
+</script>
+{% endblock %}

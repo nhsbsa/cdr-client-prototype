@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="nhsuk-back-link nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0">
+  <a class="nhsuk-back-link__link" id="back-link" href="landing-page.html">
+    <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left"
+         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span>Go back to landing page</span>
+  </a>
+</div>
+<div class="nhsuk-width-container">
+  <main>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <br>
+  <h1 class="nhsuk-heading-xl">
+    Attributes search
+  </h1>
+
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="search">Search term</label>
+        <input class="nhsuk-input" id="search" name="name" type="text" autofocus>
+      <p></p>
+
+
+      <label class="nhsuk-label" for="attribute-type">Attribute type</label>
+      <select class="nhsuk-select search-type" id="attribute-type">
+        <option value="1">Form</option>
+        <option value="2">Route</option>
+        <option value="3">Ontology Form/Route</option>
+        <option value="4">Flavour</option>
+        <option value="5">Colour</option>
+      </select>
+      <p></p>
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input"
+               id="checkbox-all" type="checkbox"/>
+        <label class="nhsuk-label nhsuk-checkboxes__label"
+               for="checkbox-all">View all
+        </label>
+      </div>
+    </div>
+    <div style="float: left">
+    <a class="nhsuk-button" id="searchButton">
+      Search
+    </a>
+    <a class="nhsuk-button nhsuk-button--secondary" id="reset" href="attributes-search.html">
+      Reset
+    </a>
+    <p></p>
+    </div>
+  </div>
+</div>
+
+    <div class="nhsuk-grid-row nhsuk-u-visually-hidden" id="table-container">
+      <div class="nhsuk-grid-column-three-quarters">
+
+        <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+        <div id="results-table-container"
+             class="nhsuk-table-responsive nhsuk-table-fixed-height nhsuk-u-margin-bottom-4">
+          <table class="nhsuk-table ">
+            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Supplier results</caption>
+            <thead class="nhsuk-table__head" tabindex="0">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Description</th>
+              <th class="nhsuk-table__header columnheader-sticky"  style="width: 150px" scope="col">Start date</th>
+              <th class="nhsuk-table__header columnheader-sticky" style="width: 150px" scope="col">End date</th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body" id="table-search-results-body">
+            <tr class="nhsuk-table__row" id="row1">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-1" style="left: 16px">
+                  <a id="description-link-1" href="attributes-search.html">Bath additive</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="startdate-value-1"
+                      >22/07/2005</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="enddate-value-1"
+                >22/07/3456</span>
+              </td>
+            </tr>
+
+            <tr class="nhsuk-table__row" id="row2">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-2" style="left: 16px">
+                  <a id="description-link-2" href="attributes-search.html">Buccal tablet</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="startdate-value-1"
+                >22/07/2005</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="enddate-value-1"
+                >22/07/3456</span>
+              </td>
+            </tr>
+
+            <tr class="nhsuk-table__row" id="row3">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-3" style="left: 16px">
+                  <a id="description-link-3" href="attributes-search.html">Cachet</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="startdate-value-1"
+                >22/07/2005</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="enddate-value-1"
+                >22/07/3456</span>
+              </td>
+            </tr>
+
+            <tr class="nhsuk-table__row" id="row4">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-4" style="left: 16px">
+                  <a id="description-link-4" href="attributes-search.html">Capsule</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="startdate-value-1"
+                >22/07/2005</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="enddate-value-1"
+                >22/07/3456</span>
+              </td>
+            </tr>
+
+            <tr class="nhsuk-table__row" id="row5">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-5" style="left: 16px">
+                  <a id="description-link-5" href="attributes-search.html">Cream</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="startdate-value-1"
+                >22/07/2005</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="enddate-value-1"
+                >22/07/3456</span>
+              </td>
+            </tr>
+
+            <tr class="nhsuk-table__row" id="row6">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-6" style="left: 16px">
+                  <a id="description-link-6" href="attributes-search.html">Drops</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="startdate-value-1"
+                >22/07/2005</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="enddate-value-1"
+                >22/07/3456</span>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<script>
+  window.onload = function(){
+    let checkbox = document.getElementById('checkbox-all');
+    let searchButton = document.getElementById('searchButton');
+    let attributeType = document.getElementById('attribute-type');
+    let search = document.getElementById('search');
+
+    checkbox.addEventListener('click', () => {
+      search.disabled = !!checkbox.checked;
+      if(checkbox.checked){
+        search.value=null;
+      }
+    });
+
+    searchButton.addEventListener('click', () => {
+      if(attributeType.value==="1" && checkbox.checked){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerText='Bath additive';
+        document.getElementById('description-link-2').innerText='Buccal tablet';
+        document.getElementById('description-link-3').innerText='Cachet';
+        document.getElementById('description-link-4').innerText='Capsule';
+        document.getElementById('description-link-5').innerText='Cream';
+        document.getElementById('description-link-6').innerText='Drops';
+        document.getElementById('row1').className='nhsuk-table__row';
+        document.getElementById('row2').className='nhsuk-table__row';
+        document.getElementById('row3').className='nhsuk-table__row';
+        document.getElementById('row4').className='nhsuk-table__row';
+        document.getElementById('row5').className='nhsuk-table__row';
+        document.getElementById('row6').className='nhsuk-table__row';
+      }
+
+      if(!checkbox.checked){
+        document.getElementById('table-container').className='nhsuk-grid-row nhs nhsuk-u-visually-hidden';
+      }
+
+      if(attributeType.value==="2" && checkbox.checked){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerText='Auricular';
+        document.getElementById('description-link-2').innerText='Cutaneous';
+        document.getElementById('description-link-3').innerText='Dental';
+        document.getElementById('description-link-4').innerText='Endocervical';
+        document.getElementById('description-link-5').innerText='Endotracheopulmonary';
+        document.getElementById('description-link-6').innerText='Gastroenteral';
+        document.getElementById('row1').className='nhsuk-table__row';
+        document.getElementById('row2').className='nhsuk-table__row';
+        document.getElementById('row3').className='nhsuk-table__row';
+        document.getElementById('row4').className='nhsuk-table__row';
+        document.getElementById('row5').className='nhsuk-table__row';
+        document.getElementById('row6').className='nhsuk-table__row';
+      }
+      if(attributeType.value==="3" && checkbox.checked){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerText='tablet.oral';
+        document.getElementById('description-link-2').innerText='capsule.oral';
+        document.getElementById('description-link-3').innerText='solution.oral';
+        document.getElementById('description-link-4').innerText='suspension.oral';
+        document.getElementById('description-link-5').innerText='ointment.cutaneous';
+        document.getElementById('description-link-6').innerText='cream.cutaneous';
+        document.getElementById('row1').className='nhsuk-table__row';
+        document.getElementById('row2').className='nhsuk-table__row';
+        document.getElementById('row3').className='nhsuk-table__row';
+        document.getElementById('row4').className='nhsuk-table__row';
+        document.getElementById('row5').className='nhsuk-table__row';
+        document.getElementById('row6').className='nhsuk-table__row';
+      }
+      if(attributeType.value==="4" && checkbox.checked){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerText='Almond';
+        document.getElementById('description-link-2').innerText='Aniseed';
+        document.getElementById('description-link-3').innerText='Apple';
+        document.getElementById('description-link-4').innerText='Apricot';
+        document.getElementById('description-link-5').innerText='Asparagus';
+        document.getElementById('description-link-6').innerText='Banana';
+        document.getElementById('row1').className='nhsuk-table__row';
+        document.getElementById('row2').className='nhsuk-table__row';
+        document.getElementById('row3').className='nhsuk-table__row';
+        document.getElementById('row4').className='nhsuk-table__row';
+        document.getElementById('row5').className='nhsuk-table__row';
+        document.getElementById('row6').className='nhsuk-table__row';
+      }
+      if(attributeType.value==="5" && checkbox.checked){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerText='Beige';
+        document.getElementById('description-link-2').innerText='Black';
+        document.getElementById('description-link-3').innerText='Green';
+        document.getElementById('description-link-4').innerText='Grey';
+        document.getElementById('description-link-5').innerText='Honey';
+        document.getElementById('description-link-6').innerText='Orange';
+        document.getElementById('row1').className='nhsuk-table__row';
+        document.getElementById('row2').className='nhsuk-table__row';
+        document.getElementById('row3').className='nhsuk-table__row';
+        document.getElementById('row4').className='nhsuk-table__row';
+        document.getElementById('row5').className='nhsuk-table__row';
+        document.getElementById('row6').className='nhsuk-table__row';
+      }
+
+      if(search.value.length > 0 && !checkbox.checked){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerText=search.value;
+        document.getElementById('row2').className='nhsuk-u-visually-hidden';
+        document.getElementById('row3').className='nhsuk-u-visually-hidden';
+        document.getElementById('row4').className='nhsuk-u-visually-hidden';
+        document.getElementById('row5').className='nhsuk-u-visually-hidden';
+        document.getElementById('row6').className='nhsuk-u-visually-hidden';
+      }
+
+    });
+
+    }
+
+</script>
+{% endblock %}

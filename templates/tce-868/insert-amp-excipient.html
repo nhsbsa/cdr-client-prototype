@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="../index.html">Home</a><p></p>
+
+<h1 class="nhsuk-heading-xl">Insert AMP</h1>
+
+<h2>Excipient details</h2>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">
+        Excipient search
+      </label>
+      <div class="nhsuk-hint">Search for an excipient name and add using the results table.</div>
+      <input class="nhsuk-input" id="example" name="example" type="text">
+    </div>
+<div class="nhsuk-form-group">
+      <a href="/tce-868/insert-amp-excipient-results" class="nhsuk-button nhsuk-button--secondary" type="submit">
+        Search
+      </a>
+    </div>
+
+
+{% endblock %}

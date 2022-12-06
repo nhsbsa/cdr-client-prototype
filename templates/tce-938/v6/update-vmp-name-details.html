@@ -1,0 +1,325 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="update-vmp.html">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+
+          <h2 class="nhsuk-caption-l" id="insert-vmp-sub-heading">
+            Update Name details
+            <span class="nhsuk-u-visually-hidden"> - </span>
+          </h2>
+          <h1 id="insert-vmp-heading" class="nhsuk-heading-xl">Verapamil 160mg tablets</h1>
+
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <fieldset class="nhsuk-fieldset" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+              Details
+            </legend>
+
+          <div class="nhsuk-grid-row">
+            <div id="insert-vmp-name-container" class="nhsuk-grid-column-full">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-input-name">Product name</label>
+                <div class="nhsuk-hint">This is usually expressed as a combination of name,
+                  strength,
+                  modification, form, unit dose and freeness.
+                </div>
+                <div class="nhsuk-hint">e.g. Atenolol 12.5mg/5ml oral suspension</div>
+                <div>
+
+
+                </div>
+                <input class="nhsuk-input" id="insert-vmp-input-name" autocomplete="off" type="text"
+                       autofocus="autofocus" name="name" value="Verapamil 160mg tablets">
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-grid-row">
+            <div id="insert-vmp-abbreviated-name-container" class="nhsuk-grid-column-full"
+                 style="display: none" data-needed="true">
+              <div class="nhsuk-warning-callout">
+                <h3 class="nhsuk-warning-callout__label">
+                            <span role="text">
+                              <span class="nhsuk-u-visually-hidden">Important: </span>Abbreviated names
+                            </span>
+                </h3>
+                <p>
+                  VMPs (drugs only) with more than 60 characters will require an
+                  abbreviated name with the exception of:
+                </p>
+                <ul>
+                  <li>VMPs which are invalid as prescribable products.</li>
+                  <li>VMPs which are never valid to prescribe as a VMP.</li>
+                  <li>VMPs which are not recommended to prescribe as a VMP.</li>
+                  <li>VMPs which are Specials consisting of active ingredient diluted in an
+                    active/inactive base.
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-input-abbreviated-name">Abbreviated
+                  name</label>
+                <div class="nhsuk-hint">Provide an abbreviated name of 60 characters or less</div>
+                <div>
+
+
+                </div>
+                <input class="nhsuk-input" id="insert-vmp-input-abbreviated-name" autocomplete="off"
+                       type="text" name="abbreviatedName" value="">
+              </div>
+
+              <span id="insert-vmp-input-abbreviated-name-length"></span>
+            </div>
+          </div>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-select-name-basis">Name basis</label>
+
+
+                <div>
+
+
+                </div>
+                <select class="nhsuk-select" id="insert-vmp-select-name-basis" name="nameBasis">
+
+                  <option id="nhsuk-select-insert-vmp-select-name-basis-item0" value="RINN">rINN -
+                    Recommended International Non-proprietary
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-basis-item1" value="BAN">BAN -
+                    British Approved Name
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-basis-item2" value="BANM">BANM -
+                    British Approved Name (Modified)
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-basis-item3" value="INNM">INNM -
+                    International Non-proprietary Name (Modified)
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-basis-item4" value="PINN">pINN -
+                    Proposed International Non-proprietary Name
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-basis-item5" value="USAN">USAN -
+                    United States Adopted Name
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-basis-item6" value="OTHER">Other
+                  </option>
+                </select>
+
+
+              </div>
+
+              <details class="nhsuk-details" nhsuk-polyfilled="true" id="nhsuk-details0">
+                <summary class="nhsuk-details__summary" role="button" aria-controls="nhsuk-details__text0" tabindex="0" aria-expanded="false">
+                    <span class="nhsuk-details__summary-text">
+                      Name basis values
+                    </span>
+                </summary>
+                <div class="nhsuk-details__text" id="nhsuk-details__text0" aria-hidden="true">
+                  <p>An approved generic name should always be used if there is one available. These can be found in the</p>
+                  <ul>
+                    <li>British Approved Names which is a dictionary of drug names for regulatory use within the U.K</li>
+                    <li><a target="_blank" href="https://extranet.who.int/soinn/">MEDNET website</a></li>
+                    <li>If no information found check in Martindale’s Complete Drug Reference book.</li>
+                  </ul>
+                  <p>
+                    An <strong>International Nonproprietary Name</strong> (<strong>INN</strong>; also known as
+                    <strong>rINN</strong>, for <i>recommended</i> International Nonproprietary Name or
+                    <strong>pINN</strong> for <i>proposed</i> International Nonproprietary Name) is the
+                    official
+                    non-<a target="_blank" href="http://en.wikipedia.org/wiki/Proprietary_name">proprietary</a> or
+                    generic name given to a
+                    <a target="_blank" href="http://en.wikipedia.org/wiki/Pharmaceutical">pharmaceutical </a>
+                    <a target="_blank" href="http://en.wikipedia.org/wiki/Chemical_substance">substance</a>, as
+                    designated by the <a target="_blank" href="http://en.wikipedia.org/wiki/World_Health_Organization">World Health Organization</a>
+                    (WHO). The plethora of named proprietary preparations containing a given
+                    substance can lead to confusion about the identity of the active
+                    ingredient. INNs facilitate communication by providing a standard name
+                    for each substance; they are designed to be unique and distinct so as to
+                    avoid confusion in prescribing.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </div>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-select-name-change">Name change</label>
+
+
+                <div>
+
+
+                </div>
+                <select class="nhsuk-select" id="insert-vmp-select-name-change" name="nameBasis">
+
+                  <option id="nhsuk-select-insert-vmp-select-name-change-item0" value="">
+                    Replacement of a temporary name
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-change-item1" value="">
+                    New approved generic name available
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-change-item2" value="">
+                    Basis of name changed
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-name-change-item3" value="">
+                    Other
+                  </option>
+                </select>
+
+
+              </div>
+              
+            </div>
+          </div>
+
+          </fieldset>
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+              Start date
+            </legend>
+            <div class="nhsuk-hint" id="example-hint">
+              For example, 15 3 1984
+            </div>
+
+            <div class="nhsuk-date-input" id="example">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                         id="example-day" name="example-day" type="text" pattern="[0-9]*"
+                         inputmode="numeric" value="6"/>
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                         id="example-month" name="example-month" type="text" pattern="[0-9]*"
+                         inputmode="numeric" value="7"/>
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                         id="example-year" name="example-year" type="text" pattern="[0-9]*"
+                         inputmode="numeric" value="2021"/>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          
+          <div class="nhsuk-form-group">
+            <a class="nhsuk-button" style="float: right" href="update-vmp-name-details-summary.html">Continue</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  //<![CDATA[
+  let name = document.getElementById('insert-vmp-input-name');
+  let abbreviatedName = document.getElementById('insert-vmp-input-abbreviated-name');
+  let nameContainer = document.getElementById('insert-vmp-name-container');
+  let abbreviatedNameContainer = document.getElementById('insert-vmp-abbreviated-name-container');
+
+  let nameCountSpan = document.createElement('div')
+  nameCountSpan.id = 'insert-vmp-input-name-length'
+  nameCountSpan.classList.add('nhsuk-u-margin-top-2')
+  nameContainer.querySelector('.nhsuk-form-group').appendChild(nameCountSpan);
+
+  let abbreviatedNameCountSpan = document.createElement('div')
+  abbreviatedNameCountSpan.id = 'insert-vmp-input-abbreviated-name-length'
+  abbreviatedNameCountSpan.classList.add('nhsuk-u-margin-top-2')
+  abbreviatedNameContainer.querySelector('.nhsuk-form-group').appendChild(abbreviatedNameCountSpan);
+
+  function updateNameLengthCount() {
+    nameCountSpan.textContent = 'Name length: ' + name.value.length + ' characters';
+  }
+
+  function updateAbbreviatedNameLengthCount() {
+    abbreviatedNameCountSpan.textContent = 'Abbreviated name length: '
+        + abbreviatedName.value.length + ' characters';
+  }
+
+  function conditionallyShowAbbreviatedName() {
+    if (abbreviatedNameContainer.getAttribute('data-needed') === 'false') {
+      return;
+    }
+    if (name.value.length > 60) {
+      abbreviatedNameContainer.style.display = 'block';
+      return;
+    }
+    if (abbreviatedNameContainer.style.display !== 'none') {
+      abbreviatedNameContainer.style.display = 'none'
+    }
+  }
+
+  updateNameLengthCount();
+  updateAbbreviatedNameLengthCount();
+  conditionallyShowAbbreviatedName()
+
+  name.addEventListener('keyup', () => {
+    conditionallyShowAbbreviatedName();
+    updateNameLengthCount();
+  });
+
+  abbreviatedName.addEventListener('keyup', () => {
+    updateAbbreviatedNameLengthCount();
+  });
+
+  $(document).ready(function () {
+    $('#insert-vmp-select-name-basis').select2({
+      placeholder: "",
+    });
+  });
+  //]]>
+</script>
+
+<script>
+  Tabs();
+  CopyToClipboard();
+  CopyDateToClipboard();
+  PasteDateToDateInputs();
+</script>
+
+
+{% endblock %}

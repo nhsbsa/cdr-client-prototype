@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="../index.html">Home</a><p></p>
+
+<h1 class="nhsuk-heading-xl">Insert AMP</h1>
+
+<h2>Supplier details</h2>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="example">
+    Supplier search
+  </label>
+  <div class="nhsuk-hint">Search for a supplier name and add using the results table.</div>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+<div class="nhsuk-form-group">
+  <a href="/tce-868/insert-amp-supplier-results" class="nhsuk-button nhsuk-button--secondary" type="submit">
+    Search
+  </a>
+</div>
+
+<table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">Supplier results</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+  <tr role="row">
+    <th role="columnheader" class="" scope="col">
+      Name
+    </th>
+    <th role="columnheader" class="" scope="col">
+      Add
+    </th>
+  </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">GlaxoSmithKline UK Ltd</td>
+    <td class="nhsuk-table__cell "><a href="/tce-868/insert-amp-supplier-added">Add</a></td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">Glaxo Laboratories Ltd</td>
+    <td class="nhsuk-table__cell "><a href="/tce-868/insert-amp-supplier-added">Add</a></td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">Glaxo Wellcome UK Ltd</td>
+    <td class="nhsuk-table__cell "><a href="/tce-868/insert-amp-supplier-added">Add</a></td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">GlaxoSmithKline Australia Pty Ltd</td>
+    <td class="nhsuk-table__cell "><a href="/tce-868/insert-amp-supplier-added">Add</a></td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell">GlaxoSmithKline Consumer Healthcare UK Ltd</td>
+    <td class="nhsuk-table__cell "><a href="/tce-868/insert-amp-supplier-added">Add</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+{% endblock %}
+

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <h1 class="nhsuk-heading-xl">
+    <span class="nhsuk-caption-l">
+                Mandatory attributes
+      <span class="nhsuk-u-visually-hidden"> - </span>
+          </span>Insert VTM</h1>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label">Start Date</label>
+          <div class="nhsuk-hint">When will the product be available? This date must be today's date or later.</div>
+          <div class="nhsuk-date-input" id="example">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <a class="nhsuk-button" href="/tce-650/associated-vmp">
+        Continue
+      </a>
+    </div>
+  </div>
+
+</div>
+</div>
+{% endblock %}

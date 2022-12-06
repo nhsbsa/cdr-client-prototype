@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="nhsuk-back-link nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0">
+  <a class="nhsuk-back-link__link" id="back-link" href="landing-page.html">
+    <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left"
+         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span>Go back to landing page</span>
+  </a>
+</div>
+<div class="nhsuk-width-container">
+  <main>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-three-quarters">
+        <br>
+        <h1 class="nhsuk-heading-xl">
+          Snomed search
+        </h1>
+
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="search">Search term</label>
+          <input class="nhsuk-input" id="search" name="name" type="text" autofocus>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="snomed-type">Snomed type</label>
+              <select class="nhsuk-select search-type" id="snomed-type" style="width: 100%">
+                <option value="0">-</option>
+                <option value="1">VMP</option>
+                <option value="2">Ingredient</option>
+                <option value="3">Unit of Measure</option>
+                <option value="4">Formulation</option>
+                <option value="5">Route of Administration</option>
+                <option value="5">Supplier</option>
+                <option value="5">VTM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="code-type">Snomed code</label>
+              <select class="nhsuk-select search-type" id="code-type" style="width: 100%">
+                <option value="0">-</option>
+                <option value="1">0 - Current</option>
+                <option value="2">1 - Retired</option>
+                <option value="3">2 - Duplicate</option>
+                <option value="4">3 - Outdated</option>
+                <option value="5">4 - Ambiguous</option>
+                <option value="5">5 - Erroneous</option>
+                <option value="5">6 - Limited</option>
+                <option value="5">10 - Moved Elsewhere</option>
+                <option value="5">11 - Pending Move</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <a class="nhsuk-button nhsuk-u-margin-top-3" id="searchButton">
+          Search
+        </a>
+        <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-3" id="reset" href="snomed-search.html">
+          Reset
+        </a>
+      </div>
+    </div>
+
+    <div class="nhsuk-grid-row nhsuk-u-visually-hidden" id="table-container">
+      <div class="nhsuk-grid-column-three-quarters">
+
+        <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+        <div id="results-table-container"
+             class="nhsuk-table-responsive nhsuk-table-fixed-height nhsuk-u-margin-bottom-4">
+          <table class="nhsuk-table ">
+            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Snomed descriptor results</caption>
+            <thead class="nhsuk-table__head" tabindex="0">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Description</th>
+              <th class="nhsuk-table__header columnheader-sticky"  style="width: 150px" scope="col">ConceptID</th>
+              <th class="nhsuk-table__header columnheader-sticky" style="width: 150px" scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body" id="table-search-results-body">
+            <tr class="nhsuk-table__row" id="row1">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-1" style="left: 16px">
+                  <a id="description-link-1" href="attributes-search.html">Abacavir 300mg tablets (product)</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="concept-id-value-1"
+                >112691000000000</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="status-value-1"
+                >Current</span>
+              </td>
+            </tr>
+
+            <tr class="nhsuk-table__row" id="row2">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-2" style="left: 16px">
+                  <a id="description-link-2" href="attributes-search.html">Abacavir 600mg / Lamivudine 300mg tablets (product)</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="concept-id-value-2"
+                >8991910000000000</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="status-value-2"
+                >Current</span>
+              </td>
+            </tr>
+
+            <tr class="nhsuk-table__row" id="row3">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-3" style="left: 16px">
+                  <a id="description-link-3" href="attributes-search.html">Abarelix 100mg powder for injection (product)</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="concept-id-value-3"
+                >407131009</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="status-value-3"
+                >Retired</span>
+              </td>
+            </tr>
+
+
+            <tr class="nhsuk-table__row" id="row4">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="description-value-5" style="left: 16px">
+                  <a id="description-link-5" href="attributes-search.html">Abatacept 250mg powder for injection solution 15mL vial (product)</a>
+              </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="concept-id-value-4"
+                >421333000</span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-font-size-16"
+                      id="status-value-4"
+                >Duplicate</span>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<script>
+    let searchButton = document.getElementById('searchButton');
+    let snomedType = document.getElementById('snomed-type');
+    let codeType = document.getElementById('code-type');
+    let search = document.getElementById('search');
+
+
+    searchButton.addEventListener('click', () => {
+      if(snomedType.value==="1" && codeType.value === "0"){
+
+      if ( document.getElementById('row3').classList.contains( "nhsuk-u-visually-hidden" ) ) {
+           document.getElementById('row3').className='nhsuk-table__row';
+        } else {
+        document.getElementById('row3').className='nhsuk-table__row';
+        }
+
+        if ( document.getElementById('row4').classList.contains( "nhsuk-u-visually-hidden" ) ) {
+           document.getElementById('row4').className='nhsuk-table__row';
+        } else {
+         document.getElementById('row4').className='nhsuk-table__row';
+        }
+
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerHTML='Abacavir 300mg tablets (product)';
+        document.getElementById('description-link-2').innerHTML='Abacavir 600mg / Lamivudine 300mg tablets (product)';
+        document.getElementById('description-link-3').innerHTML='Abarelix 100mg powder for injection (product)';
+        document.getElementById('description-link-4').innerHTML='Abatacept 250mg powder for injection solution 15mL vial (product)';
+        document.getElementById('row1').className='nhsuk-table__row';
+        document.getElementById('row2').className='nhsuk-table__row';
+      }
+
+      if(snomedType.value==="1" && codeType.value === "1"){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-1').innerHTML='Abacavir 300mg tablets (product)';
+        document.getElementById('description-link-2').innerHTML='Abacavir 600mg / Lamivudine 300mg tablets (product)';
+        document.getElementById('row1').className='nhsuk-table__row';
+        document.getElementById('row2').className='nhsuk-table__row';
+        document.getElementById('row3').classList.add("nhsuk-u-visually-hidden");
+        document.getElementById('row4').classList.add("nhsuk-u-visually-hidden");
+      }
+
+      if(snomedType.value==="1" && codeType.value === "2"){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-3').innerHTML='Abarelix 100mg powder for injection (product)';
+        document.getElementById('row3').className='nhsuk-table__row';
+        document.getElementById('row1').classList.add("nhsuk-u-visually-hidden");
+        document.getElementById('row2').classList.add("nhsuk-u-visually-hidden");
+        document.getElementById('row4').classList.add("nhsuk-u-visually-hidden");
+      }
+
+      if(snomedType.value==="1" && codeType.value === "3"){
+        document.getElementById('table-container').className='nhsuk-grid-row';
+        document.getElementById('description-link-4').innerHTML='Abatacept 250mg powder for injection solution 15mL vial (product)';
+        document.getElementById('row1').classList.add("nhsuk-u-visually-hidden");
+        document.getElementById('row2').classList.add("nhsuk-u-visually-hidden");
+        document.getElementById('row3').classList.add("nhsuk-u-visually-hidden");
+        document.getElementById('row4').className='nhsuk-table__row';
+      }
+
+    });
+
+</script>
+{% endblock %}

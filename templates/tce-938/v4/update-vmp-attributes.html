@@ -1,0 +1,423 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+    <div>
+
+      <div class="nhsuk-width-container">
+
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="update-vmp.html">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                  d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+        <h1 style="float: left;" class="nhsuk-heading-xl" id="pageHeading">
+          <span>Verapamil 160mg tablets</span>
+        </h1>
+      </div>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <!--Attributes-->
+            <section class="nhsuk-u-padding-bottom-4" id="attributes-section">
+
+
+              <h2 class="nhsuk-heading-l">Attribute details</h2>
+              <div class="nhsuk-table-responsive">
+                <table role="table" class="nhsuk-table ">
+                  <thead role="rowgroup" class="nhsuk-table__head" id="attributes-table-head">
+                  <tr role="row">
+
+                    <th role="columnheader" class="columnheader-sticky" scope="col"
+                        id="attribute-table--name-header">
+                      <label id="attribute-table--name-header-span"
+                             for="attribute-table--name-filter-input">
+                        Attribute name
+                        <svg id="attribute-table--name-header-search-icon"
+                             style="height: 1.1875rem; width: 1.1875rem;"
+                             class="nhsuk-icon nhsuk-icon__search"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                             aria-hidden="true" focusable="false">
+                          <path
+                              d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                        </svg>
+                        <br/>
+                      </label>
+                      <input id="attribute-table--name-filter-input"
+                             class="attribute-table--name-filter-input-hidden" type="text"/>
+                    </th>
+                    <th role="columnheader" class="columnheader-sticky" scope="col"
+                        id="attribute-table--description-header">
+                      Current Value
+                    </th>
+                    <th role="columnheader" class="columnheader-sticky" scope="col"
+                        id="attribute-table--new-value-header">
+                      New Value
+                    </th>
+                    <th role="columnheader" class="columnheader-sticky start-end-date-column"
+                        scope="col" id="attribute-table--start-date-header"
+                        style="width: 300px;">
+                      Start date
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+
+                  <tr role="row" class="nhsuk-table__row temporal-current">
+
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                      <span
+                          id="attribute-table--prescribing-status-attribute-name-value-current">Prescribing Status</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Current Value </span>
+                      <span
+                          id="attribute-table--prescribing-status-attribute-name-descriptions-current">Valid as a prescribable product</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">New Value </span>
+
+                      <select class="nhsuk-select search-type"
+                              id="insert-vmp-select-appliance-type">
+                        <option>Valid as a prescribable product</option>
+                        <option>Invalid to prescribe in NHS primary care</option>
+                        <option>Never valid to prescribe as a VMP</option>
+                        <option>Caution - AMP level prescribing advised</option>
+                      </select>
+
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                      <span class="nhsuk-table-responsive__heading">Start date</span>
+                      <div class="nhsuk-date-input" id="type">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type-day" value="1" name="type-day" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type-month" value="7" name="type-month" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                                   id="type-year" value="2021" name="type-year" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row temporal-current">
+
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                      <span
+                          id="attribute-table--controlled-drug-category-attribute-name-value-current">Controlled Drug Category</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Current Value </span>
+                      <span
+                          id="attribute-table--controlled-drug-category-attribute-name-descriptions-current">No controlled drug status</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">New Value </span>
+                      <span class="nhsuk-u-visually-hidden">No controlled drug status</span>
+                      <select class="nhsuk-select search-type"
+                              id="insert-vmp-select-appliance-type2">
+                        <option>No controlled drug status</option>
+                        <option>Schedule 1</option>
+                        <option>Schedule 2</option>
+                        <option>Schedule 3</option>
+                      </select>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                      <span class="nhsuk-table-responsive__heading">Start date</span>
+                      <div class="nhsuk-date-input" id="type2">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type2-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type2-day" value="1" name="type2-day" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type2-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type2-month" value="7" name="type2-month" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type2-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                                   id="type2-year" value="2021" name="type2-year" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row temporal-current">
+
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                      <span
+                          id="attribute-table--sugar-free-indicator-attribute-name-value-current">Sugar Free Indicator</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Current Value </span>
+                      <span
+                          id="attribute-table-sugar-free-attribute-name-descriptions-current"></span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">New Value </span>
+                      <span class="nhsuk-u-visually-hidden"></span>
+                      <select class="nhsuk-select search-type"
+                              id="insert-vmp-select-appliance-type3">
+                        <option>-</option>
+                        <option>Sugar free</option>
+                      </select>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                      <span class="nhsuk-table-responsive__heading">Start date</span>
+                      <div class="nhsuk-date-input" id="type3">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type3-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type3-day" value="1" name="type3-day" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type3-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type3-month" value="7" name="type3-month" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type3-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                                   id="type3-year" value="2021" name="type3-year" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row temporal-current">
+
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                      <span
+                          id="attribute-table--cfc-free-indicator-attribute-name-value-current">CFC Free Indicator</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Current Value </span>
+                      <span
+                          id="attribute-table-cfc-free-attribute-name-descriptions-current"></span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">New Value </span>
+                      <span class="nhsuk-u-visually-hidden"></span>
+                      <select class="nhsuk-select search-type"
+                              id="insert-vmp-select-appliance-type4">
+                        <option>-</option>
+                        <option>CFC-free</option>
+                      </select>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                      <span class="nhsuk-table-responsive__heading">Start date</span>
+                      <div class="nhsuk-date-input" id="type4">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type4-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type4-day" value="1" name="type4-day" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type4-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type4-month" value="7" name="type4-month" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type4-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                                   id="type4-year" value="2021" name="type4-year" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row temporal-current">
+
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                      <span
+                          id="attribute-table--gluten-free-indicator-attribute-name-value-current">Gluten Free Indicator</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Current Value </span>
+                      <span
+                          id="attribute-table-gluten-free-attribute-name-descriptions-current"></span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">New Value </span>
+                      <span class="nhsuk-u-visually-hidden"></span>
+                      <select class="nhsuk-select search-type"
+                              id="insert-vmp-select-appliance-type5">
+                        <option>-</option>
+                        <option>Gluten-free</option>
+                      </select>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                      <span class="nhsuk-table-responsive__heading">Start date</span>
+                      <div class="nhsuk-date-input" id="type5">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type5-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type5-day" value="1" name="type5-day" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type5-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                                   id="type5-month" value="7" name="type5-month" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="type5-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                                   id="type5-year" value="2021" name="type5-year" type="text"
+                                   pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <script type="text/javascript">
+                //<![CDATA[
+                filterInput = document.getElementById('attribute-table--name-filter-input');
+                filterInput.onkeyup = (e) => {
+                  const rows = document.querySelectorAll(
+                      'tbody.nhsuk-table__body > tr.nhsuk-table__row');
+                  rows.forEach((row) => {
+                    const heading = row.querySelector('td:nth-child(2) > span:nth-child(2)');
+                    if (heading.textContent.toLowerCase().indexOf(e.target.value) > -1) {
+                      row.classList.remove('nhsuk-table__row__filtered');
+                    } else {
+                      row.classList.add('nhsuk-table__row__filtered');
+                    }
+                  });
+                }
+
+                const nameHeader = document.getElementById('attribute-table--name-header-span');
+                nameHeader.addEventListener('click', () => {
+                  const visible = filterInput.classList.contains(
+                      'attribute-table--name-filter-input-visible');
+                  if (visible) {
+                    filterInput.classList.remove('attribute-table--name-filter-input-visible')
+                    filterInput.classList.add('attribute-table--name-filter-input-hidden')
+                  } else {
+                    filterInput.classList.add('attribute-table--name-filter-input-visible')
+                    filterInput.classList.remove('attribute-table--name-filter-input-hidden')
+                  }
+                });
+                //]]>
+              </script>
+            </section>
+          </div>
+        </div>
+
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <div>
+              <a class="nhsuk-button" style="float: right" href="update-vmp-attributes-summary.html">Continue</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+<script>
+  Tabs();
+</script>
+
+
+{% endblock %}

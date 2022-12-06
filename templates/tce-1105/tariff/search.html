@@ -1,0 +1,961 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="../portal.html">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24" aria-hidden="true">
+          <path
+              d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Home</a>
+    </div>
+    <h1 class="heading-xlarge">Generics Part IX Quick Price Update</h1>
+
+<!--    <table role="table" class="nhsuk-table-responsive nhsuk-u-margin-bottom-7 mobile-view" style="margin-bottom: 24px">-->
+<!--      <caption class="nhsuk-table__caption">Results</caption>-->
+<!--      <thead role="rowgroup" class="nhsuk-table__head">-->
+<!--      <tr role="row">-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Name-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Unrnd-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          GDP-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Date-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Unrnd-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          GDP-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Date-->
+<!--        </th>-->
+<!--        <th role="columnheader" scope="col">-->
+<!--            Eligibility-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Select-->
+<!--        </th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody class="nhsuk-table__body">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Absorbent cotton BP 1988 100 gram-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          184-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          183.7347-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date </span>-->
+<!--          01-06-2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          185-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          184.5003-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select? </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Absorbent cotton BP 1988 25 gram-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          81-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          80.7387-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date </span>-->
+<!--          01-06-2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          81-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          81.0751-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select? </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Absorbent cotton BP 1988 500 gram-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          619-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          619.4086-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date </span>-->
+<!--          01-06-2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          622-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          621.9895-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select? </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+
+<!--    <table role="table" class="nhsuk-table-responsive desktop-view" style="margin-bottom: 56px;">-->
+<!--      <caption class="nhsuk-table__caption">Results</caption>-->
+<!--      <thead role="rowgroup" class="nhsuk-table__head">-->
+<!--      <tr role="row">-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Name-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Date-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Price-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Unrnd-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          GDP-->
+<!--        </th>-->
+<!--        <th role="columnheader" scope="col" class="nhsuk-u-padding-left-3">-->
+<!--          Eligibility-->
+<!--        </th>-->
+<!--        <th role="columnheader" class="" scope="col" style="width:15px">-->
+<!--          Select-->
+<!--        </th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Absorbent cotton BP 1988 100 gram-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date</span>-->
+<!--          01-06-2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current price </span>-->
+<!--          184-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current unrounded </span>-->
+<!--          183.7347-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Current GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell nhsuk-u-padding-left-3" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select? </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Valid from</span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future price </span>-->
+<!--          185-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future unrounded </span>-->
+<!--          184.5003-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Future GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--      </tr >-->
+<!--      </tbody>-->
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Absorbent cotton BP 1988 25 gram-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date live</span>-->
+<!--          01-06-2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          81-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          80.7387-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell nhsuk-u-padding-left-3" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select? </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+
+<!--      <tr role="row" class="nhsuk-table__row double-row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date live</span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          81-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          81.0751-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+
+<!--      <tbody class="nhsuk-table__body double-row">-->
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" scope="rowgroup" style="vertical-align: middle">-->
+<!--          <span class="nhsuk-table-responsive__heading">Name </span>-->
+<!--          Absorbent cotton BP 1988 500 gram-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date live</span>-->
+<!--          01-06-2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          619-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          619.4086-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell nhsuk-u-padding-left-3" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Eligibility </span>-->
+<!--          <strong class="nhsuk-tag nhsuk-tag&#45;&#45;yellow">-->
+<!--            Ineligible-->
+<!--          </strong>-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">-->
+<!--          <span class="nhsuk-table-responsive__heading">Select? </span>-->
+<!--          <div class="nhsuk-checkboxes">-->
+
+<!--            <div class="nhsuk-checkboxes__item">-->
+<!--              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">-->
+<!--              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">-->
+
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+
+<!--      <tr role="row" class="nhsuk-table__row">-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Date </span>-->
+<!--          01/10/2021-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Price </span>-->
+<!--          622-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Unrounded </span>-->
+<!--          621.9895-->
+<!--        </td>-->
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">GDP </span>-->
+<!--          2.0-->
+<!--        </td>-->
+
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p>Use this link to <a href="#" onclick="checkAllBoxes()">select all</a> appliances from page 1.</p>
+      <p>Use this link to <a href="#" onclick="removeAllBoxes()">remove all</a> selections</p>
+    </div>
+
+
+
+    <div class="nhsuk-body-m flex--space-between">
+      <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+      <div id="pageAndResultCount">Page 1 of 1 (5 results)</div>
+      <div class="nhsuk-u-text-align--right" style="display: flex">
+        <div id="tableSortControls" style="margin-right: 15px">
+          <span>Sort:</span>
+          <span><a aria-label="Sort results by price" href="">eligibility</a></span>
+
+          <span> | </span>
+
+          <span class="nhsuk-u-font-weight-bold">name</span>
+        </div>
+      </div>
+    </div>
+
+    <table role="table" class="nhsuk-table-responsive" style="margin-bottom: 32px;">
+      <caption class="nhsuk-table__caption">Results</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col" style="width:15px">
+          Select
+        </th>
+        <th role="columnheader" scope="col">
+          Eligibility
+        </th>
+        <th role="columnheader" class="name-header" scope="col">
+          Name
+        </th>
+<!--        <th role="columnheader" class="" scope="col">-->
+<!--          Update-->
+<!--        </th>-->
+        <th role="columnheader" class="" scope="col">
+          Date
+        </th>
+        <th role="columnheader" class="" scope="col">
+          GDP
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Price
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Unrounded price
+        </th>
+      </tr>
+      </thead>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select</span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell eligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Eligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Absorbent cotton BP 1988 100 gram
+        </td>
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Current-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          184
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          183.7347
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Future-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">GDP </span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          185
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          184.5003
+        </td>
+      </tr >
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select</span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell eligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Eligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Absorbent cotton BP 1988 25 gram
+        </td>
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Current-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          81
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          80.7387
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Future-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">GDP </span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          81
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          81.0751
+        </td>
+      </tr >
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select</span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell eligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Eligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Absorbent cotton BP 1988 500 gram
+        </td>
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Current-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          619
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          619.4086
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Future-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">GDP </span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          622
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          621.9895
+        </td>
+      </tr >
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select</span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell eligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Eligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Absorbent cotton and viscose ribbon gauze BP 1988 sterile 1.25cm 5m
+        </td>
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Current-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          91
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          90.862
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Future-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">GDP </span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          92
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          91.8085
+        </td>
+      </tr >
+      </tbody>
+
+      <tbody class="nhsuk-table__body double-row">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Select</span>
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+
+              </label>
+            </div>
+          </div>
+        </td>
+        <td role="cell" class="nhsuk-table__cell eligible-colour" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Eligibility </span>
+          <p class="eligibility-text">
+            Eligible
+          </p>
+        </td>
+        <td role="cell" class="nhsuk-table__cell name-detail" rowspan="2" style="vertical-align: middle;">
+          <span class="nhsuk-table-responsive__heading">Name </span>
+          Hypodermic U100 insulin syringe sterile single use / single patient use 0.3ml with not less than 12mm needle 0.33mm / 29 gauge 10 syringe
+        </td>
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Current-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2021
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">GDP</span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          114
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Current update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          114.1315
+        </td>
+      </tr>
+
+      <tr role="row" class="nhsuk-table__row">
+<!--        <td role="cell" class="nhsuk-table__cell">-->
+<!--          <span class="nhsuk-table-responsive__heading">Update</span>-->
+<!--          Future-->
+<!--        </td>-->
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Reimbursement date</span>
+          01-06-2022
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">GDP </span>
+          2.0
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Price </span>
+          115
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-u-visually-hidden">Future update</span>
+          <span class="nhsuk-table-responsive__heading">Unrounded price</span>
+          115.3204
+        </td>
+      </tr >
+      </tbody>
+
+    </table>
+
+    <div id="pagination">
+      <nav aria-label="Pagination Navigation">
+        <ul class="pagination">
+          <!-- Previous Button -->
+          <li class="pagination__item">Previous</li>
+          <li class="pagination__item">|</li>
+          <!-- First Page -->
+          <!-- Page Numbers -->
+          <li class="pagination__item">
+            <!-- Not this page! -->
+            <!-- This page! -->
+            <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true" id="1">1</p>
+          </li>
+          <li class="pagination__item">
+            <!-- Not this page! -->
+            <a class="pagination__link" href="#" id="2">2</a>
+            <!-- This page! -->
+          </li>
+
+          <!-- Next Page -->
+
+          <li class="pagination__item">|</li>
+
+          <!-- Next Button -->
+          <li class="pagination__item"><a href="#">Next</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <a class="nhsuk-button" onclick="goToSelections()" id="continue-button"
+       href="../tariff/confirm.html">Continue</a>
+  </div>
+</div>
+
+<script>
+  let checkAll = document.getElementsByClassName("nhsuk-checkboxes__input");
+  let continueButton = document.getElementById("continue-button");
+
+  localStorage.setItem("not-all-generic-selections", "yes");
+  localStorage.setItem("all-generic-selections", "no");
+
+  function goToSelections() {
+     if (localStorage.getItem("not-all-generic-selections") == "yes") {
+        continueButton.href = "confirm.html";
+     } else if (localStorage.getItem("all-generic-selections") == "yes") {
+        continueButton.href = "confirm-all.html";
+     }
+  }
+
+  function checkAllBoxes() {
+  localStorage.setItem("not-all-generic-selections", "no");
+  localStorage.setItem("all-generic-selections", "yes");
+     for (let i = 0; i < checkAll.length; i++) {
+       checkAll[i].checked = true;
+     }
+  }
+
+  function removeAllBoxes() {
+  localStorage.setItem("not-all-generic-selections", "yes");
+  localStorage.setItem("all-generic-selections", "no");
+     for (let i = 0; i < checkAll.length; i++) {
+       checkAll[i].checked = false;
+     }
+  }
+
+</script>
+{% endblock %}

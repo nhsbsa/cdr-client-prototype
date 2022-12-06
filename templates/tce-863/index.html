@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <a href="../index.html">Home</a>
+  <p></p>
+  <h1 class="nhsuk-heading-xl">Insert VMPP combination pack</h1>
+
+<label class="nhsuk-caption-l">
+  VMP name
+</label>
+<h3>Generic Fortisip Compact Starter Pack liquid</h3>
+</div>
+<div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label"><p></p>Start Date</label>
+        <div class="nhsuk-hint">When will the product be available? This date must be today's date or later.</div>
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="example-day" type="number" pattern="[0-9]*" inputmode="numeric" value="13">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="example-month" type="number" pattern="[0-9]*" inputmode="numeric" value="05">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="example-year" type="number" pattern="[0-9]*" inputmode="numeric" value="2021"><p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <label class="nhsuk-label" for="quantity-input">Quantity</label>
+            <div class="nhsuk-hint">For example, if the new product is 250 ml, enter 250.</div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <input class="nhsuk-input nhsuk-input--width-10" id="quantity-input" name="example-quantity" type="number" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="uom"><p></p>UOM</label>
+              <div class="nhsuk-hint">Select an appropriate unit of measure.</div>
+              <select class="nhsuk-select search-type" id="uom" autofocus>
+                <option disabled selected>-</option>
+                <option value="1">cm</option>
+                <option value="2">gram</option>
+                <option value="3">iu</option>
+                <option value="4">ml</option>
+                <option value="5">kg</option>
+                <option value="6">litre</option>
+                <option value="7">iu/g</option>
+                <option value="8">iu/ml</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <a class="nhsuk-button" href="/tce-863/add-vmpps">
+        Continue
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

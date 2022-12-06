@@ -1,0 +1,199 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+    <div>
+
+      <div class="nhsuk-width-container">
+
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="update-vmp.html">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                  d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+
+            <h2 class="nhsuk-caption-l" id="insert-vmp-sub-heading">
+              Update summary details
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </h2>
+            <h1 id="insert-vmp-heading" class="nhsuk-heading-xl">Verapamil 160mg tablets</h1>
+
+          </div>
+        </div>
+      </div>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <section class="nhsuk-u-padding-bottom-4" id="summary-section">
+            <h2 class="header-medium">Summary</h2>
+            <div class="nhsuk-table-responsive">
+              <table id="codes-table" class="nhsuk-table ">
+                <caption class="nhsuk-u-visually-hidden">Summary</caption>
+
+                <thead class="nhsuk-table__head">
+                <tr class="nhsuk-table__row">
+
+                  <th role="columnheader" class="columnheader-sticky" scope="col"
+                      id="code-table--code-header">Attribute
+                  </th>
+                  <th role="columnheader" class="columnheader-sticky" scope="col"
+                      id="attribute-table--description-header">
+                    Current Value
+                  </th>
+                  <th role="columnheader" class="columnheader-sticky" scope="col"
+                      id="code-table--clinical-term-header">New Value
+                  </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Attribute </span>
+                    <span id="summary-table-attribute-start-date-value-name">Start Date</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Current Value </span>
+                    <span id="summary-table-attribute-start-date-value-current">SOT</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">New Value </span>
+                    <span id="summary-table-attribute-start-date-value-new-value">N/A</span>
+                  </td>
+                </tr>
+
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Attribute </span>
+                    <span id="summary-table-attribute-end-date-value-name">End Date</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Current Value </span>
+                    <span id="summary-table-attribute-end-date-value-current">EOT</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">New Value </span>
+                    <span id="summary-table-attribute-end-date-value-new-value">N/A</span>
+                  </td>
+                </tr>
+
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Attribute </span>
+                    <span id="summary-table-attribute-pit-value-name">PIT</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Current Value </span>
+                    <span id="summary-table-attribute-pit-value-current">Generic Name VMP</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">New Value </span>
+                    <span id="summary-table-attribute-pit-value-new-value">
+                      <select class="nhsuk-select search-type"
+                                id="summary-table-attribute-pit-new-value">
+                        <option>Generic Name VMP</option>
+                        <option>Oxygen Cylinders</option>
+                        <option>Appliances (inc.oxy)</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Attribute </span>
+                    <span id="summary-table-attribute-dictionary-value-name">Dictionary</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Current Value </span>
+                    <span id="summary-table-attribute-dictionary-value-current">PCDD</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">New Value </span>
+                    <span id="summary-table-attribute-dictionary-value-new-value">
+                      <select class="nhsuk-select search-type"
+                              id="summary-table-attribute-dictionary-new-value">
+                        <option>PCDD</option>
+                        <option>SCDD</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Attribute </span>
+                    <span id="summary-table-attribute-invalid-value-name">Invalid</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Current Value </span>
+                    <span id="summary-table-attribute-invalid-value-current"></span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">New Value </span>
+                    <span id="summary-table-attribute-invalid-value-new-value">
+                      <select class="nhsuk-select search-type"
+                              id="summary-table-attribute-invalid-new-value">
+                        <option>-</option>
+                        <option>Invalid</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Attribute </span>
+                    <span id="summary-table-attribute-extractable-value-name">Extractable</span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Current Value </span>
+                    <span id="summary-table-attribute-extractable-value-current"></span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">New Value </span>
+                    <span id="summary-table-attribute-extractable-value-new-value">
+                      <select class="nhsuk-select search-type"
+                              id="summary-table-attribute-extractable-new-value">
+                        <option>-</option>
+                        <option>Extractable</option>
+                      </select>
+                    </span>
+                  </td>
+                </tr>
+                
+                </tbody>
+              </table>
+            </div>
+
+          </section>
+        </div>
+      </div>
+
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div>
+            <a class="nhsuk-button" style="float: right" href="update-vmp-summary-summary.html">Continue</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+<script>
+  Tabs();
+</script>
+
+
+{% endblock %}

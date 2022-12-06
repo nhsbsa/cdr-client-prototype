@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <a href="../index.html">Home</a><p></p>
+
+  <span class="nhsuk-caption-l">
+                Add VMPP's
+      <span class="nhsuk-u-visually-hidden"> - </span>
+    </span>
+  <h1 class="heading-xlarge">Insert VMPP Combination Pack</h1>
+
+  <label class="nhsuk-caption-m">
+    VMP name
+  </label>
+  <h3>Generic Fortisip Compact Starter Pack liquid</h3>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Added VMPP's</h2>
+    <p>Search for a VMP below and add the associated VMPP's as required</p>
+    <h2>Search for VMP</h2>
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">
+        VMP Search
+      </label>
+      <input class="nhsuk-input" id="example" name="example" type="text">
+    </div>
+    <div class="nhsuk-grid-column-full">
+      <button style="float: right" class="nhsuk-button nhsuk-button--secondary" type="submit">
+        Search
+      </button>
+    </div>
+
+    <table class="nhsuk-table" style="border: solid 1px lightgray">
+      <caption class="nhsuk-table__caption">VMP Results</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          Name
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Unavail
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Inv
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Unext
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Add
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Generic Fortisip Compact liquid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="nhsuk-table__cell "><a href="/tce-863/associated-vmpp-results">Select</a></td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Fortisip Compact liquid strawberry</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="nhsuk-table__cell "><a href="/tce-863/associated-vmpp-results">Select</a></td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Fortisip Compact liquid vanilla</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="nhsuk-table__cell "><a href="/tce-863/associated-vmpp-results">Select</a></td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Fortisip Compact liquid mocha</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="nhsuk-table__cell "><a href="/tce-863/associated-vmpp-results">Select</a></td>
+      </tr>
+
+      </tbody>
+    </table>
+
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">VMPP Results</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          Name
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Add
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Generic Fortisip Compact liquid 125ml</td>
+        <td class="nhsuk-table__cell "><a href="/tce-863/associated-vmp-added">Add</a></td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Generic Fortisip Compact liquid 500ml</td>
+        <td class="nhsuk-table__cell "><a href="/tce-863/associated-vmp-added2">Add</a></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+{% endblock %}

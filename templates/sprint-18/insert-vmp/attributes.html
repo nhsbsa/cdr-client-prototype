@@ -1,0 +1,676 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+  select {
+    width: 100%
+  }
+  .nhsuk-input-daymonth {
+    width: calc(1.1877rem * 2);
+    width: calc(1.1877rem * 2);
+  }
+  .nhsuk-input-year {
+    width: calc(1.1877rem * 4);
+  }
+</style>
+<div class="nhsuk-grid-row">
+  <h1 class="nhsuk-heading-xl">Create VMP</h1>
+  <h2 class="nhsuk-heading-l">Required Attributes</h2>
+</div>
+<div class="nhsuk-form-group">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="prescribing-status">Prescribing Status</label>
+        <select class="nhsuk-select search-type" id="prescribing-status"
+
+                autofocus>
+          <option disabled selected>-</option>
+          <option value="1">Valid as a prescribable product</option>
+          <option value="2">Invalid to prescribe in NHS primary care</option>
+          <option value="3">Not prescribable as a VMP but AMP prescribable</option>
+          <option value="4">Never Valid To Prescribe As A VMP</option>
+          <option value="5">Not Recommended To Prescribe As A VMP</option>
+          <option value="6">VMP not recommended to prescribe - brands not bioequivalent</option>
+          <option value="7">VMP not recommended to prescribe - patient training required
+          </option>
+          <option value="8">VMP not recommended to prescribe -no published specification
+          </option>
+          <option value="0">Caution - AMP level prescribing advised</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <label class="nhsuk-label" for="controlled-drug-category">Controlled drug category</label>
+      <select class="nhsuk-select search-type" id="controlled-drug-category" autofocus>
+        <option disabled selected>-</option>
+        <option value="1">No Controlled Drug Status</option>
+        <option value="2">Schedule 1 (CD Lic)</option>
+        <option value="3">Schedule 2 (CD)</option>
+        <option value="4">Schedule 2 (CD Exempt Safe Custody)</option>
+        <option value="5">Schedule 3 (CD No Register)</option>
+        <option value="6">Schedule 3 (CD No Register Exempt Safe Custody)</option>
+        <option value="7">Schedule 3 (CD No Register Phenobarbital)</option>
+        <option value="8">Schedule 3 (CD No Register Temazepam)</option>
+        <option value="9">Schedule 4 (CD Anab)</option>
+        <option value="10">Schedule 4 (CD Benz)</option>
+        <option value="11">Schedule 5 (CD Inv)</option>
+      </select>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="form">Form</label>
+        <select class="nhsuk-select search-type" id="form"
+                autofocus>
+          <option disabled selected>-</option>
+          <option>Bath additive</option>
+          <option>Buccal tablet</option>
+          <option>Cachet</option>
+          <option>Capsule</option>
+          <option>Chewable tablet</option>
+          <option>Collodion</option>
+          <option>Cream</option>
+          <option>Cutaneous sponge</option>
+          <option>Dental insert</option>
+          <option>Dispersible tablet</option>
+          <option>Drops</option>
+          <option>Effervescent granules</option>
+          <option>Effervescent powder</option>
+          <option>Effervescent tablet</option>
+          <option>Effervescent vaginal tablet</option>
+          <option>Enema</option>
+          <option>Eye lotion</option>
+          <option>Foam</option>
+          <option>Gargle</option>
+          <option>Gastro-resistant capsule</option>
+          <option>Gastro-resistant granules</option>
+          <option>Gastro-resistant tablet</option>
+          <option>Gel</option>
+          <option>Granules</option>
+          <option>Herbal tea</option>
+          <option>Implant</option>
+          <option>Impregnated dressing</option>
+          <option>Inhalation gas</option>
+          <option>Inhalation powder</option>
+          <option>Inhalation vapour</option>
+          <option>Obsolete - Injection</option>
+          <option>Instant herbal tea</option>
+          <option>Obsolete - Intravenous infusion</option>
+          <option>Irrigation</option>
+          <option>Liquid</option>
+          <option>Lozenge</option>
+          <option>Medicated chewing-gum</option>
+          <option>Medicated nail lacquer</option>
+          <option>Modified-release capsule</option>
+          <option>Modified-release drops</option>
+          <option>Modified-release granules</option>
+          <option>Modified-release tablet</option>
+          <option>Mouthwash</option>
+          <option>Muco-adhesive buccal tablet</option>
+          <option>Nebuliser liquid</option>
+          <option>Ointment</option>
+          <option>Ophthalmic insert</option>
+          <option>Oral emulsion</option>
+          <option>Oral gum</option>
+          <option>Oral solution</option>
+          <option>Oral suspension</option>
+          <option>Oral lyophilisate</option>
+          <option>Orodispersible tablet</option>
+          <option>Paint</option>
+          <option>Paste</option>
+          <option>Pastille</option>
+          <option>Pessary</option>
+          <option>Pillules</option>
+          <option>Poultice</option>
+          <option>Powder</option>
+          <option>Pressurised inhalation</option>
+          <option>Shampoo</option>
+          <option>Soluble tablet</option>
+          <option>Spray</option>
+          <option>Stick</option>
+          <option>Sublingual spray</option>
+          <option>Sublingual tablet</option>
+          <option>Suppository</option>
+          <option>Tablet</option>
+          <option>Tampon</option>
+          <option>Transdermal patch</option>
+          <option>Vaginal device</option>
+          <option>Vaginal sponge</option>
+          <option>Wash</option>
+          <option>Not applicable</option>
+          <option>Intrauterine device</option>
+          <option>Epidural infusion</option>
+          <option>Homeopathic tablet</option>
+          <option>Homeopathic pillule</option>
+          <option>Homeopathic cream</option>
+          <option>Homeopathic ointment</option>
+          <option>Homeopathic granules</option>
+          <option>Homeopathic oral powder</option>
+          <option>Homeopathic liquid potency</option>
+          <option>Solution for injection</option>
+          <option>Suspension for injection</option>
+          <option>Emulsion for injection</option>
+          <option>Powder for solution for injection</option>
+          <option>Powder for suspension for injection</option>
+          <option>Powder and solvent for solution for injection</option>
+          <option>Powder and solvent for suspension for injection</option>
+          <option>Powder for injection</option>
+          <option>Powder and solvent for dispersion for injection</option>
+          <option>Powder for reconstitution for instillation</option>
+          <option>Cement</option>
+          <option>Colloidal suspension for injection</option>
+          <option>Sterile solution</option>
+          <option>Radionuclide generator</option>
+          <option>Aerosol generator</option>
+          <option>Homeopathic elixir</option>
+          <option>Homeopathic drops</option>
+          <option>Solution for peritoneal dialysis</option>
+          <option>Solution for haemodialysis</option>
+          <option>Solution for haemofiltration</option>
+          <option>Ophthalmic strip</option>
+          <option>Medicated plaster</option>
+          <option>Powder and solvent for solution for instillation</option>
+          <option>Impregnated cigarette</option>
+          <option>Solution for dispersion for injection</option>
+          <option>Modified-release muco-adhesive buccal tablet</option>
+          <option>Transdermal system</option>
+          <option>Bladder irrigation</option>
+          <option>Gastroenteral liquid</option>
+          <option>Powder for gastroenteral liquid</option>
+          <option>Powder for nebuliser solution</option>
+          <option>Solution for infusion</option>
+          <option>Emulsion for infusion</option>
+          <option>Powder for solution for infusion</option>
+          <option>Powder and solvent for solution for infusion</option>
+          <option>Infusion</option>
+          <option>Cutaneous spray solution</option>
+          <option>Oromucosal solution</option>
+          <option>Nasal spray suspension</option>
+          <option>Tablet for cutaneous solution</option>
+          <option>Vaginal delivery system</option>
+          <option>Powder for suspension for infusion</option>
+          <option>Emulsion and suspension for emulsion for injection</option>
+          <option>Suspension for infusion</option>
+          <option>Solution for skin-prick test</option>
+          <option>Eye drops</option>
+          <option>Ear drops</option>
+          <option>Nasal drops</option>
+          <option>Implantation suspension</option>
+          <option>Irrigation solution</option>
+          <option>Granules for oral suspension</option>
+          <option>Cutaneous emulsion</option>
+          <option>Powder and solvent for suspension for infusion</option>
+          <option>Powder and suspension for suspension for injection</option>
+          <option>Cutaneous patch</option>
+          <option>Powder and solvent for nebuliser solution</option>
+          <option>Gel for injection</option>
+          <option>Homeopathic liquid</option>
+          <option>Oral drops</option>
+          <option>Eye ointment</option>
+          <option>Nasal ointment</option>
+          <option>Rectal ointment</option>
+          <option>Dental gel</option>
+          <option>Eye gel</option>
+          <option>Oral gel</option>
+          <option>Oromucosal gel</option>
+          <option>Vaginal gel</option>
+          <option>Ear/eye drops solution</option>
+          <option>Ear/eye/nose drops solution</option>
+          <option>Solution for sealant</option>
+          <option>Cutaneous solution</option>
+          <option>Concentrate for oral solution</option>
+          <option>Intravesical solution</option>
+          <option>Intestinal gel</option>
+          <option>Powder for solution for iontophoresis</option>
+          <option>Orodispersible film</option>
+          <option>Buccal film</option>
+          <option>Solution for cardioplegia</option>
+          <option>Nasal gel</option>
+          <option>Powder and solvent for suspension for instillation</option>
+          <option>Chewable capsule</option>
+          <option>Powder and solvent for prolonged-release suspension for inj</option>
+          <option>Prolonged-release suspension for injection</option>
+          <option>Powder and gel for gel</option>
+          <option>Gas and solvent for dispersion for injection/infusion</option>
+          <option>Dispersion for injection</option>
+          <option>Powder and solvent for intravesical solution</option>
+          <option>Kit for radiopharmaceutical preparation</option>
+          <option>Living tissue equivalent</option>
+          <option>Solution for blood fraction modification</option>
+          <option>Solution for iontophoresis</option>
+          <option>Periodontal insert</option>
+          <option>Dispersion for infusion</option>
+          <option>Prolonged-release solution for injection</option>
+          <option>Dental suspension</option>
+          <option>Solvent for BCG Vaccine AJV</option>
+          <option>Concentrate and solvent for solution for injection</option>
+          <option>Powder for intravesical solution</option>
+          <option>Powder for dispersion for infusion</option>
+          <option>Inhalation solution</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <label class="nhsuk-label" for="controlled-drug-category">Route</label>
+      <select class="nhsuk-select search-type" id="controlled-drug-category" autofocus>
+        <option disabled selected>-</option>
+        <option>Auricular</option>
+        <option>Cutaneous</option>
+        <option>Dental</option>
+        <option>Endocervical</option>
+        <option>Endosinusial</option>
+        <option>Endotracheopulmonary</option>
+        <option>Epidural</option>
+        <option>Extraamniotic</option>
+        <option>Gastroenteral</option>
+        <option>Gingival</option>
+        <option>Haemodialysis</option>
+        <option>Intraamniotic</option>
+        <option>Intraarterial</option>
+        <option>Intraarticular</option>
+        <option>Intrabursal</option>
+        <option>Intracardiac</option>
+        <option>Intracavernous</option>
+        <option>Intracervical</option>
+        <option>Intracoronary</option>
+        <option>Intradermal</option>
+        <option>Intradiscal</option>
+        <option>Intralesional</option>
+        <option>Intralymphatic</option>
+        <option>Intramuscular</option>
+        <option>Intraocular</option>
+        <option>Intraperitoneal</option>
+        <option>Intrapleural</option>
+        <option>Intrasternal</option>
+        <option>Intrathecal</option>
+        <option>Intrauterine</option>
+        <option>Intravenous</option>
+        <option>Intravesical</option>
+        <option>Nasal</option>
+        <option>Ocular</option>
+        <option>Oral</option>
+        <option>Buccal</option>
+        <option>Sublingual</option>
+        <option>Obsolete-Oromucosal other</option>
+        <option>Periarticular</option>
+        <option>Perineural</option>
+        <option>Rectal</option>
+        <option>Inhalation</option>
+        <option>Route of administration not applicable</option>
+        <option>Subconjunctival</option>
+        <option>Subcutaneous</option>
+        <option>Transdermal</option>
+        <option>Urethral</option>
+        <option>Vaginal</option>
+        <option>Obsolete-Intraventricular</option>
+        <option>useBody cavity
+        <option>Haemofiltration</option>
+        <option>Intraosseous</option>
+        <option>Intraventricular cardiac</option>
+        <option>Submucosal rectal</option>
+        <option>Regional perfusion</option>
+        <option>Intravitreal</option>
+        <option>Oromucosal</option>
+        <option>Intraepidermal</option>
+        <option>Epilesional</option>
+        <option>Intracameral</option>
+        <option>Iontophoresis</option>
+        <option>Intratumoral</option>
+        <option>Subretinal</option>
+        <option>Intraglandular</option>
+      </select>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <label class="nhsuk-label" for="controlled-drug-category">Ontology form/route</label>
+      <select class="nhsuk-select search-type" id="controlled-drug-category" autofocus>
+        <option selected disabled>-</option>
+        <option>tablet.oral</option>
+        <option>tabletmodified-release.oral</option>
+        <option>capsule.oral</option>
+        <option>pressurizedinhalation.inhalation</option>
+        <option>solution.oral</option>
+        <option>suspension.oral</option>
+        <option>ointment.cutaneous</option>
+        <option>cream.cutaneous</option>
+        <option>capsulemodified-release.oral</option>
+        <option>solutiondrops.ophthalmic</option>
+        <option>ointment.ophthalmic</option>
+        <option>cream.bathadditive</option>
+        <option>ointment.bathadditive</option>
+        <option>suspensiondrops.ophthalmic</option>
+        <option>suspensiondropsmodified-release.ophthalmic</option>
+        <option>tabletgastro-resistant.oral</option>
+        <option>capsulegastro-resistant.oral</option>
+        <option>tabletbuccal.buccal</option>
+        <option>tabletsublingual.oromucosal</option>
+        <option>suppository.rectal</option>
+        <option>solutioninjection.subcutaneous</option>
+        <option>solutioninjection.intramuscular</option>
+        <option>solutioninjection.intravenous</option>
+        <option>liquidfood.oral</option>
+        <option>liquidfood.gastroenteral</option>
+        <option>tabletbuccalmodified-release.buccal</option>
+        <option>powderinhalation.inhalation</option>
+        <option>grocerysolid.oral</option>
+        <option>grocerysemisolid.oral</option>
+        <option>granulesfoodmix.oral</option>
+        <option>powderfoodmix.oral</option>
+        <option>medicatedchewing-gum.oromucosal</option>
+        <option>patch.transdermal</option>
+        <option>cream.rectal</option>
+        <option>cream.transdermal</option>
+        <option>cream.nasal</option>
+        <option>cream.vaginal</option>
+        <option>gel.cutaneous</option>
+        <option>gel.transdermal</option>
+        <option>gel.vaginal</option>
+        <option>ointment.nasal</option>
+        <option>ointment.rectal</option>
+        <option>ointment.transdermal</option>
+        <option>pessary.vaginal</option>
+        <option>ring.vaginal</option>
+        <option>solutiondrops.auricular</option>
+        <option>solutiondrops.nasal</option>
+        <option>suspensionspray.nasal</option>
+        <option>suspensiondrops.auricular</option>
+        <option>suspensioninjection.intramuscular</option>
+        <option>suspensioninjection.intravenous</option>
+        <option>suspensioninjection.subcutaneous</option>
+        <option>suspensioninjection.intraarticular</option>
+        <option>suspensioninjection.periarticular</option>
+        <option>tabletchewable.oral</option>
+        <option>solutioninjection.intraarterial</option>
+        <option>liquid.cutaneous</option>
+        <option>liquidbathadditive.cutaneous</option>
+        <option>liquidshampoo.scalp</option>
+        <option>suspensioninjection.intralesional</option>
+        <option>suspensioninjection.intrabursal</option>
+        <option>stick.urethral</option>
+        <option>foam.rectal</option>
+        <option>implant.subcutaneous</option>
+        <option>solution.scalp</option>
+        <option>foam.cutaneous</option>
+        <option>emulsion.oral</option>
+        <option>lozenge.oromucosal</option>
+        <option>foam.scalp</option>
+        <option>lyophilisate.oromucosal</option>
+        <option>solutionnebuliser.inhalation</option>
+        <option>solutioninfusion.intravenous</option>
+        <option>lyophilisate.oral</option>
+        <option>suspensioninhalation.inhalation</option>
+        <option>solutiondrops.oral</option>
+        <option>solutionenema.rectal</option>
+        <option>gel.ophthalmic</option>
+        <option>impregnated dressing.cutaneous</option>
+        <option>solutioninjection.intracavernous</option>
+        <option>intrauterine device.intrauterine</option>
+        <option>suspensionnebuliser.inhalation</option>
+        <option>emulsion.cutaneous</option>
+        <option>suspension.scalp</option>
+        <option>emulsionbathadditive.cutaneous</option>
+        <option>emulsionwash.cutaneous</option>
+        <option>foam.transdermal</option>
+        <option>solutionspray.oromucosal</option>
+        <option>solutionpaint.cutaneous</option>
+        <option>solutionwash.cutaneous</option>
+        <option>solutionshampoo.scalp</option>
+        <option>suspensionenema.rectal</option>
+        <option>solutionspraysublingual.sublingual</option>
+        <option>tabletdispersible.oral</option>
+        <option>suspension.cutaneous</option>
+        <option>emulsion.scalp</option>
+        <option>solutionspray.nasal</option>
+        <option>solution.cutaneous</option>
+        <option>powder.cutaneous</option>
+        <option>mouthwash.oromucosal</option>
+        <option>gargle.oromucosal</option>
+        <option>foamenema.rectal</option>
+        <option>gel.oromucosal</option>
+        <option>gel.oral</option>
+        <option>vapour.oromucosal</option>
+        <option>ointment.auricular</option>
+        <option>suspension.opthalmic</option>
+        <option>suspension.auricular</option>
+        <option>solution.auricular</option>
+        <option>solutionwash.scalp</option>
+        <option>solutionpaint.nail</option>
+        <option>solutionbathadditive.cutaneous</option>
+        <option>powderspray.cutaneous</option>
+        <option>paste.oromucosal</option>
+        <option>solutionspray.transdermal</option>
+        <option>granules.oral</option>
+        <option>solutioninjection.intramuscular-deep</option>
+        <option>suspensionshampoo.scalp</option>
+        <option>solutioninfusion.subcutaneous</option>
+        <option>liquid.oral</option>
+        <option>suspensioninjection.intradermal</option>
+        <option>solutioninjection.intraperitoneal</option>
+        <option>solutioninjection.intrapleural</option>
+        <option>pastille.oromucosal</option>
+        <option>paint.cutaneous</option>
+        <option>solutioninjection.epidural</option>
+        <option>solutioninjection.perineural</option>
+        <option>gel.rectal</option>
+        <option>solutioninjection.intrathecal</option>
+        <option>solutionspray.auricular</option>
+        <option>gel.dental</option>
+        <option>gel.gingival</option>
+        <option>solutionspray.dental</option>
+        <option>solutionspray.gingival</option>
+        <option>vapourinhalation.inhalation</option>
+        <option>paste.cutaneous</option>
+        <option>stick.cutaneous</option>
+        <option>cream.scalp</option>
+        <option>solutionspray.cutaneous</option>
+        <option>creamshampoo.scalp</option>
+        <option>solutionirrigation.cutaneous</option>
+        <option>suspension.oromucosal</option>
+        <option>liquidspray.oromucosal</option>
+        <option>suspensioninjection.intramuscular-deep</option>
+        <option>lozenge.oral</option>
+        <option>liquidspray.cutaneous</option>
+        <option>ointment.gingival</option>
+        <option>mouthwash.dental</option>
+        <option>solutioninjection.rectal</option>
+        <option>solution.vaginal</option>
+        <option>liquidpaint.cutaneous</option>
+        <option>foam.vaginal</option>
+        <option>collodion.cutaneous</option>
+        <option>solutioninjection.subconjunctival</option>
+        <option>liquid.oromucosal</option>
+        <option>gel.scalp</option>
+        <option>solutionpaint.oromucosal</option>
+        <option>liquid.scalp</option>
+        <option>lacquer.cutaneous</option>
+        <option>solution.transdermal</option>
+        <option>emulsiondrops.oral</option>
+        <option>powder.oral</option>
+        <option>oil.oral</option>
+        <option>capsule.vaginal</option>
+        <option>oil.cutaneous</option>
+        <option>oil.auricular</option>
+        <option>pessary.rectal</option>
+        <option>oilbathadditive.cutaneous</option>
+        <option>emulsionspray.cutaneous</option>
+        <option>emulsionspray.auricular</option>
+        <option>oilenema.rectal</option>
+        <option>liquiddrops.ophthalmic</option>
+        <option>solution.ophthalmic</option>
+        <option>gel.urethral</option>
+        <option>gasinhalation.inhalation</option>
+        <option>paste.oral</option>
+        <option>liquidspray.transdermal</option>
+        <option>solutioninjection.intraarticular</option>
+        <option>emulsioninjection.intravenous</option>
+        <option>emulsioninfusion.intravenous</option>
+        <option>capsulegastro-resistantmodified-release.oral</option>
+        <option>solution.oromucosal</option>
+        <option>solution.gingival</option>
+        <option>tabletdispersiblegastro-resistant.oral</option>
+        <option>solutioninjection.intrabursal</option>
+        <option>creamwash.cutaneous</option>
+        <option>suspensiondrops.nasal</option>
+        <option>liquiddrops.inhalation</option>
+        <option>solutioninjection.intravesical</option>
+        <option>suspensioninfusion.intravenous</option>
+        <option>vapourinhalation.nasal</option>
+        <option>granulesgastro-resistant.oral</option>
+        <option>poultice.cutaneous</option>
+        <option>solutioninfusion.intraarterial</option>
+        <option>solutioninfusion.epidural</option>
+        <option>stick.transdermal</option>
+        <option>liquiddrops.auricular</option>
+        <option>suspensiongastro-resistant.oral</option>
+        <option>suspensionmodified-release.oral</option>
+        <option>solutioninjection.intradermal</option>
+        <option>tabletmuco-adhesive.oromucosal</option>
+        <option>solutioninjection.intracoronary</option>
+        <option>suspension.endotracheopulmonary</option>
+        <option>poultice.transdermal</option>
+        <option>suspension.gastroenteral</option>
+        <option>solutioninjection.intralesional</option>
+        <option>solutionirrigation.intravesical</option>
+        <option>tabletbuccal.oral</option>
+        <option>solutioninjection.endotracheopulmonary</option>
+        <option>solutioninjection.intracardiac</option>
+        <option>solutionirrigation.intraperitoneal</option>
+        <option>homeopathictablet.oral</option>
+        <option>homeopathiccream.cutaneous</option>
+        <option>homeopathictabletsublingual.sublingual</option>
+        <option>homeopathicointment.cutaneous</option>
+        <option>homeopathicpillule.oral</option>
+        <option>homeopathicpillule.oromucosal</option>
+        <option>homeopathictablet.oromucosal</option>
+        <option>homeopathiccream.rectal</option>
+        <option>homeopathicointment.transdermal</option>
+        <option>homeopathicointment.nasal</option>
+        <option>homeopathicgranules.gingival</option>
+        <option>homeopathiccream.transdermal</option>
+        <option>homeopathicpowder.cutaneous</option>
+        <option>homeopathicgranules.oral</option>
+        <option>granulesgastro-resistantmodified-release.oral</option>
+        <option>granulesmodified-release.oral</option>
+        <option>homeopathicliquid.cutaneous</option>
+        <option>homeopathicliquid.oral</option>
+        <option>homeopathicliquid.nasal</option>
+        <option>homeopathicliquidspray.cutaneous</option>
+        <option>solutioninfusion.intraperitoneal</option>
+        <option>paste.dental</option>
+        <option>tabletbuccalmodified-releasemuco-adhesive.buccal</option>
+        <option>implant.intralesional</option>
+        <option>suspensioninjection.intrathecal</option>
+        <option>suspensioninfusion.intrathecal</option>
+        <option>emulsioninjection.intramuscular</option>
+        <option>emulsioninjection.subcutaneous</option>
+        <option>Obsolete-solutioninjection.intraventricular</option>
+        <option>solution.intrauterine</option>
+        <option>liquid.nasal</option>
+        <option>tablet.oromucosal</option>
+        <option>dispersioninjection.intravenous</option>
+        <option>liquid.dental</option>
+        <option>suspensioninstillation.intravesical</option>
+        <option>solutioninfusion.rectal</option>
+        <option>solutioninfusion.perineural</option>
+        <option>suspension.intrauterine</option>
+        <option>solutionirrigation.intraocular</option>
+        <option>solutionirrigation.ocular</option>
+        <option>solution.bodycavity</option>
+        <option>colloidalsuspensioninjection.intrapleural</option>
+        <option>colloidalsuspensioninjection.intraperitoneal</option>
+        <option>lyophilisate.sublingual</option>
+        <option>gel.gastroenteral</option>
+        <option>vaginaldevice.vaginal</option>
+        <option>tablet.vaginal</option>
+        <option>solution.haemodialysis</option>
+        <option>solution.haemofiltration</option>
+        <option>solution.intraperitoneal</option>
+        <option>solutioninjection.intraocular</option>
+        <option>solutioninjection.intraosseous</option>
+        <option>solutioninfusion.intrathecal</option>
+        <option>strip.ocular</option>
+        <option>solutioninjection.intraventricular cardiac</option>
+        <option>solutioninjection.intracerebroventricular</option>
+        <option>patch.cutaneous</option>
+        <option>solutionspray.endosinusial</option>
+        <option>solutionspray.endotracheopulmonary</option>
+        <option>liquidinstillation.intravesical</option>
+        <option>solutioninjection.submucosalrectal</option>
+        <option>solution.regionalperfusion</option>
+        <option>tabletgastro-resistantmodified-release.oral</option>
+        <option>impregnatedcigarette.inhalation</option>
+        <option>medicatedplaster.cutaneous</option>
+        <option>tabletbuccalmuco-adhesive.buccal</option>
+        <option>solutiondropsmodified-release.ophthalmic</option>
+        <option>pastille.oral</option>
+        <option>system.transdermal</option>
+        <option>bladderirrigation.intravesical</option>
+        <option>solutioninjection.intravitreal</option>
+        <option>tablet.sublingual</option>
+        <option>solution.gastroenteral</option>
+        <option>deliverysystem.vaginal</option>
+        <option>suspensioninjection.epidural</option>
+        <option>solution.intravesical</option>
+        <option>herbaltea.oral</option>
+        <option>solutionskinprick.intraepidermal</option>
+        <option>suspensiongastro-resistant.gastroenteral</option>
+        <option>implantationsuspension.intralesional</option>
+        <option>liquid.intraarterial</option>
+        <option>insert.ophthalmic</option>
+        <option>gelinjection.subcutaneous</option>
+        <option>gelinjection.intramuscular</option>
+        <option>implant.intravitreal</option>
+        <option>solutionsealant.epilesional</option>
+        <option>solutionconcentrate.oral</option>
+        <option>solutionintravesical.intravesical</option>
+        <option>solutioninstillation.extraamniotic</option>
+        <option>liquid.endocervical</option>
+        <option>solutioninjection.intracameral</option>
+        <option>solutioniontophoresis.iontophoresis</option>
+        <option>filmdispersible.oral</option>
+        <option>filmbuccal.buccal</option>
+        <option>solutioninfusion.intracoronary</option>
+        <option>vaginaldeliverysystem.vaginal</option>
+        <option>implantationsuspension.intraosseous</option>
+        <option>powder.auricular</option>
+        <option>solutionirrigation.nasal</option>
+        <option>implant.epilesional</option>
+        <option>implant.intradiscal</option>
+        <option>nasalgel.nasal</option>
+        <option>capsulechewable.oral</option>
+        <option>solutioninjection.bodycavity</option>
+        <option>solutioninjection.endocervical</option>
+        <option>suspensioninjectionprolonged-release.subcutaneous</option>
+        <option>suspensioninjectionprolonged-release.intramuscular</option>
+        <option>solutioninjection.subretinal</option>
+        <option>dispersioninfusion.intravenous</option>
+        <option>livingtissueequivalent.intraocular</option>
+        <option>solutionirrigation.intraarticular</option>
+        <option>periodontalinsert.insert</option>
+        <option>implantationsuspension.intraarticular</option>
+        <option>solutioninjection.intrauterine</option>
+        <option>solutioninjection.intratumoral</option>
+        <option>solutioninfusion.intracerebroventricular</option>
+        <option>solutioninjectionprolonged-release.subcutaneous</option>
+        <option>suspension.dental</option>
+        <option>solventinjection.intradermal</option>
+        <option>solutioninjection.intraglandular</option>
+        <option>inhalationsolution.inhalation</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <a class="nhsuk-button" href="/sprint-18/insert-vmp/summary">
+      Summary
+    </a>
+  </div>
+</div>
+{% endblock %}

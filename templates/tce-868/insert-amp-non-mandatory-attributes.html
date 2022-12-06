@@ -1,0 +1,322 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="../index.html">Home</a><p></p>
+
+  <h1 class="nhsuk-heading-xl">Insert AMP</h1>
+
+<h2>Non-mandatory Attributes</h2>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-licensed-route">Licensed Route</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-half" id="insert-licensed-route">
+    <option disabled selected>-</option>   
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-parallel-import">Parallel Import Product</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-half" id="insert-parallel-import">
+    <option disabled selected>-</option>
+    <option value="1">Parallel Import Product</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-ema">EMA Indicator</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-half" id="insert-ema">
+    <option disabled selected>-</option>
+    <option value="1">EMA Monitoring</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-combo-product">Combination Product Indicator</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-half" id="insert-combo-product">
+    <option disabled selected>-</option>
+    <option value="1">Combination Product</option>
+    <option value="1">Component Only Product</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-flavour">Flavour</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-half" id="insert-flavour">
+    <option disabled selected>-</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+      <a class="nhsuk-button nhsuk-u-margin-top-3" href="/tce-868/insert-amp-non-mandatory-PCDD-attributes">
+        Save and Continue
+      </a>
+    </div>
+<script>
+      const licensedArray = [
+      "Auricular",
+      "Body cavity use",
+      "Cutaneous",
+      "Dental",
+      "Endocervical",
+      "Endosinusial",
+      "Endotracheopulmonary",
+      "Epidural",
+      "Epilesional",
+      "Extraamniotic",
+      "Gastroenteral",
+      "Gingival",
+      "Haemodialysis",
+      "Haemofiltration",
+      "Inhalation",
+      "Intraamniotic",
+      "Intraarterial",
+      "Intraarticular",
+      "Intrabursal",
+      "Intracameral",
+      "Intracardiac",
+      "Intracavernous",
+      "Intracerebroventricular",
+      "Intracervical",
+      "Intracoronary",
+      "Intradermal",
+      "Intradiscal",
+      "Intraepidermal",
+      "Intralesional",
+      "Intralymphatic",
+      "Intramuscular",
+      "Intraocular",
+      "Intraosseous",
+      "Intraperitoneal",
+      "Intrapleural",
+      "Intrasternal",
+      "Intrathecal",
+      "Intrauterine",
+      "Intravenous",
+      "Intraventricular cardiac",
+      "Intravesical",
+      "Intravitreal",
+      "Iontophoresis",
+      "Nasal",
+      "Obsolete-Intraventricular",
+      "Ocular",
+      "Oral",
+      "Oromucosal",
+      "Oromucosal buccal",
+      "Oromucosal other",
+      "Oromucosal sublingual",
+      "Periarticular",
+      "Perineural",
+      "Rectal",
+      "Regional perfusion",
+      "Route of administration not applicable",
+      "Subconjunctival",
+      "Subcutaneous",
+      "Submucosal rectal",
+      "Transdermal",
+      "Urethral",
+      "Vaginal",
+]
+
+
+var select = select = document.getElementById('insert-licensed-route');
+var max = licensedArray.length - 1;
+for (i=0; i<=max ; i++){
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.innerHTML = licensedArray[i];
+    select.appendChild(opt);
+    console.log(opt.innerHTML, 'working?');
+}
+
+  const flavourArray = [
+      "Almond",
+      "Aniseed",
+      "Apple",
+      "Apple & pear",
+      "Apricot",
+      "Asparagus",
+      "Banana",
+      "Blackcurrant",
+      "Blackcurrant & apple",
+      "Butterscotch",
+      "Cappuccino",
+      "Caramel",
+      "Cherry",
+      "Cherry & vanilla",
+      "Chicken",
+      "Chicken  & mushroom",
+      "Chocolate",
+      "Chocolate mint",
+      "Citrus",
+      "Citrus cola",
+      "Coffee",
+      "Cola",
+      "Cranberry",
+      "Egg-nog",
+      "Forest fruits",
+      "Fruit",
+      "Fruit(s) of the forest",
+      "Grapefruit",
+      "Leek & potato",
+      "Lemon",
+      "Lemon & lime",
+      "Melon",
+      "Menthol",
+      "Mint",
+      "Mocha",
+      "Mushroom",
+      "Natural",
+      "Neutral",
+      "Nut",
+      "Orange",
+      "Orange & lemon",
+      "Orange & pineapple",
+      "Peach",
+      "Peach & orange",
+      "Pear & cherry",
+      "Pineapple",
+      "Plain",
+      "Plum",
+      "Raspberry",
+      "Raspberry & blackcurrant",
+      "Savoury tomato",
+      "Strawberry",
+      "Strawberry & raspberry",
+      "Summer fruit(s)",
+      "Toffee",
+      "Tropical fruits",
+      "Tutti frutti",
+      "Unflavoured",
+      "Vanilla",
+      "Vegetable cream",
+      "Vanilla & lemon",
+      "Fruit punch",
+      "Tomato",
+      "Toffee caramel",
+      "Cherry vanilla",
+      "Cinnamon",
+      "Harvest fruits",
+      "Herb",
+      "Hazelnut",
+      "Peppermint",
+      "Pineapple & vanilla",
+      "Spearmint",
+      "Tea",
+      "Raspberry cola",
+      "Aniseed & caramel",
+      "Bubblegum",
+      "Lemon & aniseed",
+      "Banana & strawberry",
+      "Passion fruit",
+      "Kiwi strawberry",
+      "Lemon-Apricot",
+      "Honey & lemon",
+      "Banana & vanilla",
+      "Cherry menthol",
+      "Orange & grapefruit",
+      "Banana & orange",
+      "Black cherry",
+      "Orange & vanilla",
+      "Lemon & herb",
+      "Grape",
+      "Beef  & carrot",
+      "Salmon & spinach",
+      "Chicken & vegetable",
+      "Liquorice & aniseed",
+      "Assorted",
+      "Loganberry",
+      "Strawberry & mint",
+      "Original",
+      "Lemon & cream",
+      "Ginger lemon",
+      "Liquorice",
+      "Forest berries",
+      "Blackberry",
+      "Citrus menthol",
+      "Freshmint",
+      "Carrot & apple",
+      "Tropical surprise",
+      "Redcurrant & rosehip",
+      "Sweet & sour",
+      "Tomato & basil",
+      "Curry",
+      "Tropical",
+      "Wild strawberry",
+      "Berry",
+      "Orangecooler",
+      "Purple",
+      "Golden vegetable",
+      "Apple & cinnamon",
+      "Peach & ginger",
+      "Minty Fresh",
+      "Honey",
+      "Winter vegetables",
+      "Rice & lemon",
+      "Fish",
+      "Cool",
+      "Vegetable",
+      "Mixed",
+      "Cappuccino caramel",
+      "Curry chicken",
+      "Fish & vegetable",
+      "Lentil",
+      "Chickpea",
+      "Ham",
+      "Veal",
+      "Rice & apple",
+      "Freshfruit",
+      "Milk",
+      "Strawberry & vanilla",
+      "Chocolate & banana",
+      "Orange & menthol",
+      "Tropical twist",
+      "Apple-peach",
+      "Apple-strawberry",
+      "Menthol mint",
+      "Blueberry",
+      "Prune",
+      "Apple & sage",
+      "Wild berry & orange",
+      "Ice",
+      "Apricot-peach",
+      "Praline",
+      "Ginger",
+      "Balsamic herb",
+      "Onion & chive",
+      "Garden vegetable",
+      "Sweetcorn",
+      "Wild raspberry",
+      "Mixed fruit",
+      "Cheese & onion",
+      "Jalapeno",
+      "Salt & vinegar",
+      "Ready salted",
+      "Sour cream & onion",
+      "Tomato, olive & oregano",
+      "Rosemary & onion",
+      "Sundried tomato & pesto",
+      "Creamy vanilla",
+      "Strawberry biscuit",
+      "Orange creme",
+      "Citrus berry",
+      "Biscuit",
+      "Lemon menthol",
+      "Cranberry & blackcurrant",
+      "Berry burst",
+      "Chip shop curry",
+      "Rogan style curry",
+      "Beef & tomato",
+      "All day scramble",
+      "White tea",
+      "Berries",
+  ]
+
+var selectFlavour = select = document.getElementById('insert-flavour');
+var max = flavourArray.length - 1;
+for (i=0; i<=max ; i++){
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.innerHTML = flavourArray[i];
+    select.appendChild(opt);
+}
+</script>
+{% endblock %}

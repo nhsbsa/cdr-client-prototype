@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="../index.html">Home</a><p></p>
+
+  <h1 class="nhsuk-heading-xl">Insert AMP</h1>
+
+<h2>Non-mandatory Attributes (PCDD only)</h2>
+
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="ppd-additional-info">
+      PPD Additional Information
+    </label>
+    <input class="nhsuk-input" id="ppd-additional-info" name="ppd-additional-info" type="text">
+  </div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-appliance-type">Appliance Type Indicator</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-three-quarters" id="insert-appliance-type">
+    <option disabled selected>-</option>
+    <option value="1">Single Spring Truss</option>
+    <option value="2">Double Spring Truss</option>
+    <option value="3">Single Elastic Band Truss</option>
+    <option value="4">Double Elastic Band Truss</option>
+    <option value="5">Truss Repair</option>
+    <option value="6">Elastic Hosiery: Anklets, Kneecaps and Leggings</option>
+    <option value="7">Elastic Hosiery: Below-Knee, Above-Knee and Thigh Stockings</option>
+    <option value="8">Other Appliances</option>
+    <option value="9">Stoma Appliances and Spares</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-supplier-type">Supplier Type Indicator</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-half" id="insert-supplier-type">
+    <option disabled selected>-</option>
+    <option value="1">Manufacturer</option>
+    <option value="1">Wholesaler</option>
+    <option value="1">Distributor</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+      <h3 class="nhsuk-fieldset__heading">
+        Do you require a PPA code?
+      </h3>
+    </legend>
+
+    <div class="nhsuk-radios nhsuk-radios--inline">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+          Yes
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+          No
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+<div class="nhsuk-form-group">
+      <a class="nhsuk-button nhsuk-u-margin-top-3" href="/tce-868/insert-amp-summary">
+        Save and Continue
+      </a>
+    </div>
+
+{% endblock %}

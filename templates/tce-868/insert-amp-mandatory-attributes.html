@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="../index.html">Home</a><p></p>
+
+  <h1 class="nhsuk-heading-xl">Insert AMP</h1>
+
+<h2>Required Attributes</h2>
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-type">PIT type</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-third" id="insert-type" aria-labelledby="PIT Type" title="PIT Type">
+    <option disabled selected>-</option>
+    <option value="1">Generic Name AMP</option>
+    <option value="2">Proprietary Name AMP</option>
+  </select>
+</div>
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-availability">Availability Restrictions</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-third" id="insert-availability" aria-labelledby="Availability Restrictions" title="Availability Restrictions">
+    <option disabled selected>-</option>
+    <option value="1">Clinical Trial</option>
+    <option value="2">Extemp</option>
+    <option value="3">Imported</option>
+    <option value="4">Individual Patient Supply</option>
+    <option value="5">None</option>
+    <option value="6">Not Available</option>
+    <option value="7">Restricted Availability</option>
+    <option value="8">Special</option>
+  </select>
+</div>
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-licensing-authority">Licensing Authority</label>
+  <select class="nhsuk-select search-type nhsuk-u-width-one-third" id="insert-licensing-authority" aria-labelledby="Licensing Authority" title="Licensing Authority">
+    <option disabled selected>-</option>
+    <option value="1">Devices</option>
+    <option value="2">Medicines - MHRA/EMA</option>
+    <option value="3">None</option>
+    <option value="4">Traditional Herbal Medicines</option>
+    <option value="5">Unknown</option>
+  </select>
+</div>
+
+<div class="nhsuk-form-group">
+      <a class="nhsuk-button nhsuk-u-margin-top-3" href="/tce-868/insert-amp-add-excipient">
+        Save and Continue
+      </a>
+    </div>
+
+{% endblock %}

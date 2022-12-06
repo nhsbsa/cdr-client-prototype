@@ -1,0 +1,258 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="update-vmp.html">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+
+          <h2 class="nhsuk-caption-l" id="insert-vmp-sub-heading">
+            Update alternative name details
+            <span class="nhsuk-u-visually-hidden"> - </span>
+          </h2>
+          <h1 id="insert-vmp-heading" class="nhsuk-heading-xl">Verapamil 160mg tablets</h1>
+
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-width-container-fluid">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <h2>Update Current Values</h2>
+          <section id="current-alternative-name-1-section">
+
+            <fieldset class="nhsuk-grid-column-one-quarter nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Alternative Name 1
+              </legend>
+              <p class="nhsuk-label">Current Value</p>
+              <p class="nhsuk-u-margin-top-2"
+                 id="attribute-table-prescribing-status-attribute-name-value-current">	Verapamil Hydrochloride Tablets 160 mg</p>
+            </fieldset>
+
+            <fieldset class="nhsuk-grid-column-one-half nhsuk-fieldset nhsuk-u-padding-right-4">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Update
+              </legend>
+              <label class="nhsuk-label" for="insert-vmp-name1-input">New Value</label>
+              <input class="nhsuk-input" id="insert-vmp-name1-input"/>
+
+
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-quarter nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Start Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="type">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="type-day" value="1" name="type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="type-month" value="7" name="type-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="type-year" value="2021" name="type-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <h2>Insert New Values</h2>
+          <section id="new-name-section">
+
+            <fieldset class="nhsuk-grid-column-one-quarter nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Type
+              </legend>
+              <label class="nhsuk-label" for="new-name-type-select">New Type</label>
+              <select id="new-name-type-select" class="nhsuk-select">
+                <option>Abbreviated Name</option>
+                <option disabled="disabled">Alternative Name 1</option>
+                <option>Alternative Name 2</option>
+                <option>Alternative Name 3</option>
+              </select>
+            </fieldset>
+
+            <fieldset class="nhsuk-grid-column-one-half nhsuk-fieldset nhsuk-u-padding-right-4">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Insert
+              </legend>
+              <label class="nhsuk-label" for="insert-vmp-new-name1-input">New Value</label>
+              <input class="nhsuk-input" id="insert-vmp-new-name1-input"/>
+
+
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-quarter nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Start Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="new-type">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="new-type-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="new-type-day" value="1" name="new-type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="new-type-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="new-type-month" value="7" name="new-type-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="new-type-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="new-type-year" value="2021" name="new-type-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+        </div>
+      </div>
+
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="nhsuk-form-group">
+            <a class="nhsuk-button" style="float: right"
+               href="update-vmp-alternative-name-details-summary.html">Continue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  //<![CDATA[
+  let name = document.getElementById('insert-vmp-input-name');
+  let abbreviatedName = document.getElementById('insert-vmp-input-abbreviated-name');
+  let nameContainer = document.getElementById('insert-vmp-name-container');
+  let abbreviatedNameContainer = document.getElementById('insert-vmp-abbreviated-name-container');
+
+  let nameCountSpan = document.createElement('div')
+  nameCountSpan.id = 'insert-vmp-input-name-length'
+  nameCountSpan.classList.add('nhsuk-u-margin-top-2')
+  nameContainer.querySelector('.nhsuk-form-group').appendChild(nameCountSpan);
+
+  let abbreviatedNameCountSpan = document.createElement('div')
+  abbreviatedNameCountSpan.id = 'insert-vmp-input-abbreviated-name-length'
+  abbreviatedNameCountSpan.classList.add('nhsuk-u-margin-top-2')
+  abbreviatedNameContainer.querySelector('.nhsuk-form-group').appendChild(abbreviatedNameCountSpan);
+
+  function updateNameLengthCount() {
+    nameCountSpan.textContent = 'Name length: ' + name.value.length + ' characters';
+  }
+
+  function updateAbbreviatedNameLengthCount() {
+    abbreviatedNameCountSpan.textContent = 'Abbreviated name length: '
+        + abbreviatedName.value.length + ' characters';
+  }
+
+  function conditionallyShowAbbreviatedName() {
+    if (abbreviatedNameContainer.getAttribute('data-needed') === 'false') {
+      return;
+    }
+    if (name.value.length > 60) {
+      abbreviatedNameContainer.style.display = 'block';
+      return;
+    }
+    if (abbreviatedNameContainer.style.display !== 'none') {
+      abbreviatedNameContainer.style.display = 'none'
+    }
+  }
+
+  updateNameLengthCount();
+  updateAbbreviatedNameLengthCount();
+  conditionallyShowAbbreviatedName()
+
+  name.addEventListener('keyup', () => {
+    conditionallyShowAbbreviatedName();
+    updateNameLengthCount();
+  });
+
+  abbreviatedName.addEventListener('keyup', () => {
+    updateAbbreviatedNameLengthCount();
+  });
+
+  $(document).ready(function () {
+    $('#insert-vmp-select-name-basis').select2({
+      placeholder: "",
+    });
+  });
+  //]]>
+</script>
+
+<script>
+  Tabs();
+  CopyToClipboard();
+  CopyDateToClipboard();
+  PasteDateToDateInputs();
+</script>
+
+
+{% endblock %}

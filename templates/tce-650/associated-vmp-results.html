@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <h1 class="nhsuk-heading-xl">
+    <span class="nhsuk-caption-l">
+                Associated VMP
+      <span class="nhsuk-u-visually-hidden"> - </span>
+          </span>Insert VTM</h1>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <h2>Added VMPs</h2>
+    <p class="nhsuk-hint">You have not added any associated VMPs</p>
+    <h2>Search for VMP</h2>
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">
+        VMP Search
+      </label>
+      <div class="nhsuk-hint">Search for associated VMP and add using the results table.</div>
+      <input class="nhsuk-input" id="example" name="example" type="text">
+    </div>
+    <div class="nhsuk-grid-column-full">
+      <button style="float: right" class="nhsuk-button nhsuk-button--secondary" type="submit">
+        Search
+      </button>
+    </div>
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">VMP Results</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          Name
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Add
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Paracetamol 60mg</td>
+        <td class="nhsuk-table__cell "><a href="/tce-650/associated-vmp-added">Add</a></td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Paracetamol 120mg</td>
+        <td class="nhsuk-table__cell "><a href="/tce-650/associated-vmp-added">Add</a></td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Paracetamol 180mg</td>
+        <td class="nhsuk-table__cell "><a href="/tce-650/associated-vmp-added">Add</a></td>
+      </tr>
+
+      </tbody>
+    </table>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <a class="nhsuk-button" href="/tce-650/associated-vmp-error">
+          Continue
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

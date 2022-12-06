@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+    <div>
+
+      <div class="nhsuk-width-container">
+
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="update-vmp.html">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                  d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+
+            <h2 class="nhsuk-caption-l" id="insert-vmp-sub-heading">
+              Update codes
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </h2>
+            <h1 id="insert-vmp-heading" class="nhsuk-heading-xl">Verapamil 160mg tablets</h1>
+
+          </div>
+        </div>
+      </div>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <h2>Update Current Values</h2>
+          <section id="current-code1-section">
+
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                PPA Code
+              </legend>
+              <p class="nhsuk-label">Current Value</p>
+              <p class="nhsuk-u-margin-top-2"
+                 id="attribute-table-prescribing-status-attribute-name-value-current">7642108</p>
+            </fieldset>
+
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset nhsuk-u-padding-right-4">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Update
+              </legend>
+              <label class="nhsuk-label" for="insert-vmp-code1-input">New Value</label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="insert-vmp-code1-input"/>
+
+
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Start Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="code1">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="code1-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="code1-day" value="1" name="code1-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="code1-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="code1-month" value="7" name="code1-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="code1-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="code1-year" value="2021" name="code1-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+
+          <section id="current-code2-section">
+
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                SNOMED Code
+              </legend>
+              <p class="nhsuk-label">Current Value</p>
+              <p class="nhsuk-u-margin-top-2">318248001</p>
+            </fieldset>
+
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset nhsuk-u-padding-right-4">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Update
+              </legend>
+              <label class="nhsuk-label" for="insert-vmp-code2-input">New Value</label>
+              <input class="nhsuk-input nhsuk-input--width-10" id="insert-vmp-code2-input"/>
+
+
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Start Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="code2">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="code2-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="code2-day" value="1" name="code2-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="code2-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="code2-month" value="7" name="code2-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="code2-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="code2-year" value="2021" name="code2-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+
+
+        </div>
+      </div>
+
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div>
+            <a class="nhsuk-button" style="float: right" href="update-vmp-codes-summary.html">Continue</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+<script>
+  Tabs();
+  CopyToClipboard();
+  CopyDateToClipboard();
+  PasteDateToDateInputs();
+</script>
+
+
+
+{% endblock %}

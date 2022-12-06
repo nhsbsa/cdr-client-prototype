@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="../index.html">Home</a><p></p>
+
+<h1 class="nhsuk-heading-xl">Insert AMP</h1>
+
+<h2>Excipient Details</h2>
+
+<div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
+            <h3 class="nhsuk-fieldset__heading">
+                Would you like to add one or more excipients?
+            </h3>
+        </legend>
+
+        <div class="nhsuk-radios nhsuk-radios--inline">
+
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                    Yes
+                </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                    No
+                </label>
+            </div>
+
+        </div>
+    </fieldset>
+</div>
+<div class="nhsuk-form-group">
+    <a class="nhsuk-button nhsuk-u-margin-top-3" id="link" href="/tce-868/insert-amp-non-mandatory-attributes">
+        Continue
+    </a>
+</div>
+<script>
+    var continueLink = '/tce-868/insert-amp-non-mandatory-attributes';
+
+    let excipient = document.querySelectorAll('.nhsuk-radios__input');
+
+    console.log(excipient);
+
+for (let i = 0; i < excipient.length; i++) {
+  excipient[i].addEventListener("change", function() {
+    let val = this.value; // this == the clicked radio,
+    if (val === 'yes') {
+        continueLink = '/tce-868/insert-amp-excipient'
+        document.getElementById("link").setAttribute("href",continueLink);
+    }
+    console.log(val);
+  });
+}
+
+</script>
+
+{% endblock %}

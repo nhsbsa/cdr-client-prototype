@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block content %}
+  <a href="../index.html">Home</a><p></p>
+
+    <h1 class="heading-xlarge">Insert AMP</h1>
+          <h2 class="nhsuk-heading-l" id="insert-vmpp-sub-heading">Name details</h2>
+
+<label class="nhsuk-caption-l">
+  VMP name
+</label>
+<h3 class="js-copy-to-clipboard">Paracetamol 120mg/5ml oral suspension 5ml sachets</h3>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="insert-amp-input-name">
+    Amp Name
+  </label>
+  <div class="nhsuk-hint" id="example-with-hint-text-hint">
+    Please provide the full name of the new AMP.
+  </div>
+
+  <input class="nhsuk-input nhsuk-u-width-full nhsuk-u-margin-bottom-2" id="insert-amp-input-name" name="example-with-hint-text" onkeyup="charCountUpdate(this.value)"
+         type="text" aria-describedby="example-with-hint-text-hint"><div id="charCount" class="nhsuk-hint"></div>
+  </div>
+
+
+  <div class="nhsuk-form-group" >
+    <div id="abbreviated-name-container">
+    <label class="nhsuk-label" for="insert-amp-input-abbreviated-name">
+      Abbreviated Amp Name (optional)
+    </label>
+    <div class="nhsuk-hint" id="abbreviated-name-hint-text">
+      Provide an abbreviated name of 60 characters or less
+    </div>
+
+    <input class="nhsuk-input nhsuk-u-width-full nhsuk-u-margin-bottom-2" id="insert-amp-input-abbreviated-name" name="abbreviated-name" onkeyup="abbrCharCountUpdate(this.value)"
+           type="text" aria-describedby="abbreviated-name" aria-labelledby="Abbreviated Name" title="Abbreviated Name" maxlength="60"><div id="abbrCharCount" class="nhsuk-hint" ></div>
+  </div>
+</div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="start-date">Start Date</label>
+      <div class="nhsuk-hint">When will the product be available? This date must be today's date or later.</div>
+      <div class="nhsuk-date-input" id="start-date">
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="day">
+              Day
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="month">
+              Month
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="year">
+              Year
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="nhsuk-form-group">
+    <a class="nhsuk-button nhsuk-u-margin-top-3" href="/tce-868/insert-amp-supplier">
+      Save and continue
+    </a>
+  </div>
+
+<script>
+    let currentDate = new Date();
+    let day = document.getElementById("day");
+    let month = document.getElementById("month");
+    let year = document.getElementById("year");
+
+    day.value = ("0" + currentDate.getDate()).slice(-2);
+    month.value = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+    year.value = currentDate.getFullYear();
+
+    function charCountUpdate(str) {
+	var lng = str.length;
+	if (lng === 1) {
+	document.getElementById("charCount").innerHTML = lng + ' character';
+	} else {
+		document.getElementById("charCount").innerHTML = lng + ' characters';
+	}
+}
+function abbrCharCountUpdate(str) {
+	var lng = str.length;
+	if (lng === 1) {
+	document.getElementById("abbrCharCount").innerHTML = lng + ' character';
+	} else {
+		document.getElementById("abbrCharCount").innerHTML = lng + ' characters';
+	}
+}
+
+function CopyToClipboard() {
+  'use strict';
+  // Adds an icon to allow copy to clipboard functionality
+  let targets = document.getElementsByClassName('js-copy-to-clipboard');
+  for (let i = 0; i < targets.length; i++) {
+    const element = targets[i];
+    element.insertAdjacentHTML('beforeend',
+        '<svg class="nhsuk-icon nhsuk-icon__tick nhsuk-u-inline-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">'
+        +
+        '<rect x="9" y="5" rx="1" ry="1" width="9" height="11" style="fill:white;stroke:black; stroke-width:1;opacity:1" />'
+        +
+        '<rect x="6" y="8" rx="1" ry="1" width="9" height="11" style="fill:white;stroke:black; stroke-width:1;opacity:1" />'
+        +
+        '<line x1="8" y1="12" x2="13" y2="12" style="stroke:black;stroke-width:1" />'
+        +
+        '<line x1="8" y1="14" x2="13" y2="14" style="stroke:black;stroke-width:1" />'
+        +
+        '<line x1="8" y1="16" x2="13" y2="16" style="stroke:black;stroke-width:1" />'
+        +
+        '</svg>');
+    element.querySelector('svg').addEventListener('click', function () {
+      var copiedTag = document.createElement('span');
+      copiedTag.className = 'nhsuk-tag--copied';
+      copiedTag.innerText = 'Copied';
+      var tempInput = document.createElement("input");
+
+      var textCopy = element.innerText.indexOf('Copied') == -1
+          ? element.innerText : element.innerText.substr(0,
+              element.innerText.indexOf('Copied'));
+
+      tempInput.value = textCopy;
+
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      element.insertAdjacentElement('beforeend', copiedTag);
+
+      setTimeout(function () {
+        element.removeChild(copiedTag);
+      }, 2000);
+    });
+  }
+}
+let name = document.getElementById('insert-amp-input-name');
+let abbreviatedNameContainer = document.getElementById('abbreviated-name-container');
+
+    function conditionallyShowAbbreviatedName() {
+        if (name.value.length > 60) {
+            abbreviatedNameContainer.style.display = 'block';
+            return;
+        }
+        if (abbreviatedNameContainer.style.display !== 'none') {
+            abbreviatedNameContainer.style.display = 'none'
+        }
+    }
+
+    conditionallyShowAbbreviatedName()
+
+    name.addEventListener('keyup', () => {
+        conditionallyShowAbbreviatedName();
+    });
+    console.log('working?');
+  </script>
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="index.html">
+        <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+                  d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Back to prototype home</a>
+    </div>
+    <h1 class="heading-xlarge">User guide</h1>
+
+
+    <div class="nhsuk-grid-row">
+
+      <div class="nhsuk-u-reading-width">
+        <h2>Overview</h2>
+        <p>
+          The dm+d is a dictionary of descriptions and codes which represent medicines and devices in use across the
+          NHS. The dm+d data is refreshed weekly and contains a huge variety of information, including:
+        </p>
+        <ol class="nhsuk-contents-list__list">
+          <li class="nhsuk-contents-list__item">
+            <span class="nhsuk-contents-list">whether a product will be reimbursed by NHSBSA, if submitted for reimbursement by a dispensing contractor</span>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <span class="nhsuk-contents-list">the indicative price of each pack of a product (where a price is maintained)</span>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <span class="nhsuk-contents-list">current and discontinued products and packs available from manufacturers and Suppliers</span>
+          </li>
+        </ol>
+
+        </br>
+
+        <p>
+          The user has the following options:
+        </p>
+      </div>
+
+      </br>
+
+
+      <div class="nhsuk-grid-column-one-third nhsuk-section__content">
+        <h2 class="hero-margin-fix" id="sub-heading-generics">Product search</h2>
+        <p id="generics-description">Explore the product search.</p>
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="product-search/intro.html" id="generic-link">
+            <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text">Go to the product search</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-column-one-third nhsuk-section__content">
+        <h2 class="hero-margin-fix" id="sub-heading-branded">Ingredient search</h2>
+        <p id="insert-branded-description">Explore the ingredient search.</p>
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="user-guide.html" id="branded-link">
+            <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text">Go to the ingredient search</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="nhsuk-grid-column-one-third nhsuk-section__content">
+        <h2 class="hero-margin-fix" id="sub-heading-branded">Code search</h2>
+        <p id="insert-branded-description">Explore the code search.</p>
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="user-guide.html" id="branded-link">
+            <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text">Go to the code search</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <article>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card&#45;&#45;clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="user-guide-v2.html">
+                  Product search
+                </a>
+              </h2>
+              <p class="nhsuk-card__description">Explore the product search.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card&#45;&#45;clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="">
+                  Ingredient search
+                </a>
+              </h2>
+              <p class="nhsuk-card__description">Explore the product search.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          <div class="nhsuk-card nhsuk-card&#45;&#45;clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="">
+                  Code search
+                </a>
+              </h2>
+              <p class="nhsuk-card__description">Explore the code search.</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </article>-->
+
+  </div>
+</div>
+{% endblock %}

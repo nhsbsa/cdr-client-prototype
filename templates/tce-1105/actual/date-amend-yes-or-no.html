@@ -1,0 +1,86 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="search.html">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24" aria-hidden="true">
+          <path
+              d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Back to results</a>
+    </div>
+    <h1 class="heading-xlarge">Actual Part IX Quick Price Update</h1>
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Do you need to change the reimbursement date, currently set for 01 May 2022?
+        </h1>
+      </legend>
+
+      <div class="nhsuk-hint">
+        This will adjust the reimbursement date for every appliance chosen from the results table.
+      </div>
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="date-amend" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Yes
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="date-amend" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              No
+            </label>
+          </div>
+
+        </div>
+      </div>
+
+    </fieldset>
+
+    <a class="nhsuk-button" id="continue-button"
+       href="date-amend.html" onclick="storeDateAmendYesOrNo()">Continue</a>
+
+  </div>
+</div>
+
+<script>
+  console.log(localStorage);
+
+  let buttonLink = document.getElementById("continue-button");
+  let radioDateAmendButtons = document.getElementsByName("date-amend");
+  let dateAmend = localStorage.getItem("date-amend");
+
+  for (var radio of radioDateAmendButtons) {
+            if (dateAmend === radio.value) {
+                radio.checked = true;
+            }
+        }
+
+  function storeDateAmendYesOrNo() {
+        for (let radio of radioDateAmendButtons) {
+            if (radio.checked) {
+                localStorage.setItem("date-amend", radio.value);
+                if (radio.value == 'yes') {
+                    buttonLink.href = "date-amend";
+                } else {
+                    buttonLink.href = "price-amend-yes-or-no.html";
+                    localStorage.removeItem("date-amend-month");
+                }
+            }
+        }
+    }
+
+
+
+</script>
+{% endblock %}

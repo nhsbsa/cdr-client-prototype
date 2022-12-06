@@ -1,0 +1,195 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="date-amend-yes-or-no" id="back-link">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24" aria-hidden="true">
+          <path
+              d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Back to require date amend</a>
+    </div>
+    <h1 class="heading-xlarge">Actual Part IX Quick Price Update</h1>
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Do you need to override the unrounded price?
+        </h1>
+      </legend>
+
+      <div class="nhsuk-hint">
+        This will adjust the unrounded price for every appliance chosen from the results table, as well as re-calculating the reimbursement price.
+      </div>
+
+      <div class="nhsuk-form-group">
+
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="price-amend" type="radio" value="yes" aria-controls="conditional-contact-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Yes
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="price">
+                Price in pence
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-one-quarter" id="price" name="link-url" type="text">
+            </div>
+          </div>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-2" name="price-amend" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              No
+            </label>
+          </div>
+
+        </div>
+      </div>
+
+    </fieldset>
+
+    <a class="nhsuk-button" href="confirm.html"
+       id="continue-button" onclick="storePriceYesOrNo()">Continue</a>
+
+  </div>
+</div>
+
+<script>
+console.log(localStorage);
+
+window.onload = function() {
+    let hasDateAmend = localStorage.getItem("date-amend");
+
+    if (hasDateAmend == 'yes') {
+    document.getElementById("back-link").setAttribute('href', "date-amend");
+    document.getElementById("back-link").innerHTML = "<svg class='nhsuk-icon nhsuk-icon__chevron-left' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' height='24' width='24'><path d='M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z'></path></svg>Go back to date amend month";
+    }
+};
+
+  let buttonLink = document.getElementById("continue-button");
+  let radioPriceAmendButtons = document.getElementsByName("price-amend");
+  let priceAmend = localStorage.getItem("price-amend");
+  let inputPrice = document.getElementById("price");
+  let inputPriceShow = document.getElementById("conditional-contact-1");
+
+  if (priceAmend) {
+  for (var radio of radioPriceAmendButtons) {
+            if (priceAmend === radio.value) {
+                radio.checked = true;
+                if (radio.value == 'yes') {
+                inputPrice.defaultValue = localStorage.getItem("price-amend-pence");
+                inputPriceShow.classList.remove("nhsuk-radios__conditional--hidden");
+                }
+            }
+        }
+      }
+
+  function storePriceYesOrNo() {
+        for (let radio of radioPriceAmendButtons) {
+            if (radio.checked) {
+                localStorage.setItem("price-amend", radio.value);
+                if (localStorage.getItem("price-amend") == 'yes') {
+                    localStorage.setItem("price-amend-pence", inputPrice.value);
+                }
+            }
+        }
+    }
+
+
+ const getClasses = (element) => {
+  // Return without error if element or class are missing
+  if (!element) return [];
+  return element.className.split(' ').filter(Boolean);
+};
+
+ const hasClass = (element, className) => {
+  // Return without error if element or class are missing
+  if (!element || !className) return false;
+  return getClasses(element).includes(className);
+};
+
+ const removeClass = (element, className) => {
+  // Return without error if element or class are missing
+  if (!element || !className) return;
+  if (hasClass(element, className)) {
+    // Array of all existing classes
+    const existingClasses = getClasses(element, className);
+    // String of existing classes minus the class to remove
+    const newClasses = existingClasses.filter((existingClass) => existingClass !== className).join(' ');
+    // Set class attribute to the new classes
+    element.setAttribute('class', newClasses);
+  }
+};
+
+ const addClass = (element, className) => {
+  // Return without error if element or class are missing
+  if (!element || !className) return;
+  if (!hasClass(element, className)) {
+    // Set class attribute to the new classes
+    element.setAttribute('class', `${element.className} ${className}`.trim());
+  }
+};
+
+ const toggleClass = (element, className) => {
+  if (!element || !className) return;
+  if (hasClass(element, className)) {
+    removeClass(element, className);
+  } else {
+    addClass(element, className);
+  }
+};
+
+ const toggleAttribute = (element, attr) => {
+  // Return without error if element or attr are missing
+  if (!element || !attr) return;
+  // Toggle attribute value. Treat no existing attr same as when set to false
+  const value = (element.getAttribute(attr) === 'true') ? 'false' : 'true';
+  element.setAttribute(attr, value);
+};
+
+ const toggleConditionalInput = (input, className) => {
+  // Return without error if input or class are missing
+  if (!input || !className) return;
+  // If the input has conditional content it had a data-aria-controls attribute
+  const conditionalId = input.getAttribute('aria-controls');
+  if (conditionalId) {
+    // Get the conditional element from the input data-aria-controls attribute
+    const conditionalElement = document.getElementById(conditionalId);
+    if (conditionalElement) {
+      toggleClass(conditionalElement, className);
+      toggleAttribute(input, 'aria-expanded');
+    }
+  }
+};
+
+
+const radioInputs = document.querySelectorAll('.nhsuk-radios--conditional .nhsuk-radios__input');
+console.log('radio inputs', radioInputs)
+  // All conditional content inside a conditional form group
+  const conditionalInputs = document.querySelectorAll('.nhsuk-radios--conditional .nhsuk-radios__conditional');
+
+<!--  // Add event listener to every radio button-->
+  Array.prototype.slice.call(radioInputs).forEach((radioButton) => {
+    radioButton.addEventListener('change', (e) => {
+    console.log('e', e);
+<!--      // Hide all conditional content on all input clicks-->
+      radioInputs.forEach((input) => input.setAttribute('aria-expanded', 'false'));
+      Array.prototype.slice.call(conditionalInputs).forEach((input) => addClass(input, 'nhsuk-radios__conditional--hidden'));
+<!--      // Toggle conditional content based on checked state-->
+      toggleConditionalInput(e.target, 'nhsuk-radios__conditional--hidden');
+       console.log('e.target', e.target)
+    });
+
+  });
+
+
+
+</script>
+{% endblock %}

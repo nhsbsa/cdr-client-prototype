@@ -1,0 +1,462 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="update-vmp.html">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+
+          <h2 class="nhsuk-caption-l" id="insert-vmp-sub-heading">
+            Update attributes
+            <span class="nhsuk-u-visually-hidden"> - </span>
+          </h2>
+          <h1 id="insert-vmp-heading" class="nhsuk-heading-xl">Verapamil 160mg tablets</h1>
+
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-width-container-fluid">
+
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <h2>Update Values</h2>
+          <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p><strong>End Dates</strong> with no values will be marked as EOT</p>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-full">
+          <section id="prescribing-status-section" class="nhsuk-u-padding-bottom-4">
+
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Prescribing Status
+              </legend>
+              <label class="nhsuk-label" for="insert-vmp-select-appliance-type">Value</label>
+              <select class="nhsuk-select search-type nhsuk-u-margin-bottom-4"
+                      id="insert-vmp-select-appliance-type">
+                <option>Valid as a prescribable product</option>
+                <option>Invalid to prescribe in NHS primary care</option>
+                <option>Never valid to prescribe as a VMP</option>
+                <option>Caution - AMP level prescribing advised</option>
+              </select>
+
+
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Start Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="type">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="type-day" value="1" name="type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="type-month" value="1" name="type-month" type="text" pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="type-year" value="2020" name="type-year" type="text" pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                End Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="type-end">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-end-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="type-end-day" name="type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-end-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="type-end-month" name="type-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type-end-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="type-end-year" name="type-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+          </section>
+        </div>
+        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-column-full">
+          <section id="controlled-drug-category-section">
+
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Controlled Drug Category
+              </legend>
+              <label class="nhsuk-label" for="insert-vmp-select-attribute2-type">Value</label>
+              <select class="nhsuk-select nhsuk-u-margin-bottom-4"
+                      id="insert-vmp-select-attribute2-type">
+                <option>No controlled drug status</option>
+                <option>Schedule 1</option>
+                <option>Schedule 2</option>
+                <option>Schedule 3</option>
+              </select>
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Start Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="attribute2">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute2-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="attribute2-day" value="1" name="type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute2-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="attribute2-month" value="1" name="type-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute2-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="attribute2-year" value="2020" name="type-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                End Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="type2-end">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type2-end-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="type2-end-day" name="type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type2-end-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="type2-end-month" name="type-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="type2-end-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="type2-end-year" name="type-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+          </section>
+        </div>
+        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-column-full">
+          <section id="alpha-num-category-section">
+
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Alpha-numeric code
+              </legend>
+              <label class="nhsuk-label" for="insert-vmp-select-attribute3-type">Value</label>
+              <input class="nhsuk-select nhsuk-u-margin-bottom-4"
+                      id="insert-vmp-select-attribute3-type" value="SIM10T"/>
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                Start Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="attribute3">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute3-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="attribute3-day" value="1" name="type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute3-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="attribute3-month" value="1" name="type-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute3-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="attribute3-year" value="2020" name="type-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="nhsuk-grid-column-one-third nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                End Date
+              </legend>
+              <div class="nhsuk-date-input js-copy-date-to-clipboard" id="attribute3-end">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute3-end-day">
+                      Day
+                    </label>
+                    <input
+                        class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                        id="attribute3-end-day" name="type-day" type="text" pattern="[0-9]*"
+                        inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute3-end-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                           id="attribute3-end-month" name="type-month" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label"
+                           for="attribute3-end-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                           id="attribute3-end-year" name="type-year" type="text"
+                           pattern="[0-9]*"
+                           inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="nhsuk-grid-column-full">
+              <div class="nhsuk-action-link">
+                <a class="nhsuk-action-link__link"
+                   href="update-vmp-attributes-add-alpha-numeric.html">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" style="fill: #005eb8"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                          stroke-width="2" d="M12 8v8M8 12h8"></path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Add Alpha-numeric code</span>
+                </a>
+              </div>
+            </div>
+
+          </section>
+        </div>
+        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-column-full">
+          <section id="sugar-free-indicator-section">
+
+            <p class="nhsuk-fieldset__legend--m">Sugar Free Indicator</p>
+
+
+            <div class="nhsuk-grid-column-full">
+              <div class="nhsuk-action-link">
+                <a class="nhsuk-action-link__link"
+                   href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" style="fill: #005eb8"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                          stroke-width="2" d="M12 8v8M8 12h8"></path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Add Sugar Free Indicator</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-column-full">
+          <section id="cfc-free-indicator-section">
+
+            <p class="nhsuk-fieldset__legend--m">CFC Free Indicator</p>
+            <div class="nhsuk-grid-column-full">
+              <div class="nhsuk-action-link">
+                <a class="nhsuk-action-link__link"
+                   href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" style="fill: #005eb8"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                          stroke-width="2" d="M12 8v8M8 12h8"></path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Add CFC Free Indicator</span>
+                </a>
+              </div>
+            </div>
+
+          </section>
+        </div>
+        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-column-full">
+          <section id="gluten-free-indicator-section">
+
+            <p class="nhsuk-fieldset__legend--m">Gluten-free Indicator</p>
+
+            <div class="nhsuk-grid-column-full">
+              <div class="nhsuk-action-link">
+                <a class="nhsuk-action-link__link"
+                   href="#">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" style="fill: #005eb8"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10"
+                          stroke-width="2" d="M12 8v8M8 12h8"></path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Add Gluten-free Indicator</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+        <div class="nhsuk-grid-column-full">
+          <div>
+            <a class="nhsuk-button" style="float: right" href="update-vmp-attributes-summary.html">Continue</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  Tabs();
+  CopyToClipboard();
+  CopyDateToClipboard();
+  PasteDateToDateInputs();
+</script>
+
+
+{% endblock %}

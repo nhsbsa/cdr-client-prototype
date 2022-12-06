@@ -1,0 +1,1174 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+
+    <div class="nhsuk-width-container">
+
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="update-vmp.html">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+
+          <h2 class="nhsuk-caption-l" id="insert-vmp-sub-heading">
+            Update attributes
+            <span class="nhsuk-u-visually-hidden"> - </span>
+          </h2>
+          <h1 id="insert-vmp-heading" class="nhsuk-heading-xl">Verapamil 160mg tablets</h1>
+
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-width-container">
+
+      <fieldset class="nhsuk-fieldset" role="group">
+        <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+          Details
+        </legend>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-input-dd-indicator">DD indicator</label>
+                <div class="nhsuk-hint">Defined dose/form indicator</div>
+
+                <div>
+
+
+                </div>
+                <select class="nhsuk-select" id="insert-vmp-input-dd-indicator" autofocus="autofocus"
+                        name="ddIndicator">
+
+                  <option id="nhsuk-select-insert-vmp-input-dd-indicator-item0" value="DISCRETE">
+                    DISCRETE
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-input-dd-indicator-item1" value="CONTINUOUS">
+                    CONTINUOUS
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-input-dd-indicator-item2"
+                          value="NOT_APPLICABLE">
+                    NOT_APPLICABLE
+                  </option>
+                </select>
+
+
+              </div>
+
+          </div>
+        </div>
+
+        <div id="dose-details-container" style="display: initial;">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-input-unit-dose-value">Unit dose</label>
+                <div class="nhsuk-hint">The numeric dose value for this drug</div>
+                <div class="nhsuk-hint">e.g. 12.5</div>
+                <div>
+
+
+                </div>
+                <input class="nhsuk-input" id="insert-vmp-input-unit-dose-value" autocomplete="off"
+                       type="text" name="unitDoseValue" value="0">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-select-unit-dose-uom">Unit Dose unit of
+                  measure</label>
+
+
+                <div>
+
+
+                </div>
+                <select class="nhsuk-select" id="insert-vmp-select-unit-dose-uom" name="unitDoseUom">
+
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item0" value="NO_VALUE">no
+                    value
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item1" value="VV">"%v/v
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item2" value="WV">"%w/v
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item3" value="WW">"%w/w
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item4" value="VW">"%v/w
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item5" value="CM">cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item6" value="GL">g/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item7" value="GML">g/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item8" value="GRAM">gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item9" value="IU">iu
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item10" value="IUG">iu/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item11" value="IUMG">
+                    iu/mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item12" value="IUML">
+                    iu/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item13" value="KG">kg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item14" value="KGL">kg/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item15" value="LITRE">
+                    litre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item16" value="MEGA_U">mega
+                    u
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item17" value="MEGA_UML">
+                    mega u/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item18" value="M">m
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item19" value="MG">mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item20" value="MG16_HOURS">
+                    mg/16 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item21" value="MG24_HOURS">
+                    mg/24 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item22" value="MG72_HOURS">
+                    mg/72 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item23" value="MGG">mg/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item24" value="MGKG">
+                    mg/kg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item25" value="MGL">mg/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item26" value="MGMG">
+                    mg/mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item27" value="MGML">
+                    mg/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item28" value="MICROGRAM">
+                    microgram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item29"
+                          value="MICROGRAM24_HOURS">microgram/24 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item30"
+                          value="MICROGRAM72_HOURS">microgram/72 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item31" value="MICROGRAMG">
+                    microgram/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item32"
+                          value="MICROGRAMML">microgram/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item33" value="ML">ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item34" value="MLKG">
+                    ml/kg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item35" value="MLL">ml/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item36" value="MLML">
+                    ml/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item37" value="MOLAR">
+                    molar
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item38" value="MM">mm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item39" value="OBSOLETEMM">
+                    obsolete-mM
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item40" value="MMOL">mmol
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item41" value="MMOLML">
+                    mmol/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item42" value="NANOGRAM">
+                    nanogram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item43" value="NANOGRAMML">
+                    nanogram/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item44" value="UNIT">unit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item45" value="UNITGRAM">
+                    unit/gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item46" value="UNITMG">
+                    unit/mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item47" value="UNITML">
+                    unit/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item48" value="AMPOULE">
+                    ampoule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item49" value="BAGUETTE">
+                    baguette
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item50" value="CAPSULE">
+                    capsule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item51" value="CARTON">
+                    carton
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item52" value="CARTRIDGE">
+                    cartridge
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item53" value="CYCLE">
+                    cycle
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item54" value="CYLINDER">
+                    cylinder
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item55" value="DOSE">dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item56" value="ENEMA">
+                    enema
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item57" value="LANCET">
+                    lancet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item58" value="LOAF">loaf
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item59" value="LOZENGE">
+                    lozenge
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item60" value="MULTIPACK">
+                    multipack
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item61" value="NEBULE">
+                    nebule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item62" value="NEEDLE">
+                    needle
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item63" value="PACK">pack
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item64" value="PASTILLE">
+                    pastille
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item65" value="PATCH">
+                    patch
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item66" value="PESSARY">
+                    pessary
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item67"
+                          value="PREFILLED_DISPOSABLE_INJECTION">pre-filled disposable injection
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item68" value="DEVICE">
+                    device
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item69" value="ROLL">roll
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item70" value="SACHET">
+                    sachet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item71" value="STOCKING">
+                    stocking
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item72" value="STRIP">
+                    strip
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item73"
+                          value="SUPPOSITORY">suppository
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item74" value="SYRINGE">
+                    syringe
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item75" value="TABLET">
+                    tablet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item76" value="TUBE">tube
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item77" value="VIAL">vial
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item78" value="UNIT_DOSE">
+                    unit dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item79"
+                          value="MICROGRAMACTUATION">microgram/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item80" value="CATHETER">
+                    catheter
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item81"
+                          value="MGACTUATION">mg/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item82"
+                          value="MICROGRAMHOUR">microgram/hour
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item83" value="DRESSING">
+                    dressing
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item84" value="SWAB">swab
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item85" value="SUTURE">
+                    suture
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item86" value="TRUSS">
+                    truss
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item87" value="BAG">bag
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item88" value="BOTTLE">
+                    bottle
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item89" value="PLASTER">
+                    plaster
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item90" value="DISC">disc
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item91" value="BLISTER">
+                    blister
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item92" value="APPLICATOR">
+                    applicator
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item93" value="POT">pot
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item94" value="BAR">bar
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item95" value="PIZZA_BASE">
+                    pizza base
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item96" value="PIECE">
+                    piece
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item97" value="GLOVE">
+                    glove
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item98"
+                          value="DUAL_DOSE_SACHET">dual dose sachet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item99" value="GACTUATION">
+                    g/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item100"
+                          value="UNITACTUATION">unit/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item101"
+                          value="MICROGRAMSSQUARE_CM">micrograms/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item102" value="KIT">kit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item103" value="PILLULE">
+                    pillule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item104" value="HOUR">
+                    hour
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item105" value="SQUARE_CM">
+                    square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item106" value="ACTUATION">
+                    actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item107" value="SPOONFUL">
+                    spoonful
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item108" value="COMPONENT">
+                    component
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item109"
+                          value="MICROLITRE">microlitre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item110" value="MICROMOL">
+                    micromol
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item111" value="NANOLITRE">
+                    nanolitre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item112"
+                          value="MICROMOLML">micromol/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item113"
+                          value="MICROLITREML">microlitre/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item114"
+                          value="NANOLITREML">nanolitre/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item115"
+                          value="MGSQUARE_CM">mg/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item116"
+                          value="UNITSQUARE_CM">unit/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item117" value="CAN">can
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item118" value="CONTAINER">
+                    container
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item119"
+                          value="MICROLITREG">microlitre/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item120" value="MLGRAM">
+                    ml/gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item121" value="LARVA">
+                    larva
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item122" value="MBQ">MBq
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item123" value="KBQ">kBq
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item124" value="GBQ">GBq
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item125" value="GBQML">
+                    GBq/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item126" value="KBQML">
+                    kBq/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item127" value="MBQML">
+                    MBq/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item128" value="GENERATOR">
+                    generator
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item129" value="SYSTEM">
+                    system
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item130" value="BANDAGE">
+                    bandage
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item131" value="STRAW">
+                    straw
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item132"
+                          value="TUBERCULIN_UNIT">tuberculin unit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item133" value="MMOLLITRE">
+                    mmol/litre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item134" value="MOLL">
+                    mol/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item135" value="GDOSE">
+                    g/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item136" value="MGDOSE">
+                    mg/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item137"
+                          value="MICROGRAMDOSE">microgram/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item138" value="UNITDOSE">
+                    unit/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item139"
+                          value="KALLIKREIN_INACTIVATOR_UNIT">Kallikrein inactivator unit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item140"
+                          value="KALLIKREIN_INACTIVATOR_UNITML">Kallikrein inactivator unit/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item141" value="CUP">cup
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item142" value="PPM">ppm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item143" value="SQT">SQ-T
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item144"
+                          value="APPLICATION">application
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item145"
+                          value="GAPPLICATION">g/application
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item146"
+                          value="MGAPPLICATION">mg/application
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item147"
+                          value="TUBERCULIN_UNITSML">tuberculin units/ML
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item148" value="CIGARETTE">
+                    cigarette
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item149" value="GRAMGRAM">
+                    gram/gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item150"
+                          value="MONTH_SUPPLY">month supply
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item151"
+                          value="WEEK_SUPPLY">week supply
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item152" value="PAD">pad
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item153" value="HEP">HEP
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item154" value="CELL">
+                    Cell
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item155"
+                          value="CELLMICROLITRE">cell/microlitre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item156" value="INSERT">
+                    insert
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item157" value="FILM">
+                    film
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item158" value="DROP">
+                    drop
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item159" value="UNITDROP">
+                    unit/drop
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item160" value="LEECH">
+                    leech
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item161"
+                          value="TERAGENOME_COPIES">teragenome copies
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item162"
+                          value="TERAGENOME_COPIESML">teragenome copies/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item163" value="POUCH">
+                    pouch
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item164"
+                          value="CELLSQUARE_CM">cell/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item165" value="CELLML">
+                    cell/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item166"
+                          value="MILLION_PLAQUE_FORMING_UNITS">million plaque forming units
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item167"
+                          value="MILLION_PLAQUE_FORMING_UNITSML">million plaque forming units/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item168"
+                          value="PLAQUE_FORMING_UNITS">plaque forming units
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item169"
+                          value="PLAQUE_FORMING_UNITSML">plaque forming units/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item170"
+                          value="ELASTOMERIC_DEVICE">elastomeric device
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item171"
+                          value="VECTOR_GENOME">vector genome
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item172"
+                          value="BILLION_VECTOR_GENOMEML">billion vector genome/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item173"
+                          value="BILLION_VECTOR_GENOME">billion vector genome
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item174"
+                          value="ELASTOMERIC_DEVICEML">elastomeric device/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-unit-dose-uom-item175"
+                          value="VECTOR_GENOMEML">vector genome/ml
+                  </option>
+                </select>
+
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="insert-vmp-select-vmp-uom-value">VMP unit of measure
+                  Value</label>
+
+                <select class="nhsuk-select" id="insert-vmp-select-vmp-uom-value" name="vmpUomValue">
+
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item0" value="NO_VALUE">no
+                    value
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item1" value="VV">"%v/v
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item2" value="WV">"%w/v
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item3" value="WW">"%w/w
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item4" value="VW">"%v/w
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item5" value="CM">cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item6" value="GL">g/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item7" value="GML">g/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item8" value="GRAM">gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item9" value="IU">iu
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item10" value="IUG">iu/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item11" value="IUMG">
+                    iu/mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item12" value="IUML">
+                    iu/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item13" value="KG">kg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item14" value="KGL">kg/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item15" value="LITRE">
+                    litre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item16" value="MEGA_U">mega
+                    u
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item17" value="MEGA_UML">
+                    mega u/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item18" value="M">m
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item19" value="MG">mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item20" value="MG16_HOURS">
+                    mg/16 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item21" value="MG24_HOURS">
+                    mg/24 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item22" value="MG72_HOURS">
+                    mg/72 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item23" value="MGG">mg/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item24" value="MGKG">
+                    mg/kg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item25" value="MGL">mg/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item26" value="MGMG">
+                    mg/mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item27" value="MGML">
+                    mg/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item28" value="MICROGRAM">
+                    microgram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item29"
+                          value="MICROGRAM24_HOURS">microgram/24 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item30"
+                          value="MICROGRAM72_HOURS">microgram/72 hours
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item31" value="MICROGRAMG">
+                    microgram/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item32"
+                          value="MICROGRAMML">microgram/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item33" value="ML">ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item34" value="MLKG">
+                    ml/kg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item35" value="MLL">ml/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item36" value="MLML">
+                    ml/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item37" value="MOLAR">
+                    molar
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item38" value="MM">mm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item39" value="OBSOLETEMM">
+                    obsolete-mM
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item40" value="MMOL">mmol
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item41" value="MMOLML">
+                    mmol/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item42" value="NANOGRAM">
+                    nanogram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item43" value="NANOGRAMML">
+                    nanogram/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item44" value="UNIT">unit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item45" value="UNITGRAM">
+                    unit/gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item46" value="UNITMG">
+                    unit/mg
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item47" value="UNITML">
+                    unit/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item48" value="AMPOULE">
+                    ampoule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item49" value="BAGUETTE">
+                    baguette
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item50" value="CAPSULE">
+                    capsule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item51" value="CARTON">
+                    carton
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item52" value="CARTRIDGE">
+                    cartridge
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item53" value="CYCLE">
+                    cycle
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item54" value="CYLINDER">
+                    cylinder
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item55" value="DOSE">dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item56" value="ENEMA">
+                    enema
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item57" value="LANCET">
+                    lancet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item58" value="LOAF">loaf
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item59" value="LOZENGE">
+                    lozenge
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item60" value="MULTIPACK">
+                    multipack
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item61" value="NEBULE">
+                    nebule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item62" value="NEEDLE">
+                    needle
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item63" value="PACK">pack
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item64" value="PASTILLE">
+                    pastille
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item65" value="PATCH">
+                    patch
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item66" value="PESSARY">
+                    pessary
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item67"
+                          value="PREFILLED_DISPOSABLE_INJECTION">pre-filled disposable injection
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item68" value="DEVICE">
+                    device
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item69" value="ROLL">roll
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item70" value="SACHET">
+                    sachet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item71" value="STOCKING">
+                    stocking
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item72" value="STRIP">
+                    strip
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item73"
+                          value="SUPPOSITORY">suppository
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item74" value="SYRINGE">
+                    syringe
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item75" value="TABLET">
+                    tablet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item76" value="TUBE">tube
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item77" value="VIAL">vial
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item78" value="UNIT_DOSE">
+                    unit dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item79"
+                          value="MICROGRAMACTUATION">microgram/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item80" value="CATHETER">
+                    catheter
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item81"
+                          value="MGACTUATION">mg/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item82"
+                          value="MICROGRAMHOUR">microgram/hour
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item83" value="DRESSING">
+                    dressing
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item84" value="SWAB">swab
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item85" value="SUTURE">
+                    suture
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item86" value="TRUSS">
+                    truss
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item87" value="BAG">bag
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item88" value="BOTTLE">
+                    bottle
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item89" value="PLASTER">
+                    plaster
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item90" value="DISC">disc
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item91" value="BLISTER">
+                    blister
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item92" value="APPLICATOR">
+                    applicator
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item93" value="POT">pot
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item94" value="BAR">bar
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item95" value="PIZZA_BASE">
+                    pizza base
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item96" value="PIECE">
+                    piece
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item97" value="GLOVE">
+                    glove
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item98"
+                          value="DUAL_DOSE_SACHET">dual dose sachet
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item99" value="GACTUATION">
+                    g/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item100"
+                          value="UNITACTUATION">unit/actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item101"
+                          value="MICROGRAMSSQUARE_CM">micrograms/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item102" value="KIT">kit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item103" value="PILLULE">
+                    pillule
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item104" value="HOUR">
+                    hour
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item105" value="SQUARE_CM">
+                    square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item106" value="ACTUATION">
+                    actuation
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item107" value="SPOONFUL">
+                    spoonful
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item108" value="COMPONENT">
+                    component
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item109"
+                          value="MICROLITRE">microlitre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item110" value="MICROMOL">
+                    micromol
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item111" value="NANOLITRE">
+                    nanolitre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item112"
+                          value="MICROMOLML">micromol/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item113"
+                          value="MICROLITREML">microlitre/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item114"
+                          value="NANOLITREML">nanolitre/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item115"
+                          value="MGSQUARE_CM">mg/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item116"
+                          value="UNITSQUARE_CM">unit/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item117" value="CAN">can
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item118" value="CONTAINER">
+                    container
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item119"
+                          value="MICROLITREG">microlitre/g
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item120" value="MLGRAM">
+                    ml/gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item121" value="LARVA">
+                    larva
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item122" value="MBQ">MBq
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item123" value="KBQ">kBq
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item124" value="GBQ">GBq
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item125" value="GBQML">
+                    GBq/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item126" value="KBQML">
+                    kBq/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item127" value="MBQML">
+                    MBq/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item128" value="GENERATOR">
+                    generator
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item129" value="SYSTEM">
+                    system
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item130" value="BANDAGE">
+                    bandage
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item131" value="STRAW">
+                    straw
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item132"
+                          value="TUBERCULIN_UNIT">tuberculin unit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item133" value="MMOLLITRE">
+                    mmol/litre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item134" value="MOLL">
+                    mol/l
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item135" value="GDOSE">
+                    g/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item136" value="MGDOSE">
+                    mg/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item137"
+                          value="MICROGRAMDOSE">microgram/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item138" value="UNITDOSE">
+                    unit/dose
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item139"
+                          value="KALLIKREIN_INACTIVATOR_UNIT">Kallikrein inactivator unit
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item140"
+                          value="KALLIKREIN_INACTIVATOR_UNITML">Kallikrein inactivator unit/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item141" value="CUP">cup
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item142" value="PPM">ppm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item143" value="SQT">SQ-T
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item144"
+                          value="APPLICATION">application
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item145"
+                          value="GAPPLICATION">g/application
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item146"
+                          value="MGAPPLICATION">mg/application
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item147"
+                          value="TUBERCULIN_UNITSML">tuberculin units/ML
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item148" value="CIGARETTE">
+                    cigarette
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item149" value="GRAMGRAM">
+                    gram/gram
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item150"
+                          value="MONTH_SUPPLY">month supply
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item151"
+                          value="WEEK_SUPPLY">week supply
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item152" value="PAD">pad
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item153" value="HEP">HEP
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item154" value="CELL">
+                    Cell
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item155"
+                          value="CELLMICROLITRE">cell/microlitre
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item156" value="INSERT">
+                    insert
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item157" value="FILM">
+                    film
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item158" value="DROP">
+                    drop
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item159" value="UNITDROP">
+                    unit/drop
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item160" value="LEECH">
+                    leech
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item161"
+                          value="TERAGENOME_COPIES">teragenome copies
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item162"
+                          value="TERAGENOME_COPIESML">teragenome copies/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item163" value="POUCH">
+                    pouch
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item164"
+                          value="CELLSQUARE_CM">cell/square cm
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item165" value="CELLML">
+                    cell/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item166"
+                          value="MILLION_PLAQUE_FORMING_UNITS">million plaque forming units
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item167"
+                          value="MILLION_PLAQUE_FORMING_UNITSML">million plaque forming units/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item168"
+                          value="PLAQUE_FORMING_UNITS">plaque forming units
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item169"
+                          value="PLAQUE_FORMING_UNITSML">plaque forming units/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item170"
+                          value="ELASTOMERIC_DEVICE">elastomeric device
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item171"
+                          value="VECTOR_GENOME">vector genome
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item172"
+                          value="BILLION_VECTOR_GENOMEML">billion vector genome/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item173"
+                          value="BILLION_VECTOR_GENOME">billion vector genome
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item174"
+                          value="ELASTOMERIC_DEVICEML">elastomeric device/ml
+                  </option>
+                  <option id="nhsuk-select-insert-vmp-select-vmp-uom-value-item175"
+                          value="VECTOR_GENOMEML">vector genome/ml
+                  </option>
+                </select>
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </fieldset>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                  Start date
+                </legend>
+                <div class="nhsuk-hint" id="example-hint">
+                  For example, 15 3 1984
+                </div>
+
+                <div class="nhsuk-date-input" id="example">
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                        Day
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                             id="example-day" name="example-day" type="text" pattern="[0-9]*"
+                             inputmode="numeric" value="6"/>
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
+                             id="example-month" name="example-month" type="text" pattern="[0-9]*"
+                             inputmode="numeric" value="7"/>
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
+                             id="example-year" name="example-year" type="text" pattern="[0-9]*"
+                             inputmode="numeric" value="2021"/>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-column-full">
+          <div>
+            <a class="nhsuk-button" style="float: right"
+               href="update-vmp-unit-dose-details-summary.html">Continue</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  Tabs();
+  CopyToClipboard();
+  CopyDateToClipboard();
+  PasteDateToDateInputs();
+</script>
+
+
+{% endblock %}

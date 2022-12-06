@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="index.html">
+        <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+                  d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Back to prototype home</a>
+    </div>
+    <h1 class="heading-xlarge">User guide</h1>
+
+
+    <div class="nhsuk-grid-row">
+
+      <section>
+        <div class="nhsuk-u-reading-width">
+          <h2>1. Overview</h2>
+          <p>
+            The dm+d is a dictionary of descriptions and codes which represent medicines and devices in use across the
+            NHS. The dm+d data is refreshed weekly and contains a huge variety of information, including:
+          </p>
+          <ol class="nhsuk-contents-list__list">
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">whether a product will be reimbursed by NHSBSA, if submitted for reimbursement by a dispensing contractor</span>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">the indicative price of each pack of a product (where a price is maintained)</span>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">current and discontinued products and packs available from manufacturers and Suppliers</span>
+            </li>
+          </ol>
+
+          </br>
+
+          <p>
+            The user has the following options:
+          </p>
+          <ol class="nhsuk-contents-list__list">
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">Product Search</span>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">Ingredient Search</span>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">Code Search</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      </br>
+
+      <section>
+        <div class="nhsuk-u-reading-width">
+          <h2>2. General Information </h2>
+          <p>
+            Throughout the browser the user can refine searches using a mixture of both Drop down boxes and radio
+            buttons.
+          </p>
+          <p>
+            The criteria entered by the user does not have to conform to regular dm+d naming convention of
+            name/strength/form e.g., “Paracetamol 500mg tablets”. The system can return results where partial
+            information is entered e.g., “Paracetamol tablets 500mg” or “Para 500 tab”.
+          </p>
+
+          <p>
+            There are ‘breadcrumbs’ throughout the site which allows the user to quickly navigate to previous screens
+            using the hyperlinks an example is shown below.
+          </p>
+
+          <figure class="nhsuk-image">
+            <img alt="Hyperlinks screen" class="nhsuk-image__img" src="/tce-1212/photos/product-search-screen.jpg">
+            <figcaption class="nhsuk-image__caption">
+              image caption
+            </figcaption>
+          </figure>
+
+          <p>
+            In some places a Copy icon can be seen which allows the user to quickly copy the entry. Below shows the
+            SNOMED code with the copy icon at the end of the code.
+          </p>
+
+          <figure class="nhsuk-image">
+            <img alt="Copy icon screen" class="nhsuk-image__img" src="/tce-1212/photos/product-search-screen.jpg">
+            <figcaption class="nhsuk-image__caption">
+              image caption
+            </figcaption>
+          </figure>
+
+          <p>
+            Search results default 20 entries but the user has the option to change to view 50 or 100 results.
+          </p>
+
+          <figure class="nhsuk-image">
+            <img alt="Change page size screen" class="nhsuk-image__img"
+                 src="/tce-1212/photos/product-search-screen.jpg">
+            <figcaption class="nhsuk-image__caption">
+              image caption
+            </figcaption>
+          </figure>
+
+          <p>
+            The data displayed throughout the dm+d browser reflects the data held by the NHSBSA.
+          </p>
+
+          <p>
+            By default, Invalid products are not shown – to show Invalid products tick the box labelled ‘Show Invalid’.
+          </p>
+
+          <p>
+            Discontinued AMP, Parallel Imports and Special Orders are shown by default – to hide these in the search
+            results, tick the relevant box before clicking search.
+          </p>
+
+          <p>
+            Historical information is displayed where the data is held by the NHSBSA.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="nhsuk-u-reading-width">
+          <h2>3. Product Search </h2>
+          <p>
+            The product search can be used to search for
+          </p>
+          <ol class="nhsuk-contents-list__list">
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">VTM</span>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">VMP</span>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list">AMP</span>
+            </li>
+          </ol>
+
+          <h3>3.1 VTM</h3>
+          <p>Once the drop down is set to VTM the user can enter the product name </p>
+
+          <figure class="nhsuk-image">
+            <img alt="Product search screen" class="nhsuk-image__img" src="/tce-1212/photos/product-search-screen.jpg">
+            <figcaption class="nhsuk-image__caption">
+              image caption
+            </figcaption>
+          </figure>
+
+          <p>Inserting the product name and clicking search button returns a list of all products matching the search
+            criteria.</p>
+
+          <p>By default, Invalid products are not shown, however, users can choose to display Invalid products by
+            ticking the box labelled ‘Show Invalid’.</p>
+
+          <figure class="nhsuk-image">
+            <img alt="Product search results screen" class="nhsuk-image__img"
+                 src="/tce-1212/photos/product-search-screen.jpg">
+            <figcaption class="nhsuk-image__caption">
+              image caption
+            </figcaption>
+          </figure>
+
+          <p>The result table provides the VTM Name and SNOMED Code of products which match the search criteria
+            entered.</p>
+
+          <p>The user can navigate to any of the products listed by clicking the relevant VTM Name. The results screen
+            below will be displayed to the user.</p>
+
+          <figure class="nhsuk-image">
+            <img alt="VTM record screen" class="nhsuk-image__img" src="/tce-1212/photos/product-search-screen.jpg">
+            <figcaption class="nhsuk-image__caption">
+              image caption
+            </figcaption>
+          </figure>
+
+          <p>From this screen the user can navigate, using the hyperlinks, to any of the VMP products listed or see
+            further information by selecting the further links hyperlink.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

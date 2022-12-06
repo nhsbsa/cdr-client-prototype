@@ -1,0 +1,296 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-width-container">
+
+  <div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="index.html">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24" aria-hidden="true">
+        <path
+            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Back to home</a>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5 nhsuk-u-margin-left-3" id="page-heading">
+        Items to action</h1>
+    </div>
+
+  </div>
+</div>
+
+<div class="nhsuk-width-container-fluid nhsuk-u-margin-left-6 nhsuk-u-margin-right-6">
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div data-page="code-lookup-results">
+
+
+        <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+        <div
+            class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0 nhsuk-u-margin-bottom-4">
+          <span id="page-and-result-count-top">Page 1 of 1 (2 total results)</span>
+        </div>
+        <div id="results-table-container" class="nhsuk-table-responsive nhsuk-u-margin-bottom-4">
+          <table class="nhsuk-table" id="code-lookup-results-table">
+            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Results</caption>
+            <thead class="nhsuk-table__head" tabindex="0">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header-identifier" scope="col"><span
+                    class="nhsuk-u-visually-hidden">Identifier</span></th>
+                <th class="nhsuk-table__header columnheader-sticky" scope="col" id="type-header">Type
+                </th>
+                <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name</th>
+                <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Pack size UOM</th>
+                <th class="nhsuk-table__header columnheader-sticky" scope="col" id="supplier-header">
+                  Supplier
+                </th>
+                <th class="nhsuk-table__header columnheader-sticky start-end-date-column" scope="col"
+                    style="white-space: nowrap">Start date
+                </th>
+                <th class="nhsuk-table__header columnheader-sticky" scope="col" id="reason-header">
+                  Reason
+                </th>
+                <th class="nhsuk-table__header columnheader-sticky action-column" scope="col"
+                    style="white-space: nowrap">Action
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body" id="table-search-results-body" role="rowgroup"
+                   aria-label="search results">
+
+            <tr role="row" class="nhsuk-table__row temporal-current">
+              <td role="cell" class="nhsuk-table__cell-historic">
+                <span class="nhsuk-table-responsive__heading">Type</span>
+                <span id="results-table--tag-value-1">
+                  <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+                </span>
+              </td>
+              <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Type</span>
+                <span class="nhsuk-u-font-size-16" id="results-table--dictionary-vmp-value-1">
+                <strong class="nhsuk-tag nhsuk-tag--grey" id="product-1-classification-vmp"
+                        style="background-color: #354550; color: #dbe0e3;"><abbr aria-hidden="true"
+                                                                                 title="Virtual Medicinal Product Pack">VMPP</abbr></strong><span
+                    class="nhsuk-u-visually-hidden">Virtual Medicinal Product Pack</span>
+              </span>
+
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">Name</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                      id="results-table--name-value-1">
+                  <a href="/common-drug-reference/vmp/16742?ref=W3sicGFnZVRpdGxlIjoiQk5GIERydWcgQ29kZSByZXN1bHRzIiwidXJsIjoiL2NvbW1vbi1kcnVnLXJlZmVyZW5jZS9jb2RlLWxvb2t1cC9yZXN1bHRzP3NlYXJjaENvZGU9MDQwNzAxMEgwQUFETERMJmNvZGVUeXBlPUJORl9EUlVHIiwiaGlzdG9yeSI6bnVsbH1d"
+                     id="product-1-generic-name" identifier="vmp-16742">Paracetamol 10mg suppositories</a>
+
+
+
+                </span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">Pack size UOM</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                      id="results-table--pack-size-uom-value-1">
+
+                    24 Tablets
+
+
+                </span>
+              </td>
+              <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Supplier</span>
+
+                <span id="product-1-no-supplier-name"><span class="nhsuk-u-visually-hidden">No supplier listed</span></span>
+              </td>
+
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                <span id="results-table--start-date-value-aria-1" class="nhsuk-u-visually-hidden">24 May 2018</span>
+
+
+                <span id="results-table--start-date-value-1" aria-hidden="true"
+                      class="nhsuk-u-font-size-16">24-05-2018</span>
+
+              </td>
+
+              <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Reason</span>
+                <span id="product-1-reason" class="nhsuk-u-font-size-16 nhsuk-table-content">Moved to PCDD</span>
+              </td>
+
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Action</span>
+
+                <span id="results-table--action-aria-1">
+                    <a href="vmpp/vmpp-scdd-to-pcdd.html">Action</a>
+                  </span>
+
+              </td>
+
+
+            </tr>
+
+            <tr role="row" class="nhsuk-table__row temporal-current">
+              <td role="cell" class="nhsuk-table__cell-historic">
+                <span class="nhsuk-table-responsive__heading">Type</span>
+                <span id="results-table--tag-value-2">
+                  <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+                </span>
+              </td>
+              <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Type</span>
+                <span class="nhsuk-u-font-size-16" id="results-table--dictionary-vmp-value-2">
+                <strong class="nhsuk-tag nhsuk-tag--grey" id="product-2-classification-vmpp"
+                        style="background-color: #354550; color: #dbe0e3;"><abbr aria-hidden="true"
+                                                                                 title="Virtual Medicinal Product Pack">VMPP</abbr></strong><span
+                    class="nhsuk-u-visually-hidden">Virtual Medicinal Product Pack</span>
+              </span>
+
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">Name</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                      id="results-table--name-value-2">
+                  <a href="/common-drug-reference/vmp/16742?ref=W3sicGFnZVRpdGxlIjoiQk5GIERydWcgQ29kZSByZXN1bHRzIiwidXJsIjoiL2NvbW1vbi1kcnVnLXJlZmVyZW5jZS9jb2RlLWxvb2t1cC9yZXN1bHRzP3NlYXJjaENvZGU9MDQwNzAxMEgwQUFETERMJmNvZGVUeXBlPUJORl9EUlVHIiwiaGlzdG9yeSI6bnVsbH1d"
+                     id="product-2-generic-name" identifier="vmp-16742">Paracetamol 1g tablets</a>
+
+
+
+                </span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">Pack size UOM</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                      id="results-table--pack-size-uom-value-2">
+
+                    24 Tablets
+
+
+                </span>
+              </td>
+              <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Supplier</span>
+
+                <span id="product-2-no-supplier-name"><span class="nhsuk-u-visually-hidden">No supplier listed</span></span>
+              </td>
+
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                <span id="results-table--start-date-value-aria-2" class="nhsuk-u-visually-hidden">24 May 2018</span>
+
+
+                <span id="results-table--start-date-value-2" aria-hidden="true"
+                      class="nhsuk-u-font-size-16">24-05-2018</span>
+
+              </td>
+
+              <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Reason</span>
+                <span id="product-2-reason" class="nhsuk-u-font-size-16 nhsuk-table-content">Moved to SCDD</span>
+              </td>
+
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Action</span>
+
+                <span id="results-table--action-aria-2">
+                    <a href="vmpp/vmpp-pcdd-to-scdd-summary.html">Action</a>
+                  </span>
+
+              </td>
+
+
+            </tr>
+
+            <tr role="row" class="nhsuk-table__row temporal-current">
+                <td role="cell" class="nhsuk-table__cell-historic">
+                  <span class="nhsuk-table-responsive__heading">Type</span>
+                  <span id="results-table--tag-value-0">
+                  <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+                </span>
+                </td>
+                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Type</span>
+
+                  <span class="nhsuk-u-font-size-16" id="results-table--dictionary-amp-value-0">
+                  <strong class="nhsuk-tag nhsuk-tag--grey" id="product-0-classification-amp"><abbr
+                      aria-hidden="true" title="Actual Medicinal Product">AMP</abbr></strong><span
+                        class="nhsuk-u-visually-hidden">Actual Medicinal Product</span>
+                </span>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                        id="results-table--name-value-0">
+
+                  <a href="/common-drug-reference/amp/144001?ref=W3sicGFnZVRpdGxlIjoiQk5GIERydWcgQ29kZSByZXN1bHRzIiwidXJsIjoiL2NvbW1vbi1kcnVnLXJlZmVyZW5jZS9jb2RlLWxvb2t1cC9yZXN1bHRzP3NlYXJjaENvZGU9MDQwNzAxMEgwQUFETERMJmNvZGVUeXBlPUJORl9EUlVHIiwiaGlzdG9yeSI6bnVsbH1d"
+                     id="product-0-product-name" identifier="amp-144001">Paracetamol 1g tablets</a>
+
+
+                </span>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Pack size UOM</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                        id="results-table--pack-size-uom-value-0">
+
+
+
+                </span>
+                </td>
+                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Supplier</span>
+                  <span id="product-0-supplier-name" class="nhsuk-u-font-size-16 nhsuk-table-content">Dawa Ltd</span>
+
+                </td>
+
+                <td class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                  <span id="results-table--start-date-value-aria-0" class="nhsuk-u-visually-hidden">24 May 2018</span>
+
+
+                  <span id="results-table--start-date-value-0" aria-hidden="true"
+                        class="nhsuk-u-font-size-16">24-05-2018</span>
+
+                </td>
+
+                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Reason</span>
+                  <span id="product-0-reason" class="nhsuk-u-font-size-16 nhsuk-table-content">Moved to PCDD</span>
+                </td>
+
+                <td class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Action</span>
+
+                  <span id="results-table--action-aria-0">
+                    <a href="#">Action</a>
+                  </span>
+
+                </td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+        <div id="nhsuk-loading-spinner" class="nhsuk-grid-row"
+             style="text-align: center; display: none">
+          <img alt="loading-icon" id="tablet-spinner"
+               src="/common-drug-reference/images/icons/icon-tablet-spinner.svg">
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

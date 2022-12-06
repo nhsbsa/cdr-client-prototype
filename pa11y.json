@@ -1,0 +1,39 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 10000,
+    "viewport": {
+      "width": 1000,
+      "height": 1000
+    }
+  },
+
+  "urls": [
+    "http://localhost:8000/",
+    "http://localhost:8000/tce-863/index",
+    "http://localhost:8000/tce-863/add-vmpps",
+    "http://localhost:8000/tce-863/associated-vmp-results",
+    "http://localhost:8000/tce-863/associated-vmpp-results",
+    "http://localhost:8000/tce-863/associated-vmp-added",
+    "http://localhost:8000/tce-863/associated-vmpp-results2",
+    "http://localhost:8000/tce-863/associated-vmp-added2",
+    "http://localhost:8000/tce-863/summary",
+    "http://localhost:8000/tce-868/insert-amp-name",
+    "http://localhost:8000/tce-868/insert-amp-supplier",
+    "http://localhost:8000/tce-868/insert-amp-supplier-results",
+    "http://localhost:8000/tce-868/insert-amp-supplier-added",
+    "http://localhost:8000/tce-868/insert-amp-mandatory-attributes",
+    "http://localhost:8000/tce-868/insert-amp-add-excipient",
+    "http://localhost:8000/tce-868/insert-amp-excipient",
+    "http://localhost:8000/tce-868/insert-amp-excipient-results",
+    "http://localhost:8000/tce-868/insert-amp-excipient-added",
+    "http://localhost:8000/tce-868/insert-amp-excipient-added2",
+    "http://localhost:8000/tce-868/insert-amp-excipient-added3",
+    "http://localhost:8000/tce-868/insert-amp-excipient-added4",
+    "http://localhost:8000/tce-868/insert-amp-excipient-added5",
+    "http://localhost:8000/tce-868/insert-amp-excipient-added6",
+    "http://localhost:8000/tce-868/insert-amp-non-mandatory-attributes",
+    "http://localhost:8000/tce-868/insert-amp-non-mandatory-PCDD-attributes",
+    "http://localhost:8000/tce-868/insert-amp-summary"
+  ]
+}

@@ -1,0 +1,443 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+    <div>
+
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="view-vmp.html">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+
+      <h1 style="float: left;" class="nhsuk-heading-xl" id="pageHeading">
+        <span>Verapamil 160mg tablets</span>
+      </h1>
+
+    <!--Show History-->
+    <div class="nhsuk-grid-column-full">
+
+
+    <div class="tabs tabbed">
+      <div class="tabs-nav">
+        <ul class="tabs-list">
+          <li id="heading-tab-attributes"><a href="view-vmp.html">View attributes</a></li>
+          <li id="heading-tab-summary"><a href="#tab-summary">View summary</a></li>
+        </ul>
+      </div>
+
+      <div class="tabs-content">
+
+        <div class="tabs-panel nhsuk-u-padding-top-3" id="tab-attributes">
+          <div class="tabs-panel-inner">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+                <!--Attributes-->
+                <section class="nhsuk-u-padding-bottom-4" id="attributes-section">
+
+
+                  <h2 class="nhsuk-heading-l">Attribute details</h2>
+                  <div class="nhsuk-table-responsive">
+                    <table role="table" class="nhsuk-table ">
+                      <thead role="rowgroup" class="nhsuk-table__head" id="attributes-table-head">
+                      <tr role="row">
+
+                        <th role="columnheader" class="columnheader-sticky" scope="col"
+                            id="attribute-table--name-header">
+                          <label id="attribute-table--name-header-span"
+                                 for="attribute-table--name-filter-input">
+                            Attribute name
+                            <svg id="attribute-table--name-header-search-icon"
+                                 style="height: 1.1875rem; width: 1.1875rem;"
+                                 class="nhsuk-icon nhsuk-icon__search"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 aria-hidden="true" focusable="false">
+                              <path
+                                      d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                            </svg>
+                            <br/>
+                          </label>
+                          <input id="attribute-table--name-filter-input"
+                                 class="attribute-table--name-filter-input-hidden" type="text"/>
+                        </th>
+                        <th role="columnheader" class="columnheader-sticky" scope="col"
+                            id="attribute-table--description-header">
+                          Description
+                        </th>
+                        <th role="columnheader" class="columnheader-sticky start-end-date-column"
+                            scope="col" id="attribute-table--start-date-header">
+                          Start date
+                        </th>
+                      </tr>
+                      </thead>
+                      <tbody class="nhsuk-table__body">
+
+                      <tr role="row" class="nhsuk-table__row temporal-current">
+
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                          <span
+                                  id="attribute-table--prescribing-status-attribute-name-value-current">Prescribing Status</span>
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+
+                          <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type">
+                            <option>Valid as a prescribable product</option>
+                            <option>Invalid to prescribe in NHS primary care</option>
+                            <option>Never valid to prescribe as a VMP</option>
+                            <option>Caution - AMP level prescribing advised</option>
+                          </select>
+
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date</span>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                        </td>
+                      </tr>
+
+                      <tr role="row" class="nhsuk-table__row temporal-current">
+
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                          <span
+                                  id="attribute-table--controlled-drug-category-attribute-name-value-current">Controlled Drug Category</span>
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <span class="nhsuk-u-visually-hidden">No controlled drug status</span>
+                          <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type2">
+                            <option>No controlled drug status</option>
+                            <option>Schedule 1</option>
+                            <option>Schedule 2</option>
+                            <option>Schedule 3</option>
+                          </select>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date</span>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                        </td>
+                      </tr>
+
+                      <tr role="row" class="nhsuk-table__row temporal-current">
+
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                          <span
+                                  id="attribute-table--sugar-free-indicator-attribute-name-value-current">Sugar Free Indicator</span>
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <span class="nhsuk-u-visually-hidden"></span>
+                          <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type3">
+                            <option>-</option>
+                            <option>Sugar free</option>
+                          </select>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date</span>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                        </td>
+                      </tr>
+
+                      <tr role="row" class="nhsuk-table__row temporal-current">
+
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                          <span
+                                  id="attribute-table--cfc-free-indicator-attribute-name-value-current">CFC Free Indicator</span>
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <span class="nhsuk-u-visually-hidden"></span>
+                          <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type4">
+                            <option>-</option>
+                            <option>CFC-free</option>
+                          </select>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date</span>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                        </td>
+                      </tr>
+
+                      <tr role="row" class="nhsuk-table__row temporal-current">
+
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                          <span
+                                  id="attribute-table--gluten-free-indicator-attribute-name-value-current">Gluten Free Indicator</span>
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <span class="nhsuk-u-visually-hidden"></span>
+                          <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type5">
+                            <option>-</option>
+                            <option>Gluten-free</option>
+                          </select>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date</span>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                        </td>
+                      </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                  <script type="text/javascript">
+                    //<![CDATA[
+                    filterInput = document.getElementById('attribute-table--name-filter-input');
+                    filterInput.onkeyup = (e) => {
+                      const rows = document.querySelectorAll(
+                              'tbody.nhsuk-table__body > tr.nhsuk-table__row');
+                      rows.forEach((row) => {
+                        const heading = row.querySelector('td:nth-child(2) > span:nth-child(2)');
+                        if (heading.textContent.toLowerCase().indexOf(e.target.value) > -1) {
+                          row.classList.remove('nhsuk-table__row__filtered');
+                        } else {
+                          row.classList.add('nhsuk-table__row__filtered');
+                        }
+                      });
+                    }
+
+                    const nameHeader = document.getElementById('attribute-table--name-header-span');
+                    nameHeader.addEventListener('click', () => {
+                      const visible = filterInput.classList.contains(
+                              'attribute-table--name-filter-input-visible');
+                      if (visible) {
+                        filterInput.classList.remove('attribute-table--name-filter-input-visible')
+                        filterInput.classList.add('attribute-table--name-filter-input-hidden')
+                      } else {
+                        filterInput.classList.add('attribute-table--name-filter-input-visible')
+                        filterInput.classList.remove('attribute-table--name-filter-input-hidden')
+                      }
+                    });
+                    //]]>
+                  </script>
+                </section>
+                <!--Codes-->
+                <section class="nhsuk-u-padding-bottom-4" id="snomed-section">
+                  <h2 class="nhsuk-heading-l">Codes</h2>
+                  <div class="nhsuk-table-responsive">
+                    <table id="codes-table" class="nhsuk-table ">
+                      <caption class="nhsuk-u-visually-hidden">Codes</caption>
+
+                      <thead class="nhsuk-table__head">
+                      <tr class="nhsuk-table__row">
+
+                        <th role="columnheader" class="columnheader-sticky" scope="col"
+                            id="code-table--code-header">Code
+                        </th>
+                        <th role="columnheader" class="columnheader-sticky" scope="col"
+                            id="code-table--clinical-term-header" style="width: 400px;">Description
+                        </th>
+                        <th role="columnheader" class="columnheader-sticky start-end-date-column"
+                            scope="col" id="attribute-table--start-date-header1">
+                          Start date
+                        </th>
+                      </tr>
+                      </thead>
+                      <tbody class="nhsuk-table__body">
+
+                      <tr class="nhsuk-table__row temporal-current">
+
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Code </span>
+                          <span id="code-table--VMP ID-code-type-value-current">VMP ID</span>
+                        </td>
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <span id="code-table--VMP ID-description-value-current"
+                                class="js-copy-to-clipboard">1</span>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date </span>
+                          <span id="code-table--VMP ID-start-date-value-current"></span>
+                        </td>
+                      </tr>
+
+                      <tr class="nhsuk-table__row temporal-current">
+
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Code </span>
+                          <span id="code-table--PPA Code-code-type-value-current">PPA Code</span>
+                        </td>
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <input class="nhsuk-input nhsuk-input--width-10" value="7642108"/>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date </span>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                        </td>
+                      </tr>
+
+                      <tr class="nhsuk-table__row temporal-current">
+
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Code </span>
+                          <span
+                                  id="code-table--SNOMED Code-code-type-value-current">SNOMED Code</span>
+                        </td>
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <input class="nhsuk-input nhsuk-input--width-10" value="318248001"/>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date </span>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"/>
+                        </td>
+                      </tr>
+
+                      <tr class="nhsuk-table__row temporal-current">
+
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Code </span>
+                          <span id="code-table--Presentation Code (BNF)-code-type-value-current">Presentation Code (BNF)</span>
+                        </td>
+                        <td class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Description </span>
+                          <span id="code-table--Presentation Code (BNF)-description-value-current"
+                                class="js-copy-to-clipboard">0206020T0AAAGAG</span>
+                        </td>
+                        <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                          <span class="nhsuk-table-responsive__heading">Start date </span>
+                          <span id="code-table--Presentation Code (BNF)-start-date-value-current">01-04-1992</span>
+                        </td>
+                      </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs-panel nhsuk-u-padding-top-3" id="tab-summary">
+          <div class="tabs-panel-inner">
+
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-full">
+                <!--Summary-->
+                <section class="nhsuk-u-padding-bottom-4" id="summary-section">
+                  <h2 class="header-medium">Summary</h2>
+
+                  <dl class="nhsuk-summary-list" style="width: 50%">
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key" style="width: 55%">
+                        Start date
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        <span class="nhsuk-u-visually-hidden">Start date</span>
+                        <span id="summary-start-date-value">SOT</span>
+                      </dd>
+                    </div>
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        End date
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        <span class="nhsuk-u-visually-hidden">End date</span>
+                        <span id="summary-end-date-value">EOT</span>
+                      </dd>
+                    </div>
+
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">PIT
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        <span class="nhsuk-u-visually-hidden">PIT value</span>
+                        <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type6">
+                          <option>Generic Name VMP</option>
+                          <option>Oxygen Cylinders</option>
+                          <option>Appliances (inc.oxy)</option>
+                        </select>
+                      </dd>
+                    </div>
+
+
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Dictionary
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        <span class="nhsuk-u-visually-hidden">Dictionary code</span>
+                        <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type7">
+                          <option>PCDD</option>
+                          <option>SCDD</option>
+                        </select>
+                      </dd>
+                    </div>
+
+
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">
+                        Invalid
+                      </dt>
+                      <dd class="nhsuk-summary-list__value">
+                        <span class="nhsuk-u-visually-hidden">Invalid</span>
+                        <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type8">
+                          <option>-</option>
+                          <option>Invalid</option>
+                        </select>
+                      </dd>
+                    </div>
+
+                    <div class="nhsuk-summary-list__row">
+                      <dt class="nhsuk-summary-list__key">Unextractable
+                      </dt>
+                      <select class="nhsuk-select search-type" id="insert-vmp-select-appliance-type9">
+                        <option>-</option>
+                        <option>Extractable</option>
+                      </select>
+                    </div>
+                  </dl>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+           <div>
+              <a class="nhsuk-button" style="float: right" href="update-summary.html">Submit</a>
+            </div>
+            <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-5" type="submit" id="back" name="_eventId_back" style="float: right">Revert</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  Tabs();
+</script>
+
+
+{% endblock %}
