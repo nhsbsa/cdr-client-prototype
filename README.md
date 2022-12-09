@@ -1,5 +1,11 @@
 # Common Drug Reference Prototypes
 
+&ensp;
+```diff
+- Please note this prototype has not been linked up with heroku so can only be viewed on a local machine.
+- Contact a lead front end developer if this needs to be set up.
+```
+&ensp;
 ## Project Setup
 ### Cloning the project
 Clone the project using git:
