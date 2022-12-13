@@ -3,7 +3,7 @@
 &ensp;
 ```diff
 - Please note this prototype has not been linked up with heroku so can only be viewed on a local machine.
-- Contact a lead front end developer if this needs to be set up.
+- Contact matthew.proctor-leake@nhs.net if this needs to be set up.
 ```
 &ensp;
 ## Project Setup
@@ -88,7 +88,7 @@ git push origin local-branch-name
 
 | ![image](https://user-images.githubusercontent.com/111366792/206469532-0151b98e-40c1-4d11-b7c2-6a4dee1d3f82.png) |
 |-|
-<strong>The reviewer will be notified and will review the changes before marking it as being able to be merged. Then it can be merged in to main from the pull request, and thus deployed to Heroku. If the reviewer is able to merge this on their side then they will notify the user who did the pull request that it has been completed. <strong>
+<strong>The reviewer will be notified and will review the changes before marking it as being able to be merged. Then it can be merged in to main from the pull request. If the reviewer is able to merge this on their side then they will notify the user who did the pull request that it has been completed. <strong>
 <p>&nbsp;</p>
 
 
