@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+    <a class="nhsuk-back-link__link" href="home-page">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        <span id="back-link-text">Go back to home page </span></a>
+</div>
+
+<fieldset class="nhsuk-fieldset" >
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+        <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Audit trail
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+            Search criteria summary
+        </h1>
+        <P>Check your answers before completing your submission.</P>
+    </legend>
+
+    <div class="nhsuk-do-dont-list">
+        <h2 class="nhsuk-do-dont-list__label">User selected</h2>
+            <table class="nhsuk-table">
+                <caption class="nhsuk-table__caption"> </caption>
+
+                <p>If you need to make changes to the user names <a href="added-cypher.html" title="add-cypher">edit, add or delete here</a>.</p>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                        User id
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">JAHMO</td>
+<!--                    <td class="nhsuk-table__cell "><a href="added-cypher.html">Edit</a></td>-->
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">ALBOW</td>
+<!--                    <td class="nhsuk-table__cell "><a href="added-cypher.html">Edit</a></td>-->
+                </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div class="nhsuk-do-dont-list">
+        <h3 class="nhsuk-do-dont-list__label">Dictionary selected</h3>
+            <table class="nhsuk-table ">
+                <caption class="nhsuk-table__caption"></caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                       Dictionary
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                        Action
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"> Both PCDD and SCDD</td>
+                    <td class="nhsuk-table__cell "><a href="edit-dictionary.html">Edit</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+    </div>
+    <div class="nhsuk-do-dont-list">
+        <h3 class="nhsuk-do-dont-list__label">Start date</h3>
+        <table class="nhsuk-table ">
+            <caption class="nhsuk-table__caption"></caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                   Start date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                    Action
+                </th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">15 March 2024</td>
+                <td class="nhsuk-table__cell "><a href="edit-start-date.html">Edit</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="nhsuk-do-dont-list">
+        <h3 class="nhsuk-do-dont-list__label">End date</h3>
+        <table class="nhsuk-table ">
+            <caption class="nhsuk-table__caption"></caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                    End date
+                </th>
+                <th role="columnheader" class="" scope="col">
+                    Action
+                </th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">10 March 2024</td>
+                <td class="nhsuk-table__cell "><a href="edit-end-date.html">Edit</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</fieldset>
+
+<a class="nhsuk-button nhsuk-u-margin-top-5" id="continue-button"  href="audit-summary-page.html">Download CSV</a>
+
+</div>
+
+
+
+
+{% endblock %}

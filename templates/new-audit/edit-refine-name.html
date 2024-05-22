@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+    <a class="nhsuk-back-link__link" href="tab-download-refined.html#tab-audit">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        <span id="back-link-text">Go back to download audit </span></a>
+</div>
+
+<div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+            <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Poduct audit
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+               Edit refine name
+            </h1>
+        </legend>
+
+
+        <label class="nhsuk-label" for="add-name">
+            Select name of user
+        </label>
+
+
+        <select class="nhsuk-select" id="add-name" name="type">
+            <option value=""></option>
+            <option value="JAHMO">JAHMO</option>
+            <option value="ALBOW">ALBOW</option>
+            <option value="ALRAM">ALRAM</option>
+            <option value="JAHMO">BAHMO</option>
+            <option value="ALBOW">CLBOW</option>
+            <option value="ALRAM">DERAM</option>
+            <option value="JAHMO">ELLMO</option>
+            <option value="ALBOW">HELOW</option>
+            <option value="ALRAM">INRAM</option>
+        </select>
+    </fieldset>
+
+    <a class="nhsuk-button nhsuk-u-margin-top-5" id="continue-button" name="button"
+       href="tab-download-refined.html#tab-audit">Save and continue</a>
+
+</div>
+<script src="/js/gov.min.js"></script>
+<script>
+
+    let allSelectIds = document.querySelectorAll('select[id]');
+    let allInputIds = document.querySelectorAll('input[id]');
+
+
+    accessibleAutocomplete.enhanceSelectElement({
+        defaultValue: "",
+        autoselect: true,
+        showAllValues: true,
+        confirmOnBlur: false,
+        showNoOptionsFound: true,
+        selectElement: document.querySelector("#add-name"),
+    });
+
+    let parentDiv = document.querySelector("#add-name").parentNode;
+    let newLabel = document.createElement("label");
+    newLabel.innerHTML = "Form";
+    newLabel.style.display = "none";
+    newLabel.setAttribute("for", document.querySelector("#add-name-select").id);
+    parentDiv.appendChild(newLabel);
+
+    // function storeContainerType() {
+    //     var containerType = document.getElementById("add-name");
+    //     localStorage.setItem("special-product-container-type", containerType.value);
+    //
+    //     if (containerType.value === "Other") {
+    //         document.getElementById("continue-button").setAttribute('href', "other-container");
+    //     }
+    // }
+
+    // var getContainerType = localStorage.getItem("special-product-container-type");
+    // var addContainer = document.querySelector("#add-container");
+    //
+    // if (addContainer != null) {
+    //     if (getContainerType != null) {
+    //         addContainer.defaultValue = getContainerType;
+    //     }
+    // }
+
+</script>
+
+
+{% endblock %}

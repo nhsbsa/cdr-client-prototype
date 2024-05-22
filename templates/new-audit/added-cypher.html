@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+    <a class="nhsuk-back-link__link" href="choose-users">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        <span id="back-link-text">Go back to choose user page </span></a>
+</div>
+
+<fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+        <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Audit trail
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+            Choose user id (Cypher)
+        </h1>
+    </legend>
+
+    <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="new-name">
+            Select a user ID
+        </label>
+        <select class="nhsuk-select" id="new-name" name="select-1">
+            <option value=""></option>
+            <option value="JAHMO">JAHMO</option>
+            <option value="ALBOW">ALBOW</option>
+            <option value="ALRAM">ALRAM</option>
+            <option value="JAHMO">BAHMO</option>
+            <option value="ALBOW">CLBOW</option>
+            <option value="ALRAM">DERAM</option>
+            <option value="JAHMO">ELLMO</option>
+            <option value="ALBOW">HELOW</option>
+            <option value="ALRAM">INRAM</option>
+
+        </select>
+    </div>
+
+    <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Selected user list</caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+            <th role="columnheader" class="" scope="col">
+                User id
+            </th>
+            <th role="columnheader" class="" scope="col">
+                Action
+            </th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">JAHMO</td>
+            <td class="nhsuk-table__cell "><a href="confirm-name" title="External website">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>If you want to add more users  <a href="added-cypher" title="External website">add another user</a>.</p>
+    </div>
+</fieldset>
+
+<a class="nhsuk-button nhsuk-u-margin-top-5" id="continue-button" name="button" href="choose-audit-date.html">Save and continue</a>
+
+</div>
+
+<script src="/js/gov.min.js"></script>
+<script>
+
+    let allSelectIds = document.querySelectorAll('select[id]');
+    let allInputIds = document.querySelectorAll('input[id]');
+
+
+    accessibleAutocomplete.enhanceSelectElement({
+        defaultValue: "",
+        autoselect: true,
+        showAllValues: true,
+        confirmOnBlur: false,
+        showNoOptionsFound: true,
+        selectElement: document.querySelector("#new-name"),
+    });
+
+    let parentDiv = document.querySelector("#new-name").parentNode;
+    let newLabel = document.createElement("label");
+    newLabel.innerHTML = "Form";
+    newLabel.style.display = "none";
+    newLabel.setAttribute("for", document.querySelector("#new-name-select").id);
+    parentDiv.appendChild(newLabel);
+
+    // function storeContainerType() {
+    //     var containerType = document.getElementById("add-name");
+    //     localStorage.setItem("special-product-container-type", containerType.value);
+    //
+    //     if (containerType.value === "Other") {
+    //         document.getElementById("continue-button").setAttribute('href', "other-container");
+    //     }
+    // }
+
+    // var getContainerType = localStorage.getItem("special-product-container-type");
+    // var addContainer = document.querySelector("#add-container");
+    //
+    // if (addContainer != null) {
+    //     if (getContainerType != null) {
+    //         addContainer.defaultValue = getContainerType;
+    //     }
+    // }
+
+</script>
+
+
+{% endblock %}
