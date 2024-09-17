@@ -80,12 +80,6 @@
   </nav>
 </header>
 
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    {% block breadcrumb %} {% endblock %}
-  </div>
-</nav>
-
 <div class="nhsuk-width-container">
   <main id="main-content" role="main" class="nhsuk-main-wrapper">
   {% block content %}{% endblock %}
@@ -122,6 +116,7 @@
   <script>
     window.GOVUKFrontend.initAll();
   </script>
+  {% block scripts %}{% endblock %}
 </footer>
 </body>
 </html>
