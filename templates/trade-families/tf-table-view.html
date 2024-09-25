@@ -1,0 +1,74 @@
+{% extends "trade-families/base.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div id="content-pane" class="side-tree-view">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-quarter">
+                <nav class="app-side-nav" role="navigation">
+                    <h2 class="app-side-nav__heading">Navigation</h2>
+                    <ul class="nhsuk-list app-side-nav__list">
+                        <li class="app-side-nav__item" aria-current="page">
+                            <a href="tfg-table-view" class="app-side-nav__link">Trade family groups</a>
+                        </li>
+                        <li class="app-side-nav__item app-side-nav__item--current">
+                            <a class="app-side-nav__link">Trade families</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="nhsuk-grid-column-three-quarters">
+
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-full">
+                        <br/>
+                        <h1 class="nhsuk-heading-xl">Trade families</h1>
+                    </div>
+                </div>
+                <table class="nhsuk-table">
+                    <caption class="nhsuk-table__caption">Trade family details</caption>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                        <th role="columnheader" scope="col">
+                            Name
+                        </th>
+                        <th role="columnheader" scope="col">
+                            Start date
+                        </th>
+                        <th role="columnheader" scope="col">
+                            End date
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                        <th class="nhsuk-table__header" scope="row">
+                            <a href="view-tf" class="nhsuk-link--no-visited-state">1 Primary Wound</a>
+                        </th>
+                        <td class="nhsuk-table__cell">01/01/2020</td>
+                        <td class="nhsuk-table__cell">01/02/3456</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <th class="nhsuk-table__header" scope="row">
+                            <a href="#" class="nhsuk-link--no-visited-state">TF1</a>
+                        </th>
+                        <td class="nhsuk-table__cell">06/02/2018</td>
+                        <td class="nhsuk-table__cell">21/11/2026</td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row">
+                        <th class="nhsuk-table__header" scope="row">
+                            <a href="#" class="nhsuk-link--no-visited-state">TF2</a>
+                        </th>
+                        <td class="nhsuk-table__cell">17/09/2005</td>
+                        <td class="nhsuk-table__cell">17/09/2025</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="nhsuk-button">
+                    Create new trade family
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

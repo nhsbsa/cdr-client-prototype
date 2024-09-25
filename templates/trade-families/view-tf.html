@@ -6,12 +6,78 @@
         <h1 class="nhsuk-heading-xl">1 Primary Wound</h1>
     </div>
 </div>
+<dl class="nhsuk-summary-list">
+    <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+            Start date
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+            01 January 2020
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+                Edit<span class="nhsuk-u-visually-hidden"> start date</span>
+            </a>
+
+        </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+            End date
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+            05 September 2024
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+            <a href="#">
+                Edit<span class="nhsuk-u-visually-hidden"> end date</span>
+            </a>
+        </dd>
+    </div>
+</dl>
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
         <br/>
         <h2 class="nhsuk-heading-l">Trade family group</h2>
         <p>This trade family does not belong to a trade family group.</p>
     </div>
+</div><br/>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h2 class="nhsuk-heading-l">AMPs</h2>
+        <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Linked AMPs</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                    Name
+                </th>
+                <th role="columnheader" class="" scope="col">
+                    Status
+                </th>
+                <th role="columnheader" class="" scope="col">
+                    Extractable
+                </th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">1 Primary Wound</td>
+                <td class="nhsuk-table__cell ">Valid</td>
+                <td class="nhsuk-table__cell ">True</td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">1 Primary Wound small</td>
+                <td class="nhsuk-table__cell ">Valid</td>
+                <td class="nhsuk-table__cell ">True</td>
+            </tr>
+            <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell">1 Primary Wound medium</td>
+                <td class="nhsuk-table__cell ">Invalid</td>
+                <td class="nhsuk-table__cell ">False</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-
 {% endblock %}

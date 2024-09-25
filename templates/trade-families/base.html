@@ -11,12 +11,12 @@
   <!-- End Google Tag Manager -->
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/css/custom.css">
-  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/nhsuk.min.css">
   <link rel="stylesheet" href="/css/govuk-frontend-4.2.0.min.css">
   <link rel="stylesheet" href="/css/govuk-frontend-ie8-4.2.0.min.css">
   <link rel="stylesheet" href="/css/gov.min.scss">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/custom.css">
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
@@ -49,7 +49,7 @@
   <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
   <div class="nhsuk-width-container nhsuk-header__container">
     <div class="nhsuk-header__logo nhsuk-header__logo--only">
-      <a aria-label="DM+D browser homepage" class="nhsuk-header__link nhsuk-header__link--service">
+      <a aria-label="DM+D browser homepage" class="nhsuk-header__link nhsuk-header__link--service" href="/trade-families">
         <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"
              viewBox="0 0 40 16" aria-labelledby="title">
           <title id="title">NHS Logo</title>
@@ -76,10 +76,47 @@
           <span class="nhsuk-u-visually-hidden">Close menu</span>
         </button>
       </p>
+      <ul class="nhsuk-header__navigation-list">
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="/trade-families/add-amp">
+            Name search
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="#">
+            Code lookup
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="#">
+            Code maintenance
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="#">
+            Insert
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="#">
+            Submissions
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="/trade-families/tfg-table-view">
+            Trade families
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--home">
+          <a class="nhsuk-header__navigation-link" href="/">
+            Home
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
-
+{% block breadcrumb %}{% endblock %}
 <div class="nhsuk-width-container">
   <main id="main-content" role="main" class="nhsuk-main-wrapper">
   {% block content %}{% endblock %}
