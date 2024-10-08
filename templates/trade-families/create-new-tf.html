@@ -103,7 +103,18 @@
 </div>
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-        <a href="confirm" class="nhsuk-button">Create</a>
+        <a href="confirm-new-tf" class="nhsuk-button" id="create-link">Create</a>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    var journey = localStorage.getItem("tf-journey");
+    if (journey === "tf") {
+        document.getElementById("create-link").href = "search-amp";
+    }
+</script>
+
 {% endblock %}

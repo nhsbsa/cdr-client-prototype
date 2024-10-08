@@ -64,11 +64,21 @@
                     </tr>
                     </tbody>
                 </table>
-                <a href="#" class="nhsuk-button">
+                <a href="create-new-tf" onclick="setTfJourney()" class="nhsuk-button">
                     Create new trade family
                 </a>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    function setTfJourney() {
+        localStorage.setItem("tf-journey", "tf");
+    }
+</script>
+
 {% endblock %}
