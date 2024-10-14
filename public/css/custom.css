@@ -548,3 +548,20 @@ fill-blue{
 .autocomplete__wrapper {
     background: #fff;
 }
+
+
+.tf-tree {
+    background-color: rgb(222, 224, 226);
+    color: #004c23;
+    border: 1px solid #004c23;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 500;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    margin-bottom: 20px;
+}

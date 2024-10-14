@@ -164,6 +164,89 @@
                         </tr>
                         </tbody>
                     </table>
+
+                    <div class="tf-tree">
+                        <details class="nhsuk-details" id="tfg-expander">
+                            <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                                Primary Wound
+                            </span>
+                            </summary>
+                        </details>
+                    </div>
+
+                    <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf1-div">
+                        <details class="nhsuk-details" id="tf1-expander">
+                            <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                                1 Primary Wound
+                            </span>
+                            </summary>
+                        </details>
+                    </div>
+
+                    <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps-div">
+                        <details class="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
+                                AMPs
+                            </span>
+                            </summary>
+                            <ul class="nhsuk-u-margin-top-3">
+                                <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound</a></li>
+                                <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound small</a></li>
+                                <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound medium</a></li>
+                            </ul>
+                        </details>
+                    </div>
+
+                    <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf2-div">
+                        <details class="nhsuk-details" id="tf2-expander">
+                            <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                                Primary Wound (clotrimazole)
+                            </span>
+                            </summary>
+                        </details>
+                    </div>
+
+                    <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf2-amps-div">
+                        <details class="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
+                                AMPs
+                            </span>
+                            </summary>
+                            <ul class="nhsuk-u-margin-top-3">
+                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound clotrimazole</a></li>
+                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound clotrimazole small</a></li>
+                            </ul>
+                        </details>
+                    </div>
+
+                    <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf3-div">
+                        <details class="nhsuk-details" id="tf3-expander">
+                            <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                                Primary Wound (fluconazole)
+                            </span>
+                            </summary>
+                        </details>
+                    </div>
+
+                    <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf3-amps-div">
+                        <details class="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
+                                AMPs
+                            </span>
+                            </summary>
+                            <ul class="nhsuk-u-margin-top-3">
+                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound fluconazole</a></li>
+                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound fluconazole large</a></li>
+                            </ul>
+                        </details>
+                    </div>
                 </div>
 
                 <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="insert">
@@ -182,5 +265,6 @@
         localStorage.setItem("tf-journey", "amp");
     }
 </script>
+<script src="/js/tf-tree-display.js"></script>
 
 {% endblock %}
