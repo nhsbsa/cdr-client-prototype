@@ -188,7 +188,18 @@
 </div>
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-        <a class="nhsuk-button nhsuk-u-margin-top-3 nhsuk-u-float-right" href="selected-amps">Add selected</a>
+        <a class="nhsuk-button nhsuk-u-margin-top-3 nhsuk-u-float-right" href="selected-amps" id="add-link">Add selected</a>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    var journey = localStorage.getItem("amp-journey");
+    if (journey === "add-amp") {
+        document.getElementById("add-link").href = "add-extra-amps";
+    }
+</script>
+
 {% endblock %}
