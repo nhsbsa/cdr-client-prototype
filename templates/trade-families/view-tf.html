@@ -48,12 +48,78 @@
         <br/>
         <h2 class="nhsuk-heading-l">Trade family group</h2>
         <p>This trade family does not belong to a trade family group.
-        <a href="link-tf-to-tfg">Link to trade family group.</a></p>
+            <a href="link-tf-to-tfg">Link to trade family group.</a></p>
     </div>
 </div><br/>
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
         <h2 class="nhsuk-heading-l">AMPs</h2>
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+                <label for="filter" class="nhsuk-label">Filter by name</label>
+                <input id="filter" class="nhsuk-input govuk-!-margin-bottom-4" type="text"/>
+                <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                    <span class="nhsuk-details__summary-text">
+                      Refine search
+                    </span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+                        <div class="nhsuk-form-group">
+                            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                                <legend class="nhsuk-fieldset__legend">
+                                    Filter by
+                                </legend>
+                                <div class="nhsuk-checkboxes">
+                                    <div class="nhsuk-u-one-quarter">
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="valid"
+                                                   type="checkbox" checked>
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">
+                                                Valid
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="nhsuk-u-one-quarter">
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="invalid"
+                                                   type="checkbox" checked>
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">
+                                                Invalid
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="nhsuk-u-one-quarter">
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="extractable"
+                                                   type="checkbox" checked>
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="extractable">
+                                                Extractable
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="nhsuk-u-one-quarter">
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input class="nhsuk-checkboxes__input" id="unextractable"
+                                                   type="checkbox" checked>
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="unextractable">
+                                                Unextractable
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </details>
+                <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-float-right nhsuk-u-margin-left-2"
+                   style="color: black"
+                   id="resetFilters" href="#">Reset filter </a>
+                <a href="#" class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" type="submit"
+                   id="searchButton">Search</a>
+
+            </div>
+        </div>
         <table class="nhsuk-table">
             <caption class="nhsuk-table__caption">Linked AMPs</caption>
             <thead role="rowgroup" class="nhsuk-table__head">

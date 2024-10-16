@@ -165,88 +165,122 @@
                         </tbody>
                     </table>
 
-                    <h3 class="nhsuk-heading-l">Trade family tree</h3>
-                    <div class="tf-tree">
-                        <details class="nhsuk-details" id="tfg-expander" open>
-                            <summary class="nhsuk-details__summary">
+                    <div class="nhsuk-u-margin-bottom-5">
+                        <h3 class="nhsuk-heading-l">Trade family tree</h3>
+                        <button class="nhsuk-u-float-right" style="position: relative; top: -50px;" onclick="toggleTree()">Toggle tree</button>
+                    </div>
+                    <div id="tree1">
+                        <div class="tf-tree">
+                            <details class="nhsuk-details" id="tfg-expander" open>
+                                <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text">
                                 Primary Wound
                             </span>
-                            </summary>
-                        </details>
-                    </div>
+                                </summary>
+                            </details>
+                        </div>
 
-                    <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf1-div">
-                        <details class="nhsuk-details" id="tf1-expander" open>
-                            <summary class="nhsuk-details__summary">
+                        <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf1-div">
+                            <details class="nhsuk-details" id="tf1-expander" open>
+                                <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text">
                                 1 Primary Wound
                             </span>
-                            </summary>
-                        </details>
-                    </div>
+                                </summary>
+                            </details>
+                        </div>
 
-                    <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps-div">
-                        <details class="nhsuk-details" open>
-                            <summary class="nhsuk-details__summary">
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps-div">
+                            <details class="nhsuk-details" open>
+                                <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
                                 AMPs
                             </span>
-                            </summary>
-                            <ul class="nhsuk-u-margin-top-3">
-                                <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound Dressing spray (Phytoceuticals Ltd)</a></li>
-                                <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound small (Phytoceuticals Ltd)</a></li>
-                                <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound medium (Phytoceuticals Ltd)</a></li>
-                            </ul>
-                        </details>
-                    </div>
+                                </summary>
+                                <ul class="nhsuk-u-margin-top-3">
+                                    <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound Dressing spray
+                                        (Phytoceuticals Ltd)</a></li>
+                                    <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound small
+                                        (Phytoceuticals Ltd)</a></li>
+                                    <li><a href="#" class="nhsuk-link--no-visited-state">1 Primary Wound medium
+                                        (Phytoceuticals Ltd)</a></li>
+                                </ul>
+                            </details>
+                        </div>
 
-                    <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf2-div">
-                        <details class="nhsuk-details" id="tf2-expander">
-                            <summary class="nhsuk-details__summary">
+                        <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf2-div">
+                            <details class="nhsuk-details" id="tf2-expander">
+                                <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text">
                                 Primary Wound (clotrimazole)
                             </span>
-                            </summary>
-                        </details>
-                    </div>
+                                </summary>
+                            </details>
+                        </div>
 
-                    <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf2-amps-div">
-                        <details class="nhsuk-details">
-                            <summary class="nhsuk-details__summary">
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf2-amps-div">
+                            <details class="nhsuk-details">
+                                <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
                                 AMPs
                             </span>
-                            </summary>
-                            <ul class="nhsuk-u-margin-top-3">
-                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound clotrimazole (Phytoceuticals Ltd)</a></li>
-                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound clotrimazole small (Phytoceuticals Ltd)</a></li>
-                            </ul>
-                        </details>
-                    </div>
+                                </summary>
+                                <ul class="nhsuk-u-margin-top-3">
+                                    <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound clotrimazole
+                                        (Phytoceuticals Ltd)</a></li>
+                                    <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound clotrimazole
+                                        small
+                                        (Phytoceuticals Ltd)</a></li>
+                                </ul>
+                            </details>
+                        </div>
 
-                    <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf3-div">
-                        <details class="nhsuk-details" id="tf3-expander">
-                            <summary class="nhsuk-details__summary">
+                        <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf3-div">
+                            <details class="nhsuk-details" id="tf3-expander">
+                                <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text">
                                 Primary Wound (fluconazole)
                             </span>
-                            </summary>
-                        </details>
-                    </div>
+                                </summary>
+                            </details>
+                        </div>
 
-                    <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf3-amps-div">
-                        <details class="nhsuk-details">
-                            <summary class="nhsuk-details__summary">
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf3-amps-div">
+                            <details class="nhsuk-details">
+                                <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
                                 AMPs
                             </span>
-                            </summary>
-                            <ul class="nhsuk-u-margin-top-3">
-                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound fluconazole (Phytoceuticals Ltd)</a></li>
-                                <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound fluconazole large (Phytoceuticals Ltd)</a></li>
-                            </ul>
-                        </details>
+                                </summary>
+                                <ul class="nhsuk-u-margin-top-3">
+                                    <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound fluconazole
+                                        (Phytoceuticals Ltd)</a></li>
+                                    <li><a href="#" class="nhsuk-link--no-visited-state">Primary Wound fluconazole large
+                                        (Phytoceuticals Ltd)</a></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-tree" id="tree2">
+                        <ul role="tree">
+                            <li role="treeitem">
+                                <div class="nhsuk-tag">TFG</div>
+                                <a class="nhsuk-link--no-visited-state" href="view-tfg">Primary Wound</a>
+                                <ul role="group" class="nhsuk-tree-ul">
+                                    <li role="treeitem">
+                                        <div class="nhsuk-tag">TF</div>
+                                        <a class="nhsuk-link--no-visited-state" href="view-tf">1 Primary Wound</a>
+                                        <ul role="group">
+                                            <li role="treeitem">
+                                                <div class="nhsuk-tag">AMP</div>
+                                                <span>(Current) 1 Primary Wound Dressing spray (Phytoceuticals Ltd)</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 

@@ -40,3 +40,14 @@ function toggleDisplay(element, child) {
         }
     }
 }
+
+
+
+var tree1 = document.getElementById("tree1");
+var tree2 = document.getElementById("tree2");
+tree2.style.display = 'none';
+
+function toggleTree() {
+    tree1.style.display = tree1.style.display === 'none' ? 'block' : 'none';
+    tree2.style.display = tree2.style.display === 'none' ? 'block' : 'none';
+}
