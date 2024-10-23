@@ -565,3 +565,19 @@ fill-blue{
     outline-offset: -2px;
     margin-bottom: 20px;
 }
+
+.future-record {
+    background-color: #C1DCCB;
+}
+
+.future-record:hover {
+    background-color: #B2D2BC !important;
+}
+
+.historic-record {
+    background-color: #D1D5D7;
+}
+
+.historic-record:hover {
+    background-color: #C0C7C9 !important;
+}
