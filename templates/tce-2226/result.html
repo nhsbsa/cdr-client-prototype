@@ -1,0 +1,459 @@
+{% extends "base.html" %}
+{% block content %}
+<nav id="breadcrumbs" class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">dm+d browser</a></li>
+            <li class="nhsuk-breadcrumb__item">Product search</li>
+        </ol>
+    </div>
+</nav>
+<div class="nhsuk-width-container">
+    <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+                <h1 class="nhsuk-heading-xl" id="pageHeading">Product search</h1>
+                <form id="search-form" method="post" action="/search" data-gtm-form-interact-id="0"><input type="hidden"
+                        name="_csrf"
+                        value="MmJFNhKu4mHWBziDX9fJOrNFCzl-sWMbL-d4nHvX8heCOWu2A1InU3fK0FP7Zg27bfr9AtF0JgBKglA2TN9N-k22wyC0WljU">
+
+
+                    <div id="nhsuk-inset-text-amp-search" class="nhsuk-grid-column-full  nhsuk-u-padding-0"
+                        style="display: none;">
+                        <div
+                            class="nhsuk-inset-text nhsuk-inset-text-unbounded nhsuk-u-margin-0 nhsuk-u-margin-bottom-4">
+                            <span class="nhsuk-u-visually-hidden">Information: </span>
+                            <p>You can search by either product name, supplier or a combination of the two.</p>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-full  nhsuk-u-padding-0">
+                        <div class="nhsuk-form-group nhsuk-u-padding-0" id="inputSearchFormGroup">
+                            <div class="autocomplete-container__no-overlap nhsuk-u-width-full">
+
+                                <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-0">
+                                    <div class="nhsuk-form-group">
+                                        <label class="nhsuk-label" for="mainSearchType">Type</label>
+                                        <select id="mainSearchType" name="searchType" class="nhsuk-select search-type"
+                                            data-gtm-form-interact-field-id="0">
+                                            <option id="searchType3" value="AMP">AMP
+                                            </option>
+                                            <option id="searchType2" value="VMP">VMP
+                                            </option>
+                                            <option id="searchType1" value="VTM" selected="selected">
+                                                VTM
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="nhsuk-grid-column-three-quarters nhsuk-u-padding-0">
+                                    <div>
+                                        <div class="nhsuk-form-group nhsuk-u-width-full">
+                                            <label class="nhsuk-label" for="search-term">Product name</label>
+
+                                            <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text"
+                                                name="ampName" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="row-supplier-input"
+                                    class="nhsuk-grid-column-full nhsuk-u-padding-0 nhsuk-u-padding-top-4"
+                                    style="display: none;">
+                                    <div class="nhsuk-form-group">
+                                        <label class="nhsuk-label" for="search-supplier-input">Supplier</label>
+                                        <input class="nhsuk-input" id="search-supplier-input" type="text"
+                                            name="supplier" value="">
+                                        <div class="nhsuk-hint" id="supplier-search-text-hint">
+                                            You can locate special order or imported products by entering "special
+                                            order" or
+                                            "imported" into the supplier field.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row-refine-search-input"
+                        class="nhsuk-grid-column-full nhsuk-u-padding-0 nhsuk-u-margin-top-5 nhsuk-u-padding-bottom-5">
+                        <fieldset class="nhsuk-fieldset nhsuk-fieldset-inline">
+                            <legend class="nhsuk-u-visually-hidden">Search filters</legend>
+
+                            <div class="nhsuk-checkboxes__item">
+                                <input type="hidden" name="_showInvalidItems" value="on"><input
+                                    class="nhsuk-checkboxes__input" id="checkbox-show-invalid-items" type="checkbox"
+                                    name="showInvalidItems" value="true">
+                                <label class="nhsuk-label nhsuk-checkboxes__label"
+                                    for="checkbox-show-invalid-items">Show
+                                    Invalid</label>
+                            </div>
+
+                            <div class="nhsuk-checkboxes__item" id="checkbox-hide-discontinued-items-fieldset"
+                                style="display: none;">
+                                <input type="hidden" name="_hideDiscontinuedItems" value="on"><input
+                                    class="nhsuk-checkboxes__input" id="checkbox-hide-discontinued-items"
+                                    type="checkbox" name="hideDiscontinuedItems" value="true">
+                                <label class="nhsuk-label nhsuk-checkboxes__label"
+                                    for="checkbox-hide-discontinued-items">
+                                    Hide Discontinued
+                                </label>
+                            </div>
+
+
+                            <div class="nhsuk-checkboxes__item" id="hide-parallel-import-fieldset"
+                                style="display: none;">
+                                <input type="hidden" name="_hideParallelImport" value="on"><input
+                                    class="nhsuk-checkboxes__input" id="checkbox-hide-parallel-import-items"
+                                    type="checkbox" name="hideParallelImport" value="true">
+                                <label class="nhsuk-label nhsuk-checkboxes__label"
+                                    for="checkbox-hide-parallel-import-items">
+                                    Hide Parallel Import
+                                </label>
+                            </div>
+
+
+                            <div class="nhsuk-checkboxes__item" id="hide-special-order-fieldset" style="display: none;">
+                                <input type="hidden" name="_hideSpecialOrder" value="on"><input
+                                    class="nhsuk-checkboxes__input" id="checkbox-hide-special-order-items"
+                                    type="checkbox" name="hideSpecialOrder" value="true">
+                                <label class="nhsuk-label nhsuk-checkboxes__label"
+                                    for="checkbox-hide-special-order-items">
+                                    Hide Special Order
+                                </label>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <a class="nhsuk-button" data-module="nhsuk-button" href="/tce-2226/result" draggable="false"
+                        role="button">
+                        Search
+                    </a>
+                    <a class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" href="/tce-2226"
+                        draggable="false" role="button">
+                        Clear
+                    </a>
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+
+
+
+                            <div class="nhsuk-body-m flex--space-between">
+                                <div class="nhsuk-u-visually-hidden">Currently viewing </div>
+                                <div>Page 1 of 1 (9 total results)</div>
+                                <div class="nhsuk-u-text-align--right">
+                                    <div>
+                                        <span>Sort:</span>
+                                        <span>
+                                            <a id="linkSortAlpha"
+                                                href="http://dmd-browser.nhsbsa.nhs.uk/search/results?ampName=aspirin&amp;searchType=VTM&amp;showInvalidItems=false&amp;hideParallelImport=false&amp;hideSpecialOrder=false&amp;hideDiscontinuedItems=false&amp;sortOrder=alpha">name</a>
+                                        </span>
+
+                                        <span> | </span>
+
+                                        <span id="linkSortAlpha" class="nhsuk-u-font-weight-bold">relevance</span>
+                                    </div>
+                                    <div>
+                                        <span id="lablePageSize">Page size:</span>
+                                        <span class="nhsuk-u-font-weight-bold">20</span>
+
+
+                                        <a
+                                            href="http://dmd-browser.nhsbsa.nhs.uk/search/results?ampName=aspirin&amp;searchType=VTM&amp;showInvalidItems=false&amp;hideParallelImport=false&amp;hideSpecialOrder=false&amp;hideDiscontinuedItems=false&amp;size=50">50</a>
+
+                                        <a
+                                            href="http://dmd-browser.nhsbsa.nhs.uk/search/results?ampName=aspirin&amp;searchType=VTM&amp;showInvalidItems=false&amp;hideParallelImport=false&amp;hideSpecialOrder=false&amp;hideDiscontinuedItems=false&amp;size=100">100</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="nhsuk-table  accessible-table--hidden nhsuk-u-margin-bottom-3"
+                                id="searchResultsTable">
+                                <thead class="nhsuk-table__head">
+                                    <tr class="nhsuk-table__row">
+                                        <th class="nhsuk-table__header nhsuk-table__header--sticky"
+                                            id="searchResultsTableVtmHeader" scope="col">Virtual Therapeutic Moiety
+                                            (VTM)</th>
+
+                                        <th class="nhsuk-table__header nhsuk-table__header--sticky"
+                                            id="searchResultsTableSnomedHeader" scope="col">SNOMED code</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm0"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-0">Aspirin + Paracetamol</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">774679005</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm1"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-1">Aspirin + Caffeine</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">774659002</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm2"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-2">Bisoprolol + Aspirin</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">28367311000001105</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm3"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-3">Aspirin + Codeine</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">774667005</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm4"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-4">Aspirin + Isosorbide mononitrate</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">1208366007</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm5"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-5">Aspirin</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">774656009</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm6"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-6">Aspirin + Metoclopramide</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">774675004</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm7"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-7">Aspirin + Papaveretum</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">774678002</td>
+                                    </tr>
+
+                                    <tr class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">
+                                            <a id="vtm8"
+                                                href="/tce-2226/vtm-display">
+                                                <span class="nhsuk-u-visually-hidden">null </span>
+                                                <span id="vtm-name-8">Dipyridamole + Aspirin</span>
+                                            </a>
+                                        </td>
+
+                                        <td class="nhsuk-table__cell">774669008</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="accessible-table" hidden="">
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile0"
+                                            href="/vtm/view/1539?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Aspirin + Paracetamol</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode0">774679005</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile1"
+                                            href="/vtm/view/1540?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Aspirin + Caffeine</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode1">774659002</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile2"
+                                            href="/vtm/view/3862?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Bisoprolol + Aspirin</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode2">28367311000001105</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile3"
+                                            href="/vtm/view/2737?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Aspirin + Codeine</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode3">774667005</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile4"
+                                            href="/vtm/view/1083?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Aspirin + Isosorbide mononitrate</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode4">1208366007</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile5"
+                                            href="/vtm/view/69?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Aspirin</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode5">774656009</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile6"
+                                            href="/vtm/view/756?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Aspirin + Metoclopramide</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode6">774675004</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile7"
+                                            href="/vtm/view/70?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Aspirin + Papaveretum</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode7">774678002</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                                <div>
+                                    <h3 class="nhsuk-heading-s">Virtual Therapeutic Moiety (VTM)</h3>
+
+                                    <p>
+                                        <a id="vtmmobile8"
+                                            href="/vtm/view/871?ref=YW1wTmFtZT1hc3BpcmluJnNlYXJjaFR5cGU9VlRNJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2UmaGlkZVBhcmFsbGVsSW1wb3J0PWZhbHNlJmhpZGVTcGVjaWFsT3JkZXI9ZmFsc2UmaGlkZURpc2NvbnRpbnVlZEl0ZW1zPWZhbHNl">
+                                            <span>Dipyridamole + Aspirin</span>
+                                        </a>
+                                    </p>
+
+
+                                    <h3 class="nhsuk-heading-s">SNOMED code</h3>
+                                    <p id="vtmSnomedCode8">774669008</p>
+
+                                    <hr aria-hidden="true">
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+</div>
+{% endblock %}
