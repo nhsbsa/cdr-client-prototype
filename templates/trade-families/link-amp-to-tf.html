@@ -1,0 +1,54 @@
+{% extends "trade-families/base.html" %}
+{% block content %}
+<div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="add-amp">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back</a>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <br/>
+        <h1 class="nhsuk-heading-xl">Add to trade family</h1>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group">
+            <div id="my-autocomplete-container">
+                <label class="nhsuk-label" for="tf-dropdown">
+                    Choose an existing trade family
+                </label>
+                <select id="tf-dropdown">
+                    <option value="">Select a trade family</option>
+                    <option value="tr1">Invalid trade family 1</option>
+                    <option value="tr2">Invalid trade family 2</option>
+                    <option value="valid-tr">1 Primary Wound</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <a href="confirm" class="nhsuk-button">Add to trade family</a>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group">
+            <div>
+                <p>Can't find a valid trade family for this AMP? <a href="create-new-tf">Create a new one.</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    accessibleAutocomplete.enhanceSelectElement({
+        selectElement: document.querySelector('#tf-dropdown')
+    })
+</script>
+{% endblock %}

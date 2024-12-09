@@ -1,0 +1,32 @@
+{% extends "trade-families/base.html" %}
+{% block content %}
+<div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-heading-xl">
+            <h1 class="nhsuk-fieldset__heading">
+                Do you want to add the new trade family to a trade family group?
+            </h1>
+        </legend>
+        <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                    Yes
+                </label>
+            </div>
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                    No
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <a href="create-new-tfg" class="nhsuk-button">Submit</a>
+    </div>
+</div>
+
+{% endblock %}
