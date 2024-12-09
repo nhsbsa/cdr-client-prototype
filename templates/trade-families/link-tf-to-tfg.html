@@ -1,0 +1,54 @@
+{% extends "trade-families/base.html" %}
+{% block content %}
+<div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="view-tf">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back</a>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <br/>
+        <h1 class="nhsuk-heading-xl">Add to trade family group</h1>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group">
+            <div id="my-autocomplete-container">
+                <label class="nhsuk-label" for="tfg-dropdown">
+                    Choose an existing trade family group
+                </label>
+                <select id="tfg-dropdown">
+                    <option value="">Select a trade family group</option>
+                    <option value="tfg1">Invalid trade family group 1</option>
+                    <option value="tfg2">Invalid trade family group 2</option>
+                    <option value="valid-tfg">Primary Wound</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <a href="confirm-link-tf-tfg" class="nhsuk-button">Add to trade family group</a>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group">
+            <div>
+                <p>Can't find a valid trade family group for this trade family? <a href="create-new-tfg">Create a new one.</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    accessibleAutocomplete.enhanceSelectElement({
+        selectElement: document.querySelector('#tfg-dropdown')
+    })
+</script>
+{% endblock %}

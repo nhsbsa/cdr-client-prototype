@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.15.5",
-    "accessible-autocomplete": "^2.0.3",
+    "accessible-autocomplete": "^2.0.4",
     "babel-loader": "^8.2.2",
     "basic-auth": "^2.0.1",
     "browser-sync": "^2.26.14",

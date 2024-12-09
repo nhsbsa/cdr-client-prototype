@@ -1,0 +1,51 @@
+.nhsuk-tree {
+  margin-bottom: 30px;
+}
+
+.nhsuk-tree > ul > li {
+  margin: 0;
+}
+
+.nhsuk-tree li, .nhsuk-tree ul {
+  padding: 5px 0;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.nhsuk-tree ul {
+  list-style: none;
+}
+
+.nhsuk-tree li {
+  margin: 0 0 0 20px;
+}
+
+li div {
+  display: flex;
+}
+
+.nhsuk-tree ul ul::before {
+  border-left: 1px solid #c9ced5;
+  bottom: 61px;
+  content: "";
+  left: 6px;
+  position: absolute;
+  top: 0px;
+}
+
+.nhsuk-tree li li::before {
+  border-top: 1px solid #c9ced5;
+  content: "";
+  left: -15px;
+  position: absolute;
+  top: 20px;
+  width: 15px;
+}
+
+.nhsuk-tree li:last-child::before {
+  bottom: -5px;
+}
+
+.nhsuk-tree-ul::before {
+  bottom: 121px !important;
+}
