@@ -79,16 +79,16 @@ git push origin local-branch-name
 | ![image](https://user-images.githubusercontent.com/111366792/206462599-1694bc16-e187-4f2b-b970-9c68f31aa2ce.png) |
 |-|
 <strong>Once pushed, there should be a highlight at the top of the repo asking to 'compare and pull request'. Select this button.</strong>
-<p>&nbsp;</p>
+<p></p>
 
 | ![image](https://user-images.githubusercontent.com/111366792/206463076-ce8b10d2-cdc1-4d77-b1a3-71f7b58158cf.png) |
 |-|
 <strong>Then you need to add a reviewer and create the pull request<strong>
-<p>&nbsp;</p>
+<p></p>
 
 | ![image](https://user-images.githubusercontent.com/111366792/206469532-0151b98e-40c1-4d11-b7c2-6a4dee1d3f82.png) |
 |-|
 <strong>The reviewer will be notified and will review the changes before marking it as being able to be merged. Then it can be merged in to main from the pull request. If the reviewer is able to merge this on their side then they will notify the user who did the pull request that it has been completed. <strong>
-<p>&nbsp;</p>
+<p></p>
 
 

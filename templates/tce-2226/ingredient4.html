@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-width-container">
+  <main id="maincontent" role="main" class="nhsuk-main-wrapper">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl" id="pageHeading">
+          <span class="nhsuk-caption-l">Ingredient<span class="nhsuk-u-visually-hidden"> - </span></span>
+          <span id="full-product-name">Tramadol</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-quarter nhsuk-u-position-sticky" style="top: 17px">
+
+        <h2 class="nhsuk-heading-l nhsuk-u-visually-hidden">Navigation</h2>
+        <ul class="nhsuk-list">
+          <li><a href="#nameDetails">Name Details</a></li>
+          <li></li>
+          <li><a href="#productCodes">Codes</a></li>
+          <li><a href="#ingredientVmps">Virtual Medicinal Products (VMPs)</a></li>
+          <li><a href="#productLinks">Further Links</a></li>
+        </ul>
+
+      </div>
+
+      <div class="nhsuk-grid-column-three-quarters">
+        
+
+        <div>
+  <section id="nameDetails">
+    <h2 class="nhsuk-heading-l">Name Details</h2>
+
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+          <th class="nhsuk-table__header nhsuk-table__header--sticky" colspan="2">Name</th>
+          <th class="nhsuk-table__header nhsuk-table__header--sticky" id="name-start-date-heading" scope="col">Start Date</th>
+          <th class="nhsuk-table__header nhsuk-table__header--sticky" id="name-end-date-heading" scope="col">End Date</th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header nhsuk-table__header--sticky">Current Name</th>
+            <td id="name-value" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Current Name</span>
+              Tramadol
+            </td>
+            <td id="name-start-date" class="nhsuk-table__cell nhsuk-u--table-date-width">
+              <span class="nhsuk-table-responsive__heading" id="name-heading">Start Date</span>
+              06-06-2011
+            </td>
+            <td id="name-end-date" class="nhsuk-table__cell nhsuk-u--table-date-width">
+              <span class="nhsuk-table-responsive__heading">End Date</span>
+            </td>
+          </tr>
+
+          
+        
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+        <section class="nhsuk-u-padding-top-4" id="productCodes">
+          <div>
+    <h2 class="nhsuk-heading-l">Codes</h2>
+    <dl class="nhsuk-summary-list">
+      
+      
+      
+
+      
+    </dl>
+    
+    
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">SNOMED Codes</caption>
+        <thead class="nhsuk-table__head" role="rowgroup">
+        <tr role="row">
+          <th class="" role="columnheader" scope="col">
+            Code
+          </th>
+          <th class="" role="columnheader" scope="col">
+            Start Date
+          </th>
+          <th class="" role="columnheader" scope="col">
+            End Date
+          </th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row" role="row">
+          <td class="nhsuk-table__cell">386858008</td>
+          <td class="nhsuk-table__cell">06-06-2011</td>
+          <td class="nhsuk-table__cell"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+        </section>
+
+        <section class="nhsuk-u-padding-top-4" id="ingredientVmps">
+          <h2 class="nhsuk-heading-l">Virtual Medicinal Products (VMPs)</h2>
+
+          
+
+          <p>There are currently no VMPs for this Ingredient.</p>
+
+          
+
+          
+
+          
+        </section>
+
+        <section class="nhsuk-u-padding-top-4" id="productLinks">
+          <h2 class="nhsuk-heading-l">Further Links</h2>
+          <ul class="nhsuk-list" id="productLinksList">
+            <li><a target="_blank" href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=386858008">View on the NHS Digital SNOMED CT browser</a></li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+{% endblock %}

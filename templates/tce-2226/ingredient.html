@@ -1,0 +1,762 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-width-container">
+  <main id="maincontent" role="main" class="nhsuk-main-wrapper">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-xl" id="pageHeading">
+          <span class="nhsuk-caption-l">Ingredient<span class="nhsuk-u-visually-hidden"> - </span></span>
+          <span id="full-product-name">Aspirin</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-quarter nhsuk-u-position-sticky" style="top: 17px">
+
+        <h2 class="nhsuk-heading-l nhsuk-u-visually-hidden">Navigation</h2>
+        <ul class="nhsuk-list">
+          <li><a href="#nameDetails">Name Details</a></li>
+          <li></li>
+          <li><a href="#productCodes">Codes</a></li>
+          <li><a href="#ingredientVmps">Virtual Medicinal Products (VMPs)</a></li>
+          <li><a href="#productLinks">Further Links</a></li>
+        </ul>
+
+      </div>
+
+      <div class="nhsuk-grid-column-three-quarters">
+        
+
+        <div>
+  <section id="nameDetails">
+    <h2 class="nhsuk-heading-l">Name Details</h2>
+
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+          <th class="nhsuk-table__header nhsuk-table__header--sticky" colspan="2">Name</th>
+          <th class="nhsuk-table__header nhsuk-table__header--sticky" id="name-start-date-heading" scope="col">Start Date</th>
+          <th class="nhsuk-table__header nhsuk-table__header--sticky" id="name-end-date-heading" scope="col">End Date</th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header nhsuk-table__header--sticky">Current Name</th>
+            <td id="name-value" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading">Current Name</span>
+              Aspirin
+            </td>
+            <td id="name-start-date" class="nhsuk-table__cell nhsuk-u--table-date-width">
+              <span class="nhsuk-table-responsive__heading" id="name-heading">Start Date</span>
+              SOT
+            </td>
+            <td id="name-end-date" class="nhsuk-table__cell nhsuk-u--table-date-width">
+              <span class="nhsuk-table-responsive__heading">End Date</span>
+            </td>
+          </tr>
+
+          
+        
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+        <section class="nhsuk-u-padding-top-4" id="productCodes">
+          <div>
+    <h2 class="nhsuk-heading-l">Codes</h2>
+    <dl class="nhsuk-summary-list">
+      
+      
+      
+
+      
+    </dl>
+    
+    
+    <div class="nhsuk-table-responsive">
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">SNOMED Codes</caption>
+        <thead class="nhsuk-table__head" role="rowgroup">
+        <tr role="row">
+          <th class="" role="columnheader" scope="col">
+            Code
+          </th>
+          <th class="" role="columnheader" scope="col">
+            Start Date
+          </th>
+          <th class="" role="columnheader" scope="col">
+            End Date
+          </th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row" role="row">
+          <td class="nhsuk-table__cell">387458008</td>
+          <td class="nhsuk-table__cell">27-07-2005</td>
+          <td class="nhsuk-table__cell"></td>
+        </tr>
+        <tr class="nhsuk-table__row" role="row">
+          <td class="nhsuk-table__cell">3587011000001109</td>
+          <td class="nhsuk-table__cell">SOT</td>
+          <td class="nhsuk-table__cell">26-07-2005</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+        </section>
+
+        <section class="nhsuk-u-padding-top-4" id="ingredientVmps">
+          <h2 class="nhsuk-heading-l">Virtual Medicinal Products (VMPs)</h2>
+
+          <div class="nhsuk-body-m flex--space-between">
+    <div class="nhsuk-u-visually-hidden">Currently viewing </div>
+    <div id="pageAndResultCount">Page 1 of 4 - 67 total results</div>
+    <div class="nhsuk-u-text-align--right">
+      <!--   TODO Setup formData parameter handling   -->
+      
+      <div>
+        <span>Page size:</span>
+        <span class="nhsuk-u-font-weight-bold">20</span>
+        
+        
+        <a href="http://dmd-browser.nhsbsa.nhs.uk/ingredient/view/1053?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D&amp;size=50">50</a>
+        
+        <a href="http://dmd-browser.nhsbsa.nhs.uk/ingredient/view/1053?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D&amp;size=100">100</a>
+      </div>
+    </div>
+  </div>
+
+          
+
+          <table id="productIngredientTable" class="nhsuk-table accessible-table--hidden">
+            <caption class="nhsuk-u-visually-hidden">VMPs for VTM</caption>
+            <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header--sticky" scope="col">Name</th>
+              <th class="nhsuk-table__header--sticky" scope="col">Discontinued</th>
+              <th class="nhsuk-table__header--sticky" scope="col">Invalid</th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp0" href="/vmp/view/19936?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 100mg capsules</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp1" href="/vmp/view/12412?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 100mg/5ml oral solution</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp2" href="/vmp/view/12115?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 100mg/5ml oral suspension</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp3" href="/vmp/view/3533?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 150mg / Isosorbide mononitrate 60mg modified-release tablets</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp4" href="/vmp/view/1484?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 150mg suppositories</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp5" href="/vmp/view/12427?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 15mg/5ml oral solution</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp6" href="/vmp/view/12425?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 15mg/5ml oral suspension</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp7" href="/vmp/view/8488?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 225mg/5ml oral solution</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp8" href="/vmp/view/8490?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 225mg/5ml oral suspension</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp9" href="/vmp/view/23943?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 25mg capsules</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp10" href="/vmp/view/12442?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 25mg/5ml oral solution</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp11" href="/vmp/view/12429?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 25mg/5ml oral suspension</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp12" href="/vmp/view/5975?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg / Paracetamol 200mg dispersible tablets sugar free</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp13" href="/vmp/view/682?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg dispersible tablets</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp14" href="/vmp/view/7511?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg dispersible tablets sugar free</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp15" href="/vmp/view/5477?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg effervescent tablets sugar free</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp16" href="/vmp/view/672?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg gastro-resistant tablets</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp17" href="/vmp/view/5241?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg modified-release tablets</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp18" href="/vmp/view/5962?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg orodispersible tablets sugar free</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><a id="ingredientVmp19" href="/vmp/view/1485?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D">Aspirin 300mg suppositories</a></td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+              <td class="nhsuk-table__cell" style="text-align: center;">
+                
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+          <div class="accessible-table" hidden="">
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile0" href="/vmp/view/19936?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 100mg capsules</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile0">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile0">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile1" href="/vmp/view/12412?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 100mg/5ml oral solution</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile1">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile1">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile2" href="/vmp/view/12115?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 100mg/5ml oral suspension</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile2">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile2">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile3" href="/vmp/view/3533?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 150mg / Isosorbide mononitrate 60mg modified-release tablets</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              
+              <p id="vmpDiscontinuedmobile3">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </p>
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile3">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile4" href="/vmp/view/1484?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 150mg suppositories</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile4">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile4">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile5" href="/vmp/view/12427?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 15mg/5ml oral solution</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile5">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile5">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile6" href="/vmp/view/12425?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 15mg/5ml oral suspension</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile6">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile6">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile7" href="/vmp/view/8488?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 225mg/5ml oral solution</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile7">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile7">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile8" href="/vmp/view/8490?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 225mg/5ml oral suspension</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile8">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile8">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile9" href="/vmp/view/23943?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 25mg capsules</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile9">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile9">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile10" href="/vmp/view/12442?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 25mg/5ml oral solution</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile10">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile10">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile11" href="/vmp/view/12429?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 25mg/5ml oral suspension</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile11">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile11">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile12" href="/vmp/view/5975?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg / Paracetamol 200mg dispersible tablets sugar free</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              
+              <p id="vmpDiscontinuedmobile12">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </p>
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile12">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile13" href="/vmp/view/682?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg dispersible tablets</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile13">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile13">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile14" href="/vmp/view/7511?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg dispersible tablets sugar free</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              
+              <p id="vmpDiscontinuedmobile14">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </p>
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              
+              <p id="vmpInvalidmobile14">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </p>
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile15" href="/vmp/view/5477?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg effervescent tablets sugar free</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              
+              <p id="vmpDiscontinuedmobile15">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </p>
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile15">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile16" href="/vmp/view/672?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg gastro-resistant tablets</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile16">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile16">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile17" href="/vmp/view/5241?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg modified-release tablets</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              
+              <p id="vmpDiscontinuedmobile17">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+              </p>
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile17">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile18" href="/vmp/view/5962?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg orodispersible tablets sugar free</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile18">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile18">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+            <div>
+              <h2 class="nhsuk-heading-s">Name</h2>
+
+              <p>
+                <a id="vmpmobile19" href="/vmp/view/1485?ref=name%3Daspirin%26showInvalidItems%3Dfalse">
+                  <span class="nhsuk-u-visually-hidden">null </span>
+                  <span>Aspirin 300mg suppositories</span>
+                </a>
+              </p>
+              <h3 class="nhsuk-heading-s">Discontinued</h3>
+              <p id="vmpDiscontinuedmobile19">Not Discontinued</p>
+              
+
+              <h3 class="nhsuk-heading-s">Invalid</h3>
+              <p id="vmpInvalidmobile19">Not Invalid</p>
+              
+              <hr aria-hidden="true">
+            </div>
+          </div>
+
+          <nav aria-label="Pagination Navigation">
+    <ul class="nhsuk-table-pagination" id="pagination">
+
+      <li class="nhsuk-u-margin-right-3" id="linkFirst">&lt;&lt; first</li>
+      
+      <li id="linkPrevious">&lt; previous</li>
+      
+
+      <li><span class="nhsuk-u-visually-hidden">Currently viewing </span><span id="pageNumber">Page 1 of 4</span></li>
+
+      
+      <li id="linkNext"><a aria-label="Goto next page" href="http://dmd-browser.nhsbsa.nhs.uk/ingredient/view/1053?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D&amp;page=2">next &gt;</a></li>
+      
+      <li id="linkLast" class="nhsuk-u-margin-left-3"><a aria-label="Goto last page" href="http://dmd-browser.nhsbsa.nhs.uk/ingredient/view/1053?ref=bmFtZT1hc3BpcmluJnNob3dJbnZhbGlkSXRlbXM9ZmFsc2U%3D&amp;page=4">last &gt;&gt;</a></li>
+
+    </ul>
+  </nav>
+        </section>
+
+        <section class="nhsuk-u-padding-top-4" id="productLinks">
+          <h2 class="nhsuk-heading-l">Further Links</h2>
+          <ul class="nhsuk-list" id="productLinksList">
+            <li><a target="_blank" href="https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=387458008">View on the NHS Digital SNOMED CT browser</a></li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+{% endblock %}

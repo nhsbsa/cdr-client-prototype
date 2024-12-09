@@ -1,0 +1,83 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="nhsuk-width-container">
+
+  <div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="/part-8a/results">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        aria-hidden="true">
+        <path
+          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+        </path>
+      </svg>
+      Go back</a>
+  </div>
+
+  <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+
+        <h1>Set effective dates</h1>
+        <!--p>You are about to update the effective dates for the updated AMP prices</p-->
+
+        <div>
+          <h2>Select Drug Tariff Date</h2>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Drug Tariff Date
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1">December 2024</option>
+              <option value="2" >January 2025</option>
+              <option value="3" >February 2025</option>
+              <option value="3"selected >March 2025</option>
+              <option value="3" >April 2025</option>
+            </select>
+          </div>
+
+        </div>
+        <div>
+          <h2>Select Reimbursement Dates</h2>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Proprietary name Reimbursement Date
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1">December 2024</option>
+              <option value="2"selected >January 2025</option>
+              <option value="3" >February 2025</option>
+              <option value="3" >March 2025</option>
+              <option value="3" >April 2025</option>
+            </select>
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Generic name Reimbursement Date
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1"selected>December 2024</option>
+              <option value="2" >January 2025</option>
+              <option value="3" >February 2025</option>
+              <option value="3" >March 2025</option>
+              <option value="3" >April 2025</option>
+            </select>
+          </div>
+
+
+        </div>
+
+
+
+
+        <a class="nhsuk-button" href="/part-8a/confirm-changes" role="button" draggable="false">Proceed</a>
+
+       
+
+      </div>
+    </div>
+
+  </main>
+</div>
+{% endblock %}

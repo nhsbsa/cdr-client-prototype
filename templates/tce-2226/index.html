@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block content %}
+<nav id="breadcrumbs" class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">dm+d browser</a></li>
+          <li class="nhsuk-breadcrumb__item">Product search</li>
+      </ol>
+  </div>
+</nav>
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+      <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+
+              <h1 class="nhsuk-heading-xl" id="pageHeading">Product search</h1>
+              <form id="search-form" method="post" action="/search" data-gtm-form-interact-id="0"><input type="hidden" name="_csrf" value="MmJFNhKu4mHWBziDX9fJOrNFCzl-sWMbL-d4nHvX8heCOWu2A1InU3fK0FP7Zg27bfr9AtF0JgBKglA2TN9N-k22wyC0WljU">
+    
+
+    <div id="nhsuk-inset-text-amp-search" class="nhsuk-grid-column-full  nhsuk-u-padding-0" style="display: none;">
+      <div class="nhsuk-inset-text nhsuk-inset-text-unbounded nhsuk-u-margin-0 nhsuk-u-margin-bottom-4">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You can search by either product name, supplier or a combination of the two.</p>
+      </div>
+    </div>
+
+    <div class="nhsuk-grid-column-full  nhsuk-u-padding-0">
+      <div class="nhsuk-form-group nhsuk-u-padding-0" id="inputSearchFormGroup">
+        <div class="autocomplete-container__no-overlap nhsuk-u-width-full">
+
+          <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-0">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="mainSearchType">Type</label>
+              <select id="mainSearchType" name="searchType" class="nhsuk-select search-type" data-gtm-form-interact-field-id="0">
+                <option id="searchType3" value="VTM">VTM
+                </option>
+                <option id="searchType2" value="VMP">VMP
+                </option>
+                <option id="searchType1" value="AMP" selected="selected">
+                  AMP
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="nhsuk-grid-column-three-quarters nhsuk-u-padding-0">
+            <div>
+              <div class="nhsuk-form-group nhsuk-u-width-full">
+                <label class="nhsuk-label" for="search-term">Product name</label>
+                
+                <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text" name="ampName" value="">
+              </div>
+            </div>
+          </div>
+
+          <div id="row-supplier-input" class="nhsuk-grid-column-full nhsuk-u-padding-0 nhsuk-u-padding-top-4" style="display: none;">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="search-supplier-input">Supplier</label>
+              <input class="nhsuk-input" id="search-supplier-input" type="text" name="supplier" value="">
+              <div class="nhsuk-hint" id="supplier-search-text-hint">
+                You can locate special order or imported products by entering "special order" or
+                "imported" into the supplier field.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="row-refine-search-input" class="nhsuk-grid-column-full nhsuk-u-padding-0 nhsuk-u-margin-top-5 nhsuk-u-padding-bottom-5">
+      <fieldset class="nhsuk-fieldset nhsuk-fieldset-inline">
+        <legend class="nhsuk-u-visually-hidden">Search filters</legend>
+
+          <div class="nhsuk-checkboxes__item">
+            <input type="hidden" name="_showInvalidItems" value="on"><input class="nhsuk-checkboxes__input" id="checkbox-show-invalid-items" type="checkbox" name="showInvalidItems" value="true">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-invalid-items">Show
+              Invalid</label>
+          </div>
+
+          <div class="nhsuk-checkboxes__item" id="checkbox-hide-discontinued-items-fieldset" style="display: none;">
+            <input type="hidden" name="_hideDiscontinuedItems" value="on"><input class="nhsuk-checkboxes__input" id="checkbox-hide-discontinued-items" type="checkbox" name="hideDiscontinuedItems" value="true">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-hide-discontinued-items">
+              Hide Discontinued
+            </label>
+          </div>
+
+
+          <div class="nhsuk-checkboxes__item" id="hide-parallel-import-fieldset" style="display: none;">
+            <input type="hidden" name="_hideParallelImport" value="on"><input class="nhsuk-checkboxes__input" id="checkbox-hide-parallel-import-items" type="checkbox" name="hideParallelImport" value="true">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-hide-parallel-import-items">
+              Hide Parallel Import
+            </label>
+          </div>
+
+
+          <div class="nhsuk-checkboxes__item" id="hide-special-order-fieldset" style="display: none;">
+            <input type="hidden" name="_hideSpecialOrder" value="on"><input class="nhsuk-checkboxes__input" id="checkbox-hide-special-order-items" type="checkbox" name="hideSpecialOrder" value="true">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-hide-special-order-items">
+              Hide Special Order
+            </label>
+          </div>
+
+      </fieldset>
+    </div>
+
+    <a class="nhsuk-button" data-module="nhsuk-button" href="/tce-2226/result" draggable="false" role="button">
+      Search
+    </a>
+    <a class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" href="/tce-2226" draggable="false" role="button">
+      Clear
+    </a>
+
+    <script type="application/javascript">
+      var prevText = document.getElementById('search-supplier-input').getAttribute("value");
+
+      function fixFilters(target) {
+        var searchSupplierInput = document.getElementById('search-supplier-input');
+        var rowSupplierInput = document.getElementById('row-supplier-input');
+        var rowInsertTextAmpSearch = document.getElementById('nhsuk-inset-text-amp-search');
+        var fieldsetHideDiscontinued = document.getElementById(
+            'checkbox-hide-discontinued-items-fieldset');
+        var fieldsetHideParallelImport = document.getElementById('hide-parallel-import-fieldset');
+        var fieldsetHideSpecialOrder = document.getElementById('hide-special-order-fieldset');
+
+        if (target.value !== "AMP") {
+          prevText = searchSupplierInput.value;
+          searchSupplierInput.value = "";
+          rowSupplierInput.style = "display: none";
+          rowInsertTextAmpSearch.style = "display: none";
+          fieldsetHideParallelImport.style = "display: none";
+          fieldsetHideSpecialOrder.style = "display: none";
+        } else {
+          searchSupplierInput.value = prevText;
+          rowSupplierInput.style = "display: block";
+          rowInsertTextAmpSearch.style = "display: block";
+          fieldsetHideParallelImport.style = "display: block";
+          fieldsetHideSpecialOrder.style = "display: block";
+        }
+
+        if (target.value === "VTM") {
+          fieldsetHideDiscontinued.style = "display: none";
+        } else {
+          fieldsetHideDiscontinued.style = "display: block";
+        }
+
+        if (target.value !== "AMP") {
+          rowSupplierInput.style = "display: none";
+          rowInsertTextAmpSearch.style = "display: none";
+        }
+      }
+
+      document.querySelectorAll('.search-type').forEach(function (target) {
+        fixFilters(target);
+      });
+      document.querySelectorAll('.search-type').forEach(function (target) {
+        target.addEventListener('change', function () {
+          fixFilters(target);
+        });
+
+      });
+    </script>
+  </form>
+          </div>
+      </div>
+
+  </main>
+</div>
+{% endblock %}
