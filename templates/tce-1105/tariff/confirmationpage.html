@@ -1,32 +1,21 @@
 {% extends "base-full.html" %}
 {% block content %}
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="search.html">
-        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24" aria-hidden="true">
-          <path
-              d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-        </svg>
-        Select Quick Price</a>
-    </div>
-    <h1 class="heading-xlarge">Generics Part IX Quick Price Update</h1>
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
 
-    <div class="nhsuk-body-m flex--space-between">
-      <!--div class="nhsuk-u-visually-hidden">Currently viewing</div>
-      <div id="pageAndResultCount">Page 1 of 1 (5 results)</div-->
-      <div class="nhsuk-u-text-align--right" style="display: flex">
-        <div id="tableSortControls" style="margin-right: 15px">
-          <span>Sort:</span>
-          <span><a aria-label="Sort results by price" href="">eligibility</a></span>
+    <h1 class="heading-xlarge">Prices updated successfully</h1>
 
-          <span> | </span>
 
-          <span class="nhsuk-u-font-weight-bold">name</span>
-        </div>
+    <!--div class="nhsuk-width-container">
+
+      <div class="nhsuk-grid-column-full">
+        <p>You have successfully updated prices for Hollister Ltd Part IX products </p>
       </div>
-    </div>
+
+    </div-->
+
+
+
 
     <table role="table" class="nhsuk-table-responsive" style="margin-bottom: 32px;">
       <caption class="nhsuk-table__caption nhsuk-u-margin-bottom-4">Price update selections</caption>
@@ -50,9 +39,7 @@
         <th role="columnheader" class="" scope="col">
           Unrounded price
         </th>
-        <th role="columnheader" class="" scope="col">
-          Remove
-        </th>
+
       </tr>
       </thead>
 
@@ -88,10 +75,7 @@
           <span class="nhsuk-u-visually-hidden"> Reimbursement unrounded price</span>
           184.5003
         </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Remove</span>
-          <a href="#">Remove</a>
-        </td>
+ 
       </tr>
      
       <tr role="row" class="nhsuk-table__row">
@@ -125,10 +109,7 @@
           <span class="nhsuk-u-visually-hidden"> Reimbursement unrounded price</span>
           81.0751
         </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Remove</span>
-          <a href="#">Remove</a>
-        </td>
+ 
       </tr>
 
       <tr role="row" class="nhsuk-table__row">
@@ -162,10 +143,7 @@
           <span class="nhsuk-u-visually-hidden">Reimbursement unrounded price</span>
           621.9895
         </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Remove</span>
-          <a href="#">Remove</a>
-        </td>
+ 
       </tr>
 
       <tr role="row" class="nhsuk-table__row">
@@ -199,10 +177,7 @@
           <span class="nhsuk-u-visually-hidden"> Reimbursement unrounded price</span>
           91.8085
         </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Remove</span>
-          <a href="#">Remove</a>
-        </td>
+ 
       </tr>
 
       <tr role="row" class="nhsuk-table__row">
@@ -236,43 +211,102 @@
           <span class="nhsuk-u-visually-hidden"> Reimbursement unrounded price</span>
           115.3204
         </td>
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Remove</span>
-          <a href="#">Remove</a>
-        </td>
+ 
       </tr>
       </tbody>
     </table>
 
 
 
-<!--    <nav aria-label="Pagination Navigation">-->
-<!--      <ul class="nhsuk-table-pagination" id="pagination">-->
+    <div id="pagination">
+      <nav aria-label="Pagination Navigation">
+        <ul class="pagination nhsuk-u-margin-bottom-0">
+          <!-- Previous Button -->
+          <li class="pagination__item">Previous</li>
+          <li class="pagination__item">|</li>
+          <!-- First Page -->
+          <!-- Page Numbers -->
+          <li class="pagination__item">
+            <!-- Not this page! -->
+            <!-- This page! -->
+            <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true" id="1">1</p>
+          </li>
+          <li class="pagination__item">
+            <!-- Not this page! -->
+            <a class="pagination__link" href="#" id="2">2</a>
+            <!-- This page! -->
+          </li>
 
-<!--        <li class="nhsuk-u-margin-right-3" id="linkFirst">&lt;&lt;-->
-<!--          first-->
-<!--        </li>-->
+          <!-- Next Page -->
 
-<!--        <li id="linkPrevious">&lt; previous</li>-->
+          <li class="pagination__item">|</li>
+
+          <!-- Next Button -->
+          <li class="pagination__item"><a href="#">Next</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <a class="nhsuk-button nhsuk-button--secondary" href="/update-index">Return to homepage </a>
 
 
-
-<!--        <li><span class="nhsuk-u-visually-hidden">Currently viewing </span><span id="pageNumber">Page 1 of 1</span>-->
-<!--        </li>-->
-
-
-
-<!--        <li id="linkNext">next-->
-<!--          &gt;</a>-->
-<!--        </li>-->
-
-<!--        <li id="linkLast" class="nhsuk-u-margin-left-3">last-->
-<!--          &gt;&gt;</a></li>-->
-
-<!--      </ul>-->
-<!--    </nav>-->
-
-    <a class="nhsuk-button" href="./confirmationpage.html">Submit</a>
-  </div>
 </div>
+</div>
+<script>
+
+  console.log(localStorage);
+
+  const allSelections = document.getElementsByClassName("all-selections");
+  const selections = document.getElementsByClassName("selections");
+
+  if (localStorage.getItem("all-selections") != 'yes') {
+    allSelections[0].style.display = "none";
+    allSelections[1].style.display = "none";
+  } else if ((localStorage.getItem("not-all-selections") != 'yes')) {
+    selections[0].style.display = "none";
+    selections[1].style.display = "none";
+  }
+
+  let reimbursementDate = document.getElementsByClassName("reimbursement-date");
+  console.log('reimbursementDate', reimbursementDate);
+
+  if (localStorage.getItem("date-amend-month") != null && localStorage.getItem("date-amend") == 'yes') {
+    for (let i = 0; i < reimbursementDate.length; i++) {
+      reimbursementDate[i].innerHTML = '<span class="nhsuk-table-responsive__heading">Reimbursement date</span><span class="nhsuk-u-visually-hidden">Reimbursement date</span>' + localStorage.getItem("date-amend-month");
+      console.log(reimbursementDate[i].innerHTML);
+    }
+    if (localStorage.getItem("date-amend") == 'no') {
+      reimbursementDate[i].innerHTML = '<span class="nhsuk-table-responsive__heading">Reimbursement date</span><span class="nhsuk-u-visually-hidden">Reimbursement date</span>01-05-2022';
+    }
+  }
+
+  let reimbursementPrice = document.getElementsByClassName("price-update");
+  let reimbursementUnroundedPrice = document.getElementsByClassName("unrounded-price-update");
+
+  if (localStorage.getItem("price-amend-pence") != null && localStorage.getItem("price-amend") == 'yes') {
+
+    let roundedPrice = Math.round(localStorage.getItem("price-amend-pence"));
+
+    for (let i = 0; i < reimbursementPrice.length; i++) {
+      console.log(reimbursementPrice[i].innerHTML);
+      reimbursementPrice[i].innerHTML = '<span class="nhsuk-table-responsive__heading">Reimbursement price</span><span class="nhsuk-u-visually-hidden">Reimbursement price</span>' + roundedPrice;
+    }
+
+    for (let i = 0; i < reimbursementUnroundedPrice.length; i++) {
+      reimbursementUnroundedPrice[i].innerHTML = '<span class="nhsuk-table-responsive__heading">Reimbursement unrounded price</span><span class="nhsuk-u-visually-hidden">Reimbursement unrounded price</span>' + localStorage.getItem("price-amend-pence");
+    }
+
+    if (localStorage.getItem("price-amend") == 'no') {
+
+      reimbursementPrice[i].innerText = '<span class="nhsuk-table-responsive__heading">Reimbursement price</span><span class="nhsuk-u-visually-hidden">Reimbursement price</span>2364';
+      reimbursementUnroundedPrice[i].innerText = '<span class="nhsuk-table-responsive__heading">Reimbursement price</span><span class="nhsuk-u-visually-hidden">Reimbursement price</span>2363.7827';
+
+    }
+
+
+  }
+
+
+</script>
 {% endblock %}
