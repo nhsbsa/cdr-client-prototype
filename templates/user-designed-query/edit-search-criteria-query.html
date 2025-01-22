@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="new-query-summary-page.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to new query summary page</span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Edit search criteria query
+      </h1>
+    </legend>
+
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+
+      <p>You can delete<a href="cancel-new-query-confirmation.html" title="External website"> this search criteria</a>.</p>
+    </div>
+
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h2>Selected criteria</h2>
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Level
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              VMP
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+              <a href="edit-search-criteria-level.html">
+                Edit<span class="nhsuk-u-visually-hidden"> edit</span>
+              </a>
+
+            </dd>
+
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Attribute
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Name
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+              <a href="edit-search-criteria-attribute.html">
+                Edit<span class="nhsuk-u-visually-hidden">Edit</span>
+              </a>
+
+            </dd>
+
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Qualifier (Operators)
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Equal to
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+              <a href="edit-search-criteria-qualifier.html">
+                Edit<span class="nhsuk-u-visually-hidden">Edit</span>
+              </a>
+
+            </dd>
+
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Criteria
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              N%
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+              <a href="edit-search-criteria.html">
+                Edit<span class="nhsuk-u-visually-hidden">Edit</span>
+              </a>
+
+            </dd>
+
+          </div>
+
+        </dl>
+      </div>
+      </div>
+
+
+  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="new-query-summary-page.html">
+    Continue
+  </a>
+
+  <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="#">
+    View results
+  </button>
+
+
+{% endblock %}

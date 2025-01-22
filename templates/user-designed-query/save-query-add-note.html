@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="save-query-add-cipher.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to save query add cipher  </span></a>
+</div>
+
+
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Save user defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Add save query note
+      </h1>
+    </legend>
+
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+
+      <p>Your user ID (Cipher) and today's date will be saved automatically by default </p>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <h2 class="nhsuk-label-wrapper">
+        <label class="nhsuk-label nhsuk-label--l" for="more-detail">
+         Add a title
+        </label>
+      </h2>
+      <div class="nhsuk-hint" id="contact-hint">
+        Add a title that is relevant to you.
+      </div>
+      <input class="nhsuk-input" id="example" name="example" type="text">
+    </div>
+
+  <div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
+    <div class="nhsuk-form-group">
+      <h2 class="nhsuk-label-wrapper">
+        <label class="nhsuk-label nhsuk-label--l" for="more-detail">
+          Add details of the query you are saving (optional)
+        </label>
+      </h2>
+      <div class="nhsuk-hint" id="more-detail-hint">
+       Describe what this query might do or what it is for
+      </div>
+      <textarea class="nhsuk-textarea nhsuk-js-character-count" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <div class="nhsuk-hint nhsuk-character-count__message" id="more-detail-info">
+      You can enter up to 200 characters
+    </div>
+
+  </div>
+  </fieldset>
+
+<a class="nhsuk-button nhsuk-u-margin-top-5" id="continue-button" name="button" href="save-query-summary.html">Continue</a>
+
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const year = today.getFullYear();
+
+    document.getElementById('example-day').value = day;
+    document.getElementById('example-month').value = month;
+    document.getElementById('example-year').value = year;
+  });
+
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="edit-search-criteria-query.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back edit search criteria query</span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Edit search criteria level
+      </h1>
+    </legend>
+
+
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-name">
+        Select Level
+      </label>
+      <select class="nhsuk-select" id="select-name" name="select-1">
+        <option value=""></option>
+        <option value="VMP">VMP</option>
+        <option value="AMP">AMP</option>
+        <option value="VMPP">VMPP</option>
+        <option value="AMPP">AMPP</option>
+        <option value="Ingredient">Ingredient</option>
+        <option value="Supplier">Supplier</option>
+        <option value="VTM">VTM</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="edit-search-criteria-query.html">
+    Continue
+  </a>
+
+  <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="large-data-table.html">
+    View results
+  </a>
+</div>
+
+{% endblock %}

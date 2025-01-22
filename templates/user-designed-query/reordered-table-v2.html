@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="../index.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back </span></a>
+</div>
+<legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+  <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+    Reorder table version two
+  </h1>
+</legend>
+<table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">Search display</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+  <tr role="row">
+    <th role="columnheader" class="" scope="col">
+      Int/Ext
+    </th>
+    <th role="columnheader" class="" scope="col">
+      Level
+    </th>
+    <th role="columnheader" class="" scope="col">
+      Condition
+    </th>
+    <th role="columnheader" class="" scope="col">
+      Dates
+    </th>
+    <th role="columnheader" class="" scope="col">
+      Action
+    </th>
+  </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--green ">
+      Int
+    </strong></td>
+    <td class="nhsuk-table__cell">VMP</td>
+    <td class="nhsuk-table__cell ">Name</td>
+    <td class="nhsuk-table__cell ">Exclude dates</td>
+    <td class="nhsuk-table__cell">
+      <a href="reordered-table-choice.html">Move up / Move down / Edit </a>
+    </td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--green ">
+      Int
+    </strong></td>
+    <td class="nhsuk-table__cell">VMP</td>
+    <td class="nhsuk-table__cell ">place</td>
+    <td class="nhsuk-table__cell ">Exclude dates</td>
+    <td class="nhsuk-table__cell">
+      <a href="#" onclick="moveRow(this, 'up'); return false;" class="move-up" aria-label="Move up">Move up/ </a>
+      <a href="# " onclick="moveRow(this, 'down'); return false;"  class="move-down" aria-label="Move down">Move down / </a>
+      <a href="#">Edit</a>
+    </td>
+  </tr>
+  <tr role="row" class="nhsuk-table__row">
+    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--green ">
+      Int
+    </strong></td>
+    <td class="nhsuk-table__cell">VMP</td>
+    <td class="nhsuk-table__cell ">time</td>
+    <td class="nhsuk-table__cell ">Exclude dates</td>
+    <td class="nhsuk-table__cell">
+      <a href="#" onclick="moveRow(this, 'up'); return false;" aria-label="Move up">Move up / </a>
+      <a href="# " onclick="moveRow(this, 'down'); return false;" aria-label="Move down">Move down / </a>
+      <a href="#">Edit</a>
+    </td>
+  </tr>
+
+<!--  <tr role="row" class="nhsuk-table__row">-->
+<!--    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag&#45;&#45;orange ">-->
+<!--      Ext-->
+<!--    </strong></td>-->
+<!--    <td class="nhsuk-table__cell">VMPP</td>-->
+<!--    <td class="nhsuk-table__cell ">SNOMED Code</td>-->
+<!--    <td class="nhsuk-table__cell ">Exclude dates</td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing">Go up</button>-->
+<!--      <button onclick="moveRow(this, 'down')" aria-label="Move row down">Down</button>-->
+<!--    </td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <a href="Edit">Edit</a>-->
+<!--      <a href="Edit">Edit</a>-->
+<!--      <a href="Edit">Edit</a>-->
+<!--    </td>-->
+<!--  </tr>-->
+
+<!--  <tr role="row" class="nhsuk-table__row">-->
+<!--    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag&#45;&#45;green ">-->
+<!--      Int-->
+<!--    </strong></td>-->
+<!--    <td class="nhsuk-table__cell">VMPP</td>-->
+<!--    <td class="nhsuk-table__cell ">Pack size</td>-->
+<!--    <td class="nhsuk-table__cell ">Exclude dates</td>-->
+<!--    <td class="nhsuk-table__cell">-->
+
+<!--      <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing">Go up</button>-->
+<!--      <button onclick="moveRow(this, 'down')" aria-label="Move row down">Down</button>-->
+<!--    </td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <a href="Edit">Edit</a>-->
+<!--    </td>-->
+<!--  </tr>-->
+
+<!--  <tr role="row" class="nhsuk-table__row">-->
+<!--    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag&#45;&#45;green ">-->
+<!--      Int-->
+<!--    </strong></td>-->
+<!--    <td class="nhsuk-table__cell">VMPP</td>-->
+<!--    <td class="nhsuk-table__cell ">Reimbursement price DT</td>-->
+<!--    <td class="nhsuk-table__cell ">Exclude dates</td>-->
+<!--    <td class="nhsuk-table__cell">-->
+
+<!--      <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing">Go up</button>-->
+<!--      <button onclick="moveRow(this, 'down')" aria-label="Move row down">Down</button>-->
+<!--    </td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <a href="Edit">Edit</a>-->
+<!--    </td>-->
+<!--  </tr>-->
+
+<!--  <tr role="row" class="nhsuk-table__row">-->
+<!--    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag&#45;&#45;orange ">-->
+<!--      Ext-->
+<!--    </strong></td>-->
+<!--    <td class="nhsuk-table__cell">VMPP</td>-->
+<!--    <td class="nhsuk-table__cell ">Drug tariff payment category</td>-->
+<!--    <td class="nhsuk-table__cell ">Exclude dates</td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing">Go up</button>-->
+<!--      <button onclick="moveRow(this, 'down')" aria-label="Move row down">Down</button>-->
+<!--    </td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <a href="Edit">Edit</a>-->
+<!--    </td>-->
+<!--  </tr>-->
+<!--  <tr role="row" class="nhsuk-table__row">-->
+<!--    <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag&#45;&#45;orange ">-->
+<!--      Ext-->
+<!--    </strong></td>-->
+<!--    <td class="nhsuk-table__cell">VMPP</td>-->
+<!--    <td class="nhsuk-table__cell ">Price concession indicator</td>-->
+<!--    <td class="nhsuk-table__cell ">Include dates</td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing">Go up</button>-->
+<!--      <button onclick="moveRow(this, 'down')" aria-label="Move row down">Down</button>-->
+<!--    </td>-->
+<!--    <td class="nhsuk-table__cell">-->
+<!--      <a href="Edit">Edit</a>-->
+<!--    </td>-->
+<!--  </tr>-->
+
+
+  </tbody>
+</table>
+
+<div id="live-region" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+</div>
+
+<script>
+  function moveRow(element, direction) {
+    const row = element.closest("tr");
+    const tbody = row.parentNode;
+
+    // Determine target row based on direction
+    let targetRow = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
+
+    if (targetRow && targetRow.tagName === "TR") {
+      if (direction === "up") {
+        tbody.insertBefore(row, targetRow);
+      } else {
+        tbody.insertBefore(targetRow, row);
+      }
+
+      // Apply a highlight class for accessibility and tracking
+      row.classList.add("moved-row");
+      setTimeout(() => row.classList.remove("moved-row"), 2000);
+    }
+  }
+</script>
+
+<style>
+  .moved-row {
+    outline: 2px solid #007f3b; /* Accessible color for tracking */
+    transition: outline 0.3s;
+  }
+</style>
+
+{% endblock %}

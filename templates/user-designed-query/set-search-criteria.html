@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="set-search-conditional-qualifier.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to search conditional qualifier (Operators)  </span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Set search criteria
+      </h1>
+    </legend>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h2>Selected criteria</h2>
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Level
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              VMP
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+              <a href="set-search-criteria-level.html">
+                Edit<span class="nhsuk-u-visually-hidden"> edit</span>
+              </a>
+
+            </dd>
+
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Attribute
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Name
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+              <a href="set-search-criteria-attribute.html">
+                Edit<span class="nhsuk-u-visually-hidden">Edit</span>
+              </a>
+
+            </dd>
+
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Qualifier (Operators)
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Equal to
+            </dd>
+
+            <dd class="nhsuk-summary-list__actions">
+
+              <a href="set-search-conditional-qualifier.html">
+                Edit<span class="nhsuk-u-visually-hidden">Edit</span>
+              </a>
+
+            </dd>
+
+          </div>
+
+        </dl>
+      </div>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="input-width-20">
+        <H2>Enter criteria</H2>
+
+      </label>
+
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+     View wild card Information
+    </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>These are the most commonly used wildcard symbols used on the system</p>
+          <ul>
+            <li>% (Percent Sign) – Matches any number of characters.
+              Example: %cet finds "paracetamol", "acetaminophen".</li>
+            <li> , (Comma) – Separates multiple search criteria.
+              Example: paracetamol,acetaminophen finds either "paracetamol" or "acetaminophen"</li>
+            <li> _ (Underscore) – Matches exactly one character.
+              Example: p_raetamol finds "paracetamol" but not "ptraetamol".</li>
+            <li> [] (Square Brackets) – Matches any one character in a set or range.
+              Example: par[ae]tamol finds "paracetamol" or "paratamol".</li>
+            <li>{} (Curly Braces) – Matches a specific number of repetitions.
+              Example: a{2} finds "paracetamol" but not "paracetalol".</li>
+            <li>- ^ (Caret) – Matches the beginning of a string.
+              Example: ^paracetamol finds "paracetamol" at the start of a string..</li>
+            <li> - (Hyphen) – Indicates a range or excludes terms.
+              Example: paracetamol -acetaminophen finds "paracetamol" but excludes "acetaminophen"</li>
+
+          </ul>
+        </div>
+      </details>
+
+      <div class="nhsuk-hint" id="contact-hint">
+        If you need to use a wildcard, include the symbol where needed: before, after, or on both sides of your query (for example, %a, a%, or %a%). Otherwise, simply enter the criteria you want to search for.
+      </div>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="input-width-20" type="text">
+    </div>
+  </fieldset>
+
+  <div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+
+    <p>If needed, select   <a href="choose-show-all-dates.html" title="External website">show all dates </a>.</p>
+  </div>
+
+  <div class="nhsuk-action-link">
+    <a class="nhsuk-action-link__link" href="add-set-criteria-level.html">
+      <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+      </svg>
+      <span class="nhsuk-action-link__text">Add search criteria</span>
+    </a>
+  </div>
+
+
+  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="set-display-level.html">
+    Continue
+  </a>
+
+  <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="#">
+    View results
+  </button>
+</div>
+
+{% endblock %}
