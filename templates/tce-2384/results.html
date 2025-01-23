@@ -1,0 +1,873 @@
+{% extends "base-full.html" %}
+
+
+
+{% block content %}
+
+
+<!--div>
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#"></a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
+        
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li>
+        
+          </ol>
+          <p class="nhsuk-breadcrumb__back">
+            <a class="nhsuk-breadcrumb__backlink" href="#">
+              <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+              Level three
+            </a>
+          </p>
+    </div-->
+
+<main class="nhsuk-main-wrapper" id="main-content">
+    <div class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+                <form id="new-search-form" method="post"><input type="hidden" name="_csrf"
+                        value="mqQ58ifpWeY-Ar790t0aq2En70y_exc01JFzfzMc47XjUlk9rpIIl0OIa4UTNImYtPAuklcfwi2OS3YZ4KRCTQAt2tGFNGAL">
+
+
+
+
+                    <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5 nhsuk-u-margin-left-3"
+                        id="page-landing-heading">CDR name search</h1>
+
+
+
+                    <div class="nhsuk-grid-column-one-quarter">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="search-type">
+                                Search type
+                            </label>
+
+                            <select class="nhsuk-select search-type" id="search-type" name="searchType">
+                                <option value="VMP">VMP</option>
+                                <option value="AMP">AMP</option>
+                                <option value="SUPPLIER">Supplier</option>
+                                <option value="VTM" selected="selected">VTM</option>
+                                <option value="INGREDIENT">Ingredient</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Serch Input field-->
+                    <div class="nhsuk-grid-column-three-quarters">
+                        <div class="nhsuk-form-group autocomplete-wrapper nhsuk-u-width-full"
+                            id="autocomplete-results__form-group">
+                            <label class="nhsuk-label" for="search-term">Search
+                                term
+                            </label>
+
+                            <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text" role="combobox"
+                                aria-autocomplete="list" aria-describedby="search-field__assistiveHint"
+                                aria-owns="autocomplete-results-container"
+                                aria-controls="autocomplete-results__announcer" aria-expanded="false" name="searchTerm"
+                                value="" autocomplete="off">
+                            <ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden"
+                                id="autocomplete-results-container" role="listbox"></ul>
+                            <div class="nhsuk-u-visually-hidden" id="autocomplete-results__announcer" role="alert"
+                                aria-live="assertive"></div>
+                            <span class="autocomplete__announcer" id="search-field__assistiveHint"> When
+                                autocomplete results are available use up and down arrows to review and enter to
+                                select.</span>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-full" id="row-supplier-input" style="display: none;">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="search-supplier-input">Supplier (optional)</label>
+                            <input class="nhsuk-input" id="search-supplier-input" type="text" name="supplier" value="">
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-full">
+                        <details class="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">Refine search</span>
+                            </summary>
+                            <div class="nhsuk-details__text">
+
+                                <div class="nhsuk-form-group">
+                                    <fieldset class="nhsuk-fieldset">
+                                        <legend class="nhsuk-fieldset__legend">Filter by</legend>
+                                        <div class="nhsuk-checkboxes">
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showPCDD" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-pcdd-items"
+                                                        type="checkbox" checked="checked" name="showPCDD" value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-pcdd-items">
+                                                        PCDD
+                                                    </label>
+                                                </div>
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showSCDD" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-scdd-items"
+                                                        type="checkbox" checked="checked" name="showSCDD" value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-scdd-items">
+                                                        SCDD
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showValidItems" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-valid-items"
+                                                        type="checkbox" checked="checked" name="showValidItems"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-valid-items">
+                                                        Valid
+                                                    </label>
+                                                </div>
+
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showInvalidItems" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-invalid-items"
+                                                        type="checkbox" checked="checked" name="showInvalidItems"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-invalid-items">
+                                                        Invalid
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showAvailable" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-avail-items"
+                                                        type="checkbox" checked="checked" name="showAvailable"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-avail-items">
+                                                        Available
+                                                    </label>
+                                                </div>
+
+
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showUnavailable" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-unavail-items"
+                                                        type="checkbox" checked="checked" name="showUnavailable"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-unavail-items">
+                                                        Unavailable
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_matchTermsExact" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-match-name-exact"
+                                                        type="checkbox" checked="checked" name="matchTermsExact"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-match-name-exact">
+                                                        Match terms
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <input type="hidden" value="100" id="size" name="size">
+                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-float-right" id="button-search">
+
+                        <a class="nhsuk-button" data-module="nhsuk-button" href="/tce-2384/results" draggable="false"
+                            role="button">
+                            Search
+                        </a>
+                        <button class="nhsuk-button nhsuk-button--secondary" id="reset-button" name="reset"
+                            type="submit">Reset
+                        </button>
+                    </div>
+
+                    <input type="hidden" value="1" id="page" name="page">
+                    <!--Attributes from previous search for infinite scroll-->
+                    <div class="nhsuk-u-visually-hidden">
+                        <p id="searched-search-term"></p>
+                        <p id="searched-search-type" var="VMP"></p>
+                        <p id="searched-supplier"></p>
+                        <p id="searched-show-PCDD" var="true"></p>
+                        <p id="searched-show-SCDD" var="true"></p>
+                        <p id="searched-show-valid" var="true"></p>
+                        <p id="searched-show-invalid" var="true"></p>
+                        <p id="searched-show-available" var="true"></p>
+                        <p id="searched-show-unavailable" var="true"></p>
+                        <p id="searched-match-term-exact" var="true"></p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</main>
+<div class="nhsuk-width-container-fluid nhsuk-u-margin-left-6 nhsuk-u-margin-right-6">
+
+
+
+
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <div data-page="vtm-results">
+
+
+                <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+                <div
+                    class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0 nhsuk-u-margin-bottom-4">
+                    <span id="page-and-result-count-top">Page 1 of 1 (7 total results)</span>
+                </div>
+
+                <div id="results-table-container" class="nhsuk-table-responsive nhsuk-u-margin-bottom-4">
+                    <table class="nhsuk-table nhsuk-table-search-results">
+                        <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">VTM results</caption>
+                        <thead role="rowgroup" class="nhsuk-table__head">
+                            <tr class="nhsuk-table__row">
+                                <th class="nhsuk-table__header-identifier" scope="col" style="width: 2%"><span
+                                        class="nhsuk-u-visually-hidden">Identifier</span></th>
+                                <th class="nhsuk-table__header columnheader-sticky" scope="col">Name</th>
+                                <th class="nhsuk-table__header columnheader-sticky" scope="col">SNOMED</th>
+                                <th class="nhsuk-table__header columnheader-sticky" scope="col">VTM ID</th>
+                                <th class="nhsuk-table__header columnheader-sticky" scope="col"><abbr
+                                        title="Invalid">INV</abbr></th>
+                                <th class="nhsuk-table__header columnheader-sticky" scope="col"><abbr
+                                        title="Un-extractable">UEX</abbr></th>
+                                <th class="nhsuk-table__header columnheader-sticky start-end-date-column" scope="col"
+                                    style="white-space: nowrap">Start date
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body" id="table-search-results-body" role="rowgroup"
+                            aria-label="search results">
+
+                            <tr role="row" class="nhsuk-table__row temporal-current">
+                                <td role="cell" class="nhsuk-table__cell-historic nhsuk-u-padding-left-3">
+                                    <span class="nhsuk-table-responsive__heading">Identifier </span>
+                                    <span id="results-table--tag-value-0">
+
+
+
+
+
+                                        <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">Name</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--name-value-0"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;">
+                                        <a
+                                            href="/tce-2384/vtm-display">Aspirin</a>
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">SNOMED</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--snomed-value-0"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;"></span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">VTM ID</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--vtm-id-value-0">69</span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Invalid</span>
+
+                                    <span id="results-table--invalid-value-0">
+
+                                    </span>
+                                </td>
+
+                                <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
+                          <span class="nhsuk-table-responsive__heading">Invalid</span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
+                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                   aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
+                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                </path>
+                              </svg>
+                            <span class="nhsuk-u-visually-hidden">Invalid</span>
+                            </span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}"
+                                th:unless="${vmp.invalid}"><span class="nhsuk-u-visually-hidden">Valid</span></span>
+                        </td>-->
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Unextractable</span>
+
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--extractable-value-0">
+                                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                                    </span>
+                                </td>
+                                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Start Date</span>
+
+
+                                    <span id="results-table--start-date-value-aria-0"
+                                        class="nhsuk-u-visually-hidden stop-user-selection">9 December 2004</span>
+
+
+                                    <span id="results-table--start-date-value-0" aria-hidden="true"
+                                        class="nhsuk-u-font-size-16 nhsuk-table-content">09-12-2004</span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr role="row" class="nhsuk-table__row temporal-current">
+                                <td role="cell" class="nhsuk-table__cell-historic nhsuk-u-padding-left-3">
+                                    <span class="nhsuk-table-responsive__heading">Identifier </span>
+                                    <span id="results-table--tag-value-1">
+
+
+
+
+
+                                        <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">Name</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--name-value-1"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;">
+                                        <a
+                                            href="/vtm/1540?ref=W3sicGFnZVRpdGxlIjoiVlRNIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1Bc3BpcmluJnNlYXJjaFR5cGU9VlRNJm1hdGNoVGVybXNFeGFjdD10cnVlJnNob3dJbnZhbGlkSXRlbXM9dHJ1ZSZzaG93VmFsaWRJdGVtcz10cnVlJnNob3dQQ0REPXRydWUmc2hvd1NDREQ9dHJ1ZSZzaG93QXZhaWxhYmxlPXRydWUmc2hvd1VuYXZhaWxhYmxlPXRydWUiLCJoaXN0b3J5IjpudWxsfV0%3D">Aspirin
+                                            + Caffeine</a>
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">SNOMED</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--snomed-value-1"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;"></span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">VTM ID</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--vtm-id-value-1">1540</span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Invalid</span>
+
+                                    <span id="results-table--invalid-value-1">
+
+                                    </span>
+                                </td>
+
+                                <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
+                          <span class="nhsuk-table-responsive__heading">Invalid</span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
+                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                   aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
+                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                </path>
+                              </svg>
+                            <span class="nhsuk-u-visually-hidden">Invalid</span>
+                            </span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}"
+                                th:unless="${vmp.invalid}"><span class="nhsuk-u-visually-hidden">Valid</span></span>
+                        </td>-->
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Unextractable</span>
+
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--extractable-value-1">
+                                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                                    </span>
+                                </td>
+                                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Start Date</span>
+
+
+                                    <span id="results-table--start-date-value-aria-1"
+                                        class="nhsuk-u-visually-hidden stop-user-selection">17 January 2006</span>
+
+
+                                    <span id="results-table--start-date-value-1" aria-hidden="true"
+                                        class="nhsuk-u-font-size-16 nhsuk-table-content">17-01-2006</span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr role="row" class="nhsuk-table__row temporal-current">
+                                <td role="cell" class="nhsuk-table__cell-historic nhsuk-u-padding-left-3">
+                                    <span class="nhsuk-table-responsive__heading">Identifier </span>
+                                    <span id="results-table--tag-value-2">
+
+
+
+
+
+                                        <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">Name</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--name-value-2"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;">
+                                        <a
+                                            href="/vtm/2737?ref=W3sicGFnZVRpdGxlIjoiVlRNIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1Bc3BpcmluJnNlYXJjaFR5cGU9VlRNJm1hdGNoVGVybXNFeGFjdD10cnVlJnNob3dJbnZhbGlkSXRlbXM9dHJ1ZSZzaG93VmFsaWRJdGVtcz10cnVlJnNob3dQQ0REPXRydWUmc2hvd1NDREQ9dHJ1ZSZzaG93QXZhaWxhYmxlPXRydWUmc2hvd1VuYXZhaWxhYmxlPXRydWUiLCJoaXN0b3J5IjpudWxsfV0%3D">Aspirin
+                                            + Codeine</a>
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">SNOMED</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--snomed-value-2"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;"></span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">VTM ID</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--vtm-id-value-2">2737</span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Invalid</span>
+
+                                    <span id="results-table--invalid-value-2">
+
+                                    </span>
+                                </td>
+
+                                <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
+                          <span class="nhsuk-table-responsive__heading">Invalid</span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
+                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                   aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
+                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                </path>
+                              </svg>
+                            <span class="nhsuk-u-visually-hidden">Invalid</span>
+                            </span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}"
+                                th:unless="${vmp.invalid}"><span class="nhsuk-u-visually-hidden">Valid</span></span>
+                        </td>-->
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Unextractable</span>
+
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--extractable-value-2">
+                                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                                    </span>
+                                </td>
+                                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Start Date</span>
+
+
+                                    <span id="results-table--start-date-value-aria-2"
+                                        class="nhsuk-u-visually-hidden stop-user-selection">30 September 2010</span>
+
+
+                                    <span id="results-table--start-date-value-2" aria-hidden="true"
+                                        class="nhsuk-u-font-size-16 nhsuk-table-content">30-09-2010</span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr role="row" class="nhsuk-table__row temporal-current">
+                                <td role="cell" class="nhsuk-table__cell-historic nhsuk-u-padding-left-3">
+                                    <span class="nhsuk-table-responsive__heading">Identifier </span>
+                                    <span id="results-table--tag-value-3">
+
+
+
+
+
+                                        <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">Name</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--name-value-3"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;">
+                                        <a
+                                            href="/vtm/1083?ref=W3sicGFnZVRpdGxlIjoiVlRNIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1Bc3BpcmluJnNlYXJjaFR5cGU9VlRNJm1hdGNoVGVybXNFeGFjdD10cnVlJnNob3dJbnZhbGlkSXRlbXM9dHJ1ZSZzaG93VmFsaWRJdGVtcz10cnVlJnNob3dQQ0REPXRydWUmc2hvd1NDREQ9dHJ1ZSZzaG93QXZhaWxhYmxlPXRydWUmc2hvd1VuYXZhaWxhYmxlPXRydWUiLCJoaXN0b3J5IjpudWxsfV0%3D">Aspirin
+                                            + Isosorbide mononitrate</a>
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">SNOMED</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--snomed-value-3"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;"></span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">VTM ID</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--vtm-id-value-3">1083</span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Invalid</span>
+
+                                    <span id="results-table--invalid-value-3">
+
+                                    </span>
+                                </td>
+
+                                <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
+                          <span class="nhsuk-table-responsive__heading">Invalid</span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
+                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                   aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
+                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                </path>
+                              </svg>
+                            <span class="nhsuk-u-visually-hidden">Invalid</span>
+                            </span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}"
+                                th:unless="${vmp.invalid}"><span class="nhsuk-u-visually-hidden">Valid</span></span>
+                        </td>-->
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Unextractable</span>
+
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--extractable-value-3">
+                                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                                    </span>
+                                </td>
+                                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Start Date</span>
+
+
+                                    <span id="results-table--start-date-value-aria-3"
+                                        class="nhsuk-u-visually-hidden stop-user-selection">1 July 2005</span>
+
+
+                                    <span id="results-table--start-date-value-3" aria-hidden="true"
+                                        class="nhsuk-u-font-size-16 nhsuk-table-content">01-07-2005</span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr role="row" class="nhsuk-table__row temporal-current">
+                                <td role="cell" class="nhsuk-table__cell-historic nhsuk-u-padding-left-3">
+                                    <span class="nhsuk-table-responsive__heading">Identifier </span>
+                                    <span id="results-table--tag-value-4">
+
+
+
+
+
+                                        <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">Name</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--name-value-4"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;">
+                                        <a
+                                            href="/vtm/756?ref=W3sicGFnZVRpdGxlIjoiVlRNIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1Bc3BpcmluJnNlYXJjaFR5cGU9VlRNJm1hdGNoVGVybXNFeGFjdD10cnVlJnNob3dJbnZhbGlkSXRlbXM9dHJ1ZSZzaG93VmFsaWRJdGVtcz10cnVlJnNob3dQQ0REPXRydWUmc2hvd1NDREQ9dHJ1ZSZzaG93QXZhaWxhYmxlPXRydWUmc2hvd1VuYXZhaWxhYmxlPXRydWUiLCJoaXN0b3J5IjpudWxsfV0%3D">Aspirin
+                                            + Metoclopramide</a>
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">SNOMED</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--snomed-value-4"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;"></span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">VTM ID</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--vtm-id-value-4">756</span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Invalid</span>
+
+                                    <span id="results-table--invalid-value-4">
+
+                                    </span>
+                                </td>
+
+                                <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
+                          <span class="nhsuk-table-responsive__heading">Invalid</span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
+                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                   aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
+                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                </path>
+                              </svg>
+                            <span class="nhsuk-u-visually-hidden">Invalid</span>
+                            </span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}"
+                                th:unless="${vmp.invalid}"><span class="nhsuk-u-visually-hidden">Valid</span></span>
+                        </td>-->
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Unextractable</span>
+
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--extractable-value-4">
+                                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                                    </span>
+                                </td>
+                                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Start Date</span>
+
+
+                                    <span id="results-table--start-date-value-aria-4"
+                                        class="nhsuk-u-visually-hidden stop-user-selection">28 December 2004</span>
+
+
+                                    <span id="results-table--start-date-value-4" aria-hidden="true"
+                                        class="nhsuk-u-font-size-16 nhsuk-table-content">28-12-2004</span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr role="row" class="nhsuk-table__row temporal-current">
+                                <td role="cell" class="nhsuk-table__cell-historic nhsuk-u-padding-left-3">
+                                    <span class="nhsuk-table-responsive__heading">Identifier </span>
+                                    <span id="results-table--tag-value-5">
+
+
+
+
+
+                                        <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">Name</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--name-value-5"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;">
+                                        <a
+                                            href="/vtm/70?ref=W3sicGFnZVRpdGxlIjoiVlRNIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1Bc3BpcmluJnNlYXJjaFR5cGU9VlRNJm1hdGNoVGVybXNFeGFjdD10cnVlJnNob3dJbnZhbGlkSXRlbXM9dHJ1ZSZzaG93VmFsaWRJdGVtcz10cnVlJnNob3dQQ0REPXRydWUmc2hvd1NDREQ9dHJ1ZSZzaG93QXZhaWxhYmxlPXRydWUmc2hvd1VuYXZhaWxhYmxlPXRydWUiLCJoaXN0b3J5IjpudWxsfV0%3D">Aspirin
+                                            + Papaveretum</a>
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">SNOMED</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--snomed-value-5"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;"></span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">VTM ID</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--vtm-id-value-5">70</span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Invalid</span>
+
+                                    <span id="results-table--invalid-value-5">
+
+                                    </span>
+                                </td>
+
+                                <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
+                          <span class="nhsuk-table-responsive__heading">Invalid</span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
+                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                   aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
+                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                </path>
+                              </svg>
+                            <span class="nhsuk-u-visually-hidden">Invalid</span>
+                            </span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}"
+                                th:unless="${vmp.invalid}"><span class="nhsuk-u-visually-hidden">Valid</span></span>
+                        </td>-->
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Unextractable</span>
+
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--extractable-value-5">
+                                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                                    </span>
+                                </td>
+                                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Start Date</span>
+
+
+                                    <span id="results-table--start-date-value-aria-5"
+                                        class="nhsuk-u-visually-hidden stop-user-selection">9 December 2004</span>
+
+
+                                    <span id="results-table--start-date-value-5" aria-hidden="true"
+                                        class="nhsuk-u-font-size-16 nhsuk-table-content">09-12-2004</span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr role="row" class="nhsuk-table__row temporal-current">
+                                <td role="cell" class="nhsuk-table__cell-historic nhsuk-u-padding-left-3">
+                                    <span class="nhsuk-table-responsive__heading">Identifier </span>
+                                    <span id="results-table--tag-value-6">
+
+
+
+
+
+                                        <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">Name</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--name-value-6"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;">
+                                        <a
+                                            href="/vtm/1539?ref=W3sicGFnZVRpdGxlIjoiVlRNIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1Bc3BpcmluJnNlYXJjaFR5cGU9VlRNJm1hdGNoVGVybXNFeGFjdD10cnVlJnNob3dJbnZhbGlkSXRlbXM9dHJ1ZSZzaG93VmFsaWRJdGVtcz10cnVlJnNob3dQQ0REPXRydWUmc2hvd1NDREQ9dHJ1ZSZzaG93QXZhaWxhYmxlPXRydWUmc2hvd1VuYXZhaWxhYmxlPXRydWUiLCJoaXN0b3J5IjpudWxsfV0%3D">Aspirin
+                                            + Paracetamol</a>
+                                    </span>
+                                </td>
+                                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                    <span class="nhsuk-table-responsive__heading">SNOMED</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--snomed-value-6"
+                                        style="position: absolute; left: 0px; right: 0px; margin-right: 8px;"></span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">VTM ID</span>
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--vtm-id-value-6">1539</span>
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Invalid</span>
+
+                                    <span id="results-table--invalid-value-6">
+
+                                    </span>
+                                </td>
+
+                                <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
+                          <span class="nhsuk-table-responsive__heading">Invalid</span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
+                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                   aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
+                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                </path>
+                              </svg>
+                            <span class="nhsuk-u-visually-hidden">Invalid</span>
+                            </span>
+                          <span th:id="'results-table--invalid-value-' + ${idx.index}"
+                                th:unless="${vmp.invalid}"><span class="nhsuk-u-visually-hidden">Valid</span></span>
+                        </td>-->
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Unextractable</span>
+
+                                    <span class="nhsuk-u-font-size-16 nhsuk-table-content"
+                                        id="results-table--extractable-value-6">
+                                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                                    </span>
+                                </td>
+                                <td style="word-wrap: break-word" class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Start Date</span>
+
+
+                                    <span id="results-table--start-date-value-aria-6"
+                                        class="nhsuk-u-visually-hidden stop-user-selection">17 January 2006</span>
+
+
+                                    <span id="results-table--start-date-value-6" aria-hidden="true"
+                                        class="nhsuk-u-font-size-16 nhsuk-table-content">17-01-2006</span>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <style>
+                        @keyframes spin {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+
+                            100% {
+                                transform: rotate(359deg);
+                            }
+                        }
+
+                        #tablet-spinner {
+                            animation: spin 2s linear infinite;
+                            height: 50px;
+                            width: 50px;
+                        }
+                    </style>
+                </div>
+                <div id="nhsuk-loading-spinner" class="nhsuk-grid-row" style="text-align: center; display: none">
+                    <img alt="loading-icon" id="tablet-spinner" src="/images/icons/icon-tablet-spinner.svg">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}
