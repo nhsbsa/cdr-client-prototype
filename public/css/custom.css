@@ -172,6 +172,65 @@ fill-blue{
     }
 }
 
+.app-pane__main-content {
+    padding-left:64px
+}
+
+
+.update-box:first-of-type, .update-box:only-of-type {
+    margin-top: 0 !important;
+  }
+  
+  .update-box:last-of-type {
+    margin-bottom: 24px;
+  }
+  
+  .update-box {
+    padding: 0;
+    margin-top: 24px;
+    background-color: #DFE3E6;
+  }
+  
+  .update-multi-box {
+    border-top: 1px solid rgb(159, 170, 179);
+    padding: 16px 0 0 0;
+    margin-top: 0px;
+    background-color: #DFE3E6;
+  }
+  
+  .update-heading {
+    display: block;
+    outline: 2px solid transparent;
+    padding: 8px 16px;
+    overflow: auto;
+    background-color: rgb(217, 240, 250);
+    margin-bottom: 16px !important;
+  }
+  
+  .update-general-heading {
+    display: block;
+    outline: 2px solid transparent;
+    padding: 8px 16px;
+    overflow: auto;
+    width: 100%;
+    background-color: #005eb8;
+    color: #ffffff;
+    margin-bottom: 16px !important;
+  }
+  
+  .update-multi-heading {
+    display: block;
+    outline: 2px solid transparent;
+    width: 100%;
+    background-color: rgb(217, 240, 250);
+    margin-bottom: 16px !important;
+  }
+  
+  .max-width-attr-box {
+    width: 100%;
+  }
+
+
 @media (max-width: 48.0525em) and (min-width: 40.0625em) {
     .app-side-nav__heading {
         font-size: 24px;
@@ -287,6 +346,22 @@ fill-blue{
     .app-side-nav__list--nested {
         margin-bottom: 8px
     }
+}
+
+.app-pane {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 0;
+    overflow: inherit;
+    position:relative
+}
+
+.app-pane__side-bar {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    width:220px
 }
 
 @media (min-width: 40.0625em) {

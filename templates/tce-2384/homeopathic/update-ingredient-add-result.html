@@ -1,0 +1,1117 @@
+{% extends "tce-2384/base.html" %}
+
+
+{% block content %}
+
+
+
+
+<div>
+  <nav aria-label="Back link" class="nhsuk-back-link nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/tce-2384/homeopathic/update-ingredient" id="back-link">
+      <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back to update associated ingredients
+    </a>
+    
+  </nav>
+
+
+</div>
+
+<main class="nhsuk-main-wrapper" id="main-content">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <form id="new-search-form" method="post">
+        <input type="hidden" name="_csrf" value="dCrcMJ9xI8Cvcln3CLfolXX5Pxftlp5Qsaw6ZMvJg4fZUlV-RBvuBqkUQqSCRWvHbJrcpUyfEi_crqx90J1YAqr8t7W8YTZH">
+        <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5" id="page-heading">Ingredient
+          search</h1>
+
+        
+
+        <div class="nhsuk-form-group autocomplete-wrapper nhsuk-u-width-full" id="autocomplete-results__form-group">
+          <label class="nhsuk-label" for="search-term">Search term</label>
+          
+          <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text" autofocus="autofocus" autocomplete="off" name="searchTerm" value="Homeopathic arnica montana">
+        </div>
+
+        <input type="hidden" value="100" id="size" name="size">
+        <div id="button-search">
+          <a class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" href="/tce-2384/homeopathic/update-ingredient-add-result" draggable="false" role="button">
+            Search 
+          </a>
+          <button class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3" role="button" type="submit" name="_eventId_reset">Reset
+          </button>
+        </div>
+        <input type="hidden" value="1" id="page" name="page">
+        <!--Attributes from previous search for infinite scroll-->
+        <div class="nhsuk-u-visually-hidden">
+          <p id="searched-search-term">Homeopathic arnica montana</p>
+          <p id="searched-search-type">VMP</p>
+          <p id="searched-supplier"></p>
+          <p id="searched-show-PCDD">true</p>
+          <p id="searched-show-SCDD">true</p>
+          <p id="searched-show-valid">true</p>
+          <p id="searched-show-invalid">true</p>
+          <p id="searched-show-available">true</p>
+          <p id="searched-show-unavailable">true</p>
+        </div>
+
+
+        <div>
+          
+          
+            <div class="nhsuk-u-visually-hidden">Currently viewing</div>
+            <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0 nhsuk-u-margin-bottom-4">
+              <span id="page-and-result-count-top">Showing 60 of 60</span>
+            </div>
+            <div id="results-table-container" class="nhsuk-table-responsive nhsuk-table-fixed-height nhsuk-u-margin-bottom-4" style="height: auto; max-height: 500px">
+              <table class="nhsuk-table ">
+                <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">VMP results
+                </caption>
+                <thead class="nhsuk-table__head" tabindex="0">
+                <tr class="nhsuk-table__row">
+                  <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name
+                  </th>
+                  <th class="nhsuk-table__header-important columnheader-sticky" scope="col">VTM
+                    association
+                  </th>
+                  <th class="nhsuk-table__header columnheader-sticky" scope="col" id="add-header">Action
+                  </th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body" id="table-search-results-body">
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-0">
+                        <a href="https://main.dev.cdr-client.nhsbsa.net/vmp/19936?ref=" title="Homeopathic arnica montana 100mg capsules" target="_blank">Homeopathic arnica montana 100mg capsules</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-0">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/tce-2384/homeopathic/update-ingredient-add-new" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-1">
+                        <a href="/vmp/12412?ref=" title="Homeopathic arnica montana 100mg/5ml oral solution" target="_blank">Homeopathic arnica montana 100mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-1">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12412&amp;vmp=Homeopathic arnica montana 100mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-2">
+                        <a href="/vmp/12115?ref=" title="Homeopathic arnica montana 100mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 100mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-2">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12115&amp;vmp=Homeopathic arnica montana 100mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-3">
+                        <a href="/vmp/3533?ref=" title="Homeopathic arnica montana 150mg / Isosorbide mononitrate 60mg modified-release tablets" target="_blank">Homeopathic arnica montana 150mg / Isosorbide mononitrate 60mg modified-release tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-3">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=3533&amp;vmp=Homeopathic arnica montana 150mg / Isosorbide mononitrate 60mg modified-release tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-4">
+                        <a href="/vmp/1484?ref=" title="Homeopathic arnica montana 150mg suppositories" target="_blank">Homeopathic arnica montana 150mg suppositories</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-4">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=1484&amp;vmp=Homeopathic arnica montana 150mg suppositories" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-5">
+                        <a href="/vmp/12427?ref=" title="Homeopathic arnica montana 15mg/5ml oral solution" target="_blank">Homeopathic arnica montana 15mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-5">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12427&amp;vmp=Homeopathic arnica montana 15mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-6">
+                        <a href="/vmp/12425?ref=" title="Homeopathic arnica montana 15mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 15mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-6">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12425&amp;vmp=Homeopathic arnica montana 15mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-7">
+                        <a href="/vmp/11624?ref=" title="Homeopathic arnica montana 1g powder and solvent for solution for injection vials" target="_blank">Homeopathic arnica montana 1g powder and solvent for solution for injection vials</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-7">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=11624&amp;vmp=Homeopathic arnica montana 1g powder and solvent for solution for injection vials" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-8">
+                        <a href="/vmp/8488?ref=" title="Homeopathic arnica montana 225mg/5ml oral solution" target="_blank">Homeopathic arnica montana 225mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-8">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=8488&amp;vmp=Homeopathic arnica montana 225mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-9">
+                        <a href="/vmp/8490?ref=" title="Homeopathic arnica montana 225mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 225mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-9">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=8490&amp;vmp=Homeopathic arnica montana 225mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-10">
+                        <a href="/vmp/23943?ref=" title="Homeopathic arnica montana 25mg capsules" target="_blank">Homeopathic arnica montana 25mg capsules</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-10">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=23943&amp;vmp=Homeopathic arnica montana 25mg capsules" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-11">
+                        <a href="/vmp/12442?ref=" title="Homeopathic arnica montana 25mg/5ml oral solution" target="_blank">Homeopathic arnica montana 25mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-11">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12442&amp;vmp=Homeopathic arnica montana 25mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-12">
+                        <a href="/vmp/12429?ref=" title="Homeopathic arnica montana 25mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 25mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-12">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12429&amp;vmp=Homeopathic arnica montana 25mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-13">
+                        <a href="/vmp/5975?ref=" title="Homeopathic arnica montana 300mg / Paracetamol 200mg dispersible tablets sugar free" target="_blank">Homeopathic arnica montana 300mg / Paracetamol 200mg dispersible tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-13">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=5975&amp;vmp=Homeopathic arnica montana 300mg / Paracetamol 200mg dispersible tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-14">
+                        <a href="/vmp/682?ref=" title="Homeopathic arnica montana 300mg dispersible tablets" target="_blank">Homeopathic arnica montana 300mg dispersible tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-14">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=682&amp;vmp=Homeopathic arnica montana 300mg dispersible tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-15">
+                        <a href="/vmp/7511?ref=" title="Homeopathic arnica montana 300mg dispersible tablets sugar free" target="_blank">Homeopathic arnica montana 300mg dispersible tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-15">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=7511&amp;vmp=Homeopathic arnica montana 300mg dispersible tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-16">
+                        <a href="/vmp/5477?ref=" title="Homeopathic arnica montana 300mg effervescent tablets sugar free" target="_blank">Homeopathic arnica montana 300mg effervescent tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-16">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=5477&amp;vmp=Homeopathic arnica montana 300mg effervescent tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-17">
+                        <a href="/vmp/672?ref=" title="Homeopathic arnica montana 300mg gastro-resistant tablets" target="_blank">Homeopathic arnica montana 300mg gastro-resistant tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-17">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=672&amp;vmp=Homeopathic arnica montana 300mg gastro-resistant tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-18">
+                        <a href="/vmp/5241?ref=" title="Homeopathic arnica montana 300mg modified-release tablets" target="_blank">Homeopathic arnica montana 300mg modified-release tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-18">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=5241&amp;vmp=Homeopathic arnica montana 300mg modified-release tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-19">
+                        <a href="/vmp/5962?ref=" title="Homeopathic arnica montana 300mg orodispersible tablets sugar free" target="_blank">Homeopathic arnica montana 300mg orodispersible tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-19">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=5962&amp;vmp=Homeopathic arnica montana 300mg orodispersible tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-20">
+                        <a href="/vmp/1485?ref=" title="Homeopathic arnica montana 300mg suppositories" target="_blank">Homeopathic arnica montana 300mg suppositories</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-20">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=1485&amp;vmp=Homeopathic arnica montana 300mg suppositories" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-21">
+                        <a href="/vmp/675?ref=" title="Homeopathic arnica montana 300mg tablets" target="_blank">Homeopathic arnica montana 300mg tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-21">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=675&amp;vmp=Homeopathic arnica montana 300mg tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-22">
+                        <a href="/vmp/8497?ref=" title="Homeopathic arnica montana 300mg/5ml oral solution" target="_blank">Homeopathic arnica montana 300mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-22">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=8497&amp;vmp=Homeopathic arnica montana 300mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-23">
+                        <a href="/vmp/8498?ref=" title="Homeopathic arnica montana 300mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 300mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-23">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=8498&amp;vmp=Homeopathic arnica montana 300mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-24">
+                        <a href="/vmp/12445?ref=" title="Homeopathic arnica montana 30mg/5ml oral solution" target="_blank">Homeopathic arnica montana 30mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-24">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12445&amp;vmp=Homeopathic arnica montana 30mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-25">
+                        <a href="/vmp/12444?ref=" title="Homeopathic arnica montana 30mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 30mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-25">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12444&amp;vmp=Homeopathic arnica montana 30mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-26">
+                        <a href="/vmp/9814?ref=" title="Homeopathic arnica montana 325mg / Caffeine 15mg tablets" target="_blank">Homeopathic arnica montana 325mg / Caffeine 15mg tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-26">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=9814&amp;vmp=Homeopathic arnica montana 325mg / Caffeine 15mg tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-27">
+                        <a href="/vmp/6588?ref=" title="Homeopathic arnica montana 325mg / Caffeine 22mg tablets" target="_blank">Homeopathic arnica montana 325mg / Caffeine 22mg tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-27">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=6588&amp;vmp=Homeopathic arnica montana 325mg / Caffeine 22mg tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-28">
+                        <a href="/vmp/16459?ref=" title="Homeopathic arnica montana 37.5mg oral powder sachets" target="_blank">Homeopathic arnica montana 37.5mg oral powder sachets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-28">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=16459&amp;vmp=Homeopathic arnica montana 37.5mg oral powder sachets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-29">
+                        <a href="/vmp/12448?ref=" title="Homeopathic arnica montana 37.5mg/5ml oral solution" target="_blank">Homeopathic arnica montana 37.5mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-29">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12448&amp;vmp=Homeopathic arnica montana 37.5mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-30">
+                        <a href="/vmp/12446?ref=" title="Homeopathic arnica montana 37.5mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 37.5mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-30">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12446&amp;vmp=Homeopathic arnica montana 37.5mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-31">
+                        <a href="/vmp/20931?ref=" title="Homeopathic arnica montana 4% in Chloroform solution" target="_blank">Homeopathic arnica montana 4% in Chloroform solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-31">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=20931&amp;vmp=Homeopathic arnica montana 4% in Chloroform solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-32">
+                        <a href="/vmp/15304?ref=" title="Homeopathic arnica montana 40mg oral powder sachets" target="_blank">Homeopathic arnica montana 40mg oral powder sachets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-32">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=15304&amp;vmp=Homeopathic arnica montana 40mg oral powder sachets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-33">
+                        <a href="/vmp/12452?ref=" title="Homeopathic arnica montana 40mg/5ml oral solution" target="_blank">Homeopathic arnica montana 40mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-33">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12452&amp;vmp=Homeopathic arnica montana 40mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-34">
+                        <a href="/vmp/12450?ref=" title="Homeopathic arnica montana 40mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 40mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-34">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12450&amp;vmp=Homeopathic arnica montana 40mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-35">
+                        <a href="/vmp/6055?ref=" title="Homeopathic arnica montana 500mg / Codeine 8mg dispersible tablets sugar free" target="_blank">Homeopathic arnica montana 500mg / Codeine 8mg dispersible tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-35">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=6055&amp;vmp=Homeopathic arnica montana 500mg / Codeine 8mg dispersible tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-36">
+                        <a href="/vmp/3743?ref=" title="Homeopathic arnica montana 500mg / Papaveretum 7.71mg dispersible tablets sugar free" target="_blank">Homeopathic arnica montana 500mg / Papaveretum 7.71mg dispersible tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-36">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=3743&amp;vmp=Homeopathic arnica montana 500mg / Papaveretum 7.71mg dispersible tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-37">
+                        <a href="/vmp/5475?ref=" title="Homeopathic arnica montana 500mg effervescent tablets sugar free" target="_blank">Homeopathic arnica montana 500mg effervescent tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-37">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=5475&amp;vmp=Homeopathic arnica montana 500mg effervescent tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-38">
+                        <a href="/vmp/5932?ref=" title="Homeopathic arnica montana 500mg granules sachets sugar free" target="_blank">Homeopathic arnica montana 500mg granules sachets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-38">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=5932&amp;vmp=Homeopathic arnica montana 500mg granules sachets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-39">
+                        <a href="/vmp/11623?ref=" title="Homeopathic arnica montana 500mg powder and solvent for solution for injection vials" target="_blank">Homeopathic arnica montana 500mg powder and solvent for solution for injection vials</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-39">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=11623&amp;vmp=Homeopathic arnica montana 500mg powder and solvent for solution for injection vials" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-40">
+                        <a href="/vmp/8499?ref=" title="Homeopathic arnica montana 50mg/5ml oral solution" target="_blank">Homeopathic arnica montana 50mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-40">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=8499&amp;vmp=Homeopathic arnica montana 50mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-41">
+                        <a href="/vmp/8501?ref=" title="Homeopathic arnica montana 50mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 50mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-41">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=8501&amp;vmp=Homeopathic arnica montana 50mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-42">
+                        <a href="/vmp/6022?ref=" title="Homeopathic arnica montana 600mg / Caffeine 50mg oral powder sachets sugar free" target="_blank">Homeopathic arnica montana 600mg / Caffeine 50mg oral powder sachets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-42">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=6022&amp;vmp=Homeopathic arnica montana 600mg / Caffeine 50mg oral powder sachets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-43">
+                        <a href="/vmp/12456?ref=" title="Homeopathic arnica montana 62.5mg/5ml oral solution" target="_blank">Homeopathic arnica montana 62.5mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-43">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12456&amp;vmp=Homeopathic arnica montana 62.5mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-44">
+                        <a href="/vmp/12454?ref=" title="Homeopathic arnica montana 62.5mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 62.5mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-44">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12454&amp;vmp=Homeopathic arnica montana 62.5mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-45">
+                        <a href="/vmp/3532?ref=" title="Homeopathic arnica montana 75mg / Isosorbide mononitrate 60mg modified-release tablets" target="_blank">Homeopathic arnica montana 75mg / Isosorbide mononitrate 60mg modified-release tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-45">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=3532&amp;vmp=Homeopathic arnica montana 75mg / Isosorbide mononitrate 60mg modified-release tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-46">
+                        <a href="/vmp/126?ref=" title="Homeopathic arnica montana 75mg dispersible tablets" target="_blank">Homeopathic arnica montana 75mg dispersible tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-46">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=126&amp;vmp=Homeopathic arnica montana 75mg dispersible tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-47">
+                        <a href="/vmp/7515?ref=" title="Homeopathic arnica montana 75mg dispersible tablets sugar free" target="_blank">Homeopathic arnica montana 75mg dispersible tablets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-47">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=7515&amp;vmp=Homeopathic arnica montana 75mg dispersible tablets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-48">
+                        <a href="/vmp/10688?ref=" title="Homeopathic arnica montana 75mg effervescent tablets" target="_blank">Homeopathic arnica montana 75mg effervescent tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-48">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=10688&amp;vmp=Homeopathic arnica montana 75mg effervescent tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-49">
+                        <a href="/vmp/691?ref=" title="Homeopathic arnica montana 75mg gastro-resistant tablets" target="_blank">Homeopathic arnica montana 75mg gastro-resistant tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-49">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=691&amp;vmp=Homeopathic arnica montana 75mg gastro-resistant tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-50">
+                        <a href="/vmp/685?ref=" title="Homeopathic arnica montana 75mg tablets" target="_blank">Homeopathic arnica montana 75mg tablets</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-50">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=685&amp;vmp=Homeopathic arnica montana 75mg tablets" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-51">
+                        <a href="/vmp/12460?ref=" title="Homeopathic arnica montana 75mg/5ml oral solution" target="_blank">Homeopathic arnica montana 75mg/5ml oral solution</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-51">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12460&amp;vmp=Homeopathic arnica montana 75mg/5ml oral solution" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-52">
+                        <a href="/vmp/12458?ref=" title="Homeopathic arnica montana 75mg/5ml oral suspension" target="_blank">Homeopathic arnica montana 75mg/5ml oral suspension</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-52">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12458&amp;vmp=Homeopathic arnica montana 75mg/5ml oral suspension" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-53">
+                        <a href="/vmp/3638?ref=" title="Homeopathic arnica montana 900mg / Metoclopramide 10mg oral powder sachets sugar free" target="_blank">Homeopathic arnica montana 900mg / Metoclopramide 10mg oral powder sachets sugar free</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-53">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=3638&amp;vmp=Homeopathic arnica montana 900mg / Metoclopramide 10mg oral powder sachets sugar free" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-54">
+                        <a href="/vmp/6412?ref=" title="Homeopathic arnica montana powder" target="_blank">Homeopathic arnica montana powder</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-54">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=6412&amp;vmp=Homeopathic arnica montana powder" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-55">
+                        <a href="/vmp/23049?ref=" title="Bisoprolol 10mg / Homeopathic arnica montana 100mg capsules" target="_blank">Bisoprolol 10mg / Homeopathic arnica montana 100mg capsules</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-55">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=23049&amp;vmp=Bisoprolol 10mg / Homeopathic arnica montana 100mg capsules" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-56">
+                        <a href="/vmp/23048?ref=" title="Bisoprolol 10mg / Homeopathic arnica montana 75mg capsules" target="_blank">Bisoprolol 10mg / Homeopathic arnica montana 75mg capsules</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-56">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=23048&amp;vmp=Bisoprolol 10mg / Homeopathic arnica montana 75mg capsules" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-57">
+                        <a href="/vmp/23050?ref=" title="Bisoprolol 5mg / Homeopathic arnica montana 100mg capsules" target="_blank">Bisoprolol 5mg / Homeopathic arnica montana 100mg capsules</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-57">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=23050&amp;vmp=Bisoprolol 5mg / Homeopathic arnica montana 100mg capsules" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-58">
+                        <a href="/vmp/23047?ref=" title="Bisoprolol 5mg / Homeopathic arnica montana 75mg capsules" target="_blank">Bisoprolol 5mg / Homeopathic arnica montana 75mg capsules</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-58">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=23047&amp;vmp=Bisoprolol 5mg / Homeopathic arnica montana 75mg capsules" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">Name</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-59">
+                        <a href="/vmp/3389?ref=" title="Dipyridamole 200mg modified-release / Homeopathic arnica montana 25mg capsules" target="_blank">Dipyridamole 200mg modified-release / Homeopathic arnica montana 25mg capsules</a>
+                      </span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <span class="nhsuk-table-responsive__heading">VTM association</span>
+                      <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-59">There is no VTM associated with this ingredient.</span>
+                    </td>
+                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                      <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=3389&amp;vmp=Dipyridamole 200mg modified-release / Homeopathic arnica montana 25mg capsules" aria-description="VMP can be associated with VTM.">Add</a>
+                      
+                    </td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
