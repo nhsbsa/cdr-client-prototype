@@ -1,0 +1,118 @@
+{% extends "tce-2384/base.html" %}
+
+
+{% block content %}
+
+
+
+
+<div>
+  <nav aria-label="Back link" class="nhsuk-back-link nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/tce-2384/not-valid/update-ingredient" id="back-link">
+      <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back to update associated ingredients
+    </a>
+    
+  </nav>
+
+
+</div>
+
+<main data-page="view" class="nhsuk-main-wrapper" id="main-content" data-type="VTM">
+  <div class="nhsuk-grid-row">
+    <div id="content-pane" class="nhsuk-grid-column-full">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <span class="nhsuk-caption-l" id="update-associated-vmp-sub-heading">Update associated ingredient
+            summary</span>
+          <span class="nhsuk-u-visually-hidden"> - </span>
+          <h1 class="nhsuk-heading-xl" id="update-associated-vmp-heading">Arsenic</h1>
+
+        </div>
+      </div>
+
+      <form method="post">
+        <input name="_csrf"
+          value="ozGU-Jcb4arz_CGy8kzuhx1pk9h3RsCoYAnmBlT0pxbwYJHTlQOhnvUogM_eyUSFwWHatigLvuFPJ_mFBT_fPjHMkHTABKHj"
+          type="hidden">
+
+        <table role="table" class="nhsuk-table nhsuk-u-padding-bottom-4" style="display:table;">
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col"
+                id="associated-vmp-table--tag-header" style="width: 10px;">
+                <span class="nhsuk-u-visually-hidden">Indicator</span>
+              </th>
+              <th role="columnheader" class="columnheader-sticky" scope="col" id="associated-vmp-table--name-header">
+                Name
+              </th>
+              <th role="columnheader" class="columnheader-sticky start-end-date-column" scope="col"
+                id="associated-vmp-table--start-date-header">
+                Start date
+              </th>
+              <th role="columnheader" class="columnheader-sticky start-end-date-column" scope="col"
+                id="associated-vmp-table--end-date-header">
+                End date
+              </th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row temporal-current">
+              <td role="cell" class="nhsuk-table__cell-historic">
+                <span class="nhsuk-u-visually-hidden">Indicator </span>
+                <span id="associated-vmp-table--current-tag-value-current">
+
+
+
+
+
+                  <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                </span>
+              </td>
+              <td class="nhsuk-table__cell">
+                <span class="nhsuk-u-visually-hidden">Name</span>
+                <span id="associated-vmp-table--name-0">Arsenic</span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                <span class="nhsuk-u-visually-hidden">Start date</span>
+
+
+                <span id="associated-vmp-table--start-date-aria-0"
+                  class="nhsuk-u-visually-hidden stop-user-selection">14 March 2006</span>
+
+
+                <span id="associated-vmp-table--start-date-0" aria-hidden="true">14-03-2006</span>
+
+              </td>
+              <td class="nhsuk-table__cell nhsuk-u--table-date-width">
+                <span class="nhsuk-u-visually-hidden">End date</span>
+
+
+                <span id="associated-vmp-table--end-date-aria-0" class="nhsuk-u-visually-hidden stop-user-selection">1
+                  February 3256</span>
+
+
+                <span id="associated-vmp-table--end-date-0" aria-hidden="true">01-02-3256</span>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <a class="nhsuk-button" data-module="nhsuk-button" href="/tce-2384/not-valid/vtm-display" draggable="false" role="button">
+          Save and finish
+        </a>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

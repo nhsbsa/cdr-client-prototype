@@ -1,0 +1,46 @@
+{% extends "tce-2384/base.html" %}
+
+
+{% block content %}
+
+
+
+
+<div>
+  <nav aria-label="Back link" class="nhsuk-back-link nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/tce-2384/homeopathic/update-ingredient" id="back-link">
+      <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back to update associated ingredients
+    </a>
+    
+  </nav>
+
+
+</div>
+
+
+<main class="nhsuk-main-wrapper" data-page="view" id="main-content">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full" id="content-pane">
+      <input name="_csrf" value="IXFbsFLu6trTKPKfMsSWoeu052ROLcWp7EVz-9OSBj9-JXzcF0Nu1jDdi7_-HZeoAemikN7Wyl12TPyEiXNKw7aqMV1OQUzs" type="hidden">
+
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">
+          <span class="nhsuk-u-visually-hidden">Important: </span>
+          Warning
+        </h3>
+        <p>No changes have been made for Homeopathic arnica montana.</p>
+      </div>
+      <form method="post">
+        <input name="_csrf" value="IXFbsFLu6trTKPKfMsSWoeu052ROLcWp7EVz-9OSBj9-JXzcF0Nu1jDdi7_-HZeoAemikN7Wyl12TPyEiXNKw7aqMV1OQUzs" type="hidden">
+        <a class="nhsuk-button" data-module="nhsuk-button" href="/tce-2384/homeopathic/vtm-display" draggable="false" role="button">
+          Finish and go back to VTM
+        </a>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
