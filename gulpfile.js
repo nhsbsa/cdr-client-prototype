@@ -44,13 +44,13 @@ gulp.task('install-jquery', () => {
 })
 
 gulp.task('nhs-toolkit-install-js', () => {
-  return gulp.src('node_modules/nhsuk-frontend/dist/nhsuk-8.2.0.min.js')
+  return gulp.src('node_modules/nhsuk-frontend/dist/nhsuk-9.1.0.min.js')
   .pipe(rename("nhsuk.min.js"))
   .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('nhs-toolkit-install-css', () => {
-  return gulp.src('node_modules/nhsuk-frontend/dist/nhsuk-8.2.0.min.css')
+  return gulp.src('node_modules/nhsuk-frontend/dist/nhsuk-9.1.0.min.css')
   .pipe(rename("nhsuk.min.css"))
   .pipe(gulp.dest('./public/css'));
 });
