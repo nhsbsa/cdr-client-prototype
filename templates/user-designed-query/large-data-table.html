@@ -1,6 +1,6 @@
 {% extends "base-full.html" %}
 {% block content %}
-<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6" xmlns="http://www.w3.org/1999/html">
   <a class="nhsuk-back-link__link" href="new-query-summary-page.html">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
          aria-hidden="true" height="24" width="24">
@@ -26,126 +26,158 @@
       </h1>
     </legend>
 
-    <div class="nhsuk-form-container" style="display: flex; justify-content: space-between; align-items: flex-end;">
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-5">
-          Total search results
-        </label>
-        <input
-            class="nhsuk-input nhsuk-input--width-5"
-            id="input-width-5"
-            name="test-width-5"
-            type="number"
-            value="2636">
-      </div>
+  </fieldset>
+      <details class="nhsuk-details nhsuk-details">
+        <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Refine search results
+    </span>
+        </summary>
 
-      <div class="nhsuk-form-group" style="position: relative;">
-        <label class="nhsuk-label" for="example">
-          Search
-        </label>
-        <div style="position: relative;">
-          <input
-              class="nhsuk-input"
-              id="example"
-              name="example"
-              type="text"
-              style="padding-right: 40px;" />
-          <svg
-              class="nhsuk-icon nhsuk-icon__search"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-              focusable="false"
-              height="24"
-              width="24"
-              style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;">
-            <title>Search Icon</title>
-            <desc>An icon representing a magnifying glass, used for search functionality.</desc>
-            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-          </svg>
+        <div style="padding-left: 9px; max-width: 500px;">
+
+          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+            <label class="nhsuk-label" for="select-1">
+              Choose column to filter
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1" style="width: 100%; padding-left: 9px;">
+              <option value="1"></option>
+              <option value="2">VMP Name</option>
+              <option value="3">VMPP Snomed code</option>
+              <option value="4">QTY</option>
+              <option value="5">UOM QTY</option>
+              <option value="6">QPU</option>
+              <option value="7">UOM QPO</option>
+              <option value="8">R Price DT</option>
+              <option value="9">DT Cat</option>
+              <option value="10">Price con ind</option>
+              <option value="11">Price con ind start</option>
+              <option value="12">Price con ind end</option>
+              <option value="13">Dictionary</option>
+
+            </select>
+          </div>
+
+
+          <div class="nhsuk-form-group " style="position: relative;">
+            <label class="nhsuk-label" for="example">
+              Search
+            </label>
+            <div style="position: relative; width: 100%;">
+              <input
+                  class="nhsuk-input"
+                  id="example"
+                  name="example"
+                  type="text"
+                  style="padding-left: 9px; padding-right: 40px; width: 100%;" />
+
+              <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="large-data-table-N.html">
+                Refine search
+              </a>
+            </div>
+          </div>
+
         </div>
+      </details>
+
+
+
+      <div class="nhsuk-form-container" style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" >
+          Total search results 2636
+        </label>
       </div>
     </div>
-    <style>
-      .glossary a {
-        font-size: 1.5rem; /* Increase the font size */
-        font-weight: bold; /* Make the text bold */
-        display: inline-block; /* Ensure consistent spacing */
-        margin: 0.5rem; /* Add spacing between the links */
-
-      }
-    </style>
-    <div class="glossary">
-      <a href="#A">A</a>
-      <a href="#B">B</a>
-      <a href="#C">C</a>
-      <a href="#D">D</a>
-      <a href="#E">E</a>
-      <a href="#F">F</a>
-      <a href="#G">G</a>
-      <a href="#H">H</a>
-      <a href="#I">I</a>
-      <a href="#J">J</a>
-      <a href="#K">K</a>
-      <a href="#L">L</a>
-      <a href="#M">M</a>
-      <a href="#N">N</a>
-      <a href="#O">O</a>
-      <a href="#P">P</a>
-      <a href="#Q">Q</a>
-      <a href="#R">R</a>
-      <a href="#S">S</a>
-      <a href="#T">T</a>
-      <a href="#U">U</a>
-      <a href="#V">V</a>
-      <a href="#W">W</a>
-      <a href="#X">X</a>
-      <a href="#Y">Y</a>
-      <a href="#Z">Z</a>
-    </div>
-
 
     <!--table-->
-<table role="table" class="nhsuk-table-responsive ">
+      <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+        th {
+          background-color: #005eb8;
+          color: white;
+          cursor: pointer;
+        }
+        .table-container {
+          width: 100%;
+          overflow-x: auto;
+          position: relative;
+          -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+        }
+
+        .table-container::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 30px;
+          height: 100%;
+          background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+          pointer-events: none;
+          display: none;
+        }
+
+        @media (max-width: 1024px) {
+          .table-container::after {
+            display: block; /* Show gradient fade on smaller screens */
+          }
+        }
+
+        th, td {
+          white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+
+      </style>
+      <div class="table-container">
+<table role="table" class="nhsuk-table-responsive " data-module="moj-sortable-table">
       <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">large data table showing UDQ results in blocks of 15 results or less</caption>
       <thead role="rowgroup" class="nhsuk-table__head"
              style="background-color: #005eb8; color: white;">
       <tr role="row">
-        <th role="columnheader" class="" scope="col">
-          VMP name
+        <th role="columnheader" class="" scope="col" aria-sort="ascending">
+          VMP name <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          VMPP Snomed code
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          VMPP Snomed code <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-         QTY
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+         QTY <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          UOM QTY
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          UOM QTY <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          QPU
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          QPU <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          UOM QPO
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          UOM QPO <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          R Price DT
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          R Price DT <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          DT cat
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          DT cat <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-         Price con ind
+        <th role="columnheader" class="" scope="col"aria-sort="none">
+         Price con ind <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          Price con ind start
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          Price con ind start <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          Price con ind end
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          Price con ind end <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
-        <th role="columnheader" class="" scope="col">
-          Dictionary
+        <th role="columnheader" class="" scope="col" aria-sort="none">
+          Dictionary <span class="sort-indicator" aria-hidden="true">⇅</span>
         </th>
 
       </tr>
@@ -154,12 +186,12 @@
 <!--      one-->
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Abacavir 600mg/lamivu</b>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Abacavir 600mg/lamivu</a></b>
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="8991611000001104">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>8991611000001104
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="30">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>30
         </td>
         <td role="cell" class="nhsuk-table__cell">
@@ -178,13 +210,13 @@
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">DT Cat</span>Part VIIIA catagory C
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind </span>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind </span>28 January 2021
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind starter </span>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind starter </span> 28 January 2021
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">rice con ind end </span>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">rice con ind end </span>28 January 2025
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary </span>PCDD
@@ -194,12 +226,12 @@
 <!--two-->
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Abatacept 125mg /1ml solution</b>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Abatacept 125mg /1ml solution</a></b>
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="29747011000001102">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>29747011000001102
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="4">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>4
         </td>
         <td role="cell" class="nhsuk-table__cell">
@@ -233,12 +265,12 @@
 <!--three-->
       <tr role="row" class="nhsuk-table__row">
      <td role="cell" class="nhsuk-table__cell">
-       <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Abatacept 125mg /1ml solution</b>
+       <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Abatacept 125mg /1ml solution</a></b>
       </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="21699511000001107">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>21699511000001107
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="4">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>4
         </td>
         <td role="cell" class="nhsuk-table__cell">
@@ -271,13 +303,13 @@
       </tr>
 <!--four-->
       <tr role="row" class="nhsuk-table__row">
-        <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acacia spray dried powder</b>
+        <td role="cell" class="nhsuk-table__cell" >
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acacia spray dried powder</a></b>
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="5120711000001104">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>5120711000001104
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="250">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>250
         </td>
         <td role="cell" class="nhsuk-table__cell">
@@ -296,13 +328,13 @@
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">DT Cat</span>Part VIIIA catagory C
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind </span>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind </span>28 January 2021
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind starter </span>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">Price con ind starter </span>28 January 2021
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">rice con ind end </span>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">rice con ind end </span>28 January 2025
         </td>
         <td role="cell" class="nhsuk-table__cell">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary </span>PCDD
@@ -311,12 +343,12 @@
 <!--five-->
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acebutolol 200mg capsule</b>
+          <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acebutolol 200mg capsule</a></b>
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell" data-sort-value="1049311000001104">
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>1049311000001104
         </td>
-        <td role="cell" class="nhsuk-table__cell">
+        <td role="cell" class="nhsuk-table__cell"data-sort-value="56" >
           <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>56
         </td>
         <td role="cell" class="nhsuk-table__cell">
@@ -350,12 +382,12 @@
 <!-six--->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acenocoumarol 1mg tablet</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acenocoumarol 1mg tablet</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="1047511000001103">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>1047511000001103
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="100">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>100
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -389,12 +421,12 @@
 <!--seven-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acetazolamide 250 mg</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acetazolamide 250 mg</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="12208911000001106">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>12208911000001106
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="30">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>30
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -428,12 +460,12 @@
 <!--eight-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acetic acid 2% ear spray</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acetic acid 2% ear spray</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="3697611000001108">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>3697611000001108
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="5">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>5
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -467,12 +499,12 @@
 <!--nine-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acetylcystiene 2g/10ml</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acetylcystiene 2g/10ml</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="3935611000001105">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>3935611000001105
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="10">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>10
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -506,12 +538,12 @@
 <!--ten-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acetylcystiene 5% eye drops</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acetylcystiene 5% eye drops</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="109411000001105">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>109411000001105
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="10">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>10
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -545,12 +577,12 @@
 <!--eleven-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acetylcystiene 600mg eff</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acetylcystiene 600mg eff</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="1049311000001104">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>1049311000001104
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="56">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>56
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -584,12 +616,12 @@
 <!--twelve-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acacia spray dried powder</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acacia spray dried powder</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="5120711000001104">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>5120711000001104
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="250">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>250
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -623,12 +655,12 @@
 <!--thirteen-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acebutolol 200mg capsule</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acebutolol 200mg capsule</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="1049311000001104">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>1049311000001104
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="56">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>56
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -662,12 +694,12 @@
 <!--Fourteen-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acebutolol 200mg capsule</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acebutolol 200mg capsule</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="1049311000001104">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>1049311000001104
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="56">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>56
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -701,12 +733,12 @@
 <!--Fifthteen-->
 <tr role="row" class="nhsuk-table__row">
   <td role="cell" class="nhsuk-table__cell">
-    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b>Acebutolol 200mg capsule</b>
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMP name </span><b><a href="#" class="nhsuk-card__link">Acebutolol 200mg capsule</a></b>
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="1049311000001104">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">VMPP Snomed code </span>1049311000001104
   </td>
-  <td role="cell" class="nhsuk-table__cell">
+  <td role="cell" class="nhsuk-table__cell" data-sort-value="56">
     <span class="nhsuk-table-responsive__heading" aria-hidden="true">Qty </span>56
   </td>
   <td role="cell" class="nhsuk-table__cell">
@@ -739,6 +771,7 @@
 </tr>
       </tbody>
     </table>
+  </div>
 
 <!--    Pagination-->
     <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
@@ -793,11 +826,71 @@
   </a>
 
   <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="#">
-    View CSV
+   Download CSV
   </button>
 
 
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const table = document.querySelector("[data-module='moj-sortable-table']");
+    if (!table) return;
+
+    const headers = table.querySelectorAll("th");
+    headers.forEach((header, index) => {
+      // Remove existing sort indicators if they already exist
+      const existingIndicator = header.querySelector(".sort-indicator");
+      if (existingIndicator) {
+        existingIndicator.remove();
+      }
+
+      // Create and append a new sort indicator
+      let sortIndicator = document.createElement("span");
+      sortIndicator.className = "sort-indicator";
+      sortIndicator.setAttribute("aria-hidden", "true");
+      sortIndicator.innerHTML = "⇅"; // Default state
+      header.appendChild(sortIndicator);
+
+      header.addEventListener("click", function () {
+        const isAscending = header.getAttribute("aria-sort") === "ascending";
+        sortTableByColumn(table, index, !isAscending);
+      });
+    });
+
+    function sortTableByColumn(table, columnIndex, ascending) {
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      rows.sort((rowA, rowB) => {
+        const cellA = rowA.children[columnIndex].getAttribute("data-sort-value")
+            || rowA.children[columnIndex].innerText.trim();
+        const cellB = rowB.children[columnIndex].getAttribute("data-sort-value")
+            || rowB.children[columnIndex].innerText.trim();
+
+        const compare = !isNaN(cellA) && !isNaN(cellB) ? cellA - cellB : cellA.localeCompare(cellB,
+            undefined, {numeric: true});
+
+        return ascending ? compare : -compare;
+      });
+
+      rows.forEach(row => tbody.appendChild(row));
+
+      // Reset all headers
+      table.querySelectorAll("th").forEach(th => {
+        th.setAttribute("aria-sort", "none");
+        const indicator = th.querySelector(".sort-indicator");
+        if (indicator) {
+          indicator.innerHTML = "⇅"; // Reset icon
+        }
+      });
+
+      // Set the sorted column
+      headers[columnIndex].setAttribute("aria-sort", ascending ? "ascending" : "descending");
+      headers[columnIndex].querySelector(".sort-indicator").innerHTML = ascending ? "↑" : "↓";
+    }
+  });
+</script>
+
 
 {% endblock %}
