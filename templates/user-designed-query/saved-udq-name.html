@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="home-page.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to the home page   </span></a>
+</div>
+
+
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+    <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+      <span class="nhsuk-caption-l">
+        Saved user defined query
+        <span class="nhsuk-u-visually-hidden"> - </span>
+      </span>
+      Search user defined queries by name
+    </h1>
+  </legend>
+</fieldset>
+
+<form id="searchForm">
+  <div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h2 class="nhsuk-fieldset__heading">
+          Do you want to search for a user by name?
+        </h2>
+      </legend>
+
+      <div class="nhsuk-radios">
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="searchOption" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Yes
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="searchOption" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <button class="nhsuk-button" data-module="nhsuk-button" type="submit" id="submitButton">
+    Continue
+  </button>
+</form>
+
+<script>
+  document.getElementById("searchForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from submitting normally
+
+    const choice = document.querySelector('input[name="searchOption"]:checked');
+
+    if (choice) {
+      if (choice.value === "yes") {
+        window.location.href = "saved-udq-add-name.html";
+      } else {
+        window.location.href = "saved-udq-date.html";
+      }
+    } else {
+      alert("Please select an option before continuing.");
+    }
+  });
+</script>
+
+{% endblock %}

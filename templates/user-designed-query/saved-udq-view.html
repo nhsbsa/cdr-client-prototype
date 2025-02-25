@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="save-query-add-cipher.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to save query add cipher  </span></a>
+</div>
+
+
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+    <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Save user defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+      View saved querys
+    </h1>
+  </legend>
+</fieldset>
+
+<P> add filter here </P>
+<div class="nhsuk-tabs" data-module="nhsuk-tabs">
+  <h2 class="nhsuk-tabs__title">
+    Contents
+  </h2>
+
+  <ul class="nhsuk-tabs__list">
+
+    <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+      <a class="nhsuk-tabs__tab" href="#private">
+        Private
+      </a>
+    </li>
+
+    <li class="nhsuk-tabs__list-item">
+      <a class="nhsuk-tabs__tab" href="#past-week">
+        Favorites
+      </a>
+    </li>
+
+    <li class="nhsuk-tabs__list-item">
+      <a class="nhsuk-tabs__tab" href="#past-month">
+       Shared
+      </a>
+    </li>
+
+
+    <li class="nhsuk-tabs__list-item">
+      <a class="nhsuk-tabs__tab" href="#past-month">
+        Public
+      </a>
+    </li>
+
+  </ul>
+
+  <div class="nhsuk-tabs__panel" id="private">
+
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">Private</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          Title name
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases opened
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases closed
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        this link show alow a view of the query
+        <td class="nhsuk-table__cell"><a>David Francis</a></td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">3</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">0</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Paul Farmer</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">0</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Rita Patel</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">2</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">0</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="past-week">
+
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">Past week</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          Case manager
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases opened
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases closed
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">David Francis</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">24</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">18</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Paul Farmer</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">16</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">20</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Rita Patel</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">24</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">27</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="past-month">
+
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">Past month</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          Case manager
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases opened
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases closed
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">David Francis</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">98</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">95</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Paul Farmer</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">122</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">131</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Rita Patel</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">126</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">142</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="past-year">
+
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">Past year</caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          Case manager
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases opened
+        </th>
+        <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+          Cases closed
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">David Francis</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1380</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1472</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Paul Farmer</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1129</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1083</td>
+      </tr>
+      <tr role="row" class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Rita Patel</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1539</td>
+        <td class="nhsuk-table__cell nhsuk-table__cell--numeric">1265</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{% endblock %}

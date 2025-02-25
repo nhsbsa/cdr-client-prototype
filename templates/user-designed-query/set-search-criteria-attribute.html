@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="set-search-criteria-level.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to search criteria level </span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Set search criteria attribute
+      </h1>
+    </legend>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h2>Selected criteria</h2>
+    <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Level
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+       VMP
+        </dd>
+
+        <dd class="nhsuk-summary-list__actions">
+
+          <a href="set-search-criteria-level.html">
+            Edit<span class="nhsuk-u-visually-hidden"> edit</span>
+          </a>
+
+        </dd>
+
+      </div>
+
+<!--      <div class="nhsuk-summary-list__row">-->
+<!--        <dt class="nhsuk-summary-list__key">-->
+<!--          Date of birth-->
+<!--        </dt>-->
+<!--        <dd class="nhsuk-summary-list__value">-->
+<!--          15 March 1984-->
+<!--        </dd>-->
+
+<!--        <dd class="nhsuk-summary-list__actions">-->
+
+<!--          <a href="#">-->
+<!--            Change<span class="nhsuk-u-visually-hidden"> date of birth</span>-->
+<!--          </a>-->
+
+<!--        </dd>-->
+
+<!--      </div>-->
+
+<!--      <div class="nhsuk-summary-list__row">-->
+<!--        <dt class="nhsuk-summary-list__key">-->
+<!--          Contact information-->
+<!--        </dt>-->
+<!--        <dd class="nhsuk-summary-list__value">-->
+<!--          73 Roman Rd<br>Leeds<br> LS2 5ZN-->
+<!--        </dd>-->
+
+<!--        <dd class="nhsuk-summary-list__actions">-->
+
+<!--          <a href="#">-->
+<!--            Change<span class="nhsuk-u-visually-hidden"> contact information</span>-->
+<!--          </a>-->
+
+<!--        </dd>-->
+
+<!--      </div>-->
+
+<!--      <div class="nhsuk-summary-list__row">-->
+<!--        <dt class="nhsuk-summary-list__key">-->
+<!--          Contact details-->
+<!--        </dt>-->
+<!--        <dd class="nhsuk-summary-list__value">-->
+<!--          <p>07700 900362</p>-->
+<!--          <p>karen.francis@example.com</p>-->
+<!--        </dd>-->
+
+<!--        <dd class="nhsuk-summary-list__actions">-->
+
+<!--          <a href="#">-->
+<!--            Change<span class="nhsuk-u-visually-hidden"> contact details</span>-->
+<!--          </a>-->
+
+<!--        </dd>-->
+
+<!--      </div>-->
+
+    </dl>
+      </div>
+      </div>
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-name">
+        Select attribute
+      </label>
+      <select class="nhsuk-select" id="select-name" name="select-1">
+        <option value=""></option>
+        <option value="ATC code">ATC code </option>
+        <option value="Alpha-numeric code">Alpha-numeric code</option>
+        <option value="Appliance type indicator">Appliance type indicator</option>
+        <option value="Average Daily Quantity TVPM">Average Daily Quantity TVPM</option>
+        <option value="Average Daily Quantity value">Average Daily Quantity value</option>
+        <option value="Average Daily Quantity value UOM">Average Daily Quantity value UOM</option>
+        <option value="BNF Chapter">BNF Chapter </option>
+        <option value="CFC free indicator">CFC free indicator</option>
+        <option value="Combination product indicator">Combination product indicator</option>
+        <option value="Controlled drug category">Controlled drug category</option>
+        <option value="DD indicator">DD indicator</option>
+        <option value="DSRU indicator">DSRU indicator</option>
+        <option value="Default">Default</option>
+        <option value="Defined daily dose TVPM">Defined daily dose TVPM</option>
+        <option value="Defined daily dose value">Defined daily dose value</option>
+        <option value="Defined daily dose value UOM">Defined daily value UOM</option>
+        <option value="Dental formulation indicator-Jersey">Dental formulation indicator-Jersey</option>
+        <option value="Dictionary">Dictionary</option>
+        <option value="Disallowed-Gurnsey">Disallowed-Gurnsey</option>
+        <option value="Extractable status">Extractable status</option>
+        <option value="Form">Form</option>
+        <option value="Gluten free indicator">Gluten free indicator</option>
+        <option value="Invalid indicator">Invalid indicator</option>
+        <option value="Invalid status">Invalid status</option>
+        <option value="Measure and fit">Measure and fit</option>
+        <option value="Memory Code">Memory code</option>
+        <option value="Multi purpose indicator">Multi purpose indicator</option>
+        <option value="Name">Name</option>
+        <option value="Name (alternative 1)">Name (alternative 1)</option>
+        <option value="Name (alternative 2)">Name (alternative 2)</option>
+        <option value="Name (alternative 3)">Name (alternative 3)</option>
+        <option value="Name (abbreviated)">Name (abbreviated)</option>
+        <option value="Name basis">Name basis</option>
+        <option value="Name change reason">Name change reason</option>
+        <option value="Non availability indicator ">Non availability indicator</option>
+        <option value="Ontology form/route">Ontology form/route</option>
+        <option value="PIT">PIT</option>
+        <option value="PPA drug code">PPA drug code</option>
+        <option value="PPD additional information">PPD additional information</option>
+        <option value="PSQV quantities">PSQV quantities</option>
+        <option value="Preparation class">Preparation class</option>
+        <option value="Prescribing status">Prescribing status</option>
+        <option value="Prescription event monitoring indicator">Prescription event monitoring indicator</option>
+        <option value="Presentation code (BNF)">Presentation code (BNF)</option>
+        <option value="Preservative free indicator">Preservative free indicator</option>
+        <option value="Reconstitution indicator">Reconstitution indicator</option>
+        <option value="Reporting indicator">Reporting indicator</option>
+        <option value="Route">Route</option>
+        <option value="SNOMED code">SNOMED code</option>
+        <option value="SNOMED description">SNOMED description</option>
+        <option value="Sugar free indicator">Sugar free indicator</option>
+        <option value="Supplementary controlled drug fee indicator">Supplementary controlled drug fee indicator</option>
+        <option value="Unit dose UOM">Unit dose UOM</option>
+        <option value="Unit dose value">Unit dose value</option>
+        <option value="VMP UOM">VPM UOM</option>
+
+
+      </select>
+    </div>
+  </fieldset>
+
+  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="set-search-conditional-qualifier.html">
+    Continue
+  </a>
+
+<!--  <button class="nhsuk-button nhsuk-button&#45;&#45;secondary nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="#">-->
+<!--    View results-->
+<!--  </button>-->
+</div>
+
+{% endblock %}
