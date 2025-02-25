@@ -1,0 +1,126 @@
+{% extends "tce-2384/base.html" %}
+
+
+{% block content %}
+
+
+
+
+<div>
+  <nav aria-label="Back link" class="nhsuk-back-link nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0">
+    <a class="nhsuk-back-link__link" href="/tce-2384/two/update-ingredient" id="back-link">
+      <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__chevron-left" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back to update associated ingredients
+    </a>
+    
+  </nav>
+
+
+</div>
+
+<main class="nhsuk-main-wrapper" id="main-content">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5" id="page-heading">SNOMED associated ingredients</h1>
+
+      <div id="results-table-container" class="nhsuk-table-responsive nhsuk-table-fixed-height nhsuk-u-margin-bottom-4" style="height: auto; max-height: 500px">
+        <table class="nhsuk-table ">
+          <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">VMP results
+          </caption>
+          <thead class="nhsuk-table__head" tabindex="0">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name
+            </th>
+            <th class="nhsuk-table__header-important columnheader-sticky" scope="col">SNOMED code
+            </th>
+            <th class="nhsuk-table__header-important columnheader-sticky" scope="col">VTM
+              association
+            </th>
+            <th class="nhsuk-table__header columnheader-sticky" scope="col" id="add-header">Action
+            </th>
+          </tr>
+          </thead>
+          <tbody class="nhsuk-table__body" id="table-search-results-body">
+          
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">Name</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-0">
+                  <a href="https://main.dev.cdr-client.nhsbsa.net/vmp/19936?ref=" title="Aspirin 100mg capsules" target="_blank">Acetylsalicylic Acid</a>
+                </span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">SNOMED code</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-0">387458008</span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">VTM association</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-0">VTM Aspirin is associated with this ingredient.</span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <a href="/tce-2384/two/update-ingredient-add-new" aria-description="Ingredient can be associated with VTM."> </a>
+                
+              </td>
+            </tr>
+
+
+          
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">Name</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-1">
+                  <a href="/vmp/12412?ref=" title="Aspirin 100mg/5ml oral solution" target="_blank">Aspirin 100mg/5ml oral solution</a>
+                </span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">SNOMED code</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-0">3456789</span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">VTM association</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-1">There is no VTM associated with this ingredient.</span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <a href="/tce-2384/two/update-ingredient-add-new" aria-description="Ingredient can be associated with VTM.">Add</a>
+                
+              </td>
+            </tr>
+          
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">Name</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--name-value-2">
+                  <a href="/vmp/12115?ref=" title="Aspirin 100mg/5ml oral suspension" target="_blank">Aspirin 100mg/5ml oral suspension</a>
+                </span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">SNOMED code</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-0">3456789</span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <span class="nhsuk-table-responsive__heading">VTM association</span>
+                <span class="nhsuk-u-font-size-16 nhsuk-table-content" id="results-table--associated-vtm-id-value-2">There is no VTM associated with this ingredient.</span>
+              </td>
+              <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                <a href="/update/vtm?execution=e2s3&amp;_eventId=add&amp;id=12115&amp;vmp=Aspirin 100mg/5ml oral suspension" aria-description="Ingredient can be associated with VTM.">Add</a>
+                
+              </td>
+            </tr>
+          
+          
+          </tbody>
+        </table>
+
+        <a class="nhsuk-button" data-module="nhsuk-button" href="/tce-2384/two/update-ingredient-add" draggable="false" role="button">
+          Search for ingredient
+        </a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
