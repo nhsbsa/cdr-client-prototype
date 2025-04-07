@@ -1,0 +1,412 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="extra-large-data-table.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to extra large result table  </span></a>
+</div>
+
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Hide columns
+      </h1>
+    </legend>
+
+    <style>
+      .govuk-checkboxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .govuk-checkboxes__item {
+        width: calc(50% - 0.5rem);
+      }
+
+      .govuk-fieldset__legend {
+        margin-top: 1.5rem;
+      }
+    </style>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Select table headings you want to hide from view in the results table
+          </h2>
+          <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Default selections
+    </span>
+            </h3>
+            <p>Currently UOM, QPU, UOM/QPU and dictionary are selected as default</p>
+          </div>
+<h3>Hidden columns </h3>
+          <p>You can add the removed columns back to the table if required </p>
+          <div class="nhsuk-tags-container">
+            <button class="nhsuk-tag nhsuk-tag--white add-component" data-component="UOM">UOM +</button>
+            <button class="nhsuk-tag nhsuk-tag--white add-component" data-component="QPO">QPO +</button>
+            <button class="nhsuk-tag nhsuk-tag--white add-component" data-component="UOM/QPU">UOM/QPU +</button>
+            <button class="nhsuk-tag nhsuk-tag--white add-component" data-component="Dictionary">Dictionary</button>
+          </div>
+<hr>
+
+
+
+          <fieldset class="govuk-fieldset nhsuk-u-margin-top-5">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h3 class="govuk-fieldset__heading">Standard choices</h3>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">Remove default </label>
+          </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation-2">Hide all empty columns in this table</label>
+            </div>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">Add pre-selected default</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">Select all</label>
+            </div>
+          </div>
+        </fieldset>
+
+          <style>
+          .nhsuk-tags-container {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+          }
+
+          .nhsuk-tag {
+          background: white;
+          color: #1d70b8;
+          border: 2px solid #1d70b8;
+          padding: 6px 12px;
+          border-radius: 5px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer; /* Makes it act like a button */
+          text-decoration: none;
+          }
+
+          .nhsuk-tag:hover {
+          background: #1d70b8;
+          color: white;
+          text-decoration: none;
+          }
+          </style>
+
+        <!-- Current Table -->
+        <fieldset class="govuk-fieldset nhsuk-u-margin-top-5">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h3 class="govuk-fieldset__heading">Current table</h3>
+          </legend>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Select columns to remove from the table
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1"
+                    style="width: 100%; padding-left: 9px;">
+              <option value="1"></option>
+              <option value="2">VMP Name</option>
+              <option value="3">AMP Name</option>
+              <option value="4">Availability restrictions</option>
+              <option value="5">Licencing authority</option>
+              <option value="6">Colour</option>
+              <option value="7">Product order number</option>
+              <option value="8">Presentation code (BNF)</option>
+              <option value="9">Price</option>
+              <option value="10">Price basis </option>
+              <option value="11">Price basis start date</option>
+              <option value="12">Price basis end date</option>
+              <option value="13">Reimbursement price</option>
+              <option value="14">Reimbursement status</option>
+              <option value="15">Prescription charges</option>
+              <option value="16">Dispensing fees</option>
+              <option value="17">Nurse formulary indicator</option>
+              <option value="18">PPA drug code</option>
+              <option value="19">Pack size/Quantity</option>
+              <option value="20">UOM quantity</option>
+              <option value="21">QPU</option>
+              <option value="22">UOM/QPU</option>
+              <option value="23">Special container indicator</option>
+              <option value="24">Broken bulk indicator</option>
+              <option value="25">Preparation class</option>
+              <option value="26">Extractable Status AMP</option>
+              <option value="27">Extractable Status AMPP</option>
+              <option value="28">Un-rounded price</option>
+              <option value="29">Un-rounded price start date</option>
+              <option value="30">Un-rounded price end date</option>
+              <option value="31">Part IX price update GDP value</option>
+              <option value="32">Part IX price update GDP value start date</option>
+              <option value="33">Part IX price update GDP value end date</option>
+              <option value="34">PPA drug code</option>
+              <option value="35">Name (Alternative 3)</option>
+              <option value="36">GTIN indicator</option>
+              <option value="37">Legal category</option>
+              <option value="38">Name (Alternative 2)</option>
+              <option value="39">Appliance type indicator</option>
+              <option value="40">Supplier name</option>
+              <option value="41">Dictionary</option>
+            </select>
+          </div>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="vmp-name" name="organisation" type="checkbox" value="vmp-name">
+              <label class="govuk-label govuk-checkboxes__label" for="vmp-name">VMP name</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="amp-name" name="organisation" type="checkbox" value="amp-name">
+              <label class="govuk-label govuk-checkboxes__label" for="amp-name">AMP name</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="availability-restrictions" name="organisation" type="checkbox" value="availability-restrictions">
+              <label class="govuk-label govuk-checkboxes__label" for="availability-restrictions">Availability restrictions</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="licensing-authority" name="organisation" type="checkbox" value="licensing-authority">
+              <label class="govuk-label govuk-checkboxes__label" for="licensing-authority">Licensing authority</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="colour" name="organisation" type="checkbox" value="colour">
+              <label class="govuk-label govuk-checkboxes__label" for="colour">Colour</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="product-order-number" name="organisation" type="checkbox" value="product-order-number">
+              <label class="govuk-label govuk-checkboxes__label" for="product-order-number">Product order number</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="presentation-code" name="organisation" type="checkbox" value="presentation-code">
+              <label class="govuk-label govuk-checkboxes__label" for="presentation-code">Presentation code (BNF)</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="price" name="organisation" type="checkbox" value="price">
+              <label class="govuk-label govuk-checkboxes__label" for="price">Price</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="price-basis" name="organisation" type="checkbox" value="price-basis">
+              <label class="govuk-label govuk-checkboxes__label" for="price-basis">Price basis</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="price-basis-start" name="organisation" type="checkbox" value="price-basis-start">
+              <label class="govuk-label govuk-checkboxes__label" for="price-basis-start">Price basis start date</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="price-basis-end" name="organisation" type="checkbox" value="price-basis-end">
+              <label class="govuk-label govuk-checkboxes__label" for="price-basis-end">Price basis end date</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="reimbursement-price" name="organisation" type="checkbox" value="reimbursement-price">
+              <label class="govuk-label govuk-checkboxes__label" for="reimbursement-price">Reimbursement price</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="reimbursement-status" name="organisation" type="checkbox" value="reimbursement-status">
+              <label class="govuk-label govuk-checkboxes__label" for="reimbursement-status">Reimbursement status</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="prescription-charges" name="organisation" type="checkbox" value="prescription-charges">
+              <label class="govuk-label govuk-checkboxes__label" for="prescription-charges">Prescription charges</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dispensing-fees" name="organisation" type="checkbox" value="dispensing-fees">
+              <label class="govuk-label govuk-checkboxes__label" for="dispensing-fees">Dispensing fees</label>
+            </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id=" Nurse formulary indicator" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              Nurse formulary indicator
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="PPA drug code" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              PPA drug code
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Pack size/Quantity" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Pack size/Quantity
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="UOM quantity" name="organisation" type="checkbox" value="UOM-quantite" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              UOM quantity
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id=" QPU" name="organisation" type="checkbox" value="QPU" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              QPU
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="UOM/QPU" name="organisation" type="checkbox" value="UOM-QPU"checked>
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              UOM/QPU
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id=" Special container indicator" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              Special container indicator
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Broken bulk indicator" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Broken bulk indicator
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id=" Preparation class" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Preparation class
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Extractable Status AMP" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              Extractable Status AMP
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Extractable Status AMPP" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Extractable Status AMPP
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Un-rounded price" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Un-rounded price
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id=" Un-rounded price start date" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Un-rounded price start date
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Un-rounded price end date" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              Un-rounded price end date
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Part IX price update GDP value" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Part IX price update GDP value
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Part IX price update GDP value start date" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Part IX price update GDP value start date
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id=" Part IX price update GDP value end date" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              Part IX price update GDP value end date
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="PPA drug code" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              PPA drug code
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Name (Alternative 3)" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Name (Alternative 3)
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id=" GTIN indicator" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              GTIN indicator
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Legal category" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Legal category
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Name (Alternative 2)" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Name (Alternative 2)
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Appliance type indicator" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="Appliance type indicator">
+              Appliance type indicator
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Supplier name" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              Supplier name
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Dictionary" name="organisation" type="checkbox" value="Dictionary" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="Dictionary">
+              Dictionary
+            </label>
+          </div>
+          </div>
+        </fieldset>
+      </fieldset>
+    </div>
+
+  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="extra-large-data-table-redacted.html">
+    Continue
+  </a>
+
+
+</fieldset>
+
+<script>
+document.querySelectorAll('.add-component').forEach(button => {
+button.addEventListener('click', function () {
+const componentName = this.dataset.component;
+
+// Check if the component already exists in the table
+if (!document.querySelector(`[data-added="${componentName}"]`)) {
+const newRow = document.createElement('tr');
+newRow.setAttribute('data-added', componentName);
+newRow.innerHTML = `<td>${componentName}</td>`;
+
+document.getElementById('component-table').appendChild(newRow);
+}
+});
+});
+</script>
+{% endblock %}
