@@ -1,0 +1,106 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="nhsuk-width-container">
+
+  <!--div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="price-amend-yes-or-no.html">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        aria-hidden="true">
+        <path
+          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+        </path>
+      </svg>
+      Go back</a>
+  </div-->
+
+  <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
+
+    <div class="nhsuk-grid-row">
+
+      <div class="nhsuk-grid-column-two-thirds">
+
+
+        <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-2">Upload excel file to update VMPPs</h1>
+        <p class="nhsuk-body">Select a file from your computer to update drug tariff prices VMPPs for Part VIII category
+          M products</p>
+
+        <!-- Add your content here -->
+        <div class="nhsuk-grid-row">
+
+          <div class="nhsuk-grid-column-full">
+            <p class="nhsuk-body">File must be saved in .xlsx format and contain a table with the following columns</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>VMPP code</li>
+              <li>VMP code</li>
+              <li>Drug Name</li>
+              <li>Pack Size</li>
+              <li>Pack unit of measurement</li>
+              <li>Previous month Drug tariff price. For example; September-24 DT</li>
+              <li>Current month Drug tariff price. For example; October-24 DT</li>
+            </ul>
+
+            <!--p class="nhsuk-body">Photos must not include:</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>patients</li>
+      <li>patient data, for example, names or medical charts</li>
+      <li>visitors</li>
+      <li>staff</li>
+            </ul-->
+
+            <div class="nhsuk-form-group nhsuk-form-group--error">
+              <label class="nhsuk-label" for="file-upload-1">
+                Choose file from your device
+              </label>
+              <span class="nhsuk-error-message" id="example-error">
+                <span class="nhsuk-u-visually-hidden">Error:</span> [Insert error text]
+              </span>
+
+
+
+              <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+
+        <a href="/cat-m/confirm-changes"><button class="nhsuk-button" data-module="nhsuk-button" type="button">Continue
+          </button>
+        </a>
+<br>
+        <div>
+          <h2 class="nhsuk-heading-m">Error texts</h2>
+          <span class="nhsuk-error-message" id="example-error">
+            <span class="nhsuk-u-visually-hidden">Error:</span> Expected column "Drug Name" not found
+          </span>
+  
+          <span class="nhsuk-error-message" id="example-error">
+            <span class="nhsuk-u-visually-hidden">Error:</span> File has incorrect number of columns
+          </span>
+  
+          <span class="nhsuk-error-message" id="example-error">
+            <span class="nhsuk-u-visually-hidden">Error:</span> Incorrect data type found in column "VMPP", row x
+          </span>
+  
+          <span class="nhsuk-error-message" id="example-error">
+            <span class="nhsuk-u-visually-hidden">Error:</span> Invalid input found in column "VMPP", row x
+          </span>
+  
+  
+          <span class="nhsuk-error-message" id="example-error">
+            <span class="nhsuk-u-visually-hidden">Error:</span> An unexpected error has occured
+          </span>
+        </div>
+      </div>
+
+
+    </div>
+</div>
+</main>
+</div>
+
+
+{% endblock %}
