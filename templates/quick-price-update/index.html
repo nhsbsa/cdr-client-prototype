@@ -2,8 +2,8 @@
 {% block content %}
 <div class="nhsuk-width-container">
 
-  <!--div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="price-amend-yes-or-no.html">
+  <div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="#" onclick="history.back(); return false;">
       <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
         aria-hidden="true">
         <path
@@ -11,14 +11,14 @@
         </path>
       </svg>
       Go back</a>
-  </div-->
+  </div>
 
   <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-full">
 
-        <h1>Part VIIIA - Quick price update</h1>
+        <h1>Quick price update</h1>
        
         <h2>Search for a supplier</h2>
         <p>Use the parameters below to search for corresponding drugs that need updating.</p>
@@ -123,11 +123,11 @@
     const pit = document.getElementById("pit").value;
 
     if (pit === "all") {
-      window.location.href = "/part-8a/results";
+      window.location.href = "/quick-price-update/results";
     } else if (pit === "proprietary") {
-      window.location.href = "/part-8a/results-proprietary";
+      window.location.href = "/quick-price-update/results-proprietary";
     } else if (pit === "generic") {
-      window.location.href = "/part-8a/results-generic";
+      window.location.href = "/quick-price-update/results-generic";
     }
   });
 </script>
