@@ -144,26 +144,45 @@
     <div class="nhsuk-form-group">
 
       <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1 class="nhsuk-fieldset__heading">
-            Add search criteria
-          </h1>
-        </legend>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-20">
+            <H2>Enter criteria</H2>
 
-        <div class="nhsuk-radios">
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-              Valid
-            </label>
-          </div>
+          </label>
 
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-              Invalid
-            </label>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+     View wild card Information
+    </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>These are the most commonly used wildcard symbols used on the system</p>
+              <ul>
+                <li>% (Percent Sign) – Matches any number of characters.
+                  Example: %cet finds "paracetamol", "acetaminophen".</li>
+                <li> , (Comma) – Separates multiple search criteria.
+                  Example: paracetamol,acetaminophen finds either "paracetamol" or "acetaminophen"</li>
+                <li> _ (Underscore) – Matches exactly one character.
+                  Example: p_raetamol finds "paracetamol" but not "ptraetamol".</li>
+                <li> [] (Square Brackets) – Matches any one character in a set or range.
+                  Example: par[ae]tamol finds "paracetamol" or "paratamol".</li>
+                <li>{} (Curly Braces) – Matches a specific number of repetitions.
+                  Example: a{2} finds "paracetamol" but not "paracetalol".</li>
+                <li>- ^ (Caret) – Matches the beginning of a string.
+                  Example: ^paracetamol finds "paracetamol" at the start of a string..</li>
+                <li> - (Hyphen) – Indicates a range or excludes terms.
+                  Example: paracetamol -acetaminophen finds "paracetamol" but excludes "acetaminophen"</li>
+
+              </ul>
+            </div>
+          </details>
+
+          <div class="nhsuk-hint" id="contact-hint">
+            If you need to use a wildcard, include the symbol where needed: before, after, or on both sides of your query (for example, %a, a%, or %a%). Otherwise, simply enter the criteria you want to search for.
           </div>
+          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="input-width-20" type="text">
+        </div>
 
         </div>
       </fieldset>

@@ -1,0 +1,4381 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6" xmlns="http://www.w3.org/1999/html">
+  <a class="nhsuk-back-link__link" href="new-query-summary-page.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path
+          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to summary page </span></a>
+</div>
+<div>
+
+
+  <div class="nhsuk-width-container-fluid">
+    <main class="nhsuk-main-wrapper" id="main-content" role="main">
+
+
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+          <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+            User query search results (EXTRA Large)
+
+          </h1>
+        </legend>
+        <p>Highlight a row by clicking anywhere in the table, except on hyperlinks, which will take you to a new page</p>
+        <!--Hide columns -->
+      </fieldset>
+      <details class="nhsuk-details nhsuk-details">
+        <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Refine search results
+    </span>
+        </summary>
+
+        <div style="padding-left: 9px; max-width: 500px;">
+
+          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+            <label class="nhsuk-label" for="select-1">
+              Choose how many rows you would like to view per page (Default is 25)
+            </label>
+            <select class="nhsuk-select" id="select-25" name="select-25">
+              <option value="25">25</option>
+              <option value="50" >50</option>
+              <option value="75" >75</option>
+              <option value="100" >100</option>
+            </select>
+          </div>
+
+          <div class="nhsuk-form-group nhsuk-u-margin-top-5">
+            <label class="nhsuk-label" for="select-1">
+              Choose column to filter
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1"
+                    style="width: 100%; padding-left: 9px;">
+              <option value="1"></option>
+              <option value="2">VMP Name</option>
+              <option value="3">AMP Name</option>
+              <option value="4">Availability restrictions</option>
+              <option value="5">Licencing authority</option>
+              <option value="6">Colour</option>
+              <option value="7">Product order number</option>
+              <option value="8">Presentation code (BNF)</option>
+              <option value="9">Price</option>
+              <option value="10">Price basis</option>
+              <option value="11">Price basis start date</option>
+              <option value="12">Price basis end date</option>
+              <option value="13">Reimbursement price</option>
+              <option value="14">Reimbursement status</option>
+              <option value="15">Prescription charges</option>
+              <option value="16">Dispensing fees</option>
+              <option value="17">Nurse formulary indicator</option>
+              <option value="18">PPA drug code</option>
+              <option value="19">Pack size/Quantity</option>
+              <option value="20">UOM quantity</option>
+              <option value="21">QPU</option>
+              <option value="22">UOM/QPU</option>
+              <option value="23">Special container indicator</option>
+              <option value="24">Broken bulk indicator</option>
+              <option value="25">Preparation class</option>
+              <option value="26">Extractable Status AMP</option>
+              <option value="27">Extractable Status AMPP</option>
+              <option value="28">Un-rounded price</option>
+              <option value="29">Un-rounded price start date</option>
+              <option value="30">Un-rounded price end date</option>
+              <option value="31">Part IX price update GDP value</option>
+              <option value="32">Part IX price update GDP value start date</option>
+              <option value="33">Part IX price update GDP value end date</option>
+              <option value="34">PPA drug code</option>
+              <option value="35">Name (Alternative 3)</option>
+              <option value="36">GTIN indicator</option>
+              <option value="37">Legal category</option>
+              <option value="38">Name (Alternative 2)</option>
+              <option value="39">Appliance type indicator</option>
+              <option value="40">Supplier name</option>
+              <option value="41">Dictionary</option>
+            </select>
+          </div>
+
+
+          <div class="nhsuk-form-group " style="position: relative;">
+            <label class="nhsuk-label" for="example">
+              Search
+            </label>
+            <div style="position: relative; width: 100%;">
+              <input
+                  class="nhsuk-input"
+                  id="example"
+                  name="example"
+                  type="text"
+                  style="padding-left: 9px; padding-right: 40px; width: 100%;"/>
+
+              <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5"
+                 data-module="nhsuk-button" type="submit" href="large-data-table-N.html">
+                Refine search
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </details>
+
+
+      <!--Column Filter-->
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Columns display filter
+    </span>
+        </summary>
+        <div class="nhsuk-details__text">
+            <fieldset class="nhsuk-fieldset">
+
+              <style>
+                .govuk-checkboxes {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 1rem;
+                }
+
+                .govuk-checkboxes__item {
+                  width: calc(50% - 0.5rem);
+                }
+
+                .govuk-fieldset__legend {
+                  margin-top: 1.5rem;
+                }
+              </style>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                      Select column headings you want to hide from view in the displayed results table
+                    </h2>
+
+                    <div class="nhsuk-warning-callout">
+                      <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Important notes
+    </span>
+                      </h3>
+                      <h2>Default filters</h2>
+                      <p> Currently QPU, UOM/QPU and dictionary are selected as default</p>
+                      <h2>Selected filters</h2>
+                      <p>The filters you choose won’t be saved with your query.</p>
+                    </div>
+
+                    <fieldset class="govuk-fieldset nhsuk-u-margin-top-5">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">Standard choices</h3>
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small"
+                           data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="remove-default-1"
+                                 name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label" for="remove-default-1">Remove
+                            default </label>
+                        </div>
+                      </div>
+                      <div class="govuk-checkboxes govuk-checkboxes--small"
+                           data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="add-default-1"
+                                 name="organisation" type="checkbox" value="hmrc">
+                          <label class="govuk-label govuk-checkboxes__label" for="add-default-1">Add
+                            pre-selected default</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="select-all-1"
+                                 name="organisation" type="checkbox" value="hmrc">
+                          <label class="govuk-label govuk-checkboxes__label" for="select-all-1">Select
+                            all</label>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <style>
+                      .nhsuk-tags-container {
+                        display: flex;
+                        gap: 10px;
+                        flex-wrap: wrap;
+                      }
+
+                      .nhsuk-tag {
+                        background: white;
+                        color: #1d70b8;
+                        border: 2px solid #1d70b8;
+                        padding: 6px 12px;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: pointer; /* Makes it act like a button */
+                        text-decoration: none;
+                      }
+
+                      .nhsuk-tag:hover {
+                        background: #1d70b8;
+                        color: white;
+                        text-decoration: none;
+                      }
+                    </style>
+
+                    <!-- Current Table -->
+                    <fieldset class="govuk-fieldset nhsuk-u-margin-top-5">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h3 class="govuk-fieldset__heading">Current displayed table choices</h3>
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small"
+                           data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="vmp-name" name="organisation"
+                                 type="checkbox" value="vmp-name">
+                          <label class="govuk-label govuk-checkboxes__label" for="vmp-name">VMP
+                            name</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="amp-name" name="organisation"
+                                 type="checkbox" value="amp-name">
+                          <label class="govuk-label govuk-checkboxes__label" for="amp-name">AMP
+                            name</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="availability-restrictions"
+                                 name="organisation" type="checkbox"
+                                 value="availability-restrictions">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="availability-restrictions">Availability restrictions</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="licensing-authority"
+                                 name="organisation" type="checkbox" value="licensing-authority">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="licensing-authority">Licensing authority</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="colour" name="organisation"
+                                 type="checkbox" value="colour">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="colour">Colour</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="product-order-number"
+                                 name="organisation" type="checkbox" value="product-order-number">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="product-order-number">Product order number</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="presentation-code"
+                                 name="organisation" type="checkbox" value="presentation-code">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="presentation-code">Presentation code (BNF)</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="price" name="organisation"
+                                 type="checkbox" value="price">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="price">Price</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="price-basis"
+                                 name="organisation" type="checkbox" value="price-basis">
+                          <label class="govuk-label govuk-checkboxes__label" for="price-basis">Price
+                            basis</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="price-basis-start"
+                                 name="organisation" type="checkbox" value="price-basis-start">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="price-basis-start">Price basis start date</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="price-basis-end"
+                                 name="organisation" type="checkbox" value="price-basis-end">
+                          <label class="govuk-label govuk-checkboxes__label" for="price-basis-end">Price
+                            basis end date</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="reimbursement-price"
+                                 name="organisation" type="checkbox" value="reimbursement-price">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="reimbursement-price">Reimbursement price</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="reimbursement-status"
+                                 name="organisation" type="checkbox" value="reimbursement-status">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="reimbursement-status">Reimbursement status</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="prescription-charges"
+                                 name="organisation" type="checkbox" value="prescription-charges">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="prescription-charges">Prescription charges</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="dispensing-fees"
+                                 name="organisation" type="checkbox" value="dispensing-fees">
+                          <label class="govuk-label govuk-checkboxes__label" for="dispensing-fees">Dispensing
+                            fees</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id=" Nurse formulary indicator"
+                                 name="organisation" type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for=" Nurse formulary indicator">
+                            Nurse formulary indicator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="PPA drug code"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label" for="PPA drug code">
+                            PPA drug code AMPP
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Pack size/Quantity"
+                                 name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Pack size/Quantity">
+                            Pack size/Quantity
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="UOM quantity"
+                                 name="organisation" type="checkbox" value="UOM-quantity" >
+                          <label class="govuk-label govuk-checkboxes__label" for="UOM quantity">
+                            UOM quantity
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="QPU" name="organisation"
+                                 type="checkbox" value="QPU" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="QPU">
+                            QPU
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="UOM/QPU" name="organisation"
+                                 type="checkbox" value="UOM-QPU" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="UOM/QPU">
+                            UOM/QPU
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Special container indicator"
+                                 name="organisation" type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Special container indicator">
+                            Special container indicator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Broken bulk indicator"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Broken bulk indicator">
+                            Broken bulk indicator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Preparation class"
+                                 name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Preparation class">
+                            Preparation class
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Extractable Status AMP"
+                                 name="organisation" type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Extractable Status AMP">
+                            Extractable Status AMP
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Extractable Status AMPP"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Extractable Status AMPP">
+                            Extractable Status AMPP
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Un-rounded price"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label" for="Un-rounded price">
+                            Un-rounded price
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Un-rounded price start date"
+                                 name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Un-rounded price start date">
+                            Un-rounded price start date
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Un-rounded price end date"
+                                 name="organisation" type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Un-rounded price end date">
+                            Un-rounded price end date
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Part IX price update GDP value"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Part IX price update GDP value">
+                            Part IX price update GDP value
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input"
+                                 id="Part IX price update GDP value start date" name="organisation"
+                                 type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Part IX price update GDP value start date">
+                            Part IX price update GDP value start date
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input"
+                                 id="Part IX price update GDP value end date" name="organisation"
+                                 type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Part IX price update GDP value end date">
+                            Part IX price update GDP value end date
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="PPA drug code 2"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label" for="PPA drug code 2">
+                            PPA drug code AMP
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Name (Alternative 3)"
+                                 name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Name (Alternative 3)">
+                            Name (Alternative 3)
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="GTIN indicator"
+                                 name="organisation" type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label" for="GTIN indicator">
+                            GTIN indicator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Legal category"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label" for="Legal category">
+                            Legal category
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Name (Alternative 2)"
+                                 name="organisation" type="checkbox" value="employment-tribunal">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Name (Alternative 2)">
+                            Name (Alternative 2)
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Appliance type indicator"
+                                 name="organisation" type="checkbox" value="MOD">
+                          <label class="govuk-label govuk-checkboxes__label"
+                                 for="Appliance type indicator">
+                            Appliance type indicator
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Supplier name"
+                                 name="organisation" type="checkbox" value="DfT">
+                          <label class="govuk-label govuk-checkboxes__label" for="Supplier name">
+                            Supplier name
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Dictionary" name="organisation"
+                                 type="checkbox" value="Dictionary" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="Dictionary">
+                            Dictionary
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+
+
+                    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5"
+                       data-module="nhsuk-button" type="submit"
+                       href="extra-large-data-table-redacted.html">
+                      Add filters
+                    </a>
+
+                  </legend>
+
+                </fieldset>
+              </div>
+            </fieldset>
+          </div>
+      </details>
+
+
+
+      <div class="nhsuk-form-container"
+           style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label">
+            Total search results 2636
+          </label>
+        </div>
+      </div>
+
+
+      <!--table-->
+      <style>
+        .table-container {
+          overflow-x: auto;
+          max-width: 100%;
+        }
+
+        .resizable-table {
+          border-collapse: collapse;
+          width: 100%;
+          min-width: 300px;
+        }
+
+
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          position: relative;
+          white-space: nowrap;
+        }
+
+
+        .sort-icon {
+          margin-left: 8px;
+          display: inline-block;
+          font-size: 14px;
+          color: white;
+        }
+
+
+        .resizer {
+          width: 5px;
+          height: 100%;
+          background-color: #ffdd00;
+          cursor: ew-resize;
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 2;
+        }
+
+        .resizer:focus {
+          outline: 2px solid #ffdd00;
+        }
+
+        @media (max-width: 600px) {
+          th {
+            position: absolute;
+          / visibility: hidden;
+          }
+
+          td {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+          }
+
+          td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          tbody tr {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+          }
+
+        }
+
+        @media (max-width: 600px) {
+          tbody tr {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+          }
+        }
+        .nhsuk-table__row.selected {
+          background-color: #d8ebf2; /* Light blue background */
+        }
+
+
+      </style>
+
+
+      <div class="table-container">
+        <table role="table" class="resizable-table" Id="sortable-table">
+          <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">large data table showing UDQ
+            results in blocks of 15 results or less
+          </caption>
+          <thead role="rowgroup" class="nhsuk-table__head"
+                 style="background-color: #005eb8; color: white;">
+          <tr role="row">
+
+            <th role="columnheader" scope="col" onclick="sortTable(1)" tabindex="0"
+                style="resize: both" aria-sort="None">
+              VMP name <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" style="resize: both" aria-label="Resize Column 2"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(2)" tabindex="2"
+                aria-sort="ascending">
+              AMP name <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 2" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(2)" tabindex="2"
+                aria-sort="ascending">
+              Availability restrictions <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 3" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(3)" tabindex="3"
+                aria-sort="ascending">
+              Licencing authority <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 4" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(4)" tabindex="4"
+                aria-sort="ascending">
+              Colour <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 5" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(5)" tabindex="5"
+                aria-sort="ascending">
+              Product order number <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 6" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(6)" tabindex="6"
+                aria-sort="ascending">
+              Presentation code (BNF) <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 7" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(7)" tabindex="7"
+                aria-sort="ascending">
+              Price <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 8" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(8)" tabindex="8"
+                aria-sort="ascending">
+              Price basis <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 9" role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(9)" tabindex="9"
+                aria-sort="ascending">
+              Price basis start<span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 10"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(10)" tabindex="10"
+                aria-sort="ascending">
+              Price basis end<span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 11"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(11)" tabindex="0"
+                aria-sort="ascending">
+              Reimbursement price <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 12"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(12)" tabindex="0"
+                aria-sort="ascending">
+              Prescription charges <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 12"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(12)" tabindex="0"
+                aria-sort="ascending">
+              Dispensing fees <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 12"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(12)" tabindex="0"
+                aria-sort="ascending">
+              Reimbursement status <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 12"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(12)" tabindex="12"
+                aria-sort="ascending">
+              Nurse formulary indicator <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 13"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(13)" tabindex="13"
+                aria-sort="ascending">
+              PPA drug code AMPP<span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 14"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(14)" tabindex="14"
+                aria-sort="ascending">
+              Quantity (pack size) <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 15"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(14)" tabindex="14"
+                aria-sort="ascending">
+              UOM quantity <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 15"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(14)" tabindex="14"
+                aria-sort="ascending">
+              QPU <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 15"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(14)" tabindex="14"
+                aria-sort="ascending">
+              UOM QPU <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 15"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(15)" tabindex="15"
+                aria-sort="ascending">
+              Special container indicator <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 16"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(16)" tabindex="16"
+                aria-sort="ascending">
+              Broken bulk indicator <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 17"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(17)" tabindex="176"
+                aria-sort="ascending">
+              Preparation class <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 18"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(18)" tabindex="18"
+                aria-sort="ascending">
+              Extractable Status AMP<span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 19"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(18)" tabindex="18"
+                aria-sort="ascending">
+              Extractable Status AMPP<span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 19"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(19)" tabindex="19"
+                aria-sort="ascending">
+              Un-rounded price <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 20"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(19)" tabindex="19"
+                aria-sort="ascending">
+              Un-rounded price start<span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 20"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(19)" tabindex="19"
+                aria-sort="ascending">
+              Un-rounded price end<span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 20"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(20)" tabindex="20"
+                aria-sort="ascending">
+              Part IX price update GDP value <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 21"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(20)" tabindex="20"
+                aria-sort="ascending">
+              Part IX price update GDP value start date <span class="sort-icon"
+                                                              aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 21"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(20)" tabindex="20"
+                aria-sort="ascending">
+              Part IX price update GDP value end date <span class="sort-icon"
+                                                            aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 21"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(13)" tabindex="13"
+                aria-sort="ascending">
+              PPA drug code AMP <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 14"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(21)" tabindex="21"
+                aria-sort="ascending">
+              Name (Alternative 3) <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 22"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(22)" tabindex="22"
+                aria-sort="ascending">
+              GTIN indicator <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 23"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(23)" tabindex="23"
+                aria-sort="ascending">
+              Legal category <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 24"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(24)" tabindex="24"
+                aria-sort="ascending">
+              Name (Alternative 2) <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 25"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(25)" tabindex="25"
+                aria-sort="ascending">
+              Appliance type indicator <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 26"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(26)" tabindex="26"
+                aria-sort="ascending">
+              Supplier name <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 27"
+                   role="separator"></div>
+            </th>
+            <th role="columnheader" scope="col" onclick="sortTable(26)" tabindex="26"
+                aria-sort="ascending">
+              Dictionary <span class="sort-icon" aria-hidden="true"></span>
+              <div class="resizer" tabindex="0" aria-label="Resize Column 27"
+                   role="separator"></div>
+            </th>
+
+
+          </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+          <!--one-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name" style="resize: both">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Almond
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+             Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Two-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Black
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--three-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Blueberry
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--four-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Cacao
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--five-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Cinnamon
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--six-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Nutmeg
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--seven-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Poppy seed
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Eight-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Sesame
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Nine-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Sugar
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Ten-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Almond
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Eleven-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Black pepper
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Twelve-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              BlueBerry
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Thirteen-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Cacao
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size II
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Fourteen-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Cinnamon
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size II
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--Fifteen-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Nutmeg
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size II
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--16-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+             Poppy seed
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size II
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--17-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Sesame
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size II
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--18-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Sugar
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size II
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--19-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Almond
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--20-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Black pepper
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--21-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Blueberry
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--22-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Cocao
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--23-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Cinnamon
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--24-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+              Nutmeg
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+          <!--25-->
+          <tr role="row" class="nhsuk-table__row">
+            <td role="cell" class="nhsuk-table__cell" data-label="VMP Name">
+              <b><a href="#" class="nhsuk-card__link"
+                    aria-label="More details about Lymphoedema garment">Lymphoedema garment</a></b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="VMPP Snomed Code"
+                data-sort-value="8991611000001104">
+              <b>
+                <a href="#" class="nhsuk-card__link">
+                  Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short size I
+                </a>
+              </b>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Availability Restrictions"
+                data-sort-value="30">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Licence authority">
+              Devices
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Colour">
+             Poppy seed
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Product order number">
+              <span aria-hidden="true"></span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Presentation code (BNF)">
+              <span style="float: right;">21270000238</span>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price">
+              0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis">
+              <a href="#">No price available</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis start">
+              01 January 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Price basis end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement price ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Prescription charges ">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dispensing fee">
+              1
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Reimbursement status">
+              Not allowed(not in drug tariff)
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Nurse fomulary indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              91428092
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Quantity ">
+              <a href="#">2</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM quantity">
+              Device
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="UOM QPU">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Special container indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Broken bulk indicator">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Preperation class">
+              4
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Extractable status (AMPP)">
+              Yes
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price ">
+              0.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Un-rounded price end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Part IX Price update GDP value">
+              -1.0
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value start">
+              01 April 2023
+            </td>
+            <td role="cell" class="nhsuk-table__cell"
+                data-label="Part IX Price update GDP value end">
+              EOT
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="PPA drug code">
+              9142809
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 3)">
+              Juzo hostess class 1 (18-21mmhg) below knee closed toe lymphoedema garment extra short
+              size III
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="GTIN indicator ">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Legal catergory">
+              Not applicable
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Name (alternative 2)">
+
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Appliance type indicator">
+              Appliance/dressings IXA
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Supplier name">
+              Juzo UK Ltd
+            </td>
+            <td role="cell" class="nhsuk-table__cell" data-label="Dictionary">
+              PCDD
+            </td>
+          </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+
+      <!--    Pagination-->
+      <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+        <ul class="nhsuk-list nhsuk-pagination__list">
+          <li class="nhsuk-pagination-item--previous">
+            <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="#">
+              <span class="nhsuk-pagination__title">Previous</span>
+              <span class="nhsuk-u-visually-hidden">:</span>
+              <span class="nhsuk-pagination__page">1 -25 results</span>
+              <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path
+                    d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="nhsuk-pagination-item--next">
+            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+              <span class="nhsuk-pagination__title">Next</span>
+              <span class="nhsuk-u-visually-hidden">:</span>
+              <span class="nhsuk-pagination__page">26-50 results</span>
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path
+                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      </fieldset>
+
+
+    </main>
+
+
+    <!--    <div class="nhsuk-form-group">-->
+    <!--      <label class="nhsuk-label" for="select-name">-->
+    <!--        Select Level-->
+    <!--      </label>-->
+    <!--      <select class="nhsuk-select" id="select-name" name="select-1">-->
+    <!--        <option value=""></option>-->
+    <!--        <option value="VMP">VMP</option>-->
+    <!--        <option value="AMP">AMP</option>-->
+    <!--        <option value="VMPP">VMPP</option>-->
+    <!--        <option value="AMPP">AMPP</option>-->
+    <!--        <option value="Ingredient">Ingredient</option>-->
+    <!--        <option value="Supplier">Supplier</option>-->
+    <!--        <option value="VTM">VTM</option>-->
+    <!--      </select>-->
+    <!--    </div>-->
+    <!--  </fieldset>-->
+
+    <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit"
+       href="summary-page-save-query.html">
+      Save my query and results
+    </a>
+
+    <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-top-5"
+            data-module="nhsuk-button" type="submit" href="#">
+      Download query
+    </button>
+
+
+  </div>
+</div>
+<script>
+  function sortTable(colIndex) {
+    let table = document.getElementById("sortable-table");
+    let headers = table.querySelectorAll("th");
+    let rows = Array.from(table.rows).slice(1);
+    let isAscending = headers[colIndex].getAttribute("aria-sort") !== "ascending";
+
+    // Sort rows
+    rows.sort((rowA, rowB) => {
+      let cellA = rowA.cells[colIndex].innerText.trim().toLowerCase();
+      let cellB = rowB.cells[colIndex].innerText.trim().toLowerCase();
+      return isAscending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+    });
+
+    // Update ARIA attributes and icons
+    headers.forEach(th => {
+      th.setAttribute("aria-sort", "ascending");
+      th.querySelector(".sort-icon").innerHTML = "";
+    });
+
+    headers[colIndex].setAttribute("aria-sort", isAscending ? "ascending" : "descending");
+    headers[colIndex].querySelector(".sort-icon").innerHTML = isAscending ? "▲" : "▼";
+
+    // Reorder table rows
+    rows.forEach(row => table.appendChild(row));
+  }
+
+  // RESIZE FUNCTION
+  document.querySelectorAll('.resizer').forEach(resizer => {
+    let startX, startWidth, col;
+
+    resizer.addEventListener('mousedown', (e) => {
+      // Disable resizing on mobile
+      if (window.innerWidth < 600) {
+        return;
+      }
+
+      col = e.target.parentElement;
+      startX = e.pageX;
+      startWidth = col.offsetWidth;
+
+      document.addEventListener('mousemove', resize);
+      document.addEventListener('mouseup', stopResize);
+    });
+
+    resizer.addEventListener('keydown', (e) => {
+      if (window.innerWidth < 600) {
+        return;
+      } // Prevent resizing via keyboard on mobile
+
+      col = e.target.parentElement;
+      if (e.key === 'ArrowRight') {
+        col.style.width = (col.offsetWidth + 10) + 'px';
+      } else if (e.key === 'ArrowLeft') {
+        col.style.width = (col.offsetWidth - 10) + 'px';
+      }
+    });
+
+    function resize(e) {
+      col.style.width = (startWidth + (e.pageX - startX)) + 'px';
+    }
+
+    function stopResize() {
+      document.removeEventListener('mousemove', resize);
+      document.removeEventListener('mouseup', stopResize);
+    }
+  });
+  document.querySelectorAll(".nhsuk-table__row").forEach(row => {
+    row.addEventListener("click", function(event) {
+      // Check if the clicked element is a link
+      if (event.target.tagName.toLowerCase() === "a") {
+        return; // Don't apply the highlight if a link was clicked
+      }
+
+      document.querySelectorAll(".nhsuk-table__row").forEach(r => r.classList.remove("selected"));
+      this.classList.add("selected");
+    });
+  });
+
+
+</script>
+
+
+{% endblock %}
