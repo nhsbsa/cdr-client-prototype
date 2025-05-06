@@ -1,0 +1,96 @@
+Thought for a couple of seconds
+
+
+```jinja
+{% extends "base-full.html" %}
+{% block content %}
+<div class="nhsuk-width-container">
+
+  <div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="#" onclick="history.back(); return false;">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"/>
+      </svg>
+      Go back
+    </a>
+  </div>
+
+  <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-xl ">Part VIIIA Category M file upload guidance</h1>
+
+        <h2 class="nhsuk-heading-l">1. File structure</h2>
+        <p class="nhsuk-body">
+          Your file must be a single‑sheet <strong>.xlsx</strong> workbook. The data table must start in the first worksheet, at cell <code>A1</code>, and there must be no other worksheets or data outside the table.
+        </p>
+        <p class="nhsuk-body">
+          The table must have exactly 7 columns, in this order:
+        </p>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>VMPP code</li>
+          <li>VMP code</li>
+          <li>Drug Name</li>
+          <li>Pack Size</li>
+          <li>Pack unit of measurement</li>
+          <li>Previous month Drug tariff price <small>(format: <em>Month‑YY DT</em>, e.g. <code>September‑24 DT</code>)</small></li>
+          <li>Current month Drug tariff price <small>(format: <em>Month‑YY DT</em>, e.g. <code>October‑24 DT</code>)</small></li>
+        </ul>
+
+        <h2 class="nhsuk-heading-l">2. Common errors</h2>
+        <p class="nhsuk-body">
+          If your upload fails, you’ll see one of these errors. Check the description and suggested fix below.
+        </p>
+        <table class="nhsuk-table">
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header">Error</th>
+              <th class="nhsuk-table__header">Meaning</th>
+              <th class="nhsuk-table__header">How to fix</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><code>Expected column “[column_name]” not found</code></td>
+              <td class="nhsuk-table__cell">A required column header is missing or misspelt.</td>
+              <td class="nhsuk-table__cell">Rename or add the header exactly as shown.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><code>File has incorrect number of columns</code></td>
+              <td class="nhsuk-table__cell">Your table must have exactly 7 columns.</td>
+              <td class="nhsuk-table__cell">Remove extras or add missing ones so there are 7 columns.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><code>Incorrect data type found in column “[column_name]”, row [number]</code></td>
+              <td class="nhsuk-table__cell">A cell has the wrong format (e.g. text instead of number).</td>
+              <td class="nhsuk-table__cell">Correct the data type to match expectations.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><code>Invalid input found in column “[column_name]”, row [number]</code></td>
+              <td class="nhsuk-table__cell">Value doesn’t match any existing database record.</td>
+              <td class="nhsuk-table__cell">Check spelling/format or update the record before retrying.</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><code>An unexpected error has occurred</code></td>
+              <td class="nhsuk-table__cell">An unexpected issue prevented upload.</td>
+              <td class="nhsuk-table__cell">Try again or raise a support ticket below.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="nhsuk-heading-m">3. Need more help?</h2>
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>
+            If your issue isn’t covered here or you need further assistance, 
+            <a href="#" class="nhsuk-link">raise a support ticket</a>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+```
