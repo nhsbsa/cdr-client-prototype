@@ -656,3 +656,7 @@ fill-blue{
 .historic-record:hover {
     background-color: #C0C7C9 !important;
 }
+
+.nhsuk-button-float-right {
+    float: right;
+}
