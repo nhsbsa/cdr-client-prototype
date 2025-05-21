@@ -208,7 +208,8 @@ fill-blue{
   }
   
   .update-general-heading {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     outline: 2px solid transparent;
     padding: 8px 16px;
     overflow: auto;
@@ -225,6 +226,20 @@ fill-blue{
     background-color: rgb(217, 240, 250);
     margin-bottom: 16px !important;
   }
+
+.reset-link {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reset-link:hover {
+  text-decoration: none;
+}
+
+.reset-link:visited {
+  color: #ffffff;
+}
   
   .max-width-attr-box {
     width: 100%;
