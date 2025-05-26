@@ -675,3 +675,25 @@ fill-blue{
 .nhsuk-button-float-right {
     float: right;
 }
+
+
+.skip-links .nhsuk-icon {
+  width: 20px;
+  height: 20px;
+  fill: #005eb8; /* NHS Blue */
+  vertical-align: middle;
+  margin-right: 4px;
+  transition: fill 0.2s ease;
+}
+
+.skip-links .nhsuk-back-to-top__link:hover .nhsuk-icon {
+  fill: #003078; /* Darker blue on hover */
+}
+
+.icon-up {
+  transform: rotate(270deg);
+}
+
+.icon-down {
+  transform: rotate(90deg);
+}

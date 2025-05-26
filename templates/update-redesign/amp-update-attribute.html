@@ -1,4 +1,4 @@
-{% extends "tce-2465/base2.html" %}
+{% extends "update-redesign/base2.html" %}
 
 
 
@@ -110,7 +110,7 @@
 
 
             <div class="nhsuk-grid-column-three-quarters">
-                <button class="nhsuk-button nhsuk-button--secondary nhsuk-button-float-right" data-module="nhsuk-button"
+                <button class="nhsuk-button nhsuk-button--secondary-solid nhsuk-button-float-right" data-module="nhsuk-button"
                     type="submit">
                     Cancel update
                 </button>
@@ -158,20 +158,14 @@
                     <div class="nhsuk-grid-column-full update-box">
                         <div class="update-general-heading">
                             <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Availability Restrictions</h2>
-                            <a href="#"
-                                class="reset-link reset-link--visited nhsuk-button-float-right "
-                                onclick="resetChanges(event)">Revert
-                                changes</a>
+                            <a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a>
+                           
 
                         </div>
                         <fieldset class="nhsuk-fieldset">
 
 
-                            <!--legend class="nhsuk-fieldset__legend--l update-general-heading"
-                                id="insertAttribute-0-legend-value">Availability Restrictions
-
-
-                            </legend-->
+                           
 
 
                             <!--Current value-->
@@ -189,43 +183,7 @@
                                         <div>
 
                                         </div>
-                                        <div>
-                                            <div class="accessibleautocomplete__wrapper">
-                                                <div
-                                                    style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                                                    <div id="insertAttribute-0-availability-restrictions-select__status--A"
-                                                        role="status" aria-atomic="true" aria-live="polite"></div>
-                                                    <div id="insertAttribute-0-availability-restrictions-select__status--B"
-                                                        role="status" aria-atomic="true" aria-live="polite"></div>
-                                                </div><input aria-expanded="false"
-                                                    aria-owns="insertAttribute-0-availability-restrictions-select__listbox"
-                                                    aria-autocomplete="both"
-                                                    aria-describedby="insertAttribute-0-availability-restrictions-select__assistiveHint"
-                                                    autocomplete="off"
-                                                    class="accessibleautocomplete__input accessibleautocomplete__input--show-all-values"
-                                                    id="insertAttribute-0-availability-restrictions-select" name=""
-                                                    placeholder="" type="text" role="combobox"><svg version="1.1"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="accessibleautocomplete__dropdown-arrow-down"
-                                                    focusable="false">
-                                                    <g stroke="none" fill="none" fill-rule="evenodd">
-                                                        <polygon fill="#000000" points="0 0 22 0 11 17"></polygon>
-                                                    </g>
-                                                </svg>
-                                                <ul class="accessibleautocomplete__menu accessibleautocomplete__menu--inline accessibleautocomplete__menu--hidden"
-                                                    id="insertAttribute-0-availability-restrictions-select__listbox"
-                                                    role="listbox">
-                                                    <li aria-selected="false" class="accessibleautocomplete__option"
-                                                        id="insertAttribute-0-availability-restrictions-select__option--0"
-                                                        role="option" tabindex="-1" aria-posinset="1" aria-setsize="1">
-                                                        None</li>
-                                                </ul><span
-                                                    id="insertAttribute-0-availability-restrictions-select__assistiveHint"
-                                                    style="display: none;">When autocomplete results are available use
-                                                    up and down arrows to review and enter to select. Touch device
-                                                    users, explore by touch or with swipe gestures.</span>
-                                            </div>
-                                        </div><select
+                                        <select
                                             class="nhsuk-select search-type max-width-attr-box display-no-select"
                                             id="insertAttribute-0-availability-restrictions-select-select"
                                             attributename="Availability Restrictions" name="values[0].attributeCode">
@@ -464,31 +422,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                            <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Licensing Authority</h2>
+                            <a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a>
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-1-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Licensing Authority</legend>
+                           
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -735,32 +703,42 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                         <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Licensing Authority Change
+                                Reason</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-2-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Licensing Authority Change
-                                Reason</legend>
+                           
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -798,31 +776,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                          <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Licensed Route</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-3-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Licensed Route</legend>
+                           
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -860,32 +848,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                          <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Combination Product Indicator</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-4-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Combination Product Indicator
-                            </legend>
+                         
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -923,31 +920,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                          <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Product Order Number</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-5-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Product Order Number</legend>
+                           
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -985,25 +992,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1047,25 +1059,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1109,25 +1126,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1171,25 +1193,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1233,25 +1260,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1296,25 +1328,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1358,25 +1395,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1421,25 +1463,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1484,25 +1531,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1547,25 +1599,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
@@ -1609,32 +1666,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                        <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Appliance Type Indicator</h2>
+                            <a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a>
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-16-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Appliance Type Indicator
-                            </legend>
+                           
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -1651,43 +1717,7 @@
                                         <div>
 
                                         </div>
-                                        <div>
-                                            <div class="accessibleautocomplete__wrapper">
-                                                <div
-                                                    style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
-                                                    <div id="insertAttribute-16-appliance-type-indicator-select__status--A"
-                                                        role="status" aria-atomic="true" aria-live="polite"></div>
-                                                    <div id="insertAttribute-16-appliance-type-indicator-select__status--B"
-                                                        role="status" aria-atomic="true" aria-live="polite"></div>
-                                                </div><input aria-expanded="false"
-                                                    aria-owns="insertAttribute-16-appliance-type-indicator-select__listbox"
-                                                    aria-autocomplete="both"
-                                                    aria-describedby="insertAttribute-16-appliance-type-indicator-select__assistiveHint"
-                                                    autocomplete="off"
-                                                    class="accessibleautocomplete__input accessibleautocomplete__input--show-all-values"
-                                                    id="insertAttribute-16-appliance-type-indicator-select" name=""
-                                                    placeholder="" type="text" role="combobox"><svg version="1.1"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="accessibleautocomplete__dropdown-arrow-down"
-                                                    focusable="false">
-                                                    <g stroke="none" fill="none" fill-rule="evenodd">
-                                                        <polygon fill="#000000" points="0 0 22 0 11 17"></polygon>
-                                                    </g>
-                                                </svg>
-                                                <ul class="accessibleautocomplete__menu accessibleautocomplete__menu--inline accessibleautocomplete__menu--hidden"
-                                                    id="insertAttribute-16-appliance-type-indicator-select__listbox"
-                                                    role="listbox">
-                                                    <li aria-selected="false" class="accessibleautocomplete__option"
-                                                        id="insertAttribute-16-appliance-type-indicator-select__option--0"
-                                                        role="option" tabindex="-1" aria-posinset="1" aria-setsize="1">
-                                                        Appliances/Dressings IXA</li>
-                                                </ul><span
-                                                    id="insertAttribute-16-appliance-type-indicator-select__assistiveHint"
-                                                    style="display: none;">When autocomplete results are available use
-                                                    up and down arrows to review and enter to select. Touch device
-                                                    users, explore by touch or with swipe gestures.</span>
-                                            </div>
-                                        </div><select
+                                        <select
                                             class="nhsuk-select search-type max-width-attr-box display-no-select"
                                             id="insertAttribute-16-appliance-type-indicator-select-select"
                                             attributename="Appliance Type Indicator" name="values[16].attributeCode">
@@ -1928,31 +1958,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                        <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Reporting Indicator</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-17-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Reporting Indicator</legend>
+                            
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -1990,31 +2030,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                        <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">PSQV Quantities</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-18-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">PSQV Quantities</legend>
+                           
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -2052,32 +2102,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                        <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Prescribing Status - Jersey</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-19-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Prescribing Status - Jersey
-                            </legend>
+                          
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -2115,32 +2174,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                        <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Dental Formulation Indicator - Jersey</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-20-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Dental Formulation Indicator -
-                                Jersey</legend>
+                            
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -2178,31 +2246,41 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                         <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Invalid Indicator</h2>
+                            <!--a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert changes</a-->
+                           
+
+                        </div>
                         <fieldset class="nhsuk-fieldset">
-                            <legend id="insertAttribute-21-legend-value"
-                                class="nhsuk-fieldset__legend--l update-general-heading">Invalid Indicator</legend>
+                          
 
                             <!--Current value-->
                             <div class="nhsuk-grid-column-one-half">
@@ -2240,25 +2318,30 @@
                     </div>
 
 
-                    <div class="nhsuk-grid-column-full skip-links">
-                        <a class="nhsuk-back-to-top__link" href="#submit">
-                            <svg class="nhsuk-icon skip-to-bottom-link" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Skip to bottom </a>
-                        <span>&nbsp;&nbsp;&nbsp;</span>
-                        <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
-                            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                aria-hidden="true">
-                                <path
-                                    d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
-                                </path>
-                            </svg>
-                            Back to top</a>
-                    </div>
+                  <div class="nhsuk-grid-column-full skip-links">
+
+  <!-- Skip to bottom -->
+  <a class="nhsuk-back-to-top__link" href="#submit">
+    <svg class="nhsuk-icon icon-down" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Skip to bottom
+  </a>
+
+  <span>&nbsp;&nbsp;&nbsp;</span>
+
+  <!-- Back to top -->
+  <a class="nhsuk-back-to-top__link" href="#update-attributes-sub-heading">
+    <svg class="nhsuk-icon icon-up" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+    </svg>
+    Back to top
+  </a>
+
+</div>
+
 
 
 
