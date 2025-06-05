@@ -20,45 +20,34 @@
         Add save query note
       </h1>
     </legend>
-    <div class="nhsuk-warning-callout">
-      <h3 class="nhsuk-warning-callout__label">
-    <span role="text">
-      <span class="nhsuk-u-visually-hidden">Important: </span>
+<!--    <div class="nhsuk-warning-callout">-->
+<!--      <h3 class="nhsuk-warning-callout__label">-->
+<!--    <span role="text">-->
+<!--      <span class="nhsuk-u-visually-hidden">Important: </span>-->
+<!--      Default settings-->
+<!--    </span>-->
+<!--      </h3>-->
+<!--      <p>Your user ID (Cipher) and today's date will be saved automatically by default.</p>-->
+<!--      <p>Your UDQ will be kept private unless you choose to share it.</p>-->
+<!--    </div>-->
+<!--     <span class="nhsuk-u-visually-hidden">Information: </span>-->
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
       Default settings
     </span>
-      </h3>
-      <p>Your user ID (Cipher) and today's date will be saved automatically by default. </p>
-      <p>Your UDQ will be kept private unless you choose to share it.</p>
-    </div>
-     <span class="nhsuk-u-visually-hidden">Information: </span>
+      </summary>
+      <div class="nhsuk-details__text">
+
+        <p>Your user ID (Cipher) and today's date will be saved automatically by default.</p>
+        <p>Your UDQ will be kept private unless you choose to share it.</p>
 
 
+      </div>
+    </details>
     <div class="nhsuk-form-group">
 
-      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1 class="nhsuk-fieldset__heading">
-            Share query
-          </h1>
-        </legend>
-
-        <div class="nhsuk-hint" id="example-hint">
-          You can choose to share this query with others from your team
-        </div>
-
-        <div class="nhsuk-checkboxes">
-
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-              Share
-            </label>
-          </div>
-
-        </div>
-      </fieldset>
-
-    </div>
     <div class="nhsuk-form-group">
       <h2 class="nhsuk-label-wrapper">
         <label class="nhsuk-label nhsuk-label--l" for="more-detail">
@@ -89,7 +78,32 @@
     </div>
 
   </div>
-  </fieldset>
+
+      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Share query
+          </h1>
+        </legend>
+
+        <div class="nhsuk-hint" id="example-hint">
+          You can choose to share this query with others from your team
+        </div>
+
+        <div class="nhsuk-checkboxes">
+
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              Share
+            </label>
+          </div>
+
+        </div>
+      </fieldset>
+
+<!--    </div>-->
+<!--  </fieldset>-->
 
 <a class="nhsuk-button nhsuk-u-margin-top-5" id="continue-button" name="button" href="save-query-summary.html">Continue</a>
 

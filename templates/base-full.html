@@ -12,8 +12,11 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel="stylesheet" href="/css/nhsuk.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/nhsuk.min.css">
+  <link rel="stylesheet" href="/css/govuk-frontend-4.2.0.min.css">
+  <link rel="stylesheet" href="/css/govuk-frontend-ie8-4.2.0.min.css">
+  <link rel="stylesheet" href="/css/gov.min.scss">
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
@@ -31,8 +34,13 @@
   <script src="/js/copyDateToClipboard.js"></script>
   <script src="/js/copyToClipboard.js"></script>
   <script src="/js/pasteDateToDateInputs.js"></script>
+  <script src="/js/gov.min.js"></script>
+  <script src="/js/autocomplete.js"></script>
 </head>
-
+<body>
+<script>
+  document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+</script>
 
 <header class="nhsuk-header" id="nhs-global-header" role="banner">
   <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
@@ -71,40 +79,37 @@
 
 <div class="nhsuk-width-container-fluid nhsuk-u-margin-left-6 nhsuk-u-margin-right-6">
   <main id="main-content" role="main" class="nhsuk-main-wrapper">
-    <script>
-    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
-</script>
 
     {% block content %}{% endblock %}
   </main>
 </div>
 
 <footer role="contentinfo">
-  <div class="nhsuk-footer" id="nhsuk-footer">
-    <div class="nhsuk-width-container">
+  <div class="nhsuk-footer-container" id="nhsuk-footer">
+    <div class="nhsuk-width-container-fluid">
       <h2 class="nhsuk-u-visually-hidden">Support links</h2>
       <ul class="nhsuk-footer__list">
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
+        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
                                                href="https://www.nhs.uk/Pages/nhs-sites.aspx">NHS
           sites</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
+        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
                                                href="https://www.nhs.uk/about-us">About us</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
+        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
                                                href="https://www.nhs.uk/contact-us/">Contact us</a>
         </li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
+        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
                                                href="https://www.nhs.uk/about-us/sitemap/">Sitemap</a>
         </li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
+        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
                                                href="https://www.nhs.uk/our-policies/">Our
           policies</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
+        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
                                                href="https://www.nhsbsa.nhs.uk/accessibility-statement-dictionary-medicines-and-devices-browser-dmd-browser">Accessibility</a>
         </li>
       </ul>
     </div>
   </div>
-  <script src="/js/application.js"></script>
+  <script src="/js/nhsuk.min.js"></script>
   <script src="/js/gov.js"></script>
   <script>
     window.GOVUKFrontend.initAll();

@@ -208,6 +208,13 @@
 
     <div class="nhsuk-radios">
 
+<!--      <div class="nhsuk-radios__item">-->
+<!--        <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">-->
+<!--        <label class="nhsuk-label nhsuk-radios__label" for="example-1">-->
+<!--          Save this query as an excel file-->
+<!--        </label>-->
+<!--      </div>-->
+
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
         <label class="nhsuk-label nhsuk-radios__label" for="example-1">
@@ -239,7 +246,7 @@
     const selected = document.querySelector('input[name="example"]:checked');
     if (selected) {
       if (selected.value === "yes") {
-        window.location.href = "save-query-choose-category.html";
+        window.location.href = "save-query-add-note.html";
       } else if (selected.value === "no") {
         window.location.href = "home-page.html";
       }
