@@ -116,36 +116,46 @@
 
 
 <footer role="contentinfo">
-  <div class="nhsuk-footer" id="nhsuk-footer">
+  <div class="nhsuk-footer-container" id="nhsuk-footer" style="padding-bottom: 60px">
     <div class="nhsuk-width-container">
       <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list">
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
-                                               href="https://www.nhs.uk/Pages/nhs-sites.aspx">NHS
-          sites</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
-                                               href="https://www.nhs.uk/about-us">About us</a></li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
-                                               href="https://www.nhs.uk/contact-us/">Contact us</a>
-        </li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
-                                               href="https://www.nhs.uk/about-us/sitemap/">Sitemap</a>
-        </li>
-        <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link"
-                                               href="https://www.nhs.uk/our-policies/">Our
-          policies</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
-                                               href="https://www.nhsbsa.nhs.uk/accessibility-statement-dictionary-medicines-and-devices-browser-dmd-browser">Accessibility</a>
-        </li>
-      </ul>
+      <div class="nhsuk-footer">
+        <ul class="nhsuk-footer__list">
+          <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/Pages/nhs-sites.aspx">NHS
+            sites</a></li>
+          <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/about-us">About us</a></li>
+          <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/contact-us/">Contact us</a>
+          </li>
+          <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/about-us/sitemap/">Sitemap</a>
+          </li>
+          <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/our-policies/">Our
+            policies</a></li>
+          <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item"><a class="nhsuk-footer__list-item-link" href="">Accessibility</a>
+          </li>
+        </ul>
+
+        <div>
+          <p class="nhsuk-footer__copyright">© Crown copyright</p>
+        </div>
+      </div>
     </div>
+
   </div>
-  <script src="/js/nhsuk.min.js"></script>
-  <script src="/js/gov.js"></script>
+
+  <script>
+    document.application = {};
+    document.application.ws = "http:\/\/localhost:8082\/ws";
+  </script>
+  <script src="/js/application.js"></script>
+  <script src="/es/jquery.js"></script>
+  <script src="/js/moj.js"></script>
+  <script>
+    window.MOJFrontend.initAll();
+  </script>
   <script>
     window.GOVUKFrontend.initAll();
   </script>
-  {% block scripts %}{% endblock %}
+  <script src="/webjars/jquery/3.7.1/jquery.min.js"></script>
 </footer>
 </body>
 </html>
