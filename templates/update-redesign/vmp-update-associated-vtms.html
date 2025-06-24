@@ -5,10 +5,18 @@
 <div class="nhsuk-grid-row">
     <div id="content-pane" class="nhsuk-grid-column-full">
 
+           <div class="nhsuk-grid-column-three-quarters">
         <span class="nhsuk-caption-l" id="update-associated-vtm-sub-heading">Update associated VTM</span>
         <span class="nhsuk-u-visually-hidden"> - </span>
         <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Abacavir 20mg/ml oral solution sugar free</h1>
-
+</div>
+        
+  <div class="nhsuk-grid-column-one-quarter" style="float: right;">
+                <button class="nhsuk-button nhsuk-button--secondary-solid nhsuk-button-float-right"
+                    data-module="nhsuk-button" type="submit">
+                    Cancel update
+                </button>
+            </div>
 
 
         <form method="post">
@@ -22,11 +30,17 @@
             <section id="vtm-0">
 
                 <div class="nhsuk-grid-column-full update-box">
+                      <div class="update-general-heading">
+                                <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Abacavir</h2>
+                                <a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert
+                                    changes</a>
+
+
+                            </div>
 
                     <!--Current name-->
                     <fieldset class="nhsuk-fieldset">
-                        <legend id="vtm-0-name-legend" class="nhsuk-fieldset__legend--m update-general-heading">Abacavir
-                        </legend>
+                      
                         <input class="nhsuk-input" type="hidden" id="values0.id" name="values[0].id" value="15">
                         <input class="nhsuk-input" type="hidden" id="values0.name" name="values[0].name"
                             value="Abacavir">
@@ -181,7 +195,7 @@
 
 
 
-            <button class="nhsuk-button nhsuk-button--primary" id="submit" name="_eventId_submit" type="submit">Continue
+            <button class="nhsuk-button nhsuk-button--primary" id="submit" name="_eventId_submit" type="submit">Preview changes
             </button>
 
         </form>

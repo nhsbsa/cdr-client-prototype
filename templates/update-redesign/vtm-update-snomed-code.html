@@ -3,10 +3,18 @@
 <div class="nhsuk-grid-row">
     <div id="content-pane" class="nhsuk-grid-column-full">
 
+        <div class="nhsuk-grid-column-three-quarters">
+            <span class="nhsuk-caption-l" id="update-codes-sub-heading">Update SNOMED Code</span>
+            <span class="nhsuk-u-visually-hidden"> - </span>
+            <h1 class="nhsuk-heading-xl" id="update-codes-heading">Abacavir</h1>
+        </div>
 
-        <span class="nhsuk-caption-l" id="update-codes-sub-heading">Update SNOMED Code</span>
-        <span class="nhsuk-u-visually-hidden"> - </span>
-        <h1 class="nhsuk-heading-xl" id="update-codes-heading">Abacavir</h1>
+        <div class="nhsuk-grid-column-one-quarter" style="float: right;">
+            <button class="nhsuk-button nhsuk-button--secondary-solid nhsuk-button-float-right"
+                data-module="nhsuk-button" type="submit">
+                Cancel update
+            </button>
+        </div>
 
 
         <form method="post">
@@ -21,14 +29,15 @@
 
 
                     <div class="nhsuk-grid-column-full update-box">
+                          <div class="update-general-heading">
+                            <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">SNOMED code</h2>
+                            <a href="#" class="nhsuk-link nhsuk-link--reverse nhsuk-button-float-right">Revert
+                                changes</a>
+                        </div>
 
                         <fieldset class="nhsuk-fieldset" aria-describedby="code-hint-snomed-already-exists"></fieldset>
 
 
-
-
-                        <legend id="code-0-legend-value" class="nhsuk-fieldset__legend--l update-general-heading">SNOMED
-                            Code</legend>
 
 
 
@@ -245,7 +254,7 @@
 
 
                     <button class="nhsuk-button nhsuk-button--primary submit-button" id="submit" name="_eventId_submit"
-                        type="submit">Continue
+                        type="submit">Preview changes
                     </button>
                 </div>
 
