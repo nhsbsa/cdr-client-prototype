@@ -790,3 +790,137 @@ fill-blue {
         width: 100%;
     }
 }
+
+.accessibleautocomplete__wrapper {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  z-index: 0;
+}
+
+.accessibleautocomplete__hint,
+.accessibleautocomplete__input {
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #4c6272;
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 40px;
+  margin-top: 0;
+  padding: 4px;
+  width: 100%;
+}
+
+.accessibleautocomplete__input {
+  position: relative;
+  background-color: transparent;
+}
+
+.accessibleautocomplete__hint {
+  color: #b1b4b6;
+  position: absolute;
+}
+
+.accessibleautocomplete__input--default {
+  padding: 5px;
+}
+
+.accessibleautocomplete__input--focused {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px;
+}
+
+.accessibleautocomplete__input--show-all-values {
+  padding: 5px 34px 5px 5px;
+  cursor: pointer;
+}
+
+.accessibleautocomplete__dropdown-arrow-down {
+  display: inline-block;
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  z-index: -1;
+}
+
+.accessibleautocomplete__menu {
+  background-color: #fff;
+  border: 2px solid #0b0c0c;
+  border-top: 0;
+  color: #0b0c0c;
+  margin: 0;
+  max-height: 342px;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.accessibleautocomplete__menu--visible {
+  display: block;
+}
+
+.accessibleautocomplete__menu--hidden {
+  display: none;
+}
+
+.accessibleautocomplete__menu--overlay {
+  box-shadow: rgba(0, 0, 0, 0.256863) 0 2px 6px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+}
+
+.accessibleautocomplete__menu--inline {
+  position: relative;
+}
+
+.accessibleautocomplete__option {
+  border-bottom: solid #b1b4b6;
+  border-width: 1px 0;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.accessibleautocomplete__option > * {
+  pointer-events: none;
+  margin-bottom: 0;
+}
+
+.accessibleautocomplete__option:first-of-type {
+  border-top-width: 0;
+  margin-bottom: 0;
+}
+
+.accessibleautocomplete__option:last-of-type {
+  border-bottom-width: 0;
+  margin-bottom: 0;
+}
+
+.accessibleautocomplete__option--odd {
+  background-color: #fafafa;
+}
+
+.accessibleautocomplete__option--focused,
+.accessibleautocomplete__option:hover {
+  background-color: #1d70b8;
+  border-color: #1d70b8;
+  color: #fff;
+  outline: 0;
+}
+
+.accessibleautocomplete__option--no-results {
+  background-color: #fafafa;
+  color: #646b6f;
+  cursor: not-allowed;
+}
