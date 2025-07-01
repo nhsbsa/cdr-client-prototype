@@ -1,0 +1,489 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="saved-query-summary-page.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to saved query summary page  </span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User saved query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Large query for looking at VMPP Cat A prices.Version 2
+      </h1>
+    </legend>
+
+    <!--    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend&#45;&#45;l">-->
+    <!--      <h2 class="nhsuk-fieldset__heading">-->
+    <!--        Internal/External attribute selected-->
+
+    <!--      </h2>-->
+    <!--    </legend>-->
+
+    <!--    <div class="nhsuk-hint" id="contact-hint">-->
+    <!--      Internal/external attribute are set by default to both Int and Ext. If you want to make changes to the Int/Ext attribute-->
+    <!--      <a href="edit-attribute-int-ext.html">-->
+    <!--        You can edit that here-->
+    <!--      </a>.-->
+    <!--    </div>-->
+
+    <!--    <dl class="nhsuk-summary-list">-->
+
+    <!--      <div class="nhsuk-summary-list__row">-->
+    <!--        <dt class="nhsuk-summary-list__key">-->
+    <!--         Int/Ext-->
+    <!--        </dt>-->
+    <!--        <dd class="nhsuk-summary-list__value">-->
+    <!--          Both Int and Ext-->
+    <!--        </dd>-->
+
+    <!--      </div>-->
+
+    </dl>
+    <!--search criteria view -->
+    <div class="nhsuk-do-dont-list nhsuk-u-margin-top-9">
+      <h3 class="nhsuk-do-dont-list__label">Search criteria view</h3>
+
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption"></caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Level
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Attribute
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Qualifier(Operator)
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Criteria
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Between/starts between
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Start date
+          </th>
+          <th role="columnheader" class="" scope="col">
+            End date </th>
+
+          <th role="columnheader" class="" scope="col">
+            Action
+          </th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">VPM</td>
+          <td class="nhsuk-table__cell ">Name</td>
+          <td class="nhsuk-table__cell ">Equal to</td>
+          <td class="nhsuk-table__cell ">%Sulphate</td>
+          <td class="nhsuk-table__cell ">Between</td>
+          <td class="nhsuk-table__cell ">01 January 2015</td>
+          <td class="nhsuk-table__cell ">31 December 2015</td>
+          <!--this edit will take the user to the start of the edit journey  -->
+          <td class="nhsuk-table__cell "><a href="edit-search-criteria-query.html">Edit</a></td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">VPM</td>
+          <td class="nhsuk-table__cell ">Invalid status</td>
+          <td class="nhsuk-table__cell ">Equal to</td>
+          <td class="nhsuk-table__cell ">Valid</td>
+          <td class="nhsuk-table__cell ">
+          </td>
+          <td class="nhsuk-table__cell "></td>
+          <td class="nhsuk-table__cell "></td>
+          <!--this edit will take the user to the start of the edit journey  -->
+          <td class="nhsuk-table__cell "><a href="edit-dictionary.html">Edit</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <!--search display view-->
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Search display view</h3>
+      <table class="nhsuk-table" role="Table">
+        <caption class="nhsuk-table__caption">Search display</caption>
+        <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Int/Ext
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Level
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Condition
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Dates
+          </th>
+
+          <th role="columnheader" class="" scope="col">
+            Move row
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Action
+          </th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--green ">
+            Int
+          </strong></td>
+          <td class="nhsuk-table__cell">VMP</td>
+          <td class="nhsuk-table__cell ">Name</td>
+          <td class="nhsuk-table__cell ">Exclude dates</td>
+
+          <style>
+            .highlight {
+              background-color: #d3d3d3; /* Grey color */
+              transition: background-color 0.5s ease;
+            }
+          </style>
+
+          <style>
+            .button-spacing {
+              background: none;
+              border: none;
+              padding: 0;
+              margin-right: 20px;
+              outline: none;
+              transition: background 0.3s ease;
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+            }
+            .button-spacing svg {
+              transform: translate(0, 1px); /* Adjust the values as needed */
+            }
+            .button-spacing:focus {
+              box-shadow: 0px 0px 0px 3px #ffeb3b, 0 0 0 6px #212b32;
+            }
+
+          </style>
+
+          <style>
+            .highlight {
+              background-color: #d3d3d3; /* Grey color */
+              transition: background-color 0.5s ease;
+            }
+          </style>
+          <td class="nhsuk-table__cell">
+            <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing" style="background: none; border: none; padding: 0; margin-right: 20px;" title="Move up">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 8v8M12 8l3.5 3.5M12 8l-3.5 3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button onclick="moveRow(this, 'down')" aria-label="Move row down" class="button-spacing" style="background: none; border: none; padding: 0;" title="Move down">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 16v-8M12 16l3.5-3.5M12 16l-3.5-3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a href="edit-search-display-query.html">Edit</a>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--orange ">
+            Ext
+          </strong></td>
+          <td class="nhsuk-table__cell">VMPP</td>
+          <td class="nhsuk-table__cell ">SNOMED Code</td>
+          <td class="nhsuk-table__cell ">Exclude dates</td>
+          <td class="nhsuk-table__cell">
+            <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing" style="background: none; border: none; padding: 0; margin-right: 20px;" title="Move up">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 8v8M12 8l3.5 3.5M12 8l-3.5 3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button onclick="moveRow(this, 'down')" aria-label="Move row down" class="button-spacing" style="background: none; border: none; padding: 0;" title="Move down">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 16v-8M12 16l3.5-3.5M12 16l-3.5-3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a href="Edit">Edit</a>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--green ">
+            Int
+          </strong></td>
+          <td class="nhsuk-table__cell">VMPP</td>
+          <td class="nhsuk-table__cell ">Pack size</td>
+          <td class="nhsuk-table__cell ">Exclude dates</td>
+          <td class="nhsuk-table__cell">
+            <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing" style="background: none; border: none; padding: 0; margin-right: 20px;" title="Move up">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 8v8M12 8l3.5 3.5M12 8l-3.5 3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button onclick="moveRow(this, 'down')" aria-label="Move row down" class="button-spacing" style="background: none; border: none; padding: 0;" title="Move down">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 16v-8M12 16l3.5-3.5M12 16l-3.5-3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a href="Edit">Edit</a>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--green ">
+            Int
+          </strong></td>
+          <td class="nhsuk-table__cell">VMPP</td>
+          <td class="nhsuk-table__cell ">Reimbursement price DT</td>
+          <td class="nhsuk-table__cell ">Exclude dates</td>
+          <td class="nhsuk-table__cell">
+            <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing" style="background: none; border: none; padding: 0; margin-right: 20px;" title="Move up">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 8v8M12 8l3.5 3.5M12 8l-3.5 3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button onclick="moveRow(this, 'down')" aria-label="Move row down" class="button-spacing" style="background: none; border: none; padding: 0;" title="Move down">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 16v-8M12 16l3.5-3.5M12 16l-3.5-3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a href="Edit">Edit</a>
+          </td>
+        </tr>
+
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--orange ">
+            Ext
+          </strong></td>
+          <td class="nhsuk-table__cell">VMPP</td>
+          <td class="nhsuk-table__cell ">Drug tariff payment category</td>
+          <td class="nhsuk-table__cell ">Exclude dates</td>
+          <td class="nhsuk-table__cell">
+            <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing" style="background: none; border: none; padding: 0; margin-right: 20px;" title="Move up">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 8v8M12 8l3.5 3.5M12 8l-3.5 3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button onclick="moveRow(this, 'down')" aria-label="Move row down" class="button-spacing" style="background: none; border: none; padding: 0;" title="Move down">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 16v-8M12 16l3.5-3.5M12 16l-3.5-3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a href="Edit">Edit</a>
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td class="nhsuk-table__cell ">    <strong class="nhsuk-tag nhsuk-tag--orange ">
+            Ext
+          </strong></td>
+          <td class="nhsuk-table__cell">VMPP</td>
+          <td class="nhsuk-table__cell ">Price concession indicator</td>
+          <td class="nhsuk-table__cell ">Include dates</td>
+          <td class="nhsuk-table__cell">
+            <button onclick="moveRow(this, 'up')" aria-label="Move row up" class="button-spacing" style="background: none; border: none; padding: 0; margin-right: 20px;" title="Move up">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 8v8M12 8l3.5 3.5M12 8l-3.5 3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button onclick="moveRow(this, 'down')" aria-label="Move row down" class="button-spacing" style="background: none; border: none; padding: 0;" title="Move down">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="black" stroke-width="1.5"/>
+                <path d="M12 16v-8M12 16l3.5-3.5M12 16l-3.5-3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </td>
+          <td class="nhsuk-table__cell">
+            <a href="Edit">Edit</a>
+          </td>
+        </tr>
+
+
+        </tbody>
+      </table>
+      <form>
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Hide internal attributes.
+              </h1>
+            </legend>
+
+            <div class="nhsuk-hint" id="example-hint">
+              You can choose to hide internal attributes from your search results.
+            </div>
+
+            <div class="nhsuk-checkboxes">
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                  Hide internal attributes
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+
+        </div>
+
+      </form>
+      <div id="live-region" aria-live="polite" aria-atomic="true" class="sr-only nhsuk-u-visually-hidden "></div>
+    </div>
+    <div class="nhsuk-form-group">
+
+
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h2 class="nhsuk-fieldset__heading">
+          Dates selected
+        </h2>
+      </legend>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            18th November 2024
+          </dd>
+
+          <dd class="nhsuk-summary-list__actions">
+
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> edit</span>
+            </a>
+
+          </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            End date
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            18th November 2024
+          </dd>
+
+          <dd class="nhsuk-summary-list__actions">
+
+            <a href="#">
+              Edit<span class="nhsuk-u-visually-hidden"> edit</span>
+            </a>
+
+          </dd>
+
+        </div>
+
+      </dl>
+
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h2 class="nhsuk-fieldset__heading">
+          Dictionary selected
+        </h2>
+      </legend>
+
+      <div class="nhsuk-hint" id="contact-hint">
+        If you need to make changes to the dictionary you can
+        <a href="choose-dictionary.html">
+          edit, add or remove the dictionary here
+        </a>.
+      </div>
+
+      <dl class="nhsuk-summary-list">
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Dictionary
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Both PCDD and SCDD
+          </dd>
+
+        </div>
+
+      </dl>
+    </div>
+  </fieldset>
+
+  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="load-page.html" id="save-continue">
+    Start search
+  </a>
+  <!--  <a class="nhsuk-button nhsuk-button&#45;&#45;warning nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="confirm-cancel-query.html" id="cancel-search" style="background-color: #d4351c; border-color: #d4351c; color: #fff;" >-->
+  <!--    Cancel search-->
+  <!--  </a>-->
+</div>
+
+<script>
+  function moveRow(button, direction) {
+    var row = button.parentNode.parentNode;
+    var tbody = row.parentNode;
+    var liveRegion = document.getElementById('live-region');
+
+    if (direction === 'up') {
+      var prevRow = row.previousElementSibling;
+      if (prevRow) {
+        tbody.insertBefore(row, prevRow);
+      } else {
+        tbody.appendChild(row);
+      }
+      liveRegion.textContent = 'Row moved up';
+    } else if (direction === 'down') {
+      var nextRow = row.nextElementSibling;
+      if (nextRow) {
+        tbody.insertBefore(nextRow, row);
+      } else {
+        tbody.insertBefore(row, tbody.firstElementChild);
+      }
+      liveRegion.textContent = 'Row moved down';
+    }
+
+    row.classList.add('highlight');
+
+
+    setTimeout(function() {
+      row.classList.remove('highlight');
+    }, 2000);
+
+    button.focus();
+  }
+</script>
+
+{% endblock %}

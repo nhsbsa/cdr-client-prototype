@@ -64,7 +64,7 @@
 
 
   </ul>
-  <!--Recent-->
+  <!--My recent-->
   <div class="nhsuk-tabs__panel" id="recent">
 
     <!--search for-->
@@ -183,69 +183,72 @@
             </div>
           </fieldset>
         </div>
-        </div>
+      </div>
 
     </details>
 
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-full">
-  <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button"
-          type="submit">
-    Search
-  </button>
+        <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button"
+                type="submit">
+          Search
+        </button>
 
-<!--Popularity indicator to help the user to understand the popularity rating system -->
+        <!--Popularity indicator to help the user to understand the popularity rating system -->
         <div class="nhsuk-u-width-one-third">
-        <details class="nhsuk-details">
-          <summary class="nhsuk-details__summary ">
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary ">
     <span class="nhsuk-details__summary-text nhsuk-u-margin-top-5">
       Popularity indicator
     </span>
-          </summary>
-          <div class="nhsuk-details__text">
-            <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of times a query has been
-              accessed by users. The more popular a query is, the more frequently it is used.</p>
-          <table class="nhsuk-table nhsuk-u-max-width-600">
-            <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity scale</caption>
-            <thead class="nhsuk-table__head">
-            <tr>
-              <th scope="col" class="nhsuk-table__header">Rank</th>
-              <th scope="col" class="nhsuk-table__header">Indicator</th>
-              <th scope="col" class="nhsuk-table__header">Description</th>
-            </tr>
-            </thead>
-            <tbody class="nhsuk-table__body">
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">1</td>
-              <td class="nhsuk-table__cell">Most popular</td>
-              <td class="nhsuk-table__cell">This query is the most accessed by users.</td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">2</td>
-              <td class="nhsuk-table__cell">Very popular</td>
-              <td class="nhsuk-table__cell">Among the most frequently used queries..</td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">3</td>
-              <td class="nhsuk-table__cell">Popular</td>
-              <td class="nhsuk-table__cell">Frequently used by many users.</td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">4</td>
-              <td class="nhsuk-table__cell">Less popular</td>
-              <td class="nhsuk-table__cell">Used occasionally but not as frequently..</td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">5</td>
-              <td class="nhsuk-table__cell">Rarely used</td>
-              <td class="nhsuk-table__cell">Among the least accessed queries..</td>
-            </tr>
-            </tbody>
-          </table>
-        </details>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of
+                times a query has been
+                accessed by users. The more popular a query is, the more frequently it is used.</p>
+              <table class="nhsuk-table nhsuk-u-max-width-600">
+                <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity
+                  scale
+                </caption>
+                <thead class="nhsuk-table__head">
+                <tr>
+                  <th scope="col" class="nhsuk-table__header">Rank</th>
+                  <th scope="col" class="nhsuk-table__header">Indicator</th>
+                  <th scope="col" class="nhsuk-table__header">Description</th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">1</td>
+                  <td class="nhsuk-table__cell">Extremely popular</td>
+                  <td class="nhsuk-table__cell">These queries are the ones accessed most frequently by colleagues.</td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">2</td>
+                  <td class="nhsuk-table__cell">Very popular</td>
+                  <td class="nhsuk-table__cell">Among the most frequently used queries..</td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">3</td>
+                  <td class="nhsuk-table__cell">Popular</td>
+                  <td class="nhsuk-table__cell">Frequently used by many colleagues.</td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">4</td>
+                  <td class="nhsuk-table__cell">Less popular</td>
+                  <td class="nhsuk-table__cell">Used occasionally but not as frequently..</td>
+                </tr>
+                <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell">5</td>
+                  <td class="nhsuk-table__cell">Rarely used</td>
+                  <td class="nhsuk-table__cell">Among the least accessed queries..</td>
+                </tr>
+                </tbody>
+              </table>
+          </details>
         </div>
-</div>
-</div>
+      </div>
+    </div>
 
     <style>
       th.sortable > div {
@@ -269,205 +272,141 @@
         opacity: 0.4;
       }
     </style>
-<!--Table-->
-    <table class="nhsuk-table nhsuk-u-margin-top-5" id="sortable-table">
+    <!--Table-->
+    <table class="nhsuk-table nhsuk-u-margin-top-5" id="recent table">
       <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
         Table showing my recent queries
       </caption>
       <thead class="nhsuk-table__head">
       <tr class="nhsuk-table__row">
 
-        <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
-          <div>
-            <span>Popularity</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
-              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
-            </svg>
-          </div>
-        </th>
-        <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
-          <div>
-            <span>Cypher</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
-              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
-            </svg>
-          </div>
-        </th>
-        <th scope="col" class="sortable" data-sort="date" aria-sort="none">
-          <div>
-            <span>Date saved</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
-              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
-            </svg>
-          </div>
-        </th>
-        <th scope="col" class="sortable" data-sort="text" aria-sort="none">
-          <div>
-            <span>Title</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
-              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
-            </svg>
-          </div>
-        </th>
+        <th scope="col">Popularity</th>
+        <th scope="col">Cypher</th>
+        <th scope="col">Date saved</th>
+        <th scope="col" >Title</th>
+        <th scope="col">Version</th>
         <th scope="col">Notes</th>
-        <th scope="col">Action</th>
+<!--        <th scope="col">Action</th>-->
       </tr>
       </thead>
       <tbody class="nhsuk-table__body">
       <tr class="nhsuk-table__row" data-date="2025-04-12">
-        <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell" data-sort-value="1">Jahmo</td>
         <td class="nhsuk-table__cell">12 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at VMPP Cat A price</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-view-notes.html">View notes</a></td>
-<!--        <td class="govuk-table__cell" style="white-space: normal;">-->
-<!--          <details class="govuk-details">-->
-<!--            <summary class="govuk-details__summary">-->
-<!--            <span class="govuk-details__summary-text">-->
-<!--              View notes-->
-<!--            </span>-->
-<!--            </summary>-->
-<!--            <div class="govuk-details__text" style="white-space: normal; word-break: break-word;" >-->
-<!--              Lorem ipsum dolor sit amet,consectetur adipiscing elit,-->
-<!--              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
-<!--              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.-->
-<!--            </div>-->
-<!--          </details>-->
-<!--        </td>-->
-        <td class="nhsuk-table__cell"><a href="#">Options</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at VMPP Cat A price</a></td>
+        <td class="nhsuk-table__cell">Original</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a href="saved-query-options.html">Options</a></td>-->
       </tr>
       <tr class="nhsuk-table__row" data-date="2025-04-10">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">Jahmo</td>
-                <td class="nhsuk-table__cell ">10 April 2025</td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at vmpp cat A price </a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">10 April 2025</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at vmpp cat A price </a></td>
+        <td class="nhsuk-table__cell">Original</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a-->
+<!--            href="saved-query-add-favorites-confirmation.html">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-08-02">
-                  <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
-                  <td class="nhsuk-table__cell ">2 August 2024</td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part VIIIC prices for XYZ</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">2 August 2024</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part
+          VIIIC prices for XYZ</a></td>
+        <td class="nhsuk-table__cell">Version 2</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a-->
+<!--            href="saved-query-add-favorites-confirmation.html">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-05-20">
-                  <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
-                  <td class="nhsuk-table__cell ">20 May2024</td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation class</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">20 May2024</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation
+          class</a></td>
+        <td class="nhsuk-table__cell">Original</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a-->
+<!--            href="saved-query-add-favorites-confirmation.html">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-04-22">
-                  <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
         <td class="nhsuk-table__cell">Hekir</td>
-                  <td class="nhsuk-table__cell ">22 April 2023</td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">22 April 2023</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a>
+        </td>
+        <td class="nhsuk-table__cell">Original</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a-->
+<!--            href="saved-query-add-favorites-confirmation.html">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-09-07">
-                  <td class="nhsuk-table__cell" data-sort-value="4">Less popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="4">Less popular</td>
         <td class="nhsuk-table__cell">Jahmo</td>
-                  <td class="nhsuk-table__cell ">07 September 2023</td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation class.</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">07 September 2023</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation
+          class.</a></td>
+        <td class="nhsuk-table__cell">Original</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a-->
+<!--            href="saved-query-add-favorites-confirmation.html">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-11-25">
-                 <td class="nhsuk-table__cell" data-sort-value="5">Rarely used</td>
+        <td class="nhsuk-table__cell" data-sort-value="5">Rarely used</td>
         <td class="nhsuk-table__cell">Hekir</td>
-                  <td class="nhsuk-table__cell ">25 November 2022</td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name where VMP Prescribing status is not valid</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">25 November 2022</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell">Version 2</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a-->
+<!--            href="saved-query-add-favorites-confirmation.html">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-12">
-                  <td class="nhsuk-table__cell"data-sort-value="1">Most popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
-                  <td class="nhsuk-table__cell ">12 April 2022</td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP Preperation class changes</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">12 April 2022</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell">Version 3</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a-->
+<!--            href="saved-query-add-favorites-confirmation.html">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-25">
-                  <td class="nhsuk-table__cell"data-sort-value="2">Very popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">KAKEL</td>
-                  <td class="nhsuk-table__cell ">25 April 2025</td>
-                  <td class="nhsuk-table__cell"><a href="#">Zero price + NHS ind</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="#">Options</a></td>
-                </tr>
+        <td class="nhsuk-table__cell ">25 April 2025</td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell">Original</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a href="#">Options</a></td>-->
+      </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-01-28">
-                  <td class="nhsuk-table__cell"data-sort-value="3">Popular</td>
-        <td class="nhsuk-table__cell" >JAHMO</td>
-                  <td class="nhsuk-table__cell ">28 January 2022</td>
-                  <td class="nhsuk-table__cell"><a href="#">Zero price with reimbursement price.</a></td>
-                  <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-                  <td class="nhsuk-table__cell"><a href="#">Options</a></td>
-                </tr>
-    
+        <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
+        <td class="nhsuk-table__cell">JAHMO</td>
+        <td class="nhsuk-table__cell ">28 January 2022</td>
+        <td class="nhsuk-table__cell"><a href="#">Zero price with reimbursement price.</a></td>
+        <td class="nhsuk-table__cell">Original</td>
+        <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
+<!--        <td class="nhsuk-table__cell"><a href="#">Options</a></td>-->
+      </tr>
+
       </tbody>
     </table>
-
-    <script>
-      document.querySelectorAll('.sortable').forEach(header => {
-        header.addEventListener('click', () => {
-          const table = document.getElementById('sortable-table');
-          const tbody = table.querySelector('tbody');
-          const rows = Array.from(tbody.querySelectorAll('tr'));
-
-          const isDate = header.dataset.sort === 'date';
-          const isPopularity = header.dataset.sort === 'popularity';
-          const colIndex = Array.from(header.parentNode.children).indexOf(header);
-          const currentSort = header.getAttribute('aria-sort');
-          const isAsc = currentSort !== 'ascending';
-
-          // Reset aria-sort on all headers
-          document.querySelectorAll('.sortable').forEach(h => {
-            h.setAttribute('aria-sort', 'none');
-          });
-
-          header.setAttribute('aria-sort', isAsc ? 'ascending' : 'descending');
-
-          rows.sort((a, b) => {
-            let aVal, bVal;
-
-            if (isDate) {
-              aVal = a.dataset.date;
-              bVal = b.dataset.date;
-            } else if (isPopularity) {
-              aVal = parseInt(a.cells[colIndex].dataset.sortValue, 10);
-              bVal = parseInt(b.cells[colIndex].dataset.sortValue, 10);
-            } else {
-              aVal = a.cells[colIndex].innerText.toLowerCase();
-              bVal = b.cells[colIndex].innerText.toLowerCase();
-            }
-
-            if (isAsc) {
-              return aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
-            } else {
-              return aVal < bVal ? 1 : aVal > bVal ? -1 : 0;
-            }
-          });
-
-          rows.forEach(row => tbody.appendChild(row));
-        });
-      });
-    </script>
-
-
-
 
     <nav class="govuk-pagination" aria-label="Pagination">
       <div class="govuk-pagination__prev">
@@ -521,7 +460,7 @@
     </a>
   </div>
 
-  <!--private tab-->
+  <!--My queries-->
   <div class="nhsuk-tabs__panel" id="private">
 
     <div class="nhsuk-form-group">
@@ -540,19 +479,19 @@
       </summary>
 
       <div class="nhsuk-details__text">
-<!--        <label class="nhsuk-label nhsuk-u-margin-top-5" for="search-box">-->
-<!--          <h4>Do you want to search for a query by Cypher?</h4>-->
-<!--        </label>-->
-<!--        <div class="nhsuk-hint" id="example-hint">-->
-<!--          You can choose a cypher.-->
-<!--        </div>-->
-<!--        <select class="nhsuk-select" id="select-1" name="search-box">-->
-<!--          <option value="1"></option>-->
-<!--          <option value="Cat A">CHEMB</option>-->
-<!--          <option value="3">HEKIR</option>-->
-<!--          <option value="4">JAHMO</option>-->
-<!--          <option value="5">KAKEL</option>-->
-<!--        </select>-->
+        <!--        <label class="nhsuk-label nhsuk-u-margin-top-5" for="search-box">-->
+        <!--          <h4>Do you want to search for a query by Cypher?</h4>-->
+        <!--        </label>-->
+        <!--        <div class="nhsuk-hint" id="example-hint">-->
+        <!--          You can choose a cypher.-->
+        <!--        </div>-->
+        <!--        <select class="nhsuk-select" id="select-1" name="search-box">-->
+        <!--          <option value="1"></option>-->
+        <!--          <option value="Cat A">CHEMB</option>-->
+        <!--          <option value="3">HEKIR</option>-->
+        <!--          <option value="4">JAHMO</option>-->
+        <!--          <option value="5">KAKEL</option>-->
+        <!--        </select>-->
         <div class="nhsuk-form-group nhsuk-u-margin-top-5">
 
           <style>
@@ -651,7 +590,8 @@
         </button>
       </div>
     </div>
-<!--Popularity indicator-->
+
+    <!--Popularity indicator-->
     <div class="nhsuk-u-width-one-third">
       <details class="nhsuk-details">
         <summary class="nhsuk-details__summary ">
@@ -660,10 +600,12 @@
     </span>
         </summary>
         <div class="nhsuk-details__text">
-          <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of times a query has been
+          <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of times a
+            query has been
             accessed by users. The more popular a query is, the more frequently it is used.</p>
           <table class="nhsuk-table nhsuk-u-max-width-600">
-            <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity scale</caption>
+            <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity scale
+            </caption>
             <thead class="nhsuk-table__head">
             <tr>
               <th scope="col" class="nhsuk-table__header">Rank</th>
@@ -674,8 +616,8 @@
             <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell">1</td>
-              <td class="nhsuk-table__cell">Most popular</td>
-              <td class="nhsuk-table__cell">This query is the most accessed by users.</td>
+              <td class="nhsuk-table__cell">Extremely popular</td>
+              <td class="nhsuk-table__cell">Thies queries are the ones accessed most frequently by colleagues.</td>
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell">2</td>
@@ -685,7 +627,7 @@
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell">3</td>
               <td class="nhsuk-table__cell">Popular</td>
-              <td class="nhsuk-table__cell">Frequently used by many users.</td>
+              <td class="nhsuk-table__cell">Frequently used by many colleagues.</td>
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell">4</td>
@@ -702,7 +644,7 @@
       </details>
     </div>
 
-    <table class="nhsuk-table nhsuk-u-margin-top-5" id="sortable-table">
+    <table class="nhsuk-table nhsuk-u-margin-top-5" id="my-queries-table">
       <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
         Table showing my recent queries
       </caption>
@@ -712,31 +654,36 @@
         <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
           <div>
             <span>Popularity</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
         </th>
-<!--        <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">-->
-<!--          <div>-->
-<!--            <span>Cypher</span>-->
-<!--            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">-->
-<!--              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>-->
-<!--            </svg>-->
-<!--          </div>-->
         </th>
         <th scope="col" class="sortable" data-sort="date" aria-sort="none">
           <div>
             <span>Date saved</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
+            </svg>
+          </div>
+        </th>
+        <th scope="col" class="sortable" data-sort="text" aria-sort="none">
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <span>Title</span>
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false" style="width: 16px;">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
         </th>
         <th scope="col" class="sortable" data-sort="text" aria-sort="none">
           <div>
-            <span>Title</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <span>Version</span>
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -745,106 +692,110 @@
         <th scope="col">Action</th>
       </tr>
       </thead>
+
       <tbody class="nhsuk-table__body">
       <tr class="nhsuk-table__row" data-date="2025-04-12">
-        <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
-<!--        <td class="nhsuk-table__cell" data-sort-value="1">Jahmo</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell">12 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at VMPP Cat A price</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at VMPP Cat A price.</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell"><a href="saved-query-view-notes.html">View notes</a></td>
-        <!--        <td class="govuk-table__cell" style="white-space: normal;">-->
-        <!--          <details class="govuk-details">-->
-        <!--            <summary class="govuk-details__summary">-->
-        <!--            <span class="govuk-details__summary-text">-->
-        <!--              View notes-->
-        <!--            </span>-->
-        <!--            </summary>-->
-        <!--            <div class="govuk-details__text" style="white-space: normal; word-break: break-word;" >-->
-        <!--              Lorem ipsum dolor sit amet,consectetur adipiscing elit,-->
-        <!--              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
-        <!--              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.-->
-        <!--            </div>-->
-        <!--          </details>-->
-        <!--        </td>-->
-        <td class="nhsuk-table__cell"><a href="#">Options</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-options.html">Options</a></td>
       </tr>
       <tr class="nhsuk-table__row" data-date="2025-04-10">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
-<!--        <td class="nhsuk-table__cell">Jahmo</td>-->
         <td class="nhsuk-table__cell ">10 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at vmpp cat A price </a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at vmpp cat A price </a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-options.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-08-02">
-        <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
-<!--        <td class="nhsuk-table__cell">Chemb</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell ">2 August 2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part VIIIC prices for XYZ</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part
+          VIIIC prices for XYZ</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Version 2</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-05-20">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
-<!--        <td class="nhsuk-table__cell">Chemb</td>-->
         <td class="nhsuk-table__cell ">20 May2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation class</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation
+          class</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-04-22">
         <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
-<!--        <td class="nhsuk-table__cell">Hekir</td>-->
         <td class="nhsuk-table__cell ">22 April 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a>
+        </td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-09-07">
         <td class="nhsuk-table__cell" data-sort-value="4">Less popular</td>
-<!--        <td class="nhsuk-table__cell">Jahmo</td>-->
         <td class="nhsuk-table__cell ">07 September 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation class.</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation
+          class.</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-11-25">
         <td class="nhsuk-table__cell" data-sort-value="5">Rarely used</td>
-<!--        <td class="nhsuk-table__cell">Hekir</td>-->
         <td class="nhsuk-table__cell ">25 November 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Version 2</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-12">
-        <td class="nhsuk-table__cell"data-sort-value="1">Most popular</td>
-<!--        <td class="nhsuk-table__cell">Chemb</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell ">12 April 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP Preperation class changes</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Version 3</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-25">
-        <td class="nhsuk-table__cell"data-sort-value="2">Very popular</td>
-<!--        <td class="nhsuk-table__cell">KAKEL</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
+        <!--        <td class="nhsuk-table__cell">KAKEL</td>-->
         <td class="nhsuk-table__cell ">25 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="#">Zero price + NHS ind</a></td>
+        <td class="nhsuk-table__cell"><a href="#">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
         <td class="nhsuk-table__cell"><a href="#">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-01-28">
-        <td class="nhsuk-table__cell"data-sort-value="3">Popular</td>
-<!--        <td class="nhsuk-table__cell" >JAHMO</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
+        <!--        <td class="nhsuk-table__cell" >JAHMO</td>-->
         <td class="nhsuk-table__cell ">28 January 2022</td>
         <td class="nhsuk-table__cell"><a href="#">Zero price with reimbursement price.</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
         <td class="nhsuk-table__cell"><a href="#">Options</a></td>
       </tr>
@@ -852,6 +803,7 @@
       </tbody>
     </table>
 
+<!--Paginator-->
     <nav class="govuk-pagination" aria-label="Pagination">
       <div class="govuk-pagination__prev">
         <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
@@ -899,7 +851,8 @@
       </div>
     </nav>
   </div>
-  <!--favorites tab -->
+
+  <!--My favorites-->
   <div class="nhsuk-tabs__panel" id="favorites">
 
     <!--search for-->
@@ -1038,10 +991,13 @@
     </span>
             </summary>
             <div class="nhsuk-details__text">
-              <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of times a query has been
+              <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of
+                times a query has been
                 accessed by users. The more popular a query is, the more frequently it is used.</p>
               <table class="nhsuk-table nhsuk-u-max-width-600">
-                <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity scale</caption>
+                <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity
+                  scale
+                </caption>
                 <thead class="nhsuk-table__head">
                 <tr>
                   <th scope="col" class="nhsuk-table__header">Rank</th>
@@ -1052,8 +1008,8 @@
                 <tbody class="nhsuk-table__body">
                 <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell">1</td>
-                  <td class="nhsuk-table__cell">Most popular</td>
-                  <td class="nhsuk-table__cell">This query is the most accessed by users.</td>
+                  <td class="nhsuk-table__cell">Extremely popular</td>
+                  <td class="nhsuk-table__cell">These queries are the ones accessed most frequently by colleagues.</td>
                 </tr>
                 <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell">2</td>
@@ -1063,7 +1019,7 @@
                 <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell">3</td>
                   <td class="nhsuk-table__cell">Popular</td>
-                  <td class="nhsuk-table__cell">Frequently used by many users.</td>
+                  <td class="nhsuk-table__cell">Frequently used by many colleagues.</td>
                 </tr>
                 <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell">4</td>
@@ -1105,9 +1061,9 @@
       }
     </style>
     <!--Table-->
-    <table class="nhsuk-table nhsuk-u-margin-top-5" id="sortable-table">
+    <table class="nhsuk-table nhsuk-u-margin-top-5" id="sortable-table-favorites">
       <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">
-        Table showing my recent queries
+        Table showing my favorite queries
       </caption>
       <thead class="nhsuk-table__head">
       <tr class="nhsuk-table__row">
@@ -1115,7 +1071,8 @@
         <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
           <div>
             <span>Popularity</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -1123,7 +1080,8 @@
         <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
           <div>
             <span>Cypher</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -1131,7 +1089,8 @@
         <th scope="col" class="sortable" data-sort="date" aria-sort="none">
           <div>
             <span>Date saved</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -1139,7 +1098,8 @@
         <th scope="col" class="sortable" data-sort="text" aria-sort="none">
           <div>
             <span>Title</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -1150,10 +1110,11 @@
       </thead>
       <tbody class="nhsuk-table__body">
       <tr class="nhsuk-table__row" data-date="2025-04-12">
-        <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell" data-sort-value="1">Jahmo</td>
         <td class="nhsuk-table__cell">12 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at VMPP Cat A price</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at VMPP Cat A price.</a></td>
         <td class="nhsuk-table__cell"><a href="saved-query-view-notes.html">View notes</a></td>
         <!--        <td class="govuk-table__cell" style="white-space: normal;">-->
         <!--          <details class="govuk-details">-->
@@ -1169,73 +1130,88 @@
         <!--            </div>-->
         <!--          </details>-->
         <!--        </td>-->
-        <td class="nhsuk-table__cell"><a href="#">Options</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-option2.html">Options</a></td>
       </tr>
       <tr class="nhsuk-table__row" data-date="2025-04-10">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">Jahmo</td>
         <td class="nhsuk-table__cell ">10 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at vmpp cat A price </a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at vmpp cat A price.</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-08-02">
-        <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
         <td class="nhsuk-table__cell ">2 August 2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part VIIIC prices for XYZ</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part
+          VIIIC prices for XYZ. Version 3</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-05-20">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
         <td class="nhsuk-table__cell ">20 May2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation class</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part
+          VIIIC prices for XYZ. Version 2</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-04-22">
         <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
         <td class="nhsuk-table__cell">Hekir</td>
         <td class="nhsuk-table__cell ">22 April 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part
+          VIIIC prices for XYZ </a>
+        </td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-09-07">
         <td class="nhsuk-table__cell" data-sort-value="4">Less popular</td>
         <td class="nhsuk-table__cell">Jahmo</td>
         <td class="nhsuk-table__cell ">07 September 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation class.</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation
+          class.</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-11-25">
         <td class="nhsuk-table__cell" data-sort-value="5">Rarely used</td>
         <td class="nhsuk-table__cell">Hekir</td>
         <td class="nhsuk-table__cell ">25 November 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-12">
-        <td class="nhsuk-table__cell"data-sort-value="1">Most popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Extremely popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
         <td class="nhsuk-table__cell ">12 April 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP Preperation class changes</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP Preperation class
+          changes</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-25">
-        <td class="nhsuk-table__cell"data-sort-value="2">Very popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">KAKEL</td>
         <td class="nhsuk-table__cell ">25 April 2025</td>
         <td class="nhsuk-table__cell"><a href="#">Zero price + NHS ind</a></td>
@@ -1244,8 +1220,8 @@
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-01-28">
-        <td class="nhsuk-table__cell"data-sort-value="3">Popular</td>
-        <td class="nhsuk-table__cell" >JAHMO</td>
+        <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
+        <td class="nhsuk-table__cell">JAHMO</td>
         <td class="nhsuk-table__cell ">28 January 2022</td>
         <td class="nhsuk-table__cell"><a href="#">Zero price with reimbursement price.</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
@@ -1255,55 +1231,8 @@
       </tbody>
     </table>
 
-    <script>
-      document.querySelectorAll('.sortable').forEach(header => {
-        header.addEventListener('click', () => {
-          const table = document.getElementById('sortable-table');
-          const tbody = table.querySelector('tbody');
-          const rows = Array.from(tbody.querySelectorAll('tr'));
 
-          const isDate = header.dataset.sort === 'date';
-          const isPopularity = header.dataset.sort === 'popularity';
-          const colIndex = Array.from(header.parentNode.children).indexOf(header);
-          const currentSort = header.getAttribute('aria-sort');
-          const isAsc = currentSort !== 'ascending';
-
-          // Reset aria-sort on all headers
-          document.querySelectorAll('.sortable').forEach(h => {
-            h.setAttribute('aria-sort', 'none');
-          });
-
-          header.setAttribute('aria-sort', isAsc ? 'ascending' : 'descending');
-
-          rows.sort((a, b) => {
-            let aVal, bVal;
-
-            if (isDate) {
-              aVal = a.dataset.date;
-              bVal = b.dataset.date;
-            } else if (isPopularity) {
-              aVal = parseInt(a.cells[colIndex].dataset.sortValue, 10);
-              bVal = parseInt(b.cells[colIndex].dataset.sortValue, 10);
-            } else {
-              aVal = a.cells[colIndex].innerText.toLowerCase();
-              bVal = b.cells[colIndex].innerText.toLowerCase();
-            }
-
-            if (isAsc) {
-              return aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
-            } else {
-              return aVal < bVal ? 1 : aVal > bVal ? -1 : 0;
-            }
-          });
-
-          rows.forEach(row => tbody.appendChild(row));
-        });
-      });
-    </script>
-
-
-
-
+<!--Paginator-->
     <nav class="govuk-pagination" aria-label="Pagination">
       <div class="govuk-pagination__prev">
         <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
@@ -1355,7 +1284,8 @@
       Share selected
     </a>
   </div>
-  <!--shared-->
+
+  <!--My shared-->
   <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="shared">
 
     <!--search for-->
@@ -1494,10 +1424,13 @@
     </span>
             </summary>
             <div class="nhsuk-details__text">
-              <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of times a query has been
+              <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of
+                times a query has been
                 accessed by users. The more popular a query is, the more frequently it is used.</p>
               <table class="nhsuk-table nhsuk-u-max-width-600">
-                <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity scale</caption>
+                <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity
+                  scale
+                </caption>
                 <thead class="nhsuk-table__head">
                 <tr>
                   <th scope="col" class="nhsuk-table__header">Rank</th>
@@ -1571,31 +1504,43 @@
         <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
           <div>
             <span>Popularity</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
         </th>
-<!--        <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">-->
-<!--          <div>-->
-<!--            <span>Cypher</span>-->
-<!--            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">-->
-<!--              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>-->
-<!--            </svg>-->
-<!--          </div>-->
-<!--        </th>-->
+        <!--        <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">-->
+        <!--          <div>-->
+        <!--            <span>Cypher</span>-->
+        <!--            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">-->
+        <!--              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>-->
+        <!--            </svg>-->
+        <!--          </div>-->
+        </th>
         <th scope="col" class="sortable" data-sort="date" aria-sort="none">
           <div>
             <span>Date saved</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
+            </svg>
+          </div>
+        </th>
+        <th scope="col" class="sortable" data-sort="text" aria-sort="none">
+          <div style="display: flex; align-items: center; gap: 4px;">
+            <span>Title</span>
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false" style="width: 16px;">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
         </th>
         <th scope="col" class="sortable" data-sort="text" aria-sort="none">
           <div>
-            <span>Title</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <span>Version</span>
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -1604,161 +1549,124 @@
         <th scope="col">Action</th>
       </tr>
       </thead>
+
       <tbody class="nhsuk-table__body">
       <tr class="nhsuk-table__row" data-date="2025-04-12">
         <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
-<!--        <td class="nhsuk-table__cell" data-sort-value="1">Jahmo</td>-->
+        <!--        <td class="nhsuk-table__cell" data-sort-value="1">Jahmo</td>-->
         <td class="nhsuk-table__cell">12 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at VMPP Cat A price</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at VMPP Cat A price</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell"><a href="saved-query-view-notes.html">View notes</a></td>
-        <!--        <td class="govuk-table__cell" style="white-space: normal;">-->
-        <!--          <details class="govuk-details">-->
-        <!--            <summary class="govuk-details__summary">-->
-        <!--            <span class="govuk-details__summary-text">-->
-        <!--              View notes-->
-        <!--            </span>-->
-        <!--            </summary>-->
-        <!--            <div class="govuk-details__text" style="white-space: normal; word-break: break-word;" >-->
-        <!--              Lorem ipsum dolor sit amet,consectetur adipiscing elit,-->
-        <!--              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,-->
-        <!--              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.-->
-        <!--            </div>-->
-        <!--          </details>-->
-        <!--        </td>-->
-        <td class="nhsuk-table__cell"><a href="#">Options</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-option2.html">Options</a></td>
       </tr>
       <tr class="nhsuk-table__row" data-date="2025-04-10">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
-<!--        <td class="nhsuk-table__cell">Jahmo</td>-->
+        <!--        <td class="nhsuk-table__cell">Jahmo</td>-->
         <td class="nhsuk-table__cell ">10 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at vmpp cat A price </a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at vmpp cat A price </a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-options.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-08-02">
         <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
-<!--        <td class="nhsuk-table__cell">Chemb</td>-->
+        <!--        <td class="nhsuk-table__cell">Chemb</td>-->
         <td class="nhsuk-table__cell ">2 August 2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part VIIIC prices for XYZ</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part
+          VIIIC prices for XYZ</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Version 2</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-05-20">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
-<!--        <td class="nhsuk-table__cell">Chemb</td>-->
+        <!--        <td class="nhsuk-table__cell">Chemb</td>-->
         <td class="nhsuk-table__cell ">20 May2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation class</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation
+          class</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-04-22">
         <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
-<!--        <td class="nhsuk-table__cell">Hekir</td>-->
+        <!--        <td class="nhsuk-table__cell">Hekir</td>-->
         <td class="nhsuk-table__cell ">22 April 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a>
+        </td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-09-07">
         <td class="nhsuk-table__cell" data-sort-value="4">Less popular</td>
-<!--        <td class="nhsuk-table__cell">Jahmo</td>-->
+        <!--        <td class="nhsuk-table__cell">Jahmo</td>-->
         <td class="nhsuk-table__cell ">07 September 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation class.</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation
+          class.</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-11-25">
         <td class="nhsuk-table__cell" data-sort-value="5">Rarely used</td>
-<!--        <td class="nhsuk-table__cell">Hekir</td>-->
+        <!--        <td class="nhsuk-table__cell">Hekir</td>-->
         <td class="nhsuk-table__cell ">25 November 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Version 2</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-12">
-        <td class="nhsuk-table__cell"data-sort-value="1">Most popular</td>
-<!--        <td class="nhsuk-table__cell">Chemb</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
+        <!--        <td class="nhsuk-table__cell">Chemb</td>-->
         <td class="nhsuk-table__cell ">12 April 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP Preperation class changes</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Version 3</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-25">
-        <td class="nhsuk-table__cell"data-sort-value="2">Very popular</td>
-<!--        <td class="nhsuk-table__cell">KAKEL</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
+        <!--        <td class="nhsuk-table__cell">KAKEL</td>-->
         <td class="nhsuk-table__cell ">25 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="#">Zero price + NHS ind</a></td>
+        <td class="nhsuk-table__cell"><a href="#">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
         <td class="nhsuk-table__cell"><a href="#">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-01-28">
-        <td class="nhsuk-table__cell"data-sort-value="3">Popular</td>
-<!--        <td class="nhsuk-table__cell" >JAHMO</td>-->
+        <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
+        <!--        <td class="nhsuk-table__cell" >JAHMO</td>-->
         <td class="nhsuk-table__cell ">28 January 2022</td>
         <td class="nhsuk-table__cell"><a href="#">Zero price with reimbursement price.</a></td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Original</td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
         <td class="nhsuk-table__cell"><a href="#">Options</a></td>
       </tr>
 
       </tbody>
     </table>
-
-    <script>
-      document.querySelectorAll('.sortable').forEach(header => {
-        header.addEventListener('click', () => {
-          const table = document.getElementById('sortable-table');
-          const tbody = table.querySelector('tbody');
-          const rows = Array.from(tbody.querySelectorAll('tr'));
-
-          const isDate = header.dataset.sort === 'date';
-          const isPopularity = header.dataset.sort === 'popularity';
-          const colIndex = Array.from(header.parentNode.children).indexOf(header);
-          const currentSort = header.getAttribute('aria-sort');
-          const isAsc = currentSort !== 'ascending';
-
-          // Reset aria-sort on all headers
-          document.querySelectorAll('.sortable').forEach(h => {
-            h.setAttribute('aria-sort', 'none');
-          });
-
-          header.setAttribute('aria-sort', isAsc ? 'ascending' : 'descending');
-
-          rows.sort((a, b) => {
-            let aVal, bVal;
-
-            if (isDate) {
-              aVal = a.dataset.date;
-              bVal = b.dataset.date;
-            } else if (isPopularity) {
-              aVal = parseInt(a.cells[colIndex].dataset.sortValue, 10);
-              bVal = parseInt(b.cells[colIndex].dataset.sortValue, 10);
-            } else {
-              aVal = a.cells[colIndex].innerText.toLowerCase();
-              bVal = b.cells[colIndex].innerText.toLowerCase();
-            }
-
-            if (isAsc) {
-              return aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
-            } else {
-              return aVal < bVal ? 1 : aVal > bVal ? -1 : 0;
-            }
-          });
-
-          rows.forEach(row => tbody.appendChild(row));
-        });
-      });
-    </script>
-
-
-
 
     <nav class="govuk-pagination" aria-label="Pagination">
       <div class="govuk-pagination__prev">
@@ -1811,6 +1719,7 @@
       Share selected
     </a>
   </div>
+
   <!--Public-->
   <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="public">
     <!--search for-->
@@ -1949,10 +1858,13 @@
     </span>
             </summary>
             <div class="nhsuk-details__text">
-              <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of times a query has been
+              <p class="nhsuk-u-margin-top-5">The popularity indicator is based on the number of
+                times a query has been
                 accessed by users. The more popular a query is, the more frequently it is used.</p>
               <table class="nhsuk-table nhsuk-u-max-width-600">
-                <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity scale</caption>
+                <caption class="nhsuk-table__caption nhsuk-u-margin-top-5">Five level popularity
+                  scale
+                </caption>
                 <thead class="nhsuk-table__head">
                 <tr>
                   <th scope="col" class="nhsuk-table__header">Rank</th>
@@ -2026,7 +1938,8 @@
         <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
           <div>
             <span>Popularity</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -2034,7 +1947,8 @@
         <th scope="col" class="sortable" data-sort="popularity" aria-sort="none">
           <div>
             <span>Cypher</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -2042,7 +1956,8 @@
         <th scope="col" class="sortable" data-sort="date" aria-sort="none">
           <div>
             <span>Date saved</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -2050,7 +1965,8 @@
         <th scope="col" class="sortable" data-sort="text" aria-sort="none">
           <div>
             <span>Title</span>
-            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 focusable="false">
               <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"></path>
             </svg>
           </div>
@@ -2064,7 +1980,8 @@
         <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
         <td class="nhsuk-table__cell" data-sort-value="1">Jahmo</td>
         <td class="nhsuk-table__cell">12 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at VMPP Cat A price</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at VMPP Cat A price</a></td>
         <td class="nhsuk-table__cell"><a href="saved-query-view-notes.html">View notes</a></td>
         <!--        <td class="govuk-table__cell" style="white-space: normal;">-->
         <!--          <details class="govuk-details">-->
@@ -2086,67 +2003,81 @@
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">Jahmo</td>
         <td class="nhsuk-table__cell ">10 April 2025</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for looking at vmpp cat A price </a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Large query for
+          looking at vmpp cat A price </a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-08-02">
         <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
         <td class="nhsuk-table__cell ">2 August 2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part VIIIC prices for XYZ</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Query that shows Part
+          VIIIC prices for XYZ</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2024-05-20">
         <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
         <td class="nhsuk-table__cell ">20 May2024</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation class</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">PCDD VMP Preparation
+          class</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-04-22">
         <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
         <td class="nhsuk-table__cell">Hekir</td>
         <td class="nhsuk-table__cell ">22 April 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">Price field blank</a>
+        </td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2023-09-07">
         <td class="nhsuk-table__cell" data-sort-value="4">Less popular</td>
         <td class="nhsuk-table__cell">Jahmo</td>
         <td class="nhsuk-table__cell ">07 September 2023</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation class.</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">SCDD VMP preparation
+          class.</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-11-25">
         <td class="nhsuk-table__cell" data-sort-value="5">Rarely used</td>
         <td class="nhsuk-table__cell">Hekir</td>
         <td class="nhsuk-table__cell ">25 November 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name where VMP Prescribing status is not valid</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP has abbrev name
+          where VMP Prescribing status is not valid</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-12">
-        <td class="nhsuk-table__cell"data-sort-value="1">Most popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="1">Most popular</td>
         <td class="nhsuk-table__cell">Chemb</td>
         <td class="nhsuk-table__cell ">12 April 2022</td>
-        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP Preperation class changes</a></td>
+        <td class="nhsuk-table__cell"><a href="saved-query-summary-page.html">VMP Preperation class
+          changes</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
-        <td class="nhsuk-table__cell"><a href="saved-query-add-favorites-confirmation.html">Options</a></td>
+        <td class="nhsuk-table__cell"><a
+            href="saved-query-add-favorites-confirmation.html">Options</a></td>
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-04-25">
-        <td class="nhsuk-table__cell"data-sort-value="2">Very popular</td>
+        <td class="nhsuk-table__cell" data-sort-value="2">Very popular</td>
         <td class="nhsuk-table__cell">KAKEL</td>
         <td class="nhsuk-table__cell ">25 April 2025</td>
         <td class="nhsuk-table__cell"><a href="#">Zero price + NHS ind</a></td>
@@ -2155,8 +2086,8 @@
       </tr>
 
       <tr class="nhsuk-table__row" data-date="2022-01-28">
-        <td class="nhsuk-table__cell"data-sort-value="3">Popular</td>
-        <td class="nhsuk-table__cell" >JAHMO</td>
+        <td class="nhsuk-table__cell" data-sort-value="3">Popular</td>
+        <td class="nhsuk-table__cell">JAHMO</td>
         <td class="nhsuk-table__cell ">28 January 2022</td>
         <td class="nhsuk-table__cell"><a href="#">Zero price with reimbursement price.</a></td>
         <td class="nhsuk-table__cell "><a href="saved-query-view-notes.html">View notes</a></td>
@@ -2165,56 +2096,7 @@
 
       </tbody>
     </table>
-
-    <script>
-      document.querySelectorAll('.sortable').forEach(header => {
-        header.addEventListener('click', () => {
-          const table = document.getElementById('sortable-table');
-          const tbody = table.querySelector('tbody');
-          const rows = Array.from(tbody.querySelectorAll('tr'));
-
-          const isDate = header.dataset.sort === 'date';
-          const isPopularity = header.dataset.sort === 'popularity';
-          const colIndex = Array.from(header.parentNode.children).indexOf(header);
-          const currentSort = header.getAttribute('aria-sort');
-          const isAsc = currentSort !== 'ascending';
-
-          // Reset aria-sort on all headers
-          document.querySelectorAll('.sortable').forEach(h => {
-            h.setAttribute('aria-sort', 'none');
-          });
-
-          header.setAttribute('aria-sort', isAsc ? 'ascending' : 'descending');
-
-          rows.sort((a, b) => {
-            let aVal, bVal;
-
-            if (isDate) {
-              aVal = a.dataset.date;
-              bVal = b.dataset.date;
-            } else if (isPopularity) {
-              aVal = parseInt(a.cells[colIndex].dataset.sortValue, 10);
-              bVal = parseInt(b.cells[colIndex].dataset.sortValue, 10);
-            } else {
-              aVal = a.cells[colIndex].innerText.toLowerCase();
-              bVal = b.cells[colIndex].innerText.toLowerCase();
-            }
-
-            if (isAsc) {
-              return aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
-            } else {
-              return aVal < bVal ? 1 : aVal > bVal ? -1 : 0;
-            }
-          });
-
-          rows.forEach(row => tbody.appendChild(row));
-        });
-      });
-    </script>
-
-
-
-
+<!--Paginator-->
     <nav class="govuk-pagination" aria-label="Pagination">
       <div class="govuk-pagination__prev">
         <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
@@ -2268,5 +2150,47 @@
   </div>
 
 </div>
+<script>
+  document.querySelectorAll('.sortable').forEach(header => {
+    header.addEventListener('click', () => {
+      // Find the closest table from the clicked header
+      const table = header.closest('table');
+      const tbody = table.querySelector('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+
+      const isDate = header.dataset.sort === 'date';
+      const isPopularity = header.dataset.sort === 'popularity';
+      const colIndex = Array.from(header.parentNode.children).indexOf(header);
+      const currentSort = header.getAttribute('aria-sort');
+      const isAsc = currentSort !== 'ascending';
+
+      // Reset aria-sort on all headers in the same table
+      table.querySelectorAll('.sortable').forEach(h => {
+        h.setAttribute('aria-sort', 'none');
+      });
+
+      header.setAttribute('aria-sort', isAsc ? 'ascending' : 'descending');
+
+      rows.sort((a, b) => {
+        let aVal, bVal;
+
+        if (isDate) {
+          aVal = a.dataset.date;
+          bVal = b.dataset.date;
+        } else if (isPopularity) {
+          aVal = parseInt(a.cells[colIndex].dataset.sortValue, 10);
+          bVal = parseInt(b.cells[colIndex].dataset.sortValue, 10);
+        } else {
+          aVal = a.cells[colIndex].innerText.toLowerCase();
+          bVal = b.cells[colIndex].innerText.toLowerCase();
+        }
+
+        return isAsc ? (aVal > bVal ? 1 : aVal < bVal ? -1 : 0) : (aVal < bVal ? 1 : aVal > bVal ? -1 : 0);
+      });
+
+      rows.forEach(row => tbody.appendChild(row));
+    });
+  });
+</script>
 
 {% endblock %}
