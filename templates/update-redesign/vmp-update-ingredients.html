@@ -10,12 +10,7 @@
             <h1 class="nhsuk-heading-xl" id="update-ingredients-heading">Abacavir 20mg/ml oral solution sugar free</h1>
         </div>
 
-        <div class="nhsuk-grid-column-one-quarter" style="float: right;">
-            <button class="nhsuk-button nhsuk-button--secondary-solid nhsuk-button-float-right"
-                data-module="nhsuk-button" type="submit">
-                Cancel update
-            </button>
-        </div>
+
 
         <form method="post" id="form">
             <input name="_csrf"
@@ -1518,9 +1513,16 @@
                 </div>
             </section>
 
-            <button formaction="/update/vmp?execution=e1s1" class="nhsuk-button nhsuk-button--primary" id="submit"
-                name="_eventId_submit" type="submit">Preview changes
+                         <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-3" id="submit" name="_eventId_submit"
+                        type="submit">Preview changes
+                    </button>
+
+                          
+            <button class="nhsuk-button nhsuk-button--secondary-solid "
+                data-module="nhsuk-button" type="submit">
+                Cancel update
             </button>
+   
 
         </form>
     </div>
