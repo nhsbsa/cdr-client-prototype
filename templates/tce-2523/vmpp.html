@@ -1,1567 +1,1887 @@
 {% extends "tce-2523/base2.html" %}
 {% block content %}
 <div class="nhsuk-grid-row">
-      <div id="drug-hierarchy-tree-container" class="side-tree">
-
-        
-  <a id="button--show-tree" class="nhsuk-btn-show-tree" tabindex="0">Show the hierarchy tree</a>
-  <div id="drug-hierarchy-tree">
-    <nav aria-labelledby="hierarchy-tree-view">
-      <h2 id="hierarchy-tree-view" class="hierarchy-tree-heading">Hierarchy tree</h2>
-    </nav>
+  <div id="drug-hierarchy-tree-container" class="side-tree">
 
 
-    <details class="nhsuk-details">
-      <summary class="nhsuk-details__summary nhsuk-u-margin-bottom-3">
-                <span id="link--understanding-icons-in-tree" class="nhsuk-details__summary-text">
-                  Understanding icons and codes
-                </span>
-      </summary>
-      <div class="nhsuk-details__text">
-        <table>
-          <thead role="rowgroup" class="nhsuk-table__head">
-          <tr>
-            <th class="nhsuk-table__header icon-width">Icon</th>
-            <th class="nhsuk-table__header">Description</th>
-          </tr>
-          </thead>
-          <tbody class="nhsuk-table__body">
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              <svg style="background-image: url('/images/icons/icon-tick-circle-lge.svg'); background-repeat: no-repeat; width: 24px; height: 24px; vertical-align: middle; background-position-x: right;"></svg>
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Valid VMPP or valid
-              AMPP
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              <svg style="background-image: url('/images/icons/icon-cross-square.svg'); background-repeat: no-repeat; width: 25px; height: 25px; vertical-align: middle; background-position-x: center;"></svg>
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Invalid
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              <svg style="background-image: url('/images/icons/warning.svg'); background-repeat: no-repeat; width: 24px; height: 24px; vertical-align: middle; background-position-x: right;"></svg>
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Discontinued
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Future dated
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              <strong class="nhsuk-tag nhsuk-tag--orange" style="padding-left: 6px; padding-right: 6px">H</strong>
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Historical data
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              <strong class="nhsuk-tag nhsuk-tag--white">P</strong>
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Parallel Import Product
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              <strong class="nhsuk-tag " style="padding: 4px 5px; background-color: #606E80; border: 1px solid #212b32">W</strong>
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Supplier Type Indicator (Wholesaler)
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (9A)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part IXa
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (9B)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part IXb
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (9C)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part IXc
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (9R)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part IXb
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (8A Cat A)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part VIIIA Category A
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (8A Cat C)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part VIIIA Category C
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (8A Cat M)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part VIIIA Category M
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (DTSO)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part VIIIB
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (8C)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part VIIIC
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (8D)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part VIIID
-            </td>
-          </tr>
-          <tr>
-            <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
-              (9B/9C)
-            </td>
-            <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
-              Drug Tariff payment category Part IXb and Part IXc
-            </td>
-          </tr>
-          </tbody>
-        </table>
+    <a id="button--show-tree" class="nhsuk-btn-show-tree" tabindex="0">Show the hierarchy tree</a>
+    <div id="drug-hierarchy-tree">
+      <nav aria-labelledby="hierarchy-tree-view">
+        <h2 id="hierarchy-tree-view" class="hierarchy-tree-heading">Hierarchy tree</h2>
+      </nav>
+
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary nhsuk-u-margin-bottom-3">
+          <span id="link--understanding-icons-in-tree" class="nhsuk-details__summary-text">
+            Understanding icons and codes
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <table>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr>
+                <th class="nhsuk-table__header icon-width">Icon</th>
+                <th class="nhsuk-table__header">Description</th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  <svg
+                    style="background-image: url('/images/icons/icon-tick-circle-lge.svg'); background-repeat: no-repeat; width: 24px; height: 24px; vertical-align: middle; background-position-x: right;"></svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Valid VMPP or valid
+                  AMPP
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  <svg
+                    style="background-image: url('/images/icons/icon-cross-square.svg'); background-repeat: no-repeat; width: 25px; height: 25px; vertical-align: middle; background-position-x: center;"></svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Invalid
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  <svg
+                    style="background-image: url('/images/icons/warning.svg'); background-repeat: no-repeat; width: 24px; height: 24px; vertical-align: middle; background-position-x: right;"></svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Discontinued
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Future dated
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  <strong class="nhsuk-tag nhsuk-tag--orange" style="padding-left: 6px; padding-right: 6px">H</strong>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Historical data
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  <strong class="nhsuk-tag nhsuk-tag--white">P</strong>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Parallel Import Product
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  <strong class="nhsuk-tag "
+                    style="padding: 4px 5px; background-color: #606E80; border: 1px solid #212b32">W</strong>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Supplier Type Indicator (Wholesaler)
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (9A)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part IXa
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (9B)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part IXb
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (9C)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part IXc
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (9R)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part IXb
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (8A Cat A)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part VIIIA Category A
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (8A Cat C)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part VIIIA Category C
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (8A Cat M)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part VIIIA Category M
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (DTSO)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part VIIIB
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (8C)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part VIIIC
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (8D)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part VIIID
+                </td>
+              </tr>
+              <tr>
+                <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">
+                  (9B/9C)
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                  Drug Tariff payment category Part IXb and Part IXc
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0 nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-2"
+        id="warning-buttons-js-disabled" style="display: block;">
+        <div class="nhsuk-hide-btn-container">
+          <a id="button--hide-tree" tabindex="0"
+            class="nhsuk-btn-hide-tree nhsuk-u-margin-bottom-2 nhsuk-u-margin-right-1">Hide <span
+              class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
+          <a id="button--expand-tree" tabindex="0" class="nhsuk-btn-show-full-screen">Maximize <span
+              class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
+          <a id="button--minimize-tree" tabindex="0" class="nhsuk-btn-hide-full-screen">Minimize <span
+              class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
+        </div>
       </div>
-    </details>
 
-    <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0 nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-2" id="warning-buttons-js-disabled" style="display: block;">
-      <div class="nhsuk-hide-btn-container">
-        <a id="button--hide-tree" tabindex="0" class="nhsuk-btn-hide-tree nhsuk-u-margin-bottom-2 nhsuk-u-margin-right-1">Hide <span class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
-        <a id="button--expand-tree" tabindex="0" class="nhsuk-btn-show-full-screen">Maximize <span class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
-        <a id="button--minimize-tree" tabindex="0" class="nhsuk-btn-hide-full-screen">Minimize <span class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
-      </div>
-    </div>
+      <!--style="overflow-y: auto"-->
 
-    <!--style="overflow-y: auto"-->
-    
-    <div class="nhsuk-action-link">
+      <div class="nhsuk-action-link">
         <a class="nhsuk-action-link__link" href="#" data-module="hierarchy-tree-expand-all-button">
-            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-            </svg>
-            <span class="nhsuk-action-link__text">Expand visible branches</span>
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true" width="36" height="36">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+            </path>
+          </svg>
+          <span class="nhsuk-action-link__text">Expand visible branches</span>
         </a>
+      </div>
+
+
+      <div id="hierarchy-tree-scrollable" class="nhsuk-grid-column-full" style="height: 100vh; overflow-y: auto">
+
+
+
+
+        <div id="hierarchy-tree-module" data-module="module-tree">
+
+
+          <div class="nhsuk-grid-column-full" id="hierarchy-tree">
+            <ul id="ft-id-1" class="ui-fancytree fancytree-container fancytree-plain" tabindex="0" role="tree"
+              aria-multiselectable="true" aria-live="polite" aria-relevant="additions removals">
+              <li id="hierarchy-tree-vtm" role="treeitem" aria-expanded="true" aria-selected="false"
+                class="fancytree-lastsib"><span
+                  class="fancytree-node fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef"
+                  tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);"><span
+                    role="button" class="fancytree-expander" aria-label="Open branch"
+                    id="hierarchy-tree--expander-vtm"></span><span role="presentation"
+                    class="fancytree-icon"></span><span class="fancytree-title"
+                    style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;"><a
+                      id="hierarchy-tree--title-link-vtm" class="tree-link" role="link" data-key="vtm"
+                      data-original-href="vtm/137?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm"
+                      href="/vtm/137?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm">Atenolol</a></span></span>
+                <ul role="group" aria-live="polite" aria-relevant="additions removals">
+                  <li id="hierarchy-tree-vtm,vmp" role="treeitem" aria-expanded="true" aria-selected="false"
+                    class="fancytree-lastsib"><span
+                      class="fancytree-node fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef"
+                      tabindex="0"
+                      style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);"><span
+                        role="button" class="fancytree-expander" aria-label="Open branch"
+                        id="hierarchy-tree--expander-vtm,vmp"></span><span role="presentation"
+                        class="fancytree-icon"></span><span class="fancytree-title"
+                        style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;"><a
+                          id="hierarchy-tree--title-link-vtm,vmp" class="tree-link" role="link" data-key="vtm,vmp"
+                          data-original-href="vmp/5?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm,vmp"
+                          href="/vmp/5?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm,vmp">Atenolol
+                          100mg tablets</a></span></span>
+                    <ul role="group" aria-live="polite" aria-relevant="additions removals">
+                      <li id="hierarchy-tree-vtm,vmp,vmpp-9127" role="treeitem" aria-selected="false"><span
+                          class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0"><span
+                            class="fancytree-expander"></span><span role="presentation"
+                            class="fancytree-icon"></span><span class="fancytree-title"
+                            style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%;"><svg
+                              class="fancytree-svg--js nhsuk-u-margin-right-1" role="presentation"
+                              style="background-image: url(/images/icons/icon-tick-circle.svg); background-repeat: no-repeat; width: 20px; height: 25px; vertical-align: text-bottom;"></svg>
+                            <a id="hierarchy-tree--title-link-vtm,vmp,vmpp-9127" class="tree-link" role="link"
+                              data-key="vtm,vmp,vmpp-9127"
+                              data-original-href="vmpp/9127?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm,vmp,vmpp-9127"
+                              href="/vmpp/9127?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm,vmp,vmpp-9127"
+                              data--prefix-added="true">14 tablet</a><span class="nhsuk-u-margin-left-1"></span>
+                            <strong class="nhsuk-tag nhsuk-u-margin-1"
+                              style="vertical-align: text-bottom; padding: 4px; float: right">Currently
+                              viewing</strong></span></span></li>
+                      <li id="hierarchy-tree-vtm,vmp,vmpp-7" role="treeitem" aria-selected="false"><span
+                          class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0"><span
+                            class="fancytree-expander"></span><span role="presentation"
+                            class="fancytree-icon"></span><span class="fancytree-title"
+                            style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%;"><svg
+                              class="fancytree-svg--js nhsuk-u-margin-right-1" role="presentation"
+                              style="background-image: url(/images/icons/icon-tick-circle.svg); background-repeat: no-repeat; width: 20px; height: 25px; vertical-align: text-bottom;"></svg>
+                            <a id="hierarchy-tree--title-link-vtm,vmp,vmpp-7" class="tree-link" role="link"
+                              data-key="vtm,vmp,vmpp-7"
+                              data-original-href="vmpp/7?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm,vmp,vmpp-7"
+                              href="/vmpp/7?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127;vtm,vmp,vmpp-7&amp;currentlyViewing=vtm,vmp,vmpp-7"
+                              data--prefix-added="true">28 tablet</a><span class="nhsuk-u-margin-left-1">(8A Cat
+                              M)</span>
+                          </span></span></li>
+                      <li id="hierarchy-tree-vtm,vmp,1" role="treeitem" aria-expanded="false" aria-selected="false"
+                        class="fancytree-lastsib"><span
+                          class="fancytree-node fancytree-folder fancytree-has-children fancytree-lastsib fancytree-lazy fancytree-exp-cdl fancytree-ico-cf"
+                          tabindex="0"
+                          style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);"><span
+                            role="button" class="fancytree-expander" aria-label="Open branch"
+                            id="hierarchy-tree--expander-vtm,vmp,1"></span><span role="presentation"
+                            class="fancytree-icon"></span><span class="fancytree-title"
+                            style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;">AMPs
+                            (36)</span></span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <hr>
+
+
+      </div>
+
     </div>
-
-
-    <div id="hierarchy-tree-scrollable" class="nhsuk-grid-column-full" style="height: 100vh; overflow-y: auto">
-      
-
-  
-
-  <div id="hierarchy-tree-module" data-module="module-tree">
-    
-
-    <div class="nhsuk-grid-column-full" id="hierarchy-tree"><ul id="ft-id-1" class="ui-fancytree fancytree-container fancytree-plain" tabindex="0" role="tree" aria-multiselectable="true" aria-live="polite" aria-relevant="additions removals"><li id="hierarchy-tree-vtm" role="treeitem" aria-expanded="true" aria-selected="false" class="fancytree-lastsib"><span class="fancytree-node fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef" tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);"><span role="button" class="fancytree-expander" aria-label="Open branch" id="hierarchy-tree--expander-vtm"></span><span role="presentation" class="fancytree-icon"></span><span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;"><a id="hierarchy-tree--title-link-vtm" class="tree-link" role="link" data-key="vtm" data-original-href="vtm/137?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm" href="/vtm/137?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm">Atenolol</a></span></span><ul role="group" aria-live="polite" aria-relevant="additions removals"><li id="hierarchy-tree-vtm,vmp" role="treeitem" aria-expanded="true" aria-selected="false" class="fancytree-lastsib"><span class="fancytree-node fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef" tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);"><span role="button" class="fancytree-expander" aria-label="Open branch" id="hierarchy-tree--expander-vtm,vmp"></span><span role="presentation" class="fancytree-icon"></span><span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;"><a id="hierarchy-tree--title-link-vtm,vmp" class="tree-link" role="link" data-key="vtm,vmp" data-original-href="vmp/5?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm,vmp" href="/vmp/5?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm,vmp">Atenolol 100mg tablets</a></span></span><ul role="group" aria-live="polite" aria-relevant="additions removals"><li id="hierarchy-tree-vtm,vmp,vmpp-9127" role="treeitem" aria-selected="false"><span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0"><span class="fancytree-expander"></span><span role="presentation" class="fancytree-icon"></span><span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%;"><svg class="fancytree-svg--js nhsuk-u-margin-right-1" role="presentation" style="background-image: url(/images/icons/icon-tick-circle.svg); background-repeat: no-repeat; width: 20px; height: 25px; vertical-align: text-bottom;"></svg>
-<a id="hierarchy-tree--title-link-vtm,vmp,vmpp-9127" class="tree-link" role="link" data-key="vtm,vmp,vmpp-9127" data-original-href="vmpp/9127?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm,vmp,vmpp-9127" href="/vmpp/9127?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm,vmp,vmpp-9127" data--prefix-added="true">14 tablet</a><span class="nhsuk-u-margin-left-1"></span>
-<strong class="nhsuk-tag nhsuk-u-margin-1" style="vertical-align: text-bottom; padding: 4px; float: right">Currently viewing</strong></span></span></li><li id="hierarchy-tree-vtm,vmp,vmpp-7" role="treeitem" aria-selected="false"><span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0"><span class="fancytree-expander"></span><span role="presentation" class="fancytree-icon"></span><span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%;"><svg class="fancytree-svg--js nhsuk-u-margin-right-1" role="presentation" style="background-image: url(/images/icons/icon-tick-circle.svg); background-repeat: no-repeat; width: 20px; height: 25px; vertical-align: text-bottom;"></svg>
-<a id="hierarchy-tree--title-link-vtm,vmp,vmpp-7" class="tree-link" role="link" data-key="vtm,vmp,vmpp-7" data-original-href="vmpp/7?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;currentlyViewing=vtm,vmp,vmpp-7" href="/vmpp/7?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127;vtm,vmp,vmpp-7&amp;currentlyViewing=vtm,vmp,vmpp-7" data--prefix-added="true">28 tablet</a><span class="nhsuk-u-margin-left-1">(8A Cat M)</span>
-</span></span></li><li id="hierarchy-tree-vtm,vmp,1" role="treeitem" aria-expanded="false" aria-selected="false" class="fancytree-lastsib"><span class="fancytree-node fancytree-folder fancytree-has-children fancytree-lastsib fancytree-lazy fancytree-exp-cdl fancytree-ico-cf" tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);"><span role="button" class="fancytree-expander" aria-label="Open branch" id="hierarchy-tree--expander-vtm,vmp,1"></span><span role="presentation" class="fancytree-icon"></span><span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: currentcolor; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;">AMPs (36)</span></span></li></ul></li></ul></li></ul></div>
-
-  </div>
-  <hr>
-
-
-    </div>
-
-  </div>
-  <!--<a href="#drug-hierarchy-tree-container" tabindex="-1" title="Go to top">
+    <!--<a href="#drug-hierarchy-tree-container" tabindex="-1" title="Go to top">
     <button id="scrollToTopBtn" title="Go to top" type="button"><span
         class="nhsuk-u-visually-hidden">Navigate back to </span>Top
     </button>
   </a>-->
-  <script>
-    // <![CDATA[
-    const jsButtonWarning = document.getElementById("warning-buttons-js-disabled");
-    jsButtonWarning.style.display = "block";
+    <script>
+      // <![CDATA[
+      const jsButtonWarning = document.getElementById("warning-buttons-js-disabled");
+      jsButtonWarning.style.display = "block";
 
-    //Get the button
-    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    scrollToTopBtn.classList.add("hideBtn")
-    var rootElement = document.documentElement
+      //Get the button
+      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      scrollToTopBtn.classList.add("hideBtn")
+      var rootElement = document.documentElement
 
-    var x = window.matchMedia("(min-width: 769px)")
+      var x = window.matchMedia("(min-width: 769px)")
 
-    function handleScroll() {
-      // Do something on scroll
-      if (rootElement.scrollTop > 500 && x.matches) {
-        // Show button
-        scrollToTopBtn.classList.remove("hideBtn")
-        scrollToTopBtn.classList.add("showBtn")
-      } else {
-        // Hide button
-        scrollToTopBtn.classList.remove("showBtn")
-        scrollToTopBtn.classList.add("hideBtn")
+      function handleScroll() {
+        // Do something on scroll
+        if (rootElement.scrollTop > 500 && x.matches) {
+          // Show button
+          scrollToTopBtn.classList.remove("hideBtn")
+          scrollToTopBtn.classList.add("showBtn")
+        } else {
+          // Hide button
+          scrollToTopBtn.classList.remove("showBtn")
+          scrollToTopBtn.classList.add("hideBtn")
+        }
       }
-    }
 
-    document.addEventListener("scroll", handleScroll)
+      document.addEventListener("scroll", handleScroll)
 
-    let link = document.getElementsByClassName("tree-link");
-    addEventListener('keypress', function () {
-      if (link.keyCode === 13) {
-        link.click();
-      }
-    })
+      let link = document.getElementsByClassName("tree-link");
+      addEventListener('keypress', function () {
+        if (link.keyCode === 13) {
+          link.click();
+        }
+      })
 
-    // ]]>
-  </script>
-
+      // ]]>
+    </script>
 
 
-      </div>
-      <div id="content-pane" class="side-tree-view">
 
-        <h1 class="nhsuk-heading-xl" id="pageHeading">
-          <span>Atenolol 100mg tablets (14 tablet)</span>
-        </h1>
+  </div>
+  <div id="content-pane" class="side-tree-view">
 
-        
-        
-        
-        
-          
-  
-  
-  <!--Show History-->
+    <h1 class="nhsuk-heading-xl" id="pageHeading">
+      <span>Atenolol 100mg tablets (14 tablet)</span>
+    </h1>
 
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <span>
+
+
+
+
+
+
+
+    <!--Show History-->
+
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+    <span>
       <p class="nhsuk-u-margin-bottom-5">Currently showing history, click here to
-        <a id="link--hide-history" href="/vmpp/9127?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm,vmp,vmpp-9127&amp;showHistory=false" class="nhsuk-link nhsuk-link--no-visited-state" title="External website" data-module="hierarchy-tree-link"> hide history</a>
+        <a id="link--hide-history"
+          href="/vmpp/9127?ref=W3sicGFnZVRpdGxlIjoiVk1QIHJlc3VsdHMiLCJ1cmwiOiIvc2VhcmNoL3Jlc3VsdHM/c2VhcmNoVGVybT1hdGUmc2VhcmNoVHlwZT1WTVAmbWF0Y2hUZXJtc0V4YWN0PXRydWUmc2hvd0ludmFsaWRJdGVtcz10cnVlJnNob3dWYWxpZEl0ZW1zPXRydWUmc2hvd1BDREQ9dHJ1ZSZzaG93U0NERD10cnVlJnNob3dBdmFpbGFibGU9dHJ1ZSZzaG93VW5hdmFpbGFibGU9dHJ1ZSIsImhpc3RvcnkiOm51bGx9XQ==&amp;showTreeLevel=vtm,vmp,vmpp-9127&amp;currentlyViewing=vtm,vmp,vmpp-9127&amp;showHistory=false"
+          class="nhsuk-link nhsuk-link--no-visited-state" title="External website" data-module="hierarchy-tree-link">
+          hide history</a>
       </p>
     </span>
-  
-
-  <div class="nhsuk-tabs" data-module="nhsuk-tabs" id="nhsuk-tabs-component">
-
-    <ul class="nhsuk-tabs__list" role="tablist">
-      <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected" role="presentation"><a class="nhsuk-tabs__tab" href="#tab-attributes" id="tab_tab-attributes" role="tab" aria-controls="tab-attributes" aria-selected="true" tabindex="0">View
-        attributes</a></li>
-      <li class="nhsuk-tabs__list-item" role="presentation"><a class="nhsuk-tabs__tab" href="#tab-summary" id="tab_tab-summary" role="tab" aria-controls="tab-summary" aria-selected="false" tabindex="-1">View
-        summary</a></li>
-      <li class="nhsuk-tabs__list-item" role="presentation"><a class="nhsuk-tabs__tab" href="#tab-more" id="tab_tab-more" role="tab" aria-controls="tab-more" aria-selected="false" tabindex="-1">View more</a>
-      </li>
-      <li class="nhsuk-tabs__list-item" id="heading-tab-view-audit" role="presentation"><a class="nhsuk-tabs__tab" href="#tab-audit" id="tab_tab-audit" role="tab" aria-controls="tab-audit" aria-selected="false" tabindex="-1">View audit</a></li>
-    </ul>
-
-
-    <div class="nhsuk-tabs__panel" id="tab-attributes" role="tabpanel" aria-labelledby="tab_tab-attributes">
-      <div class="tabs-panel-inner">
-
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-full">
-            <h2 class="nhsuk-heading-l">View attributes</h2>
-            <!--Attributes-->
-            <section class="nhsuk-u-padding-bottom-4" id="attributes-section">
-
-  
-  <div class="nhsuk-action-link" style="float: right">
-    
-    <a class="nhsuk-action-link__link" href="/update/vmpp?productId=9127&amp;sectionToUpdate=attributes" id="action-link-update-attributes" aria-label="Link to update attributes">
-      <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-      </svg>
-      
-      <span class="nhsuk-action-link__text">Update</span>
-    </a>
-  </div>
-
-
-  <h3 class="nhsuk-heading-m" id="attributes-table-heading">Attribute details</h3>
-  <table role="table" class="nhsuk-table-responsive" id="attribute-details-table">
-    <thead role="rowgroup" class="nhsuk-table__head" id="attributes-table-head">
-    <tr class="nhsuk-table__row" id="insertAttribute-table-head-row">
-      <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col" id="insertAttribute-table--tag-header" style="width: 10px;">
-        <span class="nhsuk-u-visually-hidden">Indicator</span>
-      </th>
-      <th role="columnheader" scope="col" class="columnheader-sticky" id="insertAttribute-table--name-header">
-        <label id="insertAttribute-table--name-header-span" for="insertAttribute-table--name-filter-input">
-          Attribute name
-          <svg id="insertAttribute-table--name-header-search-icon" style="height: 1.1875rem; width: 1.1875rem;" class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-          </svg>
-          <br>
-        </label>
-        <input id="insertAttribute-table--name-filter-input" class="insertAttribute-table--name-filter-input-hidden" type="text">
-      </th>
-      <th role="columnheader" scope="col" class="columnheader-sticky" id="insertAttribute-table--description-header">
-        Description
-      </th>
-      <th role="columnheader" scope="col" class="columnheader-sticky start-end-date-column" id="insertAttribute-table--start-date-header">
-        Start date
-      </th>
-      <th role="columnheader" scope="col" class="columnheader-sticky start-end-date-column" id="insertAttribute-table--end-date-header">
-        End date
-      </th>
-    </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-0">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-0" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--combination-pack-indicator-insertAttribute-tag-value-current-0">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-0">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--combination-pack-indicator-insertAttribute-name-value-current-0">Combination Pack Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-0">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--combination-pack-indicator-insertAttribute-description-value-current-0"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-0">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--1-insertattribute-start-date-current-0-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--1-insertattribute-start-date-current-0" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-0">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--1-insertattribute-end-date-current-0-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--1-insertattribute-end-date-current-0" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-1">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-1" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--drug-tariff-payment-category-insertAttribute-tag-value-current-1">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-1">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--drug-tariff-payment-category-insertAttribute-name-value-current-1">Drug Tariff Payment Category</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-1">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--drug-tariff-payment-category-insertAttribute-description-value-current-1"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-1">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--2-insertattribute-start-date-current-1-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--2-insertattribute-start-date-current-1" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-1">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--2-insertattribute-end-date-current-1-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--2-insertattribute-end-date-current-1" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-2">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-2" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--drug-tariff-price-insertAttribute-tag-value-current-2">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-2">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--drug-tariff-price-insertAttribute-name-value-current-2">Drug Tariff Price</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-2">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--drug-tariff-price-insertAttribute-description-value-current-2"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-2">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--3-insertattribute-start-date-current-2-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--3-insertattribute-start-date-current-2" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-2">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--3-insertattribute-end-date-current-2-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--3-insertattribute-end-date-current-2" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-3">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-3" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--reimbursement-price-dt-insertAttribute-tag-value-current-3">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-3">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--reimbursement-price-dt-insertAttribute-name-value-current-3">Reimbursement Price DT</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-3">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--reimbursement-price-dt-insertAttribute-description-value-current-3"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-3">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--7-insertattribute-start-date-current-3-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--7-insertattribute-start-date-current-3" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-3">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--7-insertattribute-end-date-current-3-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--7-insertattribute-end-date-current-3" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-4">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-4" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--original-reimbursement-price-dt-insertAttribute-tag-value-current-4">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-4">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--original-reimbursement-price-dt-insertAttribute-name-value-current-4">Original Reimbursement Price DT</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-4">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--original-reimbursement-price-dt-insertAttribute-description-value-current-4"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-4">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--41-insertattribute-start-date-current-4-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--41-insertattribute-start-date-current-4" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-4">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--41-insertattribute-end-date-current-4-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--41-insertattribute-end-date-current-4" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-5">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-5" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--price-concession-indicator-insertAttribute-tag-value-current-5">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-5">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--price-concession-indicator-insertAttribute-name-value-current-5">Price Concession Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-5">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--price-concession-indicator-insertAttribute-description-value-current-5"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-5">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--26-insertattribute-start-date-current-5-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--26-insertattribute-start-date-current-5" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-5">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--26-insertattribute-end-date-current-5-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--26-insertattribute-end-date-current-5" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-6">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-6" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--special-container-indicator-insertAttribute-tag-value-current-6">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-6">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--special-container-indicator-insertAttribute-name-value-current-6">Special Container Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-6">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--special-container-indicator-insertAttribute-description-value-current-6"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-6">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--14-insertattribute-start-date-current-6-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--14-insertattribute-start-date-current-6" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-6">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--14-insertattribute-end-date-current-6-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--14-insertattribute-end-date-current-6" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-7">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-7" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--calendar-pack-indicator-insertAttribute-tag-value-current-7">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-7">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--calendar-pack-indicator-insertAttribute-name-value-current-7">Calendar Pack Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-7">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--calendar-pack-indicator-insertAttribute-description-value-current-7"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-7">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--13-insertattribute-start-date-current-7-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--13-insertattribute-start-date-current-7" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-7">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--13-insertattribute-end-date-current-7-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--13-insertattribute-end-date-current-7" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-8">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-8" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--numeric-sub-pack-size-insertAttribute-tag-value-current-8">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-8">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--numeric-sub-pack-size-insertAttribute-name-value-current-8">Numeric Sub Pack Size</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-8">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--numeric-sub-pack-size-insertAttribute-description-value-current-8"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-8">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--5-insertattribute-start-date-current-8-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--5-insertattribute-start-date-current-8" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-8">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--5-insertattribute-end-date-current-8-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--5-insertattribute-end-date-current-8" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-9">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-9" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--minimum-quantity-insertAttribute-tag-value-current-9">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-9">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--minimum-quantity-insertAttribute-name-value-current-9">Minimum Quantity</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-9">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--minimum-quantity-insertAttribute-description-value-current-9">0</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-9">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--9-insertattribute-start-date-current-9-aria" class="nhsuk-u-visually-hidden stop-user-selection">1 January 1948</span>
-  
-
-  <span id="insertattribute-table--9-insertattribute-start-date-current-9" aria-hidden="true">01-01-1948</span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-9">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  
-  <span class="nhsuk-u-visually-hidden stop-user-selection" id="insertattribute-table--9-insertattribute-end-date-current-9-aria">End of time
-  </span>
-
-  <span id="insertattribute-table--9-insertattribute-end-date-current-9" aria-hidden="true">01-02-3456</span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-10">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-10" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--maximum-quantity-insertAttribute-tag-value-current-10">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-10">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--maximum-quantity-insertAttribute-name-value-current-10">Maximum Quantity</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-10">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--maximum-quantity-insertAttribute-description-value-current-10">56</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-10">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--10-insertattribute-start-date-current-10-aria" class="nhsuk-u-visually-hidden stop-user-selection">9 December 2009</span>
-  
-
-  <span id="insertattribute-table--10-insertattribute-start-date-current-10" aria-hidden="true">09-12-2009</span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-10">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  
-  <span class="nhsuk-u-visually-hidden stop-user-selection" id="insertattribute-table--10-insertattribute-end-date-current-10-aria">End of time
-  </span>
-
-  <span id="insertattribute-table--10-insertattribute-end-date-current-10" aria-hidden="true">01-02-3456</span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-historic" id="insertAttribute-table-body-row-11">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-11" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--maximum-quantity-insertAttribute-tag-value-current-11">
-            
-
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Historic</span>
-    <strong class="nhsuk-tag nhsuk-tag--orange"><abbr title="Historic">H</abbr>
-    </strong>
-  
-  
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-11">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--maximum-quantity-insertAttribute-name-value-historic-11">Maximum Quantity</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-11">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--maximum-quantity-insertAttribute-description-value-historic-11">9999</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-11">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--10-insertattribute-start-date-historic-11-aria" class="nhsuk-u-visually-hidden stop-user-selection">1 January 1948</span>
-  
-
-  <span id="insertattribute-table--10-insertattribute-start-date-historic-11" aria-hidden="true">01-01-1948</span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-11">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--10-insertattribute-end-date-historic-11-aria" class="nhsuk-u-visually-hidden stop-user-selection">8 December 2009</span>
-  
-
-  <span id="insertattribute-table--10-insertattribute-end-date-historic-11" aria-hidden="true">08-12-2009</span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-12">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-12" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--velocity-code-insertAttribute-tag-value-current-12">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-12">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--velocity-code-insertAttribute-name-value-current-12">Velocity Code</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-12">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--velocity-code-insertAttribute-description-value-current-12"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-12">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--8-insertattribute-start-date-current-12-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--8-insertattribute-start-date-current-12" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-12">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--8-insertattribute-end-date-current-12-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--8-insertattribute-end-date-current-12" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-13">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-13" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--usually-expensive-indicator-insertAttribute-tag-value-current-13">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-13">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--usually-expensive-indicator-insertAttribute-name-value-current-13">Usually Expensive Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-13">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--usually-expensive-indicator-insertAttribute-description-value-current-13"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-13">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--22-insertattribute-start-date-current-13-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--22-insertattribute-start-date-current-13" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-13">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--22-insertattribute-end-date-current-13-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--22-insertattribute-end-date-current-13" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-14">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-14" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--invalid-indicator-insertAttribute-tag-value-current-14">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-14">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--invalid-indicator-insertAttribute-name-value-current-14">Invalid Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-14">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--invalid-indicator-insertAttribute-description-value-current-14"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-14">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--25-insertattribute-start-date-current-14-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--25-insertattribute-start-date-current-14" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-14">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--25-insertattribute-end-date-current-14-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--25-insertattribute-end-date-current-14" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-15">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-15" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--dt-reconstitution-indicator-insertAttribute-tag-value-current-15">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-15">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--dt-reconstitution-indicator-insertAttribute-name-value-current-15">DT Reconstitution Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-15">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--dt-reconstitution-indicator-insertAttribute-description-value-current-15"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-15">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--21-insertattribute-start-date-current-15-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--21-insertattribute-start-date-current-15" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-15">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--21-insertattribute-end-date-current-15-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--21-insertattribute-end-date-current-15" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-16">
-      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-16" style="user-select: none;">
-        <span class="nhsuk-table-responsive__heading">Indicator </span>
-        <span id="insertAttribute-table--clinical-pathways-vat-indicator-insertAttribute-tag-value-current-16">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
-
-
-
-        </span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-16">
-        <span class="nhsuk-table-responsive__heading">Attribute name </span>
-        <span id="insertAttribute-table--clinical-pathways-vat-indicator-insertAttribute-name-value-current-16">Clinical Pathways VAT Indicator</span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-16">
-        <span class="nhsuk-table-responsive__heading">Description </span>
-        <span id="insertAttribute-table--clinical-pathways-vat-indicator-insertAttribute-description-value-current-16"></span>
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-start-date-16">
-        <span class="nhsuk-table-responsive__heading">Start date</span>
-        
-
-  <span id="insertattribute-table--40-insertattribute-start-date-current-16-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--40-insertattribute-start-date-current-16" aria-hidden="true"></span>
-
-      </td>
-      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width" id="insertAttribute-table-cell-end-date-16">
-        <span class="nhsuk-table-responsive__heading">End date</span>
-        
-
-  <span id="insertattribute-table--40-insertattribute-end-date-current-16-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="insertattribute-table--40-insertattribute-end-date-current-16" aria-hidden="true"></span>
-
-      </td>
-    </tr>
-    </tbody>
-  </table>
-  <script type="text/javascript">
-      //<![CDATA[
-      filterInput = document.getElementById('insertAttribute-table--name-filter-input');
-      filterInput.onkeyup = (e) => {
-          const rows = document.querySelectorAll('tbody.nhsuk-table__body > tr.nhsuk-table__row');
-          rows.forEach((row) => {
-              const heading = row.querySelector('td:nth-child(2) > span:nth-child(2)');
-              if (heading.textContent.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1) {
-                  row.classList.remove('nhsuk-table__row__filtered');
-              } else {
-                  row.classList.add('nhsuk-table__row__filtered');
-              }
-          });
-      }
-
-      const nameHeader = document.getElementById('insertAttribute-table--name-header-span');
-      nameHeader.addEventListener('click', () => {
-          const visible = filterInput.classList.contains(
-              'insertAttribute-table--name-filter-input-visible');
-          if (visible) {
-              filterInput.classList.remove('insertAttribute-table--name-filter-input-visible')
-              filterInput.classList.add('insertAttribute-table--name-filter-input-hidden')
-          } else {
-              filterInput.classList.add('insertAttribute-table--name-filter-input-visible')
-              filterInput.classList.remove('insertAttribute-table--name-filter-input-hidden')
-          }
-      });
-      //]]>
-  </script>
-</section>
-            <!--Codes-->
-            <section class="nhsuk-u-padding-bottom-4" id="snomed-section">
-
-  
-  <div class="nhsuk-action-link" style="float: right">
-    
-    <a class="nhsuk-action-link__link" href="/update/vmpp?productId=9127&amp;sectionToUpdate=codes" id="action-link-update-codes" aria-label="Link to update codes">
-      <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-      </svg>
-      
-      <span class="nhsuk-action-link__text">Update</span>
-    </a>
-  </div>
-
-  <h3 class="nhsuk-heading-m">Codes</h3>
-  <table role="table" id="codes-table" class="nhsuk-table-responsive">
-      <caption class="nhsuk-u-visually-hidden">Codes</caption>
-
-      <thead role="rowgroup" class="nhsuk-table__head">
-      <tr role="row" id="codes-table-head-row">
-        <th role="columnheader" scope="col" class="nhsuk-table__header-identifier columnheader-sticky" id="code-table--tag-header" style="width: 10px;">
-          <span class="nhsuk-u-visually-hidden">Indicator</span>
-        </th>
-        <th role="columnheader" scope="col" class="columnheader-sticky" id="code-table--code-header">Code
-        </th>
-        <th role="columnheader" scope="col" class="columnheader-sticky" id="code-table--clinical-term-header" style="width: 400px;">Description
-        </th>
-        <th role="columnheader" scope="col" class="columnheader-sticky" id="code-table--start-date-header" style="width: 150px;">Start date
-        </th>
-        <th role="columnheader" scope="col" class="columnheader-sticky" id="code-table--end-date-header" style="width: 150px;">End date
-        </th>
-      </tr>
-      </thead>
-      <tbody class="nhsuk-table__body">
-      
-        <tr class="nhsuk-table__row temporal-current" role="row">
-          <td role="cell" class="nhsuk-table__cell-historic">
-            <span class="nhsuk-table-responsive__heading">Indicator </span>
-            <span id="code-table--0-tag-value-current">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
-  
-
-
-
-          </span>
-          </td>
-          <td class="nhsuk-table__cell" role="cell">
-            <span class="nhsuk-table-responsive__heading">Code </span>
-            <span id="code-table--vmpp-id-code-type-value-historic-0">VMPP ID</span>
-          </td>
-          <td class="nhsuk-table__cell" role="cell">
-            <span class="nhsuk-table-responsive__heading">Description </span>
-            <span id="code-table--vmpp-id-description-value-historic-0" class="js-copy-to-clipboard">9127<div aria-live="polite" class="nhsuk-u-visually-hidden">
+
+
+    <div class="nhsuk-tabs" data-module="nhsuk-tabs" id="nhsuk-tabs-component">
+
+      <ul class="nhsuk-tabs__list" role="tablist">
+        <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected" role="presentation"><a class="nhsuk-tabs__tab"
+            href="#tab-attributes" id="tab_tab-attributes" role="tab" aria-controls="tab-attributes"
+            aria-selected="true" tabindex="0">View
+            attributes</a></li>
+        <li class="nhsuk-tabs__list-item" role="presentation"><a class="nhsuk-tabs__tab" href="#tab-summary"
+            id="tab_tab-summary" role="tab" aria-controls="tab-summary" aria-selected="false" tabindex="-1">View
+            summary</a></li>
+        <li class="nhsuk-tabs__list-item" role="presentation"><a class="nhsuk-tabs__tab" href="#tab-more"
+            id="tab_tab-more" role="tab" aria-controls="tab-more" aria-selected="false" tabindex="-1">View more</a>
+        </li>
+        <li class="nhsuk-tabs__list-item" id="heading-tab-view-audit" role="presentation"><a class="nhsuk-tabs__tab"
+            href="#tab-audit" id="tab_tab-audit" role="tab" aria-controls="tab-audit" aria-selected="false"
+            tabindex="-1">View audit</a></li>
+      </ul>
+
+
+      <div class="nhsuk-tabs__panel" id="tab-attributes" role="tabpanel" aria-labelledby="tab_tab-attributes">
+        <div class="tabs-panel-inner">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <h2 class="nhsuk-heading-l">View attributes</h2>
+              <!--Attributes-->
+              <section class="nhsuk-u-padding-bottom-4" id="attributes-section">
+
+
+                <div class="nhsuk-action-link" style="float: right">
+
+                  <a class="nhsuk-action-link__link" href="/update/vmpp?productId=9127&amp;sectionToUpdate=attributes"
+                    id="action-link-update-attributes" aria-label="Link to update attributes">
+                    <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                      </path>
+                    </svg>
+
+                    <span class="nhsuk-action-link__text">Update</span>
+                  </a>
+                </div>
+
+
+                <h3 class="nhsuk-heading-m" id="attributes-table-heading">Attribute details</h3>
+                <table role="table" class="nhsuk-table-responsive" id="attribute-details-table">
+                  <thead role="rowgroup" class="nhsuk-table__head" id="attributes-table-head">
+                    <tr class="nhsuk-table__row" id="insertAttribute-table-head-row">
+                      <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col"
+                        id="insertAttribute-table--tag-header" style="width: 10px;">
+                        <span class="nhsuk-u-visually-hidden">Indicator</span>
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky"
+                        id="insertAttribute-table--name-header">
+                        <label id="insertAttribute-table--name-header-span"
+                          for="insertAttribute-table--name-filter-input">
+                          Attribute name
+                          <svg id="insertAttribute-table--name-header-search-icon"
+                            style="height: 1.1875rem; width: 1.1875rem;" class="nhsuk-icon nhsuk-icon__search"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path
+                              d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z">
+                            </path>
+                          </svg>
+                          <br>
+                        </label>
+                        <input id="insertAttribute-table--name-filter-input"
+                          class="insertAttribute-table--name-filter-input-hidden" type="text">
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky"
+                        id="insertAttribute-table--description-header">
+                        Description
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky start-end-date-column"
+                        id="insertAttribute-table--start-date-header">
+                        Start date
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky start-end-date-column"
+                        id="insertAttribute-table--end-date-header">
+                        End date
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-0">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-0"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--combination-pack-indicator-insertAttribute-tag-value-current-0">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-0">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--combination-pack-indicator-insertAttribute-name-value-current-0">Combination
+                          Pack Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-0">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--combination-pack-indicator-insertAttribute-description-value-current-0"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-0">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--1-insertattribute-start-date-current-0-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--1-insertattribute-start-date-current-0"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-0">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--1-insertattribute-end-date-current-0-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--1-insertattribute-end-date-current-0"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-1">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-1"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--drug-tariff-payment-category-insertAttribute-tag-value-current-1">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-1">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--drug-tariff-payment-category-insertAttribute-name-value-current-1">Drug
+                          Tariff Payment Category</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-1">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--drug-tariff-payment-category-insertAttribute-description-value-current-1"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-1">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--2-insertattribute-start-date-current-1-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--2-insertattribute-start-date-current-1"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-1">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--2-insertattribute-end-date-current-1-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--2-insertattribute-end-date-current-1"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-2">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-2"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--drug-tariff-price-insertAttribute-tag-value-current-2">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-2">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span id="insertAttribute-table--drug-tariff-price-insertAttribute-name-value-current-2">Drug
+                          Tariff Price</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-2">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--drug-tariff-price-insertAttribute-description-value-current-2"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-2">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--3-insertattribute-start-date-current-2-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--3-insertattribute-start-date-current-2"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-2">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--3-insertattribute-end-date-current-2-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--3-insertattribute-end-date-current-2"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-3">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-3"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--reimbursement-price-dt-insertAttribute-tag-value-current-3">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-3">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--reimbursement-price-dt-insertAttribute-name-value-current-3">Reimbursement
+                          Price DT</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-3">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--reimbursement-price-dt-insertAttribute-description-value-current-3"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-3">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--7-insertattribute-start-date-current-3-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--7-insertattribute-start-date-current-3"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-3">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--7-insertattribute-end-date-current-3-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--7-insertattribute-end-date-current-3"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-4">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-4"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--original-reimbursement-price-dt-insertAttribute-tag-value-current-4">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-4">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--original-reimbursement-price-dt-insertAttribute-name-value-current-4">Original
+                          Reimbursement Price DT</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-4">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--original-reimbursement-price-dt-insertAttribute-description-value-current-4"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-4">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--41-insertattribute-start-date-current-4-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--41-insertattribute-start-date-current-4"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-4">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--41-insertattribute-end-date-current-4-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--41-insertattribute-end-date-current-4"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-5">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-5"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--price-concession-indicator-insertAttribute-tag-value-current-5">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-5">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--price-concession-indicator-insertAttribute-name-value-current-5">Price
+                          Concession Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-5">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--price-concession-indicator-insertAttribute-description-value-current-5"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-5">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--26-insertattribute-start-date-current-5-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--26-insertattribute-start-date-current-5"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-5">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--26-insertattribute-end-date-current-5-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--26-insertattribute-end-date-current-5"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-6">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-6"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--special-container-indicator-insertAttribute-tag-value-current-6">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-6">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--special-container-indicator-insertAttribute-name-value-current-6">Special
+                          Container Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-6">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--special-container-indicator-insertAttribute-description-value-current-6"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-6">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--14-insertattribute-start-date-current-6-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--14-insertattribute-start-date-current-6"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-6">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--14-insertattribute-end-date-current-6-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--14-insertattribute-end-date-current-6"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-7">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-7"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--calendar-pack-indicator-insertAttribute-tag-value-current-7">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-7">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--calendar-pack-indicator-insertAttribute-name-value-current-7">Calendar
+                          Pack Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-7">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--calendar-pack-indicator-insertAttribute-description-value-current-7"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-7">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--13-insertattribute-start-date-current-7-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--13-insertattribute-start-date-current-7"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-7">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--13-insertattribute-end-date-current-7-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--13-insertattribute-end-date-current-7"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-8">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-8"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--numeric-sub-pack-size-insertAttribute-tag-value-current-8">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-8">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--numeric-sub-pack-size-insertAttribute-name-value-current-8">Numeric
+                          Sub Pack Size</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-8">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--numeric-sub-pack-size-insertAttribute-description-value-current-8"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-8">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--5-insertattribute-start-date-current-8-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--5-insertattribute-start-date-current-8"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-8">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--5-insertattribute-end-date-current-8-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--5-insertattribute-end-date-current-8"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-9">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-9"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--minimum-quantity-insertAttribute-tag-value-current-9">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-9">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span id="insertAttribute-table--minimum-quantity-insertAttribute-name-value-current-9">Minimum
+                          Quantity</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-9">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--minimum-quantity-insertAttribute-description-value-current-9">0</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-9">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--9-insertattribute-start-date-current-9-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection">1 January 1948</span>
+
+
+                        <span id="insertattribute-table--9-insertattribute-start-date-current-9"
+                          aria-hidden="true">01-01-1948</span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-9">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+
+                        <span class="nhsuk-u-visually-hidden stop-user-selection"
+                          id="insertattribute-table--9-insertattribute-end-date-current-9-aria">End of time
+                        </span>
+
+                        <span id="insertattribute-table--9-insertattribute-end-date-current-9"
+                          aria-hidden="true">01-02-3456</span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-10">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-10"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--maximum-quantity-insertAttribute-tag-value-current-10">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-10">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span id="insertAttribute-table--maximum-quantity-insertAttribute-name-value-current-10">Maximum
+                          Quantity</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-10">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--maximum-quantity-insertAttribute-description-value-current-10">56</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-10">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--10-insertattribute-start-date-current-10-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection">9 December 2009</span>
+
+
+                        <span id="insertattribute-table--10-insertattribute-start-date-current-10"
+                          aria-hidden="true">09-12-2009</span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-10">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+
+                        <span class="nhsuk-u-visually-hidden stop-user-selection"
+                          id="insertattribute-table--10-insertattribute-end-date-current-10-aria">End of time
+                        </span>
+
+                        <span id="insertattribute-table--10-insertattribute-end-date-current-10"
+                          aria-hidden="true">01-02-3456</span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-historic" id="insertAttribute-table-body-row-11">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-11"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--maximum-quantity-insertAttribute-tag-value-current-11">
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Historic</span>
+                          <strong class="nhsuk-tag nhsuk-tag--orange"><abbr title="Historic">H</abbr>
+                          </strong>
+
+
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-11">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--maximum-quantity-insertAttribute-name-value-historic-11">Maximum
+                          Quantity</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-11">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--maximum-quantity-insertAttribute-description-value-historic-11">9999</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-11">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--10-insertattribute-start-date-historic-11-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection">1 January 1948</span>
+
+
+                        <span id="insertattribute-table--10-insertattribute-start-date-historic-11"
+                          aria-hidden="true">01-01-1948</span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-11">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--10-insertattribute-end-date-historic-11-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection">8 December 2009</span>
+
+
+                        <span id="insertattribute-table--10-insertattribute-end-date-historic-11"
+                          aria-hidden="true">08-12-2009</span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-12">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-12"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--velocity-code-insertAttribute-tag-value-current-12">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-12">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span id="insertAttribute-table--velocity-code-insertAttribute-name-value-current-12">Velocity
+                          Code</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-12">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--velocity-code-insertAttribute-description-value-current-12"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-12">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--8-insertattribute-start-date-current-12-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--8-insertattribute-start-date-current-12"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-12">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--8-insertattribute-end-date-current-12-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--8-insertattribute-end-date-current-12"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-13">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-13"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--usually-expensive-indicator-insertAttribute-tag-value-current-13">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-13">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--usually-expensive-indicator-insertAttribute-name-value-current-13">Usually
+                          Expensive Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-13">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--usually-expensive-indicator-insertAttribute-description-value-current-13"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-13">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--22-insertattribute-start-date-current-13-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--22-insertattribute-start-date-current-13"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-13">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--22-insertattribute-end-date-current-13-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--22-insertattribute-end-date-current-13"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-14">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-14"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="insertAttribute-table--invalid-indicator-insertAttribute-tag-value-current-14">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-14">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--invalid-indicator-insertAttribute-name-value-current-14">Invalid
+                          Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-14">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--invalid-indicator-insertAttribute-description-value-current-14"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-14">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--25-insertattribute-start-date-current-14-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--25-insertattribute-start-date-current-14"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-14">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--25-insertattribute-end-date-current-14-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--25-insertattribute-end-date-current-14"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-15">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-15"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--dt-reconstitution-indicator-insertAttribute-tag-value-current-15">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-15">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--dt-reconstitution-indicator-insertAttribute-name-value-current-15">DT
+                          Reconstitution Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-15">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--dt-reconstitution-indicator-insertAttribute-description-value-current-15"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-15">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--21-insertattribute-start-date-current-15-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--21-insertattribute-start-date-current-15"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-15">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--21-insertattribute-end-date-current-15-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--21-insertattribute-end-date-current-15"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                    <tr role="row" class="nhsuk-table__row temporal-current" id="insertAttribute-table-body-row-16">
+                      <td role="cell" class="nhsuk-table__cell-historic" id="insertAttribute-table-cell-indicator-16"
+                        style="user-select: none;">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span
+                          id="insertAttribute-table--clinical-pathways-vat-indicator-insertAttribute-tag-value-current-16">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-name-16">
+                        <span class="nhsuk-table-responsive__heading">Attribute name </span>
+                        <span
+                          id="insertAttribute-table--clinical-pathways-vat-indicator-insertAttribute-name-value-current-16">Clinical
+                          Pathways VAT Indicator</span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell" id="insertAttribute-table-cell-description-16">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span
+                          id="insertAttribute-table--clinical-pathways-vat-indicator-insertAttribute-description-value-current-16"></span>
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-start-date-16">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="insertattribute-table--40-insertattribute-start-date-current-16-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--40-insertattribute-start-date-current-16"
+                          aria-hidden="true"></span>
+
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width"
+                        id="insertAttribute-table-cell-end-date-16">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+                        <span id="insertattribute-table--40-insertattribute-end-date-current-16-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="insertattribute-table--40-insertattribute-end-date-current-16"
+                          aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <script type="text/javascript">
+                  //<![CDATA[
+                  filterInput = document.getElementById('insertAttribute-table--name-filter-input');
+                  filterInput.onkeyup = (e) => {
+                    const rows = document.querySelectorAll('tbody.nhsuk-table__body > tr.nhsuk-table__row');
+                    rows.forEach((row) => {
+                      const heading = row.querySelector('td:nth-child(2) > span:nth-child(2)');
+                      if (heading.textContent.toLowerCase().indexOf(e.target.value.toLowerCase()) > -1) {
+                        row.classList.remove('nhsuk-table__row__filtered');
+                      } else {
+                        row.classList.add('nhsuk-table__row__filtered');
+                      }
+                    });
+                  }
+
+                  const nameHeader = document.getElementById('insertAttribute-table--name-header-span');
+                  nameHeader.addEventListener('click', () => {
+                    const visible = filterInput.classList.contains(
+                      'insertAttribute-table--name-filter-input-visible');
+                    if (visible) {
+                      filterInput.classList.remove('insertAttribute-table--name-filter-input-visible')
+                      filterInput.classList.add('insertAttribute-table--name-filter-input-hidden')
+                    } else {
+                      filterInput.classList.add('insertAttribute-table--name-filter-input-visible')
+                      filterInput.classList.remove('insertAttribute-table--name-filter-input-hidden')
+                    }
+                  });
+                  //]]>
+                </script>
+              </section>
+              <!--Codes-->
+              <section class="nhsuk-u-padding-bottom-4" id="snomed-section">
+
+
+                <div class="nhsuk-action-link" style="float: right">
+
+                  <a class="nhsuk-action-link__link" href="/update/vmpp?productId=9127&amp;sectionToUpdate=codes"
+                    id="action-link-update-codes" aria-label="Link to update codes">
+                    <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                      </path>
+                    </svg>
+
+                    <span class="nhsuk-action-link__text">Update</span>
+                  </a>
+                </div>
+
+                <h3 class="nhsuk-heading-m">Codes</h3>
+                <table role="table" id="codes-table" class="nhsuk-table-responsive">
+                  <caption class="nhsuk-u-visually-hidden">Codes</caption>
+
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row" id="codes-table-head-row">
+                      <th role="columnheader" scope="col" class="nhsuk-table__header-identifier columnheader-sticky"
+                        id="code-table--tag-header" style="width: 10px;">
+                        <span class="nhsuk-u-visually-hidden">Indicator</span>
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky" id="code-table--code-header">Code
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky"
+                        id="code-table--clinical-term-header" style="width: 400px;">Description
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky" id="code-table--start-date-header"
+                        style="width: 150px;">Start date
+                      </th>
+                      <th role="columnheader" scope="col" class="columnheader-sticky" id="code-table--end-date-header"
+                        style="width: 150px;">End date
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+
+                    <tr class="nhsuk-table__row temporal-current" role="row">
+                      <td role="cell" class="nhsuk-table__cell-historic">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="code-table--0-tag-value-current">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td class="nhsuk-table__cell" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Code </span>
+                        <span id="code-table--vmpp-id-code-type-value-historic-0">VMPP ID</span>
+                      </td>
+                      <td class="nhsuk-table__cell" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span id="code-table--vmpp-id-description-value-historic-0" class="js-copy-to-clipboard">9127
+                          <div aria-live="polite" class="nhsuk-u-visually-hidden">
+                          </div>
+                          <button id="copy-button-0" class="nhsuk-u-margin-left-2 nhsuk-u-margin-right-2"
+                            style="cursor: pointer; border:none; background-color:transparent; vertical-align:middle; padding: 0 4px 0 0;"
+                            aria-label="copy-button-0">
+                            <svg style="vertical-align:middle; height: 31px; width:31px"
+                              class="nhsuk-icon nhsuk-icon__tick nhsuk-u-inline-svg" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24" fill="none">
+                              <title id="copy-function-0" lang="en">Select this to copy 9127 to the clipboard</title>
+                              <rect x="9" y="5" rx="1" ry="1" width="9" height="11"
+                                style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
+                              <rect x="6" y="8" rx="1" ry="1" width="9" height="11"
+                                style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
+                              <line x1="8" y1="12" x2="13" y2="12" style="stroke:black;stroke-width:1"></line>
+                              <line x1="8" y1="14" x2="13" y2="14" style="stroke:black;stroke-width:1"></line>
+                              <line x1="8" y1="16" x2="13" y2="16" style="stroke:black;stroke-width:1"></line>
+                            </svg>
+                          </button></span>
+                      </td>
+                      <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Start date </span>
+
+
+                        <span id="code-table--vmpp-id-start-date-value-historic-0-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="code-table--vmpp-id-start-date-value-historic-0" aria-hidden="true"></span>
+
+                      </td>
+                      <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
+                        <span class="nhsuk-table-responsive__heading">End date </span>
+
+
+                        <span id="code-table--vmpp-id-end-date-value-historic-0-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="code-table--vmpp-id-end-date-value-historic-0" aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+
+                    <tr class="nhsuk-table__row temporal-current" role="row">
+                      <td role="cell" class="nhsuk-table__cell-historic">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="code-table--1-tag-value-current">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td class="nhsuk-table__cell" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Code </span>
+                        <span id="code-table--ppa-code-code-type-value-historic-1">PPA Code</span>
+                      </td>
+                      <td class="nhsuk-table__cell" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span id="code-table--ppa-code-description-value-historic-1"></span>
+                      </td>
+                      <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Start date </span>
+
+
+                        <span id="code-table--ppa-code-start-date-value-historic-1-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="code-table--ppa-code-start-date-value-historic-1" aria-hidden="true"></span>
+
+                      </td>
+                      <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
+                        <span class="nhsuk-table-responsive__heading">End date </span>
+
+
+                        <span id="code-table--ppa-code-end-date-value-historic-1-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection"></span>
+
+
+                        <span id="code-table--ppa-code-end-date-value-historic-1" aria-hidden="true"></span>
+
+                      </td>
+                    </tr>
+
+                    <tr class="nhsuk-table__row temporal-current" role="row">
+                      <td role="cell" class="nhsuk-table__cell-historic">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="code-table--2-tag-value-current">
+
+
+
+
+
+                          <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
+
+
+
+
+                        </span>
+                      </td>
+                      <td class="nhsuk-table__cell" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Code </span>
+                        <span id="code-table--snomed-code-code-type-value-current-2">SNOMED Code</span>
+                      </td>
+                      <td class="nhsuk-table__cell" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Description </span>
+                        <span id="code-table--snomed-code-description-value-current-2"
+                          class="js-copy-to-clipboard">5511711000001106<div aria-live="polite"
+                            class="nhsuk-u-visually-hidden">
+                          </div>
+                          <button id="copy-button-1" class="nhsuk-u-margin-left-2 nhsuk-u-margin-right-2"
+                            style="cursor: pointer; border:none; background-color:transparent; vertical-align:middle; padding: 0 4px 0 0;"
+                            aria-label="copy-button-1">
+                            <svg style="vertical-align:middle; height: 31px; width:31px"
+                              class="nhsuk-icon nhsuk-icon__tick nhsuk-u-inline-svg" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24" fill="none">
+                              <title id="copy-function-1" lang="en">Select this to copy 5511711000001106 to the
+                                clipboard</title>
+                              <rect x="9" y="5" rx="1" ry="1" width="9" height="11"
+                                style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
+                              <rect x="6" y="8" rx="1" ry="1" width="9" height="11"
+                                style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
+                              <line x1="8" y1="12" x2="13" y2="12" style="stroke:black;stroke-width:1"></line>
+                              <line x1="8" y1="14" x2="13" y2="14" style="stroke:black;stroke-width:1"></line>
+                              <line x1="8" y1="16" x2="13" y2="16" style="stroke:black;stroke-width:1"></line>
+                            </svg>
+                          </button></span>
+                      </td>
+                      <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
+                        <span class="nhsuk-table-responsive__heading">Start date </span>
+
+
+                        <span id="code-table--snomed-code-start-date-value-current-2-aria"
+                          class="nhsuk-u-visually-hidden stop-user-selection">1 January 1948</span>
+
+
+                        <span id="code-table--snomed-code-start-date-value-current-2"
+                          aria-hidden="true">01-01-1948</span>
+
+                      </td>
+                      <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
+                        <span class="nhsuk-table-responsive__heading">End date </span>
+
+
+
+                        <span class="nhsuk-u-visually-hidden stop-user-selection"
+                          id="code-table--snomed-code-end-date-value-current-2-aria">End of time
+                        </span>
+
+                        <span id="code-table--snomed-code-end-date-value-current-2" aria-hidden="true">01-02-3456</span>
+
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </section>
+              <!--BNF Tree-->
+
             </div>
-            <button id="copy-button-0" class="nhsuk-u-margin-left-2 nhsuk-u-margin-right-2" style="cursor: pointer; border:none; background-color:transparent; vertical-align:middle; padding: 0 4px 0 0;" aria-label="copy-button-0">
-              <svg style="vertical-align:middle; height: 31px; width:31px" class="nhsuk-icon nhsuk-icon__tick nhsuk-u-inline-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                <title id="copy-function-0" lang="en">Select this to copy 9127 to the clipboard</title>
-                <rect x="9" y="5" rx="1" ry="1" width="9" height="11" style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
-                <rect x="6" y="8" rx="1" ry="1" width="9" height="11" style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
-                <line x1="8" y1="12" x2="13" y2="12" style="stroke:black;stroke-width:1"></line>
-                <line x1="8" y1="14" x2="13" y2="14" style="stroke:black;stroke-width:1"></line>
-                <line x1="8" y1="16" x2="13" y2="16" style="stroke:black;stroke-width:1"></line>
-              </svg>
-            </button></span>
-          </td>
-          <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
-            <span class="nhsuk-table-responsive__heading">Start date </span>
-            
+          </div>
+        </div>
+      </div>
 
-  <span id="code-table--vmpp-id-start-date-value-historic-0-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
+      <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="tab-summary" role="tabpanel"
+        aria-labelledby="tab_tab-summary">
+        <div class="tabs-panel-inner">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <h2 class="nhsuk-heading-l">View summary</h2>
+              <!--Summary-->
+              <section class="nhsuk-u-padding-bottom-4" id="summary-section">
 
-  <span id="code-table--vmpp-id-start-date-value-historic-0" aria-hidden="true"></span>
+                <div class="nhsuk-action-link" style="float: right">
 
-          </td>
-          <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
-            <span class="nhsuk-table-responsive__heading">End date </span>
-            
+                  <a class="nhsuk-action-link__link" href="/update/vmpp?productId=9127&amp;sectionToUpdate=summary"
+                    id="action-link-update-summary" aria-label="Link to update summary">
+                    <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                      </path>
+                    </svg>
 
-  <span id="code-table--vmpp-id-end-date-value-historic-0-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
+                    <span class="nhsuk-action-link__text">Update</span>
+                  </a>
+                </div>
 
-  <span id="code-table--vmpp-id-end-date-value-historic-0" aria-hidden="true"></span>
+                <h3 class="nhsuk-heading-m">Summary</h3>
 
-          </td>
-        </tr>
-      
-        <tr class="nhsuk-table__row temporal-current" role="row">
-          <td role="cell" class="nhsuk-table__cell-historic">
-            <span class="nhsuk-table-responsive__heading">Indicator </span>
-            <span id="code-table--1-tag-value-current">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Undefined</span>
-  
+                <dl class="nhsuk-summary-list" style="width: 45%">
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key" style="width: 55%">
+                      Start date
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                      <span class="nhsuk-u-visually-hidden">Start date</span>
 
 
+                      <span id="summary-start-date-value-aria" class="nhsuk-u-visually-hidden stop-user-selection">1
+                        January 1948</span>
 
-          </span>
-          </td>
-          <td class="nhsuk-table__cell" role="cell">
-            <span class="nhsuk-table-responsive__heading">Code </span>
-            <span id="code-table--ppa-code-code-type-value-historic-1">PPA Code</span>
-          </td>
-          <td class="nhsuk-table__cell" role="cell">
-            <span class="nhsuk-table-responsive__heading">Description </span>
-            <span id="code-table--ppa-code-description-value-historic-1"></span>
-          </td>
-          <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
-            <span class="nhsuk-table-responsive__heading">Start date </span>
-            
 
-  <span id="code-table--ppa-code-start-date-value-historic-1-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
+                      <span id="summary-start-date-value" aria-hidden="true">01-01-1948</span>
 
-  <span id="code-table--ppa-code-start-date-value-historic-1" aria-hidden="true"></span>
-
-          </td>
-          <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
-            <span class="nhsuk-table-responsive__heading">End date </span>
-            
-
-  <span id="code-table--ppa-code-end-date-value-historic-1-aria" class="nhsuk-u-visually-hidden stop-user-selection"></span>
-  
-
-  <span id="code-table--ppa-code-end-date-value-historic-1" aria-hidden="true"></span>
-
-          </td>
-        </tr>
-      
-        <tr class="nhsuk-table__row temporal-current" role="row">
-          <td role="cell" class="nhsuk-table__cell-historic">
-            <span class="nhsuk-table-responsive__heading">Indicator </span>
-            <span id="code-table--2-tag-value-current">
-            
-
-  
-  
-  
-    <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Current</span>
-  
+                    </dd>
+                  </div>
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                      End date
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                      <span class="nhsuk-u-visually-hidden">End date</span>
 
 
 
-          </span>
-          </td>
-          <td class="nhsuk-table__cell" role="cell">
-            <span class="nhsuk-table-responsive__heading">Code </span>
-            <span id="code-table--snomed-code-code-type-value-current-2">SNOMED Code</span>
-          </td>
-          <td class="nhsuk-table__cell" role="cell">
-            <span class="nhsuk-table-responsive__heading">Description </span>
-            <span id="code-table--snomed-code-description-value-current-2" class="js-copy-to-clipboard">5511711000001106<div aria-live="polite" class="nhsuk-u-visually-hidden">
+                      <span class="nhsuk-u-visually-hidden stop-user-selection" id="summary-end-date-value-aria">End of
+                        time
+                      </span>
+
+                      <span id="summary-end-date-value" aria-hidden="true">01-02-3456</span>
+
+                    </dd>
+                  </div>
+
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">PIT
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                      <span class="nhsuk-u-visually-hidden">PIT value</span>
+                      <span id="summary-pit-value">Generic Name VMP</span>
+                    </dd>
+                  </div>
+
+
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                      Dictionary
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                      <span class="nhsuk-u-visually-hidden">Dictionary code</span>
+                      <span id="summary-table-dictionary-value" class="nhsuk-tag">PCDD</span>
+                    </dd>
+                  </div>
+
+
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                      Invalid
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                      <span class="nhsuk-u-visually-hidden">Invalid</span>
+                      <span id="summary-invalid-value">
+
+                      </span>
+                    </dd>
+                  </div>
+
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">Unextractable
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+
+                      <span id="summary-extractable-value-true">
+                        <span class="nhsuk-u-visually-hidden">Extractable</span>
+                      </span>
+                    </dd>
+                  </div>
+
+                  <div class="nhsuk-summary-list__row">
+                    <dt class="nhsuk-summary-list__key">
+                      Quantity and UOM (unit of measure)
+                    </dt>
+                    <dd class="nhsuk-summary-list__value">
+                      <span class="nhsuk-u-visually-hidden">Quantity and UOM (unit of measure)</span>
+                      <span id="summary-table-pack-uom-value">14 tablet</span>
+                    </dd>
+                  </div>
+                </dl>
+              </section>
+              <!--Based On-->
+
             </div>
-            <button id="copy-button-1" class="nhsuk-u-margin-left-2 nhsuk-u-margin-right-2" style="cursor: pointer; border:none; background-color:transparent; vertical-align:middle; padding: 0 4px 0 0;" aria-label="copy-button-1">
-              <svg style="vertical-align:middle; height: 31px; width:31px" class="nhsuk-icon nhsuk-icon__tick nhsuk-u-inline-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                <title id="copy-function-1" lang="en">Select this to copy 5511711000001106 to the clipboard</title>
-                <rect x="9" y="5" rx="1" ry="1" width="9" height="11" style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
-                <rect x="6" y="8" rx="1" ry="1" width="9" height="11" style="fill:white;stroke:black; stroke-width:1;opacity:1"></rect>
-                <line x1="8" y1="12" x2="13" y2="12" style="stroke:black;stroke-width:1"></line>
-                <line x1="8" y1="14" x2="13" y2="14" style="stroke:black;stroke-width:1"></line>
-                <line x1="8" y1="16" x2="13" y2="16" style="stroke:black;stroke-width:1"></line>
-              </svg>
-            </button></span>
-          </td>
-          <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
-            <span class="nhsuk-table-responsive__heading">Start date </span>
-            
-
-  <span id="code-table--snomed-code-start-date-value-current-2-aria" class="nhsuk-u-visually-hidden stop-user-selection">1 January 1948</span>
-  
-
-  <span id="code-table--snomed-code-start-date-value-current-2" aria-hidden="true">01-01-1948</span>
-
-          </td>
-          <td class="nhsuk-table__cell nhsuk-u--table-date-width" role="cell">
-            <span class="nhsuk-table-responsive__heading">End date </span>
-            
-
-  
-  <span class="nhsuk-u-visually-hidden stop-user-selection" id="code-table--snomed-code-end-date-value-current-2-aria">End of time
-  </span>
-
-  <span id="code-table--snomed-code-end-date-value-current-2" aria-hidden="true">01-02-3456</span>
-
-          </td>
-        </tr>
-      
-      </tbody>
-    </table>
-</section>
-            <!--BNF Tree-->
-            
           </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="tab-more" role="tabpanel"
+        aria-labelledby="tab_tab-more">
+        <div class="tabs-panel-inner">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <h2 class="nhsuk-heading-l">View more</h2>
+
+              <!--Combination Details-->
+              <section class="nhsuk-u-padding-bottom-4" id="combination-details-section">
+                <h3 class="nhsuk-heading-m">Combination details</h3>
+
+                <p>There are no combination details associated with this VMPP</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Audit tab-->
+      <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="tab-audit" role="tabpanel"
+        aria-labelledby="tab_tab-audit">
+        <div class="tabs-panel-inner">
+          <h2 class="nhsuk-heading-l">Audit</h2>
+          <div class="nhsuk-hint">
+            To view the audit, you will need to download the file.</div>
+          <a class="nhsuk-button nhsuk-u-margin-top-5" id="download-button" href="/path/to/audit/file">Download audit
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="tab-summary" role="tabpanel" aria-labelledby="tab_tab-summary">
-      <div class="tabs-panel-inner">
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-full">
-            <h2 class="nhsuk-heading-l">View summary</h2>
-            <!--Summary-->
-            <section class="nhsuk-u-padding-bottom-4" id="summary-section">
-  
-  <div class="nhsuk-action-link" style="float: right">
-    
-    <a class="nhsuk-action-link__link" href="/update/vmpp?productId=9127&amp;sectionToUpdate=summary" id="action-link-update-summary" aria-label="Link to update summary">
-      <svg aria-hidden="true" class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-      </svg>
-      
-      <span class="nhsuk-action-link__text">Update</span>
-    </a>
+
+
+
+
+
+
   </div>
+</div>
 
-  <h3 class="nhsuk-heading-m">Summary</h3>
-
-  <dl class="nhsuk-summary-list" style="width: 45%">
-    <div class="nhsuk-summary-list__row">
-      <dt class="nhsuk-summary-list__key" style="width: 55%">
-        Start date
-      </dt>
-      <dd class="nhsuk-summary-list__value">
-        <span class="nhsuk-u-visually-hidden">Start date</span>
-        
-
-  <span id="summary-start-date-value-aria" class="nhsuk-u-visually-hidden stop-user-selection">1 January 1948</span>
-  
-
-  <span id="summary-start-date-value" aria-hidden="true">01-01-1948</span>
-
-      </dd>
-    </div>
-    <div class="nhsuk-summary-list__row">
-      <dt class="nhsuk-summary-list__key">
-        End date
-      </dt>
-      <dd class="nhsuk-summary-list__value">
-        <span class="nhsuk-u-visually-hidden">End date</span>
-        
-
-  
-  <span class="nhsuk-u-visually-hidden stop-user-selection" id="summary-end-date-value-aria">End of time
-  </span>
-
-  <span id="summary-end-date-value" aria-hidden="true">01-02-3456</span>
-
-      </dd>
-    </div>
-
-    <div class="nhsuk-summary-list__row">
-      <dt class="nhsuk-summary-list__key">PIT
-      </dt>
-      <dd class="nhsuk-summary-list__value">
-        <span class="nhsuk-u-visually-hidden">PIT value</span>
-        <span id="summary-pit-value">Generic Name VMP</span>
-      </dd>
-    </div>
-
-
-    <div class="nhsuk-summary-list__row">
-      <dt class="nhsuk-summary-list__key">
-        Dictionary
-      </dt>
-      <dd class="nhsuk-summary-list__value">
-        <span class="nhsuk-u-visually-hidden">Dictionary code</span>
-        <span id="summary-table-dictionary-value" class="nhsuk-tag">PCDD</span>
-      </dd>
-    </div>
-
-
-    <div class="nhsuk-summary-list__row">
-      <dt class="nhsuk-summary-list__key">
-        Invalid
-      </dt>
-      <dd class="nhsuk-summary-list__value">
-        <span class="nhsuk-u-visually-hidden">Invalid</span>
-        <span id="summary-invalid-value">
-            
-          </span>
-      </dd>
-    </div>
-
-    <div class="nhsuk-summary-list__row">
-      <dt class="nhsuk-summary-list__key">Unextractable
-      </dt>
-      <dd class="nhsuk-summary-list__value">
-          
-        <span id="summary-extractable-value-true">
-            <span class="nhsuk-u-visually-hidden">Extractable</span>
-          </span>
-      </dd>
-    </div>
-
-    <div class="nhsuk-summary-list__row">
-      <dt class="nhsuk-summary-list__key">
-        Quantity and UOM (unit of measure)
-      </dt>
-      <dd class="nhsuk-summary-list__value">
-        <span class="nhsuk-u-visually-hidden">Quantity and UOM (unit of measure)</span>
-        <span id="summary-table-pack-uom-value">14 tablet</span>
-      </dd>
-    </div>
-  </dl>
-</section>
-            <!--Based On-->
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="tab-more" role="tabpanel" aria-labelledby="tab_tab-more">
-      <div class="tabs-panel-inner">
-
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-full">
-            <h2 class="nhsuk-heading-l">View more</h2>
-
-            <!--Combination Details-->
-            <section class="nhsuk-u-padding-bottom-4" id="combination-details-section">
-  <h3 class="nhsuk-heading-m">Combination details</h3>
-  
-  <p>There are no combination details associated with this VMPP</p>
-</section>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Audit tab-->
-    <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="tab-audit" role="tabpanel" aria-labelledby="tab_tab-audit">
-      <div class="tabs-panel-inner">
-        <h2 class="nhsuk-heading-l">Audit</h2>
-        <div class="nhsuk-hint">
-          To view the audit, you will need to download the file.</div>
-        <a class="nhsuk-button nhsuk-u-margin-top-5" id="download-button" href="/path/to/audit/file">Download audit </a>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-        
-        
-      </div>
-    </div>
-
-            <!--TODO: HIDE THIS WHEN ON TABLET-->
-      <div>
-  
   <!--TODO: HIDE THIS WHEN ON TABLET-->
   <div id="sticky-footer" class="sticky-footer nhsuk-breadcrumb">
-      <span style="display: flex;flex-direction: row;align-items: stretch">
-          <!--grid-template-columns: 1fr, 1fr, 1fr;-->
-          <div id="sticky-footer-prefix-container" style="text-wrap: nowrap;">
-            <!--Invalid indicator-->
-            
-            <span id="sticky-footer-invalid" class="nhsuk-tag nhsuk-tag--green" aria-description="Valid">VAL</span>
-            <!--Extractable-->
-            <span id="sticky-footer-extractable" class="nhsuk-tag nhsuk-tag--green" aria-description="Extractable">EXT</span>
-            
-            <!--Dictionary-->
-            
-            <span id="sticky-footer-dictionary" class="nhsuk-tag">PCDD</span>
-            <span id="sticky-footer-pit" class="nhsuk-tag nhsuk-tag--blue">Generic Name VMP</span>
-            
-            <span class="nhsuk-u-margin-left-1">|</span>
-          </div>
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem;">
+      <!--grid-template-columns: 1fr, 1fr, 1fr;-->
+      <div id="sticky-footer-prefix-container" >
+        <!--Invalid indicator-->
 
-        <div class="nhsuk-u-margin-right-1 nhsuk-u-margin-left-1" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
-          <span id="sticky-footer-commodity-type"  class="nhsuk-tag nhsuk-tag--pink">VMPP</span>
-          
-          <span id="sticky-footer-product-name">Atenolol 100mg tablets</span>
-          <span id="sticky-footer-pack-size"> (14 tablet)</span>
-        </div>
+        <span id="sticky-footer-invalid" class="nhsuk-tag nhsuk-tag--green" aria-description="Valid">VAL</span>
+        <!--Extractable-->
+        <span id="sticky-footer-extractable" class="nhsuk-tag nhsuk-tag--green"
+          aria-description="Extractable">EXT</span>
 
-        <!--|-->
+        <!--Dictionary-->
 
-        <div class="nhsuk-u-margin-right-3" style="text-wrap: nowrap;">
-            <span class="nhsuk-u-margin-left-1">|</span>
-            <a id="sticky-footer-back-to-top-link" href="#main-content">Back to top</a>
-        </div>
+        <span id="sticky-footer-dictionary" class="nhsuk-tag">PCDD</span>
+        <span id="sticky-footer-pit" class="nhsuk-tag nhsuk-tag--blue">Generic Name VMP</span>
+
+        <span class="nhsuk-u-margin-left-1">|</span>
+      </div>
+
+      <div class="nhsuk-u-margin-right-1 nhsuk-u-margin-left-1"
+       >
+        <span id="sticky-footer-commodity-type" class="nhsuk-tag nhsuk-tag--pink">VMPP</span>
+
+        <span id="sticky-footer-product-name">Atenolol 100mg tablets</span>
+        <span id="sticky-footer-pack-size"> (14 tablet)</span>
+      </div>
+
+      <!--|-->
+
+      <div class="nhsuk-u-margin-right-3" >
+        <span class="nhsuk-u-margin-left-1">|</span>
+        <a id="sticky-footer-back-to-top-link" href="#main-content">Back to top</a>
+      </div>
 
 
 
-        <span style="float: right; text-wrap: nowrap; text-align: right !important; flex-grow: 1" id="sticky-footer-page-details">
-          01-01-1948
-          
-          -
-          
-          End of time
-        </span>
+      <span style="float: right; text-wrap: nowrap; text-align: right !important; flex-grow: 1"
+        id="sticky-footer-page-details">
+        01-01-1948
+
+        -
+
+        End of time
       </span>
-  </div>
+    </div>
 
-</div>
-{% endblock %}
+
+  </div>
+  {% endblock %}

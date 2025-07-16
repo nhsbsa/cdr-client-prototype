@@ -756,6 +756,8 @@ fill-blue {
     background-color: white;
     border-top: 2px solid #4c6272;
     padding: 1rem;
+    box-sizing: border-box;
+
   
 }
 
