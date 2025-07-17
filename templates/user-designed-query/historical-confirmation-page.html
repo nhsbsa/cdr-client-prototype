@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="hierarchy-options-view.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path
+          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to Options</span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                User defined query
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Attribute history confirmation
+      </h1>
+    </legend>
+
+    <div class="nhsuk-warning-callout">
+      <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Confirmation required
+    </span>
+      </h3>
+      <p>The attribute history is currently switched off do wish to continue like this ? </p>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset">
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-1" name="example-1" type="radio"
+                   value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+              Yes, I want to continue with the history off
+            </label>
+          </div>
+
+          <div class="nhsuk-radios__item ">
+            <input class="nhsuk-radios__input" id="example-2" name="example-2" type="radio"
+                   value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+              No, I want to continue with the history switched on
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+    <button class="nhsuk-button nhsuk-u-margin-top-5" onclick="handleSaveAndContinue()">Continue</button>
+
+
+    <script>
+      function handleSaveAndContinue() {
+
+        const yesOption = document.getElementById('example-1');
+        const noOption = document.getElementById('example-2');
+
+
+        if (yesOption.checked) {
+          window.location.href = 'new-query-summary-page.html';
+        } else if (noOption.checked) {
+          window.location.href = 'load-page.html';
+        }
+
+      }
+    </script>
+
+    {% endblock %}
