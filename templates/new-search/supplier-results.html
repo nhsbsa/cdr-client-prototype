@@ -1,0 +1,607 @@
+{% extends "new-search/base2.html" %}
+{% block content %}
+
+
+
+<div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+            <div>
+                <form id="new-search-form" method="post"><input type="hidden" name="_csrf"
+                        value="mqQ58ifpWeY-Ar790t0aq2En70y_exc01JFzfzMc47XjUlk9rpIIl0OIa4UTNImYtPAuklcfwi2OS3YZ4KRCTQAt2tGFNGAL">
+
+
+
+
+                    <h1 class="nhsuk-u-margin-bottom-5 nhsuk-u-margin-left-3" id="page-landing-heading">
+                        Search results <span id="search-summary"></span></h1>
+
+
+
+                    <div class="nhsuk-grid-column-one-quarter">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="search-type">
+                                Search type
+                            </label>
+
+                            <select class="nhsuk-select search-type" id="search-type" name="searchType">
+                                <option value="VMP" >VMP</option>
+                                <option value="AMP">AMP</option>
+                                <option value="Supplier" selected="selected">Supplier</option>
+                                <option value="VTM">VTM</option>
+                                <option value="Ingredient">Ingredient</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Serch Input field-->
+                    <div class="nhsuk-grid-column-three-quarters">
+                        <div class="nhsuk-form-group autocomplete-wrapper nhsuk-u-width-full"
+                            id="autocomplete-results__form-group">
+                            <label class="nhsuk-label" for="search-term">Search
+                                term
+                            </label>
+
+                            <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text" role="combobox"
+                                aria-autocomplete="list" aria-describedby="search-field__assistiveHint"
+                                aria-owns="autocomplete-results-container"
+                                aria-controls="autocomplete-results__announcer" aria-expanded="false" name="searchTerm"
+                                value="" autocomplete="off">
+                            <ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden"
+                                id="autocomplete-results-container" role="listbox"></ul>
+                            <div class="nhsuk-u-visually-hidden" id="autocomplete-results__announcer" role="alert"
+                                aria-live="assertive"></div>
+                            <span class="autocomplete__announcer" id="search-field__assistiveHint"> When
+                                autocomplete results are available use up and down arrows to review and enter to
+                                select.</span>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-full" id="row-supplier-input" style="display: none;">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="search-supplier-input">Supplier (optional)</label>
+                            <input class="nhsuk-input" id="search-supplier-input" type="text" name="supplier" value="">
+                        </div>
+                    </div>
+
+
+                    <input type="hidden" value="100" id="size" name="size">
+                    <div class="nhsuk-grid-column-one-third nhsuk-button-float-right" id="button-search">
+
+                       <a class="nhsuk-button" data-module="nhsuk-button" href="/new-search/index" draggable="false"
+                            role="button" data-nhsuk-button-init="">
+                            New search
+                        </a>
+
+                        <button class="nhsuk-button nhsuk-button--secondary" id="reset-button" name="reset"
+                            type="submit">Reset
+                        </button>
+
+
+
+                    </div>
+
+
+
+
+                    <input type="hidden" value="1" id="page" name="page">
+                    <!--Attributes from previous search for infinite scroll-->
+                    <div class="nhsuk-u-visually-hidden">
+                        <p id="searched-search-term"></p>
+                        <p id="searched-search-type" var="VMP"></p>
+                        <p id="searched-supplier"></p>
+                        <p id="searched-show-PCDD" var="true"></p>
+                        <p id="searched-show-SCDD" var="true"></p>
+                        <p id="searched-show-valid" var="true"></p>
+                        <p id="searched-show-invalid" var="true"></p>
+                        <p id="searched-show-available" var="true"></p>
+                        <p id="searched-show-unavailable" var="true"></p>
+                        <p id="searched-match-term-exact" var="true"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="nhsuk-width-container-fluid">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+
+            <div class="nhsuk-grid-column-full">
+                <details class="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">Customize table view</span>
+                    </summary>
+                    <div class="nhsuk-details__text">
+
+                        <div class="nhsuk-form-group">
+                            <fieldset class="nhsuk-fieldset">
+                                <div class="nhsuk-hint" id="contact-hint">
+                                    Add or remove attribute columns by ticking or unticking them, and pressing
+                                    the "Update table" button
+                                </div>
+                                <div class="nhsuk-checkboxes">
+
+                                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                       
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_showSCDD" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-name" type="checkbox"
+                                                checked="checked" name="showSCDD" value="true" disabled>
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-name">
+                                                Name
+                                            </label>
+                                        </div>
+
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_matchTermsExact" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-start-date" type="checkbox"
+                                                checked="checked" name="matchTermsExact" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-start-date">
+                                                Start date
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_showValidItems" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-snomed-code"
+                                                type="checkbox" checked="checked" name="showValidItems" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-show-snomed-code">
+                                                SNOMED Code
+                                            </label>
+                                        </div>
+
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_showInvalidItems" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-supplier-code"
+                                                type="checkbox" name="showInvalidItems" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-show-supplier-code">
+                                                Supplier code
+                                            </label>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_showAvailable" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-invalid"
+                                                type="checkbox" name="showAvailable" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-show-invalid">
+                                                Invalid
+                                            </label>
+                                        </div>
+
+
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_showUnavailable" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-uex" type="checkbox"
+                                                name="showUnavailable" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-uex">
+                                                Unextractable
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                        <!--div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_matchTermsExact" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-end-date" type="checkbox"
+                                                name="matchTermsExact" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-end-date">
+                                                End date
+                                            </label>
+                                        </div>
+
+                                        <div class="nhsuk-checkboxes__item">
+                        <input type="hidden" name="_matchTermsExact" value="on"><input class="nhsuk-checkboxes__input"
+                          id="checkbox-match-name-exact" type="checkbox" checked="checked" name="matchTermsExact"
+                          value="true">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-match-name-exact">
+                         Ingredient
+                        </label>
+                      </div-->
+
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <table role="table-responsive" class="nhsuk-table-responsive " data-module="moj-sortable-table">
+                <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Search Results</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                        
+                        <th role="columnheader" class="" scope="col" aria-sort="ascending">
+                            Name<span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
+                       
+                      
+                        <th role="columnheader" class="" scope="col" aria-sort="none">
+                            INV <span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
+                        <th role="columnheader" class="" scope="col" aria-sort="none">
+                            UEX <span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
+
+                         <th role="columnheader" class="" scope="col" aria-sort="none">
+                            Start date <span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
+                        <th role="columnheader" class="" scope="col" aria-sort="none">
+                            SNOMED Code<span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
+                        <th role="columnheader" class="" scope="col" aria-sort="none">
+                            Supplier Code<span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
+                      
+                      
+
+
+                    </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                    <!--ROWS GO HERE-->
+                 
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/301">ABC Pharma Ltd</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>12-04-2008
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>123456789
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>12
+  </td>
+</tr>
+
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/302">Global Med Supplies</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>05-09-2011
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>234567890
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>207
+  </td>
+</tr>
+
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/303">Healthcare Solutions Ltd</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>20-01-2006
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>345678901
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>89
+  </td>
+</tr>
+
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/304">NHS Provision Co</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>08-07-2013
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>456789012
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>142
+  </td>
+</tr>
+
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/305">Zenith Pharmaceuticals</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>14-02-2005
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>567890123
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>66
+  </td>
+</tr>
+
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/306">Medico Supplies</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>27-10-2009
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>678901234
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>98
+  </td>
+</tr>
+
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/307">VitalCare Suppliers</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+    <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+    </svg>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>03-06-2014
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>789012345
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>154
+  </td>
+</tr>
+
+<tr class="nhsuk-table__row" role="row">
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+    <a href="/supplier/308">Union Healthcare</a>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>11-12-2007
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>890123456
+  </td>
+  <td role="cell" class="nhsuk-table__cell">
+    <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>308
+  </td>
+</tr>
+
+
+                </tbody>
+            </table>
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const table = document.querySelector("[data-module='moj-sortable-table']");
+        if (!table) return;
+
+        const headers = table.querySelectorAll("th");
+        headers.forEach((header, index) => {
+            // Remove existing sort indicators if they already exist
+            const existingIndicator = header.querySelector(".sort-indicator");
+            if (existingIndicator) {
+                existingIndicator.remove();
+            }
+
+            // Create and append a new sort indicator
+            let sortIndicator = document.createElement("span");
+            sortIndicator.className = "sort-indicator";
+            sortIndicator.setAttribute("aria-hidden", "true");
+            sortIndicator.innerHTML = "⇅"; // Default state
+            header.appendChild(sortIndicator);
+
+            header.addEventListener("click", function () {
+                const isAscending = header.getAttribute("aria-sort") === "ascending";
+                sortTableByColumn(table, index, !isAscending);
+            });
+        });
+
+        function sortTableByColumn(table, columnIndex, ascending) {
+            const tbody = table.querySelector("tbody");
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.children[columnIndex].getAttribute("data-sort-value")
+                    || rowA.children[columnIndex].innerText.trim();
+                const cellB = rowB.children[columnIndex].getAttribute("data-sort-value")
+                    || rowB.children[columnIndex].innerText.trim();
+
+                const compare = !isNaN(cellA) && !isNaN(cellB) ? cellA - cellB : cellA.localeCompare(cellB,
+                    undefined, { numeric: true });
+
+                return ascending ? compare : -compare;
+            });
+
+            rows.forEach(row => tbody.appendChild(row));
+
+            // Reset all headers
+            table.querySelectorAll("th").forEach(th => {
+                th.setAttribute("aria-sort", "none");
+                const indicator = th.querySelector(".sort-indicator");
+                if (indicator) {
+                    indicator.innerHTML = "⇅"; // Reset icon
+                }
+            });
+
+            // Set the sorted column
+            headers[columnIndex].setAttribute("aria-sort", ascending ? "ascending" : "descending");
+            headers[columnIndex].querySelector(".sort-indicator").innerHTML = ascending ? "↑" : "↓";
+        }
+    });
+</script>
+
+<script>
+    // Read the query params from the URL
+    const params = new URLSearchParams(window.location.search);
+    const searchTerm = params.get("searchTerm");
+    const searchType = params.get("searchType");
+
+    // Format and inject into the page
+    const summaryText = `for (${searchType}) ${searchTerm} `;
+    document.getElementById("search-summary").textContent = summaryText;
+
+    // 2. Populate the input field
+    const inputEl = document.getElementById("search-term");
+    if (inputEl && searchTerm) {
+        inputEl.value = searchTerm;
+    }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Map your checkbox IDs to the zero‑based column index in the table
+    const columnIndexMap = {
+      "checkbox-show-name":          0,  // Name
+      "checkbox-show-invalid":       1,  // INV
+      "checkbox-show-uex":           2,  // UEX
+      "checkbox-start-date":         3,  // Start date
+      "checkbox-show-snomed-code":   4,  // SNOMED Code
+      "checkbox-show-supplier-code": 5   // Supplier Code
+    };
+
+    const table = document.querySelector("table");
+    if (!table) return;
+
+    function toggleColumnByIndex(index, show) {
+      // Hide/show the <th>
+      const th = table.querySelector(`thead tr`).children[index];
+      if (th) th.style.display = show ? "" : "none";
+
+      // Hide/show every <td> in that index
+      table.querySelectorAll("tbody tr").forEach(row => {
+        const cell = row.children[index];
+        if (cell) cell.style.display = show ? "" : "none";
+      });
+    }
+
+    // Wire up each checkbox
+    Object.entries(columnIndexMap).forEach(([checkboxId, colIndex]) => {
+      const checkbox = document.getElementById(checkboxId);
+      if (!checkbox) return;
+
+      // Initialize visibility based on current checked state
+      toggleColumnByIndex(colIndex, checkbox.checked);
+
+      // Re‑toggle on change
+      checkbox.addEventListener("change", () => {
+        toggleColumnByIndex(colIndex, checkbox.checked);
+      });
+    });
+  });
+</script>
+
+
+
+
+{% endblock %}

@@ -23,9 +23,9 @@
             <select class="nhsuk-select search-type" id="search-type" name="searchType">
               <option value="VMP">VMP</option>
               <option value="AMP">AMP</option>
-              <option value="SUPPLIER">Supplier</option>
+              <option value="Supplier">Supplier</option>
               <option value="VTM" selected="selected">VTM</option>
-              <option value="INGREDIENT">Ingredient</option>
+              <option value="Ingredient">Ingredient</option>
             </select>
           </div>
         </div>
@@ -184,7 +184,7 @@
     const searchTerm = document.getElementById("search-term").value;
 
     // Construct URL based on selected search type
-    let basePath = "/tce-2384/results"; // default
+    let basePath = "/new-search/index"; // default
     switch (searchType) {
       case "VMP":
         basePath = "/new-search/vmp-results";
@@ -192,18 +192,21 @@
       case "AMP":
         basePath = "/new-search/amp-results";
         break;
-      case "SUPPLIER":
+      case "Supplier":
         basePath = "/new-search/supplier-results";
         break;
       case "VTM":
         basePath = "/new-search/vtm-results";
         break;
-      case "INGREDIENT":
+      case "Ingredient":
         basePath = "/new-search/ingredient-results";
         break;
     }
 
- 
+ const params = new URLSearchParams({
+      searchTerm: searchTerm,
+      searchType: searchType
+    });
 
     // Redirect
     window.location.href = `${basePath}?${params.toString()}`;
