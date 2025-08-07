@@ -13,10 +13,10 @@
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
       <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
             <span class="nhsuk-caption-l">
-                User defined query
+                Saved query
               <span class="nhsuk-u-visually-hidden"> - </span>
             </span>
-        Save new query summary page
+        New saved query summary page
       </h1>
     </legend>
 
@@ -29,12 +29,12 @@
       </h2>
     </legend>
 
-<!--    <div class="nhsuk-hint" id="contact-hint">-->
-<!--      Internal/external attribute are set by default to both Int and Ext. If you want to make changes to the Int/Ext attribute-->
-<!--      <a href="edit-attribute-int-ext.html">-->
-<!--        You can edit that here-->
-<!--      </a>.-->
-<!--    </div>-->
+    <!--    <div class="nhsuk-hint" id="contact-hint">-->
+    <!--      Internal/external attribute are set by default to both Int and Ext. If you want to make changes to the Int/Ext attribute-->
+    <!--      <a href="edit-attribute-int-ext.html">-->
+    <!--        You can edit that here-->
+    <!--      </a>.-->
+    <!--    </div>-->
 
     <dl class="nhsuk-summary-list">
 
@@ -211,16 +211,11 @@
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="save">
         <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-          Yes I would like to save this query
+          Yes I would like to save this new query
         </label>
       </div>
-<!--&lt;!&ndash;      this update radio button will only be shown in the saved query piece after the operator has chosen to proceed with the cloning process &ndash;&gt;-->
-<!--      <div class="nhsuk-radios__item">-->
-<!--        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="update">-->
-<!--        <label class="nhsuk-label nhsuk-radios__label" for="example-2">-->
-<!--          I would like to update this query and save the new version-->
-<!--        </label>-->
-<!--      </div>-->
+      <!--      this update radio button will only be shown in the saved query piece after the operator has chosen to proceed with the cloning process -->
+
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="example-3" name="example" type="radio" value="finish">
         <label class="nhsuk-label nhsuk-radios__label" for="example-3">
@@ -251,11 +246,11 @@
 
     switch (selectedValue) {
       case 'save':
-        window.location.href = 'save-query-add-note.html';
-        break;
-      case 'update':
         window.location.href = 'confirm-update-query-page.html';
         break;
+      // case 'update':
+      //   window.location.href = 'confirm-update-query-page.html';
+      //   break;
       case 'finish':
         window.location.href = 'home-page.html';
         break;

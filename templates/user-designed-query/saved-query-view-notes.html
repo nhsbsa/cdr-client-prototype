@@ -17,23 +17,55 @@
                 Saved user defined query
               <span class="nhsuk-u-visually-hidden"> - </span>
             </span>
-      View notes
+      Query overview
     </h1>
   </legend>
 </fieldset>
 
+<div class="nhsuk-do-dont-list">
+  <h3 class="nhsuk-do-dont-list__label">Original comment</h3>
 
+  <ul>
+    <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem vel nisi tristique tincidunt.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      In hac habitasse platea dictumst.
+      Nullam fringilla, nisl vel malesuada commodo,
+      sapien justo tempus ante, eget congue metus nisl et erat.
+      Suspendisse potenti. Sed vehicula lorem nec arcu faucibus, at accumsan velit facilisis. Integer in eros ut risus fringilla volutpat.
+    </li>
 
-  <div>
-    <H3>Saved notes </H3>
-    <ul>
-      <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </li>
+  </ul>
+</div>
 
-    </ul>
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Add new comment
+
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+
+    <div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="500">
+      <div class="nhsuk-form-group">
+        <h2 class="nhsuk-label-wrapper">
+          <label class="nhsuk-label nhsuk-label--l" for="more-detail">
+            Add new comment
+          </label>
+        </h2>
+        <div class="nhsuk-hint" id="more-detail-hint">
+          Your Cypher and the date will be added automatically.
+        </div>
+        <textarea class="nhsuk-textarea nhsuk-js-character-count" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <div class="nhsuk-hint nhsuk-character-count__message" id="more-detail-info">
+        You can enter up to 500 characters
+      </div>
+
+    </div>
   </div>
+</details>
 
 
 <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="saved-udq-view.html" id="submitButton">
