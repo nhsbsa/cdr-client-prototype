@@ -1,0 +1,496 @@
+{% extends "base-full.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="saved-query-summary-page.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back to saved query summary page  </span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Update supplier Prototype
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+        Relistor 12mg/0.6ml solution for injection vials (Bausch & Lomb UK Limited)
+      </h1>
+    </legend>
+    <script>
+      .do, .dont {
+        width: 300px; /* or whatever width you want */
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .top-label {
+        display: block;
+        width: 100%;
+        background-color: #eee; /* optional for visibility */
+        padding: 10px;
+        font-weight: bold;
+        text-align: center; /* optional */
+        box-sizing: border-box;
+      }
+    </script>
+
+    <!--supplier detail one -->
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Supplier details </h3>
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Associated supplier name </caption>
+        <thead class="nhsuk-table__head">
+        <tr>
+          <th scope="col" class="nhsuk-table__header">Current supplier</th>
+          <th scope="col" class="nhsuk-table__header">Start date (Extracted) </th>
+          <th scope="col" class="nhsuk-table__header">End date</th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Bausch & Lomb uk ltd</td>
+          <td class="nhsuk-table__cell">03/03/2020
+          </td>
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="03" name="example[day]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="03" name="example[month]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2020"  name="example[year]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div></td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <!--    insert details-->
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+       Insert new supplier here
+    </span>
+      </summary>
+      <div class="nhsuk-details__text">
+
+
+        <div class="nhsuk-do-dont-list">
+          <h3 class="nhsuk-do-dont-list__label">Supplier details </h3>
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Add new associated supplier name </caption>
+            <thead class="nhsuk-table__head">
+            <tr>
+              <th scope="col" class="nhsuk-table__header">Current supplier</th>
+              <th scope="col" class="nhsuk-table__header">Start date (Extracted) </th>
+              <th scope="col" class="nhsuk-table__header">End date</th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+                <label class="nhsuk-label" aria-hidden="true" for="select">
+
+                </label> <select class="nhsuk-select" id="select" name="select">
+                <option value="1">AAH Hilcross </option>
+                <option value="2" Boome Medical Ltd</option>
+                <option value="3" Bausch & Loob</option>
+              </select>
+              </div>
+              </td>
+              <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+
+                  <div class="nhsuk-date-input" id="example">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                          Day
+                        </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="03" name="example[day]" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                          Month
+                        </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="03" name="example[month]" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                          Year
+                        </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2020"  name="example[year]" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div></td>
+              <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+
+                  <div class="nhsuk-date-input" id="example">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                          Day
+                        </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="03" name="example[day]" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                          Month
+                        </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="03" name="example[month]" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                          Year
+                        </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2020"  name="example[year]" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div></td>
+            </tr>
+            </tbody>
+          </table>
+          <button class="nhsuk-button nhsuk-button--warning" data-module="nhsuk-button" type="submit">
+            Delete new supplier
+          </button>
+          <!--          <button class="nhsuk-button nhsuk-button&#45;&#45;secondary-solid" data-module="nhsuk-button" type="submit">-->
+          <!--            Save new supplier-->
+          <!--          </button>-->
+        </div>
+
+      </div>
+    </details>
+
+    <!--supplier detail two-->
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Supplier details
+      </h3>
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Associated supplier name </caption>
+        <thead class="nhsuk-table__head">
+        <tr>
+          <th scope="col" class="nhsuk-table__header">Current supplier</th>
+          <th scope="col" class="nhsuk-table__header">Start date</th>
+          <th scope="col" class="nhsuk-table__header">End date</th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">AAH Hilcross</td>
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="06" name="example[day]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="08" name="example[month]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2060" name="example[year]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div></td>
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="04" name="example[day]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="08"  name="example[month]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2070" name="example[year]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <label class="nhsuk-label" aria-hidden="true" for="select">
+        Change supplier name
+      </label> <select class="nhsuk-select" id="select" name="select">
+      <option value="1">AAH Hilcross </option>
+      <option value="2" Boome Medical Ltd</option>
+      <option value="3" Bausch & Loob</option>
+    </select>
+
+
+
+    </div>
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Supplier details </h3>
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Add new associated supplier name </caption>
+        <thead class="nhsuk-table__head">
+        <tr>
+          <th scope="col" class="nhsuk-table__header">Current supplier</th>
+          <th scope="col" class="nhsuk-table__header">Start date (Extracted) </th>
+          <th scope="col" class="nhsuk-table__header">End date</th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+            <label class="nhsuk-label" aria-hidden="true" for="select">
+
+            </label> <select class="nhsuk-select" id="select" name="select">
+            <option value="1">AAH Hilcross </option>
+            <option value="2" Boome Medical Ltd</option>
+            <option value="3" Bausch & Loob</option>
+          </select>
+          </div>
+          </td>
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="03" name="example[day]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="03" name="example[month]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2020"  name="example[year]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div></td>
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="03" name="example[day]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="03" name="example[month]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2020"  name="example[year]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div></td>
+        </tr>
+        </tbody>
+      </table>
+      <button class="nhsuk-button nhsuk-button--warning" data-module="nhsuk-button" type="submit">
+        Delete new supplier
+      </button>
+      <!--          <button class="nhsuk-button nhsuk-button&#45;&#45;secondary-solid" data-module="nhsuk-button" type="submit">-->
+      <!--            Save new supplier-->
+      <!--          </button>-->
+    </div>
+
+
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Supplier details
+      </h3>
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Associated supplier name </caption>
+        <thead class="nhsuk-table__head">
+        <tr>
+          <th scope="col" class="nhsuk-table__header">Current supplier</th>
+          <th scope="col" class="nhsuk-table__header">Start date</th>
+          <th scope="col" class="nhsuk-table__header">End date</th>
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Boomo Medical Ltd</td>
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="05" name="example[day]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="08" name="example[month]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="2070" name="example[year]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div></td>
+          <td class="nhsuk-table__cell"><div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+
+
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                      Day
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" value="01" name="example[day]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" value="02"  name="example[month]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label> <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" value="3456" name="example[year]" type="text" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div></td>
+        </tr>
+        </tbody>
+      </table>
+      <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+        Select a different supplier
+      </button>
+    </div>
+    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+      Insert a new supplier
+    </button>
+
+    <hr>
+
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Continue
+    </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
