@@ -45,9 +45,7 @@
               id="autocomplete-results-container" role="listbox"></ul>
             <div class="nhsuk-u-visually-hidden" id="autocomplete-results__announcer" role="alert"
               aria-live="assertive"></div>
-            <span class="autocomplete__announcer" id="search-field__assistiveHint"> When
-              autocomplete results are available use up and down arrows to review and enter to
-              select.</span>
+           
           </div>
         </div>
 
@@ -61,7 +59,7 @@
         <div class="nhsuk-grid-column-full">
           <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">Refine search</span>
+              <span class="nhsuk-details__summary-text">Apply filters to search</span>
             </summary>
             <div class="nhsuk-details__text">
 
@@ -212,5 +210,27 @@
     window.location.href = `${basePath}?${params.toString()}`;
   });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const searchTypeSelect = document.getElementById('search-type');
+  const supplierInputRow = document.getElementById('row-supplier-input');
+
+  function toggleSupplierInput() {
+    if (searchTypeSelect.value === 'AMP') {
+      supplierInputRow.style.display = 'block';
+    } else {
+      supplierInputRow.style.display = 'none';
+    }
+  }
+
+  // Run once on page load in case AMP is pre-selected
+  toggleSupplierInput();
+
+  // Listen for changes
+  searchTypeSelect.addEventListener('change', toggleSupplierInput);
+});
+</script>
+
 
 {% endblock %}

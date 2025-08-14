@@ -25,7 +25,7 @@
                             </label>
 
                             <select class="nhsuk-select search-type" id="search-type" name="searchType">
-                                <option value="VMP" >VMP</option>
+                                <option value="VMP">VMP</option>
                                 <option value="AMP" selected="selected">AMP</option>
                                 <option value="Supplier">Supplier</option>
                                 <option value="VTM">VTM</option>
@@ -47,8 +47,8 @@
                                 aria-owns="autocomplete-results-container"
                                 aria-controls="autocomplete-results__announcer" aria-expanded="false" name="searchTerm"
                                 value="" autocomplete="off">
-                       
-                           
+
+
                         </div>
                     </div>
 
@@ -60,17 +60,117 @@
                     </div>
 
 
+                    <div class="nhsuk-grid-column-full">
+                        <details class="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">Apply filters to search</span>
+                            </summary>
+                            <div class="nhsuk-details__text">
+
+                                <div class="nhsuk-form-group">
+                                    <fieldset class="nhsuk-fieldset">
+                                        <legend class="nhsuk-fieldset__legend">Filter by</legend>
+                                        <div class="nhsuk-checkboxes">
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showPCDD" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-pcdd-items"
+                                                        type="checkbox" checked="checked" name="showPCDD" value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-pcdd-items">
+                                                        PCDD
+                                                    </label>
+                                                </div>
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showSCDD" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-scdd-items"
+                                                        type="checkbox" checked="checked" name="showSCDD" value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-scdd-items">
+                                                        SCDD
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showValidItems" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-valid-items"
+                                                        type="checkbox" checked="checked" name="showValidItems"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-valid-items">
+                                                        Valid
+                                                    </label>
+                                                </div>
+
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showInvalidItems" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-invalid-items"
+                                                        type="checkbox" checked="checked" name="showInvalidItems"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-invalid-items">
+                                                        Invalid
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showAvailable" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-avail-items"
+                                                        type="checkbox" checked="checked" name="showAvailable"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-avail-items">
+                                                        Available
+                                                    </label>
+                                                </div>
+
+
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showUnavailable" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-unavail-items"
+                                                        type="checkbox" checked="checked" name="showUnavailable"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-unavail-items">
+                                                        Unavailable
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_matchTermsExact" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-match-name-exact"
+                                                        type="checkbox" checked="checked" name="matchTermsExact"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-match-name-exact">
+                                                        Match terms
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+
                     <input type="hidden" value="100" id="size" name="size">
-                    <div class="nhsuk-grid-column-one-third nhsuk-button-float-right" id="button-search">
+                    <div class="nhsuk-grid-column-one-third  nhsuk-u-float-right" id="button-search">
 
-                       <a class="nhsuk-button" data-module="nhsuk-button" href="/new-search/index" draggable="false"
-                            role="button" data-nhsuk-button-init="">
-                            New search
-                        </a>
-
-                        <button class="nhsuk-button nhsuk-button--secondary" id="reset-button" name="reset"
-                            type="submit">Reset
+                        <button type="button" class="nhsuk-button nhsuk-u-float-right" id="search-button">
+                            Search
                         </button>
+
 
 
 
@@ -105,6 +205,8 @@
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
 
+
+
             <div class="nhsuk-grid-column-full">
                 <details class="nhsuk-details">
                     <summary class="nhsuk-details__summary">
@@ -115,8 +217,7 @@
                         <div class="nhsuk-form-group">
                             <fieldset class="nhsuk-fieldset">
                                 <div class="nhsuk-hint" id="contact-hint">
-                                    Add or remove attribute columns by ticking or unticking them, and pressing
-                                    the "Update table" button
+                                    Add or remove attribute columns by ticking or unticking them
                                 </div>
                                 <div class="nhsuk-checkboxes">
 
@@ -143,7 +244,8 @@
                                             <input type="hidden" name="_matchTermsExact" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-start-date" type="checkbox"
                                                 checked="checked" name="matchTermsExact" value="true">
-                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-start-date">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-start-date">
                                                 Start date
                                             </label>
                                         </div>
@@ -172,9 +274,10 @@
 
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showInvalidItems" value="on"><input
-                                                class="nhsuk-checkboxes__input" id="checkbox-show-supplier" type="checkbox"
-                                                name="showInvalidItems" value="true">
-                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-supplier">
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-supplier"
+                                                type="checkbox" name="showInvalidItems" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-show-supplier">
                                                 Supplier
                                             </label>
                                         </div>
@@ -218,20 +321,11 @@
                                             <input type="hidden" name="_matchTermsExact" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-end-date" type="checkbox"
                                                 name="matchTermsExact" value="true">
-                                            <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                for="checkbox-end-date">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-end-date">
                                                 End date
                                             </label>
                                         </div>
 
-                                        <!--div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_matchTermsExact" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-match-name-exact" type="checkbox" checked="checked" name="matchTermsExact"
-                          value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-match-name-exact">
-                         Ingredient
-                        </label>
-                      </div-->
 
                                     </div>
 
@@ -241,6 +335,9 @@
                     </div>
                 </details>
             </div>
+            <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" id="reset-button" type="button">
+                Reset table
+            </button>
 
             <table role="table-responsive" class="nhsuk-table-responsive " data-module="moj-sortable-table">
                 <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Search Results</caption>
@@ -309,7 +406,8 @@
                         </td>
                         <!-- Supplier -->
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span><a href="/supplier/hollister-ltd">Hollister Ltd</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span><a
+                                href="/supplier/hollister-ltd">Hollister Ltd</a>
                         </td>
                         <!-- INV -->
                         <td role="cell" class="nhsuk-table__cell">
@@ -368,7 +466,8 @@
                         </td>
                         <!-- Supplier -->
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Sandoz Ltd</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Sandoz Ltd</a>
                         </td>
                         <!-- INV -->
                         <td role="cell" class="nhsuk-table__cell">
@@ -380,11 +479,11 @@
                         </td>
                         <!-- UEX -->
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
                         </td>
                         <!-- U/A -->
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
                         </td>
                         <!-- End date -->
                         <td role="cell" class="nhsuk-table__cell">
@@ -419,11 +518,12 @@
                         </td>
                         <!-- Supplier -->
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Sandoz Ltd</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Sandoz Ltd</a>
                         </td>
                         <!-- INV -->
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
                         </td>
                         <!-- UEX -->
                         <td role="cell" class="nhsuk-table__cell">
@@ -467,7 +567,8 @@
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Boots</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Boots</a>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -477,10 +578,10 @@
                             </svg>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
@@ -508,10 +609,11 @@
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Boots</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Boots</a>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
@@ -521,7 +623,7 @@
                             </svg>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>12-05-2018
@@ -549,7 +651,8 @@
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Asda</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Asda</a>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -566,7 +669,7 @@
                             </svg>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
@@ -594,13 +697,14 @@
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Morrisons</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Morrisons</a>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
@@ -635,7 +739,8 @@
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Asda</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Asda</a>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -645,10 +750,10 @@
                             </svg>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
@@ -676,10 +781,11 @@
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Sandoz Ltd</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Sandoz Ltd</a>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
@@ -689,7 +795,7 @@
                             </svg>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span> 
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>30-09-2019
@@ -717,7 +823,8 @@
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a href="/supplier/sandoz-ltd">Boots</a>
+                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
+                                href="/supplier/sandoz-ltd">Boots</a>
                         </td>
                         <td role="cell" class="nhsuk-table__cell">
                             <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -760,7 +867,40 @@
 </div>
 
 
+<script>
+    document.getElementById("search-button").addEventListener("click", function () {
+        const searchType = document.getElementById("search-type").value;
+        const searchTerm = document.getElementById("search-term").value;
 
+        // Construct URL based on selected search type
+        let basePath = "/new-search/index"; // default
+        switch (searchType) {
+            case "VMP":
+                basePath = "/new-search/vmp-results";
+                break;
+            case "AMP":
+                basePath = "/new-search/amp-results";
+                break;
+            case "Supplier":
+                basePath = "/new-search/supplier-results";
+                break;
+            case "VTM":
+                basePath = "/new-search/vtm-results";
+                break;
+            case "Ingredient":
+                basePath = "/new-search/ingredient-results";
+                break;
+        }
+
+        const params = new URLSearchParams({
+            searchTerm: searchTerm,
+            searchType: searchType
+        });
+
+        // Redirect
+        window.location.href = `${basePath}?${params.toString()}`;
+    });
+</script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -886,6 +1026,31 @@
     });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchTypeSelect = document.getElementById('search-type');
+        const supplierInputRow = document.getElementById('row-supplier-input');
 
+        function toggleSupplierInput() {
+            if (searchTypeSelect.value === 'AMP') {
+                supplierInputRow.style.display = 'block';
+            } else {
+                supplierInputRow.style.display = 'none';
+            }
+        }
 
+        // Run once on page load in case AMP is pre-selected
+        toggleSupplierInput();
+
+        // Listen for changes
+        searchTypeSelect.addEventListener('change', toggleSupplierInput);
+    });
+</script>
+
+<script>
+document.getElementById('reset-button').addEventListener('click', function () {
+  // Simply reloads the page, preserving query parameters
+  window.location.reload();
+});
+</script>
 {% endblock %}
