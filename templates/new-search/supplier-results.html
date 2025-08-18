@@ -237,7 +237,8 @@
 
                     <div class="nhsuk-checkboxes__item">
                       <input type="hidden" name="_showInvalidItems" value="on"><input class="nhsuk-checkboxes__input"
-                        id="checkbox-show-supplier-code" type="checkbox" name="showInvalidItems" value="true">
+                        id="checkbox-show-supplier-code" type="checkbox" checked="checked" name="showInvalidItems"
+                        value="true">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-supplier-code">
                         Supplier code
                       </label>
@@ -250,7 +251,7 @@
                   <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
                     <div class="nhsuk-checkboxes__item">
                       <input type="hidden" name="_showAvailable" value="on"><input class="nhsuk-checkboxes__input"
-                        id="checkbox-show-invalid" type="checkbox" name="showAvailable" value="true">
+                        id="checkbox-show-invalid" type="checkbox" checked="checked" name="showAvailable" value="true">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-invalid">
                         Invalid
                       </label>
@@ -259,7 +260,7 @@
 
                     <div class="nhsuk-checkboxes__item">
                       <input type="hidden" name="_showUnavailable" value="on"><input class="nhsuk-checkboxes__input"
-                        id="checkbox-show-uex" type="checkbox" name="showUnavailable" value="true">
+                        id="checkbox-show-uex" type="checkbox" checked="checked" name="showUnavailable" value="true">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-uex">
                         Unextractable
                       </label>
@@ -268,17 +269,15 @@
                   </div>
 
                   <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
-                    <!--div class="nhsuk-checkboxes__item">
-                                            <input type="hidden" name="_matchTermsExact" value="on"><input
-                                                class="nhsuk-checkboxes__input" id="checkbox-end-date" type="checkbox"
-                                                name="matchTermsExact" value="true">
-                                            <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                for="checkbox-end-date">
-                                                End date
-                                            </label>
-                                        </div>
+                    <div class="nhsuk-checkboxes__item">
+                      <input type="hidden" name="_matchTermsExact" value="on"><input class="nhsuk-checkboxes__input"
+                        id="checkbox-supplier-id" type="checkbox" checked="checked" name="matchTermsExact" value="true">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-supplier-id">
+                        Supplier ID
+                      </label>
+                    </div>
 
-                                        <div class="nhsuk-checkboxes__item">
+                    <!--div class="nhsuk-checkboxes__item">
                         <input type="hidden" name="_matchTermsExact" value="on"><input class="nhsuk-checkboxes__input"
                           id="checkbox-match-name-exact" type="checkbox" checked="checked" name="matchTermsExact"
                           value="true">
@@ -296,9 +295,15 @@
         </details>
       </div>
 
-      <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" id="reset-button" type="button">
-        Reset table
-      </button>
+
+<div class="nhsuk-grid-column-full" style="display: flex; justify-content: space-between; align-items: center;">
+<div lass="nhsuk-grid-column-one-half">  <p>Page 1 of 16 (1503 total results)</p> </div>
+  <button class="nhsuk-button nhsuk-button--secondary" id="reset-button" type="button">
+    Reset table
+  </button>
+</div>
+
+
 
       <table role="table-responsive" class="nhsuk-table-responsive " data-module="moj-sortable-table">
         <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Search Results</caption>
@@ -308,7 +313,19 @@
             <th role="columnheader" class="" scope="col" aria-sort="ascending">
               Name<span class="sort-indicator" aria-hidden="true">⇅</span>
             </th>
+            <th role="columnheader" class="" scope="col" aria-sort="none">
+              SNOMED Code<span class="sort-indicator" aria-hidden="true">⇅</span>
+            </th>
+            <th role="columnheader" class="" scope="col" aria-sort="none">
+              Supplier Code<span class="sort-indicator" aria-hidden="true">⇅</span>
+            </th>
 
+            <th role="columnheader" class="" scope="col" aria-sort="none">
+              Supplier ID<span class="sort-indicator" aria-hidden="true">⇅</span>
+            </th>
+            <th role="columnheader" class="" scope="col" aria-sort="none">
+              Start date <span class="sort-indicator" aria-hidden="true">⇅</span>
+            </th>
 
             <th role="columnheader" class="" scope="col" aria-sort="none">
               INV <span class="sort-indicator" aria-hidden="true">⇅</span>
@@ -317,15 +334,7 @@
               UEX <span class="sort-indicator" aria-hidden="true">⇅</span>
             </th>
 
-            <th role="columnheader" class="" scope="col" aria-sort="none">
-              Start date <span class="sort-indicator" aria-hidden="true">⇅</span>
-            </th>
-            <th role="columnheader" class="" scope="col" aria-sort="none">
-              SNOMED Code<span class="sort-indicator" aria-hidden="true">⇅</span>
-            </th>
-            <th role="columnheader" class="" scope="col" aria-sort="none">
-              Supplier Code<span class="sort-indicator" aria-hidden="true">⇅</span>
-            </th>
+
 
 
 
@@ -333,12 +342,23 @@
           </tr>
         </thead>
         <tbody class="nhsuk-table__body">
-          <!--ROWS GO HERE-->
 
           <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
               <a href="/supplier/301">ABC Pharma Ltd</a>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>123456789
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>12
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>301
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>12-04-2008
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -349,15 +369,6 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>12-04-2008
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>123456789
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>12
             </td>
           </tr>
 
@@ -367,37 +378,19 @@
               <a href="/supplier/302">Global Med Supplies</a>
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-              <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-              </svg>
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>05-09-2011
-            </td>
-            <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>234567890
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>207
             </td>
-          </tr>
-
-          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-              <a href="/supplier/303">Healthcare Solutions Ltd</a>
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>302
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>05-09-2011
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-              <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-              </svg>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
@@ -406,21 +399,24 @@
                 <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
               </svg>
             </td>
+          </tr>
+
+          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>20-01-2006
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+              <a href="/supplier/303">HealthCorp UK</a>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>345678901
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>89
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>33
             </td>
-          </tr>
-
-          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-              <a href="/supplier/304">NHS Provision Co</a>
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>303
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>22-01-2015
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -428,21 +424,24 @@
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
             </td>
+          </tr>
+
+          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>08-07-2013
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+              <a href="/supplier/304">Wellness Direct</a>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>456789012
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>142
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>98
             </td>
-          </tr>
-
-          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-              <a href="/supplier/305">Zenith Pharmaceuticals</a>
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>304
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>11-11-2012
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -454,21 +453,24 @@
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
             </td>
+          </tr>
+
+          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>14-02-2005
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+              <a href="/supplier/305">MediLife Group</a>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>567890123
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>66
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>55
             </td>
-          </tr>
-
-          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-              <a href="/supplier/306">Medico Supplies</a>
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>305
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>14-07-2018
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -480,21 +482,24 @@
                 <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
               </svg>
             </td>
+          </tr>
+
+          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>27-10-2009
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+              <a href="/supplier/306">CarePlus Solutions</a>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>678901234
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>98
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>76
             </td>
-          </tr>
-
-          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-              <a href="/supplier/307">VitalCare Suppliers</a>
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>306
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>30-03-2010
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
@@ -505,46 +510,69 @@
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-              <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-              </svg>
             </td>
+          </tr>
+
+          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>03-06-2014
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+              <a href="/supplier/307">PharmaTrust</a>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>789012345
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>154
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>120
             </td>
-          </tr>
-
-          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-              <a href="/supplier/308">Union Healthcare</a>
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>307
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>09-06-2016
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+              <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+              </svg>
             </td>
+          </tr>
+
+          <tr class="nhsuk-table__row" role="row">
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>11-12-2007
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+              <a href="/supplier/308">VitalMedics</a>
             </td>
             <td role="cell" class="nhsuk-table__cell">
               <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>890123456
             </td>
             <td role="cell" class="nhsuk-table__cell">
-              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>308
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier Code</span>300
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier ID</span>308
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>17-02-2019
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+              <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+              </svg>
+            </td>
+            <td role="cell" class="nhsuk-table__cell">
+              <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
             </td>
           </tr>
 
-
         </tbody>
+
       </table>
 
 
@@ -640,11 +668,14 @@
     // Map your checkbox IDs to the zero‑based column index in the table
     const columnIndexMap = {
       "checkbox-show-name": 0,  // Name
-      "checkbox-show-invalid": 1,  // INV
-      "checkbox-show-uex": 2,  // UEX
-      "checkbox-start-date": 3,  // Start date
-      "checkbox-show-snomed-code": 4,  // SNOMED Code
-      "checkbox-show-supplier-code": 5   // Supplier Code
+      "checkbox-show-snomed-code": 1,  // SNOMED Code
+      "checkbox-show-supplier-code": 2,   // Supplier Code
+      "checkbox-supplier-ID": 3,   // Supplier ID
+      "checkbox-start-date": 4,  // Start date
+      "checkbox-show-invalid": 5,  // INV
+      "checkbox-show-uex": 6  // UEX
+
+
     };
 
     const table = document.querySelector("table");

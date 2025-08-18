@@ -265,7 +265,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showInvalidItems" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-ppa-code"
-                                                type="checkbox" name="showInvalidItems" value="true">
+                                                type="checkbox"  checked="checked" name="showInvalidItems" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                 for="checkbox-show-ppa-code">
                                                 PPA Code
@@ -274,11 +274,11 @@
 
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showInvalidItems" value="on"><input
-                                                class="nhsuk-checkboxes__input" id="checkbox-show-supplier"
-                                                type="checkbox" name="showInvalidItems" value="true">
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-amp-id"
+                                                type="checkbox"  checked="checked" name="showInvalidItems" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                for="checkbox-show-supplier">
-                                                Supplier
+                                                for="checkbox-show-amp-id">
+                                                AMP ID  
                                             </label>
                                         </div>
 
@@ -289,7 +289,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showAvailable" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-invalid"
-                                                type="checkbox" name="showAvailable" value="true">
+                                                type="checkbox"  checked="checked" name="showAvailable" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                 for="checkbox-show-invalid">
                                                 Invalid
@@ -299,7 +299,7 @@
 
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showUnavailable" value="on"><input
-                                                class="nhsuk-checkboxes__input" id="checkbox-show-uex" type="checkbox"
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-uex" type="checkbox"  checked="checked"
                                                 name="showUnavailable" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-uex">
                                                 Unextractable
@@ -308,7 +308,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showUnavailable" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-unavailable"
-                                                type="checkbox" name="showUnavailable" value="true">
+                                                type="checkbox"  checked="checked" name="showUnavailable" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                 for="checkbox-show-unavailable">
                                                 Unavailable
@@ -319,10 +319,20 @@
                                     <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_matchTermsExact" value="on"><input
-                                                class="nhsuk-checkboxes__input" id="checkbox-end-date" type="checkbox"
+                                                class="nhsuk-checkboxes__input" id="checkbox-end-date" type="checkbox"  checked="checked"
                                                 name="matchTermsExact" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-end-date">
                                                 End date
+                                            </label>
+                                        </div>
+
+                                             <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_showInvalidItems" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-supplier"
+                                                type="checkbox"  checked="checked" name="showInvalidItems" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-show-supplier">
+                                                Supplier
                                             </label>
                                         </div>
 
@@ -335,9 +345,12 @@
                     </div>
                 </details>
             </div>
-            <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" id="reset-button" type="button">
-                Reset table
-            </button>
+<div class="nhsuk-grid-column-full" style="display: flex; justify-content: space-between; align-items: center;">
+<div lass="nhsuk-grid-column-one-half">  <p>Page 1 of 16 (1503 total results)</p> </div>
+  <button class="nhsuk-button nhsuk-button--secondary" id="reset-button" type="button">
+    Reset table
+  </button>
+</div>
 
             <table role="table-responsive" class="nhsuk-table-responsive " data-module="moj-sortable-table">
                 <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Search Results</caption>
@@ -358,6 +371,9 @@
                         <th role="columnheader" class="" scope="col" aria-sort="none">
                             PPA Code<span class="sort-indicator" aria-hidden="true">⇅</span>
                         </th>
+                           <th role="columnheader" class="" scope="col" aria-sort="none">
+                            AMP ID <span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
                         <th role="columnheader" class="" scope="col" aria-sort="none">
                             Supplier <span class="sort-indicator" aria-hidden="true">⇅</span>
                         </th>
@@ -377,485 +393,572 @@
 
                     </tr>
                 </thead>
-                <tbody class="nhsuk-table__body">
-                    <!--ROWS GO HERE-->
-                    <tr class="nhsuk-table__row" role="row">
-                        <!-- Dictionary PCDD -->
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <!-- Name -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/102">Paracetamol</a>
-                        </td>
-                        <!-- Start date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>12-03-2007
-                        </td>
-                        <!-- SNOMED Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>386661006
-                        </td>
-                        <!-- PPA Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <!-- Supplier -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span><a
-                                href="/supplier/hollister-ltd">Hollister Ltd</a>
-                        </td>
-                        <!-- INV -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- UEX -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- U/A -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- End date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+<tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary PCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag">PCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/102">Paracetamol 500mg tablets</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>12-03-2007
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>386661006
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>237
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/hollister-ltd">Hollister Ltd</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <!-- Dictionary SCDD -->
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <!-- Name -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/115">Amoxicillin</a>
-                        </td>
-                        <!-- Start date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>08-07-2011
-                        </td>
-                        <!-- SNOMED Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372687004
-                        </td>
-                        <!-- PPA Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <!-- Supplier -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Sandoz Ltd</a>
-                        </td>
-                        <!-- INV -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- UEX -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <!-- U/A -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <!-- End date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>15-06-2020
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary SCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag nhsuk-tag--white">SCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/115">Amoxicillin 500mg capsules</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>08-07-2011
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372687004
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>482
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Sandoz Ltd</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>15-06-2020
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <!-- Dictionary PCDD -->
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <!-- Name -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/128">Ibuprofen</a>
-                        </td>
-                        <!-- Start date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>21-09-2005
-                        </td>
-                        <!-- SNOMED Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372729009
-                        </td>
-                        <!-- PPA Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <!-- Supplier -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Sandoz Ltd</a>
-                        </td>
-                        <!-- INV -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <!-- UEX -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- U/A -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- End date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/140">Clarithromycin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>14-02-2010
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372688004
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Boots</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary PCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag">PCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/128">Ibuprofen 200mg tablets</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>21-09-2005
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372729009
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>319
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Sandoz Ltd</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/152">Metformin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>22-11-2005
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372729009
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Boots</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>12-05-2018
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary SCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag nhsuk-tag--white">SCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/140">Clarithromycin 250mg tablets</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>14-02-2010
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372688004
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>764
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Boots</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/163">Salbutamol</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>30-06-2003
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372756004
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Asda</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary PCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag">PCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/152">Metformin 500mg tablets</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>22-11-2005
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372729009
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>581
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Boots</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>12-05-2018
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/174">Warfarin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>01-01-2008
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372690001
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Morrisons</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>20-10-2022
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary PCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag">PCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/163">Salbutamol 100mcg inhaler</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>30-06-2003
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372756004
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>406
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Asda</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/185">Insulin Glargine</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>17-04-2012
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372702007
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Asda</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary SCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag nhsuk-tag--white">SCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/174">Warfarin 5mg tablets</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>01-01-2008
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372690001
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>952
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Morrisons</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>20-10-2022
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/196">Simvastatin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>05-05-2006
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372690004
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Sandoz Ltd</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>30-09-2019
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary PCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag">PCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/185">Insulin Glargine 100units/ml injection</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>17-04-2012
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372702007
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>128
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Asda</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
+        </td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/207">Cetirizine</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>19-08-2009
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372714003
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span> <a
-                                href="/supplier/sandoz-ltd">Boots</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary SCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag nhsuk-tag--white">SCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/196">Simvastatin 20mg tablets</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>05-05-2006
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372690004
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>673
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Sandoz Ltd</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>30-09-2019
+        </td>
+    </tr>
 
+    <tr class="nhsuk-table__row" role="row">
+        <!-- Dictionary PCDD -->
+        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
+            <span class="nhsuk-u-font-size-16"><span class="nhsuk-tag">PCDD</span></span>
+        </td>
+        <!-- Name -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
+            <a href="/vtm/207">Cetirizine 10mg tablets</a>
+        </td>
+        <!-- Start date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>19-08-2009
+        </td>
+        <!-- SNOMED Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372714003
+        </td>
+        <!-- PPA Code -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
+        </td>
+        <!-- AMP ID -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">AMP ID</span>410
+        </td>
+        <!-- Supplier -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Supplier</span>
+            <a href="/supplier/sandoz-ltd">Boots</a>
+        </td>
+        <!-- INV -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- UEX -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- U/A -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
+            </svg>
+        </td>
+        <!-- End date -->
+        <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
+        </td>
+    </tr>
+</tbody>
 
-
-
-                </tbody>
             </table>
 
 
@@ -988,11 +1091,13 @@
             "checkbox-start-date": 2,             // Start date
             "checkbox-show-snomed-code": 3,   // SNOMED Code
             "checkbox-show-ppa-code": 4,      // PPA Code
-            "checkbox-show-supplier": 5,           // Supplier
-            "checkbox-show-invalid": 6,       // INV
-            "checkbox-show-uex": 7,           // UEX
-            "checkbox-show-unavailable": 8,   // U/A (Unavailable)
-            "checkbox-end-date": 9          // End date
+            "checkbox-show-amp-id": 5,           // AMP ID
+             "checkbox-show-supplier": 6,           // Supplier
+            "checkbox-show-invalid": 7,       // INV
+            "checkbox-show-uex": 8,           // UEX
+            "checkbox-show-unavailable": 9,   // U/A (Unavailable)
+            "checkbox-end-date": 10,          // End date
+           
         };
 
         const table = document.querySelector("table");

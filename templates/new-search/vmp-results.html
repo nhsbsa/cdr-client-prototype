@@ -47,7 +47,7 @@
                                 aria-owns="autocomplete-results-container"
                                 aria-controls="autocomplete-results__announcer" aria-expanded="false" name="searchTerm"
                                 value="" autocomplete="off">
-                          
+
                         </div>
                     </div>
 
@@ -59,103 +59,117 @@
                     </div>
 
 
-        <div class="nhsuk-grid-column-full">
-          <details class="nhsuk-details">
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">Apply filters to search</span>
-            </summary>
-            <div class="nhsuk-details__text">
+                    <div class="nhsuk-grid-column-full">
+                        <details class="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">Apply filters to search</span>
+                            </summary>
+                            <div class="nhsuk-details__text">
 
-              <div class="nhsuk-form-group">
-                <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend">Filter by</legend>
-                  <div class="nhsuk-checkboxes">
+                                <div class="nhsuk-form-group">
+                                    <fieldset class="nhsuk-fieldset">
+                                        <legend class="nhsuk-fieldset__legend">Filter by</legend>
+                                        <div class="nhsuk-checkboxes">
 
-                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
-                      <div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_showPCDD" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-show-pcdd-items" type="checkbox" checked="checked" name="showPCDD" value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-pcdd-items">
-                          PCDD
-                        </label>
-                      </div>
-                      <div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_showSCDD" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-show-scdd-items" type="checkbox" checked="checked" name="showSCDD" value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-scdd-items">
-                          SCDD
-                        </label>
-                      </div>
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showPCDD" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-pcdd-items"
+                                                        type="checkbox" checked="checked" name="showPCDD" value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-pcdd-items">
+                                                        PCDD
+                                                    </label>
+                                                </div>
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showSCDD" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-scdd-items"
+                                                        type="checkbox" checked="checked" name="showSCDD" value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-scdd-items">
+                                                        SCDD
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showValidItems" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-valid-items"
+                                                        type="checkbox" checked="checked" name="showValidItems"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-valid-items">
+                                                        Valid
+                                                    </label>
+                                                </div>
+
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showInvalidItems" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-invalid-items"
+                                                        type="checkbox" checked="checked" name="showInvalidItems"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-invalid-items">
+                                                        Invalid
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showAvailable" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-avail-items"
+                                                        type="checkbox" checked="checked" name="showAvailable"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-avail-items">
+                                                        Available
+                                                    </label>
+                                                </div>
+
+
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_showUnavailable" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-show-unavail-items"
+                                                        type="checkbox" checked="checked" name="showUnavailable"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-show-unavail-items">
+                                                        Unavailable
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input type="hidden" name="_matchTermsExact" value="on"><input
+                                                        class="nhsuk-checkboxes__input" id="checkbox-match-name-exact"
+                                                        type="checkbox" checked="checked" name="matchTermsExact"
+                                                        value="true">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="checkbox-match-name-exact">
+                                                        Match terms
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </details>
                     </div>
-
-                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
-                      <div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_showValidItems" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-show-valid-items" type="checkbox" checked="checked" name="showValidItems"
-                          value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-valid-items">
-                          Valid
-                        </label>
-                      </div>
-
-                      <div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_showInvalidItems" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-show-invalid-items" type="checkbox" checked="checked" name="showInvalidItems"
-                          value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-invalid-items">
-                          Invalid
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
-                      <div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_showAvailable" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-show-avail-items" type="checkbox" checked="checked" name="showAvailable"
-                          value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-avail-items">
-                          Available
-                        </label>
-                      </div>
-
-
-                      <div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_showUnavailable" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-show-unavail-items" type="checkbox" checked="checked" name="showUnavailable"
-                          value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-unavail-items">
-                          Unavailable
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
-                      <div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_matchTermsExact" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-match-name-exact" type="checkbox" checked="checked" name="matchTermsExact"
-                          value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-match-name-exact">
-                          Match terms
-                        </label>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-          </details>
-        </div>
 
 
                     <input type="hidden" value="100" id="size" name="size">
                     <div class="nhsuk-grid-column-one-third nhsuk-u-float-right" id="button-search">
 
-          <button type="button" class="nhsuk-button nhsuk-u-float-right" id="search-button">
+                        <button type="button" class="nhsuk-button nhsuk-u-float-right" id="search-button">
                             Search
                         </button>
-                     
+
 
 
                     </div>
@@ -226,7 +240,8 @@
                                             <input type="hidden" name="_matchTermsExact" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-start-date" type="checkbox"
                                                 checked="checked" name="matchTermsExact" value="true">
-                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-start-date">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-start-date">
                                                 Start date
                                             </label>
                                         </div>
@@ -246,7 +261,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showInvalidItems" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-ppa-code"
-                                                type="checkbox" name="showInvalidItems" value="true">
+                                                type="checkbox" checked="checked" name="showInvalidItems" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                 for="checkbox-show-ppa-code">
                                                 PPA Code
@@ -256,7 +271,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showInvalidItems" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-vtm" type="checkbox"
-                                                name="showInvalidItems" value="true">
+                                                checked="checked" name="showInvalidItems" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-vtm">
                                                 Associated VTM
                                             </label>
@@ -269,7 +284,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showAvailable" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-invalid"
-                                                type="checkbox" name="showAvailable" value="true">
+                                                type="checkbox" checked="checked" name="showAvailable" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                 for="checkbox-show-invalid">
                                                 Invalid
@@ -280,7 +295,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showUnavailable" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-uex" type="checkbox"
-                                                name="showUnavailable" value="true">
+                                                checked="checked" name="showUnavailable" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-show-uex">
                                                 Unextractable
                                             </label>
@@ -288,7 +303,7 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_showUnavailable" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-show-unavailable"
-                                                type="checkbox" name="showUnavailable" value="true">
+                                                type="checkbox" checked="checked" name="showUnavailable" value="true">
                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                 for="checkbox-show-unavailable">
                                                 Unavailable
@@ -300,21 +315,21 @@
                                         <div class="nhsuk-checkboxes__item">
                                             <input type="hidden" name="_matchTermsExact" value="on"><input
                                                 class="nhsuk-checkboxes__input" id="checkbox-end-date" type="checkbox"
-                                                name="matchTermsExact" value="true">
-                                            <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                for="checkbox-end-date">
+                                                checked="checked" name="matchTermsExact" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-end-date">
                                                 End date
                                             </label>
                                         </div>
 
-                                        <!--div class="nhsuk-checkboxes__item">
-                        <input type="hidden" name="_matchTermsExact" value="on"><input class="nhsuk-checkboxes__input"
-                          id="checkbox-match-name-exact" type="checkbox" checked="checked" name="matchTermsExact"
-                          value="true">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="checkbox-match-name-exact">
-                         Ingredient
-                        </label>
-                      </div-->
+                                        <div class="nhsuk-checkboxes__item">
+                                            <input type="hidden" name="_matchTermsExact" value="on"><input
+                                                class="nhsuk-checkboxes__input" id="checkbox-show-vmp-id"
+                                                type="checkbox" checked="checked" name="matchTermsExact" value="true">
+                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                for="checkbox-show-vmp-id">
+                                                VMP ID
+                                            </label>
+                                        </div>
 
                                     </div>
 
@@ -324,10 +339,12 @@
                     </div>
                 </details>
             </div>
-
-                        <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" id="reset-button" type="button">
-                Reset table
-            </button>
+<div class="nhsuk-grid-column-full" style="display: flex; justify-content: space-between; align-items: center;">
+<div lass="nhsuk-grid-column-one-half">  <p>Page 1 of 16 (1503 total results)</p> </div>
+  <button class="nhsuk-button nhsuk-button--secondary" id="reset-button" type="button">
+    Reset table
+  </button>
+</div>
             <table role="table-responsive" class="nhsuk-table-responsive " data-module="moj-sortable-table">
                 <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Search Results</caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
@@ -348,6 +365,9 @@
                             PPA Code<span class="sort-indicator" aria-hidden="true">⇅</span>
                         </th>
                         <th role="columnheader" class="" scope="col" aria-sort="none">
+                            VMP ID<span class="sort-indicator" aria-hidden="true">⇅</span>
+                        </th>
+                        <th role="columnheader" class="" scope="col" aria-sort="none">
                             Associated VTM <span class="sort-indicator" aria-hidden="true">⇅</span>
                         </th>
                         <th role="columnheader" class="" scope="col" aria-sort="none">
@@ -366,475 +386,198 @@
 
                     </tr>
                 </thead>
-                <tbody class="nhsuk-table__body">
-                    <!--ROWS GO HERE-->
-                    <tr class="nhsuk-table__row" role="row">
-                        <!-- Dictionary PCDD -->
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <!-- Name -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/102">Paracetamol</a>
-                        </td>
-                        <!-- Start date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>12-03-2007
-                        </td>
-                        <!-- SNOMED Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>386661006
-                        </td>
-                        <!-- PPA Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <!-- Associated VTM -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>78
-                        </td>
-                        <!-- INV -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span> <svg
-                                class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- UEX -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- U/A -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- End date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+<tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/102">Paracetamol 500mg tablets</a></td>
+        <td role="cell" class="nhsuk-table__cell">12-03-2007</td>
+        <td role="cell" class="nhsuk-table__cell">386661006</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">237</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/hollister-ltd">Hollister Ltd</a></td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">01-02-3456</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <!-- Dictionary SCDD -->
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <!-- Name -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/115">Amoxicillin</a>
-                        </td>
-                        <!-- Start date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>08-07-2011
-                        </td>
-                        <!-- SNOMED Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372687004
-                        </td>
-                        <!-- PPA Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>000067890
-                        </td>
-                        <!-- Associated VTM -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>92
-                        </td>
-                        <!-- INV -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span><svg
-                                class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- UEX -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <!-- U/A -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <!-- End date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>15-06-2020
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag nhsuk-tag--white">SCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/115">Amoxicillin 500mg capsules</a></td>
+        <td role="cell" class="nhsuk-table__cell">08-07-2011</td>
+        <td role="cell" class="nhsuk-table__cell">372687004</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">482</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/sandoz-ltd">Sandoz Ltd</a></td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">15-06-2020</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <!-- Dictionary PCDD -->
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <!-- Name -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/128">Ibuprofen</a>
-                        </td>
-                        <!-- Start date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>21-09-2005
-                        </td>
-                        <!-- SNOMED Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372729009
-                        </td>
-                        <!-- PPA Code -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>000024680
-                        </td>
-                        <!-- Associated VTM -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>65
-                        </td>
-                        <!-- INV -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <!-- UEX -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- U/A -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <!-- End date -->
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/140">Clarithromycin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>14-02-2010
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372688004
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>54
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/128">Ibuprofen 200mg tablets</a></td>
+        <td role="cell" class="nhsuk-table__cell">21-09-2005</td>
+        <td role="cell" class="nhsuk-table__cell">372729009</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">319</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/sandoz-ltd">Sandoz Ltd</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">01-02-3456</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/152">Metformin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>22-11-2005
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372729009
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>00008567
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>33
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>12-05-2018
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/140">Clarithromycin 250mg tablets</a></td>
+        <td role="cell" class="nhsuk-table__cell">05-11-2014</td>
+        <td role="cell" class="nhsuk-table__cell">372689002</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">764</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/pfizer-ltd">Pfizer Ltd</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">23-08-2019</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/163">Salbutamol</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>30-06-2003
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372756004
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>28
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/153">Metformin 500mg tablets</a></td>
+        <td role="cell" class="nhsuk-table__cell">18-04-2008</td>
+        <td role="cell" class="nhsuk-table__cell">372756001</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">521</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/teva-uk-ltd">Teva UK Ltd</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">12-11-2021</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/174">Warfarin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>01-01-2008
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372690001
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>00006789
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>40
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>20-10-2022
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">SCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/166">Salbutamol 100mcg inhaler</a></td>
+        <td role="cell" class="nhsuk-table__cell">29-06-2010</td>
+        <td role="cell" class="nhsuk-table__cell">372687005</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">894</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/aspen-pharma">Aspen Pharma</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">30-01-2018</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/185">Insulin Glargine</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>17-04-2012
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372702007
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>00077890
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>58
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/179">Warfarin 3mg tablets</a></td>
+        <td role="cell" class="nhsuk-table__cell">02-02-2006</td>
+        <td role="cell" class="nhsuk-table__cell">372691008</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">652</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/bayer-plc">Bayer PLC</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">14-05-2022</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag nhsuk-tag--white">SCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/196">Simvastatin</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>05-05-2006
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372690004
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>47
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>30-09-2019
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/192">Insulin Glargine 100 units/ml injection</a></td>
+        <td role="cell" class="nhsuk-table__cell">17-10-2013</td>
+        <td role="cell" class="nhsuk-table__cell">372701000</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">713</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/sanofi-aventis">Sanofi Aventis</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">
+            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8"/>
+            </svg>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">09-09-2023</td>
+    </tr>
 
-                    <tr class="nhsuk-table__row" role="row">
-                        <td role="cell" class="nhsuk-table__cell" style="word-wrap: break-word">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Dictionary</span>
-                            <span class="nhsuk-u-font-size-16">
-                                <span class="nhsuk-tag">PCDD</span>
-                            </span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>
-                            <a href="/vtm/207">Cetirizine</a>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Start date</span>19-08-2009
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">SNOMED Code</span>372714003
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">PPA Code</span>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">Associated VTM</span>22
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">INV</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">UEX</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">U/A</span>
-                            <svg class="nhsuk-icon nhsuk-icon__tick-colour-nhsuk-green"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path stroke="#007f3b" stroke-width="4" stroke-linecap="round" d="M6 12l4 4 8-8" />
-                            </svg>
-                        </td>
-                        <td role="cell" class="nhsuk-table__cell">
-                            <span class="nhsuk-table-responsive__heading" aria-hidden="true">End date</span>01-02-3456
-                        </td>
-                    </tr>
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/205">Simvastatin 20mg tablets</a></td>
+        <td role="cell" class="nhsuk-table__cell">22-12-2009</td>
+        <td role="cell" class="nhsuk-table__cell">372715006</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">581</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/teva-uk-ltd">Teva UK Ltd</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">07-03-2017</td>
+    </tr>
 
+    <tr class="nhsuk-table__row" role="row">
+        <td role="cell" class="nhsuk-table__cell"><span class="nhsuk-tag">PCDD</span></td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/vtm/218">Cetirizine 10mg tablets</a></td>
+        <td role="cell" class="nhsuk-table__cell">14-01-2012</td>
+        <td role="cell" class="nhsuk-table__cell">372722005</td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">447</td>
+        <td role="cell" class="nhsuk-table__cell"><a href="/supplier/gsk-plc">GSK PLC</a></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell"></td>
+        <td role="cell" class="nhsuk-table__cell">19-10-2024</td>
+    </tr>
+</tbody>
 
-
-
-                </tbody>
             </table>
 
 
@@ -933,11 +676,12 @@
             "checkbox-start-date": 2,             // Start date
             "checkbox-show-snomed-code": 3,   // SNOMED Code
             "checkbox-show-ppa-code": 4,      // PPA Code
-            "checkbox-show-vtm": 5,           // Associated VTM
-            "checkbox-show-invalid": 6,       // INV
-            "checkbox-show-uex": 7,           // UEX
-            "checkbox-show-unavailable": 8,   // U/A (Unavailable)
-            "checkbox-end-date": 9          // End date
+            "checkbox-show-vmp-id": 5,      // VMP ID
+            "checkbox-show-vtm": 6,           // Associated VTM
+            "checkbox-show-invalid": 7,       // INV
+            "checkbox-show-uex": 8,           // UEX
+            "checkbox-show-unavailable": 9,   // U/A (Unavailable)
+            "checkbox-end-date": 10          // End date
         };
 
         const table = document.querySelector("table");
@@ -973,66 +717,66 @@
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const searchTypeSelect = document.getElementById('search-type');
-  const supplierInputRow = document.getElementById('row-supplier-input');
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchTypeSelect = document.getElementById('search-type');
+        const supplierInputRow = document.getElementById('row-supplier-input');
 
-  function toggleSupplierInput() {
-    if (searchTypeSelect.value === 'AMP') {
-      supplierInputRow.style.display = 'block';
-    } else {
-      supplierInputRow.style.display = 'none';
-    }
-  }
+        function toggleSupplierInput() {
+            if (searchTypeSelect.value === 'AMP') {
+                supplierInputRow.style.display = 'block';
+            } else {
+                supplierInputRow.style.display = 'none';
+            }
+        }
 
-  // Run once on page load in case AMP is pre-selected
-  toggleSupplierInput();
+        // Run once on page load in case AMP is pre-selected
+        toggleSupplierInput();
 
-  // Listen for changes
-  searchTypeSelect.addEventListener('change', toggleSupplierInput);
-});
-</script>
-
-
-<script>
-  document.getElementById("search-button").addEventListener("click", function () {
-    const searchType = document.getElementById("search-type").value;
-    const searchTerm = document.getElementById("search-term").value;
-
-    // Construct URL based on selected search type
-    let basePath = "/new-search/index"; // default
-    switch (searchType) {
-      case "VMP":
-        basePath = "/new-search/vmp-results";
-        break;
-      case "AMP":
-        basePath = "/new-search/amp-results";
-        break;
-      case "Supplier":
-        basePath = "/new-search/supplier-results";
-        break;
-      case "VTM":
-        basePath = "/new-search/vtm-results";
-        break;
-      case "Ingredient":
-        basePath = "/new-search/ingredient-results";
-        break;
-    }
-
- const params = new URLSearchParams({
-      searchTerm: searchTerm,
-      searchType: searchType
+        // Listen for changes
+        searchTypeSelect.addEventListener('change', toggleSupplierInput);
     });
+</script>
 
-    // Redirect
-    window.location.href = `${basePath}?${params.toString()}`;
-  });
+
+<script>
+    document.getElementById("search-button").addEventListener("click", function () {
+        const searchType = document.getElementById("search-type").value;
+        const searchTerm = document.getElementById("search-term").value;
+
+        // Construct URL based on selected search type
+        let basePath = "/new-search/index"; // default
+        switch (searchType) {
+            case "VMP":
+                basePath = "/new-search/vmp-results";
+                break;
+            case "AMP":
+                basePath = "/new-search/amp-results";
+                break;
+            case "Supplier":
+                basePath = "/new-search/supplier-results";
+                break;
+            case "VTM":
+                basePath = "/new-search/vtm-results";
+                break;
+            case "Ingredient":
+                basePath = "/new-search/ingredient-results";
+                break;
+        }
+
+        const params = new URLSearchParams({
+            searchTerm: searchTerm,
+            searchType: searchType
+        });
+
+        // Redirect
+        window.location.href = `${basePath}?${params.toString()}`;
+    });
 </script>
 
 <script>
-document.getElementById('reset-button').addEventListener('click', function () {
-  // Simply reloads the page, preserving query parameters
-  window.location.reload();
-});
+    document.getElementById('reset-button').addEventListener('click', function () {
+        // Simply reloads the page, preserving query parameters
+        window.location.reload();
+    });
 </script>
 {% endblock %}
