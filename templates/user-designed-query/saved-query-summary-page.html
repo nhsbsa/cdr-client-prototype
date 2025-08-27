@@ -275,7 +275,7 @@
   <div class="nhsuk-inset-text">
     <span class="nhsuk-u-visually-hidden">Create a clone of this summary</span>
 
-    <p>You can duplicate this query and adjust it to match your requirements <a href="saved-query-summary-clone.html">Create new version</a>.</p>
+    <p>You can duplicate this query and adjust it to match your requirements <a href="saved-query-summary-clone.html" id="create-new">Create new version</a>.</p>
   </div>
 
   <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="load-page.html" id="save-continue">
@@ -287,6 +287,16 @@
 </div>
 
 <script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('isClone') === 'true') {
+    const link = document.getElementById('create-new');
+    if (link) {
+      const url = new URL(link.href, window.location.origin);
+      url.searchParams.set('isClone', 'true');
+      link.href = url.pathname + url.search;
+    }
+  }
+
   function moveRow(button, direction) {
     var row = button.parentNode.parentNode;
     var tbody = row.parentNode;

@@ -32,5 +32,18 @@
 
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('isClone') === 'true') {
+      const continueBtn = document.querySelector('a.nhsuk-button[href*="large-data-table.html"]');
+      if (continueBtn) {
+        const url = new URL(continueBtn.href, window.location.origin);
+        url.searchParams.set('isClone', 'true');
+        continueBtn.href = url.pathname + url.search;
+      }
+    }
+  });
+</script>
 
 {% endblock %}

@@ -828,7 +828,7 @@
 <!--    </div>-->
 <!--  </fieldset>-->
 
-  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" href="summary-page-save-query.html">
+  <a class="nhsuk-button nhsuk-u-margin-top-5" data-module="nhsuk-button" type="submit" id="save-my-query" href="summary-page-save-query.html">
     Save my query
   </a>
 <!--    this would button would be displayed in the update save query journey allowing the user to choose the update option -->
@@ -844,6 +844,15 @@
   </div>
 </div>
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("isClone") === "true") {
+      const saveBtn = document.getElementById("save-my-query");
+      if (saveBtn) {
+        saveBtn.style.display = "none";
+      }
+    }
+  });
   document.addEventListener("DOMContentLoaded", function () {
     const table = document.querySelector("[data-module='moj-sortable-table']");
     if (!table) return;
