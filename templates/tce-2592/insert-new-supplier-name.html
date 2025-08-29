@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="update-supplier-prototype.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back   </span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Update supplier Prototype
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+       Insert new Supplier name
+      </h1>
+    </legend>
+
+<!--    <div class="nhsuk-do-dont-list">-->
+<!--      <h3 class="nhsuk-do-dont-list__label">Current supplier information</h3>-->
+<!--      <table class="nhsuk-table">-->
+<!--        <caption class="nhsuk-table__caption"></caption>-->
+<!--        <thead class="nhsuk-table__head">-->
+<!--        <tr>-->
+<!--          <th scope="col" class="nhsuk-table__header">Supplier name</th>-->
+<!--          <th scope="col" class="nhsuk-table__header">Start date</th>-->
+<!--          <th scope="col" class="nhsuk-table__header">End date</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody class="nhsuk-table__body">-->
+<!--        <tr class="nhsuk-table__row">-->
+<!--          <td class="nhsuk-table__cell"><div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">AAH Hilcross</div></td>-->
+<!--          <td class="nhsuk-table__cell"><div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">-->
+<!--            04/03/2060-->
+<!--            <td class="nhsuk-table__cell"><div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">-->
+<!--              01/08/2070-->
+
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </div>-->
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="example">
+        Search for supplier name
+      </label> <input class="nhsuk-input" id="example" name="example" type="text">
+    </div>
+
+    <div  style="float: right">
+      <a class="nhsuk-button nhsuk-button--secondary" href="insert-choose-new-supplier-name.html" data-module="nhsuk-button" type="submit">
+        Search for supplier
+      </a>
+      <a class="nhsuk-button nhsuk-button--reverse" href="#" data-module="nhsuk-button" type="submit">
+        Reset
+      </a>
+    </div>
+
+
+    <script>
+      accessibleAutocomplete.enhanceSelectElement({
+        selectElement: document.querySelector('#autocomplete-select'),
+        showAllValues: true, // Allows dropdown even without typing
+        defaultValue: '',    // Start with no prefilled value
+        autoselect: true     // Selects the first match automatically
+      });
+    </script>
+
+    {% endblock %}

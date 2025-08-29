@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
+  <a class="nhsuk-back-link__link" href="update-supplier-prototype.html">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    <span id="back-link-text">Go back   </span></a>
+</div>
+<div>
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
+      <h1 class="nhsuk-fieldset__heading nhsuk-u-margin-bottom-4">
+            <span class="nhsuk-caption-l">
+                Update supplier Prototype
+              <span class="nhsuk-u-visually-hidden"> - </span>
+            </span>
+       Confirm new Supplier insert
+      </h1>
+    </legend>
+
+    <!--summary list -->
+    <dl class="nhsuk-summary-list">
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          New supplier name
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          The Boots company PLC
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+          <a href="insert-new-supplier-name.html">
+            Change<span class="nhsuk-u-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Start date
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          05/03/2060
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+          <a href="insert-new-supplier-dates.html">
+            Change<span class="nhsuk-u-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          End date
+        </dt>
+        <dd class="nhsuk-summary-list__value">
+          04/08/2070
+        </dd>
+        <dd class="nhsuk-summary-list__actions">
+          <a href="insert-new-supplier-dates.html">
+            Change<span class="nhsuk-u-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+
+    <a href="insert-update-supplier.html" class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Confirm
+    </a>
+
+  </fieldset>
+</div>
+
+{% endblock %}
