@@ -1,14 +1,14 @@
 {% extends "base-full.html" %}
 {% block content %}
 <div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
-  <a class="nhsuk-back-link__link" href="index.html">
+  <a class="nhsuk-back-link__link" href="update-supplier-prototype.html">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 24 24"
          aria-hidden="true" height="24" width="24">
       <path
           d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
     </svg>
-    <span id="back-link-text">Go back to Index  </span></a>
+    <span id="back-link-text">Go back to the start  </span></a>
 </div>
 <div>
   <fieldset class="nhsuk-fieldset">
@@ -31,7 +31,7 @@
   }
 </style>
 
-<!--Bausch and Lomb supplier detail box one no details can be changed at this point apart from the end date -->
+<!--supplier detail box one no details can be changed at this point apart from the end date -->
 <div class="nhsuk-grid-row" >
   <div class="supplier-details">
     <div class="nhsuk-grid-column-full update-box" id="newSupplierDetails1">
@@ -62,7 +62,7 @@
             </td>
             <td class="nhsuk-table__cell">
               <div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">
-                EOT (End of time)
+                04 August 2065
               </div>
             </td>
           </tr>
@@ -72,6 +72,8 @@
     </div>
   </div>
 
+
+<!--Boots insert suppliers -->
   <div class="supplier-details">
     <div class="nhsuk-grid-column-full update-box" id="newSupplierDetails2">
       <div class="update-general-heading">
@@ -103,7 +105,7 @@
                           Day
                         </label> <input
                           class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                          id="example-day2" value="" name="example[day]" type="text"
+                          id="example-day2" value="05" name="example[day]" type="text"
                           inputmode="numeric">
                       </div>
                     </div>
@@ -113,7 +115,7 @@
                           Month
                         </label> <input
                           class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                          id="example-month2" value="" name="example[month]" type="text"
+                          id="example-month2" value="08" name="example[month]" type="text"
                           inputmode="numeric">
                       </div>
                     </div>
@@ -123,7 +125,7 @@
                           Year
                         </label> <input
                           class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
-                          id="example-year2" value="" name="example[year]" type="text"
+                          id="example-year2" value="2065" name="example[year]" type="text"
                           inputmode="numeric">
                       </div>
                     </div>
@@ -152,91 +154,71 @@
             <span class="nhsuk-action-link__text">Select a different supplier</span>
           </a>
           <a href="confirm-delete-supplier.html" class="nhsuk-button nhsuk-button--warning" style="float: right" type="submit">
-            Delete supplier
+            Delete new supplier
           </a>
         </div>
+
+
 
       </fieldset>
     </div>
   </div>
 
+  <div style="clear: both;"></div>
 
-  <div class="clearfix"></div>
 
-<!--  <div class="button-container">-->
-<!--    <a href="insert-new-supplier-name.html" class="nhsuk-button nhsuk-button&#45;&#45;secondary nhsuk-u-margin-top-5"-->
-<!--       role="button"-->
-<!--       id="insertSupplierBtn2"-->
-<!--    >-->
-<!--      Insert a new supplier-->
-<!--    </a>-->
-<!--  </div>-->
-  <div>
     <a href="confirm-changes-supplier-details.html" class="nhsuk-button" type="submit">
       Continue
     </a>
 
 
   </div>
-  <script>
+<script>
+  // Function to fill Box 2 Start Date with today's date
+  function setTodayAsStartDate() {
+    const today = new Date();
+    document.getElementById("example-day2").value = String(today.getDate()).padStart(2, "0");
+    document.getElementById("example-month2").value = String(today.getMonth() + 1).padStart(2, "0");
+    document.getElementById("example-year2").value = today.getFullYear();
+  }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      // --- Set today's date for the Start Date ---
-      const today = new Date();
-      const day = today.getDate();
-      const month = today.getMonth() + 1; // Months are 0-based
-      const year = today.getFullYear();
+  // Function to set End Date in Box 1 to the day before Start Date in Box 2
+  function updatePreviousEndDate() {
+    const day = parseInt(document.getElementById("example-day2").value, 10);
+    const month = parseInt(document.getElementById("example-month2").value, 10);
+    const year = parseInt(document.getElementById("example-year2").value, 10);
 
-      // Fill in the Start Date fields
-      document.getElementById("example-day2").value = day.toString().padStart(2, "0");
-      document.getElementById("example-month2").value = month.toString().padStart(2, "0");
-      document.getElementById("example-year2").value = year;
+    if (!day || !month || !year) return;
 
-      // --- Set fixed End Date (EOT 01/02/3456) ---
-      document.getElementById("example-day").value = "01";
-      document.getElementById("example-month").value = "02";
-      document.getElementById("example-year").value = "3456";
+    // Create Start Date object
+    const startDate = new Date(year, month - 1, day);
 
-      // Optionally show "EOT" label before the inputs
-      const endDateFieldset = document.querySelector('#example');
-      if (endDateFieldset) {
-        const label = document.createElement('p');
-        label.textContent = "EOT";
-        label.style.fontWeight = "bold";
-        label.style.marginBottom = "4px";
-        endDateFieldset.parentNode.insertBefore(label, endDateFieldset);
-      }
+    // Subtract one day
+    const endDate = new Date(startDate);
+    endDate.setDate(startDate.getDate() - 1);
+
+    // Format: 30 October 2065
+    const options = {day: "numeric", month: "long", year: "numeric"};
+    const formatted = endDate.toLocaleDateString("en-GB", options);
+
+    // Find End Date cell in Box 1
+    const box1EndDateCell = document.querySelector("#newSupplierDetails1 td:nth-child(3) div");
+    if (box1EndDateCell) {
+      box1EndDateCell.textContent = formatted;
+    }
+  }
+
+  // Initialize on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    setTodayAsStartDate();     // Set today's date in Box 2
+    updatePreviousEndDate();   // Then set yesterday in Box 1
+
+    // Update automatically if user edits start date
+    ["example-day2", "example-month2", "example-year2"].forEach(id => {
+      document.getElementById(id).addEventListener("input", updatePreviousEndDate);
     });
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggles = [
-        {btnId: "insertSupplierBtn1", detailsId: "supplierDetails1", backLinkId: "goBackLink1"},
-        {btnId: "insertSupplierBtn2", detailsId: "supplierDetails2", backLinkId: "goBackLink2"},
-        {btnId: "insertSupplierBtn3", detailsId: "supplierDetails3", backLinkId: "goBackLink3"},
-      ];
-
-      toggles.forEach(({btnId, detailsId, backLinkId}) => {
-        const button = document.getElementById(btnId);
-        const details = document.getElementById(detailsId);
-        const backLink = document.getElementById(backLinkId);
-
-        if (button && details && backLink) {
-          button.addEventListener("click", (e) => {
-            e.preventDefault();
-            details.style.display = "block";
-            button.style.display = "none";
-          });
-
-          backLink.addEventListener("click", (e) => {
-            e.preventDefault();
-            details.style.display = "none";
-            button.style.display = "inline-block";
-          });
-        } else {
-          console.warn("Missing element(s):", {btnId, detailsId, backLinkId});
-        }
-      });
-    });
-  </script>
+  });
+</script>
 
 
-  {% endblock %}
+{% endblock %}

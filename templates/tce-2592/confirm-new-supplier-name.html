@@ -34,9 +34,9 @@
 
 
     <div class="nhsuk-do-dont-list">
-      <h3 class="nhsuk-do-dont-list__label">Inserted new supplier</h3>
+      <h3 class="nhsuk-do-dont-list__label">Inserted new supplier name</h3>
       <table class="nhsuk-table">
-        <caption class="nhsuk-table__caption">Inserted new Supplier</caption>
+        <caption class="nhsuk-table__caption">Inserted new Supplier name </caption>
         <thead class="nhsuk-table__head">
         <tr>
           <th scope="col" class="nhsuk-table__header">Supplier name</th>
@@ -47,7 +47,7 @@
         </thead>
         <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">The Boots Company Ltd</td>
+          <td class="nhsuk-table__cell">Bristol Laboratories Ltd</td>
           <td class="nhsuk-table__cell start-date"></td>
           <td class="nhsuk-table__cell end-date"></td>
           <td class="nhsuk-table__cell">
@@ -60,56 +60,55 @@
       </table>
     </div>
 
-<!--    <div class="nhsuk-form-group">-->
-<!--      <fieldset class="nhsuk-fieldset">-->
-<!--        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend&#45;&#45;m" id="supplier-confirmation">-->
-<!--          Do you want to save this change?-->
-<!--        </legend>-->
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m" id="supplier-confirmation">
+              Do you want to save this change?
+            </legend>
 
-<!--        <div class="nhsuk-radios">-->
+            <div class="nhsuk-radios">
 
-<!--          <div class="nhsuk-radios__item">-->
-<!--            <input class="nhsuk-radios__input" id="example-1" name="example-1" type="radio"-->
-<!--                   value="yes">-->
-<!--            <label class="nhsuk-label nhsuk-radios__label" for="example-1">-->
-<!--              Yes – save this change-->
-<!--            </label>-->
-<!--          </div>-->
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" name="example-1" type="radio"
+                       value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                  Yes – save this change
+                </label>
+              </div>
 
-<!--          <div class="nhsuk-radios__item">-->
-<!--            <input class="nhsuk-radios__input" id="example-2" name="example-2" type="radio"-->
-<!--                   value="no">-->
-<!--            <label class="nhsuk-label nhsuk-radios__label" for="example-2">-->
-<!--              No – do not save this change-->
-<!--            </label>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </fieldset>-->
-<!--    </div>-->
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" name="example-2" type="radio"
+                       value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                  No – do not save this change
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
-    <a href="final-updated-page.html" class="nhsuk-button" type="submit">
+    <button class="nhsuk-button" type="button" onclick="handleSaveAndContinue()">
       Continue
-    </a>
-<!--    <button class="nhsuk-button" onclick="handleSaveAndContinue()">Continue</button>-->
+    </button>
+
+    <!--    <button class="nhsuk-button" onclick="handleSaveAndContinue()">Continue</button>-->
 
 
-<!--    <script>-->
-<!--      function handleSaveAndContinue() {-->
+        <script>
+          function handleSaveAndContinue() {
 
-<!--        const yesOption = document.getElementById('example-1');-->
-<!--        const noOption = document.getElementById('example-2');-->
+            const yesOption = document.getElementById('example-1');
+            const noOption = document.getElementById('example-2');
 
 
-<!--        if (yesOption.checked) {-->
-<!--          window.location.href = 'final-updated-page.html';-->
-<!--        } else if (noOption.checked) {-->
-<!--          window.location.href = 'update-supplier-prototype.html';-->
-<!--        }-->
+            if (yesOption.checked) {
+              window.location.href = 'new-supplier-name-last-page.html';
+            } else if (noOption.checked) {
+              window.location.href = 'update-supplier-prototype.html';
+            }
 
-<!--      }-->
-<!--    </script>-->
+          }
 
-    <script>
       document.addEventListener("DOMContentLoaded", function () {
         // --- Get today's date ---
         const today = new Date();
