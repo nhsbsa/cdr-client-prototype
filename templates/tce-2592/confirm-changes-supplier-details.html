@@ -8,7 +8,7 @@
       <path
           d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
     </svg>
-    <span id="back-link-text">Go back to Update suppliers </span></a>
+    <span id="back-link-text">Go back </span></a>
 </div>
 <div>
   <fieldset class="nhsuk-fieldset">
@@ -31,12 +31,35 @@
       </h3>
       <p> Please check the details are correct before continuing.</p>
     </div>
-
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Current supplier</h3>
+      <table class="nhsuk-table" id="currentSupplierTable">
+        <caption class="nhsuk-table__caption">Current Supplier</caption>
+        <thead class="nhsuk-table__head">
+        <tr>
+          <th scope="col" class="nhsuk-table__header">Supplier name</th>
+          <th scope="col" class="nhsuk-table__header">Start date</th>
+          <th scope="col" class="nhsuk-table__header">End date</th>
+<!--          <th scope="col" class="nhsuk-table__header">Action</th>-->
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Bausch & Lomb UK Ltd</td>
+          <td class="nhsuk-table__cell">03-03-2020</td>
+          <td class="nhsuk-table__cell end-date"></td>
+<!--          <td class="nhsuk-table__cell">-->
+<!--            <a href="#">Edit<span class="nhsuk-u-visually-hidden"> Supplier details</span></a>-->
+<!--          </td>-->
+        </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="nhsuk-do-dont-list">
-      <h3 class="nhsuk-do-dont-list__label">Inserted new supplier</h3>
-      <table class="nhsuk-table">
-        <caption class="nhsuk-table__caption">Inserted new Supplier</caption>
+      <h3 class="nhsuk-do-dont-list__label">Updated supplier</h3>
+      <table class="nhsuk-table" id="newSupplierTable">
+        <caption class="nhsuk-table__caption">Updated Supplier</caption>
         <thead class="nhsuk-table__head">
         <tr>
           <th scope="col" class="nhsuk-table__header">Supplier name</th>
@@ -48,85 +71,86 @@
         <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">The Boots Company Ltd</td>
-          <td class="nhsuk-table__cell start-date"></td>
-          <td class="nhsuk-table__cell end-date"></td>
+          <td class="nhsuk-table__cell start-date" contenteditable="true" style="background-color:#fffbe6;">
+            <!-- user enters start date here, e.g. 15-03-2025 -->
+          </td>
+          <td class="nhsuk-table__cell eot">01-02-3456</td>
           <td class="nhsuk-table__cell">
-            <a href="insert-update-supplier.html">
-              Edit<span class="nhsuk-u-visually-hidden"> Supplier details</span>
-            </a>
+            <a href="#">Edit<span class="nhsuk-u-visually-hidden"> Supplier details</span></a>
           </td>
         </tr>
         </tbody>
       </table>
     </div>
 
-<!--    <div class="nhsuk-form-group">-->
-<!--      <fieldset class="nhsuk-fieldset">-->
-<!--        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend&#45;&#45;m" id="supplier-confirmation">-->
-<!--          Do you want to save this change?-->
-<!--        </legend>-->
-
-<!--        <div class="nhsuk-radios">-->
-
-<!--          <div class="nhsuk-radios__item">-->
-<!--            <input class="nhsuk-radios__input" id="example-1" name="example-1" type="radio"-->
-<!--                   value="yes">-->
-<!--            <label class="nhsuk-label nhsuk-radios__label" for="example-1">-->
-<!--              Yes – save this change-->
-<!--            </label>-->
-<!--          </div>-->
-
-<!--          <div class="nhsuk-radios__item">-->
-<!--            <input class="nhsuk-radios__input" id="example-2" name="example-2" type="radio"-->
-<!--                   value="no">-->
-<!--            <label class="nhsuk-label nhsuk-radios__label" for="example-2">-->
-<!--              No – do not save this change-->
-<!--            </label>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </fieldset>-->
-<!--    </div>-->
 
     <a href="final-updated-page.html" class="nhsuk-button" type="submit">
-      Continue
+     Save
     </a>
 <!--    <button class="nhsuk-button" onclick="handleSaveAndContinue()">Continue</button>-->
 
 
-<!--    <script>-->
-<!--      function handleSaveAndContinue() {-->
 
-<!--        const yesOption = document.getElementById('example-1');-->
-<!--        const noOption = document.getElementById('example-2');-->
-
-
-<!--        if (yesOption.checked) {-->
-<!--          window.location.href = 'final-updated-page.html';-->
-<!--        } else if (noOption.checked) {-->
-<!--          window.location.href = 'update-supplier-prototype.html';-->
-<!--        }-->
-
-<!--      }-->
-<!--    </script>-->
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // --- Get today's date ---
+    document.addEventListener('DOMContentLoaded', () => {
+      function formatDate(date) {
+        const dd = String(date.getDate()).padStart(2, '0');
+        const mm = String(date.getMonth() + 1).padStart(2, '0');
+        const yyyy = date.getFullYear();
+        return `${dd}-${mm}-${yyyy}`;
+      }
+
+      const newStartCell = document.querySelector('#newSupplierTable .start-date');
+      const newEOTCell = document.querySelector('#newSupplierTable .eot');
+      const currentEndCell = document.querySelector('#currentSupplierTable .end-date');
+
+      if (!newStartCell || !newEOTCell || !currentEndCell) {
+        console.error("Required table cells not found.", { newStartCell, newEOTCell, currentEndCell });
+        return;
+      }
+
+      // Set today's date in new supplier start date if empty
+      if (!newStartCell.textContent.trim()) {
         const today = new Date();
-        const options = { day: '2-digit', month: 'long', year: 'numeric' };
-        const startDateFormatted = today.toLocaleDateString('en-GB', options); // e.g., "30 October 2025"
+        newStartCell.textContent = formatDate(today);
+      }
 
-        // --- Set fixed EOT date ---
-        const endDateFormatted = "EOT ";
+      // Set fixed EOT
+      newEOTCell.textContent = "01-02-3456";
 
-        // --- Insert into the table ---
-        const startDateCells = document.querySelectorAll('.start-date');
-        const endDateCells = document.querySelectorAll('.end-date');
+      function updateCurrentEndDate() {
+        const dateStr = newStartCell.textContent.trim();
+        const parts = dateStr.split('-');
 
-        startDateCells.forEach(cell => cell.textContent = startDateFormatted);
-        endDateCells.forEach(cell => cell.textContent = endDateFormatted);
+        if (parts.length === 3) {
+          const [day, month, year] = parts.map(Number);
+          const startDate = new Date(year, month - 1, day);
+
+          if (!isNaN(startDate.getTime())) {
+            const prevDay = new Date(startDate);
+            prevDay.setDate(startDate.getDate() - 1);
+            currentEndCell.textContent = formatDate(prevDay);
+          } else {
+            console.error("Invalid start date format:", dateStr);
+            currentEndCell.textContent = ""; // Clear invalid date
+          }
+        } else {
+          console.error("Start date not in DD-MM-YYYY format:", dateStr);
+          currentEndCell.textContent = ""; // Clear invalid date
+        }
+      }
+
+      // Initial update
+      updateCurrentEndDate();
+
+      // Update on multiple events to capture user input better
+      ['input', 'blur', 'keyup'].forEach(evt => {
+        newStartCell.addEventListener(evt, updateCurrentEndDate);
       });
-    </script>
+    });
+  </script>
+
 
 
     {% endblock %}

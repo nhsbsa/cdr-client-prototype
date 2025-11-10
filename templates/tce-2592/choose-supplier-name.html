@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
-  <a class="nhsuk-back-link__link" href="update-supplier-prototype.html">
+  <a class="nhsuk-back-link__link" href="final-updated-page.html">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
          aria-hidden="true" height="24" width="24">
       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
@@ -16,37 +16,14 @@
                 Update supplier Prototype
               <span class="nhsuk-u-visually-hidden"> - </span>
             </span>
-        Supplier search
+       Search supplier names
       </h1>
     </legend>
 
-<!--    <div class="nhsuk-do-dont-list">-->
-<!--      <h3 class="nhsuk-do-dont-list__label">Current supplier information</h3>-->
-<!--      <table class="nhsuk-table">-->
-<!--        <caption class="nhsuk-table__caption"></caption>-->
-<!--        <thead class="nhsuk-table__head">-->
-<!--        <tr>-->
-<!--          <th scope="col" class="nhsuk-table__header">Supplier name</th>-->
-<!--          <th scope="col" class="nhsuk-table__header">Start date</th>-->
-<!--          <th scope="col" class="nhsuk-table__header">End date</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody class="nhsuk-table__body">-->
-<!--        <tr class="nhsuk-table__row">-->
-<!--          <td class="nhsuk-table__cell"><div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">AAH Hilcross</div></td>-->
-<!--          <td class="nhsuk-table__cell"><div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">-->
-<!--            04/03/2060-->
-<!--            <td class="nhsuk-table__cell"><div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">-->
-<!--              01/08/2070-->
-
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--      </table>-->
-<!--    </div>-->
 
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="example">
-        Enter your required supplier name
+        You can enter partial or full name to search for your required supplier name
       </label> <input class="nhsuk-input" id="example" name="example" type="text">
     </div>
 
@@ -70,7 +47,7 @@
       </thead>
       <tbody class="nhsuk-table__body">
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><a>Boomo Medical Ltd</a></td>
+        <td class="nhsuk-table__cell"><a>Bausch & Lomb uk ltd</a></td>
         <td class="nhsuk-table__cell"> <div class="nhsuk-radios__item">
           <input class="nhsuk-radios__input" id="example" name="example" type="radio" value="yes">
           <label class="nhsuk-label nhsuk-radios__label" for="example">
@@ -78,12 +55,35 @@
         </div></td>
       </tr>
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell"><a>The Boots Company Plc</a></td>
+        <td class="nhsuk-table__cell"><a>Boomo Medical Ltd</a></td>
         <td class="nhsuk-table__cell"> <div class="nhsuk-radios__item">
           <input class="nhsuk-radios__input" id="example" name="example" type="radio" value="yes">
           <label class="nhsuk-label nhsuk-radios__label" for="example">
           </label>
         </div></td>
+      </tr>
+      <tr class="nhsuk-table__row" aria-disabled="true"
+          style="background-color:#f0f0f0; color:#505a5f;">
+        <td class="nhsuk-table__cell">
+          <span>The Boots company PLC</span><br>
+          <span class="nhsuk-hint"
+                style="font-size:0.9rem; color:#6a6a6a;">
+      This option is not available
+    </span>
+        </td>
+        <td class="nhsuk-table__cell">
+          <div class="nhsuk-form-group" style="margin-bottom:0;">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-disabled" name="example"
+                     type="radio" value="yes" disabled
+                     style="cursor:not-allowed;">
+              <label class="nhsuk-label nhsuk-radios__label"
+                     for="example-disabled"
+                     style="color:#6a6a6a; cursor:not-allowed;">
+              </label>
+            </div>
+          </div>
+        </td>
       </tr>
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell"><a>Bristol Laboratories Ltd</a></td>

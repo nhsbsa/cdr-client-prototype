@@ -31,12 +31,34 @@
       </h3>
       <p> Please check the details are correct before continuing.</p>
     </div>
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Current future dated</h3>
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption"> </caption>
+        <thead class="nhsuk-table__head">
+        <tr>
+          <th scope="col" class="nhsuk-table__header">Supplier name</th>
+          <th scope="col" class="nhsuk-table__header">Start date</th>
+          <th scope="col" class="nhsuk-table__header">End date</th>
 
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">Bristol Laboratories Ltd</td>
+          <td class="nhsuk-table__cell start-date1">30 November 2025</td>
+          <td class="nhsuk-table__cell end-date">01-02-3456
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="nhsuk-do-dont-list">
-      <h3 class="nhsuk-do-dont-list__label">Inserted new start date</h3>
+      <h3 class="nhsuk-do-dont-list__label">Updated future dated</h3>
       <table class="nhsuk-table">
-        <caption class="nhsuk-table__caption">Inserted new start date </caption>
+        <caption class="nhsuk-table__caption"></caption>
         <thead class="nhsuk-table__head">
         <tr>
           <th scope="col" class="nhsuk-table__header">Supplier name</th>
@@ -49,7 +71,8 @@
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">Bristol Laboratories Ltd</td>
           <td class="nhsuk-table__cell start-date">30 November 2025</td>
-          <td class="nhsuk-table__cell end-date"></td>
+          <td class="nhsuk-table__cell end-date">01-02-3456
+          </td>
           <td class="nhsuk-table__cell">
             <a href="insert-update-supplier.html">
               Edit<span class="nhsuk-u-visually-hidden"> Supplier details</span>
@@ -88,13 +111,28 @@
     </div>
 
     <button class="nhsuk-button" type="button" onclick="handleSaveAndContinue()">
-      Continue
+      Save
     </button>
 
     <!--    <button class="nhsuk-button" onclick="handleSaveAndContinue()">Continue</button>-->
 
 
     <script>
+
+      // Function to format today's date as "30 November 2025"
+      function formatDate(date) {
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        return date.toLocaleDateString('en-GB', options);
+      }
+
+      // Get today's date
+      const today = new Date();
+
+      // Find all elements with class 'start-date' and set their text
+      document.querySelectorAll('.start-date1').forEach(cell => {
+        cell.textContent = formatDate(today);
+      });
+
       function handleSaveAndContinue() {
 
         const yesOption = document.getElementById('example-1');

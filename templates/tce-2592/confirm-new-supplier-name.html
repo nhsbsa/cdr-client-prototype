@@ -32,11 +32,33 @@
       <p> Please check the details are correct before continuing.</p>
     </div>
 
+    <div class="nhsuk-do-dont-list">
+      <h3 class="nhsuk-do-dont-list__label">Current supplier name</h3>
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption"> </caption>
+        <thead class="nhsuk-table__head">
+        <tr>
+          <th scope="col" class="nhsuk-table__header">Supplier name</th>
+          <th scope="col" class="nhsuk-table__header">Start date</th>
+          <th scope="col" class="nhsuk-table__header">End date</th>
+
+        </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">The Boots company PLC</td>
+          <td class="nhsuk-table__cell start-date"></td>
+          <td class="nhsuk-table__cell end-date"></td>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="nhsuk-do-dont-list">
-      <h3 class="nhsuk-do-dont-list__label">Inserted new supplier name</h3>
+      <h3 class="nhsuk-do-dont-list__label">Update supplier name</h3>
       <table class="nhsuk-table">
-        <caption class="nhsuk-table__caption">Inserted new Supplier name </caption>
+        <caption class="nhsuk-table__caption"> </caption>
         <thead class="nhsuk-table__head">
         <tr>
           <th scope="col" class="nhsuk-table__header">Supplier name</th>
@@ -87,44 +109,45 @@
           </fieldset>
         </div>
 
+
     <button class="nhsuk-button" type="button" onclick="handleSaveAndContinue()">
-      Continue
+      Save
     </button>
-
-    <!--    <button class="nhsuk-button" onclick="handleSaveAndContinue()">Continue</button>-->
-
-
-        <script>
-          function handleSaveAndContinue() {
-
-            const yesOption = document.getElementById('example-1');
-            const noOption = document.getElementById('example-2');
-
-
-            if (yesOption.checked) {
-              window.location.href = 'new-supplier-name-last-page.html';
-            } else if (noOption.checked) {
-              window.location.href = 'update-supplier-prototype.html';
-            }
-
-          }
-
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // --- Get today's date ---
+        // --- Set today's date for all Start Date cells ---
         const today = new Date();
-        const options = { day: '2-digit', month: 'long', year: 'numeric' };
-        const startDateFormatted = today.toLocaleDateString('en-GB', options); // e.g., "30 October 2025"
+        const day = today.getDate().toString().padStart(2, "0");
+        const month = (today.getMonth() + 1).toString().padStart(2, "0");
+        const year = today.getFullYear();
 
-        // --- Set fixed EOT date ---
-        const endDateFormatted = "EOT ";
+        const startDateCells = document.querySelectorAll(".start-date");
+        startDateCells.forEach(cell => {
+          cell.textContent = `${day}/${month}/${year}`;
+        });
 
-        // --- Insert into the table ---
-        const startDateCells = document.querySelectorAll('.start-date');
-        const endDateCells = document.querySelectorAll('.end-date');
-
-        startDateCells.forEach(cell => cell.textContent = startDateFormatted);
-        endDateCells.forEach(cell => cell.textContent = endDateFormatted);
+        // --- Set fixed End Date (EOT 01/02/3456) ---
+        const endDateCells = document.querySelectorAll(".end-date");
+        endDateCells.forEach(cell => {
+          cell.textContent = "01/02/3456";
+        });
       });
+
+      // --- Handle Save button click ---
+      function handleSaveAndContinue() {
+        const yesRadio = document.getElementById("example-1");
+        const noRadio = document.getElementById("example-2");
+
+        if (yesRadio.checked) {
+          // Proceed to the next page
+          window.location.href = "new-supplier-name-last-page.html";
+        } else if (noRadio.checked) {
+          // Redirect elsewhere
+          window.location.href = "new-updated-supplier-name.html";
+        } else {
+          alert("Please select an option.");
+        }
+      }
     </script>
 
 

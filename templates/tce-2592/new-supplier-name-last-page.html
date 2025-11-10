@@ -32,11 +32,11 @@
 </style>
 
 <!--Bausch and Lomb supplier detail box one no details can be changed at this point apart from the end date -->
-<div class="nhsuk-grid-row" >
+<div class="nhsuk-grid-row">
   <div class="supplier-details">
     <div class="nhsuk-grid-column-full update-box" id="newSupplierDetails1">
       <div class="update-general-heading">
-        <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Supplier details</h2>
+        <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Current supplier</h2>
       </div>
       <fieldset class="nhsuk-fieldset">
         <table class="nhsuk-table">
@@ -57,12 +57,12 @@
             </td>
             <td class="nhsuk-table__cell">
               <div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">
-                03 March 2020
+                03-03-2020
               </div>
             </td>
-            <td class="nhsuk-table__cell">
+            <td class="nhsuk-table__cell end-date">
               <div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">
-                03 March 2060
+
               </div>
             </td>
           </tr>
@@ -72,142 +72,19 @@
     </div>
   </div>
 
-
-  <div class="clearfix"></div>
-  <!--insert button 1-->
-  <!--<div class="button-container">-->
-  <!--  <a class="nhsuk-button nhsuk-button&#45;&#45;secondary nhsuk-u-margin-top-5"-->
-  <!--     role="button"-->
-  <!--     id="insertSupplierBtn1">-->
-  <!--    Insert a new supplier-->
-  <!--  </a>-->
-  <!--</div>-->
-
-  <!--Insert supplier detail box 1-->
-
-  <div id="supplierDetails1" class="nhsuk-do-dont-list nhsuk-u-margin-top-5" style="display:none;">
-
-    <h3 class="nhsuk-do-dont-list__label">Insert new supplier details </h3>
-
-    <div class="nhsuk-u-margin-bottom-5" style="float: right">
-      <a href="#" class="nhsuk-back-link" id="goBackLink1">Close</a>
-    </div>
-
-    <table class="nhsuk-table">
-      <caption class="nhsuk-table__caption"></caption>
-      <thead class="nhsuk-table__head">
-      <tr>
-        <th scope="col" class="nhsuk-table__header">Current supplier</th>
-        <th scope="col" class="nhsuk-table__header">Start date (Extracted)</th>
-        <th scope="col" class="nhsuk-table__header">End date</th>
-      </tr>
-      </thead>
-      <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">
-          <div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="supplierSelect1">Select supplier</label>
-              <select class="nhsuk-select" id="supplierSelect1" name="supplierSelect1">
-                <option value="1"></option>
-                <option value="2">Boome Medical Ltd</option>
-                <option value="3">Bausch & Loob</option>
-              </select>
-            </div>
-          </div>
-        </td>
-        <td class="nhsuk-table__cell">
-          <fieldset class="nhsuk-fieldset" role="group" aria-labelledby="start-date-label1">
-            <legend class="nhsuk-fieldset__legend nhsuk-label" id="start-date-label1">Start
-              date
-            </legend>
-            <div class="nhsuk-date-input" id="start-date1">
-              <div class="nhsuk-date-input__item">
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="start-day1">Day</label>
-                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                         id="start-day1" value="" name="start-day1" type="text"
-                         inputmode="numeric">
-                </div>
-              </div>
-              <div class="nhsuk-date-input__item">
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="start-month1">Month</label>
-                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                         id="start-month1" value="" name="start-month1" type="text"
-                         inputmode="numeric">
-                </div>
-              </div>
-              <div class="nhsuk-date-input__item">
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="start-year1">Year</label>
-                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
-                         id="start-year1" value="" name="start-year1" type="text"
-                         inputmode="numeric">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </td>
-        <td class="nhsuk-table__cell">
-          <fieldset class="nhsuk-fieldset" role="group" aria-labelledby="end-date-labe1">
-            <legend class="nhsuk-fieldset__legend nhsuk-label" id="end-date-label1">End date
-            </legend>
-            <div class="nhsuk-date-input" id="end-date1">
-              <div class="nhsuk-date-input__item">
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="end-day1">Day</label>
-                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                         id="end-day1" value="" name="end-day1" type="text"
-                         inputmode="numeric">
-                </div>
-              </div>
-              <div class="nhsuk-date-input__item">
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="end-month1">Month</label>
-                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2"
-                         id="end-month1" value="" name="end-month1" type="text"
-                         inputmode="numeric">
-                </div>
-              </div>
-              <div class="nhsuk-date-input__item">
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="end-year1">Year</label>
-                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4"
-                         id="end-year1" value="" name="end-year1" type="text"
-                         inputmode="numeric">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-    <button id="hideSupplierDetails1" class="nhsuk-button nhsuk-button--secondary" type="button"
-            style="margin-bottom: 15px;">
-      Insert a new supplier
-    </button>
-
-    <button class="nhsuk-button nhsuk-button--warning" type="submit">
-      Delete new supplier
-    </button>
-
-  </div>
-
   <!--Bristol Lab Supplier details two -->
   <div class="supplier-details">
     <div class="nhsuk-grid-column-full update-box" id="newSupplierDetails2">
       <div class="update-general-heading">
-        <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Supplier details</h2>
+        <h2 class="nhsuk-heading-l nhsuk-u-margin-bottom-1">Future dated </h2>
       </div>
       <fieldset class="nhsuk-fieldset">
         <table class="nhsuk-table">
           <caption class="nhsuk-table__caption"></caption>
           <thead class="nhsuk-table__head">
           <tr>
-            <th scope="col" class="nhsuk-table__header">Supplier name</th>
+            <th scope="col" class="nhsuk-table__header">Supplier name<strong
+                class="nhsuk-tag nhsuk-tag--green" style="margin-left: 8px;">F</strong></th>
             <th scope="col" class="nhsuk-table__header">Start date</th>
             <th scope="col" class="nhsuk-table__header">End date</th>
           </tr>
@@ -215,7 +92,8 @@
           <tbody class="nhsuk-table__body">
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell">
-              <div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">Bristol Laboratories Ltd
+              <div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">
+                Bristol Laboratories Ltd
               </div>
             </td>
             <td class="nhsuk-table__cell">
@@ -256,14 +134,14 @@
                 </fieldset>
               </div>
             </td>
-            <td class="nhsuk-table__cell">
+            <td class="nhsuk-table__cell eot">
               <div style="line-height: 5.0; height: 100%; display: flex; align-items: center;">
-                EOT (End of time)
-              </div>
+            </div>
             </td>
           </tr>
           </tbody>
         </table>
+
         <div class="nhsuk-action-link">
           <a class="nhsuk-action-link__link" href="change-supplier-name.html">
             <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle"
@@ -275,66 +153,84 @@
             </svg>
             <span class="nhsuk-action-link__text">Select a different supplier</span>
           </a>
-          <a href="confirm-delete-supplier.html" class="nhsuk-button nhsuk-button--warning" style="float: right" type="submit">
+          <a href="confirm-delete-supplier.html" class="nhsuk-button nhsuk-button--warning"
+             style="float: right" type="submit">
             Delete supplier
           </a>
         </div>
-      </fieldset>
+
     </div>
   </div>
 
-<!--  <div style="clear: both;"></div>-->
+  <!--  <div style="clear: both;"></div>-->
 
   <div>
     <a href="confirm-new-date-change.html" class="nhsuk-button" type="submit">
       Continue
     </a>
   </div>
+</div>
 
   <script>
-    // Function to fill Box 2 Start Date with today's date
-    function setTodayAsStartDate() {
-      const today = new Date();
-      document.getElementById("example-day2").value = String(today.getDate()).padStart(2, "0");
-      document.getElementById("example-month2").value = String(today.getMonth() + 1).padStart(2,
-          "0");
-      document.getElementById("example-year2").value = today.getFullYear();
-    }
+    document.addEventListener('DOMContentLoaded', () => {
 
-    // Function to set End Date in Box 1 to the day before Start Date in Box 2
-    function updatePreviousEndDate() {
-      const day = parseInt(document.getElementById("example-day2").value, 10);
-      const month = parseInt(document.getElementById("example-month2").value, 10);
-      const year = parseInt(document.getElementById("example-year2").value, 10);
 
-      if (!day || !month || !year) return;
-
-      // Create Start Date object
-      const startDate = new Date(year, month - 1, day);
-
-      // Subtract one day
-      const endDate = new Date(startDate);
-      endDate.setDate(startDate.getDate() - 1);
-
-      // Format: 30 October 2065
-      const options = {day: "numeric", month: "long", year: "numeric"};
-      const formatted = endDate.toLocaleDateString("en-GB", options);
-
-      // Find End Date cell in Box 1
-      const box1EndDateCell = document.querySelector("#newSupplierDetails1 td:nth-child(3) div");
-      if (box1EndDateCell) {
-        box1EndDateCell.textContent = formatted;
+      function formatDate(date) {
+        const dd = String(date.getDate()).padStart(2, '0');
+        const mm = String(date.getMonth() + 1).padStart(2, '0');
+        const yyyy = date.getFullYear();
+        return `${dd}-${mm}-${yyyy}`;
       }
-    }
 
-    // Initialize on page load
-    window.addEventListener("DOMContentLoaded", () => {
-      setTodayAsStartDate();     // Set today's date in Box 2
-      updatePreviousEndDate();   // Then set yesterday in Box 1
 
-      // Update automatically if user edits start date
-      ["example-day2", "example-month2", "example-year2"].forEach(id => {
-        document.getElementById(id).addEventListener("input", updatePreviousEndDate);
+      const dayInput = document.getElementById('example-day2');
+      const monthInput = document.getElementById('example-month2');
+      const yearInput = document.getElementById('example-year2');
+      const currentEndCell = document.querySelector('#newSupplierDetails1 .end-date');
+      const futureEOTCell = document.querySelector('#newSupplierDetails2 .eot');
+
+      if (!dayInput || !monthInput || !yearInput || !currentEndCell || !futureEOTCell) {
+        console.error('❌ Missing one or more required elements', {
+          dayInput, monthInput, yearInput, currentEndCell, futureEOTCell
+        });
+        return;
+      }
+
+      function setTodayAsFutureStartDate() {
+        const today = new Date();
+        dayInput.value = String(today.getDate()).padStart(2, '0');
+        monthInput.value = String(today.getMonth() + 1).padStart(2, '0');
+        yearInput.value = today.getFullYear();
+      }
+
+      function updateCurrentEndDate() {
+        const day = parseInt(dayInput.value, 10);
+        const month = parseInt(monthInput.value, 10);
+        const year = parseInt(yearInput.value, 10);
+
+        if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+          const startDate = new Date(year, month - 1, day);
+
+          if (!isNaN(startDate.getTime())) {
+            const prevDay = new Date(startDate);
+            prevDay.setDate(startDate.getDate() - 1);
+            currentEndCell.textContent = formatDate(prevDay);
+          } else {
+            currentEndCell.textContent = '';
+          }
+        } else {
+          currentEndCell.textContent = '';
+        }
+      }
+
+      futureEOTCell.textContent = '01-02-3456';
+
+      setTodayAsFutureStartDate();
+      updateCurrentEndDate();
+
+      [dayInput, monthInput, yearInput].forEach(input => {
+        input.addEventListener('input', updateCurrentEndDate);
+        input.addEventListener('blur', updateCurrentEndDate);
       });
     });
   </script>
