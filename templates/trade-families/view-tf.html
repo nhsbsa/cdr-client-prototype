@@ -1,4 +1,4 @@
-{% extends "trade-families/base.html" %}
+{% extends "base-large.html" %}
 {% block content %}
 <div class="nhsuk-grid-row">
     <div id="content-pane" class="side-tree-view">
@@ -40,175 +40,177 @@
                         </svg>
                         Go back</a>
                 </div>
+
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-full">
-                        <br/>
+                             <span class="nhsuk-caption-l">
+                Trade families
+              <span class="nhsuk-u-visually-hidden"> - </span>
+                         </span>
                         <h1 class="nhsuk-heading-xl">1 Primary Wound</h1>
                     </div>
                 </div>
-                <dl class="nhsuk-summary-list">
-                    <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                            Start date
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                            01 January 2020
-                        </dd>
-                        <dd class="nhsuk-summary-list__actions">
-                            <a class="nhsuk-link--no-visited-state" href="#">
-                                Edit<span class="nhsuk-u-visually-hidden"> start date</span>
-                            </a>
 
-                        </dd>
-                    </div>
-                    <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                            End date
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                            05 September 2024
-                        </dd>
-                        <dd class="nhsuk-summary-list__actions">
-                            <a class="nhsuk-link--no-visited-state" href="#">
-                                Edit<span class="nhsuk-u-visually-hidden"> end date</span>
-                            </a>
-                        </dd>
-                    </div>
-                    <div class="nhsuk-summary-list__row">
-                        <dt class="nhsuk-summary-list__key">
-                            SNOMED Code
-                        </dt>
-                        <dd class="nhsuk-summary-list__value">
-                            6614511000001108
-                        </dd>
-                        <dd class="nhsuk-summary-list__value">
-                            <span class="govuk-visually-hidden">Not editable</span>
-                        </dd>
-                    </div>
-                </dl>
+                <table class="nhsuk-table">
+                    <caption class="nhsuk-table__caption">Trade families</caption>
+                    <thead class="nhsuk-table__head">
+                    <tr>
+                        <th scope="col" class="nhsuk-table__header">Name</th>
+                        <th scope="col" class="nhsuk-table__header">Start date</th>
+                        <th scope="col" class="nhsuk-table__header">End date</th>
+                        <th scope="col" class="nhsuk-table__header">Validation status</th>
+                        <th scope="col" class="nhsuk-table__header">Extractable status</th>
+                        <th scope="col" class="nhsuk-table__header">SNOMED</th>
+                        <th scope="col" class="nhsuk-table__header">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell">1 Primary wound</td>
+                        <td class="nhsuk-table__cell">01-01-2020</td>
+                        <td class="nhsuk-table__cell">05-09-2024</td>
+                        <td class="nhsuk-table__cell">Valid</td>
+                        <td class="nhsuk-table__cell">Extractable</td>
+                        <td class="nhsuk-table__cell">6614511000001108</td>
+                        <td class="nhsuk-table__cell"> <a href="edit-tf.html" class="nhsuk-link">Edit</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-full">
                         <br/>
-                        <h2 class="nhsuk-heading-l">Trade family group</h2>
+                        <h2 class="nhsuk-heading-l ">Trade family group</h2>
                         <p>This trade family does not belong to a trade family group.
                             <a class="nhsuk-link--no-visited-state" href="link-tf-to-tfg">Link to trade family
                                 group.</a></p>
                     </div>
                 </div>
-                <br/>
-                <div class="nhsuk-grid-row">
-                    <div class="nhsuk-grid-column-full">
-                        <h2 class="nhsuk-heading-l">AMPs</h2>
-                        <div class="nhsuk-grid-row">
-                            <div class="nhsuk-grid-column-full">
-                                <label for="filter" class="nhsuk-label">Filter by name</label>
-                                <input id="filter" class="nhsuk-input govuk-!-margin-bottom-4" type="text"/>
-                                <details class="nhsuk-details">
-                                    <summary class="nhsuk-details__summary">
-                    <span class="nhsuk-details__summary-text">
-                      Refine search
-                    </span>
-                                    </summary>
-                                    <div class="nhsuk-details__text">
-                                        <form>
-                                            <div class="nhsuk-form-group">
-                                                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                                                    <legend class="nhsuk-fieldset__legend">
-                                                        Filter by
-                                                    </legend>
-                                                    <div class="nhsuk-checkboxes">
-                                                        <div class="nhsuk-grid-column-full">
-                                                            <div class="nhsuk-u-one-third">
-                                                                <div class="nhsuk-checkboxes__item">
-                                                                    <input class="nhsuk-checkboxes__input" id="valid"
-                                                                           name="filter"
-                                                                           type="checkbox" checked>
-                                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                                           for="valid">
-                                                                        Valid
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="nhsuk-u-one-third">
-                                                                <div class="nhsuk-checkboxes__item">
-                                                                    <input class="nhsuk-checkboxes__input"
-                                                                           id="extractable"
-                                                                           name="filter"
-                                                                           type="checkbox" checked>
-                                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                                           for="extractable">
-                                                                        Extractable
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="nhsuk-u-one-third">
-                                                                <div class="nhsuk-checkboxes__item">
-                                                                    <input class="nhsuk-checkboxes__input"
-                                                                           id="future-dated"
-                                                                           name="filter"
-                                                                           type="checkbox">
-                                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                                           for="future-dated">
-                                                                        Show future dated AMPs
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
-                                                            <div class="nhsuk-u-one-third">
-                                                                <div class="nhsuk-checkboxes__item">
-                                                                    <input class="nhsuk-checkboxes__input" id="invalid"
-                                                                           name="filter"
-                                                                           type="checkbox" checked>
-                                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                                           for="invalid">
-                                                                        Invalid
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="nhsuk-u-one-third">
-                                                                <div class="nhsuk-checkboxes__item">
-                                                                    <input class="nhsuk-checkboxes__input"
-                                                                           id="unextractable"
-                                                                           name="filter"
-                                                                           type="checkbox" checked>
-                                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                                           for="unextractable">
-                                                                        Unextractable
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="nhsuk-u-one-third">
-                                                                <div class="nhsuk-checkboxes__item">
-                                                                    <input class="nhsuk-checkboxes__input" id="historic"
-                                                                           name="filter"
-                                                                           type="checkbox">
-                                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
-                                                                           for="historic">
-                                                                        Show historic AMPs
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </details>
-                                <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-float-right nhsuk-u-margin-left-2"
-                                   style="color: black"
-                                   id="resetFilters" href="#">Reset filter </a>
-                                <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" type="submit"
-                                        id="searchButton" onclick="displaySelectedCriteria()">Search
-                                </button>
 
+<hr>
+<!--              amp filter or search-->
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                  <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-full">
+                      <h3 class="nhsuk-heading-l">Linked AMP's </h3>
+                      <details class="nhsuk-details nhsuk-details--expanded govuk-!-margin-bottom-4"
+                               data-module="nhsuk-details">
+                        <summary class="nhsuk-details__summary">
+                          <span class="nhsuk-details__summary-text">Do you want to search or filter AMP's ?</span>
+                        </summary>
+                        <label for="filter" class="nhsuk-label nhsuk-u-margin-top-5">Filter by name</label>
+                        <input id="filter" class="nhsuk-input govuk-!-margin-bottom-4" type="text"/>
+
+                        <div class="nhsuk-details__text">
+                          <form>
+                            <div class="nhsuk-form-group">
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                                <legend class="nhsuk-fieldset__legend">
+                                  Filter by attributes
+                                </legend>
+                                <div class="nhsuk-checkboxes">
+                                  <div class="nhsuk-grid-column-full">
+                                    <div class="nhsuk-u-one-third">
+                                      <div class="nhsuk-checkboxes__item">
+                                        <input class="nhsuk-checkboxes__input" id="valid"
+                                               name="filter"
+                                               type="checkbox" checked>
+                                        <label class="nhsuk-label nhsuk-checkboxes__label"
+                                               for="valid">
+                                          Valid
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="nhsuk-u-one-third">
+                                      <div class="nhsuk-checkboxes__item">
+                                        <input class="nhsuk-checkboxes__input"
+                                               id="extractable"
+                                               name="filter"
+                                               type="checkbox" checked>
+                                        <label class="nhsuk-label nhsuk-checkboxes__label"
+                                               for="extractable">
+                                          Extractable
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="nhsuk-u-one-third">
+                                      <div class="nhsuk-checkboxes__item">
+                                        <input class="nhsuk-checkboxes__input"
+                                               id="future-dated"
+                                               name="filter"
+                                               type="checkbox">
+                                        <label class="nhsuk-label nhsuk-checkboxes__label"
+                                               for="future-dated">
+                                          Show future dated AMPs
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
+                                    <div class="nhsuk-u-one-third">
+                                      <div class="nhsuk-checkboxes__item">
+                                        <input class="nhsuk-checkboxes__input" id="invalid"
+                                               name="filter"
+                                               type="checkbox" checked>
+                                        <label class="nhsuk-label nhsuk-checkboxes__label"
+                                               for="invalid">
+                                          Invalid
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="nhsuk-u-one-third">
+                                      <div class="nhsuk-checkboxes__item">
+                                        <input class="nhsuk-checkboxes__input"
+                                               id="unextractable"
+                                               name="filter"
+                                               type="checkbox" checked>
+                                        <label class="nhsuk-label nhsuk-checkboxes__label"
+                                               for="unextractable">
+                                          Unextractable
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="nhsuk-u-one-third">
+                                      <div class="nhsuk-checkboxes__item">
+                                        <input class="nhsuk-checkboxes__input" id="historic"
+                                               name="filter"
+                                               type="checkbox">
+                                        <label class="nhsuk-label nhsuk-checkboxes__label"
+                                               for="historic">
+                                          Show historic AMPs
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
                             </div>
+                          </form>
                         </div>
-                        <table class="nhsuk-table">
-                            <p>Page 1 of 2 (29 total results)</p>
-                            <caption class="nhsuk-table__caption">Linked AMPs</caption>
+
+                        <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-float-right nhsuk-u-margin-left-2"
+                           style="color: black"
+                           id="resetFilters" href="#">Reset filter </a>
+                        <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" type="submit"
+                                id="searchButton" onclick="displaySelectedCriteria()">Search
+                        </button>
+                      </details>
+                    </div>
+                  </div>
+
+
+<br>
+
+
+                        <table class="nhsuk-table nhsuk-u-margin-top-9">
+                          <p>Page 1 of 2 (29 total results)</p>
+                            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Linked AMPs</caption>
+
                             <thead role="rowgroup" class="nhsuk-table__head">
+
                             <tr role="row">
                                 <th role="columnheader" class="" scope="col">
                                     <span class="govuk-visually-hidden">Identifier</span>
@@ -217,10 +219,10 @@
                                     Name
                                 </th>
                                 <th role="columnheader" class="" scope="col">
-                                    Status
+                                    Validation status
                                 </th>
                                 <th role="columnheader" class="" scope="col">
-                                    Extractable
+                                    Extractable status
                                 </th>
                                 <th role="columnheader" class="" scope="col">
                                     Start date
@@ -229,7 +231,7 @@
                                     End date
                                 </th>
                                 <th role="columnheader" class="" scope="col">
-                                    Remove
+                                    Action
                                 </th>
                             </tr>
                             </thead>
@@ -240,11 +242,11 @@
                                     Primary Wound
                                     Dressing spray</a></td>
                                 <td class="nhsuk-table__cell ">Valid</td>
-                                <td class="nhsuk-table__cell ">True</td>
-                                <td class="nhsuk-table__cell ">01/01/2020</td>
-                                <td class="nhsuk-table__cell ">01/02/3456</td>
+                                <td class="nhsuk-table__cell ">Extractable</td>
+                                <td class="nhsuk-table__cell ">01-01-2020</td>
+                                <td class="nhsuk-table__cell ">01-02-3456</td>
                                 <td class="nhsuk-table__cell "><a class="nhsuk-link--no-visited-state"
-                                                                  href="#">Remove</a></td>
+                                                                  href="confirm-delete-linked-amp.html">Unlink</a></td>
                             </tr>
                             <tr role="row" class="nhsuk-table__row">
                                 <td class="nhsuk-table__cell "></td>
@@ -252,11 +254,11 @@
                                     Wound small</a>
                                 </td>
                                 <td class="nhsuk-table__cell ">Valid</td>
-                                <td class="nhsuk-table__cell ">True</td>
-                                <td class="nhsuk-table__cell ">15/11/2024</td>
-                                <td class="nhsuk-table__cell ">05/06/2027</td>
+                                <td class="nhsuk-table__cell ">Extractable</td>
+                                <td class="nhsuk-table__cell ">15-11-2024</td>
+                                <td class="nhsuk-table__cell ">05-06-2027</td>
                                 <td class="nhsuk-table__cell "><a class="nhsuk-link--no-visited-state"
-                                                                  href="#">Remove</a></td>
+                                                                  href="#">Unlink</a></td>
                             </tr>
                             <tr role="row" class="nhsuk-table__row">
                                 <td class="nhsuk-table__cell "></td>
@@ -264,11 +266,11 @@
                                     Wound
                                     medium</a></td>
                                 <td class="nhsuk-table__cell ">Invalid</td>
-                                <td class="nhsuk-table__cell ">False</td>
-                                <td class="nhsuk-table__cell ">21/02/2005</td>
-                                <td class="nhsuk-table__cell ">01/02/3456</td>
+                                <td class="nhsuk-table__cell ">Un-extractable</td>
+                                <td class="nhsuk-table__cell ">21-02-2005</td>
+                                <td class="nhsuk-table__cell ">01-02-3456</td>
                                 <td class="nhsuk-table__cell "><a class="nhsuk-link--no-visited-state"
-                                                                  href="#">Remove</a></td>
+                                                                  href="#">Unlink</a></td>
                             </tr>
                             <tr role="row" class="nhsuk-table__row future-record" style="display: none;">
                                 <td class="nhsuk-table__cell "><strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
@@ -278,8 +280,8 @@
                                     extra small</a></td>
                                 <td class="nhsuk-table__cell ">Invalid</td>
                                 <td class="nhsuk-table__cell ">False</td>
-                                <td class="nhsuk-table__cell ">21/02/2999</td>
-                                <td class="nhsuk-table__cell ">01/02/3456</td>
+                                <td class="nhsuk-table__cell ">21-02-2999</td>
+                                <td class="nhsuk-table__cell ">01-02-456</td>
                                 <td class="nhsuk-table__cell "><a class="nhsuk-link--no-visited-state"
                                                                   href="#">Remove</a></td>
                             </tr>
@@ -291,8 +293,8 @@
                                     extra large</a></td>
                                 <td class="nhsuk-table__cell ">Invalid</td>
                                 <td class="nhsuk-table__cell ">False</td>
-                                <td class="nhsuk-table__cell ">21/02/2005</td>
-                                <td class="nhsuk-table__cell ">01/02/2010</td>
+                                <td class="nhsuk-table__cell ">21-02-2005</td>
+                                <td class="nhsuk-table__cell ">01-02-2010</td>
                                 <td class="nhsuk-table__cell "><a class="nhsuk-link--no-visited-state"
                                                                   href="#">Remove</a></td>
                             </tr>
@@ -300,6 +302,7 @@
                         </table>
                     </div>
                 </div>
+
                 <div class="nhsuk-u-margin-top-2">
                     <div id="pagination">
                         <nav aria-label="Pagination Navigation">
