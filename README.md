@@ -19,8 +19,7 @@ git clone git@github.com:nhsbsa/cdr-client-prototype.git
 ### NPM Setup
 Once the project is cloned, run the following command to download and install node dependencies:
 ```shell
-npm install
-npm install gulp
+npm ci
 ```
 If there are issues downloading dependencies, you may need to add the nhsbsa npm repository.
 To do this:
