@@ -43,7 +43,7 @@
 
       <div class="nhsuk-grid-column-three-quarters">
         <div class="nhsuk-back-link">
-          <a class="nhsuk-back-link__link" href="#">
+          <a class="nhsuk-back-link__link" href="view-tfg.html">
             <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 24 24"
                  aria-hidden="true" height="24" width="24">
@@ -68,10 +68,11 @@
           <thead class="nhsuk-table__head">
           <tr>
             <th scope="col" class="nhsuk-table__header">Name</th>
+
+            <th scope="col" class="nhsuk-table__header">Validation</th>
+            <th scope="col" class="nhsuk-table__header">Extraction</th>
             <th scope="col" class="nhsuk-table__header">Start date</th>
             <th scope="col" class="nhsuk-table__header">End date</th>
-            <th scope="col" class="nhsuk-table__header">Validation status</th>
-            <th scope="col" class="nhsuk-table__header">Extractable status</th>
             <th scope="col" class="nhsuk-table__header">SNOMED</th>
             <th scope="col" class="nhsuk-table__header">Action</th>
           </tr>
@@ -79,10 +80,10 @@
 
           <tr class="nhsuk-table__row">
             <td class="nhsuk-table__cell">Primary wound</td>
-            <td class="nhsuk-table__cell">01-01-2020</td>
-            <td class="nhsuk-table__cell">05-09-2024</td>
             <td class="nhsuk-table__cell">Valid</td>
             <td class="nhsuk-table__cell">Extractable</td>
+            <td class="nhsuk-table__cell">01-01-2020</td>
+            <td class="nhsuk-table__cell">05-09-2024</td>
             <td class="nhsuk-table__cell">6614511000001108</td>
             <td class="nhsuk-table__cell"><a href="edit-tfG.html" class="nhsuk-link">Edit</a></td>
           </tr>
@@ -98,16 +99,22 @@
               Name
             </th>
             <th role="columnheader" class="" scope="col">
+              Validation
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Extraction
+            </th>
+            <th role="columnheader" class="" scope="col">
+              Start date
+            </th>
+            <th role="columnheader" class="" scope="col">
+              End date
+            </th>
+            <th role="columnheader" class="" scope="col">
               SNOMED Code
             </th>
             <th role="columnheader" class="" scope="col">
-              Status
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Extractable
-            </th>
-            <th role="columnheader" class="" scope="col">
-              Remove
+              Action
             </th>
           </tr>
           </thead>
@@ -116,11 +123,13 @@
             <td class="nhsuk-table__cell"><a href="view-tf" class="nhsuk-link--no-visited-state">1
               Primary
               Wound</a></td>
-            <td class="nhsuk-table__cell ">1234567890123456</td>
             <td class="nhsuk-table__cell ">Valid</td>
             <td class="nhsuk-table__cell ">True</td>
+            <td class="nhsuk-table__cell">01-01-2020</td>
+            <td class="nhsuk-table__cell">05-09-2024</td>
+            <td class="nhsuk-table__cell ">1234567890123456</td>
             <td class="nhsuk-table__cell">
-              <a class="nhsuk-link--no-visited-state" href="#">Remove<span
+              <a class="nhsuk-link--no-visited-state" href="confirm-unlink-tfg.html">Unlink<span
                   class="nhsuk-u-visually-hidden"> tf</span></a>
             </td>
           </tr>
@@ -128,11 +137,14 @@
             <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
               Wound
               (clotrimazole)</a></td>
-            <td class="nhsuk-table__cell ">1234567890123456</td>
+
             <td class="nhsuk-table__cell ">Valid</td>
             <td class="nhsuk-table__cell ">True</td>
+            <td class="nhsuk-table__cell">01-01-2020</td>
+            <td class="nhsuk-table__cell">05-09-2024</td>
+            <td class="nhsuk-table__cell ">1234567890123456</td>
             <td class="nhsuk-table__cell">
-              <a class="nhsuk-link--no-visited-state" href="#">Remove<span
+              <a class="nhsuk-link--no-visited-state" href="#">Unlink<span
                   class="nhsuk-u-visually-hidden"> tf</span></a>
             </td>
           </tr>
@@ -140,12 +152,15 @@
             <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
               Wound
               (fluconazole)</a></td>
+            <td class="nhsuk-table__cell ">Valid</td>
+            <td class="nhsuk-table__cell ">True</td>
+            <td class="nhsuk-table__cell">01-01-2020</td>
+            <td class="nhsuk-table__cell">05-09-2024</td>
             <td class="nhsuk-table__cell ">1234567890123456</td>
-            <td class="nhsuk-table__cell ">Invalid</td>
-            <td class="nhsuk-table__cell ">False</td>
             <td class="nhsuk-table__cell">
-              <a class="nhsuk-link--no-visited-state" href="#">Remove<span
+              <a class="nhsuk-link--no-visited-state" href="#">Unlink<span
                   class="nhsuk-u-visually-hidden"> tf</span></a>
+            </td>
             </td>
           </tr>
           </tbody>

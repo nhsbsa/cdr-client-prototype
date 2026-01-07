@@ -56,10 +56,11 @@
                     <thead class="nhsuk-table__head">
                     <tr>
                         <th scope="col" class="nhsuk-table__header">Name</th>
-                        <th scope="col" class="nhsuk-table__header">Start date</th>
-                        <th scope="col" class="nhsuk-table__header">End date</th>
-                        <th scope="col" class="nhsuk-table__header">Validation status</th>
-                        <th scope="col" class="nhsuk-table__header">Extractable status</th>
+
+                        <th scope="col" class="nhsuk-table__header">Validation</th>
+                        <th scope="col" class="nhsuk-table__header">Extraction</th>
+                      <th scope="col" class="nhsuk-table__header">Start date</th>
+                      <th scope="col" class="nhsuk-table__header">End date</th>
                         <th scope="col" class="nhsuk-table__header">SNOMED</th>
                         <th scope="col" class="nhsuk-table__header">Action</th>
                     </tr>
@@ -67,10 +68,11 @@
                     <tbody class="nhsuk-table__body">
                     <tr class="nhsuk-table__row">
                         <td class="nhsuk-table__cell">1 Primary wound</td>
-                        <td class="nhsuk-table__cell">01-01-2020</td>
-                        <td class="nhsuk-table__cell">05-09-2024</td>
+
                         <td class="nhsuk-table__cell">Valid</td>
                         <td class="nhsuk-table__cell">Extractable</td>
+                      <td class="nhsuk-table__cell">01-01-2020</td>
+                      <td class="nhsuk-table__cell">05-09-2024</td>
                         <td class="nhsuk-table__cell">6614511000001108</td>
                         <td class="nhsuk-table__cell"> <a href="edit-tf.html" class="nhsuk-link">Edit</a></td>
                     </tr>
@@ -213,16 +215,16 @@
 
                             <tr role="row">
                                 <th role="columnheader" class="" scope="col">
-                                    <span class="govuk-visually-hidden">Identifier</span>
+                                    <span class="nhsuk-u-visually-hidden">Identifier</span>
                                 </th>
                                 <th role="columnheader" class="" scope="col">
                                     Name
                                 </th>
                                 <th role="columnheader" class="" scope="col">
-                                    Validation status
+                                    Validation
                                 </th>
                                 <th role="columnheader" class="" scope="col">
-                                    Extractable status
+                                    Extraction
                                 </th>
                                 <th role="columnheader" class="" scope="col">
                                     Start date
@@ -256,9 +258,9 @@
                                 <td class="nhsuk-table__cell ">Valid</td>
                                 <td class="nhsuk-table__cell ">Extractable</td>
                                 <td class="nhsuk-table__cell ">15-11-2024</td>
-                                <td class="nhsuk-table__cell ">05-06-2027</td>
+                                <td class="nhsuk-table__cell ">01-02-3456</td>
                                 <td class="nhsuk-table__cell "><a class="nhsuk-link--no-visited-state"
-                                                                  href="#">Unlink</a></td>
+                                                                  href="pre-extract-unlink.html">Unlink</a></td>
                             </tr>
                             <tr role="row" class="nhsuk-table__row">
                                 <td class="nhsuk-table__cell "></td>
@@ -323,9 +325,18 @@
                 </div>
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-full">
-                        <a class="nhsuk-button" href="search-amp" onclick="setAMPJourney()">Link an AMP</a>
+                        <a class="nhsuk-button" href="search-amp" role="button" onclick="setAMPJourney()">Link an AMP</a>
+
+                      <a class="nhsuk-button nhsuk-button--warning" href="confirm-delete-tf.html"  role="button" data-module="nhsuk-button"
+                         style="float: right" >
+                        Delete trade family
+                      </a>
+
                     </div>
                 </div>
+
+
+
             </div>
         </div>
     </div>
