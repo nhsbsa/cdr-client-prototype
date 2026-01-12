@@ -1,10 +1,8 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
-const connect = require('gulp-connect');
 const webpack = require("webpack");
 const nodemon = require('nodemon');
 const rename = require("gulp-rename");
-const watch = require('gulp-watch');
 const webpackConfig = "./webpack.config.js";
 
 function reload(done) {
@@ -75,8 +73,8 @@ gulp.task('nhs-toolkit-install', gulp.series('nhs-toolkit-install-js', 'nhs-tool
 // BrowserSync task:
 // calls nodemon tasks and pass itself as callback
 gulp.task('browser-sync', () => {
-  watch(['./templates/**/*'], (done) => {gulp.series(['reload'])(done)});
-  watch(['./public/**/*'], (done) => {gulp.series(['reload'])(done)});
+  gulp.watch(['./templates/**/*'], (done) => {gulp.series(['reload'])(done)});
+  gulp.watch(['./public/**/*'], (done) => {gulp.series(['reload'])(done)});
   browserSync.init({proxy: 'localhost:8080/',});
 });
 
