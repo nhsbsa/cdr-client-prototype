@@ -1,7 +1,7 @@
 {% extends "trade-families/base.html" %}
 {% block content %}
 <div class="nhsuk-back-link">
-  <a class="nhsuk-back-link__link" href="view-tf.html">
+  <a class="nhsuk-back-link__link" href="confirm-delete-linked-amp.html">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
          aria-hidden="true" height="24" width="24">
       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
@@ -11,8 +11,11 @@
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <br/>
-    <h1 class="nhsuk-heading-xl">Deleted 1 Primary wound trade family</h1>
+    <span class="nhsuk-caption-l">
+                Trade family
+              <span class="nhsuk-u-visually-hidden"> - </span>
+                         </span>
+    <h1 class="nhsuk-heading-xl">Confirm final unlink Linked amp</h1>
   </div>
 </div>
 
@@ -21,22 +24,22 @@
     <div class="nhsuk-warning-callout">
       <h3 class="nhsuk-warning-callout__label"> <span role="text">
       <span class="nhsuk-u-visually-hidden">Important: </span>
-      You cannot <strong>delete</strong> this trade family
+      Are you sure you want to <strong>unlink</strong> this final linked AMP(s) from the trade family ?
     </span> </h3>
-      <H3>What this means </H3>
-      <p>This trade family is linked to both AMP's and trade family group. Ensure that they are unlinked before deleting    </p>
-      <p></p>
+      <h3>What this means</h3>
+      <p>There is no more linked AMP(s)  left in this trade family ?</p>
     </div>
   </div>
 </div>
 
 
+
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <a href="removed-view-tf.html" class="nhsuk-button" id="edit-tf">Continue</a>
-<!--    <a href="view-tf.html" class="nhsuk-button nhsuk-button&#45;&#45;secondary" data-module="nhsuk-button" type="submit">-->
-<!--      Cancel-->
-<!--    </a>-->
+    <a href="final-removed-view-tf.html" class="nhsuk-button" id="edit-tf">Continue</a>
+    <a href="view-tf.html" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+      Cancel
+    </a>
   </div>
 </div>
 

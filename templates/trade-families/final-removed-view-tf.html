@@ -372,23 +372,29 @@
                     <td class="nhsuk-table__cell ">01-01-2026</td>
 
                   </tr>
-                  <tr role="row" class="nhsuk-table__row">
+                  <tr role="row" class="nhsuk-table__row" style="background-color: #d8dde0;">
                     <td class="nhsuk-table__cell">
                       <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                         <div class="nhsuk-checkboxes__item">
                           <input
                               class="nhsuk-checkboxes__input"
-                              id="row-1"
-                              name="row-1"
+                              id="row-2"
+                              name="row-2"
                               type="checkbox"
+                              disabled
+                              aria-describedby="row-2-na"
                           >
-                          <label class="nhsuk-checkboxes__label" for="row-1">
-                            <span class="nhsuk-u-visually-hidden">Select row</span>
+                          <label class="nhsuk-checkboxes__label" for="row-2">
+      <span class="nhsuk-u-visually-hidden">
+        Select row 2. Not applicable.
+      </span>
                           </label>
+                          <span id="row-2-na" class="nhsuk-u-visually-hidden">Not applicable</span>
                         </div>
                       </div>
                     </td>
-                    <td class="nhsuk-table__cell ">N/A</td>
+                    <td class="nhsuk-table__cell "><strong
+                        class="nhsuk-tag nhsuk-tag--orange">H</strong></td>
                     <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
                       Primary
                       Wound
@@ -410,7 +416,7 @@
                       </svg>
                     </td>
                     <td class="nhsuk-table__cell ">21-02-2005</td>
-                    <td class="nhsuk-table__cell ">01-02-3456</td>
+                    <td class="nhsuk-table__cell ">20-01-2026</td>
 
                   </tr>
 
@@ -451,7 +457,7 @@
             </div>
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-full">
-                <a class="nhsuk-u-margin-left-3 nhsuk-button nhsuk-button--reverse nhsuk-u-float-right" href="confirm-delete-linked-amp.html" role="button" data-module="nhsuk-button" type="submit">
+                <a class="nhsuk-u-margin-left-3 nhsuk-button nhsuk-button--reverse nhsuk-u-float-right" href="confirm-deleted-last-linked-amp.html" role="button" data-module="nhsuk-button" type="submit">
                   select all AMP(s)
                 </a>
                 <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right"
@@ -480,34 +486,21 @@
                 </div>
               </div>
             </div>
-            <hr>
-            <div class="nhsuk-grid-row">
-              <div class="nhsuk-grid-column-full">
-                <h3>Delete trade family</h3>
-                <details class="nhsuk-details">
-                  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      Do you want to delete this trade family
-    </span>
-                  </summary>
-                  <div class="nhsuk-details__text">
-                    <p>To delete this trade family you need to unlink all associated linked AMPS .</p>
 
-                  </div>
-                </details>
-              </div>
-            </div>
+
             <hr>
+
+
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-full">
                 <a class="nhsuk-button" role="button" href="search-amp" onclick="setAMPJourney()">Link
                   an AMP</a>
 
-<!--                <a class="nhsuk-button nhsuk-button&#45;&#45;warning" href="confirm-delete-tf.html"-->
-<!--                   role="button" data-module="nhsuk-button"-->
-<!--                   style="float: right">-->
-<!--                  Delete trade family-->
-<!--                </a>-->
+                <a class="nhsuk-button nhsuk-button--warning" href="tf-deleted-confirmation.html"
+                   role="button" data-module="nhsuk-button"
+                   style="float: right">
+                  Delete trade family
+                </a>
               </div>
             </div>
           </div>

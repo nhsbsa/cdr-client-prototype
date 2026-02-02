@@ -61,7 +61,7 @@
             <h1 class="nhsuk-heading-xl">Primary Wound</h1>
           </div>
         </div>
-
+<!--first table-->
         <table class="nhsuk-table">
           <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade family group
             information
@@ -94,7 +94,9 @@
           </tr>
           </tbody>
         </table>
-        <h2 class="nhsuk-heading">Linked trade families</h2>
+
+
+        <h2 class="nhsuk-heading nhsuk-u-margin-top-5">Linked trade families</h2>
 
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-full">
@@ -118,13 +120,16 @@
                 </div>
               </div>
             </div>
-
+<!--table two-->
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-full">
         <table class="nhsuk-table nhsuk-u-margin-top-9">
           <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Linked trade families</caption>
           <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              Select
+            </th>
             <th role="columnheader" class="" scope="col">
               Name
             </th>
@@ -143,13 +148,26 @@
             <th role="columnheader" class="" scope="col">
               SNOMED Code
             </th>
-            <th role="columnheader" class="" scope="col">
-              Select
-            </th>
+
           </tr>
           </thead>
           <tbody class="nhsuk-table__body">
           <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                <div class="nhsuk-checkboxes__item">
+                  <input
+                      class="nhsuk-checkboxes__input"
+                      id="row-1"
+                      name="row-1"
+                      type="checkbox"
+                  >
+                  <label class="nhsuk-checkboxes__label" for="row-1">
+                    <span class="nhsuk-u-visually-hidden">Select row</span>
+                  </label>
+                </div>
+              </div>
+            </td>
             <td class="nhsuk-table__cell"><a href="view-tf" class="nhsuk-link--no-visited-state">1
               Primary
               Wound</a></td>
@@ -166,6 +184,9 @@
 <!--              <a class="nhsuk-link&#45;&#45;no-visited-state" href="confirm-unlink-tfg.html">Unlink<span-->
 <!--                  class="nhsuk-u-visually-hidden"> tf</span></a>-->
 <!--            </td>-->
+
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                 <div class="nhsuk-checkboxes__item">
@@ -181,8 +202,7 @@
                 </div>
               </div>
             </td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
+
             <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
               Wound
               (clotrimazole)</a></td>
@@ -196,10 +216,9 @@
             <td class="nhsuk-table__cell">01-01-2020</td>
             <td class="nhsuk-table__cell">05-09-2024</td>
             <td class="nhsuk-table__cell ">1234567890123456</td>
-<!--            <td class="nhsuk-table__cell">-->
-<!--              <a class="nhsuk-link&#45;&#45;no-visited-state" href="#">Unlink<span-->
-<!--                  class="nhsuk-u-visually-hidden"> tf</span></a>-->
-<!--            </td>-->
+          </tr>
+
+          <tr role="row" class="nhsuk-table__row">
             <td class="nhsuk-table__cell">
               <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                 <div class="nhsuk-checkboxes__item">
@@ -215,8 +234,7 @@
                 </div>
               </div>
             </td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
+
             <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
               Wound
               (fluconazole)</a></td>
@@ -229,27 +247,10 @@
             <td class="nhsuk-table__cell">01-01-2020</td>
             <td class="nhsuk-table__cell">05-09-2024</td>
             <td class="nhsuk-table__cell ">1234567890123456</td>
-<!--            <td class="nhsuk-table__cell">-->
-<!--              <a class="nhsuk-link&#45;&#45;no-visited-state" href="#">Unlink<span-->
-<!--                  class="nhsuk-u-visually-hidden"> tf</span></a>-->
-<!--            </td>-->
-            <td class="nhsuk-table__cell">
-              <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
-                <div class="nhsuk-checkboxes__item">
-                  <input
-                      class="nhsuk-checkboxes__input"
-                      id="row-1"
-                      name="row-1"
-                      type="checkbox"
-                  >
-                  <label class="nhsuk-checkboxes__label" for="row-1">
-                    <span class="nhsuk-u-visually-hidden">Select row</span>
-                  </label>
-                </div>
-              </div>
             </td>
-            </td>
+
           </tr>
+
           </tbody>
         </table>
               </div>

@@ -1,0 +1,90 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-quarter">
+        <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+          <h2 class="nhsuk-u-visually-hidden">Heirarchy Tree</h2>
+          <ol class="nhsuk-contents-list__list">
+            <li class="nhsuk-contents-list__item" aria-current="page">
+              <span class="nhsuk-contents-list__current">Stub Hierarchy Tree</span>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <p>Product 1</p>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <p>Product 2</p>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <p>Product 3</p>
+            </li>
+            <li class="nhsuk-contents-list__item">
+              <p>Product 4</p>
+            </li>
+          </ol>
+        </nav>
+
+
+      </div>
+
+      <div class="nhsuk-grid-column-three-quarters">
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="tf-table-view">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 aria-hidden="true" height="24" width="24">
+              <path
+                  d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+                             <span class="nhsuk-caption-l">
+                Trade families
+              <span class="nhsuk-u-visually-hidden"> - </span>
+                         </span>
+            <h1 class="nhsuk-heading-xl">Delete this trade family</h1>
+          </div>
+        </div>
+
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-warning-callout">
+              <h3 class="nhsuk-warning-callout__label"> <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      Are you sure you want to delete this trade family ?
+    </span> </h3>
+              <h3>What this means</h3>
+              <p>You will be removing this trade family </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+            <a href="tf-table-deleted-view.html" class="nhsuk-button" id="edit-tf">Continue</a>
+                <a href="view-tf.html" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+                  Cancel
+                </a>
+          </div>
+        </div>
+
+            {% endblock %}
+
+            {% block scripts %}
+
+            <script>
+              function setAMPJourney() {
+                localStorage.setItem("amp-journey", "add-amp");
+              }
+
+            </script>
+            <script src="/js/tf-future-historic-amps.js"></script>
+
+            {% endblock %}
