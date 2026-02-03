@@ -20,8 +20,13 @@ app.use(auth);
 /**
  *  App Configuration
  */
+const appViews = [
+  path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, 'node_modules/nhsuk-frontend/packages/macros')
+];
+
 var _templates = process.env.NODE_PATH ? process.env.NODE_PATH + '/templates' : 'templates';
-nunjucks.configure(_templates, {
+nunjucks.configure([_templates, ...appViews], {
   autoescape: true,
   cache: false,
   express: app
