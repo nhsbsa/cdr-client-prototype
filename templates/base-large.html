@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/nhsuk.min.css">
+  <link rel="stylesheet" href="/css/govuk-frontend-4.2.0.min.css">
+  <link rel="stylesheet" href="/css/govuk-frontend-ie8-4.2.0.min.css">
+  <link rel="stylesheet" href="/css/gov.min.scss">
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
@@ -31,8 +34,13 @@
   <script src="/js/copyDateToClipboard.js"></script>
   <script src="/js/copyToClipboard.js"></script>
   <script src="/js/pasteDateToDateInputs.js"></script>
+  <script src="/js/gov.min.js"></script>
+  <script src="/js/autocomplete.js"></script>
 </head>
-
+<body>
+<script>
+  document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+</script>
 
 <header class="nhsuk-header" id="nhs-global-header" role="banner">
   <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
@@ -105,6 +113,7 @@
   <script>
     window.GOVUKFrontend.initAll();
   </script>
+  {% block scripts %}{% endblock %}
 </footer>
 <!--<footer role="contentinfo">-->
 <!--<div class="nhsuk-footer" id="nhsuk-footer">-->
