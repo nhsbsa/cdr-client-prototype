@@ -1,4 +1,4 @@
-{% extends "trade-families/base.html" %}
+{% extends "base-large.html" %}
 {% block breadcrumb %}
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
@@ -12,87 +12,123 @@
 {% endblock %}
 
 {% block content %}
-<div class="nhsuk-grid-row">
-  <div id="content-pane" class="side-tree-view">
+<div id="content-pane" class="side-tree-view">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-quarter">
+      <nav class="app-side-nav" role="navigation">
+        <h2 class="app-side-nav__heading">Navigation</h2>
+        <ul class="nhsuk-list app-side-nav__list">
+          <li class="app-side-nav__item app-side-nav__item--current" aria-current="page">
+            <a href="tfg-table-view" class="app-side-nav__link">Trade family groups</a>
+          </li>
+          <li class="app-side-nav__item">
+            <a class="app-side-nav__link">Trade families</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
+    <div class="nhsuk-grid-column-three-quarters">
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="#">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true" height="24" width="24">
+            <path
+              d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+            </path>
+          </svg>
+          Go back</a>
+      </div>
 
-    <div class="nhsuk-grid-row">
-
-      <div class="nhsuk-grid-column-full">
-        <div class="nhsuk-back-link">
-          <a class="nhsuk-back-link__link" href="#">
-            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-              aria-hidden="true" height="24" width="24">
-              <path
-                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
-              </path>
-            </svg>
-            Go back</a>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <span class="nhsuk-caption-l">
+            Trade family group
+            <span class="nhsuk-u-visually-hidden"> - </span>
+          </span>
+          <h1 class="nhsuk-heading-xl">Primary Wound</h1>
         </div>
+      </div>
 
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-full">
-            <span class="nhsuk-caption-l">
-              Trade family group
-              <span class="nhsuk-u-visually-hidden"> - </span>
-            </span>
-            <h1 class="nhsuk-heading-xl">Primary Wound</h1>
-          </div>
-        </div>
+      <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+        <h2 class="nhsuk-tabs__title">
+          Contents
+        </h2>
 
-        <div class="nhsuk-tabs" data-module="nhsuk-tabs">
-          <h2 class="nhsuk-tabs__title">
-            Contents
-          </h2>
+        <ul class="nhsuk-tabs__list">
 
-          <ul class="nhsuk-tabs__list">
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#linked">
+              View linked trade families
+            </a>
+          </li>
 
-            <li class="nhsuk-tabs__list-item">
-              <a class="nhsuk-tabs__tab" href="#linked">
-                View linked trade families
-              </a>
-            </li>
+          <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+            <a class="nhsuk-tabs__tab" href="#summary">
+              View summary
+            </a>
+          </li>
 
-            <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
-              <a class="nhsuk-tabs__tab" href="#summary">
-                View summary
-              </a>
-            </li>
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#more">
+              View more
+            </a>
+          </li>
+        </ul>
 
-            <li class="nhsuk-tabs__list-item">
-              <a class="nhsuk-tabs__tab" href="#more">
-                View more
-              </a>
-            </li>
-          </ul>
+        <div class="nhsuk-tabs__panel" id="linked">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <h3 class="nhsuk-heading-l">View linked trade families</h3>
 
-          <div class="nhsuk-tabs__panel" id="linked">
-            <h3 class="nhsuk-heading-l">Linked trade families</h3>
+              <div id="link-tf-link" class="nhsuk-action-link" style="float: right;">
+                <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg-links-effective-date">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                    </path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Link trade family</span>
+                </a>
+              </div>
 
-            <div id="link-tf-link" class="nhsuk-action-link" style="float: right;">
-              <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg-links-effective-date">
-                <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
-                  </path>
-                </svg>
-                <span class="nhsuk-action-link__text">Link trade family</span>
-              </a>
+              <h3>Linked trade families</h3>
             </div>
 
-            <p>Page 1 of 2 (6 total results)</p>
+            <div class="nhsuk-grid-column-full">
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-one-half">
+                  <p class="nhsuk-u-font-size-16 nhsuk-u-margin-bottom-2">
+                    Page 1 of 1 (3 total results)
+                  </p>
+                </div>
 
+                <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+                  <div class="nhsuk-u-font-size-16" id="tablePageSizeControls">
+                    <span class="nhsuk-u-margin-right-2">Page size:</span>
+                    <span class="nhsuk-u-font-weight-bold nhsuk-u-margin-right-2" aria-current="true">20</span>
+                    <a class="nhsuk-u-margin-right-2" aria-label="Page size of 50 results" href="#">50</a>
+                    <a aria-label="Page size of 100 results" href="#">100</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form>
             <table class="nhsuk-table">
-              <caption class="nhsuk-table__caption">Linked trade families</caption>
               <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                   <th role="columnheader" class="" scope="col">
-                    Name
+                    Select
+                  </th>
+                  <th id="identifier-header" role="columnheader" class="nhsuk-u-visually-hidden" scope="col" style="display: none;">
+                    Idenitifer
                   </th>
                   <th role="columnheader" class="" scope="col">
-                    SNOMED Code
+                    Name
                   </th>
                   <th role="columnheader" class="" scope="col">
                     Invalid
@@ -101,239 +137,409 @@
                     Extractable
                   </th>
                   <th role="columnheader" class="" scope="col">
-                    Remove
+                    SNOMED Code
                   </th>
                 </tr>
               </thead>
               <tbody class="nhsuk-table__body">
-                <tr role="row" class="nhsuk-table__row">
-                  <td class="nhsuk-table__cell"><a href="view-tf" class="nhsuk-link--no-visited-state">1
-                      Primary
-                      Wound</a></td>
-                  <td class="nhsuk-table__cell ">1234567890123456</td>
-                  <td class="nhsuk-table__cell ">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
+                <tr role="row" class="nhsuk-table__row first-row">
+                  <td class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
+                          type="checkbox">
+                        <label class="nhsuk-checkboxes__label" for="row-1">
+                          <span class="nhsuk-u-visually-hidden">Select row</span>
+                        </label>
+                      </div>
+                    </div>
                   </td>
-                  <td class="nhsuk-table__cell ">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
+                  <td class="nhsuk-table__cell historic-first" style="display: none;;">
+                    <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
                   <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link--no-visited-state" href="#">Remove<span class="nhsuk-u-visually-hidden">
-                        tf</span></a>
+                    <a href="view-tf" class="nhsuk-link--no-visited-state">1
+                      Primary
+                      Wound</a>
                   </td>
+                  <td class="nhsuk-table__cell first-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell first-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell ">1234567890123456</td>
                 </tr>
-                <tr role="row" class="nhsuk-table__row">
+                <tr role="row" class="nhsuk-table__row first-row">
+                  <td class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
+                          type="checkbox">
+                        <label class="nhsuk-checkboxes__label" for="row-1">
+                          <span class="nhsuk-u-visually-hidden">Select row</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="nhsuk-table__cell historic-first" style="display: none;">
+                    <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+                  </td>
                   <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
                       Wound
                       (clotrimazole)</a></td>
+                  <td class="nhsuk-table__cell first-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell first-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
                   <td class="nhsuk-table__cell ">1234567890123456</td>
-                  <td class="nhsuk-table__cell ">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
-                  <td class="nhsuk-table__cell ">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
-                  <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link--no-visited-state" href="#">Remove<span class="nhsuk-u-visually-hidden">
-                        tf</span></a>
-                  </td>
                 </tr>
-                <tr role="row" class="nhsuk-table__row">
+                <tr role="row" class="nhsuk-table__row second-row">
+                  <td class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input checkbox-row-second" id="row-1" name="row-1"
+                          type="checkbox">
+                        <label class="nhsuk-checkboxes__label" for="row-1">
+                          <span class="nhsuk-u-visually-hidden">Select row</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="nhsuk-table__cell historic-second" style="display: none;">
+                    <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+                  </td>
                   <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
                       Wound
                       (fluconazole)</a></td>
+                  <td class="nhsuk-table__cell second-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell second-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
                   <td class="nhsuk-table__cell ">1234567890123456</td>
-                  <td class="nhsuk-table__cell ">
-                    <svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path
-                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
-                    </svg>
-                  </td>
-                  <td class="nhsuk-table__cell ">
-                    <svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path
-                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
-                    </svg>
-                  </td>
-                  <td class="nhsuk-table__cell">
-                    <a class="nhsuk-link--no-visited-state" href="#">Remove<span class="nhsuk-u-visually-hidden">
-                        tf</span></a>
-                  </td>
                 </tr>
               </tbody>
             </table>
-            <div class="nhsuk-u-margin-top-6 nhsuk-u-text-align-centre">
-              <div id="pagination">
-                <nav aria-label="Pagination Navigation">
-                  <ul class="pagination">
-                    <li class="pagination__item">
-                      <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true">1</p>
-                    </li>
-                    <li class="pagination__item">
-                      <a class="pagination__link nhsuk-link--no-visited-state" href="#">2</a>
-                    </li>
-                    <li class="pagination__item">|</li>
-                    <li class="pagination__item">
-                      <a href="#" class="nhsuk-link--no-visited-state">Next</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+          </form>
+          <div class="nhsuk-u-margin-top-6">
+            <div id="link-buttons-container" style="float: right;">
+              <a id="unlink-button" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-2"
+                href="confirm-delete-linked-tf">Unlink selected trade families</a>
+              <a class="nhsuk-button nhsuk-button--reverse">Select all trade families</a>
+            </div>
+
+            <div id="pagination">
+              <nav aria-label="Pagination Navigation">
+                <ul class="pagination">
+                  <li class="pagination__item">
+                    <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true">1</p>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link nhsuk-link--no-visited-state" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">|</li>
+                  <li class="pagination__item">
+                    <a href="#" class="nhsuk-link--no-visited-state">Next</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
 
-          <div class="nhsuk-tabs__panel" id="summary">
-            <h3 class="nhsuk-heading-l">View summary</h3>
+          <hr id="button-divider" />
 
-            <div class="nhsuk-action-link" style="float: right;">
-              <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg">
-                <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+          <div class="nhsuk-grid-row">
+            <div id="delete-warning-container" class="nhsuk-grid-column-full">
+              <h3>Delete trade family group</h3>
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Do you want to delete this trade family group
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <p>To delete this trade family you'll first need to unlink all associated linked trade families.</p>
+                </div>
+              </details>
+            </div>
+
+            <div id="delete-button-container" class="nhsuk-grid-column-full" style="display: none;">
+              <a class="nhsuk-button" style="background-color: red; float: right;" href="delete-tfg">Delete trade family
+                group</a>
+            </div>
+
+            <div id="continue-button-container" class="nhsuk-grid-column-full" style="display: none;">
+              <a class="nhsuk-button" href=/trade-families/tfg-table-view?deletedTfg">Continue</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-tabs__panel" id="summary">
+          <h3 class="nhsuk-heading-l">View summary</h3>
+
+          <div class="nhsuk-action-link" style="float: right;">
+            <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                </path>
+              </svg>
+              <span class="nhsuk-action-link__text">Update</span>
+            </a>
+          </div>
+
+          <h3 class="nhsuk-heading-m">Summary</h3>
+
+          <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Start date</dt>
+              <dd id="summary-start-date" class="nhsuk-summary-list__value">
+                01-02-2025
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">End date</dt>
+              <dd id="summary-end-date" class="nhsuk-summary-list__value">
+                01-02-3456
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Invalid</dt>
+              <dd class="nhsuk-summary-list__value summary-status">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
                   </path>
                 </svg>
-                <span class="nhsuk-action-link__text">Update</span>
-              </a>
+              </dd>
             </div>
 
-            <h3 class="nhsuk-heading-m">Summary</h3>
-
-            <dl class="nhsuk-summary-list" style="width: 45%;">
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key" style="width: 55%">Start date</dt>
-                <dd class="nhsuk-summary-list__value">
-                  <span>01-02-2025</span>
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key" style="width: 55%">End date</dt>
-                <dd class="nhsuk-summary-list__value">
-                  <span>01-02-3456</span>
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key" style="width: 55%">Invalid</dt>
-                <dd class="nhsuk-summary-list__value">
-                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                    </path>
-                  </svg>
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key" style="width: 55%">Extractable</dt>
-                <dd class="nhsuk-summary-list__value">
-                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                    </path>
-                  </svg>
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key" style="width: 55%">SNOMED</dt>
-                <dd class="nhsuk-summary-list__value">
-                  <span>6614511000001108</span>
-                </dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="nhsuk-tabs__panel" id="more">
-            <h3 class="nhsuk-heading-l">View more</h3>
-
-            <div class="nhsuk-action-link" style="float: right;">
-              <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg-name">
-                <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Extractable</dt>
+              <dd class="nhsuk-summary-list__value summary-status">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
                   </path>
                 </svg>
-                <span class="nhsuk-action-link__text">Update</span>
-              </a>
+              </dd>
             </div>
 
-            <h3 class="nhsuk-heading-m">Name details</h3>
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">SNOMED</dt>
+              <dd class="nhsuk-summary-list__value">
+                <span>6614511000001108</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
 
-            <table class="nhsuk-table">
+        <div class="nhsuk-tabs__panel" id="more">
+          <h3 class="nhsuk-heading-l">View more</h3>
 
-              <thead role="rowgroup" class="nhsuk-table__head">
-                <tr role="row">
-                  <th class="nhsuk-table__header-identifier columnheader-sticky" id="attribute-table--tag-header"
-                    role="columnheader" scope="col" style="width: 10px;">
-                    <span class="nhsuk-u-visually-hidden">Indicator</span>
-                  </th>
-                  <th role="columnheader" class="" scope="col">
-                    Name
-                  </th>
-                  <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
-                    Start date
-                  </th>
-                  <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
-                    End date
-                  </th>
-                </tr>
-              </thead>
-              <tbody class="nhsuk-table__body">
-                <tr role="row" class="nhsuk-table__row" style="background-color: #D1D5D7;">
-                  <td class="nhsuk-table__cell-historic" role="cell">
-                    <span>
-                      <span class="nhsuk-u-visually-hidden">Future dated</span>
-                      <strong class="nhsuk-tag nhsuk-tag--purple">
-                        <abbr title="Future dated">F</abbr>
-                      </strong>
-                    </span>
-                  </td>
-                  <td class="nhsuk-table__cell">Secondary Wound</td>
-                  <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-2027</td>
-                  <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-3456</td>
-                </tr>
-                <tr role="row" class="nhsuk-table__row">
-                  <td class="nhsuk-table__cell-historic nhsuk-u-visually-hidden" role="cell">
-                    <span>
-                      <span class="nhsuk-u-visually-hidden">Historic</span>
-                      <strong class="nhsuk-tag nhsuk-tag--orange">
-                        <abbr title="Historic">H</abbr>
-                      </strong>
-                    </span>
-                  </td>
-                  <td class="nhsuk-table__cell">Primary Wound</td>
-                  <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-2025</td>
-                  <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-2027</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="nhsuk-action-link" style="float: right;">
+            <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg-name">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                </path>
+              </svg>
+              <span class="nhsuk-action-link__text">Update</span>
+            </a>
           </div>
+
+          <h3 class="nhsuk-heading-m">Name details</h3>
+
+          <table class="nhsuk-table">
+
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th class="nhsuk-table__header-identifier columnheader-sticky" id="attribute-table--tag-header"
+                  role="columnheader" scope="col" style="width: 10px;">
+                  <span class="nhsuk-u-visually-hidden">Indicator</span>
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Name
+                </th>
+                <th role="columnheader" class="nhsuk-table__header" scope="col">
+                  Start date
+                </th>
+                <th role="columnheader" class="nhsuk-table__header" scope="col">
+                  End date
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr id="updated-name-row" role="row" class="nhsuk-table__row"
+                style="display: none; background-color: #C1DCCB;">
+                <td class="nhsuk-table__cell-historic" role="cell">
+                  <span>
+                    <span class="nhsuk-u-visually-hidden">Future dated</span>
+                    <strong class="nhsuk-tag nhsuk-tag--purple">
+                      <abbr title="Future dated">F</abbr>
+                    </strong>
+                  </span>
+                </td>
+                <td class="nhsuk-table__cell">Secondary Wound</td>
+                <td class="nhsuk-table__cell">01-02-2027</td>
+                <td class="nhsuk-table__cell">01-02-3456</td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell-historic nhsuk-u-visually-hidden" role="cell">
+                  <span>
+                    <span class="nhsuk-u-visually-hidden">Historic</span>
+                    <strong class="nhsuk-tag nhsuk-tag--orange">
+                      <abbr title="Historic">H</abbr>
+                    </strong>
+                  </span>
+                </td>
+                <td class="nhsuk-table__cell">Primary Wound</td>
+                <td class="nhsuk-table__cell">01-02-2025</td>
+                <td class="nhsuk-table__cell">01-02-2027</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  const urlParams = new URLSearchParams(globalThis.window.location.search);
+  if (urlParams.has('showNameUpdate')) {
+    document.getElementById('updated-name-row').style = 'background-color: #C1DCCB;';
+  }
+
+  if (urlParams.has('unlinkedTfs')) {
+    hideFirstUnlinkedTfs();
+  }
+
+  if (urlParams.has('unlinkedAll')) {
+    hideAllUnlinkedTfs();
+  }
+
+  if (urlParams.has('deleted')) {
+    setDeleted();
+  }
+
+  function hideFirstUnlinkedTfs() {
+    document.getElementById('identifier-header').style = '';
+
+    document.querySelectorAll('.historic-first').forEach(element => {
+      element.style = '';
+    });
+
+    document.querySelectorAll('.historic-second').forEach(element => {
+      element.style = '';
+      element.classList.add('nhsuk-u-visually-hidden');
+    });
+
+    document.querySelectorAll('.checkbox-row-first').forEach(element => {
+      element.setAttribute('disabled', 'true');
+    });
+
+    document.querySelectorAll('.first-row').forEach(element => {
+      element.style = 'background-color: #d8dde0;';
+    });
+
+    document.querySelectorAll('.first-row-status').forEach(element => {
+      element.innerHTML = `<svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path
+                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
+                    </svg>`;
+    });
+
+    document.getElementById('unlink-button').setAttribute('href', 'confirm-delete-linked-tf?secondUnlink');
+  }
+
+  function hideAllUnlinkedTfs() {
+    hideFirstUnlinkedTfs();
+
+    document.querySelectorAll('.historic-second').forEach(element => {
+      element.classList.remove('nhsuk-u-visually-hidden');
+      element.style = '';
+    });
+
+    document.querySelectorAll('.checkbox-row-second').forEach(element => {
+      element.setAttribute('disabled', 'true');
+    });
+
+    document.querySelectorAll('.second-row').forEach(element => {
+      element.style = 'background-color: #d8dde0;';
+    });
+
+    document.querySelectorAll('.second-row-status').forEach(element => {
+      element.innerHTML = `<svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path
+                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
+                    </svg>`;
+    });
+
+    document.getElementById('delete-warning-container').style = 'display: none;';
+    document.getElementById('delete-button-container').style = '';
+  }
+
+  function setDeleted() {
+    hideAllUnlinkedTfs();
+
+    document.querySelectorAll('.nhsuk-action-link').forEach(element => {
+      element.remove();
+    });
+
+    const endDate = new Date();
+
+    document.getElementById('delete-button-container').style = 'display: none;';
+    document.getElementById('continue-button-container').style = '';
+    document.getElementById('button-divider').remove();
+    document.getElementById('link-buttons-container').classList.add('nhsuk-u-visually-hidden');
+
+    document.getElementById('summary-start-date').innerText = '1/1/2025';
+    document.getElementById('summary-end-date').innerText = `${endDate.getDay()}/${endDate.getMonth() + 1}/${endDate.getFullYear()}`;
+
+    document.querySelectorAll('.summary-status').forEach(element => {
+      element.innerHTML = `<svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path
+                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
+                    </svg>`;
+    });
+  }
+</script>
 {% endblock %}
