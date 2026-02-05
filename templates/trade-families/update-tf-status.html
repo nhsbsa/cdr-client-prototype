@@ -45,7 +45,7 @@
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <a href="edit-tf" class="nhsuk-button" id="edit-tf">Continue</a>
+    <a id="continue-button" href="edit-tf" class="nhsuk-button" id="edit-tf">Continue</a>
   </div>
 </div>
 
@@ -60,6 +60,14 @@
     const option2 = urlParams.get('option2') || '';
     document.getElementById('option1').innerText = option1;
     document.getElementById('option2').innerText = option2;
+
+    if (statusName === 'extractable') {
+      document.getElementById('continue-button').setAttribute('href', 'edit-tf?updatedExtractable');
+    }
+
+    if (statusName === 'validation') {
+      document.getElementById('continue-button').setAttribute('href', 'edit-tf?updatedExtractable&updatedValid');
+    }
 </script>
 
 {% endblock %}
