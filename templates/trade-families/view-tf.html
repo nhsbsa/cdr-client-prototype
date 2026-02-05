@@ -547,63 +547,68 @@
 
           <!--view summary-->
           <div class="nhsuk-tabs__panel" id="tab-2">
-            <div id="link-tf-link" class="nhsuk-action-link" style="float: right;">
-              <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="edit-tf.html">
-                <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+          <h3 class="nhsuk-heading-l">View summary</h3>
+
+          <div class="nhsuk-action-link" style="float: right;">
+            <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                </path>
+              </svg>
+              <span class="nhsuk-action-link__text">Update</span>
+            </a>
+          </div>
+
+          <h3 class="nhsuk-heading-m">Summary</h3>
+
+          <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Start date</dt>
+              <dd id="summary-start-date" class="nhsuk-summary-list__value">
+                01-02-2025
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">End date</dt>
+              <dd id="summary-end-date" class="nhsuk-summary-list__value">
+                01-02-3456
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Invalid</dt>
+              <dd class="nhsuk-summary-list__value summary-status">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
                   </path>
                 </svg>
-                <span class="nhsuk-action-link__text">Update</span>
-              </a>
+              </dd>
             </div>
-            <dl class="nhsuk-summary-list">
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">Start date</dt>
-                <dd id="summary-start-date" class="nhsuk-summary-list__value">
-                  01-02-2025
-                </dd>
-              </div>
 
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">End date</dt>
-                <dd id="summary-end-date" class="nhsuk-summary-list__value">
-                  01-02-3456
-                </dd>
-              </div>
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">Extractable</dt>
+              <dd class="nhsuk-summary-list__value summary-status">
+                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                  </path>
+                </svg>
+              </dd>
+            </div>
 
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">Invalid</dt>
-                <dd class="nhsuk-summary-list__value summary-status">
-                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                    </path>
-                  </svg>
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">Extractable</dt>
-                <dd class="nhsuk-summary-list__value summary-status">
-                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                    </path>
-                  </svg>
-                </dd>
-              </div>
-
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">SNOMED</dt>
-                <dd class="nhsuk-summary-list__value">
-                  <span>6614511000001108</span>
-                </dd>
-              </div>
-            </dl>
-          </div>
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">SNOMED</dt>
+              <dd class="nhsuk-summary-list__value">
+                <span>6614511000001108</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
 
           <!--view TFG-->
           <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="tab-3">
@@ -622,59 +627,73 @@
 
           <!--view name-->
           <div class="nhsuk-tabs__panel" id="tab-4">
-            <div id="tf-edit" class="nhsuk-action-link" style="float: right;">
-              <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="edit-name-date-tf.html">
-                <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M0 0h24v24H0z" fill="none"></path>
-                  <path
-                    d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
-                  </path>
-                </svg>
-                <span class="nhsuk-action-link__text">Update</span>
-              </a>
-            </div>
+          <h3 class="nhsuk-heading-l">View more</h3>
 
-
-            <table class="nhsuk-table">
-              <h3>View More</h3>
-              <caption class="nhsuk-table__caption">Trade families</caption>
-              <thead class="nhsuk-table__head">
-
-                <tr>
-                  <th id="identifier-title" role="columnheader" class="" scope="col" style="display: none;">
-                    Identifier
-                  </th>
-                  <th scope="col" class="nhsuk-table__header">Name</th>
-                  <th scope="col" class="nhsuk-table__header">Start date</th>
-                  <th scope="col" class="nhsuk-table__header">End date</th>
-                </tr>
-              </thead>
-
-              <tbody class="nhsuk-table__body">
-                <tr class="nhsuk-table__row" id="old-name">
-                  <td id="historic-tag" class="nhsuk-table__cell nhsuk-u-visually-hidden"><strong
-                      class="nhsuk-tag nhsuk-tag--orange">H</strong></td>
-                  <td class="nhsuk-table__cell">1 Primary wound</td>
-                  <td class="nhsuk-table__cell">01-01-2020</td>
-                  <td class="nhsuk-table__cell">05-09-2024</td>
-                  <!--                <td class="nhsuk-table__cell">6614511000001108</td>-->
-                  </td>
-                </tr>
-
-                <tr class="nhsuk-table__row" id="new-name" style="display: none">
-                  <td class="nhsuk-table__cell">N/A</td>
-                  <td class="nhsuk-table__cell">Secondary wound</td>
-                  <td class="nhsuk-table__cell">01-01-2020</td>
-                  <td class="nhsuk-table__cell">05-09-2024</td>
-                  <!--                <td class="nhsuk-table__cell">6614511000001108</td>-->
-
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
+          <div class="nhsuk-action-link" style="float: right;">
+            <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="edit-name-date-tf">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                </path>
+              </svg>
+              <span class="nhsuk-action-link__text">Update</span>
+            </a>
           </div>
+
+          <h3 class="nhsuk-heading-m">Name details</h3>
+
+          <table class="nhsuk-table">
+
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th class="nhsuk-table__header-identifier columnheader-sticky" id="attribute-table--tag-header"
+                  role="columnheader" scope="col" style="width: 10px;">
+                  <span class="nhsuk-u-visually-hidden">Indicator</span>
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Name
+                </th>
+                <th role="columnheader" class="nhsuk-table__header" scope="col">
+                  Start date
+                </th>
+                <th role="columnheader" class="nhsuk-table__header" scope="col">
+                  End date
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr id="updated-name-row" role="row" class="nhsuk-table__row"
+                style="display: none; background-color: #C1DCCB;">
+                <td class="nhsuk-table__cell-historic" role="cell">
+                  <span>
+                    <span class="nhsuk-u-visually-hidden">Future dated</span>
+                    <strong class="nhsuk-tag nhsuk-tag--purple">
+                      <abbr title="Future dated">F</abbr>
+                    </strong>
+                  </span>
+                </td>
+                <td class="nhsuk-table__cell">Secondary Wound</td>
+                <td class="nhsuk-table__cell">01-02-2027</td>
+                <td class="nhsuk-table__cell">01-02-3456</td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell-historic nhsuk-u-visually-hidden" role="cell">
+                  <span>
+                    <span class="nhsuk-u-visually-hidden">Historic</span>
+                    <strong class="nhsuk-tag nhsuk-tag--orange">
+                      <abbr title="Historic">H</abbr>
+                    </strong>
+                  </span>
+                </td>
+                <td class="nhsuk-table__cell">Primary Wound</td>
+                <td class="nhsuk-table__cell">01-02-2025</td>
+                <td class="nhsuk-table__cell">01-02-2027</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         </div>
 
       </div>
