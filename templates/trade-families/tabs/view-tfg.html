@@ -297,7 +297,7 @@
             </div>
 
             <div id="continue-button-container" class="nhsuk-grid-column-full" style="display: none;">
-              <a class="nhsuk-button" href=/trade-families/tfg-table-view?deletedTfg">Continue</a>
+              <a class="nhsuk-button" href="/trade-families/tfg-table-view?deletedTfg">Continue</a>
             </div>
           </div>
         </div>
@@ -446,18 +446,18 @@
   }
 
   if (urlParams.has('unlinkedTfs')) {
-    hideFirstUnlinkedTfs();
+    applyFirstUnlinkedJourney();
   }
 
   if (urlParams.has('unlinkedAll')) {
-    hideAllUnlinkedTfs();
+    applyAllUnlinkedJourney();
   }
 
   if (urlParams.has('deleted')) {
-    setDeleted();
+    applyDeletedJourney();
   }
 
-  function hideFirstUnlinkedTfs() {
+  function applyFirstUnlinkedJourney() {
     document.getElementById('identifier-header').style = '';
 
     document.querySelectorAll('.historic-first').forEach(element => {
@@ -488,8 +488,8 @@
     document.getElementById('unlink-button').setAttribute('href', 'confirm-delete-linked-tf?secondUnlink');
   }
 
-  function hideAllUnlinkedTfs() {
-    hideFirstUnlinkedTfs();
+  function applyAllUnlinkedJourney() {
+    applyFirstUnlinkedJourney();
 
     document.querySelectorAll('.historic-second').forEach(element => {
       element.classList.remove('nhsuk-u-visually-hidden');
@@ -516,8 +516,8 @@
     document.getElementById('delete-button-container').style = '';
   }
 
-  function setDeleted() {
-    hideAllUnlinkedTfs();
+  function applyDeletedJourney() {
+    applyAllUnlinkedJourney();
 
     document.querySelectorAll('.nhsuk-action-link').forEach(element => {
       element.remove();

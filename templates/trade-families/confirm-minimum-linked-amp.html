@@ -1,10 +1,12 @@
-{% extends "trade-families/base.html" %}
+{% extends "base-large.html" %}
 {% block content %}
 <div class="nhsuk-back-link">
   <a class="nhsuk-back-link__link" href="confirm-delete-linked-amp.html">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-         aria-hidden="true" height="24" width="24">
-      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      aria-hidden="true" height="24" width="24">
+      <path
+        d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+      </path>
     </svg>
     Go back</a>
 </div>
@@ -12,10 +14,10 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <span class="nhsuk-caption-l">
-                Trade family
-              <span class="nhsuk-u-visually-hidden"> - </span>
-                         </span>
-    <h1 class="nhsuk-heading-xl">Unlink 1 Primary wound dressing spray Linked amp</h1>
+      Trade family
+      <span class="nhsuk-u-visually-hidden"> - </span>
+    </span>
+    <h1 class="nhsuk-heading-xl">Unlink AMPs</h1>
   </div>
 </div>
 
@@ -23,48 +25,30 @@
   <div class="nhsuk-grid-column-full">
     <div class="nhsuk-warning-callout">
       <h3 class="nhsuk-warning-callout__label"> <span role="text">
-      <span class="nhsuk-u-visually-hidden">Important: </span>
-      Are you sure you want to <strong>Unlink</strong> linked AMP(s) from the trade family ?
-    </span> </h3>
+          <span class="nhsuk-u-visually-hidden">Important: </span>
+          <span id="warning-title">Are you sure you want to unlink linked AMPs from the trade family?</span>
+        </span> </h3>
       <h3>What this means</h3>
-      <p>There is one linked AMP left in this trade family ?</p>
+      <p id="warning-text">There is one linked AMP left in this trade family.</p>
     </div>
   </div>
 </div>
 
-
-
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <a href="removed-view-tf.html" class="nhsuk-button" id="edit-tf">Continue</a>
+    <a href="view-tf?unlinkedAmps" class="nhsuk-button" id="unlink-button">Continue</a>
     <a href="view-tf.html" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
       Cancel
     </a>
   </div>
 </div>
 
-
-
-<!--<div class="nhsuk-grid-row">-->
-<!--  <div class="nhsuk-grid-column-full">-->
-<!--    <a href="confirm-new-tf" class="nhsuk-button" id="create-link" onclick="setAMPJourney()">Create</a>-->
-<!--  </div>-->
-<!--</div>-->
-
-{% endblock %}
-
-{% block scripts %}
-
 <script>
-  var journey = localStorage.getItem("tf-journey");
-  if (journey === "tf") {
-    document.getElementById("create-link").href = "search-amp";
-  }
-</script>
-
-<script>
-  function setAMPJourney() {
-    localStorage.setItem("amp-journey", "new-amp");
+  const urlParams = new URLSearchParams(globalThis.window.location.search);
+  if (urlParams.has('secondUnlink')) {
+    document.getElementById('unlink-button').setAttribute('href', 'view-tf?unlinkedAll');
+    document.getElementById('warning-title').innerText = "Are you sure you want to unlink the final linked AMP from the trade family?";
+    document.getElementById('warning-text').innerText = "There will be no more linked AMPs.";
   }
 </script>
 

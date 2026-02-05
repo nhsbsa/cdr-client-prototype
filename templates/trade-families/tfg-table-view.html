@@ -39,8 +39,8 @@
                     <caption class="nhsuk-table__caption">Trade family groups details</caption>
                     <thead role="rowgroup" class="nhsuk-table__head">
                         <tr role="row">
-                            <th role="columnheader" scope="col">
-                                Identifier
+                            <th id="identifier-header" role="columnheader" scope="col" style="display: none;">
+                                <span class="nhsuk-u-visually-hidden">Identifier</span>
                             </th>
                             <th role="columnheader" scope="col">
                                 Name
@@ -61,11 +61,12 @@
                     </thead>
                     <tbody class="nhsuk-table__body">
                         <tr id="deleted-row" role="row" class="nhsuk-table__row">
-                            <td id="deleted-identifier" class="nhsuk-table__cell">
-                                N/A
+                            <td id="deleted-identifier" class="nhsuk-table__cell" style="display: none;">
+                                <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                             </td>
                             <td class="nhsuk-table__cell">
-                                <a id="deleted-link" href="view-tfg" class="nhsuk-link--no-visited-state">Primary Wound</a>
+                                <a id="deleted-link" href="view-tfg" class="nhsuk-link--no-visited-state">Primary
+                                    Wound</a>
                             </td>
                             <td class="nhsuk-table__cell">22002311000001104</td>
                             <td id="deleted-start-date" class="nhsuk-table__cell">01/01/2020</td>
@@ -73,9 +74,7 @@
                             <td id="deleted-number-tfs" class="nhsuk-table__cell">3</td>
                         </tr>
                         <tr role="row" class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                                N/A
-                            </td>
+                            <td class="nhsuk-table__cell empty-identifier" style="display: none;"></td>
                             <td class="nhsuk-table__cell">
                                 <a href="#" class="nhsuk-link--no-visited-state">TFG1</a>
                             </td>
@@ -85,9 +84,7 @@
                             <td class="nhsuk-table__cell">21</td>
                         </tr>
                         <tr role="row" class="nhsuk-table__row">
-                            <td class="nhsuk-table__cell">
-                                N/A
-                            </td>
+                            <td class="nhsuk-table__cell empty-identifier" style="display: none;"></td>
                             <td class="nhsuk-table__cell">
                                 <a href="#" class="nhsuk-link--no-visited-state">TFG2</a>
                             </td>
@@ -110,12 +107,16 @@
     const urlParams = new URLSearchParams(globalThis.window.location.search);
     if (urlParams.has('deletedTfg')) {
         document.getElementById('deleted-row').style = 'background-color: #d8dde0;';
-        document.getElementById('deleted-identifier').innerHTML = `<strong class="nhsuk-tag nhsuk-tag--orange">H</strong>`;
+        document.getElementById('deleted-identifier').style = '';
         document.getElementById('deleted-number-tfs').innerText = '0';
+        document.getElementById('identifier-header').style = '';
+        document.querySelectorAll('.empty-identifier').forEach(element => {
+            element.style = '';
+        });
 
         const endDate = new Date();
         document.getElementById('deleted-start-date').innerText = '1/1/2020'
-        document.getElementById('deleted-end-date').innerText = `${endDate.getDay()}/${endDate.getMonth()+1}/${endDate.getFullYear()}`;
+        document.getElementById('deleted-end-date').innerText = `${endDate.getDay()}/${endDate.getMonth() + 1}/${endDate.getFullYear()}`;
 
         document.getElementById('deleted-link').setAttribute('href', '/trade-families/tabs/view-tfg?deleted')
     }

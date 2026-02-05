@@ -23,7 +23,7 @@
         <div class="nhsuk-warning-callout">
             <h3 class="nhsuk-warning-callout__label"> <span role="text">
                     <span class="nhsuk-u-visually-hidden">Important: </span>
-                    <span id="warning-title">Are you sure you want to unlink linked trade families from the trade family?</span>
+                    <span id="warning-title">Are you sure you want to unlink linked trade families from the trade family group?</span>
                 </span> </h3>
             <span class="nhsuk-heading-m">What this means</span>
             <p id="warning-text">There will be one linked trade family left.</p>
@@ -43,14 +43,6 @@
 <script>
     const urlParams = new URLSearchParams(globalThis.window.location.search);
     if (urlParams.has('secondUnlink')) {
-        document.querySelectorAll('.first-update-row').forEach(element => {
-            element.remove();
-        });
-
-        document.querySelectorAll('.second-update-row').forEach(element => {
-            element.style = '';
-        });
-
         document.getElementById('unlink-button').setAttribute('href', 'view-tfg?unlinkedAll');
         document.getElementById('warning-title').innerText = "Are you sure you want to unlink the final linked trade family from the trade family?";
         document.getElementById('warning-text').innerText = "There will be no more linked trade families.";

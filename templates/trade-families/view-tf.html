@@ -84,7 +84,7 @@
                         d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
                       </path>
                     </svg>
-                    <span class="nhsuk-action-link__text">link an Amp</span>
+                    <span class="nhsuk-action-link__text">Link an AMP</span>
                   </a>
                 </div>
 
@@ -257,8 +257,9 @@
                             <th role="columnheader" class="" scope="col">
                               Select
                             </th>
-                            <th role="columnheader" class="" scope="col">
-                              <span class="nhsuk-u-visually-hidden">Identifier</span>
+                            <th id="identifier-header" role="columnheader" class="nhsuk-u-visually-hidden" scope="col"
+                              style="display: none;">
+                              Idenitifer
                             </th>
                             <th role="columnheader" class="" scope="col">
                               Name
@@ -278,29 +279,32 @@
                           </tr>
                         </thead>
                         <tbody class="nhsuk-table__body">
-                          <tr role="row" class="nhsuk-table__row">
+                          <tr role="row" class="nhsuk-table__row first-row">
                             <td class="nhsuk-table__cell">
                               <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                                 <div class="nhsuk-checkboxes__item">
-                                  <input class="nhsuk-checkboxes__input" id="row-1" name="row-1" type="checkbox">
+                                  <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
+                                    type="checkbox">
                                   <label class="nhsuk-checkboxes__label" for="row-1">
                                     <span class="nhsuk-u-visually-hidden">Select row</span>
                                   </label>
                                 </div>
                               </div>
                             </td>
-                            <td class="nhsuk-table__cell "></td>
+                            <td class="nhsuk-table__cell historic-first" style="display: none;">
+                              <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+                            </td>
                             <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="add-amp">1
                                 Primary Wound
                                 Dressing spray</a></td>
-                            <td class="nhsuk-table__cell ">
+                            <td class="nhsuk-table__cell first-row-status">
                               <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
                                 <path fill="#007f3b"
                                   d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
                               </svg>
                             </td>
-                            <td class="nhsuk-table__cell ">
+                            <td class="nhsuk-table__cell first-row-status">
                               <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
                                 <path fill="#007f3b"
@@ -315,30 +319,33 @@
 
 
                           </tr>
-                          <tr role="row" class="nhsuk-table__row">
+                          <tr role="row" class="nhsuk-table__row first-row">
                             <td class="nhsuk-table__cell">
                               <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                                 <div class="nhsuk-checkboxes__item">
-                                  <input class="nhsuk-checkboxes__input" id="row-1" name="row-1" type="checkbox">
+                                  <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
+                                    type="checkbox">
                                   <label class="nhsuk-checkboxes__label" for="row-1">
                                     <span class="nhsuk-u-visually-hidden">Select row</span>
                                   </label>
                                 </div>
                               </div>
                             </td>
-                            <td class="nhsuk-table__cell "></td>
+                            <td class="nhsuk-table__cell historic-first" style="display: none;">
+                              <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+                            </td>
                             <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
                                 Primary
                                 Wound small</a>
                             </td>
-                            <td class="nhsuk-table__cell ">
+                            <td class="nhsuk-table__cell first-row-status">
                               <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
                                 <path fill="#007f3b"
                                   d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
                               </svg>
                             </td>
-                            <td class="nhsuk-table__cell ">
+                            <td class="nhsuk-table__cell first-row-status">
                               <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
                                 <path fill="#007f3b"
@@ -351,30 +358,33 @@
                             <!--                                                  href="pre-extract-unlink.html">Unlink</a></td>-->
 
                           </tr>
-                          <tr role="row" class="nhsuk-table__row">
+                          <tr role="row" class="nhsuk-table__row second-row">
                             <td class="nhsuk-table__cell">
                               <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                                 <div class="nhsuk-checkboxes__item">
-                                  <input class="nhsuk-checkboxes__input" id="row-1" name="row-1" type="checkbox">
+                                  <input class="nhsuk-checkboxes__input checkbox-row-second" id="row-1" name="row-1"
+                                    type="checkbox">
                                   <label class="nhsuk-checkboxes__label" for="row-1">
                                     <span class="nhsuk-u-visually-hidden">Select row</span>
                                   </label>
                                 </div>
                               </div>
                             </td>
-                            <td class="nhsuk-table__cell "></td>
+                            <td class="nhsuk-table__cell historic-second" style="display: none;">
+                              <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+                            </td>
                             <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
                                 Primary
                                 Wound
                                 medium</a></td>
-                            <td class="nhsuk-table__cell ">
+                            <td class="nhsuk-table__cell second-row-status">
                               <svg class="nhsuk-icon nhsuk-icon--cross" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
                                 <path fill="#d5281b"
                                   d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
                               </svg>
                             </td>
-                            <td class="nhsuk-table__cell ">
+                            <td class="nhsuk-table__cell second-row-status">
                               <svg class="nhsuk-icon nhsuk-icon--cross" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
                                 <path fill="#d5281b"
@@ -468,14 +478,17 @@
                 <div class="nhsuk-grid-row">
                   <div class="nhsuk-grid-column-full">
 
-                    <a class="nhsuk-u-margin-left-3 nhsuk-button nhsuk-button--reverse nhsuk-u-float-right"
-                      href="confirm-delete-linked-amp.html" role="button" data-module="nhsuk-button" type="submit">
-                      select all AMP(s)
-                    </a>
-                    <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right"
-                      href="confirm-delete-linked-amp.html" role="button" data-module="nhsuk-button" type="submit">
-                      Unlink selected AMP(s)
-                    </a>
+                    <div id="link-buttons-container" style="float: right;">
+                      <a class="nhsuk-button nhsuk-button--secondary" id="unlink-button"
+                        href="confirm-delete-linked-amp.html" role="button" data-module="nhsuk-button" type="submit">
+                        Unlink selected AMP(s)
+                      </a>
+
+                      <a class="nhsuk-u-margin-left-3 nhsuk-button nhsuk-button--reverse"
+                        href="confirm-delete-linked-amp.html" role="button" data-module="nhsuk-button" type="submit">
+                        Select all AMP(s)
+                      </a>
+                    </div>
 
                     <div class="nhsuk-u-margin-top-2">
                       <div id="pagination">
@@ -496,10 +509,10 @@
                       </div>
                     </div>
 
-                    <hr>
+                    <hr id="button-divider" />
 
                     <div class="nhsuk-grid-row">
-                      <div class="nhsuk-grid-column-full">
+                      <div class="nhsuk-grid-column-full" id="delete-warning-container">
                         <h3>Delete trade family</h3>
                         <details class="nhsuk-details">
                           <summary class="nhsuk-details__summary">
@@ -515,25 +528,22 @@
                           </div>
                         </details>
                       </div>
+
+                      <div id="continue-button-container" class="nhsuk-grid-column-full" style="display: none;">
+                        <a class="nhsuk-button" href="/trade-families/tfg-table-view?deletedTfg">Continue</a>
+                      </div>
+
+                      <div id="delete-button-container" class="nhsuk-grid-column-full" style="display: none;">
+                        <a class="nhsuk-button" style="background-color: red; float: right;"
+                          href="confirm-delete-tf">Delete
+                          trade family</a>
+                      </div>
                     </div>
-
-                    <hr>
-
-
-                    <!--            <a class="nhsuk-button nhsuk-button--warning" href="confirm-delete-tf.html"-->
-                    <!--               role="button" data-module="nhsuk-button"-->
-                    <!--               style="float: right">-->
-                    <!--              Delete trade family-->
-                    <!--            </a>-->
-
                   </div>
                 </div>
-
-
               </div>
             </div>
           </div>
-
 
           <!--view summary-->
           <div class="nhsuk-tabs__panel" id="tab-2">
@@ -667,33 +677,127 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+</div>
 
-        <!--        <div class="nhsuk-grid-row ">-->
-        <!--          <div class="nhsuk-grid-column-full">-->
-        <!--            <a class="nhsuk-button  " href="search-amp" role="button"-->
-        <!--               onclick="setAMPJourney()">Link-->
-        <!--              an AMP</a>-->
+{% endblock %}
 
-        <!--          </div>-->
-        <!--        </div>-->
-        <!--          </div>-->
-        <!--          </div>-->
+{% block scripts %}
+<script>
+  const urlParams = new URLSearchParams(globalThis.window.location.search);
+  if (urlParams.has("nameChanged")) {
+    document.getElementById("identifier-title").style = "";
+    document.getElementById("old-name").style = "background-color: #d8dde0;";
+    document.getElementById("new-name").style = "";
+    document.getElementById("historic-tag").classList.remove("nhsuk-u-visually-hidden");
+  } else {
+    document.getElementById("historic-tag").remove();
+  }
 
+</script>
 
-        {% endblock %}
+<script>
+  if (urlParams.has('showNameUpdate')) {
+    document.getElementById('updated-name-row').style = 'background-color: #C1DCCB;';
+  }
 
-        {% block scripts %}
-        <script>
-          const urlParams = new URLSearchParams(globalThis.window.location.search);
-          if (urlParams.has("nameChanged")) {
-            document.getElementById("identifier-title").style = "";
-            document.getElementById("old-name").style = "background-color: #d8dde0;";
-            document.getElementById("new-name").style = "";
-            document.getElementById("historic-tag").classList.remove("nhsuk-u-visually-hidden");
-          } else {
-            document.getElementById("historic-tag").remove();
-          }
+  if (urlParams.has('unlinkedAmps')) {
+    applyFirstUnlinkedJourney();
+  }
 
-        </script>
+  if (urlParams.has('unlinkedAll')) {
+    applyAllUnlinkedJourney();
+  }
 
-        {% endblock %}
+  if (urlParams.has('deleted')) {
+    applyDeletedJourney();
+  }
+
+  function applyFirstUnlinkedJourney() {
+    document.getElementById('identifier-header').style = '';
+
+    document.querySelectorAll('.historic-first').forEach(element => {
+      element.style = '';
+    });
+
+    document.querySelectorAll('.historic-second').forEach(element => {
+      element.style = '';
+      element.classList.add('nhsuk-u-visually-hidden');
+    });
+
+    document.querySelectorAll('.checkbox-row-first').forEach(element => {
+      element.setAttribute('disabled', 'true');
+    });
+
+    document.querySelectorAll('.first-row').forEach(element => {
+      element.style = 'background-color: #d8dde0;';
+    });
+
+    document.querySelectorAll('.first-row-status').forEach(element => {
+      element.innerHTML = `<svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path
+                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
+                    </svg>`;
+    });
+
+    document.getElementById('unlink-button').setAttribute('href', 'confirm-delete-linked-amp?secondUnlink');
+  }
+
+  function applyAllUnlinkedJourney() {
+    applyFirstUnlinkedJourney();
+
+    document.querySelectorAll('.historic-second').forEach(element => {
+      element.classList.remove('nhsuk-u-visually-hidden');
+      element.style = '';
+    });
+
+    document.querySelectorAll('.checkbox-row-second').forEach(element => {
+      element.setAttribute('disabled', 'true');
+    });
+
+    document.querySelectorAll('.second-row').forEach(element => {
+      element.style = 'background-color: #d8dde0;';
+    });
+
+    document.querySelectorAll('.second-row-status').forEach(element => {
+      element.innerHTML = `<svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path
+                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
+                    </svg>`;
+    });
+
+    document.getElementById('delete-warning-container').style = 'display: none;';
+    document.getElementById('delete-button-container').style = '';
+  }
+
+  function applyDeletedJourney() {
+    applyAllUnlinkedJourney();
+
+    document.querySelectorAll('.nhsuk-action-link').forEach(element => {
+      element.remove();
+    });
+
+    const endDate = new Date();
+
+    document.getElementById('delete-button-container').style = 'display: none;';
+    document.getElementById('continue-button-container').style = '';
+    document.getElementById('button-divider').remove();
+    document.getElementById('link-buttons-container').classList.add('nhsuk-u-visually-hidden');
+
+    document.getElementById('summary-start-date').innerText = '1/1/2025';
+    document.getElementById('summary-end-date').innerText = `${endDate.getDay()}/${endDate.getMonth() + 1}/${endDate.getFullYear()}`;
+
+    document.querySelectorAll('.summary-status').forEach(element => {
+      element.innerHTML = `<svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path
+                        d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
+                    </svg>`;
+    });
+  }
+</script>
+{% endblock %}

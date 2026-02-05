@@ -1,10 +1,12 @@
-{% extends "trade-families/base.html" %}
+{% extends "base-large.html" %}
 {% block content %}
 <div class="nhsuk-back-link">
   <a class="nhsuk-back-link__link" href="view-tf.html">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-         aria-hidden="true" height="24" width="24">
-      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      aria-hidden="true" height="24" width="24">
+      <path
+        d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+      </path>
     </svg>
     Go back</a>
 </div>
@@ -12,9 +14,9 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <span class="nhsuk-caption-l">
-                Trade family
-              <span class="nhsuk-u-visually-hidden"> - </span>
-                         </span>
+      Trade family
+      <span class="nhsuk-u-visually-hidden"> - </span>
+    </span>
     <h1 class="nhsuk-heading-xl">Unlink Linked amp(s)</h1>
   </div>
 </div>
@@ -23,9 +25,9 @@
   <div class="nhsuk-grid-column-full">
     <div class="nhsuk-warning-callout">
       <h3 class="nhsuk-warning-callout__label"> <span role="text">
-      <span class="nhsuk-u-visually-hidden">Important: </span>
-      Confirm changes
-    </span> </h3>
+          <span class="nhsuk-u-visually-hidden">Important: </span>
+          Confirm changes
+        </span> </h3>
       <p>Confirm you want to <strong>Unlink</strong> this linked AMP from the trade family</p>
     </div>
   </div>
@@ -36,108 +38,117 @@
 
   <thead role="rowgroup" class="nhsuk-table__head">
 
-  <tr role="row">
-    <th role="columnheader" class="" scope="col">
-      <span class="nhsuk-u-visually-hidden">Identifier</span>
-    </th>
-    <th role="columnheader" class="" scope="col">
-      Name
-    </th>
-    <th role="columnheader" class="" scope="col">
-      Valid
-    </th>
-    <th role="columnheader" class="" scope="col">
-      Extractable
-    </th>
-    <th role="columnheader" class="" scope="col">
-      Start date
-    </th>
-    <th role="columnheader" class="" scope="col">
-      End date
-    </th>
-<!--    <th role="columnheader" class="" scope="col">-->
-<!--      Action-->
-<!--    </th>-->
-  </tr>
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        <span class="nhsuk-u-visually-hidden">Identifier</span>
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Name
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Valid
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Extractable
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Start date
+      </th>
+      <th role="columnheader" class="" scope="col">
+        End date
+      </th>
+    </tr>
   </thead>
   <tbody class="nhsuk-table__body">
-  <tr role="row" class="nhsuk-table__row">
-    <td class="nhsuk-table__cell "></td>
-    <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="add-amp">1
-      Primary Wound
-      Dressing spray</a></td>
-    <td class="nhsuk-table__cell "><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-      <path fill="#007f3b" d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
-    </svg></td>
-    <td class="nhsuk-table__cell "><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-      <path fill="#007f3b" d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
-    </svg></td>
-    <td class="nhsuk-table__cell ">01-01-2020</td>
-    <td class="nhsuk-table__cell ">01-02-3456</td>
-  </tr>
-  <tr role="row" class="nhsuk-table__row">
-    <td class="nhsuk-table__cell "></td>
-    <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
-      Primary
-      Wound small</a>
-    </td>
-    <td class="nhsuk-table__cell ">
-      <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 24 24" width="16" height="16" focusable="false"
-           aria-hidden="true">
-        <path fill="#007f3b"
-              d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
-      </svg>
-    </td>
-    <td class="nhsuk-table__cell ">
-      <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 24 24" width="16" height="16" focusable="false"
-           aria-hidden="true">
-        <path fill="#007f3b"
-              d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
-      </svg>
-    </td>
-    <td class="nhsuk-table__cell ">15-11-2024</td>
-    <td class="nhsuk-table__cell ">01-02-3456</td>
-    <!--                <td class="nhsuk-table__cell "><a class="nhsuk-link&#45;&#45;no-visited-state"-->
-    <!--                                                  href="pre-extract-unlink.html">Unlink</a></td>-->
-
-  </tr>
+    <tr role="row" class="nhsuk-table__row first-update-row">
+      <td class="nhsuk-table__cell "></td>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="add-amp">1
+          Primary Wound
+          Dressing spray</a></td>
+      <td class="nhsuk-table__cell "><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path fill="#007f3b"
+            d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+        </svg></td>
+      <td class="nhsuk-table__cell "><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path fill="#007f3b"
+            d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+        </svg></td>
+      <td class="nhsuk-table__cell ">01-01-2020</td>
+      <td class="nhsuk-table__cell ">01-02-3456</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row first-update-row">
+      <td class="nhsuk-table__cell "></td>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
+          Primary
+          Wound small</a>
+      </td>
+      <td class="nhsuk-table__cell ">
+        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
+          height="16" focusable="false" aria-hidden="true">
+          <path fill="#007f3b"
+            d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+        </svg>
+      </td>
+      <td class="nhsuk-table__cell ">
+        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
+          height="16" focusable="false" aria-hidden="true">
+          <path fill="#007f3b"
+            d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+        </svg>
+      </td>
+      <td class="nhsuk-table__cell ">15-11-2024</td>
+      <td class="nhsuk-table__cell ">01-02-3456</td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row second-update-row" style="display: none;">
+      <td class="nhsuk-table__cell "></td>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
+          Primary
+          Wound medium</a>
+      </td>
+      <td class="nhsuk-table__cell ">
+        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
+          height="16" focusable="false" aria-hidden="true">
+          <path fill="#007f3b"
+            d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+        </svg>
+      </td>
+      <td class="nhsuk-table__cell ">
+        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
+          height="16" focusable="false" aria-hidden="true">
+          <path fill="#007f3b"
+            d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+        </svg>
+      </td>
+      <td class="nhsuk-table__cell ">15-11-2024</td>
+      <td class="nhsuk-table__cell ">01-02-3456</td>
+    </tr>
   </tbody>
 </table>
 
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <a href="confirm-minimum-linked-amp.html" class="nhsuk-button" id="edit-tf">Yes i want to Unlink</a>
+    <a href="confirm-minimum-linked-amp" class="nhsuk-button" id="unlink-button">Yes I want to Unlink</a>
     <a href="view-tf.html" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
       Cancel
     </a>
   </div>
 </div>
 
-
-
-<!--<div class="nhsuk-grid-row">-->
-<!--  <div class="nhsuk-grid-column-full">-->
-<!--    <a href="confirm-new-tf" class="nhsuk-button" id="create-link" onclick="setAMPJourney()">Create</a>-->
-<!--  </div>-->
-<!--</div>-->
-
-{% endblock %}
-
-{% block scripts %}
-
 <script>
-  var journey = localStorage.getItem("tf-journey");
-  if (journey === "tf") {
-    document.getElementById("create-link").href = "search-amp";
-  }
-</script>
+  const urlParams = new URLSearchParams(globalThis.window.location.search);
+  if (urlParams.has('secondUnlink')) {
+    document.querySelectorAll('.first-update-row').forEach(element => {
+      element.remove();
+    });
 
-<script>
-  function setAMPJourney() {
-    localStorage.setItem("amp-journey", "new-amp");
+    document.querySelectorAll('.second-update-row').forEach(element => {
+      element.style = '';
+    });
+
+    document.getElementById('unlink-button').setAttribute('href', 'confirm-minimum-linked-amp?secondUnlink');
   }
 </script>
 
