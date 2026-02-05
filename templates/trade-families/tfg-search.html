@@ -1,0 +1,231 @@
+{% extends "base-large.html" %}
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="tfg-table-view">Trade
+                    family
+                    groups</a></li>
+        </ol>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div id="content-pane" class="side-tree-view">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="update-tfg-links-effective-date">
+                    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+                        <path
+                            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                        </path>
+                    </svg>
+                    Go back</a>
+            </div>
+
+            <form id="new-search-form" method="post">
+                <input type="hidden" name="_csrf"
+                    value="2hchdpeJ3V_UGagSzjFC14nSJolq3X0bWpoBYSTA0yL1R1sQ43NCQaG9uTn5Ict2rBx24LDjC-gL5Uk2Ofw4UxHx4xLGcW5z" />
+                <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5" id="page-heading">Trade family group
+                    search</h1>
+
+                <div class="nhsuk-form-group autocomplete-wrapper nhsuk-u-width-full"
+                    id="autocomplete-results__form-group">
+                    <label class="nhsuk-label" for="search-term">Search term</label>
+
+                    <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text" autofocus="autofocus"
+                        autocomplete="off" name="searchTerm" value="">
+                </div>
+
+                <div id="button-search">
+                    <a class="nhsuk-button nhsuk-button--secondary" href="?searched">
+                        Search
+                    </a>
+                </div>
+            </form>
+
+            <div id="results-container" class="nhsuk-u-visually-hidden">
+                <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
+                    <span id="page-and-result-count-top">Page 1 of 2 (10 total results)</span>
+
+                </div>
+                <form>
+                    <div id="results-table-container" class="nhsuk-table-responsive">
+                        <table class="nhsuk-table ">
+                            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">VTM results
+                            </caption>
+                            <thead class="nhsuk-table__head">
+                                <tr class="nhsuk-table__row">
+                                    <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name
+                                    </th>
+                                    <th class="nhsuk-table__header columnheader-sticky" scope="col" id="add-header">
+                                        Select
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="nhsuk-table__body" id="table-search-results-body">
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                        <span class="nhsuk-table-responsive__heading">Name</span>
+                                        <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound</a>
+                                        </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                                        <span class="nhsuk-table-responsive__heading">Select</span>
+                                        <div class="nhsuk-radios">
+                                            <div class="nhsuk-radios__item">
+                                                <input class="nhsuk-radios__input" id="example-1" name="example"
+                                                    type="radio" value="email">
+                                                <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                                                    for="example-1">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                        <span class="nhsuk-table-responsive__heading">Name</span>
+                                        <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 2</a>
+                                        </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                                        <span class="nhsuk-table-responsive__heading">Select</span>
+                                        <div class="nhsuk-radios">
+                                            <div class="nhsuk-radios__item">
+                                                <input class="nhsuk-radios__input" id="example-1" name="example"
+                                                    type="radio" value="email">
+                                                <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                                                    for="example-1">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                        <span class="nhsuk-table-responsive__heading">Name</span>
+                                        <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 3</a>
+                                        </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                                        <span class="nhsuk-table-responsive__heading">Select</span>
+                                        <div class="nhsuk-radios">
+                                            <div class="nhsuk-radios__item">
+                                                <input class="nhsuk-radios__input" id="example-1" name="example"
+                                                    type="radio" value="email">
+                                                <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                                                    for="example-1">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                        <span class="nhsuk-table-responsive__heading">Name</span>
+                                        <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 4</a>
+                                        </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                                        <span class="nhsuk-table-responsive__heading">Select</span>
+                                        <div class="nhsuk-radios">
+                                            <div class="nhsuk-radios__item">
+                                                <input class="nhsuk-radios__input" id="example-1" name="example"
+                                                    type="radio" value="email">
+                                                <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                                                    for="example-1">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                                        <span class="nhsuk-table-responsive__heading">Name</span>
+                                        <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 5</a>
+                                        </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                                        <span class="nhsuk-table-responsive__heading">Select</span>
+                                        <div class="nhsuk-radios">
+                                            <div class="nhsuk-radios__item">
+                                                <input class="nhsuk-radios__input" id="example-1" name="example"
+                                                    type="radio" value="email">
+                                                <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                                                    for="example-1">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+
+                <div id="pagination">
+                    <nav aria-label="Pagination Navigation">
+                        <ul class="pagination">
+                            <li class="pagination__item">
+                                <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true">1</p>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link nhsuk-link--no-visited-state" href="#">2</a>
+                            </li>
+                            <li class="pagination__item">|</li>
+                            <li class="pagination__item">
+                                <a href="#" class="nhsuk-link--no-visited-state">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <a id="continue-button" href="confirm-link-tf-tfg" class="nhsuk-button">Continue</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(globalThis.window.location.search);
+
+    function setSearched() {
+        const container = document.getElementById('button-search');
+
+        container.innerHTML += `
+        <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3"
+                role="button"
+                href="tfg-search">
+            Reset
+        </a>
+        `;
+
+        const resultsSection = document.getElementById('results-container');
+        resultsSection.classList.remove('nhsuk-u-visually-hidden');
+    }
+
+    if (urlParams.has('searched')) {
+        setSearched();
+    }
+</script>
+
+{% endblock %}
