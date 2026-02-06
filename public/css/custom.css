@@ -656,3 +656,19 @@ fill-blue{
 .historic-record:hover {
     background-color: #C0C7C9 !important;
 }
+
+.grid-column-ten-percent {
+  box-sizing: border-box;
+  padding: 0 16px; }
+  @media (min-width: 48.0625em) {
+    .grid-column-ten-percent {
+      float: left;
+      width: 10%; } }
+
+.grid-column-ninty-percent {
+  box-sizing: border-box;
+  padding: 0 16px; }
+  @media (min-width: 48.0625em) {
+    .grid-column-ninty-percent {
+      float: left;
+      width: 90%; } }
