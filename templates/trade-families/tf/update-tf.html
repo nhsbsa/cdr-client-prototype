@@ -1,0 +1,140 @@
+{% extends "base-large.html" %}
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="tfg-table-view">Trade
+                    family
+                    groups</a></li>
+        </ol>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div id="content-pane" class="side-tree-view">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+                <div class="nhsuk-back-link">
+                    <a class="nhsuk-back-link__link" href="view-tf">
+                        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+                            <path
+                                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                            </path>
+                        </svg>
+                        Go back</a>
+                </div>
+
+                <span class="nhsuk-caption-l">Update summary details</span>
+                <h1 class="nhsuk-heading-xl">Anadin Extra</h1>
+            </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full update-box">
+                <fieldset class="nhsuk-fieldset fieldset-wrap">
+                    <legend class="nhsuk-fieldset__legend--l update-general-heading" id="summary-legend-value">
+                        Summary
+                    </legend>
+                    <div class="nhsuk-grid-column-full nhsuk-u-padding-0">
+                        <div class="nhsuk-grid-column-one-half">
+                            <legend id="summary-start-date-legend'" class="nhsuk-fieldset__legend--m">
+                                Start date
+                            </legend>
+
+
+                            <div class="nhsuk-form-group">
+                                <div class="nhsuk-date-input" id="update-summary-input-start-date">
+                                    <div class="nhsuk-date-input__item">
+                                        <div class="nhsuk-form-group">
+                                            <label class="nhsuk-label nhsuk-date-input__label"
+                                                for="update-summary-input-start-date-day"><span
+                                                    class="nhsuk-u-visually-hidden">Start date </span>Day</label>
+                                            <input
+                                                class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                                                inputmode="numeric" maxlength="2"
+                                                id="update-summary-input-start-date-day" type="text"
+                                                name="values[0].startDate.day" value="06">
+                                        </div>
+                                    </div>
+                                    <div class="nhsuk-date-input__item">
+                                        <div class="nhsuk-form-group">
+                                            <label class="nhsuk-label nhsuk-date-input__label"
+                                                for="update-summary-input-start-date-month"><span
+                                                    class="nhsuk-u-visually-hidden">Start date </span>Month</label>
+                                            <input
+                                                class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                                                inputmode="numeric" maxlength="2"
+                                                id="update-summary-input-start-date-month" type="text"
+                                                name="values[0].startDate.month" value="02">
+                                        </div>
+                                    </div>
+                                    <div class="nhsuk-date-input__item">
+                                        <div class="nhsuk-form-group">
+                                            <label class="nhsuk-label nhsuk-date-input__label"
+                                                for="update-summary-input-start-date-year"><span
+                                                    class="nhsuk-u-visually-hidden">Start date </span>Year</label>
+                                            <input
+                                                class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 js-paste-date"
+                                                inputmode="numeric" maxlength="4"
+                                                id="update-summary-input-start-date-year" type="text"
+                                                name="values[0].startDate.year" value="2027">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="nhsuk-grid-column-one-third">
+
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-column-full nhsuk-u-padding-0">
+
+                    </div>
+
+                    <div class="nhsuk-grid-column-full">
+                        <legend id="summary-extractable-legend" class="nhsuk-fieldset__legend--m">
+                            Is this trade family extractable?
+                        </legend>
+
+                        <div class="nhsuk-form-group">
+                            <fieldset class="nhsuk-fieldset">
+                                <legend class="nhsuk-fieldset__legend"></legend>
+
+                                <div class="nhsuk-radios nhsuk-radios--inline">
+                                    <div class="nhsuk-radios__item">
+                                        <input class="nhsuk-radios__input" id="update-summary-radio-extractable-true"
+                                            type="radio" value="true" name="values[0].extractable" checked="checked">
+                                        <label class="nhsuk-label nhsuk-radios__label"
+                                            for="update-summary-radio-extractable-true">
+                                            Yes
+                                        </label>
+                                    </div>
+
+                                    <div class="nhsuk-radios__item">
+                                        <input class="nhsuk-radios__input" id="update-summary-radio-extractable-false"
+                                            value="false" type="radio" name="values[0].extractable">
+                                        <label class="nhsuk-label nhsuk-radios__label"
+                                            for="update-summary-radio-extractable-false">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <a class="nhsuk-button" href="update-tf-summary">Continue</a>
+    </div>
+</div>
+
+{% endblock %}

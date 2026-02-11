@@ -28,7 +28,10 @@
           <span class="nhsuk-u-visually-hidden">Important: </span>
           Confirm changes
         </span> </h3>
-      <p>Confirm you want to <strong>Unlink</strong> this linked AMP from the trade family</p>
+
+      <p>Confirm you want to <strong>unlink</strong> this linked AMP from the trade family.</p>
+
+      <p id="warning-text">There will be <b>1</b> linked AMP left.</p>
     </div>
   </div>
 </div>
@@ -37,13 +40,15 @@
   <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Linked AMPs</caption>
 
   <thead role="rowgroup" class="nhsuk-table__head">
-
     <tr role="row">
       <th role="columnheader" class="" scope="col">
         <span class="nhsuk-u-visually-hidden">Identifier</span>
       </th>
       <th role="columnheader" class="" scope="col">
         Name
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Supplier
       </th>
       <th role="columnheader" class="" scope="col">
         Valid
@@ -62,9 +67,9 @@
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row first-update-row">
       <td class="nhsuk-table__cell "></td>
-      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="add-amp">1
-          Primary Wound
-          Dressing spray</a></td>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="add-amp">Anadin Extra soluble tablets</a></td>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Haleon UK Trading Ltd</a>
+      </td>
       <td class="nhsuk-table__cell "><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
           <path fill="#007f3b"
@@ -80,9 +85,9 @@
     </tr>
     <tr role="row" class="nhsuk-table__row first-update-row">
       <td class="nhsuk-table__cell "></td>
-      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
-          Primary
-          Wound small</a>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Anadin Extra tablets</a>
+      </td>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Haleon UK Trading Ltd</a>
       </td>
       <td class="nhsuk-table__cell ">
         <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
@@ -103,9 +108,9 @@
     </tr>
     <tr role="row" class="nhsuk-table__row second-update-row" style="display: none;">
       <td class="nhsuk-table__cell "></td>
-      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">1
-          Primary
-          Wound medium</a>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Anadin Extra</a>
+      </td>
+      <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Novo Nordisk Ltd</a>
       </td>
       <td class="nhsuk-table__cell ">
         <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16"
@@ -130,7 +135,7 @@
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-    <a href="confirm-minimum-linked-amp" class="nhsuk-button" id="unlink-button">Yes I want to Unlink</a>
+    <a href="view-tf?unlinkedAmps" class="nhsuk-button" id="unlink-button">Yes I want to Unlink</a>
     <a href="view-tf.html" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
       Cancel
     </a>
@@ -148,7 +153,7 @@
       element.style = '';
     });
 
-    document.getElementById('unlink-button').setAttribute('href', 'confirm-minimum-linked-amp?secondUnlink');
+    document.getElementById('unlink-button').setAttribute('href', 'view-tf?unlinkedAll');
   }
 </script>
 

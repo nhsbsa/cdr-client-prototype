@@ -1,0 +1,195 @@
+{% extends "base-large.html" %}
+{% block content %}
+<div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="view-tfg#more">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true" height="24" width="24">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+            </path>
+        </svg>
+        Go back</a>
+</div>
+
+<div id="error-summary" class="nhsuk-error-summary" data-module="nhsuk-error-summary" style="display: none;">
+    <div role="alert">
+        <h2 class="nhsuk-error-summary__title">
+            There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+            <ul class="nhsuk-list nhsuk-error-summary__list">
+                <li>
+                    <a href="#full-name" id="error-summary-text">Name must be 255 characters or less</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <br />
+        <h1 class="nhsuk-heading-xl">Edit name for <span>&apos;Anadin&apos;</span></h1>
+    </div>
+</div>
+
+<div class="nhsuk-grid-column-full update-box">
+    <fieldset class="nhsuk-fieldset fieldset-wrap">
+        <legend class="nhsuk-fieldset__legend--l update-general-heading" id="summary-legend-value">
+            Name details
+        </legend>
+
+        <div class="nhsuk-grid-column-full" id="name-container">
+            <legend id="summary-extractable-legend" class="nhsuk-fieldset__legend--m">
+                Name
+            </legend>
+
+            <div class="nhsuk-form-group nhsuk-u-margin-top-4" id="name-container-0">
+                <label class="nhsuk-label" for="name-0-current-name">Value</label>
+
+                <span id="name-error-message" class="nhsuk-error-message" style="display: none;">
+                    <span class="nhsuk-u-visually-hidden">Error:</span> <span id="inline-error-text">Name must be 255
+                        characters or less</span>
+                </span>
+
+                <input class="nhsuk-input name-input" id="name-0-current-name" value="Anadin"
+                    name="values[0].name">
+
+                <div id="update-tfg-input-name-length" class="nhsuk-u-margin-top-2">Name length: 6 characters</div>
+
+            </div>
+        </div>
+
+        <div class="nhsuk-grid-column-full nhsuk-u-padding-0">
+            <div class="nhsuk-grid-column-one-half">
+                <legend id="summary-start-date-legend'" class="nhsuk-fieldset__legend--m">
+                    Start date
+                </legend>
+
+                <div class="nhsuk-form-group">
+                    <div class="nhsuk-date-input" id="update-summary-input-start-date">
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label"
+                                    for="update-summary-input-start-date-day"><span
+                                        class="nhsuk-u-visually-hidden">Start date </span>Day</label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                                    inputmode="numeric" maxlength="2" id="update-summary-input-start-date-day"
+                                    type="text" name="values[0].startDate.day" value="06">
+                            </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label"
+                                    for="update-summary-input-start-date-month"><span
+                                        class="nhsuk-u-visually-hidden">Start date </span>Month</label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                                    inputmode="numeric" maxlength="2" id="update-summary-input-start-date-month"
+                                    type="text" name="values[0].startDate.month" value="02">
+                            </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label"
+                                    for="update-summary-input-start-date-year"><span
+                                        class="nhsuk-u-visually-hidden">Start date </span>Year</label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 js-paste-date"
+                                    inputmode="numeric" maxlength="4" id="update-summary-input-start-date-year"
+                                    type="text" name="values[0].startDate.year" value="2027">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="nhsuk-grid-column-one-half">
+                <legend id="summary-start-date-legend'" class="nhsuk-fieldset__legend--m">
+                    End date
+                </legend>
+
+                <div class="nhsuk-form-group">
+                    <div class="nhsuk-date-input" id="update-summary-input-start-date">
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label"
+                                    for="update-summary-input-start-date-day"><span class="nhsuk-u-visually-hidden">End
+                                        date </span>Day</label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                                    inputmode="numeric" maxlength="2" id="update-summary-input-start-date-day"
+                                    type="text" name="values[0].startDate.day" value="06">
+                            </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label"
+                                    for="update-summary-input-start-date-month"><span
+                                        class="nhsuk-u-visually-hidden">End date </span>Month</label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
+                                    inputmode="numeric" maxlength="2" id="update-summary-input-start-date-month"
+                                    type="text" name="values[0].startDate.month" value="02">
+                            </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                                <label class="nhsuk-label nhsuk-date-input__label"
+                                    for="update-summary-input-start-date-year"><span class="nhsuk-u-visually-hidden">End
+                                        date </span>Year</label>
+                                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 js-paste-date"
+                                    inputmode="numeric" maxlength="4" id="update-summary-input-start-date-year"
+                                    type="text" name="values[0].startDate.year" value="2027">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <a class="nhsuk-button nhsuk-u-margin-top-5" id="submit-button">Continue</a>
+    </div>
+</div>
+
+<script>
+    const nameInput = document.getElementById('name-0-current-name');
+    const nameLengthDisplay = document.getElementById('update-tfg-input-name-length');
+
+    nameInput.addEventListener('input', () => {
+        const currentLength = nameInput.value.length;
+        nameLengthDisplay.innerText = `Name length: ${currentLength} characters`;
+    });
+</script>
+
+<script>
+    const MAX_LENGTH = 255;
+    const nameFormGroup = document.getElementById('name-container');
+    const submitButton = document.getElementById('submit-button');
+    const errorMessage = document.getElementById('name-error-message');
+    const errorSummary = document.getElementById('error-summary');
+
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        const currentLength = nameInput.value.length;
+        if (currentLength > MAX_LENGTH || currentLength == 0) {
+            if (currentLength === 0) {
+                document.getElementById('error-summary-text').innerText = 'You must provide a name';
+                document.getElementById('inline-error-text').innerText = 'You must provide a name';
+            }
+
+            nameFormGroup.classList.add('nhsuk-form-group--error');
+            nameInput.classList.add('nhsuk-input--error');
+            errorMessage.style = '';
+            errorSummary.style = '';
+            return;
+        }
+        window.location.href = "update-tfg-name-confirm";
+    });
+</script>
+
+{% endblock %}

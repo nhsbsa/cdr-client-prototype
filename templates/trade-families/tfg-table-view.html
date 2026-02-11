@@ -29,12 +29,146 @@
                     <div class="nhsuk-grid-column-full">
                         <label for="filter" class="nhsuk-label">Filter by name</label>
                         <input id="filter" class="nhsuk-input govuk-!-margin-bottom-4" type="text" />
+
+                        <details class="nhsuk-details nhsuk-details--expanded govuk-!-margin-bottom-4"
+                            data-module="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">Filter options</span>
+                            </summary>
+
+                            <div class="nhsuk-details__text">
+                                <form>
+                                    <div class="nhsuk-form-group">
+                                        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                                            <legend class="nhsuk-fieldset__legend">
+                                                Filter by attributes
+                                            </legend>
+                                            <div class="nhsuk-checkboxes">
+                                                <div class="nhsuk-grid-column-full">
+                                                    <div class="nhsuk-u-one-third">
+                                                        <div class="nhsuk-checkboxes__item">
+                                                            <input class="nhsuk-checkboxes__input" id="valid"
+                                                                name="filter" type="checkbox" checked>
+                                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                                for="valid">
+                                                                Valid
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nhsuk-u-one-third">
+                                                        <div class="nhsuk-checkboxes__item">
+                                                            <input class="nhsuk-checkboxes__input" id="extractable"
+                                                                name="filter" type="checkbox" checked>
+                                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                                for="extractable">
+                                                                Extractable
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nhsuk-u-one-third">
+                                                        <div class="nhsuk-checkboxes__item">
+                                                            <input class="nhsuk-checkboxes__input" id="future-dated"
+                                                                name="filter" type="checkbox">
+                                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                                for="future-dated">
+                                                                Show future dated AMPs
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
+                                                    <div class="nhsuk-u-one-third">
+                                                        <div class="nhsuk-checkboxes__item">
+                                                            <input class="nhsuk-checkboxes__input" id="invalid"
+                                                                name="filter" type="checkbox" checked>
+                                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                                for="invalid">
+                                                                Invalid
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nhsuk-u-one-third">
+                                                        <div class="nhsuk-checkboxes__item">
+                                                            <input class="nhsuk-checkboxes__input" id="unextractable"
+                                                                name="filter" type="checkbox" checked>
+                                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                                for="unextractable">
+                                                                Unextractable
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nhsuk-u-one-third">
+                                                        <div class="nhsuk-checkboxes__item">
+                                                            <input class="nhsuk-checkboxes__input" id="historic"
+                                                                name="filter" type="checkbox">
+                                                            <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                                for="historic">
+                                                                Show historic AMPs
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!--sort by -->
+                                        <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">
+                                            <div class="nhsuk-form-group">
+                                                <fieldset class="nhsuk-fieldset">
+                                                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+                                                        <label
+                                                            class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden"
+                                                            for="historic">
+                                                            Sort by
+                                                        </label>
+                                                    </legend>
+                                                    <h3 class="nhsuk-u-margin-5">Sort by</h3>
+                                                    <div class="nhsuk-radios" data-module="nhsuk-radios">
+                                                        <div class="nhsuk-radios__item">
+                                                            <input class="nhsuk-radios__input " name="exampleInline"
+                                                                type="radio" value="yes">
+                                                            <label class="nhsuk-label nhsuk-radios__label">
+                                                                Newest to oldest
+                                                            </label>
+                                                        </div>
+                                                        <div class="nhsuk-radios__item">
+                                                            <input class="nhsuk-radios__input" name="exampleInline"
+                                                                type="radio" value="no">
+                                                            <label class="nhsuk-label nhsuk-radios__label">
+                                                                Oldest to newest
+                                                            </label>
+                                                        </div>
+                                                        <div class="nhsuk-radios__item">
+                                                            <input class="nhsuk-radios__input" name="exampleInline"
+                                                                type="radio" value="no">
+                                                            <label class="nhsuk-label nhsuk-radios__label">
+                                                                Z to A
+                                                            </label>
+                                                        </div>
+                                                        <div class="nhsuk-radios__item">
+                                                            <input class="nhsuk-radios__input" name="exampleInline"
+                                                                type="radio" value="no">
+                                                            <label class="nhsuk-label nhsuk-radios__label">
+                                                                A to Z
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </details>
+
                         <a href="#" class="nhsuk-button nhsuk-button--secondary" type="submit"
                             id="searchButton">Search</a>
                         <a class="nhsuk-button nhsuk-button--reverse" style="color: black" id="resetFilters"
                             href="#">Reset filter </a>
                     </div>
                 </div>
+
                 <table class="nhsuk-table">
                     <caption class="nhsuk-table__caption">Trade family groups details</caption>
                     <thead role="rowgroup" class="nhsuk-table__head">
@@ -52,7 +186,7 @@
                                 Start date
                             </th>
                             <th role="columnheader" scope="col">
-                                End date
+                                Valid
                             </th>
                             <th role="columnheader" scope="col">
                                 Number of TFs
@@ -65,13 +199,20 @@
                                 <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                             </td>
                             <td class="nhsuk-table__cell">
-                                <a id="deleted-link" href="view-tfg" class="nhsuk-link--no-visited-state">Primary
-                                    Wound</a>
+                                <a id="deleted-link" href="/trade-families/tfg/view-tfg"
+                                    class="nhsuk-link--no-visited-state">Anadin</a>
                             </td>
                             <td class="nhsuk-table__cell">22002311000001104</td>
                             <td id="deleted-start-date" class="nhsuk-table__cell">01/01/2020</td>
-                            <td id="deleted-end-date" class="nhsuk-table__cell">01/02/3456</td>
-                            <td id="deleted-number-tfs" class="nhsuk-table__cell">3</td>
+                            <td id="deleted-end-date" class="nhsuk-table__cell">
+                                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    aria-hidden="true" id="pi-value-0">
+                                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                    </path>
+                                </svg>
+                            </td>
+                            <td id="deleted-number-tfs" class="nhsuk-table__cell">4</td>
                         </tr>
                         <tr role="row" class="nhsuk-table__row">
                             <td class="nhsuk-table__cell empty-identifier" style="display: none;"></td>
@@ -80,7 +221,14 @@
                             </td>
                             <td class="nhsuk-table__cell">7987611000001104</td>
                             <td class="nhsuk-table__cell">06/02/2018</td>
-                            <td class="nhsuk-table__cell">21/11/2026</td>
+                            <td>
+                                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    aria-hidden="true" id="pi-value-0">
+                                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                    </path>
+                                </svg>
+                            </td>
                             <td class="nhsuk-table__cell">21</td>
                         </tr>
                         <tr role="row" class="nhsuk-table__row">
@@ -90,7 +238,14 @@
                             </td>
                             <td class="nhsuk-table__cell">15181011000001103</td>
                             <td class="nhsuk-table__cell">17/09/2005</td>
-                            <td class="nhsuk-table__cell">17/09/2025</td>
+                            <td class="nhsuk-table__cell">
+                                <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    aria-hidden="true" id="pi-value-0">
+                                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                                    </path>
+                                </svg>
+                            </td>
                             <td class="nhsuk-table__cell">14</td>
                         </tr>
                     </tbody>
@@ -114,11 +269,15 @@
             element.style = '';
         });
 
-        const endDate = new Date();
-        document.getElementById('deleted-start-date').innerText = '1/1/2020'
-        document.getElementById('deleted-end-date').innerText = `${endDate.getDay()}/${endDate.getMonth() + 1}/${endDate.getFullYear()}`;
+        document.getElementById('deleted-end-date').innerHTML = `
+            <svg class="nhsuk-icon nhsuk-icon__cross nhsuk-icon__cross-red" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                <path
+                d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" />
+            </svg>
+            `;
 
-        document.getElementById('deleted-link').setAttribute('href', '/trade-families/tabs/view-tfg?deleted')
+        document.getElementById('deleted-link').setAttribute('href', '/trade-families/tfg/view-tfg?deleted')
     }
 </script>
 {% endblock %}

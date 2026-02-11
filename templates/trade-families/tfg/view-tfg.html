@@ -19,7 +19,7 @@
         <h2 class="app-side-nav__heading">Navigation</h2>
         <ul class="nhsuk-list app-side-nav__list">
           <li class="app-side-nav__item app-side-nav__item--current" aria-current="page">
-            <a href="tfg-table-view" class="app-side-nav__link">Trade family groups</a>
+            <a href="/trade-families/tfg-table-view" class="app-side-nav__link">Trade family groups</a>
           </li>
           <li class="app-side-nav__item">
             <a class="app-side-nav__link">Trade families</a>
@@ -30,7 +30,7 @@
 
     <div class="nhsuk-grid-column-three-quarters">
       <div class="nhsuk-back-link">
-        <a class="nhsuk-back-link__link" href="#">
+        <a class="nhsuk-back-link__link" href="/trade-families/tfg-table-view">
           <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -46,7 +46,7 @@
             Trade family group
             <span class="nhsuk-u-visually-hidden"> - </span>
           </span>
-          <h1 class="nhsuk-heading-xl">Primary Wound</h1>
+          <h1 class="nhsuk-heading-xl">Anadin</h1>
         </div>
       </div>
 
@@ -82,7 +82,7 @@
               <h3 class="nhsuk-heading-l">View linked trade families</h3>
 
               <div id="link-tf-link" class="nhsuk-action-link" style="float: right;">
-                <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg-links-effective-date">
+                <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="tf-search">
                   <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M0 0h24v24H0z" fill="none"></path>
@@ -95,20 +95,146 @@
               </div>
 
               <h3>Linked trade families</h3>
+
+              <details class="nhsuk-details nhsuk-details--expanded govuk-!-margin-bottom-4"
+                data-module="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">Search and filter</span>
+                </summary>
+                <label for="filter" class="nhsuk-label nhsuk-u-margin-top-5">Filter by
+                  name</label>
+                <input id="filter" class="nhsuk-input govuk-!-margin-bottom-4" type="text" />
+
+                <div class="nhsuk-details__text">
+                  <form>
+                    <div class="nhsuk-form-group">
+                      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                        <legend class="nhsuk-fieldset__legend">
+                          Filter by attributes
+                        </legend>
+                        <div class="nhsuk-checkboxes">
+                          <div class="nhsuk-grid-column-full">
+                            <div class="nhsuk-u-one-third">
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="valid" name="filter" type="checkbox" checked>
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">
+                                  Valid
+                                </label>
+                              </div>
+                            </div>
+                            <div class="nhsuk-u-one-third">
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="extractable" name="filter" type="checkbox"
+                                  checked>
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="extractable">
+                                  Extractable
+                                </label>
+                              </div>
+                            </div>
+                            <div class="nhsuk-u-one-third">
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="future-dated" name="filter" type="checkbox">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="future-dated">
+                                  Show future dated AMPs
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
+                            <div class="nhsuk-u-one-third">
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="invalid" name="filter" type="checkbox"
+                                  checked>
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">
+                                  Invalid
+                                </label>
+                              </div>
+                            </div>
+                            <div class="nhsuk-u-one-third">
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="unextractable" name="filter" type="checkbox"
+                                  checked>
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="unextractable">
+                                  Unextractable
+                                </label>
+                              </div>
+                            </div>
+                            <div class="nhsuk-u-one-third">
+                              <div class="nhsuk-checkboxes__item">
+                                <input class="nhsuk-checkboxes__input" id="historic" name="filter" type="checkbox">
+                                <label class="nhsuk-label nhsuk-checkboxes__label" for="historic">
+                                  Show historic AMPs
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <!--sort by -->
+                      <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">
+                        <div class="nhsuk-form-group">
+                          <fieldset class="nhsuk-fieldset">
+                            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+                              <label class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden" for="historic">
+                                Sort by
+                              </label>
+                            </legend>
+                            <h3 class="nhsuk-u-margin-5">Sort by</h3>
+                            <div class="nhsuk-radios" data-module="nhsuk-radios">
+                              <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input " name="exampleInline" type="radio" value="yes">
+                                <label class="nhsuk-label nhsuk-radios__label">
+                                  Newest to oldest
+                                </label>
+                              </div>
+                              <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" name="exampleInline" type="radio" value="no">
+                                <label class="nhsuk-label nhsuk-radios__label">
+                                  Oldest to newest
+                                </label>
+                              </div>
+                              <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" name="exampleInline" type="radio" value="no">
+                                <label class="nhsuk-label nhsuk-radios__label">
+                                  Z to A
+                                </label>
+                              </div>
+                              <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" name="exampleInline" type="radio" value="no">
+                                <label class="nhsuk-label nhsuk-radios__label">
+                                  A to Z
+                                </label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-float-right nhsuk-u-margin-left-5"
+                  style="color: black" id="resetFilters" href="#">Reset filter </a>
+                <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-float-right" type="submit" id="searchButton"
+                  onclick="displaySelectedCriteria()">Search
+                </button>
+              </details>
             </div>
 
             <div class="nhsuk-grid-column-full">
               <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-one-half">
                   <p class="nhsuk-u-font-size-16 nhsuk-u-margin-bottom-2">
-                    Page 1 of 1 (3 total results)
+                    Page 1 of 1 (4 total results)
                   </p>
                 </div>
 
                 <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
                   <div class="nhsuk-u-font-size-16" id="tablePageSizeControls">
                     <span class="nhsuk-u-margin-right-2">Page size:</span>
-                    <span class="nhsuk-u-font-weight-bold nhsuk-u-margin-right-2" aria-current="true">20</span>
+                    <span class="nhsuk-u-font-weight-bold nhsuk-u-margin-right-2" aria-current="true">25</span>
                     <a class="nhsuk-u-margin-right-2" aria-label="Page size of 50 results" href="#">50</a>
                     <a aria-label="Page size of 100 results" href="#">100</a>
                   </div>
@@ -124,14 +250,15 @@
                   <th role="columnheader" class="" scope="col">
                     Select
                   </th>
-                  <th id="identifier-header" role="columnheader" class="nhsuk-u-visually-hidden" scope="col" style="display: none;">
+                  <th id="identifier-header" role="columnheader" class="nhsuk-u-visually-hidden" scope="col"
+                    style="display: none;">
                     Idenitifer
                   </th>
                   <th role="columnheader" class="" scope="col">
                     Name
                   </th>
                   <th role="columnheader" class="" scope="col">
-                    Invalid
+                    Valid
                   </th>
                   <th role="columnheader" class="" scope="col">
                     Extractable
@@ -154,13 +281,11 @@
                       </div>
                     </div>
                   </td>
-                  <td class="nhsuk-table__cell historic-first" style="display: none;;">
+                  <td class="nhsuk-table__cell historic-first" style="display: none;">
                     <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
                   <td class="nhsuk-table__cell">
-                    <a href="view-tf" class="nhsuk-link--no-visited-state">1
-                      Primary
-                      Wound</a>
+                    <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Extra</a>
                   </td>
                   <td class="nhsuk-table__cell first-row-status">
                     <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
@@ -178,6 +303,40 @@
                   </td>
                   <td class="nhsuk-table__cell ">1234567890123456</td>
                 </tr>
+                <tr id="future-row" role="row" class="nhsuk-table__row" style="display: none;">
+                  <td class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
+                          type="checkbox">
+                        <label class="nhsuk-checkboxes__label" for="row-1">
+                          <span class="nhsuk-u-visually-hidden">Select row</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Future</a>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell">1234567890123456</td>
+                </tr>
                 <tr role="row" class="nhsuk-table__row first-row">
                   <td class="nhsuk-table__cell">
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
@@ -193,9 +352,8 @@
                   <td class="nhsuk-table__cell historic-first" style="display: none;">
                     <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
-                  <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
-                      Wound
-                      (clotrimazole)</a></td>
+                  <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Anadin Ibuprofen</a>
+                  </td>
                   <td class="nhsuk-table__cell first-row-status">
                     <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
@@ -227,9 +385,8 @@
                   <td class="nhsuk-table__cell historic-second" style="display: none;">
                     <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
-                  <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
-                      Wound
-                      (fluconazole)</a></td>
+                  <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Anadin Joint Pain</a>
+                  </td>
                   <td class="nhsuk-table__cell second-row-status">
                     <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
@@ -273,33 +430,6 @@
               </nav>
             </div>
           </div>
-
-          <hr id="button-divider" />
-
-          <div class="nhsuk-grid-row">
-            <div id="delete-warning-container" class="nhsuk-grid-column-full">
-              <h3>Delete trade family group</h3>
-              <details class="nhsuk-details">
-                <summary class="nhsuk-details__summary">
-                  <span class="nhsuk-details__summary-text">
-                    Do you want to delete this trade family group
-                  </span>
-                </summary>
-                <div class="nhsuk-details__text">
-                  <p>To delete this trade family you'll first need to unlink all associated linked trade families.</p>
-                </div>
-              </details>
-            </div>
-
-            <div id="delete-button-container" class="nhsuk-grid-column-full" style="display: none;">
-              <a class="nhsuk-button" style="background-color: red; float: right;" href="delete-tfg">Delete trade family
-                group</a>
-            </div>
-
-            <div id="continue-button-container" class="nhsuk-grid-column-full" style="display: none;">
-              <a class="nhsuk-button" href="/trade-families/tfg-table-view?deletedTfg">Continue</a>
-            </div>
-          </div>
         </div>
 
         <div class="nhsuk-tabs__panel" id="summary">
@@ -336,7 +466,7 @@
             </div>
 
             <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">Invalid</dt>
+              <dt class="nhsuk-summary-list__key">Valid</dt>
               <dd class="nhsuk-summary-list__value summary-status">
                 <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
@@ -356,14 +486,48 @@
                 </svg>
               </dd>
             </div>
-
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">SNOMED</dt>
-              <dd class="nhsuk-summary-list__value">
-                <span>6614511000001108</span>
-              </dd>
-            </div>
           </dl>
+
+          <section class="nhsuk-u-padding-bottom-4" id="snomed-section">
+            <h3 class="nhsuk-heading-m">SNOMED details</h3>
+
+            <dl class="nhsuk-summary-list">
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">SNOMED code</dt>
+                <dd class="nhsuk-summary-list__value">
+                  <span>6614511000001108</span>
+                </dd>
+              </div>
+            </dl>
+
+          </section>
+
+          <div class="nhsuk-grid-row">
+            <div id="delete-warning-container" class="nhsuk-grid-column-full">
+              <h3>Invalidate trade family group</h3>
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Do you want to invalidate this trade family group
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <p>To invalidate this trade family you'll first need to unlink all associated
+                    linked trade families.</p>
+                </div>
+              </details>
+            </div>
+
+            <div id="delete-button-container" class="nhsuk-grid-column-full" style="display: none;">
+              <a class="nhsuk-button" style="background-color: red; float: right;" href="delete-tfg">Invalidate trade
+                family
+                group</a>
+            </div>
+
+            <div id="continue-button-container" class="nhsuk-grid-column-full" style="display: none;">
+              <a class="nhsuk-button" href="/trade-families/tfg-table-view?deletedTfg">Continue</a>
+            </div>
+          </div>
         </div>
 
         <div class="nhsuk-tabs__panel" id="more">
@@ -414,7 +578,7 @@
                     </strong>
                   </span>
                 </td>
-                <td class="nhsuk-table__cell">Secondary Wound</td>
+                <td class="nhsuk-table__cell">Anadin-Rebrand</td>
                 <td class="nhsuk-table__cell">01-02-2027</td>
                 <td class="nhsuk-table__cell">01-02-3456</td>
               </tr>
@@ -427,7 +591,7 @@
                     </strong>
                   </span>
                 </td>
-                <td class="nhsuk-table__cell">Primary Wound</td>
+                <td class="nhsuk-table__cell">Anadin</td>
                 <td class="nhsuk-table__cell">01-02-2025</td>
                 <td class="nhsuk-table__cell">01-02-2027</td>
               </tr>
@@ -455,6 +619,21 @@
 
   if (urlParams.has('deleted')) {
     applyDeletedJourney();
+  }
+
+  if (urlParams.has('future')) {
+    document.getElementById('identifier-header').style = '';
+    document.getElementById('future-row').style = '';
+
+    document.querySelectorAll('.historic-first').forEach(element => {
+      element.style = '';
+      element.classList.add('nhsuk-u-visually-hidden');
+    });
+
+    document.querySelectorAll('.historic-second').forEach(element => {
+      element.style = '';
+      element.classList.add('nhsuk-u-visually-hidden');
+    });
   }
 
   function applyFirstUnlinkedJourney() {
@@ -527,7 +706,6 @@
 
     document.getElementById('delete-button-container').style = 'display: none;';
     document.getElementById('continue-button-container').style = '';
-    document.getElementById('button-divider').remove();
     document.getElementById('link-buttons-container').classList.add('nhsuk-u-visually-hidden');
 
     document.getElementById('summary-start-date').innerText = '1/1/2025';

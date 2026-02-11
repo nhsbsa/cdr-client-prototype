@@ -16,19 +16,17 @@
     <div id="content-pane" class="side-tree-view">
         <div class="nhsuk-grid-row">
             <div class="nhsuk-back-link">
-                <a class="nhsuk-back-link__link" href="update-tfg-links-effective-date">
+                <a class="nhsuk-back-link__link" href="view-tfg">
                     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
                         <path
                             d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
                         </path>
                     </svg>
-                    Go back to effective date</a>
+                    Go back</a>
             </div>
 
             <form id="new-search-form" method="post">
-                <input type="hidden" name="_csrf"
-                    value="2hchdpeJ3V_UGagSzjFC14nSJolq3X0bWpoBYSTA0yL1R1sQ43NCQaG9uTn5Ict2rBx24LDjC-gL5Uk2Ofw4UxHx4xLGcW5z" />
                 <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5" id="page-heading">Trade family
                     search</h1>
 
@@ -48,18 +46,47 @@
             </form>
 
             <div id="results-container" class="nhsuk-u-visually-hidden">
-                <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
-                    <span id="page-and-result-count-top">Page 1 of 2 (10 total results)</span>
+                <div class="nhsuk-inset-text nhsuk-grid-column-full" style="max-width: 100% !important;">
+                    <span class="nhsuk-u-visually-hidden">Information: </span>
 
+                    <p>Select single trade families from the search results. You can also <a
+                            onclick="selectAll()">select all trade families
+                            on this page</a> or
+                        <a onclick="removeAll()">remove all.</a>
+                    </p>
                 </div>
+
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
+                        <span id="page-and-result-count-top">Page 1 of 2 (10 total results)</span>
+                    </div>
+                    <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+                        <div class="nhsuk-u-font-size-16" id="tablePageSizeControls">
+                            <span class="nhsuk-u-margin-right-2">Page size:</span>
+
+                            <span class="nhsuk-u-font-weight-bold nhsuk-u-margin-right-2" aria-current="true">25</span>
+
+                            <a class="nhsuk-u-margin-right-2" aria-label="Page size of 50 results" href="#">50</a>
+
+                            <a aria-label="Page size of 100 results" href="#">100</a>
+                        </div>
+                    </div>
+                </div>
+
                 <form>
                     <div id="results-table-container" class="nhsuk-table-responsive">
-                        <table class="nhsuk-table ">
+                        <table class="nhsuk-table">
                             <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">VTM results
                             </caption>
                             <thead class="nhsuk-table__head">
                                 <tr class="nhsuk-table__row">
                                     <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name
+                                    </th>
+                                    <th class="nhsuk-table__header columnheader-sticky" scope="col">
+                                        Valid
+                                    </th>
+                                    <th class="nhsuk-table__header columnheader-sticky" scope="col">
+                                        Extractable
                                     </th>
                                     <th class="nhsuk-table__header columnheader-sticky" scope="col" id="add-header">
                                         Select
@@ -73,13 +100,30 @@
                                         <span class="nhsuk-table-responsive__heading">Name</span>
                                         <span class="nhsuk-u-font-size-16 nhsuk-table-content">
                                             <a id="results-table--name-value-0" href="/vtm/2133?ref="
-                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound</a>
+                                                class="nhsuk-link--no-visited-state" target="_blank">Anadin Extra</a>
                                         </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
                                     </td>
                                     <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                                         <span class="nhsuk-table-responsive__heading">Select</span>
                                         <a href="link-tf" id="results-table-add-link-0"
-                                            class="nhsuk-link--no-visited-state add-button" style="display: none;">Add</a>
+                                            class="nhsuk-link--no-visited-state add-button"
+                                            style="display: none;">Add</a>
 
                                         <div class="nhsuk-checkboxes">
                                             <div class="nhsuk-checkboxes__item">
@@ -98,13 +142,31 @@
                                         <span class="nhsuk-table-responsive__heading">Name</span>
                                         <span class="nhsuk-u-font-size-16 nhsuk-table-content">
                                             <a id="results-table--name-value-0" href="/vtm/2133?ref="
-                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 2</a>
+                                                class="nhsuk-link--no-visited-state" target="_blank">Anadin
+                                                Ibuprofen</a>
                                         </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
                                     </td>
                                     <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                                         <span class="nhsuk-table-responsive__heading">Select</span>
                                         <a href="link-tf" id="results-table-add-link-0"
-                                            class="nhsuk-link--no-visited-state add-button" style="display: none;">Add</a>
+                                            class="nhsuk-link--no-visited-state add-button"
+                                            style="display: none;">Add</a>
                                         <div class="nhsuk-checkboxes">
                                             <div class="nhsuk-checkboxes__item">
                                                 <input class="nhsuk-checkboxes__input" id="example-1" name="example"
@@ -122,13 +184,31 @@
                                         <span class="nhsuk-table-responsive__heading">Name</span>
                                         <span class="nhsuk-u-font-size-16 nhsuk-table-content">
                                             <a id="results-table--name-value-0" href="/vtm/2133?ref="
-                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 3</a>
+                                                class="nhsuk-link--no-visited-state" target="_blank">Anadin Joint
+                                                Pain</a>
                                         </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
                                     </td>
                                     <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                                         <span class="nhsuk-table-responsive__heading">Select</span>
                                         <a href="link-tf" id="results-table-add-link-0"
-                                            class="nhsuk-link--no-visited-state add-button" style="display: none;">Add</a>
+                                            class="nhsuk-link--no-visited-state add-button"
+                                            style="display: none;">Add</a>
                                         <div class="nhsuk-checkboxes">
                                             <div class="nhsuk-checkboxes__item">
                                                 <input class="nhsuk-checkboxes__input" id="example-1" name="example"
@@ -146,13 +226,31 @@
                                         <span class="nhsuk-table-responsive__heading">Name</span>
                                         <span class="nhsuk-u-font-size-16 nhsuk-table-content">
                                             <a id="results-table--name-value-0" href="/vtm/2133?ref="
-                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 4</a>
+                                                class="nhsuk-link--no-visited-state" target="_blank">Anadin
+                                                LiquiFast</a>
                                         </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
                                     </td>
                                     <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                                         <span class="nhsuk-table-responsive__heading">Select</span>
                                         <a href="link-tf" id="results-table-add-link-0"
-                                            class="nhsuk-link--no-visited-state add-button" style="display: none;">Add</a>
+                                            class="nhsuk-link--no-visited-state add-button"
+                                            style="display: none;">Add</a>
                                         <div class="nhsuk-checkboxes">
                                             <div class="nhsuk-checkboxes__item">
                                                 <input class="nhsuk-checkboxes__input" id="example-1" name="example"
@@ -170,13 +268,30 @@
                                         <span class="nhsuk-table-responsive__heading">Name</span>
                                         <span class="nhsuk-u-font-size-16 nhsuk-table-content">
                                             <a id="results-table--name-value-0" href="/vtm/2133?ref="
-                                                class="nhsuk-link--no-visited-state" target="_blank">Primary Wound 5</a>
+                                                class="nhsuk-link--no-visited-state" target="_blank">Anadin Original</a>
                                         </span>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24" width="16" height="16" focusable="false"
+                                            aria-hidden="true">
+                                            <path fill="#007f3b"
+                                                d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" />
+                                        </svg>
                                     </td>
                                     <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                                         <span class="nhsuk-table-responsive__heading">Select</span>
                                         <a href="link-tf" id="results-table-add-link-0"
-                                            class="nhsuk-link--no-visited-state add-button" style="display: none;">Add</a>
+                                            class="nhsuk-link--no-visited-state add-button"
+                                            style="display: none;">Add</a>
                                         <div class="nhsuk-checkboxes">
                                             <div class="nhsuk-checkboxes__item">
                                                 <input class="nhsuk-checkboxes__input" id="example-1" name="example"
@@ -210,7 +325,7 @@
                     </nav>
                 </div>
 
-                <a id="continue-button" href="link-tf?checkboxes" class="nhsuk-button">Continue</a>
+                <a id="continue-button" href="link-tfs-summary" class="nhsuk-button">Continue</a>
             </div>
         </div>
     </div>
@@ -252,6 +367,18 @@
 
     if (urlParams.has('add-buttons')) {
         setCheckboxes();
+    }
+
+    function selectAll() {
+        document.querySelectorAll('.nhsuk-checkboxes__input').forEach(element => {
+            element.checked = true;
+        });
+    }
+
+    function removeAll() {
+        document.querySelectorAll('.nhsuk-checkboxes__input').forEach(element => {
+            element.checked = false;
+        });
     }
 </script>
 

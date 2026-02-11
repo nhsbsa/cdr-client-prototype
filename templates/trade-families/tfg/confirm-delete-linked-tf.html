@@ -25,8 +25,11 @@
                     <span class="nhsuk-u-visually-hidden">Important: </span>
                     Confirm changes
                 </span> </h3>
-            <p>Please confirm you want to <strong>Unlink</strong> the following trade families from this trade family
-                group</p>
+
+            <p>Please confirm you want to <strong>unlink</strong> the following trade families from this trade family
+                group.</p>
+
+            <p id="warning-text">There will be <b>1</b> linked trade family left.</p>
         </div>
     </div>
 </div>
@@ -40,7 +43,7 @@
                         Name
                     </th>
                     <th role="columnheader" class="" scope="col">
-                        Invalid
+                        Valid
                     </th>
                     <th role="columnheader" class="" scope="col">
                         Extractable
@@ -52,9 +55,7 @@
             </thead>
             <tbody class="nhsuk-table__body">
                 <tr role="row" class="nhsuk-table__row first-update-row">
-                    <td class="nhsuk-table__cell"><a href="view-tf" class="nhsuk-link--no-visited-state">1
-                            Primary
-                            Wound</a></td>
+                    <td class="nhsuk-table__cell"><a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Extra</a></td>
                     <td class="nhsuk-table__cell ">
                         <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"
@@ -74,9 +75,7 @@
                     <td class="nhsuk-table__cell ">1234567890123456</td>
                 </tr>
                 <tr role="row" class="nhsuk-table__row first-update-row">
-                    <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Primary
-                            Wound
-                            (clotrimazole)</a></td>
+                    <td class="nhsuk-table__cell"><a href="#" class="nhsuk-link--no-visited-state">Anadin Ibuprofen</a></td>
                     <td class="nhsuk-table__cell ">
                         <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"
@@ -97,8 +96,7 @@
                 </tr>
 
                 <tr role="row" class="nhsuk-table__row second-update-row" style="display: none;">
-                    <td class="nhsuk-table__cell"><a href="view-tf" class="nhsuk-link--no-visited-state">
-                            Primary Wound (fluconazole)</a></td>
+                    <td class="nhsuk-table__cell"><a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Joint Pain</a></td>
                     <td class="nhsuk-table__cell ">
                         <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"
@@ -124,9 +122,9 @@
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-        <a href="confirm-delete-linked-tf-warning" class="nhsuk-button" id="unlink-button">Yes I want to Unlink</a>
+        <a href="view-tfg?unlinkedTfs" class="nhsuk-button" id="unlink-button">Unlink and save</a>
         <a href="view-tfg" class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-            Don't Unlink
+            Cancel update
         </a>
     </div>
 </div>
@@ -134,6 +132,8 @@
 <script>
     const urlParams = new URLSearchParams(globalThis.window.location.search);
     if (urlParams.has('secondUnlink')) {
+        document.getElementById('unlink-button').setAttribute('href', 'view-tfg?unlinkedAll');
+
         document.querySelectorAll('.first-update-row').forEach(element => {
             element.remove();
         });
@@ -142,7 +142,8 @@
             element.style = '';
         });
 
-        document.getElementById('unlink-button').setAttribute('href', 'confirm-delete-linked-tf-warning?secondUnlink');
+        document.getElementById('unlink-button').setAttribute('href', 'view-tfg?unlinkedAll');
+        document.getElementById('warning-text').innerText = "There will be no more linked trade families.";
     }
 </script>
 

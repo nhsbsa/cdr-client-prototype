@@ -186,7 +186,7 @@ fill-blue{
   }
   
   .update-box {
-    padding: 0;
+    padding: 0 !important;
     margin-top: 24px;
     background-color: #DFE3E6;
   }
