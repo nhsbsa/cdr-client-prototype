@@ -13,7 +13,7 @@
 
 {% block content %}
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="tf-search?searched">
+    <a class="nhsuk-back-link__link" id="back-link" href="tf-search?searched">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -420,7 +420,17 @@
             </div>
         </section>
 
-        <a class="nhsuk-button nhsuk-u-margin-top-5" href="link-tfs-confirm">Confirm</a>
+        <a class="nhsuk-button nhsuk-u-margin-top-5" id="continue-button" href="link-tfs-confirm">Continue</a>
     </div>
 </div>
+
+<script>
+    const urlParams = new URLSearchParams(globalThis.window.location.search);
+
+    if (urlParams.has('create')) {
+        document.getElementById('update-associated-vtm-sub-heading').innerText = 'Create new trade family group';
+        document.getElementById('continue-button').setAttribute('href', '/trade-families/tfg/create/confirm-new-tfg');
+        document.getElementById('back-link').setAttribute('href', 'tf-search?searched&create');
+    }
+</script>
 {% endblock %}

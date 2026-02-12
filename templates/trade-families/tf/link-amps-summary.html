@@ -13,7 +13,7 @@
 
 {% block content %}
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="amp-search">
+    <a class="nhsuk-back-link__link" id="back-link" href="amp-search">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -30,17 +30,40 @@
         <span class="nhsuk-u-visually-hidden"> - </span>
         <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Anadin Extra</h1>
 
+        <div id="error-summary" class="nhsuk-error-summary" data-module="nhsuk-error-summary" style="display: none;">
+            <div role="alert">
+                <h2 class="nhsuk-error-summary__title">
+                    There is a problem
+                </h2>
+                <div class="nhsuk-error-summary__body">
+                    <ul class="nhsuk-list nhsuk-error-summary__list">
+                        <li>
+                            <a href="#future-start-date-day">Effective date must match AMP's effective date</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <section id="amp-0">
             <div class="nhsuk-grid-column-full update-box">
                 <!--Current name-->
                 <fieldset class="nhsuk-fieldset">
-                    <legend id="vtm-0-name-legend" class="nhsuk-fieldset__legend--m update-general-heading">Anadin Future Tablets (Haleon UK Trading Ltd)</legend>
+                    <legend id="vtm-0-name-legend" class="nhsuk-fieldset__legend--m update-general-heading">Anadin
+                        Future Tablets (Haleon UK Trading Ltd)</legend>
                     <input class="nhsuk-input" type="hidden" id="values0.name" name="values[0].name"
                         value="Parabuthus species scorpion venom antiserum">
 
+                    <div class="nhsuk-grid-column-full" id="error-summary-container" style="display: none;">
+                        <span id="dob-day-error-error" class="nhsuk-error-message">
+                            <span class="nhsuk-u-visually-hidden">Error:</span> Effective date must match AMP's
+                            effective date
+                        </span>
+                    </div>
+
                     <!--Start Date-->
                     <div class="nhsuk-grid-column-one-third">
-                        <div class="nhsuk-form-group">
+                        <div id="future-start-date-container" class="nhsuk-form-group">
                             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m"
                                 id="vtm-0-start-date-legend">
                                 Start date
@@ -55,7 +78,7 @@
                                                     date </span>Day</label>
                                             <input
                                                 class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
-                                                inputmode="numeric" maxlength="2" id="vtm-0-start-date-day" type="text"
+                                                inputmode="numeric" maxlength="2" id="future-start-date-day" type="text"
                                                 name="values[0].startDate.day" value="06" />
                                         </div>
                                     </div>
@@ -66,7 +89,7 @@
                                                     date </span>Month</label>
                                             <input
                                                 class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
-                                                inputmode="numeric" maxlength="2" id="vtm-0-start-date-month"
+                                                inputmode="numeric" maxlength="2" id="future-start-date-month"
                                                 type="text" name="values[0].startDate.month" value="02" />
                                         </div>
                                     </div>
@@ -77,8 +100,8 @@
                                                     date </span>Year</label>
                                             <input
                                                 class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 js-paste-date"
-                                                inputmode="numeric" maxlength="4" id="vtm-0-start-date-year" type="text"
-                                                name="values[0].startDate.year" value="2027" />
+                                                inputmode="numeric" maxlength="4" id="future-start-date-year"
+                                                type="text" name="values[0].startDate.year" value="2027" />
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +111,7 @@
 
                     <!--End Date-->
                     <div class="nhsuk-grid-column-one-third">
-                        <div class="nhsuk-form-group">
+                        <div id="future-end-date-container" class="nhsuk-form-group">
                             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m"
                                 id="vtm-0-end-date-heading">
                                 End date
@@ -553,7 +576,40 @@
             </div>
         </section>
 
-        <a class="nhsuk-button nhsuk-u-margin-top-5" href="link-amps-confirm">Confirm</a>
+        <a class="nhsuk-button nhsuk-u-margin-top-5" id="continue-button" onclick="validateEntityDate()">Continue</a>
     </div>
 </div>
+
+<script>
+    const urlParams = new URLSearchParams(globalThis.window.location.search);
+    let href = 'link-amps-confirm';
+
+    if (urlParams.has('create')) {
+        document.getElementById('update-associated-vtm-sub-heading').innerText = "Create new trade family";
+        href = '/trade-families/tf/create/confirm-new-tf';
+        document.getElementById('back-link').setAttribute('href', 'amp-search?searched&create');
+    }
+
+    function validateEntityDate() {
+        const entityStartDay = '06';
+        const entityStartMonth = '02';
+        const entityStartYear = '2027';
+
+        const actualStartDay = document.getElementById('future-start-date-day').value;
+        const actualStartMonth = document.getElementById('future-start-date-month').value;
+        const actualStartYear = document.getElementById('future-start-date-year').value;
+
+        if (entityStartDay !== actualStartDay || entityStartMonth !== actualStartMonth || entityStartYear !== actualStartYear) {
+            // throw validation
+            document.getElementById('error-summary').style = '';
+            document.location.href = '#error-summary';
+            document.getElementById('error-summary-container').style = '';
+            document.getElementById('future-start-date-container').classList.add('nhsuk-form-group--error');
+            document.getElementById('future-end-date-container').classList.add('nhsuk-form-group--error');
+            return;
+        }
+
+        document.location.href = href;
+    }
+</script>
 {% endblock %}

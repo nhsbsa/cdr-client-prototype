@@ -1,19 +1,7 @@
 {% extends "base-large.html" %}
-{% block breadcrumb %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-    <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="tfg-table-view">Trade
-                    family
-                    groups</a></li>
-        </ol>
-    </div>
-</nav>
-{% endblock %}
-
 {% block content %}
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="link-tfs-summary">
+    <a class="nhsuk-back-link__link" href="/trade-families/tfg/link-tfs-summary?create">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -25,9 +13,69 @@
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-        <span class="nhsuk-caption-l" id="update-associated-vtm-sub-heading">Update associated trade families summary</span>
+        <span class="nhsuk-caption-l" id="update-associated-vtm-sub-heading">Create new trade family group</span>
         <span class="nhsuk-u-visually-hidden"> - </span>
-        <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Anadin</h1>
+        <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Summary</h1>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <h2 class="nhsuk-heading-m">New trade family group</h2>
+        <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                    Anadin
+                </dd>
+                <dd class="nhsuk-summary-list__actions">
+                    <a href="create-new-tfg">
+                        Change<span class="nhsuk-u-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                    Start date
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                    12 February 2026
+                </dd>
+                <dd class="nhsuk-summary-list__actions">
+                    <a href="create-new-tfg">
+                        Change<span class="nhsuk-u-visually-hidden"> start date</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                    End date
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                    01 February 3456
+                </dd>
+                <dd class="nhsuk-summary-list__actions">
+                    <a href="create-new-tfg">
+                        Change<span class="nhsuk-u-visually-hidden"> end date</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-half">
+                <h2 class="nhsuk-heading-m">Linked trade families</h2>
+            </div>
+            <div class="nhsuk-grid-column-one-half">
+                <a href="/trade-families/tfg/tf-search?create" style="float: right;">
+                    Change<span class="nhsuk-u-visually-hidden"> linked linked trade families</span>
+                </a>
+            </div>
+        </div>
 
         <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
             <thead role="rowgroup" class="nhsuk-table__head">
@@ -89,7 +137,6 @@
 
                     </td>
                 </tr>
-                
                 <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell-historic">
                         <span class="nhsuk-table-responsive__heading">Indicator </span>
@@ -114,9 +161,6 @@
                     </td>
                     <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
                         <span class="nhsuk-table-responsive__heading">End date</span>
-
-
-
                         <span class="nhsuk-u-visually-hidden stop-user-selection"
                             id="associated-vtm-table--end-date-aria-0">End of time
                         </span>
@@ -149,6 +193,38 @@
                     </td>
                     <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
                         <span class="nhsuk-table-responsive__heading">End date</span>
+                        <span class="nhsuk-u-visually-hidden stop-user-selection"
+                            id="associated-vtm-table--end-date-aria-0">End of time
+                        </span>
+
+                        <span id="associated-vtm-table--end-date-0" aria-hidden="true">01-02-3456</span>
+
+                    </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell-historic">
+                        <span class="nhsuk-table-responsive__heading">Indicator </span>
+                        <span id="associated-vtm-table--current-tag-value-current">
+                            <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Future Dated</span>
+                        </span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Name</span>
+                        <span id="associated-vtm-table--name-0">Anadin Extra</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
+                        <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+                        <span id="associated-vtm-table--start-date-aria-0"
+                            class="nhsuk-u-visually-hidden stop-user-selection">6 February 2027</span>
+
+
+                        <span id="associated-vtm-table--start-date-0" aria-hidden="true">06-02-2027</span>
+
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
+                        <span class="nhsuk-table-responsive__heading">End date</span>
 
 
 
@@ -162,11 +238,11 @@
                 </tr>
             </tbody>
         </table>
-
-        <div class="nhsuk-u-margin-top-5">
-            <a class="nhsuk-button" href="view-tfg?future">Link and save</a>
-            <a class="nhsuk-button nhsuk-button--secondary" href="view-tfg">Cancel update</a>
-        </div>
     </div>
 </div>
+<div class="nhsuk-grid-row">
+    <a href="/trade-families/tfg/view-tfg" class="nhsuk-button">Save and create</a>
+    <a href="/trade-families/tfg-table-view" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+</div>
+
 {% endblock %}

@@ -1,22 +1,10 @@
 {% extends "trade-families/base.html" %}
-{% block breadcrumb %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-    <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="tfg-table-view">Trade
-                    family
-                    groups</a></li>
-        </ol>
-    </div>
-</nav>
-{% endblock %}
-
 {% block content %}
 <div class="nhsuk-grid-row">
     <div id="content-pane" class="side-tree-view">
         <div class="nhsuk-grid-row">
             <div class="nhsuk-back-link">
-                <a class="nhsuk-back-link__link" href="view-tfg">
+                <a class="nhsuk-back-link__link" id="back-link" href="view-tfg">
                     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
                         <path
@@ -38,24 +26,143 @@
                         autocomplete="off" name="searchTerm" value="">
                 </div>
 
+                <details class="nhsuk-details nhsuk-details--expanded govuk-!-margin-bottom-4"
+                    data-module="nhsuk-details">
+                    <summary class="nhsuk-details__summary">
+                        <span class="nhsuk-details__summary-text">Filter options</span>
+                    </summary>
+
+                    <div class="nhsuk-details__text">
+                        <form>
+                            <div class="nhsuk-form-group">
+                                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                                    <legend class="nhsuk-fieldset__legend">
+                                        Filter by attributes
+                                    </legend>
+                                    <div class="nhsuk-checkboxes">
+                                        <div class="nhsuk-grid-column-full">
+                                            <div class="nhsuk-u-one-third">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input class="nhsuk-checkboxes__input" id="valid" name="filter"
+                                                        type="checkbox" checked>
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">
+                                                        Valid
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="nhsuk-u-one-third">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input class="nhsuk-checkboxes__input" id="extractable"
+                                                        name="filter" type="checkbox" checked>
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="extractable">
+                                                        Extractable
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="nhsuk-u-one-third">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input class="nhsuk-checkboxes__input" id="future-dated"
+                                                        name="filter" type="checkbox">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="future-dated">
+                                                        Show future dated AMPs
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
+                                            <div class="nhsuk-u-one-third">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input class="nhsuk-checkboxes__input" id="invalid" name="filter"
+                                                        type="checkbox" checked>
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">
+                                                        Invalid
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="nhsuk-u-one-third">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input class="nhsuk-checkboxes__input" id="unextractable"
+                                                        name="filter" type="checkbox" checked>
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label"
+                                                        for="unextractable">
+                                                        Unextractable
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="nhsuk-u-one-third">
+                                                <div class="nhsuk-checkboxes__item">
+                                                    <input class="nhsuk-checkboxes__input" id="historic" name="filter"
+                                                        type="checkbox">
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="historic">
+                                                        Show historic AMPs
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <!--sort by -->
+                                <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">
+                                    <div class="nhsuk-form-group">
+                                        <fieldset class="nhsuk-fieldset">
+                                            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+                                                <label
+                                                    class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden"
+                                                    for="historic">
+                                                    Sort by
+                                                </label>
+                                            </legend>
+                                            <h3 class="nhsuk-u-margin-5">Sort by</h3>
+                                            <div class="nhsuk-radios" data-module="nhsuk-radios">
+                                                <div class="nhsuk-radios__item">
+                                                    <input class="nhsuk-radios__input " name="exampleInline"
+                                                        type="radio" value="yes">
+                                                    <label class="nhsuk-label nhsuk-radios__label">
+                                                        Newest to oldest
+                                                    </label>
+                                                </div>
+                                                <div class="nhsuk-radios__item">
+                                                    <input class="nhsuk-radios__input" name="exampleInline" type="radio"
+                                                        value="no">
+                                                    <label class="nhsuk-label nhsuk-radios__label">
+                                                        Oldest to newest
+                                                    </label>
+                                                </div>
+                                                <div class="nhsuk-radios__item">
+                                                    <input class="nhsuk-radios__input" name="exampleInline" type="radio"
+                                                        value="no">
+                                                    <label class="nhsuk-label nhsuk-radios__label">
+                                                        Z to A
+                                                    </label>
+                                                </div>
+                                                <div class="nhsuk-radios__item">
+                                                    <input class="nhsuk-radios__input" name="exampleInline" type="radio"
+                                                        value="no">
+                                                    <label class="nhsuk-label nhsuk-radios__label">
+                                                        A to Z
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </details>
+
                 <div id="button-search">
-                    <a class="nhsuk-button nhsuk-button--secondary" href="?searched">
+                    <a class="nhsuk-button nhsuk-button--secondary" id="search-button" href="?searched">
                         Search
                     </a>
                 </div>
             </form>
 
-            <div id="results-container" class="nhsuk-u-visually-hidden">
-                <div class="nhsuk-inset-text nhsuk-grid-column-full" style="max-width: 100% !important;">
-                    <span class="nhsuk-u-visually-hidden">Information: </span>
-
-                    <p>Select single trade families from the search results. You can also <a
-                            onclick="selectAll()">select all trade families
-                            on this page</a> or
-                        <a onclick="removeAll()">remove all.</a>
-                    </p>
-                </div>
-
+            <div id="results-container" class="nhsuk-u-visually-hidden nhsuk-u-margin-top-5">
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
                         <span id="page-and-result-count-top">Page 1 of 2 (10 total results)</span>
@@ -308,7 +415,19 @@
                     </div>
                 </form>
 
-                <div id="pagination">
+                <div class="nhsuk-grid-row">
+                    <div style="float: right;">
+                        <a class="nhsuk-button nhsuk-button--secondary" onclick="selectAll()">
+                            Select all on this page
+                        </a>
+
+                        <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3" onclick="removeAll()">
+                            Reset selected
+                        </a>
+                    </div>
+                </div>
+
+                <div id="pagination" class="nhsuk-grid-row">
                     <nav aria-label="Pagination Navigation">
                         <ul class="pagination">
                             <li class="pagination__item">
@@ -338,7 +457,7 @@
         const container = document.getElementById('button-search');
 
         container.innerHTML += `
-        <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3"
+        <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3" style="color: black;"
                 role="button"
                 href="tf-search">
             Reset
@@ -380,6 +499,14 @@
             element.checked = false;
         });
     }
+</script>
+
+<script>
+    if (urlParams.has('create')) {
+        document.getElementById('search-button').setAttribute('href', '?searched&create');
+        document.getElementById('back-link').setAttribute('href', '/trade-families/tfg/create/create-new-tfg');
+        document.getElementById('continue-button').setAttribute('href', 'link-tfs-summary?create');
+    }   
 </script>
 
 {% endblock %}

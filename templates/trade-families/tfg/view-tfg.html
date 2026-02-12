@@ -244,15 +244,12 @@
           </div>
 
           <form>
-            <table class="nhsuk-table">
+            <table class="nhsuk-table-responsive" role="table">
               <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
-                  <th role="columnheader" class="" scope="col">
-                    Select
-                  </th>
                   <th id="identifier-header" role="columnheader" class="nhsuk-u-visually-hidden" scope="col"
                     style="display: none;">
-                    Idenitifer
+                    Indicator
                   </th>
                   <th role="columnheader" class="" scope="col">
                     Name
@@ -264,57 +261,18 @@
                     Extractable
                   </th>
                   <th role="columnheader" class="" scope="col">
-                    SNOMED Code
+                    Start date
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    End date
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    Select
                   </th>
                 </tr>
               </thead>
               <tbody class="nhsuk-table__body">
-                <tr role="row" class="nhsuk-table__row first-row">
-                  <td class="nhsuk-table__cell">
-                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
-                          type="checkbox">
-                        <label class="nhsuk-checkboxes__label" for="row-1">
-                          <span class="nhsuk-u-visually-hidden">Select row</span>
-                        </label>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="nhsuk-table__cell historic-first" style="display: none;">
-                    <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
-                  </td>
-                  <td class="nhsuk-table__cell">
-                    <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Extra</a>
-                  </td>
-                  <td class="nhsuk-table__cell first-row-status">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
-                  <td class="nhsuk-table__cell first-row-status">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
-                  <td class="nhsuk-table__cell ">1234567890123456</td>
-                </tr>
-                <tr id="future-row" role="row" class="nhsuk-table__row" style="display: none;">
-                  <td class="nhsuk-table__cell">
-                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
-                          type="checkbox">
-                        <label class="nhsuk-checkboxes__label" for="row-1">
-                          <span class="nhsuk-u-visually-hidden">Select row</span>
-                        </label>
-                      </div>
-                    </div>
-                  </td>
+                <tr id="future-row" role="row" class="nhsuk-table__row temporal-future-dated" style="display: none;">
                   <td class="nhsuk-table__cell">
                     <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
                   </td>
@@ -335,9 +293,8 @@
                       </path>
                     </svg>
                   </td>
-                  <td class="nhsuk-table__cell">1234567890123456</td>
-                </tr>
-                <tr role="row" class="nhsuk-table__row first-row">
+                  <td class="nhsuk-table__cell">12-02-2026</td>
+                  <td class="nhsuk-table__cell">01-02-3456</td>
                   <td class="nhsuk-table__cell">
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                       <div class="nhsuk-checkboxes__item">
@@ -349,6 +306,43 @@
                       </div>
                     </div>
                   </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row first-row">
+                  <td class="nhsuk-table__cell historic-first" style="display: none;">
+                    <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Extra</a>
+                  </td>
+                  <td class="nhsuk-table__cell first-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell first-row-status">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" fill="none" aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell">12-02-2026</td>
+                  <td class="nhsuk-table__cell">01-02-3456</td>
+                  <td class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
+                          type="checkbox">
+                        <label class="nhsuk-checkboxes__label" for="row-1">
+                          <span class="nhsuk-u-visually-hidden">Select row</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row first-row">
                   <td class="nhsuk-table__cell historic-first" style="display: none;">
                     <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
@@ -368,13 +362,12 @@
                       </path>
                     </svg>
                   </td>
-                  <td class="nhsuk-table__cell ">1234567890123456</td>
-                </tr>
-                <tr role="row" class="nhsuk-table__row second-row">
+                  <td class="nhsuk-table__cell">12-02-2026</td>
+                  <td class="nhsuk-table__cell">01-02-3456</td>
                   <td class="nhsuk-table__cell">
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                       <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input checkbox-row-second" id="row-1" name="row-1"
+                        <input class="nhsuk-checkboxes__input checkbox-row-first" id="row-1" name="row-1"
                           type="checkbox">
                         <label class="nhsuk-checkboxes__label" for="row-1">
                           <span class="nhsuk-u-visually-hidden">Select row</span>
@@ -382,6 +375,8 @@
                       </div>
                     </div>
                   </td>
+                </tr>
+                <tr role="row" class="nhsuk-table__row second-row">
                   <td class="nhsuk-table__cell historic-second" style="display: none;">
                     <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
@@ -401,16 +396,28 @@
                       </path>
                     </svg>
                   </td>
-                  <td class="nhsuk-table__cell ">1234567890123456</td>
+                  <td class="nhsuk-table__cell">12-02-2026</td>
+                  <td class="nhsuk-table__cell">01-02-3456</td>
+                  <td class="nhsuk-table__cell">
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input checkbox-row-second" id="row-1" name="row-1"
+                          type="checkbox">
+                        <label class="nhsuk-checkboxes__label" for="row-1">
+                          <span class="nhsuk-u-visually-hidden">Select row</span>
+                        </label>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </form>
           <div class="nhsuk-u-margin-top-6">
             <div id="link-buttons-container" style="float: right;">
-              <a id="unlink-button" class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-right-2"
-                href="confirm-delete-linked-tf">Unlink selected trade families</a>
-              <a class="nhsuk-button nhsuk-button--reverse">Select all trade families</a>
+              <a id="unlink-button" class="nhsuk-button nhsuk-u-margin-right-2" href="confirm-delete-linked-tf">Unlink
+                selected trade families</a>
+              <a class="nhsuk-button nhsuk-button--secondary">Select all trade families</a>
             </div>
 
             <div id="pagination">
@@ -436,7 +443,7 @@
           <h3 class="nhsuk-heading-l">View summary</h3>
 
           <div class="nhsuk-action-link" style="float: right;">
-            <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg">
+            <a id="update-tfg-link" class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="update-tfg">
               <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M0 0h24v24H0z" fill="none"></path>
@@ -501,33 +508,6 @@
             </dl>
 
           </section>
-
-          <div class="nhsuk-grid-row">
-            <div id="delete-warning-container" class="nhsuk-grid-column-full">
-              <h3>Invalidate trade family group</h3>
-              <details class="nhsuk-details">
-                <summary class="nhsuk-details__summary">
-                  <span class="nhsuk-details__summary-text">
-                    Do you want to invalidate this trade family group
-                  </span>
-                </summary>
-                <div class="nhsuk-details__text">
-                  <p>To invalidate this trade family you'll first need to unlink all associated
-                    linked trade families.</p>
-                </div>
-              </details>
-            </div>
-
-            <div id="delete-button-container" class="nhsuk-grid-column-full" style="display: none;">
-              <a class="nhsuk-button" style="background-color: red; float: right;" href="delete-tfg">Invalidate trade
-                family
-                group</a>
-            </div>
-
-            <div id="continue-button-container" class="nhsuk-grid-column-full" style="display: none;">
-              <a class="nhsuk-button" href="/trade-families/tfg-table-view?deletedTfg">Continue</a>
-            </div>
-          </div>
         </div>
 
         <div class="nhsuk-tabs__panel" id="more">
@@ -691,8 +671,7 @@
                     </svg>`;
     });
 
-    document.getElementById('delete-warning-container').style = 'display: none;';
-    document.getElementById('delete-button-container').style = '';
+    document.getElementById('update-tfg-link').setAttribute('href', 'update-tfg?unlinkedAll');
   }
 
   function applyDeletedJourney() {
@@ -703,8 +682,6 @@
     });
 
     const endDate = new Date();
-
-    document.getElementById('delete-button-container').style = 'display: none;';
     document.getElementById('continue-button-container').style = '';
     document.getElementById('link-buttons-container').classList.add('nhsuk-u-visually-hidden');
 
