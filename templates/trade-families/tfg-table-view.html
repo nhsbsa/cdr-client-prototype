@@ -71,7 +71,7 @@
                                                                 name="filter" type="checkbox">
                                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                                 for="future-dated">
-                                                                Show future dated AMPs
+                                                                Show future dated trade family groups
                                                             </label>
                                                         </div>
                                                     </div>
@@ -103,7 +103,7 @@
                                                                 name="filter" type="checkbox">
                                                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                                                 for="historic">
-                                                                Show historic AMPs
+                                                                Show historic trade family groups (Remove?)
                                                             </label>
                                                         </div>
                                                     </div>
@@ -277,7 +277,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <a href="create-new-tfg" class="nhsuk-button">
+                <a href="/trade-families/tfg/create/create-new-tfg" class="nhsuk-button">
                     Create new trade family group
                 </a>
             </div>
@@ -287,7 +287,7 @@
 
 <script>
     const urlParams = new URLSearchParams(globalThis.window.location.search);
-    if (urlParams.has('deletedTfg')) {
+    if (urlParams.has('invalidatedTfg')) {
         document.getElementById('deleted-row').style = 'background-color: #d8dde0;';
         document.getElementById('deleted-identifier').style = '';
         document.getElementById('deleted-number-tfs').innerText = '0';
@@ -305,6 +305,10 @@
             `;
 
         document.getElementById('deleted-link').setAttribute('href', '/trade-families/tfg/view-tfg?deleted')
+    }
+
+    if (urlParams.has('deletedTfg')) {
+        document.getElementById('deleted-row').style = 'display: none;';
     }
 </script>
 {% endblock %}

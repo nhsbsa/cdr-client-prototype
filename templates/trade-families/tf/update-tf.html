@@ -129,6 +129,27 @@
                             </fieldset>
                         </div>
                     </div>
+
+                    <div class="nhsuk-grid-column-full" id="delete-warning-container">
+                        <h3>Invalidate trade family</h3>
+                        <details class="nhsuk-details">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">
+                                    Do you want to invalidate this trade family
+                                </span>
+                            </summary>
+                            <div class="nhsuk-details__text">
+                                <p>To invalidate this trade family you'll first need to unlink all associated linked
+                                    AMPs.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div id="delete-button-container" class="nhsuk-grid-column-full" style="display: none;">
+                        <a class="nhsuk-button" id="delete-button" style="background-color: red;"
+                            href="delete-tf">Invalidate trade
+                            family</a>
+                    </div>
                 </fieldset>
             </div>
         </div>
@@ -136,5 +157,13 @@
         <a class="nhsuk-button" href="update-tf-summary">Continue</a>
     </div>
 </div>
+
+<script>
+    const urlParams = new URLSearchParams(globalThis.window.location.search);
+    if (urlParams.has('unlinkedAll')) {
+        document.getElementById('delete-warning-container').style = 'display: none;';
+        document.getElementById('delete-button-container').style = '';
+    }
+</script>
 
 {% endblock %}

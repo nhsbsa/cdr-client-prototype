@@ -147,14 +147,10 @@
                             </div>
 
                             <div id="delete-button-container" class="nhsuk-grid-column-full" style="display: none;">
-                                <a class="nhsuk-button" style="background-color: red;"
+                                <a class="nhsuk-button" id="delete-button" style="background-color: red;"
                                     href="delete-tfg">Invalidate trade
                                     family
                                     group</a>
-                            </div>
-
-                            <div id="continue-button-container" class="nhsuk-grid-column-full" style="display: none;">
-                                <a class="nhsuk-button" href="/trade-families/tfg-table-view?deletedTfg">Continue</a>
                             </div>
                         </div>
                     </div>
@@ -171,6 +167,12 @@
     if (urlParams.has('unlinkedAll')) {
         document.getElementById('delete-warning-container').style = 'display: none;';
         document.getElementById('delete-button-container').style = '';
+    }
+
+    if (urlParams.has('unextracted')) {
+        const deleteButton = document.getElementById('delete-button');
+        deleteButton.innerText = 'Delete trade family group';
+        deleteButton.setAttribute('href', 'delete-tfg?unextracted');
     }
 </script>
 
