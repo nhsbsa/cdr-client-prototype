@@ -1,0 +1,100 @@
+{% extends "trade-families/base.html" %}
+{% block content %}
+<div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="create-new-tfg">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true" height="24" width="24">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+            </path>
+        </svg>
+        Go back</a>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <span class="nhsuk-caption-l" id="update-associated-vtm-sub-heading">Create new trade family group</span>
+        <span class="nhsuk-u-visually-hidden"> - </span>
+        <h1 class="nhsuk-heading-xl">Link trade families</h1>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row" id="link-tfs-error-summary" style="display: none;">
+    <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-error-summary" data-module="nhsuk-error-summary">
+            <div role="alert">
+                <h2 class="nhsuk-error-summary__title">
+                    There is a problem
+                </h2>
+                <div class="nhsuk-error-summary__body">
+                    <ul class="nhsuk-list nhsuk-error-summary__list">
+                        <li>
+                            <a href="#link-tfs-radios">You must provide an answer</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <div id="link-tfs-form-group" class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                    <h1 class="nhsuk-fieldset__heading">
+                        Would you like to link trade families now?
+                    </h1>
+                </legend>
+
+                <div class="nhsuk-hint">You may also link trade families to this trade family group later.</div>
+
+                <span id="link-tfs-error-message" class="nhsuk-error-message" style="display: none;">
+                    <span class="nhsuk-u-visually-hidden">Error:</span> You must provide an answer
+                </span>
+
+                <div id="link-tfs-radios" class="nhsuk-radios" data-module="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="link-tfs-yes" name="link-tfs" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="link-tfs-yes">Yes</label>
+                    </div>
+                    <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="link-tfs-no" name="link-tfs" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="link-tfs-no">No</label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <a class="nhsuk-button" onclick="onSubmit()">Continue</a>
+    </div>
+</div>
+
+<script>
+    function onSubmit() {
+        const selectedInput = document.querySelector('input[name="link-tfs"]:checked');
+        if (selectedInput) {
+            const value = selectedInput.value;
+            if (value === 'yes') {
+                window.location.href = '/trade-families/tfg/tf-search?create';
+            } else {
+                window.location.href = 'confirm-new-tfg?noLinkedTfs';
+            }
+        } else {
+            const formGroup = document.getElementById('link-tfs-form-group');
+            formGroup.classList.add('nhsuk-form-group--error');
+
+            const errorMessage = document.getElementById('link-tfs-error-message');
+            errorMessage.style = '';
+
+            const errorSummary = document.getElementById('link-tfs-error-summary');
+            errorSummary.style = '';
+        }
+    }
+</script>
+{% endblock %}

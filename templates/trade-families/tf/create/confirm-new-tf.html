@@ -1,7 +1,7 @@
 {% extends "base-large.html" %}
 {% block content %}
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="/trade-families/tf/link-amps-summary?create">
+    <a class="nhsuk-back-link__link" id="back-link" href="/trade-families/tf/link-amps-summary?create">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -77,7 +77,7 @@
             </div>
         </div>
 
-        <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
+        <table role="table" id="linked-amps-table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
             <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col"
@@ -261,11 +261,23 @@
                 </tr>
             </tbody>
         </table>
+
+        <p id="no-linked-amps" style="display: none;">There will be no AMPs.</p>
     </div>
 </div>
 <div class="nhsuk-grid-row">
     <a href="/trade-families/tf/view-tf" class="nhsuk-button">Save and create</a>
     <a href="/trade-families/tf-table-view" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
 </div>
+
+<script>
+    const urlParams = new URLSearchParams(globalThis.window.location.search);
+
+    if (urlParams.has('noLinkedAmps')) {
+        document.getElementById('linked-amps-table').style = 'display: none;';
+        document.getElementById('no-linked-amps').style = '';
+        document.getElementById('back-link').setAttribute('href', 'question-link-amps');
+    }
+</script>
 
 {% endblock %}

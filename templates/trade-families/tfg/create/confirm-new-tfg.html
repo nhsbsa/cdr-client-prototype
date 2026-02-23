@@ -1,7 +1,7 @@
 {% extends "base-large.html" %}
 {% block content %}
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="/trade-families/tfg/link-tfs-summary?create">
+    <a class="nhsuk-back-link__link" id="back-link" href="/trade-families/tfg/link-tfs-summary?create">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -72,12 +72,12 @@
             </div>
             <div class="nhsuk-grid-column-one-half">
                 <a href="/trade-families/tfg/tf-search?create" style="float: right;">
-                    Change<span class="nhsuk-u-visually-hidden"> linked linked trade families</span>
+                    Change<span class="nhsuk-u-visually-hidden"> linked trade families</span>
                 </a>
             </div>
         </div>
 
-        <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
+        <table role="table" id="linked-tfs-table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
             <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col"
@@ -238,11 +238,25 @@
                 </tr>
             </tbody>
         </table>
+
+        <p id="no-linked-tfs" style="display: none;">There will be no linked trade families.</p>
     </div>
 </div>
 <div class="nhsuk-grid-row">
-    <a href="/trade-families/tfg/view-tfg" class="nhsuk-button">Save and create</a>
-    <a href="/trade-families/tfg-table-view" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+    <div class="nhsuk-grid-column-full">
+        <a href="/trade-families/tfg/view-tfg" class="nhsuk-button">Save and create</a>
+        <a href="/trade-families/tfg-table-view" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+    </div>
 </div>
+
+<script>
+    const urlParams = new URLSearchParams(globalThis.window.location.search);
+
+    if (urlParams.has('noLinkedTfs')) {
+        document.getElementById('linked-tfs-table').style = 'display: none;';
+        document.getElementById('no-linked-tfs').style = '';
+        document.getElementById('back-link').setAttribute('href', 'question-link-tfs');
+    }
+</script>
 
 {% endblock %}
