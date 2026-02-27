@@ -22,7 +22,7 @@
             <a href="/trade-families/tfg-table-view" class="app-side-nav__link">Trade family groups</a>
           </li>
           <li class="app-side-nav__item">
-            <a class="app-side-nav__link">Trade families</a>
+            <a href="/trade-families/tf-table-view" class="app-side-nav__link">Trade families</a>
           </li>
         </ul>
       </nav>
@@ -266,12 +266,12 @@
                   <th role="columnheader" class="" scope="col">
                     Extractable
                   </th>
-                  <!--                  <th role="columnheader" class="" scope="col">-->
-                  <!--                    Trade families start date-->
-                  <!--                  </th>-->
-                  <!--                  <th role="columnheader" class="" scope="col">-->
-                  <!--                    Trade families end date-->
-                  <!--                  </th>-->
+                                    <th role="columnheader" class="" scope="col">
+                                      Trade families start date
+                                    </th>
+                                    <th role="columnheader" class="" scope="col">
+                                      Trade families end date
+                                    </th>
                   <th role="columnheader" class="" scope="col">
                     Select
                   </th>
@@ -299,8 +299,8 @@
                       </path>
                     </svg>
                   </td>
-                  <!--                  <td class="nhsuk-table__cell">12-02-2026</td>-->
-                  <!--                  <td class="nhsuk-table__cell">01-02-3456</td>-->
+                                    <td class="nhsuk-table__cell">12-02-2026</td>
+                                    <td class="nhsuk-table__cell">01-02-3456</td>
                   <td class="nhsuk-table__cell">
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                       <div class="nhsuk-checkboxes__item">
@@ -318,7 +318,7 @@
                     <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
                   <td class="nhsuk-table__cell">
-                    <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Extra</a>
+                    <a href="/trade-families/tf/view-tf" class="nhsuk-link--no-visited-state">Anadin Extra</a>
                   </td>
                   <td class="nhsuk-table__cell first-row-status">
                     <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green" xmlns="http://www.w3.org/2000/svg"
@@ -334,8 +334,8 @@
                       </path>
                     </svg>
                   </td>
-                  <!--                  <td class="nhsuk-table__cell">12-02-2026</td>-->
-                  <!--                  <td class="nhsuk-table__cell">01-02-3456</td>-->
+                                    <td class="nhsuk-table__cell">12-02-2026</td>
+                                    <td class="nhsuk-table__cell">01-02-3456</td>
                   <td class="nhsuk-table__cell">
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                       <div class="nhsuk-checkboxes__item">
@@ -368,8 +368,8 @@
                       </path>
                     </svg>
                   </td>
-                  <!--                  <td class="nhsuk-table__cell">12-02-2026</td>-->
-                  <!--                  <td class="nhsuk-table__cell">01-02-3456</td>-->
+                                    <td class="nhsuk-table__cell">12-02-2026</td>
+                                    <td class="nhsuk-table__cell">01-02-3456</td>
                   <td class="nhsuk-table__cell">
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                       <div class="nhsuk-checkboxes__item">
@@ -402,8 +402,8 @@
                       </path>
                     </svg>
                   </td>
-                  <!--                  <td class="nhsuk-table__cell">12-02-2026</td>-->
-                  <!--                  <td class="nhsuk-table__cell">01-02-3456</td>-->
+                                    <td class="nhsuk-table__cell">12-02-2026</td>
+                                    <td class="nhsuk-table__cell">01-02-3456</td>
                   <td class="nhsuk-table__cell">
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
                       <div class="nhsuk-checkboxes__item">
@@ -421,11 +421,12 @@
           </form>
           <div class="nhsuk-u-margin-top-6">
             <div id="link-buttons-container" style="float: right;">
-              <a id="unlink-button" class="nhsuk-button nhsuk-u-margin-right-2" href="confirm-delete-linked-tf">Unlink
+              <a id="unlink-button" class="nhsuk-button " href="confirm-delete-linked-tf">Unlink
                 selected trade families</a>
+              <a class="nhsuk-button nhsuk-button--secondary">Edit selected trade families</a>
               <a class="nhsuk-button nhsuk-button--secondary">Select all trade families</a>
-            </div>
 
+            </div>
             <div id="pagination">
               <nav aria-label="Pagination Navigation">
                 <ul class="pagination">

@@ -1,0 +1,1124 @@
+{% extends "trade-families/base.html" %}
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="tfg-table-view">Trade
+        family
+        groups</a></li>
+    </ol>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div id="content-pane" class="side-tree-view">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="view-tf#tfg">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+            </path>
+          </svg>
+          Go back</a>
+      </div>
+
+      <form id="new-search-form" method="post">
+        <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5" id="page-heading">Search new trade family group
+          name</h1>
+
+        <div class="nhsuk-form-group autocomplete-wrapper nhsuk-u-width-full"
+             id="autocomplete-results__form-group">
+          <label class="nhsuk-label" for="search-term">Enter your new trade family group name</label>
+
+          <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text" autofocus="autofocus"
+                 autocomplete="off" name="searchTerm" value="">
+        </div>
+
+        <details class="nhsuk-details nhsuk-details--expanded govuk-!-margin-bottom-4"
+                 data-module="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Filter options</span>
+          </summary>
+
+          <div class="nhsuk-details__text">
+            <form>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                  <legend class="nhsuk-fieldset__legend">
+                    Filter by attributes
+                  </legend>
+                  <div class="nhsuk-checkboxes">
+                    <div class="nhsuk-grid-column-full">
+                      <div class="nhsuk-u-one-third">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="valid" name="filter"
+                                 type="checkbox" checked>
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">
+                            Valid
+                          </label>
+                        </div>
+                      </div>
+                      <div class="nhsuk-u-one-third">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="extractable"
+                                 name="filter" type="checkbox" checked>
+                          <label class="nhsuk-label nhsuk-checkboxes__label"
+                                 for="extractable">
+                            Extractable
+                          </label>
+                        </div>
+                      </div>
+                      <div class="nhsuk-u-one-third">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="future-dated"
+                                 name="filter" type="checkbox">
+                          <label class="nhsuk-label nhsuk-checkboxes__label"
+                                 for="future-dated">
+                            Show future dated AMPs
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
+                      <div class="nhsuk-u-one-third">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="invalid" name="filter"
+                                 type="checkbox" checked>
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">
+                            Invalid
+                          </label>
+                        </div>
+                      </div>
+                      <div class="nhsuk-u-one-third">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="unextractable"
+                                 name="filter" type="checkbox" checked>
+                          <label class="nhsuk-label nhsuk-checkboxes__label"
+                                 for="unextractable">
+                            Unextractable
+                          </label>
+                        </div>
+                      </div>
+                      <div class="nhsuk-u-one-third">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="historic" name="filter"
+                                 type="checkbox">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="historic">
+                            Show historic AMPs
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!--sort by -->
+                <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset">
+                      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+                        <label
+                            class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden"
+                            for="historic">
+                          Sort by
+                        </label>
+                      </legend>
+                      <h3 class="nhsuk-u-margin-5">Sort by</h3>
+                      <div class="nhsuk-radios" data-module="nhsuk-radios">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input " name="exampleInline"
+                                 type="radio" value="yes">
+                          <label class="nhsuk-label nhsuk-radios__label">
+                            Newest to oldest
+                          </label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" name="exampleInline" type="radio"
+                                 value="no">
+                          <label class="nhsuk-label nhsuk-radios__label">
+                            Oldest to newest
+                          </label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" name="exampleInline" type="radio"
+                                 value="no">
+                          <label class="nhsuk-label nhsuk-radios__label">
+                            Z to A
+                          </label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" name="exampleInline" type="radio"
+                                 value="no">
+                          <label class="nhsuk-label nhsuk-radios__label">
+                            A to Z
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </details>
+
+        <div id="button-search">
+          <a class="nhsuk-button nhsuk-button--secondary" href="?searched">
+            Search
+          </a>
+        </div>
+      </form>
+
+      <div id="results-container" class="nhsuk-u-visually-hidden">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
+            <span id="page-and-result-count-top">Page 1 of 2 (5 total results)</span>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
+            <div class="nhsuk-u-font-size-16" id="tablePageSizeControls">
+              <span class="nhsuk-u-margin-right-2">Page size:</span>
+
+              <span class="nhsuk-u-font-weight-bold nhsuk-u-margin-right-2" aria-current="true">25</span>
+
+              <a class="nhsuk-u-margin-right-2" aria-label="Page size of 50 results" href="#">50</a>
+
+              <a aria-label="Page size of 100 results" href="#">100</a>
+            </div>
+          </div>
+        </div>
+
+        <form>
+          <div id="results-table-container" class="nhsuk-table-responsive">
+            <table class="nhsuk-table ">
+              <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">VTM results
+              </caption>
+              <thead class="nhsuk-table__head">
+              <tr class="nhsuk-table__row">
+                <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name
+                </th>
+                <th class="nhsuk-table__header columnheader-sticky" scope="col">
+                  Valid
+                </th>
+                <th class="nhsuk-table__header columnheader-sticky" scope="col">
+                  Extractable
+                </th>
+                <th class="nhsuk-table__header columnheader-sticky" scope="col" id="add-header">
+                  Select
+                </th>
+              </tr>
+              </thead>
+              <tbody class="nhsuk-table__body" id="table-search-results-body">
+
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Acorvio</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Angitil</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">B-CoVita</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Becloforte</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Calpol</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Citanest</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Cozachew</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Dromadol</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Ensure</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Estradot</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Farley's</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Gosaveg</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Hibitane</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Levemir</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Lipoflex/a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Mepilex</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Migraleve</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Monoparin</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Mounjaro</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Paediasure</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Palexia</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Panadol</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                  <span class="nhsuk-table-responsive__heading">Name</span>
+                  <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                            <a id="results-table--name-value-0" href="/vtm/2133?ref="
+                                               class="nhsuk-link--no-visited-state" target="_blank">Paediasure</a>
+                                        </span>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell">
+                  <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                       aria-hidden="true" id="pi-value-0">
+                    <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                    </path>
+                  </svg>
+                </td>
+                <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                  <span class="nhsuk-table-responsive__heading">Select</span>
+                  <div class="nhsuk-radios">
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-1" name="example"
+                             type="radio" value="email">
+                      <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                             for="example-1">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+
+        <div id="pagination">
+          <nav aria-label="Pagination Navigation">
+            <ul class="pagination">
+              <li class="pagination__item">
+                <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true">1</p>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link nhsuk-link--no-visited-state" href="#">2</a>
+              </li>
+              <li class="pagination__item">|</li>
+              <li class="pagination__item">
+                <a href="#" class="nhsuk-link--no-visited-state">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <a id="continue-button" href="change-tfg-new-tfg.html" class="nhsuk-button">Continue</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const urlParams = new URLSearchParams(globalThis.window.location.search);
+
+  function setSearched() {
+    const container = document.getElementById('button-search');
+
+    container.innerHTML += `
+        <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3"
+                role="button"
+                href="tfg-search">
+            Reset
+        </a>
+        `;
+
+    const resultsSection = document.getElementById('results-container');
+    resultsSection.classList.remove('nhsuk-u-visually-hidden');
+  }
+
+  if (urlParams.has('searched')) {
+    setSearched();
+  }
+</script>
+
+{% endblock %}
