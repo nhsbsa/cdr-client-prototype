@@ -14,7 +14,7 @@
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
          <span class="nhsuk-caption-l">
-            Trade family
+            AMPs
             <span class="nhsuk-u-visually-hidden"> - </span>
           </span>
         <h1 class="nhsuk-heading-xl">Anadin (Haleon UK trading Ltd)</h1>
@@ -144,9 +144,9 @@
 
                 <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="trade-family">
 
-
-                    <div class="nhsuk-action-link nhsuk-u-margin-right-9" style="float: right;">
-                        <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="#">
+<!--trade family amp update-->
+                    <div class="nhsuk-action-link " style="float: right;">
+                        <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="/trade-families/tf/update-amp-tf">
                             <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle"
                                  xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 24 24"
@@ -157,7 +157,7 @@
                             <span class="nhsuk-action-link__text">Update</span>
                         </a>
                     </div>
-                    <h3 class="nhsuk-heading-l">Trade family details</h3>
+                    <h3 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">Trade family details</h3>
                     <table class="nhsuk-table nhsuk-table-responsive ">
                         <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade family details</caption>
                         <thead role="rowgroup" class="nhsuk-table__head">
@@ -183,7 +183,7 @@
                             <td class="nhsuk-table__cell nhsuk-table__cell--numeric">28-01-2020</td>
                             <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-3456</td>
                         </tr>
-                        <tr role="row" style="background-color: #d8dde0;" class="nhsuk-table__row">
+                        <tr role="row" class="nhsuk-table__row" style="background-color: #d8dde0;">
                             <td class="nhsuk-table__row" >
                                 <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                             </td>
@@ -193,16 +193,138 @@
                         </tr>
                         </tbody>
                     </table>
-
-                    <div class="nhsuk-u-margin-bottom-5">
+<hr>
+<!--amp trade family tree-->
+                    <div class="nhsuk-u-margin-top-5">
                         <h3 class="nhsuk-heading-l">Trade family tree</h3>
                         <button class="nhsuk-u-float-right" style="position: relative; top: -50px;" onclick="toggleTree()">Toggle tree</button>
                     </div>
+
+                    <details class="nhsuk-details nhsuk-details--expanded govuk-!-margin-bottom-4"
+                             data-module="nhsuk-details">
+                        <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">Options</span>
+                        </summary>
+                        <div class="nhsuk-details__text">
+                            <form>
+                                <div class="nhsuk-form-group">
+                                    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+                                        <legend class="nhsuk-fieldset__legend">
+                                            Filter by attributes
+                                        </legend>
+                                        <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+                                            <div class="nhsuk-grid-column-full">
+                                                <div class="nhsuk-u-one-third">
+                                                    <div class="nhsuk-checkboxes__item">
+                                                        <input class="nhsuk-checkboxes__input" id="valid" name="filter" type="checkbox" checked>
+                                                        <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">
+                                                            Valid
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="nhsuk-u-one-third">
+                                                    <div class="nhsuk-checkboxes__item">
+                                                        <input class="nhsuk-checkboxes__input" id="extractable" name="filter" type="checkbox"
+                                                               checked>
+                                                        <label class="nhsuk-label nhsuk-checkboxes__label" for="extractable">
+                                                            Extractable
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="nhsuk-u-one-third">
+                                                    <div class="nhsuk-checkboxes__item">
+                                                        <input class="nhsuk-checkboxes__input" id="future-dated" name="filter" type="checkbox">
+                                                        <label class="nhsuk-label nhsuk-checkboxes__label" for="future-dated">
+                                                            Show future dated AMPs
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
+                                                <div class="nhsuk-u-one-third">
+                                                    <div class="nhsuk-checkboxes__item">
+                                                        <input class="nhsuk-checkboxes__input" id="invalid" name="filter" type="checkbox"
+                                                               checked>
+                                                        <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">
+                                                            Invalid
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="nhsuk-u-one-third">
+                                                    <div class="nhsuk-checkboxes__item">
+                                                        <input class="nhsuk-checkboxes__input" id="unextractable" name="filter" type="checkbox"
+                                                               checked>
+                                                        <label class="nhsuk-label nhsuk-checkboxes__label" for="unextractable">
+                                                            Unextractable
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="nhsuk-u-one-third">
+                                                    <div class="nhsuk-checkboxes__item">
+                                                        <input class="nhsuk-checkboxes__input" id="historic" name="filter" type="checkbox">
+                                                        <label class="nhsuk-label nhsuk-checkboxes__label" for="historic">
+                                                            Show historic AMPs
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <!--sort by -->
+                                    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">
+                                        <div class="nhsuk-form-group">
+                                            <fieldset class="nhsuk-fieldset">
+                                                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+                                                    <label class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden" for="historic">
+                                                        Sort by
+                                                    </label>
+                                                </legend>
+                                                <h3 class="nhsuk-u-margin-5">Sort by</h3>
+                                                <div class="nhsuk-radios" data-module="nhsuk-radios">
+                                                    <div class="nhsuk-radios__item">
+                                                        <input class="nhsuk-radios__input " name="exampleInline" type="radio" value="yes">
+                                                        <label class="nhsuk-label nhsuk-radios__label">
+                                                            Newest to oldest
+                                                        </label>
+                                                    </div>
+                                                    <div class="nhsuk-radios__item">
+                                                        <input class="nhsuk-radios__input" name="exampleInline" type="radio" value="no">
+                                                        <label class="nhsuk-label nhsuk-radios__label">
+                                                            Oldest to newest
+                                                        </label>
+                                                    </div>
+                                                    <div class="nhsuk-radios__item">
+                                                        <input class="nhsuk-radios__input" name="exampleInline" type="radio" value="no">
+                                                        <label class="nhsuk-label nhsuk-radios__label">
+                                                            Z to A
+                                                        </label>
+                                                    </div>
+                                                    <div class="nhsuk-radios__item">
+                                                        <input class="nhsuk-radios__input" name="exampleInline" type="radio" value="no">
+                                                        <label class="nhsuk-label nhsuk-radios__label">
+                                                            A to Z
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </details>
+
+<hr>
                     <div id="tree1">
-                        <div class="tf-tree">
-                            <details class="nhsuk-details" id="tfg-expander" open>
-                                <summary class="nhsuk-details__summary">
+                        <div class="tf-tree ">
+                            <details class="nhsuk-details " id="tfg-expander" open>
+                                <summary class="nhsuk-details__summary  ">
+<!---->
                             <span class="nhsuk-details__summary-text">
+<strong class="nhsuk-tag nhsuk-u-margin-right-2">TFG</strong>
                                 Anadin
                             </span>
                                 </summary>
@@ -213,6 +335,8 @@
                             <details class="nhsuk-details" id="tf1-expander" open>
                                 <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text">
+                                <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF
+                                </strong>
                                 Anadin extra
                             </span>
                                 </summary>
@@ -222,17 +346,51 @@
                         <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps-div">
                             <details class="nhsuk-details" open>
                                 <summary class="nhsuk-details__summary">
-                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
-                                AMPs
-                            </span>
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong>  <span><a href="#">
+                                    Anadin extra soluble tablets (Haleon UK trading Ltd)</a></span>
+
                                 </summary>
-                                <ul class="nhsuk-u-margin-top-3">
-                                    <li>Anadin extra soluble tablets (Haleon UK trading Ltd )</li>
-                                    <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra tablets
-                                        (Haleon UK trading Ltd )</a></li>
-                                    <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra
-                                        (Haleon UK trading Ltd )</a></li>
-                                </ul>
+<!--                                <ul class="nhsuk-u-margin-top-3">-->
+<!--                                    <li>Anadin extra soluble tablets (Haleon UK trading Ltd )</li>-->
+<!--&lt;!&ndash;                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra tablets&ndash;&gt;-->
+<!--&lt;!&ndash;                                        (Haleon UK trading Ltd )</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra&ndash;&gt;-->
+<!--&lt;!&ndash;                                        (Haleon UK trading Ltd )</a></li>&ndash;&gt;-->
+<!--                                </ul>-->
+                            </details>
+                        </div>
+
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps2-div">
+                            <details class="nhsuk-details" open>
+                                <summary class="nhsuk-details__summary">
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong> <span><a href="#">
+                                    Anadin extra tablets
+                                        (Haleon UK trading Ltd )</a></span>
+                                </summary>
+<!--                                <ul class="nhsuk-u-margin-top-3">-->
+<!--&lt;!&ndash;                                    <li>Anadin extra soluble tablets (Haleon UK trading Ltd )</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra tablets&ndash;&gt;-->
+<!--&lt;!&ndash;                                        (Haleon UK trading Ltd )</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra&ndash;&gt;-->
+<!--&lt;!&ndash;                                        (Haleon UK trading Ltd )</a></li>&ndash;&gt;-->
+<!--                                </ul>-->
+                            </details>
+                        </div>
+
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps3-div">
+                            <details class="nhsuk-details" open>
+                                <summary class="nhsuk-details__summary">
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">
+                                    Anadin extra
+                                        (Haleon UK trading Ltd )</a></span>
+                                </summary>
+<!--                                <ul class="nhsuk-u-margin-top-3">-->
+<!--                                    &lt;!&ndash;                                    <li>Anadin extra soluble tablets (Haleon UK trading Ltd )</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra tablets&ndash;&gt;-->
+<!--&lt;!&ndash;                                        (Haleon UK trading Ltd )</a></li>&ndash;&gt;-->
+<!--                                                                        <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra-->
+<!--                                                                            (Haleon UK trading Ltd )</a></li>-->
+<!--                                </ul>-->
                             </details>
                         </div>
 
@@ -240,6 +398,8 @@
                             <details class="nhsuk-details" id="tf2-expander">
                                 <summary class="nhsuk-details__summary">
                             <span class="nhsuk-details__summary-text">
+                                <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF
+                                </strong>
                                 Anadin extra soluble tablets
                             </span>
                                 </summary>
@@ -249,24 +409,39 @@
                         <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf2-amps-div">
                             <details class="nhsuk-details">
                                 <summary class="nhsuk-details__summary">
-                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
-                                AMPs
-                            </span>
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP
+                                    </strong><span><a href="#">
+                                    Anadin extra soluble tablets
+                                        (Haleon UK trading Ltd )</a></span>
+<!--                            <span class="nhsuk-details__summary-text govuk-link&#45;&#45;no-underline" style="color: black">-->
+
+<!--                            </span>-->
                                 </summary>
-                                <ul class="nhsuk-u-margin-top-3">
-                                    <li><a href="#" class="nhsuk-link--no-visited-state"> Anadin extra soluble tablets
-                                        (Haleon UK trading ltd)</a></li>
-                                    <li><a href="#" class="nhsuk-link--no-visited-state"> Anadin extra soluble tablets
-                                        small
-                                        (Haleon UK trading ltd)</a></li>
-                                </ul>
+<!--                                <ul class="nhsuk-u-margin-top-3">-->
+<!--                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state"> Anadin extra soluble tablets-->
+<!--                                        (Haleon UK trading ltd)</a></li>-->
+<!--&lt;!&ndash;                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state"> Anadin extra soluble tablets&ndash;&gt;-->
+<!--&lt;!&ndash;                                        small&ndash;&gt;-->
+<!--&lt;!&ndash;                                        (Haleon UK trading ltd)</a></li>&ndash;&gt;-->
+<!--                                </ul>-->
+                            </details>
+                        </div>
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf2-amps2-div">
+                            <details class="nhsuk-details">
+                                <summary class="nhsuk-details__summary">
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP
+                                    </strong><span><a href="#">
+                                    Anadin extra soluble tablets small
+                                        (Haleon UK trading Ltd )</a></span>
+                                </summary>
                             </details>
                         </div>
 
                         <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf3-div">
                             <details class="nhsuk-details" id="tf3-expander">
                                 <summary class="nhsuk-details__summary">
-                            <span class="nhsuk-details__summary-text">
+                            <span class="nhsuk-details__summary-text"><strong class="nhsuk-tag nhsuk-u-margin-right-2">TF
+                                    </strong><span>
                                Anadin extra tablets
                             </span>
                                 </summary>
@@ -276,19 +451,34 @@
                         <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf3-amps-div">
                             <details class="nhsuk-details">
                                 <summary class="nhsuk-details__summary">
-                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
-                                AMPs
-                            </span>
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">
+                                    Anadin extra tablets
+                                        (Novo Nordisk LTD)</a></span>
                                 </summary>
-                                <ul class="nhsuk-u-margin-top-3">
-                                    <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra tablets
-                                        (Novo Nordisk LTD)</a></li>
-                                    <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra tablets
-                                        (Novo Nordisk LTD)</a></li>
-                                </ul>
+                            </details>
+                        </div>
+
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf3-amps2-div">
+                            <details class="nhsuk-details">
+                                <summary class="nhsuk-details__summary">
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">
+                                    Anadin extra tablets small
+                                        (Novo Nordisk LTD)</a></span>
+                                </summary>
+                            </details>
+                        </div>
+
+                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf3-amps3-div">
+                            <details class="nhsuk-details">
+                                <summary class="nhsuk-details__summary">
+                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">
+                                    Anadin extra
+                                        (Novo Nordisk LTD)</a></span>
+                                </summary>
                             </details>
                         </div>
                     </div>
+
 
                     <div class="nhsuk-tree" id="tree2">
                         <ul role="tree">

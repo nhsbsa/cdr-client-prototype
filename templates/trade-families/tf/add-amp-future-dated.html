@@ -1,0 +1,347 @@
+{% extends "trade-families/base.html" %}
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list" xmlns="http://www.w3.org/1999/html">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">AMP results</a></li>
+    </ol>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+         <span class="nhsuk-caption-l">
+            Trade family
+            <span class="nhsuk-u-visually-hidden"> - </span>
+          </span>
+    <h1 class="nhsuk-heading-xl">Anadin (Haleon UK trading Ltd)</h1>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-tabs" data-module="nhsuk-tabs">
+        <h2 class="nhsuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="nhsuk-tabs__list">
+
+          <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+            <a class="nhsuk-tabs__tab" href="#attributes">
+              View attributes
+            </a>
+          </li>
+
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#summary">
+              View summary
+            </a>
+          </li>
+
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#more">
+              View more
+            </a>
+          </li>
+
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#ampps">
+              View AMPPs
+            </a>
+          </li>
+
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#trade-family">
+              Trade family
+            </a>
+          </li>
+
+          <li class="nhsuk-tabs__list-item">
+            <a class="nhsuk-tabs__tab" href="#insert">
+              Insert
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="nhsuk-tabs__panel" id="attributes">
+          <h3 class="nhsuk-heading-l">View attributes</h3>
+        </div>
+
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="summary">
+          <h3 class="nhsuk-heading-l">View summary</h3>
+        </div>
+
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="more">
+          <h3 class="nhsuk-heading-l">View more</h3>
+
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Name details</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Name
+              </th>
+              <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+                Start date
+              </th>
+              <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+                End date
+              </th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">1 Primary Wound Dressing spray</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-01-2020</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-3456</td>
+            </tr>
+            </tbody>
+          </table>
+
+          <h4 class="nhsuk-heading-m">Alternative names</h4>
+          <p>There are no alternative names associated with this AMP.</p><br/>
+
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Supplier details</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Supplier
+              </th>
+              <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+                Start date
+              </th>
+              <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+                End date
+              </th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">Phytoceuticals Ltd</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-01-2020</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-3456</td>
+            </tr>
+            </tbody>
+          </table>
+
+          <h4 class="nhsuk-heading-m">Trade family</h4>
+          <p>This AMP is not part of a trade family.
+            <a href="link-amp-to-tf">Add to a trade family.</a></p>
+
+          <p>This AMP is part of the trade family -
+            <a href="view-tf" onclick="setTfJourney()">1 Primary Wound</a>.</p>
+        </div>
+
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="ampps">
+          <h3 class="nhsuk-heading-l">View AMPPs</h3>
+        </div>
+
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="trade-family">
+
+          <!--trade family amp update-->
+          <div class="nhsuk-action-link nhsuk-u-margin-right-9" style="float: right;">
+            <a class="nhsuk-action-link__link nhsuk-link--no-visited-state" href="/trade-families/tf/update-amp-tf">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle"
+                   xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24"
+                   aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Update</span>
+            </a>
+          </div>
+          <h3 class="nhsuk-heading-l">Trade family details</h3>
+          <table class="nhsuk-table nhsuk-table-responsive ">
+            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade family details</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Identifier
+              </th>
+              <th role="columnheader" class="" scope="col">
+                Name
+              </th>
+              <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+                Start date
+              </th>
+              <th role="columnheader" class=" nhsuk-table__header--numeric" scope="col">
+                End date
+              </th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row temporal-future-dated">
+              <td role="cell" class="nhsuk-table__cell-historic">
+                <span class="nhsuk-table-responsive__heading">Indicator </span>
+                <span id="associated-vtm-table--current-tag-value-current">
+                            <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Future Dated</span>
+                            <strong class="nhsuk-tag nhsuk-tag--purple">
+                                F
+                            </strong>
+                        </span>
+              </td>
+              <td class="nhsuk-table__cell"><a href="view-tf">Anadin  </a></td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">06-02-2027</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-02-3456</td>
+            </tr>
+<!--            <tr role="row" class="nhsuk-table__row">-->
+<!--              <td class="nhsuk-table__cell"></td>-->
+<!--              <td class="nhsuk-table__cell"><a href="view-tf">Anadin</a></td>-->
+<!--              <td class="nhsuk-table__cell nhsuk-table__cell&#45;&#45;numeric">28-01-2020</td>-->
+<!--              <td class="nhsuk-table__cell nhsuk-table__cell&#45;&#45;numeric">05-02-2027</td>-->
+<!--            </tr>-->
+            <tr role="row" style="background-color: #d8dde0;" class="nhsuk-table__row">
+              <td class="nhsuk-table__row" >
+                <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+              </td>
+              <td class="nhsuk-table__cell"><a href="view-tf">Panadol</a></td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">01-01-2020</td>
+              <td class="nhsuk-table__cell nhsuk-table__cell--numeric">27-01-2020<</td>
+            </tr>
+            </tbody>
+          </table>
+<hr>
+          <div class="nhsuk-u-margin-top-5">
+            <h3 class="nhsuk-heading-l">Trade family tree</h3>
+            <button class="nhsuk-u-float-right" style="position: relative; top: -50px;" onclick="toggleTree()">Toggle tree</button>
+          </div>
+          <div id="tree1">
+            <div class="tf-tree">
+              <details class="nhsuk-details" id="tfg-expander" open>
+                <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                                Anadin
+                            </span>
+                </summary>
+              </details>
+            </div>
+
+            <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf1-div">
+              <details class="nhsuk-details" id="tf1-expander" open>
+                <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                                Anadin extra
+                            </span>
+                </summary>
+              </details>
+            </div>
+
+            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps-div">
+              <details class="nhsuk-details" open>
+                <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
+                                AMPs
+                            </span>
+                </summary>
+                <ul class="nhsuk-u-margin-top-3">
+                  <li>Anadin extra soluble tablets (Haleon UK trading Ltd )</li>
+                  <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra tablets
+                    (Haleon UK trading Ltd )</a></li>
+                  <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra
+                    (Haleon UK trading Ltd )</a></li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf2-div">
+              <details class="nhsuk-details" id="tf2-expander">
+                <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                                Anadin extra soluble tablets
+                            </span>
+                </summary>
+              </details>
+            </div>
+
+            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf2-amps-div">
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
+                                AMPs
+                            </span>
+                </summary>
+                <ul class="nhsuk-u-margin-top-3">
+                  <li><a href="#" class="nhsuk-link--no-visited-state"> Anadin extra soluble tablets
+                    (Haleon UK trading ltd)</a></li>
+                  <li><a href="#" class="nhsuk-link--no-visited-state"> Anadin extra soluble tablets
+                    small
+                    (Haleon UK trading ltd)</a></li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="tf-tree nhsuk-u-margin-left-4" style="display: none" id="tf3-div">
+              <details class="nhsuk-details" id="tf3-expander">
+                <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text">
+                               Anadin extra tablets
+                            </span>
+                </summary>
+              </details>
+            </div>
+
+            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf3-amps-div">
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                            <span class="nhsuk-details__summary-text govuk-link--no-underline" style="color: black">
+                                AMPs
+                            </span>
+                </summary>
+                <ul class="nhsuk-u-margin-top-3">
+                  <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra tablets
+                    (Novo Nordisk LTD)</a></li>
+                  <li><a href="#" class="nhsuk-link--no-visited-state">Anadin extra tablets
+                    (Novo Nordisk LTD)</a></li>
+                </ul>
+              </details>
+            </div>
+          </div>
+
+          <div class="nhsuk-tree" id="tree2">
+            <ul role="tree">
+              <li role="treeitem">
+                <div class="nhsuk-tag">TFG</div>
+                <a class="nhsuk-link--no-visited-state" href="view-tfg">Primary Wound</a>
+                <ul role="group" class="nhsuk-tree-ul">
+                  <li role="treeitem">
+                    <div class="nhsuk-tag">TF</div>
+                    <a class="nhsuk-link--no-visited-state" href="view-tf">1 Primary Wound</a>
+                    <ul role="group">
+                      <li role="treeitem">
+                        <div class="nhsuk-tag">AMP</div>
+                        <span>(Current) 1 Primary Wound Dressing spray (Phytoceuticals Ltd)</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="insert">
+          <h3 class="nhsuk-heading-l">Insert</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+  function setTfJourney() {
+    localStorage.setItem("tf-journey", "amp");
+  }
+</script>
+<script src="/js/tf-tree-display.js"></script>
+
+{% endblock %}

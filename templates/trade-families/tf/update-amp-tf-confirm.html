@@ -1,0 +1,101 @@
+{% extends "base-large.html" %}
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="tfg-table-view">Trade
+        family
+        groups</a></li>
+    </ol>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="link-tfg-summary">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path
+          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+      </path>
+    </svg>
+    Go back</a>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <span class="nhsuk-caption-l" id="update-associated-vtm-sub-heading">Update amp trade family summary</span>
+    <span class="nhsuk-u-visually-hidden"> - </span>
+    <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Anadin</h1>
+
+    <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
+      <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col"
+            id="associated-vtm-table--tag-header" style="width: 10px;">
+          <span class="nhsuk-u-visually-hidden">Indicator</span>
+        </th>
+        <th role="columnheader" class="columnheader-sticky" scope="col"
+            id="associated-vtm-table--name-header">
+          Name
+        </th>
+        <th role="columnheader" class="columnheader-sticky start-end-date-column" scope="col"
+            id="associated-vtm-table--start-date-header">
+          Start date
+        </th>
+        <th role="columnheader" class="columnheader-sticky start-end-date-column" scope="col"
+            id="associated-vtm-table--end-date-header">
+          End date
+        </th>
+      </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row temporal-future-dated">
+        <td role="cell" class="nhsuk-table__cell-historic">
+          <span class="nhsuk-table-responsive__heading">Indicator </span>
+          <span id="associated-vtm-table--current-tag-value-current">
+                            <span class="nhsuk-u-visually-hidden nhsuk-table__cell-historic">Future Dated</span>
+                            <strong class="nhsuk-tag nhsuk-tag--purple">
+                                F
+                            </strong>
+                        </span>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Name</span>
+          <span id="associated-vtm-table--name-0">Anadin</span>
+        </td>
+        <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
+          <span class="nhsuk-table-responsive__heading">Start date</span>
+
+
+          <span id="associated-vtm-table--start-date-aria-0"
+                class="nhsuk-u-visually-hidden stop-user-selection">6 February 2027</span>
+
+
+          <span id="associated-vtm-table--start-date-0" aria-hidden="true">06-02-2027</span>
+
+        </td>
+        <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
+          <span class="nhsuk-table-responsive__heading">End date</span>
+
+
+
+          <span class="nhsuk-u-visually-hidden stop-user-selection"
+                id="associated-vtm-table--end-date-aria-0">End of time
+                        </span>
+
+          <span id="associated-vtm-table--end-date-0" aria-hidden="true">01-02-3456</span>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="nhsuk-u-margin-top-5">
+      <a class="nhsuk-button" href="add-amp-future-dated#trade-family">Link and save</a>
+      <a class="nhsuk-button nhsuk-button--secondary" href="view-tf#tfg">Cancel update</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

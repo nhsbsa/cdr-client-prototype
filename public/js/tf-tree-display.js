@@ -5,10 +5,17 @@ var tf3_div = document.getElementById("tf3-div");
 
 var tf1_expander = document.getElementById("tf1-expander");
 var tf1_amps_div = document.getElementById("tf1-amps-div");
+var tf1_amps2_div = document.getElementById("tf1-amps2-div");
+var tf1_amps3_div = document.getElementById("tf1-amps3-div");
 var tf2_expander = document.getElementById("tf2-expander");
 var tf2_amps_div = document.getElementById("tf2-amps-div");
+var tf2_amps2_div = document.getElementById("tf2-amps2-div");
 var tf3_expander = document.getElementById("tf3-expander");
 var tf3_amps_div = document.getElementById("tf3-amps-div");
+var tf3_amps2_div = document.getElementById("tf3-amps2-div");
+var tf3_amps3_div = document.getElementById("tf3-amps3-div");
+
+
 
 
 tfg.addEventListener("toggle", function() {
@@ -19,17 +26,25 @@ tfg.addEventListener("toggle", function() {
 
 tf1_expander.addEventListener("toggle", function() {
     toggleDisplay(tf1_amps_div);
+    toggleDisplay(tf1_amps2_div);
+    toggleDisplay(tf1_amps3_div);
 })
 
 tf2_expander.addEventListener("toggle", function() {
     toggleDisplay(tf2_amps_div);
+    toggleDisplay(tf2_amps2_div);
 })
 
 tf3_expander.addEventListener("toggle", function() {
     toggleDisplay(tf3_amps_div);
+    toggleDisplay(tf3_amps2_div);
+    toggleDisplay(tf3_amps3_div);
 })
 
 function toggleDisplay(element, child) {
+    if (!element) {
+        return;
+    }
     if (element.style.display === 'none')
         element.style.display = 'block'
     else {
