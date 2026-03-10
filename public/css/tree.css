@@ -1,39 +1,39 @@
-.nhsuk-tree {
+#tree2.nhsuk-tree {
   margin-bottom: 30px;
 }
 
-.nhsuk-tree > ul > li {
+#tree2 > ul > li {
   margin: 0;
 }
 
-.nhsuk-tree li, .nhsuk-tree ul {
+#tree2 li, #tree2 ul {
   padding: 5px 0;
   position: relative;
   margin-bottom: 0;
 }
 
-.nhsuk-tree ul {
+#tree2 ul {
   list-style: none;
 }
 
-.nhsuk-tree li {
+#tree2 li {
   margin: 0 0 0 20px;
 }
 
-li div {
+#tree2 li > div {
   display: flex;
 }
 
-.nhsuk-tree ul ul::before {
+#tree2 ul ul::before {
   border-left: 1px solid #c9ced5;
-  bottom: 61px;
+  bottom: 0;
   content: "";
   left: 6px;
   position: absolute;
   top: 0px;
 }
 
-.nhsuk-tree li li::before {
+#tree2 li li::before {
   border-top: 1px solid #c9ced5;
   content: "";
   left: -15px;
@@ -42,10 +42,10 @@ li div {
   width: 15px;
 }
 
-.nhsuk-tree li:last-child::before {
+#tree2 li:last-child::before {
   bottom: -5px;
 }
 
-.nhsuk-tree-ul::before {
-  bottom: 121px !important;
+#tree2 ul[role="group"]::before {
+  bottom: 20px;
 }
