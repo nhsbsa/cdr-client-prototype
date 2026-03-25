@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-<div id="content-pane" class="side-tree-view">
+<div id="content-pane">
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-quarter">
       <nav class="app-side-nav" role="navigation">
@@ -636,7 +636,7 @@
     });
 
     document.querySelectorAll('.checkbox-row-first').forEach(element => {
-      element.setAttribute('disabled', 'true');
+      element.closest('td').innerHTML = 'Unlinked';
     });
 
     document.querySelectorAll('.first-row').forEach(element => {

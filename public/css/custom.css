@@ -1,3 +1,8 @@
+/* Fix: ensure main wrapper contains floated children (e.g. .side-tree-view) so the footer stays at the bottom */
+.nhsuk-main-wrapper {
+  overflow: hidden;
+}
+
 fill-red{
   fill: #d5281b !important;
 }

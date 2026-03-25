@@ -15,6 +15,178 @@
                         </li>
                     </ul>
                 </nav>
+
+                <div class="nhsuk-tree" id="tree2">
+                    <style>
+                        /* Base tree styling for tree2 */
+                        #tree2 {
+                            margin-bottom: 30px;
+                        }
+
+                        #tree2 > ul > li {
+                            margin: 0;
+                        }
+
+                        #tree2 li, #tree2 ul {
+                            padding: 5px 0;
+                            position: relative;
+                            margin-bottom: 0;
+                        }
+
+                        #tree2 ul {
+                            list-style: none;
+                        }
+
+                        #tree2 li {
+                            margin: 0 0 0 20px;
+                        }
+
+                        #tree2 li > div {
+                            display: flex;
+                        }
+
+                        /* ===== LEVEL 1: TFG (Trade Family Groups) ===== */
+                        /* Vertical line connecting TFG to its TF children */
+                        #tree2 > ul > li > details > ul[role="group"] {
+                            position: relative;
+                            margin-left: 20px;
+                        }
+
+                        #tree2 > ul > li > details > ul[role="group"]::before {
+                            border-left: 1px solid #c9ced5;
+                            bottom: 0;
+                            content: "";
+                            left: 6px;
+                            position: absolute;
+                            top: 0px;
+                        }
+
+                        /* Horizontal connectors for TF items (first level children of TFG) */
+                        #tree2 > ul > li > details > ul[role="group"] > li[role="treeitem"] {
+                            position: relative;
+                            margin-left: 20px;
+                        }
+
+                        #tree2 > ul > li > details > ul[role="group"] > li[role="treeitem"]::before {
+                            border-top: 1px solid #c9ced5;
+                            content: "";
+                            left: -14px;
+                            position: absolute;
+                            top: 30px;
+                            width: 14px;
+                        }
+
+                        /* ===== LEVEL 2: TF (Trade Families) ===== */
+                        /* Vertical line connecting TF to its AMP children */
+                        #tree2 li[role="treeitem"] > details > ul[role="group"] {
+                            position: relative;
+                            margin-left: 20px;
+                        }
+
+                        #tree2 li[role="treeitem"] > details > ul[role="group"]::before {
+                            border-left: 1px solid #c9ced5;
+                            bottom: 0;
+                            content: "";
+                            left: 6px;
+                            position: absolute;
+                            top: 0;
+                        }
+
+                        /* ===== LEVEL 3: AMP (Active Medicines) ===== */
+                        /* Horizontal connectors for AMP items (plain li without details) */
+                        #tree2 li[role="treeitem"] > details > ul[role="group"] > li[role="treeitem"] {
+                            position: relative;
+                            margin-left: 20px;
+                        }
+
+                        #tree2 li[role="treeitem"] > details > ul[role="group"] > li[role="treeitem"]::before {
+                            border-top: 1px solid #c9ced5;
+                            content: "";
+                            left: -14px;
+                            position: absolute;
+                            top: 20px;
+                            width: 14px;
+                        }
+                    </style>
+
+                    <ul role="tree">
+                        <li role="treeitem">
+                            <h2 class="app-side-nav__heading">Trade families tree view </h2>
+                            <details class="nhsuk-details" id="tree2-tfg-expander">
+                                <summary class="nhsuk-details__summary">
+                                    <div class="nhsuk-tag">TFG</div>
+                                    <a class="nhsuk-link--no-visited-state" href="view-tfg">Asprin</a>
+                                </summary>
+
+                                <ul role="group" class="nhsuk-tree-ul">
+                                    <li role="treeitem">
+                                        <details class="nhsuk-details" id="tree2-tf1-expander">
+                                            <summary class="nhsuk-details__summary">
+                                                <div class="nhsuk-tag">TF</div><strong class="nhsuk-tag nhsuk-tag--purple nhsuk-u-margin-left-2">F</strong>
+
+                                                <a class="nhsuk-link--no-visited-state" href="view-tf">Anadin extra</a>
+                                            </summary>
+                                            <ul role="group">
+                                                <li role="treeitem">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <div class="nhsuk-tag" style="display: inline-flex; align-items: center; margin: 4;">AMP</div>
+                                                        <span style="display: inline-block;">Anadin extra soluble tablets </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li role="treeitem">
+                                        <details class="nhsuk-details" id="tree2-tf2-expander">
+                                            <summary class="nhsuk-details__summary">
+                                                <div class="nhsuk-tag">TF</div>
+                                                <a class="nhsuk-link--no-visited-state" href="view-tf">Anadin Ibuprofen</a>
+                                            </summary>
+                                            <ul role="group">
+                                                <li role="treeitem">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <div class="nhsuk-tag" style="display: inline-flex; align-items: center; margin: 0;">AMP</div>
+                                                        <span style="display: inline-block;">Anadin ibuprofen 200mg tablets</span>
+                                                    </div>
+                                                </li>
+                                                <li role="treeitem">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <div class="nhsuk-tag" style="display: inline-flex; align-items: center; margin: 0;">AMP</div>
+                                                        <span style="display: inline-block;">Anadin ibuprofen 400mg capsules</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </li>
+
+                                    <li role="treeitem">
+                                        <details class="nhsuk-details" id="tree2-tf3-expander">
+                                            <summary class="nhsuk-details__summary">
+                                                <div class="nhsuk-tag">TF</div>
+                                                <a class="nhsuk-link--no-visited-state" href="view-tf">Anadin liquiFast</a>
+                                            </summary>
+                                            <ul role="group">
+                                                <li role="treeitem">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <div class="nhsuk-tag" style="display: inline-flex; align-items: center; margin: 0;">AMP</div>
+                                                        <span style="display: inline-block;">Anadin liquiFast 200mg effervescent tablets</span>
+                                                    </div>
+                                                </li>
+                                                <li role="treeitem">
+                                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                                        <div class="nhsuk-tag" style="display: inline-flex; align-items: center; margin: 0;">AMP</div>
+                                                        <span style="display: inline-block;">Anadin liquiFast 400mg capsules</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="nhsuk-grid-column-three-quarters">
@@ -295,7 +467,39 @@
 {% endblock %}
 
 {% block scripts %}
+<script>
+    function setTfJourney() {
+        localStorage.setItem("tf-journey", "amp");
+    }
 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const treeElements = document.querySelectorAll('.tf-tree');
+
+        treeElements.forEach(element => {
+            element.style.cursor = 'pointer';
+
+            element.style.border = '2px solid #000000';
+
+            element.addEventListener('click', function(e) {
+
+                treeElements.forEach(el => {
+                    el.style.border = '2px solid #000000';
+                });
+
+                this.style.border = '3px solid #FFD700';
+
+
+                setTimeout(() => {
+                    this.style.cursor = '';
+                }, 500);
+
+                e.stopPropagation();
+            });
+        });
+    });
+</script>
+<script src="/js/tf-tree-display.js"></script>
 <script>
     const urlParams = new URLSearchParams(globalThis.window.location.search);
     if (urlParams.has('deletedTf')) {

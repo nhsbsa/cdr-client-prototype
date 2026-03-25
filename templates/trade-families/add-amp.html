@@ -57,7 +57,7 @@
 
           <li class="nhsuk-tabs__list-item">
             <a class="nhsuk-tabs__tab" href="#trade-family">
-              Trade family
+              View trade family
             </a>
           </li>
 
@@ -145,24 +145,98 @@
 
         <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="trade-family">
 
+
           <!--trade family amp update-->
-          <div class="nhsuk-action-link " style="float: right;">
-            <a class="nhsuk-action-link__link nhsuk-link--no-visited-state"
-               href="/trade-families/tf/update-amp-tf">
-              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle"
-                   xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 24 24"
-                   aria-hidden="true">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                    d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-              </svg>
-              <span class="nhsuk-action-link__text">Update</span>
-            </a>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full"
+                 style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">View trade family</h3>
+              <div class="nhsuk-action-link nhsuk-u-margin-bottom-5">
+                <a class="nhsuk-action-link__link nhsuk-link--no-visited-state"
+                   href="/trade-families/tf/update-amp-tf">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle"
+                       xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 24 24"
+                       aria-hidden="true">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Update</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <h3 class="nhsuk-heading-l nhsuk-u-margin-bottom-5">Trade family details</h3>
-          <table class="nhsuk-table nhsuk-table-responsive ">
-            <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade family details
+          <!--TFG DETAILS-->
+          <section id="amp-0">
+
+                <table class="nhsuk-table-responsive nhsuk-u-margin-top-5">
+                  <caption class="nhsuk-table__caption nhsuk-u-margin-bottom-5 ">Related trade family group details</caption>
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th id="identifier-header" role="columnheader" scope="col" style="display: none;">
+                      <span class="nhsuk-u-visually-hidden">Identifier</span>
+                    </th>
+                    <th role="columnheader" scope="col">
+                      Name
+                    </th>
+                    <th role="columnheader" scope="col">
+                      Valid
+                    </th>
+                    <th role="columnheader" scope="col">
+                      Extractable
+                    </th>
+                    <th role="columnheader" scope="col">
+                      Start date
+                    </th>
+                    <th role="columnheader" scope="col">
+                      Number of TFs
+                    </th>
+                    <th role="columnheader" scope="col">
+                      SNOMED Code
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                  <tr id="deleted-row" role="row" class="nhsuk-table__row">
+                    <td id="deleted-identifier" class="nhsuk-table__cell" style="display: none;">
+                      <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
+                    </td>
+                    <td class="nhsuk-table__cell">
+                      <a id="deleted-link" href="/trade-families/tfg/view-tfg"
+                         class="nhsuk-link--no-visited-state">Anadin</a>
+                    </td>
+                    <td id="deleted-end-date" class="nhsuk-table__cell">
+                      <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                           aria-hidden="true" id="pi-value-0">
+                        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                        </path>
+                      </svg>
+                    </td>
+                    <td id="deleted-end-date" class="nhsuk-table__cell">
+                      <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                           aria-hidden="true" id="pi-value-0">
+                        <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                        </path>
+                      </svg>
+                    </td>
+                    <td id="deleted-start-date" class="nhsuk-table__cell">01/01/2020</td>
+                    <td id="deleted-number-tfs" class="nhsuk-table__cell">4</td>
+                    <td class="nhsuk-table__cell">22002311000001104</td>
+                  </tr>
+                  </tbody>
+                </table>
+<!--              </fieldset>-->
+<!--            </div>-->
+          </section>
+
+
+
+<!--tf details-->
+          <table class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-top-5">
+            <caption class="nhsuk-table__caption nhsuk-u-margin-bottom-5">Trade family details
             </caption>
             <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
@@ -197,291 +271,266 @@
             </tr>
             </tbody>
           </table>
-          <hr>
+
           <!--amp trade family tree-->
-          <div class="nhsuk-u-margin-top-5">
-            <h2 class="nhsuk-heading-l">Trade family tree</h2>
-            <button class="nhsuk-u-float-right" style="position: relative; top: -50px;"
-                    onclick="toggleTree()">Toggle tree
-            </button>
-          </div>
+<!--          <div class="nhsuk-u-margin-top-5">-->
+<!--            <h2 class="nhsuk-heading-l">Trade family tree</h2>-->
+<!--            <button class="nhsuk-u-float-right" style="position: relative; top: -50px;"-->
+<!--                    onclick="toggleTree()">Toggle tree-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <H4>Tree options</H4>
-          <details class="nhsuk-details nhsuk-details--expanded govuk-!-margin-bottom-4"
-                   data-module="nhsuk-details">
-            <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">Options</span>
-            </summary>
-            <div class="nhsuk-details__text">
-              <form>
-                <div class="nhsuk-form-group">
-                  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                    <legend class="nhsuk-fieldset__legend">
-                      Filter by attributes
-                    </legend>
-                    <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
-                      <div class="nhsuk-grid-column-full">
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="valid" name="filter"
-                                   type="checkbox" checked>
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">
-                              Valid
-                            </label>
-                          </div>
-                        </div>
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="extractable" name="filter"
-                                   type="checkbox"
-                                   checked>
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="extractable">
-                              Extractable
-                            </label>
-                          </div>
-                        </div>
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="future-dated" name="filter"
-                                   type="checkbox" checked>
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="future-dated">
-                              Show future dated AMPs
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="invalid" name="filter"
-                                   type="checkbox">
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">
-                              Invalid
-                            </label>
-                          </div>
-                        </div>
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="unextractable" name="filter"
-                                   type="checkbox">
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="unextractable">
-                              Unextractable
-                            </label>
-                          </div>
-                        </div>
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="historic" name="filter"
-                                   type="checkbox">
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="historic">
-                              Show historic AMPs
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
+<!--          <H4>Tree options</H4>-->
+<!--          <details class="nhsuk-details nhsuk-details&#45;&#45;expanded govuk-!-margin-bottom-4"-->
+<!--                   data-module="nhsuk-details">-->
+<!--            <summary class="nhsuk-details__summary">-->
+<!--              <span class="nhsuk-details__summary-text">Options</span>-->
+<!--            </summary>-->
+<!--            <div class="nhsuk-details__text">-->
+<!--              <form>-->
+<!--                <div class="nhsuk-form-group">-->
+<!--                  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">-->
+<!--                    <legend class="nhsuk-fieldset__legend">-->
+<!--                      Filter by attributes-->
+<!--                    </legend>-->
+<!--                    <div class="nhsuk-checkboxes nhsuk-checkboxes&#45;&#45;small">-->
+<!--                      <div class="nhsuk-grid-column-full">-->
+<!--                        <div class="nhsuk-u-one-third">-->
+<!--                          <div class="nhsuk-checkboxes__item">-->
+<!--                            <input class="nhsuk-checkboxes__input" id="valid" name="filter"-->
+<!--                                   type="checkbox" checked>-->
+<!--                            <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">-->
+<!--                              Valid-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <div class="nhsuk-u-one-third">-->
+<!--                          <div class="nhsuk-checkboxes__item">-->
+<!--                            <input class="nhsuk-checkboxes__input" id="extractable" name="filter"-->
+<!--                                   type="checkbox"-->
+<!--                                   checked>-->
+<!--                            <label class="nhsuk-label nhsuk-checkboxes__label" for="extractable">-->
+<!--                              Extractable-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <div class="nhsuk-u-one-third">-->
+<!--                          <div class="nhsuk-checkboxes__item">-->
+<!--                            <input class="nhsuk-checkboxes__input" id="future-dated" name="filter"-->
+<!--                                   type="checkbox" checked>-->
+<!--                            <label class="nhsuk-label nhsuk-checkboxes__label" for="future-dated">-->
+<!--                              Show future dated AMPs-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">-->
+<!--                        <div class="nhsuk-u-one-third">-->
+<!--                          <div class="nhsuk-checkboxes__item">-->
+<!--                            <input class="nhsuk-checkboxes__input" id="invalid" name="filter"-->
+<!--                                   type="checkbox">-->
+<!--                            <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">-->
+<!--                              Invalid-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <div class="nhsuk-u-one-third">-->
+<!--                          <div class="nhsuk-checkboxes__item">-->
+<!--                            <input class="nhsuk-checkboxes__input" id="unextractable" name="filter"-->
+<!--                                   type="checkbox">-->
+<!--                            <label class="nhsuk-label nhsuk-checkboxes__label" for="unextractable">-->
+<!--                              Unextractable-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <div class="nhsuk-u-one-third">-->
+<!--                          <div class="nhsuk-checkboxes__item">-->
+<!--                            <input class="nhsuk-checkboxes__input" id="historic" name="filter"-->
+<!--                                   type="checkbox">-->
+<!--                            <label class="nhsuk-label nhsuk-checkboxes__label" for="historic">-->
+<!--                              Show historic AMPs-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </fieldset>-->
 
-                  <!--sort by -->
-                  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">
-                    <div class="nhsuk-form-group">
-                      <fieldset class="nhsuk-fieldset">
-                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+<!--                  &lt;!&ndash;sort by &ndash;&gt;-->
+<!--                  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">-->
+<!--                    <div class="nhsuk-form-group">-->
+<!--                      <fieldset class="nhsuk-fieldset">-->
+<!--                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend&#45;&#45;l">-->
 
-                          <label class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden"
-                                 for="historic">
-                            Sort by
-                          </label>
-                        </legend>
-                        <h3 class="nhsuk-u-margin-5">Sort by</h3>
-                        <div class="nhsuk-radios" data-module="nhsuk-radios">
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input " name="exampleInline" type="radio"
-                                   value="yes">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              Newest to oldest
-                            </label>
-                          </div>
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"
-                                   value="no">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              Oldest to newest
-                            </label>
-                          </div>
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"
-                                   value="no">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              Z to A
-                            </label>
-                          </div>
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"
-                                   value="no">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              A to Z
-                            </label>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
+<!--                          <label class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden"-->
+<!--                                 for="historic">-->
+<!--                            Sort by-->
+<!--                          </label>-->
+<!--                        </legend>-->
+<!--                        <h3 class="nhsuk-u-margin-5">Sort by</h3>-->
+<!--                        <div class="nhsuk-radios" data-module="nhsuk-radios">-->
+<!--                          <div class="nhsuk-radios__item">-->
+<!--                            <input class="nhsuk-radios__input " name="exampleInline" type="radio"-->
+<!--                                   value="yes">-->
+<!--                            <label class="nhsuk-label nhsuk-radios__label">-->
+<!--                              Newest to oldest-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                          <div class="nhsuk-radios__item">-->
+<!--                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"-->
+<!--                                   value="no">-->
+<!--                            <label class="nhsuk-label nhsuk-radios__label">-->
+<!--                              Oldest to newest-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                          <div class="nhsuk-radios__item">-->
+<!--                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"-->
+<!--                                   value="no">-->
+<!--                            <label class="nhsuk-label nhsuk-radios__label">-->
+<!--                              Z to A-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                          <div class="nhsuk-radios__item">-->
+<!--                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"-->
+<!--                                   value="no">-->
+<!--                            <label class="nhsuk-label nhsuk-radios__label">-->
+<!--                              A to Z-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </fieldset>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </form>-->
+<!--            </div>-->
 
-          </details>
+<!--          </details>-->
 
-          <H4>Tree view</H4>
+<!--          <H4>Tree view</H4>-->
           <div id="tree1">
-            <style>
-              #tree1 #tf1-amps-div .nhsuk-details__summary::before,
-              #tree1 #tf1-amps2-div .nhsuk-details__summary::before,
-              #tree1 #tf2-amps-div .nhsuk-details__summary::before,
-              #tree1 #tf3-amps-div .nhsuk-details__summary::before,
-              #tree1 #tf3-amps2-div .nhsuk-details__summary::before,
-              #tree1 #tf3-amps3-div .nhsuk-details__summary::before {
-                border-left-color: #E8F4FD;
-              }
 
-              #tree1 #tf1-amps-div .nhsuk-details[open] > .nhsuk-details__summary::before,
-              #tree1 #tf1-amps2-div .nhsuk-details[open] > .nhsuk-details__summary::before,
-              #tree1 #tf2-amps-div .nhsuk-details[open] > .nhsuk-details__summary::before,
-              #tree1 #tf3-amps-div .nhsuk-details[open] > .nhsuk-details__summary::before,
-              #tree1 #tf3-amps2-div .nhsuk-details[open] > .nhsuk-details__summary::before,
-              #tree1 #tf3-amps3-div .nhsuk-details[open] > .nhsuk-details__summary::before {
-                border-top-color: #E8F4FD;
-              }
-            </style>
-            <div class="tf-tree " style="background-color: #d8dde0; padding: 10px; border-radius: 4px; cursor: pointer;" id="tfg-div">
-              <details class="nhsuk-details " id="tfg-expander">
-                <summary class="nhsuk-details__summary  ">
-                  <!---->
-                  <span class="nhsuk-details__summary-text">
-<strong class="nhsuk-tag nhsuk-u-margin-right-2">TFG</strong>
-                                Anadin
-                            </span>
-                </summary>
-              </details>
-            </div>
+<!--            <div class="tf-tree " style="background-color: #d8dde0; padding: 10px; border-radius: 4px; cursor: pointer;" id="tfg-div">-->
+<!--              <details class="nhsuk-details " id="tfg-expander">-->
+<!--                <summary class="nhsuk-details__summary  ">-->
+<!--                  &lt;!&ndash;&ndash;&gt;-->
+<!--                  <span class="nhsuk-details__summary-text">-->
+<!--<strong class="nhsuk-tag nhsuk-u-margin-right-2">TFG</strong>-->
+<!--                                Anadin-->
+<!--                            </span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-4"
-                 style="display: none; background-color: #C1DCCB;" id="tf1-div">
-              <details class="nhsuk-details" id="tf1-expander">
-                <summary class="nhsuk-details__summary">
-                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF</strong>
-                            <span class="nhsuk-details__summary-text">
-                                <strong class="nhsuk-tag nhsuk-tag--purple nhsuk-u-margin-right-2">F</strong>
-                                Anadin extra
-                            </span>
-                </summary>
-              </details>
-            </div>
+<!--            <div class="tf-tree nhsuk-u-margin-left-4"-->
+<!--                 style="display: none; background-color: #C1DCCB;" id="tf1-div">-->
+<!--              <details class="nhsuk-details" id="tf1-expander">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF</strong>-->
+<!--                            <span class="nhsuk-details__summary-text">-->
+<!--                                <strong class="nhsuk-tag nhsuk-tag&#45;&#45;purple nhsuk-u-margin-right-2">F</strong>-->
+<!--                                Anadin extra-->
+<!--                            </span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf1-amps-div">
-              <details class="nhsuk-details">
-                <summary class="nhsuk-details__summary ">
-                  <strong class="nhsuk-tag nhsuk-u-margin-left-2">AMP</strong> <span><a href="#">
-                                    Anadin extra soluble tablets
-                                </a></span>
+<!--            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf1-amps-div">-->
+<!--              <details class="nhsuk-details">-->
+<!--                <summary class="nhsuk-details__summary ">-->
+<!--                  <strong class="nhsuk-tag nhsuk-u-padding-left&#45;&#45;24px">AMP</strong> <span>-->
+<!--                                    Anadin extra soluble tablets-->
+<!--                                </span>-->
 
-                </summary>
-              </details>
-            </div>
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf1-amps2-div">
-              <details class="nhsuk-details ">
-                <summary class="nhsuk-details__summary">
-                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong> <span><a href="#">
-                                    Anadin extra tablets
-                                </a></span>
-                </summary>
-              </details>
-            </div>
+<!--            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf1-amps2-div">-->
+<!--              <details class="nhsuk-details ">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong> <span>-->
+<!--                                    Anadin extra tablets-->
+<!--                                </span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <!--                        <div class="tf-tree nhsuk-u-margin-left-7" style="display: none" id="tf1-amps3-div">-->
-            <!--                            <details class="nhsuk-details" open>-->
-            <!--                                <summary class="nhsuk-details__summary">-->
-            <!--                                    <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">-->
-            <!--                                    Anadin extra-->
-            <!--                                        (Haleon UK trading Ltd )</a></span>-->
-            <!--                                </summary>-->
-            <!--&lt;!&ndash;                                <ul class="nhsuk-u-margin-top-3">&ndash;&gt;-->
-            <!--&lt;!&ndash;                                    &lt;!&ndash;                                    <li>Anadin extra soluble tablets (Haleon UK trading Ltd )</li>&ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;&lt;!&ndash;                                    <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra tablets&ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;&lt;!&ndash;                                        (Haleon UK trading Ltd )</a></li>&ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;                                                                        <li><a href="#" class="nhsuk-link&#45;&#45;no-visited-state">Anadin extra&ndash;&gt;-->
-            <!--&lt;!&ndash;                                                                            (Haleon UK trading Ltd )</a></li>&ndash;&gt;-->
-            <!--&lt;!&ndash;                                </ul>&ndash;&gt;-->
-            <!--                            </details>-->
-            <!--                        </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-4"
-                 style="display: none; background-color: white" id="tf2-div">
-              <details class="nhsuk-details" id="tf2-expander">
-                <summary class="nhsuk-details__summary">
-                            <span class="nhsuk-details__summary-text">
-                                <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF
-                                </strong>
-                                Anadin Ibuprofen
-                            </span>
-                </summary>
-              </details>
-            </div>
+<!--            <div class="tf-tree nhsuk-u-margin-left-4"-->
+<!--                 style="display: none; background-color: white" id="tf2-div">-->
+<!--              <details class="nhsuk-details" id="tf2-expander">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                            <span class="nhsuk-details__summary-text">-->
+<!--                                <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF-->
+<!--                                </strong>-->
+<!--                                Anadin Ibuprofen-->
+<!--                            </span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none ;background-color: #E8F4FD" id="tf2-amps-div">
-              <details class="nhsuk-details">
-                <summary class="nhsuk-details__summary">
-                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP
-                  </strong><span><a href="#">
-                                    Anadin ibuprofen 200mg tablets</a></span>
-                </summary>
-              </details>
+<!--            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none ;background-color: #E8F4FD" id="tf2-amps-div">-->
+<!--              <details class="nhsuk-details">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP-->
+<!--                  </strong><span>-->
+<!--                                    Anadin ibuprofen 200mg tablets</span>-->
+<!--                </summary>-->
+<!--              </details>-->
 
-            </div>
-            <div class="tf-tree nhsuk-u-margin-left-4" style="display: none; background-color: white" id="tf3-div">
-              <details class="nhsuk-details" id="tf3-expander">
-                <summary class="nhsuk-details__summary">
-                            <span class="nhsuk-details__summary-text"><strong
-                                class="nhsuk-tag nhsuk-u-margin-right-2">TF
-                                    </strong><span>
-                               Anadin liquiFast
-                            </span>
-                </summary>
-              </details>
-            </div>
+<!--            </div>-->
+<!--            <div class="tf-tree nhsuk-u-margin-left-4" style="display: none; background-color: white" id="tf3-div">-->
+<!--              <details class="nhsuk-details" id="tf3-expander">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                            <span class="nhsuk-details__summary-text"><strong-->
+<!--                                class="nhsuk-tag nhsuk-u-margin-right-2">TF-->
+<!--                                    </strong>-->
+<!--                               Anadin liquiFast-->
+<!--                            </span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf3-amps-div">
-              <details class="nhsuk-details">
-                <summary class="nhsuk-details__summary">
-                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">
-                                     Anadin liquiFast 200mg effervescent tablets</a></span>
-                </summary>
-              </details>
-            </div>
+<!--            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf3-amps-div">-->
+<!--              <details class="nhsuk-details">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span>-->
+<!--                                     Anadin liquiFast 200mg effervescent tablets</span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf3-amps2-div">
-              <details class="nhsuk-details">
-                <summary class="nhsuk-details__summary">
-                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">
-                                   Anadin liquiFast 400mg capsules</a></span>
-                </summary>
-              </details>
-            </div>
+<!--            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf3-amps2-div">-->
+<!--              <details class="nhsuk-details">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span>-->
+<!--                                   Anadin liquiFast 400mg capsules</span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
 
-            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf3-amps3-div">
-              <details class="nhsuk-details">
-                <summary class="nhsuk-details__summary">
-                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span><a href="#">
-                                     Anadin ultra double strength 400mg capsules</a></span>
-                </summary>
-              </details>
-            </div>
-          </div>
+<!--            <div class="tf-tree nhsuk-u-margin-left-7" style="display: none; background-color: #E8F4FD" id="tf3-amps3-div">-->
+<!--              <details class="nhsuk-details">-->
+<!--                <summary class="nhsuk-details__summary">-->
+<!--                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">AMP</strong><span>-->
+<!--                                     Anadin ultra double strength 400mg capsules</span>-->
+<!--                </summary>-->
+<!--              </details>-->
+<!--            </div>-->
+<!--          </div>-->
 
 <!--tree two -->
+
+
           <div class="nhsuk-tree" id="tree2">
+
+
+            <div class="nhsuk-u-margin-bottom-3" id="tree2-controls">
+              <button type="button" class="nhsuk-button nhsuk-button--secondary" data-tree2-control="expand">Expand all</button>
+              <button type="button" class="nhsuk-button nhsuk-button--secondary" data-tree2-control="collapse">Collapse all</button>
+            </div>
+
             <ul role="tree">
               <li role="treeitem">
                 <details class="nhsuk-details" id="tree2-tfg-expander">
@@ -501,7 +550,7 @@
                         <ul role="group">
                           <li role="treeitem">
                             <div style="display: flex; align-items: center; gap: 8px;">
-                              <div class="nhsuk-tag" style="display: inline-flex; align-items: center; margin: 4;">AMP</div>
+                              <div class="nhsuk-tag" style="display: inline-flex; align-items: center; margin: 4px;">AMP</div>
                               <span style="display: inline-block;">Anadin extra soluble tablets </span>
                             </div>
                           </li>
@@ -571,6 +620,207 @@
 {% endblock %}
 
 {% block scripts %}
+<style>
+  /* Light grey background for table headers */
+  .nhsuk-table__head th {
+    background-color: #f0f4f5;
+  }
+
+  section#amp-0 {
+    margin-bottom: 30px;
+  }
+
+  #trade-family #amp-0 .update-box {
+    overflow-x: auto;
+  }
+
+  #trade-family #amp-0 .update-box .nhsuk-table-responsive {
+    width: 100%;
+    table-layout: fixed;
+    margin-left: 0 !important;
+  }
+
+  #trade-family #amp-0 .update-box .nhsuk-table-responsive th,
+  #trade-family #amp-0 .update-box .nhsuk-table-responsive td {
+    padding: 8px 10px;
+    word-break: break-word;
+  }
+
+  #tree1 #tf1-amps-div .nhsuk-details__summary::before,
+  #tree1 #tf1-amps2-div .nhsuk-details__summary::before,
+  #tree1 #tf2-amps-div .nhsuk-details__summary::before,
+  #tree1 #tf3-amps-div .nhsuk-details__summary::before,
+  #tree1 #tf3-amps2-div .nhsuk-details__summary::before,
+  #tree1 #tf3-amps3-div .nhsuk-details__summary::before {
+    border-left-color: #E8F4FD;
+  }
+
+  #tree1 #tf1-amps-div .nhsuk-details__summary::before,
+  #tree1 #tf1-amps2-div .nhsuk-details__summary::before,
+  #tree1 #tf2-amps-div .nhsuk-details__summary::before,
+  #tree1 #tf3-amps-div .nhsuk-details__summary::before,
+  #tree1 #tf3-amps2-div .nhsuk-details__summary::before,
+  #tree1 #tf3-amps3-div .nhsuk-details__summary::before {
+    display: none;
+  }
+
+  #tree1 #tf1-amps-div .nhsuk-details__summary,
+  #tree1 #tf1-amps2-div .nhsuk-details__summary,
+  #tree1 #tf2-amps-div .nhsuk-details__summary,
+  #tree1 #tf3-amps-div .nhsuk-details__summary,
+  #tree1 #tf3-amps2-div .nhsuk-details__summary,
+  #tree1 #tf3-amps3-div .nhsuk-details__summary {
+    margin-left: -24px;
+  }
+  #tree1 #tf1-amps-div .nhsuk-details__summary span,
+  #tree1 #tf1-amps2-div .nhsuk-details__summary span,
+  #tree1 #tf2-amps-div .nhsuk-details__summary span,
+  #tree1 #tf3-amps-div .nhsuk-details__summary span,
+  #tree1 #tf3-amps2-div .nhsuk-details__summary span,
+  #tree1 #tf3-amps3-div .nhsuk-details__summary span {
+    color: #000000;
+  }
+  /* Remove focus outline from AMP summaries */
+  #tree1 #tf1-amps-div .nhsuk-details__summary:focus,
+  #tree1 #tf1-amps2-div .nhsuk-details__summary:focus,
+  #tree1 #tf2-amps-div .nhsuk-details__summary:focus,
+  #tree1 #tf3-amps-div .nhsuk-details__summary:focus,
+  #tree1 #tf3-amps2-div .nhsuk-details__summary:focus,
+  #tree1 #tf3-amps3-div .nhsuk-details__summary:focus,
+  #tree1 #tf1-amps-div .nhsuk-details__summary:focus-visible,
+  #tree1 #tf1-amps2-div .nhsuk-details__summary:focus-visible,
+  #tree1 #tf2-amps-div .nhsuk-details__summary:focus-visible,
+  #tree1 #tf3-amps-div .nhsuk-details__summary:focus-visible,
+  #tree1 #tf3-amps2-div .nhsuk-details__summary:focus-visible,
+  #tree1 #tf3-amps3-div .nhsuk-details__summary:focus-visible {
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* Apply highlight INSIDE the AMP box */
+  #tree1 #tf1-amps-div:focus-within,
+  #tree1 #tf1-amps2-div:focus-within,
+  #tree1 #tf2-amps-div:focus-within,
+  #tree1 #tf3-amps-div:focus-within,
+  #tree1 #tf3-amps2-div:focus-within,
+  #tree1 #tf3-amps3-div:focus-within {
+    box-shadow: inset 0 0 0 3px #ffeb3b;
+    border-radius: 4px;
+  }
+
+  /* Base tree styling for tree2 */
+  #tree2-controls {
+    display: flex;
+    gap: 12px;
+  }
+
+  #tree2-controls .nhsuk-button {
+    margin-bottom: 0;
+  }
+
+  #tree2 {
+    margin-bottom: 30px;
+  }
+
+  #tree2 > ul > li {
+    margin: 0;
+  }
+
+  #tree2 li, #tree2 ul {
+    padding: 5px 0;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  #tree2 ul {
+    list-style: none;
+  }
+
+  #tree2 li {
+    margin: 0 0 0 20px;
+  }
+
+  #tree2 li > div {
+    display: flex;
+  }
+
+  /* ===== LEVEL 1: TFG → TF vertical line ===== */
+  #tree2 > ul > li > details > ul[role="group"] {
+    position: relative;
+    margin-left: 20px;
+  }
+
+  /* bottom: 35px stops the line at the midpoint of the last TF item
+     (TF summary row is ~70px tall, connector is at top:30px, so stop at 35px from bottom) */
+  #tree2 > ul > li > details > ul[role="group"]::before {
+    border-left: 1px solid #c9ced5;
+    content: "";
+    left: 7px;
+    position: absolute;
+    top: 0;
+    bottom: 33px;!important;
+  }
+
+  #tree2 li details {
+    margin-bottom: 10px !important;
+  }
+
+  #tree2 .nhsuk-tree-ul::before {
+    bottom: 35px !important;
+    /*top: 0px;*/
+  }
+
+  #tree2 .nhsuk-tree-ul:has(li:last-child details[open])::before{
+    bottom: 148px !important;
+  }
+
+  /* Horizontal connectors for TF items */
+  #tree2 > ul > li > details > ul[role="group"] > li[role="treeitem"] {
+    position: relative;
+    margin-left: 20px;
+  }
+
+  #tree2 > ul > li > details > ul[role="group"] > li[role="treeitem"]::before {
+    border-top: 1px solid #c9ced5;
+    content: "";
+    left: -16px;
+    position: absolute;
+    top: 30px;
+    width: 14px;
+  }
+
+  /* ===== LEVEL 2: TF → AMP vertical line ===== */
+  #tree2 li[role="treeitem"] > details > ul[role="group"] {
+    position: relative;
+    margin-left: 20px;
+  }
+
+  /* Vertical line from TF to first AMP, reduced by half */
+  #tree2 li[role="treeitem"] > details > ul[role="group"]::before {
+    border-left: 1px solid #c9ced5;
+    content: "";
+    left: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 33px;
+  }
+
+  /* ===== LEVEL 3: AMP horizontal connectors ===== */
+  #tree2 li[role="treeitem"] > details > ul[role="group"] > li[role="treeitem"] {
+    position: relative;
+    margin-left: 21px;
+  }
+
+  #tree2 li[role="treeitem"] > details > ul[role="group"] > li[role="treeitem"]::before {
+    border-top: 1px solid #c9ced5;
+    content: "";
+    left: -16px;
+    position: absolute;
+    top: 20px;
+    width: 14px;
+  }
+</style>
 
 <script>
   function setTfJourney() {
@@ -607,3 +857,4 @@
 <script src="/js/tf-tree-display.js"></script>
 
 {% endblock %}
+

@@ -18,28 +18,36 @@ var tf3_amps3_div = document.getElementById("tf3-amps3-div");
 
 
 
-tfg.addEventListener("toggle", function() {
-    toggleDisplay(tf1_div, tf1_expander);
-    toggleDisplay(tf2_div, tf2_expander);
-    toggleDisplay(tf3_div, tf3_expander);
-})
+if (tfg) {
+    tfg.addEventListener("toggle", function() {
+        toggleDisplay(tf1_div, tf1_expander);
+        toggleDisplay(tf2_div, tf2_expander);
+        toggleDisplay(tf3_div, tf3_expander);
+    });
+}
 
-tf1_expander.addEventListener("toggle", function() {
-    toggleDisplay(tf1_amps_div);
-    toggleDisplay(tf1_amps2_div);
-    toggleDisplay(tf1_amps3_div);
-})
+if (tf1_expander) {
+    tf1_expander.addEventListener("toggle", function() {
+        toggleDisplay(tf1_amps_div);
+        toggleDisplay(tf1_amps2_div);
+        toggleDisplay(tf1_amps3_div);
+    });
+}
 
-tf2_expander.addEventListener("toggle", function() {
-    toggleDisplay(tf2_amps_div);
-    toggleDisplay(tf2_amps2_div);
-})
+if (tf2_expander) {
+    tf2_expander.addEventListener("toggle", function() {
+        toggleDisplay(tf2_amps_div);
+        toggleDisplay(tf2_amps2_div);
+    });
+}
 
-tf3_expander.addEventListener("toggle", function() {
-    toggleDisplay(tf3_amps_div);
-    toggleDisplay(tf3_amps2_div);
-    toggleDisplay(tf3_amps3_div);
-})
+if (tf3_expander) {
+    tf3_expander.addEventListener("toggle", function() {
+        toggleDisplay(tf3_amps_div);
+        toggleDisplay(tf3_amps2_div);
+        toggleDisplay(tf3_amps3_div);
+    });
+}
 
 function toggleDisplay(element, child) {
     if (!element) {
@@ -60,9 +68,44 @@ function toggleDisplay(element, child) {
 
 var tree1 = document.getElementById("tree1");
 var tree2 = document.getElementById("tree2");
-tree2.style.display = 'none';
+if (tree2) {
+    tree2.style.display = 'none';
+}
 
 function toggleTree() {
+    if (!tree1 || !tree2) {
+        return;
+    }
+
     tree1.style.display = tree1.style.display === 'none' ? 'block' : 'none';
     tree2.style.display = tree2.style.display === 'none' ? 'block' : 'none';
 }
+
+function toggleTree2All(isExpanded) {
+    if (!tree2) {
+        return;
+    }
+
+    var detailsNodes = tree2.querySelectorAll("details");
+    detailsNodes.forEach(function(detailsNode) {
+        detailsNode.open = isExpanded;
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var expandAllButton = document.querySelector('[data-tree2-control="expand"]');
+    var collapseAllButton = document.querySelector('[data-tree2-control="collapse"]');
+
+    if (expandAllButton) {
+        expandAllButton.addEventListener("click", function() {
+            toggleTree2All(true);
+        });
+    }
+
+    if (collapseAllButton) {
+        collapseAllButton.addEventListener("click", function() {
+            toggleTree2All(false);
+        });
+    }
+});
+

@@ -1,0 +1,373 @@
+{% extends "base-large.html" %}
+{% block breadcrumb %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="tfg-table-view">Trade
+        family
+        groups</a></li>
+    </ol>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/trade-families/add-amp#trade-family">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         aria-hidden="true" height="24" width="24">
+      <path
+          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+      </path>
+    </svg>
+    Go back</a>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <span class="nhsuk-caption-l" id="update-associated-vtm-sub-heading">Aria tree build </span>
+    <span class="nhsuk-u-visually-hidden"> - </span>
+    <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Anadin</h1>
+  </div>
+</div>
+
+
+<!--tree accessible -->
+<h2 class="nhsuk-heading-m" id="tree1-heading">Tree 1 view</h2>
+<p class="nhsuk-body-s tf-disclosure-tree__hint" id="tree1-hint">
+  Use Tab to move through controls and Enter or Space to open or close each level.
+</p>
+<div class="tf-disclosure-tree__controls" aria-describedby="tree1-hint">
+  <button type="button" class="nhsuk-button nhsuk-button--secondary tf-disclosure-tree__btn" data-tree-control="expand">
+    Expand all
+  </button>
+  <button type="button" class="nhsuk-button nhsuk-button--secondary tf-disclosure-tree__btn" data-tree-control="collapse">
+    Collapse all
+  </button>
+</div>
+<div id="tree1" class="tf-disclosure-tree" aria-labelledby="tree1-heading" aria-describedby="tree1-hint">
+  <ul class="tf-disclosure-tree__list">
+    <li class="tf-disclosure-tree__item" id="tfg-div">
+      <details class="nhsuk-details" id="tfg-expander" open>
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            <strong class="nhsuk-tag nhsuk-u-margin-right-2"> TFG</strong>
+            <a href="#" class="nhsuk-link--no-visited-state">Anadin</a>
+          </span>
+        </summary>
+
+        <ul class="tf-disclosure-tree__list">
+          <li class="tf-disclosure-tree__item" id="tf1-div">
+            <details class="nhsuk-details" id="tf1-expander">
+              <summary class="nhsuk-details__summary">
+
+                  <strong class="nhsuk-tag nhsuk-u-margin-right-1">TF</strong>
+                  <strong class="nhsuk-tag nhsuk-tag--purple nhsuk-u-margin-right-2">F</strong>
+              <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin extra</a>
+
+              </summary>
+
+              <ul class="tf-disclosure-tree__list">
+                <li class="tf-disclosure-tree__leaf" id="tf1-amps-div">
+                  <strong class="nhsuk-tag">AMP</strong>
+                  <span>Anadin extra soluble tablets</span>
+                </li>
+                <li class="tf-disclosure-tree__leaf" id="tf1-amps2-div">
+                  <strong class="nhsuk-tag">AMP</strong>
+                  <span>Anadin extra tablets</span>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="tf-disclosure-tree__item" id="tf2-div">
+            <details class="nhsuk-details" id="tf2-expander">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF</strong>
+                   <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin Ibuprofen</a>
+                </span>
+              </summary>
+
+              <ul class="tf-disclosure-tree__list">
+                <li class="tf-disclosure-tree__leaf" id="tf2-amps-div">
+                  <strong class="nhsuk-tag">AMP</strong>
+                 Anadin ibuprofen 200mg tablets
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li class="tf-disclosure-tree__item" id="tf3-div">
+            <details class="nhsuk-details" id="tf3-expander">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  <strong class="nhsuk-tag nhsuk-u-margin-right-2">TF</strong>
+                  <a href="view-tf" class="nhsuk-link--no-visited-state">Anadin liquiFast</a>
+                </span>
+              </summary>
+
+              <ul class="tf-disclosure-tree__list">
+                <li class="tf-disclosure-tree__leaf" id="tf3-amps-div">
+                  <strong class="nhsuk-tag">AMP</strong>
+                 Anadin liquiFast 200mg effervescent tablets
+                </li>
+                <li class="tf-disclosure-tree__leaf" id="tf3-amps2-div">
+                  <strong class="nhsuk-tag">AMP</strong>
+                  Anadin liquiFast 400mg capsules
+                </li>
+                <li class="tf-disclosure-tree__leaf" id="tf3-amps3-div">
+                  <strong class="nhsuk-tag">AMP</strong>
+                  Anadin ultra double strength 400mg capsules
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</div>
+
+<style>
+  /* Tree action controls above the component (Expand/Collapse buttons). */
+  .tf-disclosure-tree__controls {
+    margin-bottom: 12px;
+  }
+
+  /* Button spacing inside the action controls row. */
+  .tf-disclosure-tree__controls .nhsuk-button {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+
+  /* Small button size override for tree controls. */
+  .tf-disclosure-tree__controls .tf-disclosure-tree__btn {
+    font-size: 0.875rem;
+    line-height: 1.2;
+    padding: 4px 12px;
+  }
+
+  /* Instructional hint text shown above the tree. */
+  .tf-disclosure-tree__hint {
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+
+  /* Base list reset for all tree levels. */
+  .tf-disclosure-tree__list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  /* Nested list containers (child groups under details rows). */
+  .tf-disclosure-tree__list .tf-disclosure-tree__list {
+    margin-top: 8px;
+    padding-left: 0;
+    position: relative;
+  }
+
+  /* Indent each child group from its parent row. */
+  #tree1 details > .tf-disclosure-tree__list {
+    margin-left: 20px;
+  }
+
+  /* Vertical connector stem for each nested child group. */
+  #tree1 details > .tf-disclosure-tree__list::before {
+    border-left: 1px solid #c9ced5;
+    bottom: 0;
+    content: "";
+    left: 6px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Remove default bottom spacing from NHS details wrapper rows. */
+  #tree1 .nhsuk-details {
+    margin-bottom: 0;
+  }
+
+  /* Summary row layout and space reserved for custom triangle marker. */
+  #tree1 .nhsuk-details__summary {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  /* Hide browser-native details marker so custom marker can be used. */
+  #tree1 .nhsuk-details__summary::marker,
+  #tree1 .nhsuk-details__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Closed-state triangle marker (points right). */
+  #tree1 details > .nhsuk-details__summary::before {
+    border-color: transparent transparent transparent #005eb8;
+    border-style: solid;
+    border-width: 6px 0 6px 10px;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Open-state triangle marker (points down). */
+  #tree1 details[open] > .nhsuk-details__summary::before {
+    border-color: #005eb8 transparent transparent transparent;
+    border-width: 10px 6px 0 6px;
+    left: 0;
+  }
+
+  /* Top-level TF group stem trim to stop at the last branch midpoint. */
+  #tree1 #tfg-expander > .tf-disclosure-tree__list::before {
+    bottom: 0;
+  }
+
+  /* Top-level only: trim at TF connector height so TFG stem meets last TF branch. */
+  #tree1 #tfg-expander > .tf-disclosure-tree__list > :last-child::after {
+    top: 15px;
+  }
+
+  /* Position context for tree rows so connector pseudo-elements can anchor. */
+  #tree1 .tf-disclosure-tree__list .tf-disclosure-tree__item,
+  #tree1 .tf-disclosure-tree__list .tf-disclosure-tree__leaf {
+    margin-left: 20px;
+    position: relative;
+  }
+
+  /* Keep the first/top-level row aligned to the root. */
+  #tree1 > .tf-disclosure-tree__list > .tf-disclosure-tree__item {
+    margin-left: 0;
+  }
+
+  /* Horizontal connector from vertical stem into TF rows. */
+  #tree1 details > .tf-disclosure-tree__list > .tf-disclosure-tree__item::before {
+    border-top: 1px solid #c9ced5;
+    content: "";
+    left: -14px;
+    position: absolute;
+    top: 14px;
+    width: 14px;
+  }
+
+  /* Horizontal connector from vertical stem into AMP leaf rows. */
+  #tree1 details > .tf-disclosure-tree__list > .tf-disclosure-tree__leaf::before {
+    border-top: 1px solid #c9ced5;
+    content: "";
+    left: -14px;
+    position: absolute;
+    top: 20px;
+    width: 14px;
+  }
+
+  /* Mask below last child so vertical stem ends cleanly at final branch. */
+  #tree1 .tf-disclosure-tree__list .tf-disclosure-tree__list > :last-child::after {
+    background: #f0f4f5;
+    bottom: -8px;
+    content: "";
+    left: -14px;
+    position: absolute;
+    top: 20px;
+    width: 2px;
+  }
+
+  /* Spacing between sibling tree item rows. */
+  .tf-disclosure-tree__item {
+    margin-bottom: 8px;
+  }
+
+  /* AMP leaf row layout (tag + link on one row). */
+  .tf-disclosure-tree__leaf {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  .tf-disclosure-tree summary:focus-visible,
+  .tf-disclosure-tree a:focus-visible,
+  .tf-disclosure-tree button:focus-visible {
+    outline: 3px solid #ffeb3b;
+    outline-offset: 2px;
+  }
+
+  /* Remove prior mask styling around the purple F tag to keep spacing natural. */
+  #tree1 .nhsuk-tag--purple {
+    position: relative;
+  }
+
+  /* Remove NHS yellow focus highlight */
+  .nhsuk-details__summary:focus {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .nhsuk-details__summary:focus .nhsuk-details__summary-text {
+    background-color: transparent;
+  }
+</style>
+
+<script>
+  (function () {
+    var tree = document.getElementById("tree1");
+    if (!tree) {
+      return;
+    }
+
+    var detailsNodes = tree.querySelectorAll("details");
+    var expandButton = document.querySelector('[data-tree-control="expand"]');
+    var collapseButton = document.querySelector('[data-tree-control="collapse"]');
+
+    function setAll(openState) {
+      for (var i = 0; i < detailsNodes.length; i++) {
+        detailsNodes[i].open = openState;
+      }
+    }
+
+    if (expandButton) {
+      expandButton.addEventListener("click", function () {
+        setAll(true);
+      });
+    }
+
+    if (collapseButton) {
+      collapseButton.addEventListener("click", function () {
+        setAll(false);
+      });
+    }
+  })();
+</script>
+
+<!--<script>-->
+<!--  (function () {-->
+<!--    var tree = document.getElementById("tree1");-->
+<!--    if (!tree) {-->
+<!--      return;-->
+<!--    }-->
+
+<!--    var detailsNodes = tree.querySelectorAll("details");-->
+<!--    var expandButton = document.querySelector('[data-tree-control="expand"]');-->
+<!--    var collapseButton = document.querySelector('[data-tree-control="collapse"]');-->
+
+<!--    function setAll(openState) {-->
+<!--      for (var i = 0; i < detailsNodes.length; i++) {-->
+<!--        detailsNodes[i].open = openState;-->
+<!--      }-->
+<!--    }-->
+
+<!--    if (expandButton) {-->
+<!--      expandButton.addEventListener("click", function () {-->
+<!--        setAll(true);-->
+<!--      });-->
+<!--    }-->
+
+<!--    if (collapseButton) {-->
+<!--      collapseButton.addEventListener("click", function () {-->
+<!--        setAll(false);-->
+<!--  })();-->
+<!--</script>-->
+{% endblock %}
