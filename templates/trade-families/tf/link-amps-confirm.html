@@ -29,12 +29,12 @@
         <span class="nhsuk-u-visually-hidden"> - </span>
         <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Anadin Extra</h1>
 
-        <table role="table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
+        <table role="table" class="nhsuk-table nhsuk-table-responsive nhsuk-u-padding-bottom-4 tf-link-amps-confirm-table">
             <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col"
                         id="associated-vtm-table--tag-header" style="width: 10px;">
-                        <span class="nhsuk-u-visually-hidden">Indicator</span>
+                        <span >State</span>
                     </th>
                     <th role="columnheader" class="columnheader-sticky" scope="col"
                         id="associated-vtm-table--name-header">
@@ -220,4 +220,19 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<style>
+    .tf-link-amps-confirm-table .nhsuk-table__head th {
+        background-color: #f0f4f5;
+        border: 1px solid #d8dde0;
+        padding: 10px 12px;
+    }
+
+    .tf-link-amps-confirm-table .nhsuk-table__body .nhsuk-table__cell,
+    .tf-link-amps-confirm-table .nhsuk-table__body .nhsuk-table__cell-historic {
+        padding: 10px 12px;
+    }
+</style>
 {% endblock %}

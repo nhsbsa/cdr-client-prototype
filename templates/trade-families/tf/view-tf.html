@@ -14,6 +14,310 @@
           </li>
         </ul>
       </nav>
+
+      <div>
+        <a id="button--show-tree" class="nhsuk-btn-show-tree" tabindex="0">Show the hierarchy tree</a>
+        <div id="drug-hierarchy-tree">
+          <nav aria-labelledby="hierarchy-tree-view">
+            <h2 id="hierarchy-tree-view" class="hierarchy-tree-heading">Hierarchy tree</h2>
+          </nav>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary nhsuk-u-margin-bottom-3">
+              <span id="link--understanding-icons-in-tree" class="nhsuk-details__summary-text">
+                Understanding icons and codes
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <table>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                <tr>
+                  <th class="nhsuk-table__header icon-width">Icon</th>
+                  <th class="nhsuk-table__header">Description</th>
+                </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <svg style="background-image: url('/images/icons/icon-tick-circle-lge.svg'); background-repeat: no-repeat; width: 24px; height: 24px; vertical-align: middle; background-position-x: right;"></svg>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Valid VMPP or valid AMPP</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <svg style="background-image: url('/images/icons/icon-cross-square.svg'); background-repeat: no-repeat; width: 25px; height: 25px; vertical-align: middle; background-position-x: center;"></svg>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Invalid</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <svg style="background-image: url('/images/icons/warning.svg'); background-repeat: no-repeat; width: 24px; height: 24px; vertical-align: middle; background-position-x: right;"></svg>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Discontinued</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Future dated</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <strong class="nhsuk-tag nhsuk-tag--orange" style="padding-left: 6px; padding-right: 6px">H</strong>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Historical data</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <strong class="nhsuk-tag nhsuk-tag--white">P</strong>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Parallel Import Product</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <strong class="nhsuk-tag nhsuk-tag--green">TF</strong>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Linked to TF</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <strong class="nhsuk-tag nhsuk-tag--red">TF</strong>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Not linked to TF</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">
+                    <strong class="nhsuk-tag" style="padding: 4px 5px; background-color: #606E80; border: 1px solid #212b32">W</strong>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Supplier Type Indicator (Wholesaler)</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(9A)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part IXa</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(9B)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part IXb</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(9C)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part IXc</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(9R)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part IXb</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(8A Cat A)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part VIIIA Category A</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(8A Cat C)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part VIIIA Category C</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(8A Cat M)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part VIIIA Category M</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(DTSO)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part VIIIB</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(8C)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part VIIIC</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(8D)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part VIIID</td>
+                </tr>
+                <tr>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2 nhsuk-u-font-size-16">(9B/9C)</td>
+                  <td class="nhsuk-table__cell nhsuk-u-font-size-16 nhsuk-u-padding-top-2 nhsuk-u-padding-bottom-2">Drug Tariff payment category Part IXb and Part IXc</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <div class="nhsuk-grid-column-full nhsuk-u-padding-left-0 nhsuk-u-margin-bottom-5 nhsuk-u-margin-top-2" id="warning-buttons-js-disabled" style="display: block;">
+            <div class="nhsuk-hide-button-container">
+              <a id="button--hide-tree" tabindex="0" class="nhsuk-button-hide-tree nhsuk-u-margin-bottom-2 nhsuk-u-margin-right-1">Hide <span class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
+              <a id="button--expand-tree" tabindex="0" class="nhsuk-button-show-full-screen">Maximize <span class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
+              <a id="button--minimize-tree" tabindex="0" class="nhsuk-button-hide-full-screen">Minimize <span class="nhsuk-u-visually-hidden">the hierarchy</span>tree</a>
+            </div>
+          </div>
+
+          <div class="nhsuk-action-link">
+            <a class="nhsuk-action-link__link" id="expand-button" data-module="hierarchy-tree-expand-all-button">
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+              </svg>
+              <span class="nhsuk-action-link__text">Expand visible branches</span>
+            </a>
+          </div>
+
+          <style>
+            /*#hierarchy-tree-scrollable { border: 2px solid #000; }*/
+            #hierarchy-tree .fancytree-node:not(.fancytree-folder) { background-color: #e8f4fd !important; border: 1px solid #999 !important; }
+          </style>
+
+          <div id="hierarchy-tree-scrollable" class="nhsuk-grid-column-full" style="height: 100vh; overflow-y: auto">
+            <div id="hierarchy-tree-container">
+              <div id="hierarchy-tree-module" data-module="module-tree">
+                <div class="nhsuk-grid-column-full" id="hierarchy-tree">
+                  <ul id="ft-id-1" class="ui-fancytree fancytree-container fancytree-plain fancytree-treefocus" tabindex="0" role="tree" aria-multiselectable="true" aria-live="polite" aria-relevant="additions removals" aria-activedescendant="hierarchy-tree-vtm,vmp">
+                    <li id="hierarchy-tree-vtm" role="treeitem" aria-expanded="true" aria-selected="false" class="fancytree-lastsib">
+                      <span class="fancytree-node fancytree-focused fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef" tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);">
+                        <span role="button" class="fancytree-expander" tabindex="0" aria-label="Open branch" id="hierarchy-tree--expander-vtm"></span>
+                        <span role="presentation" class="fancytree-icon"></span>
+                        <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;">
+                          <a id="hierarchy-tree--title-link-vtm" class="tree-link" role="link" data-key="vtm">
+                            <strong class="nhsuk-tag">TFG</strong> Anadin
+                          </a>
+                        </span>
+                      </span>
+                      <ul role="group" aria-live="polite" aria-relevant="additions removals">
+                        <li id="hierarchy-tree-vtm,vmp" role="treeitem" aria-expanded="true" aria-selected="false" class="fancytree-lastsib">
+                          <span class="fancytree-node fancytree-active fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef" tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid #005a30;">
+                            <span role="button" class="fancytree-expander" tabindex="0" aria-label="Open branch" id="hierarchy-tree--expander-vtm,vmp"></span>
+                            <span role="presentation" class="fancytree-icon"></span>
+                            <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%; background-color: rgb(222, 224, 226); color:rgb(0, 0, 0); cursor: text;">
+                              <a id="hierarchy-tree--title-link-vtm,vmp" class="tree-link" role="link" data-key="vtm,vmp">
+                                <strong class="nhsuk-tag">TF</strong>
+<!--                                <strong class="nhsuk-tag nhsuk-tag&#45;&#45;purple">F</strong>-->
+                                Anadin Extra
+                              </a>
+                              <strong class="nhsuk-tag nhsuk-u-margin-1" style="vertical-align: text-bottom; padding: 4px; float: right">Currently viewing</strong>
+                            </span>
+                          </span>
+                          <ul role="group" aria-live="polite" aria-relevant="additions removals">
+                            <li id="hierarchy-tree-vtm,vmp,vmpp-3969" role="treeitem" aria-selected="false">
+                              <span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0">
+                                <span class="fancytree-expander"></span>
+                                <span role="presentation" class="fancytree-icon"></span>
+                                <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%;">
+                                  <a id="hierarchy-tree--title-link-vtm,vmp,vmpp-3969" class="tree-link" role="link" data-key="vtm,vmp,vmpp-3969" data--prefix-added="true">
+                                    <strong class="nhsuk-tag">AMP</strong> Anadin extra soluble tablets
+                                  </a>
+                                </span>
+                              </span>
+                            </li>
+                          </ul>
+
+                          <ul role="group" aria-live="polite" aria-relevant="additions removals">
+                            <li id="hierarchy-tree-vtm,vmp,vmpp-3969" role="treeitem" aria-selected="false">
+                              <span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0">
+                                <span class="fancytree-expander"></span>
+                                <span role="presentation" class="fancytree-icon"></span>
+                                <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%;">
+                                  <a id="hierarchy-tree--title-link-vtm,vmp,vmpp-3969" class="tree-link" role="link" data-key="vtm,vmp,vmpp-3969" data--prefix-added="true">
+                                    <strong class="nhsuk-tag">AMP</strong> Anadin extra tablets
+                                  </a>
+                                </span>
+                              </span>
+                            </li>
+                          </ul>
+
+                          <ul role="group" aria-live="polite" aria-relevant="additions removals">
+                            <li id="hierarchy-tree-vtm,vmp,vmpp-3969" role="treeitem" aria-selected="false">
+                              <span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0">
+                                <span class="fancytree-expander"></span>
+                                <span role="presentation" class="fancytree-icon"></span>
+                                <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%;">
+                                  <a id="hierarchy-tree--title-link-vtm,vmp,vmpp-3969" class="tree-link" role="link" data-key="vtm,vmp,vmpp-3969" data--prefix-added="true">
+                                    <strong class="nhsuk-tag">AMP</strong> Anadin extra
+                                  </a>
+                                </span>
+                              </span>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+<!--                      <ul role="group">-->
+<!--                        <li id="hierarchy-tree-vtm,vmp" role="treeitem" aria-expanded="true" aria-selected="false" class="fancytree-lastsib">-->
+<!--                          <span class="fancytree-node fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef" tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);">-->
+<!--                            <span role="button" class="fancytree-expander" tabindex="0" aria-label="Open branch" id="hierarchy-tree&#45;&#45;expander-vtm,vmp"></span>-->
+<!--                            <span role="presentation" class="fancytree-icon"></span>-->
+<!--                            <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;">-->
+<!--                              <a id="hierarchy-tree&#45;&#45;title-link-vtm,vmp" class="tree-link" role="link" data-key="vtm,vmp">-->
+<!--                                <strong class="nhsuk-tag">TF</strong> Anadin Ibuprofen-->
+<!--                              </a>-->
+<!--                            </span>-->
+<!--                          </span>-->
+<!--                          <ul role="group" aria-live="polite" aria-relevant="additions removals">-->
+<!--                            <li id="hierarchy-tree-vtm,vmp,vmpp-3969" role="treeitem" aria-selected="false">-->
+<!--                              <span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0">-->
+<!--                                <span class="fancytree-expander"></span>-->
+<!--                                <span role="presentation" class="fancytree-icon"></span>-->
+<!--                                <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%;">-->
+<!--                                  <a id="hierarchy-tree&#45;&#45;title-link-vtm,vmp,vmpp-3969" class="tree-link" role="link" data-key="vtm,vmp,vmpp-3969" data&#45;&#45;prefix-added="true">-->
+<!--                                    <strong class="nhsuk-tag">AMP</strong> Anadin ibuprofen 200mg tablets-->
+<!--                                  </a>-->
+<!--                                </span>-->
+<!--                              </span>-->
+<!--                            </li>-->
+<!--                            <li id="hierarchy-tree-vtm,vmp,vmpp-3969" role="treeitem" aria-selected="false">-->
+<!--                              <span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0">-->
+<!--                                <span class="fancytree-expander"></span>-->
+<!--                                <span role="presentation" class="fancytree-icon"></span>-->
+<!--                                <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%;">-->
+<!--                                  <a id="hierarchy-tree&#45;&#45;title-link-vtm,vmp,vmpp-3969" class="tree-link" role="link" data-key="vtm,vmp,vmpp-3969" data&#45;&#45;prefix-added="true">-->
+<!--                                    <strong class="nhsuk-tag">AMP</strong> Anadin ibuprofen 400mg capsules-->
+<!--                                  </a>-->
+<!--                                </span>-->
+<!--                              </span>-->
+<!--                            </li>-->
+<!--                          </ul>-->
+<!--                        </li>-->
+<!--                      </ul>-->
+<!--                      <ul role="group">-->
+<!--                        <li id="hierarchy-tree-vtm,vmp" role="treeitem" aria-expanded="true" aria-selected="false" class="fancytree-lastsib">-->
+<!--                          <span class="fancytree-node fancytree-expanded fancytree-folder fancytree-has-children fancytree-lastsib fancytree-exp-el fancytree-ico-ef" tabindex="0" style="background-color: rgb(222, 224, 226); border: 1px solid rgb(118, 134, 146);">-->
+<!--                            <span role="button" class="fancytree-expander" tabindex="0" aria-label="Open branch" id="hierarchy-tree&#45;&#45;expander-vtm,vmp"></span>-->
+<!--                            <span role="presentation" class="fancytree-icon"></span>-->
+<!--                            <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%; background-color: rgb(222, 224, 226); color: rgb(0, 0, 0); cursor: text;">-->
+<!--                              <a id="hierarchy-tree&#45;&#45;title-link-vtm,vmp" class="tree-link" role="link" data-key="vtm,vmp">-->
+<!--                                <strong class="nhsuk-tag">TF</strong> Anadin LiquiFast-->
+<!--                              </a>-->
+<!--                            </span>-->
+<!--                          </span>-->
+<!--                          <ul role="group" aria-live="polite" aria-relevant="additions removals">-->
+<!--                            <li id="hierarchy-tree-vtm,vmp,vmpp-3969" role="treeitem" aria-selected="false">-->
+<!--                              <span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0">-->
+<!--                                <span class="fancytree-expander"></span>-->
+<!--                                <span role="presentation" class="fancytree-icon"></span>-->
+<!--                                <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%;">-->
+<!--                                  <a id="hierarchy-tree&#45;&#45;title-link-vtm,vmp,vmpp-3969" class="tree-link" role="link" data-key="vtm,vmp,vmpp-3969" data&#45;&#45;prefix-added="true">-->
+<!--                                    <strong class="nhsuk-tag">AMP</strong> Anadin LiquiFast 200mg effevrescent tablet-->
+<!--                                  </a>-->
+<!--                                </span>-->
+<!--                              </span>-->
+<!--                            </li>-->
+<!--                            <li id="hierarchy-tree-vtm,vmp,vmpp-3969" role="treeitem" aria-selected="false">-->
+<!--                              <span class="fancytree-node fancytree-exp-n fancytree-ico-c" tabindex="0">-->
+<!--                                <span class="fancytree-expander"></span>-->
+<!--                                <span role="presentation" class="fancytree-icon"></span>-->
+<!--                                <span class="fancytree-title" style="white-space: normal; overflow: hidden; outline: none; width: 88%;">-->
+<!--                                  <a id="hierarchy-tree&#45;&#45;title-link-vtm,vmp,vmpp-3969" class="tree-link" role="link" data-key="vtm,vmp,vmpp-3969" data&#45;&#45;prefix-added="true">-->
+<!--                                    <strong class="nhsuk-tag">AMP</strong> Anadin LiquiFast 400mg capsules-->
+<!--                                  </a>-->
+<!--                                </span>-->
+<!--                              </span>-->
+<!--                            </li>-->
+<!--                          </ul>-->
+<!--                        </li>-->
+<!--                      </ul>-->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
@@ -330,14 +634,14 @@
               <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-full">
                   <form>
-                    <table class="nhsuk-table-responsive">
+                    <table class="nhsuk-table nhsuk-table-responsive view-tf-data-table">
                       <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">View linked AMPs
                       </caption>
                       <thead role="rowgroup" class="nhsuk-table__head">
                         <tr role="row">
-                          <th id="identifier-header" role="columnheader" class="nhsuk-u-visually-hidden" scope="col"
+                          <th id="identifier-header" role="columnheader" scope="col"
                             style="display: none;">
-                            Idenitifer
+                            State
                           </th>
                           <th role="columnheader" class="" scope="col">
                             Name
@@ -705,7 +1009,7 @@
           </div>
 
           <div id="linked-tfg-container" style="display: none;">
-            <table class="nhsuk-table">
+            <table class="nhsuk-table view-tf-data-table">
               <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                   <th id="identifier-header" role="columnheader" scope="col" style="display: none;">
@@ -809,7 +1113,7 @@
 
           <h3 class="nhsuk-heading-m">Name details</h3>
 
-          <table class="nhsuk-table">
+          <table class="nhsuk-table view-tf-data-table">
 
             <thead role="rowgroup" class="nhsuk-table__head">
               <tr role="row">
@@ -867,6 +1171,50 @@
 {% endblock %}
 
 {% block scripts %}
+
+<style>
+  .view-tf-data-table .nhsuk-table__head th {
+    background-color: #f0f4f5;
+    border: 1px solid #d8dde0;
+    padding: 10px 12px;
+  }
+
+  .view-tf-data-table .nhsuk-table__body .nhsuk-table__cell,
+  .view-tf-data-table .nhsuk-table__body .nhsuk-table__cell-historic {
+    padding: 10px 12px;
+  }
+</style>
+
+<script>
+  const parents = document.querySelectorAll('li');
+
+  parents.forEach(parentLi => {
+    const trigger = parentLi.querySelector('span');
+
+    if (!trigger) {
+      return;
+    }
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      const expanders = trigger.getElementsByClassName('fancytree-expander');
+
+      for (const expander of expanders) {
+        expander.classList.toggle('closed-icon');
+      }
+
+      const childUls = parentLi.querySelectorAll(':scope > ul');
+
+      childUls.forEach(ul => {
+        const childLis = ul.querySelectorAll(':scope > li');
+        childLis.forEach(li => {
+          li.classList.toggle('hidden');
+        });
+      });
+    });
+  });
+</script>
 
 <script>
   const urlParams = new URLSearchParams(globalThis.window.location.search);

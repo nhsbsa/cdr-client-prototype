@@ -36,7 +36,7 @@
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
-        <table class="nhsuk-table">
+        <table class="nhsuk-table tfg-confirm-delete-table">
             <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="" scope="col">
@@ -128,6 +128,18 @@
         </a>
     </div>
 </div>
+
+<style>
+    .tfg-confirm-delete-table .nhsuk-table__head th {
+        background-color: #f0f4f5;
+        border: 1px solid #d8dde0;
+        padding: 10px 12px;
+    }
+
+    .tfg-confirm-delete-table .nhsuk-table__body .nhsuk-table__cell {
+        padding: 10px 12px;
+    }
+</style>
 
 <script>
     const urlParams = new URLSearchParams(globalThis.window.location.search);

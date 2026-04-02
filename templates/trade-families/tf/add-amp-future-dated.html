@@ -7,6 +7,8 @@
     </ol>
   </div>
 </nav>
+
+
 {% endblock %}
 
 {% block content %}
@@ -79,7 +81,7 @@
         <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="more">
           <h3 class="nhsuk-heading-l">View more</h3>
 
-          <table class="nhsuk-table">
+          <table class="nhsuk-table afd-table">
             <caption class="nhsuk-table__caption">Name details</caption>
             <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
@@ -106,7 +108,7 @@
           <h4 class="nhsuk-heading-m">Alternative names</h4>
           <p>There are no alternative names associated with this AMP.</p><br/>
 
-          <table class="nhsuk-table">
+          <table class="nhsuk-table afd-table">
             <caption class="nhsuk-table__caption">Supplier details</caption>
             <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
@@ -158,12 +160,12 @@
             </a>
           </div>
           <h3 class="nhsuk-heading-l">Trade family details</h3>
-          <table class="nhsuk-table nhsuk-table-responsive ">
+          <table class="nhsuk-table nhsuk-table-responsive afd-table">
             <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade family details</caption>
             <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" class="" scope="col">
-                Identifier
+                State
               </th>
               <th role="columnheader" class="" scope="col">
                 Name
@@ -198,7 +200,7 @@
               <td class="nhsuk-table__cell nhsuk-table__cell--numeric">05-02-2027</td>
             </tr>
             <tr role="row" style="background-color: #d8dde0;" class="nhsuk-table__row">
-              <td class="nhsuk-table__row" >
+              <td class="nhsuk-table__cell" style="padding: 4px 8px; width: 1%; white-space: nowrap;">
                 <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
               </td>
               <td class="nhsuk-table__cell"><a href="view-tf">Panadol</a></td>
@@ -336,6 +338,21 @@
 {% endblock %}
 
 {% block scripts %}
+
+<style>
+  /* Match add-amp table header styling */
+  .afd-table .nhsuk-table__head th {
+    background-color: #f0f4f5;
+    border: 1px solid #d8dde0;
+    padding: 10px 12px;
+  }
+
+  /* Match add-amp row cell padding */
+  .afd-table .nhsuk-table__body .nhsuk-table__cell,
+  .afd-table .nhsuk-table__body .nhsuk-table__cell-historic {
+    padding: 10px 12px;
+  }
+</style>
 
 <script>
   function setTfJourney() {

@@ -77,12 +77,12 @@
             </div>
         </div>
 
-        <table role="table" id="linked-amps-table" class="nhsuk-table-responsive nhsuk-u-padding-bottom-4">
+        <table role="table" id="linked-amps-table" class="nhsuk-table nhsuk-table-responsive nhsuk-u-padding-bottom-4 tf-create-confirm-table">
             <thead role="rowgroup" class="nhsuk-table__head">
                 <tr role="row">
                     <th role="columnheader" class="nhsuk-table__header-identifier columnheader-sticky" scope="col"
                         id="associated-vtm-table--tag-header" style="width: 10px;">
-                        <span class="nhsuk-u-visually-hidden">Indicator</span>
+                        <span>State</span>
                     </th>
                     <th role="columnheader" class="columnheader-sticky" scope="col"
                         id="associated-vtm-table--name-header">
@@ -269,6 +269,19 @@
     <a href="/trade-families/tf/view-tf" class="nhsuk-button">Save and create</a>
     <a href="/trade-families/tf-table-view" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
 </div>
+
+<style>
+    .tf-create-confirm-table .nhsuk-table__head th {
+        background-color: #f0f4f5;
+        border: 1px solid #d8dde0;
+        padding: 10px 12px;
+    }
+
+    .tf-create-confirm-table .nhsuk-table__body .nhsuk-table__cell,
+    .tf-create-confirm-table .nhsuk-table__body .nhsuk-table__cell-historic {
+        padding: 10px 12px;
+    }
+</style>
 
 <script>
     const urlParams = new URLSearchParams(globalThis.window.location.search);

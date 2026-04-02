@@ -1,6 +1,8 @@
-/* Fix: ensure main wrapper contains floated children (e.g. .side-tree-view) so the footer stays at the bottom */
-.nhsuk-main-wrapper {
-  overflow: hidden;
+/* Contain floated children without clipping grid gutters */
+.nhsuk-main-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 fill-red{

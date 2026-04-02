@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<table class="nhsuk-table nhsuk-u-margin-top-9">
+<table class="nhsuk-table nhsuk-u-margin-top-9 tf-confirm-delete-linked-amp-table">
   <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Linked AMPs</caption>
 
   <thead role="rowgroup" class="nhsuk-table__head">
@@ -143,9 +143,29 @@
   </div>
 </div>
 
+<style>
+  .tf-confirm-delete-linked-amp-table .nhsuk-table__head th {
+    background-color: #f0f4f5;
+    border: 1px solid #d8dde0;
+    padding: 10px 12px;
+  }
+
+  .tf-confirm-delete-linked-amp-table .nhsuk-table__body .nhsuk-table__cell {
+    padding: 10px 12px;
+  }
+
+  /* Hide Identifier column when second unlink flow is active */
+  .tf-confirm-delete-linked-amp-table.hide-identifier-column .nhsuk-table__head th:first-child,
+  .tf-confirm-delete-linked-amp-table.hide-identifier-column .nhsuk-table__body td:first-child {
+    display: none;
+  }
+</style>
+
 <script>
   const urlParams = new URLSearchParams(globalThis.window.location.search);
   if (urlParams.has('secondUnlink')) {
+    document.querySelector('.tf-confirm-delete-linked-amp-table')?.classList.add('hide-identifier-column');
+
     document.querySelectorAll('.first-update-row').forEach(element => {
       element.remove();
     });
