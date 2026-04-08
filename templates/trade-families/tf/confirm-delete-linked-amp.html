@@ -41,8 +41,8 @@
 
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
-      <th role="columnheader" class="" scope="col">
-        <span class="nhsuk-u-visually-hidden">Identifier</span>
+      <th role="columnheader" class="state-column-header" scope="col">
+        State
       </th>
       <th role="columnheader" class="" scope="col">
         Name
@@ -66,7 +66,7 @@
   </thead>
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row first-update-row">
-      <td class="nhsuk-table__cell "></td>
+      <td class="nhsuk-table__cell state-cell"></td>
       <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="add-amp">Anadin Extra soluble
           tablets</a></td>
       <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Haleon UK Trading Ltd</a>
@@ -85,7 +85,7 @@
       <td class="nhsuk-table__cell ">01-02-3456</td>
     </tr>
     <tr role="row" class="nhsuk-table__row first-update-row">
-      <td class="nhsuk-table__cell "></td>
+      <td class="nhsuk-table__cell state-cell"></td>
       <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Anadin Extra tablets</a>
       </td>
       <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Haleon UK Trading Ltd</a>
@@ -108,7 +108,7 @@
       <td class="nhsuk-table__cell ">01-02-3456</td>
     </tr>
     <tr role="row" class="nhsuk-table__row second-update-row" style="display: none;">
-      <td class="nhsuk-table__cell "></td>
+      <td class="nhsuk-table__cell state-cell"></td>
       <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Anadin Extra</a>
       </td>
       <td class="nhsuk-table__cell"><a class="nhsuk-link--no-visited-state" href="#">Novo Nordisk Ltd</a>
@@ -154,18 +154,48 @@
     padding: 10px 12px;
   }
 
-  /* Hide Identifier column when second unlink flow is active */
-  .tf-confirm-delete-linked-amp-table.hide-identifier-column .nhsuk-table__head th:first-child,
-  .tf-confirm-delete-linked-amp-table.hide-identifier-column .nhsuk-table__body td:first-child {
+  /* Hide State column unless a visible row has a Future/Historic state tag */
+  .tf-confirm-delete-linked-amp-table.hide-state-column .nhsuk-table__head th:first-child,
+  .tf-confirm-delete-linked-amp-table.hide-state-column .nhsuk-table__body td:first-child {
     display: none;
   }
 </style>
 
 <script>
+  function hasFutureOrHistoricTag(stateCell) {
+    if (!stateCell) {
+      return false;
+    }
+
+    if (stateCell.querySelector('.nhsuk-tag--purple, .nhsuk-tag--orange')) {
+      return true;
+    }
+
+    return Array.from(stateCell.querySelectorAll('.nhsuk-tag')).some(tag => {
+      const text = tag.textContent ? tag.textContent.trim().toUpperCase() : '';
+      return text === 'F' || text === 'H';
+    });
+  }
+
+  function toggleStateColumnVisibility() {
+    const table = document.querySelector('.tf-confirm-delete-linked-amp-table');
+    if (!table) {
+      return;
+    }
+
+    const visibleRows = Array.from(table.querySelectorAll('.nhsuk-table__body tr'))
+      .filter(row => row instanceof HTMLElement && row.style.display !== 'none');
+
+    const showStateColumn = visibleRows.some(row => {
+      const stateCell = row.querySelector('.state-cell');
+      return hasFutureOrHistoricTag(stateCell);
+    });
+
+    table.classList.toggle('hide-state-column', !showStateColumn);
+  }
+
   const urlParams = new URLSearchParams(globalThis.window.location.search);
   if (urlParams.has('secondUnlink')) {
-    document.querySelector('.tf-confirm-delete-linked-amp-table')?.classList.add('hide-identifier-column');
-
     document.querySelectorAll('.first-update-row').forEach(element => {
       element.remove();
     });
@@ -177,6 +207,8 @@
     document.getElementById('unlink-button').setAttribute('href', 'view-tf?unlinkedAll');
     document.getElementById('warning-text').innerText = "There will be no more linked AMPs.";
   }
+
+  toggleStateColumnVisibility();
 </script>
 
 {% endblock %}

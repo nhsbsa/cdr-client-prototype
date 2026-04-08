@@ -168,7 +168,7 @@
           </div>
         </div>
 
-        <table class="nhsuk-table-responsive">
+        <table class="nhsuk-table nhsuk-table-responsive tfg-data-table">
           <caption class="nhsuk-table__caption">Trade family groups details</caption>
           <thead role="rowgroup" class="nhsuk-table__head">
           <tr role="row">
@@ -282,6 +282,19 @@
       </div>
     </div>
   </div>
+<style>
+  .tfg-data-table .nhsuk-table__head th {
+    background-color: #f0f4f5;
+    border: 1px solid #d8dde0;
+    padding: 10px 12px;
+  }
+
+  .tfg-data-table .nhsuk-table__body .nhsuk-table__cell,
+  .tfg-data-table .nhsuk-table__body .nhsuk-table__cell-historic {
+    padding: 10px 12px;
+  }
+</style>
+
 <script>
   const parents = document.querySelectorAll('li');
 
