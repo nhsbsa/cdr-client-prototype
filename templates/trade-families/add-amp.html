@@ -864,7 +864,7 @@
                   </td>
                   <td class="nhsuk-table__cell">22002311000001114</td>
                   <td class="nhsuk-table__cell">28-01-2020</td>
-                  <td class="nhsuk-table__cell">01-02-3000</td>
+                  <td id="active-end-date-tf" class="nhsuk-table__cell">01-02-3456</td>
                 </tr>
                 <tr role="row" class="nhsuk-table__row temporal-historic">
                   <td class="nhsuk-table__cell state-column">
@@ -978,7 +978,7 @@
                     </td>
                     <td class="nhsuk-table__cell">22002311000001104</td>
                     <td id="deleted-start-date" class="nhsuk-table__cell">28-01-2020</td>
-                    <td class="nhsuk-table__cell">01-02-3000</td>
+                    <td id="active-end-date-tfg" class="nhsuk-table__cell">01-02-3456</td>
                   </tr>
                   <tr role="row" class="nhsuk-table__row temporal-historic">
                     <td class="nhsuk-table__cell state-column">
@@ -1760,6 +1760,16 @@
       }
       if (futureDatedTfg) {
         futureDatedTfg.classList.remove('nhsuk-u-visually-hidden');
+      }
+
+      // Set active end dates to new values
+      const activeEndDateTf = document.getElementById("active-end-date-tf");
+      const activeEndDateTfg = document.getElementById("active-end-date-tfg");
+      if (activeEndDateTf) {
+        activeEndDateTf.textContent = "01-02-3000";
+      }
+      if (activeEndDateTfg) {
+        activeEndDateTfg.textContent = "01-02-3000"
       }
     }
   });
