@@ -96,7 +96,8 @@
         </div>
       </form>
 
-      <div id="results-container" class="nhsuk-width-container-fluid nhsuk-u-visually-hidden">
+      <div id="results-container"
+           class="nhsuk-width-container-fluid  nhsuk-u-margin-left-6 nhsuk-u-margin-right-6 nhsuk-u-visually-hidden">
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
             <span id="page-and-result-count-top">Page 1 of 2 (5 total results)</span>
@@ -112,11 +113,9 @@
               <a aria-label="Page size of 100 results" href="#">100</a>
             </div>
           </div>
-        </div>
 
-        <form>
-          <div
-                  class="nhsuk-width-container-fluid nhsuk-u-margin-left-6 nhsuk-u-margin-right-6">
+
+          <form>
             <div id="results-table-container" class="nhsuk-table-responsive">
               <table class="nhsuk-table ">
                 <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade
@@ -301,27 +300,27 @@
                 </tbody>
               </table>
             </div>
+          </form>
+
+          <div id="pagination">
+            <nav aria-label="Pagination Navigation">
+              <ul class="pagination">
+                <li class="pagination__item">
+                  <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true">1</p>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link nhsuk-link--no-visited-state" href="#">2</a>
+                </li>
+                <li class="pagination__item">|</li>
+                <li class="pagination__item">
+                  <a href="#" class="nhsuk-link--no-visited-state">Next</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-        </form>
 
-        <div id="pagination">
-          <nav aria-label="Pagination Navigation">
-            <ul class="pagination">
-              <li class="pagination__item">
-                <p class="pagination__link nhsuk-u-font-weight-bold" aria-current="true">1</p>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link nhsuk-link--no-visited-state" href="#">2</a>
-              </li>
-              <li class="pagination__item">|</li>
-              <li class="pagination__item">
-                <a href="#" class="nhsuk-link--no-visited-state">Next</a>
-              </li>
-            </ul>
-          </nav>
+          <a id="continue-button" href="update-amp-tf" class="nhsuk-button">Continue</a>
         </div>
-
-        <a id="continue-button" href="update-amp-tf" class="nhsuk-button">Continue</a>
       </div>
     </main>
   </div>
