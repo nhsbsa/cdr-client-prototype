@@ -1613,35 +1613,50 @@
         return;
       }
 
-      tabLinks.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-          event.preventDefault();
+      // Function to activate a tab
+      function activateTab(targetSelector) {
+        const targetPanel = targetSelector ? tabsEl.querySelector(targetSelector) : null;
+        if (!targetPanel) {
+          return;
+        }
 
-          const targetSelector = link.getAttribute('href');
-          const targetPanel = targetSelector ? tabsEl.querySelector(targetSelector) : null;
-          if (!targetPanel) {
-            return;
+        tabLinks.forEach(function (tab) {
+          const li = tab.closest('.nhsuk-tabs__list-item');
+          if (li) {
+            li.classList.remove('nhsuk-tabs__list-item--selected');
           }
+        });
 
-          tabLinks.forEach(function (tab) {
-            const li = tab.closest('.nhsuk-tabs__list-item');
-            if (li) {
-              li.classList.remove('nhsuk-tabs__list-item--selected');
-            }
-          });
+        panels.forEach(function (panel) {
+          panel.classList.add('nhsuk-tabs__panel--hidden');
+        });
 
-          panels.forEach(function (panel) {
-            panel.classList.add('nhsuk-tabs__panel--hidden');
-          });
+        const selectedLink = tabLinks.find(function(link) {
+          return link.getAttribute('href') === targetSelector;
+        });
 
-          const selectedItem = link.closest('.nhsuk-tabs__list-item');
+        if (selectedLink) {
+          const selectedItem = selectedLink.closest('.nhsuk-tabs__list-item');
           if (selectedItem) {
             selectedItem.classList.add('nhsuk-tabs__list-item--selected');
           }
+        }
 
-          targetPanel.classList.remove('nhsuk-tabs__panel--hidden');
+        targetPanel.classList.remove('nhsuk-tabs__panel--hidden');
+      }
+
+      tabLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const targetSelector = link.getAttribute('href');
+          activateTab(targetSelector);
         });
       });
+
+      // Check for hash in URL on page load and activate corresponding tab
+      if (window.location.hash) {
+        activateTab(window.location.hash);
+      }
     });
 
     const treeElements = document.querySelectorAll('.tf-tree');
