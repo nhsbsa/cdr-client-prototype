@@ -20,7 +20,7 @@
           d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
       </path>
     </svg>
-    Go back</a>
+    Go back to AMP (Anadin extra tablets)</a>
 </div>
 
 
@@ -28,13 +28,15 @@
   <div class="nhsuk-grid-column-full">
     <span class="nhsuk-caption-l" id="update-associated-vtm-sub-heading">Update amp trade family</span>
     <span class="nhsuk-u-visually-hidden"> - </span>
-    <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Anadin</h1>
+    <h1 class="nhsuk-heading-xl" id="update-associated-vtm-heading">Anadin Extra</h1>
 
     <section id="amp-0">
       <div class="nhsuk-grid-column-full update-box">
         <!--Current name-->
         <fieldset class="nhsuk-fieldset">
-          <legend id="vtm-0-name-legend" class="nhsuk-fieldset__legend--m update-general-heading">Anadin</legend>
+          <legend id="vtm-0-name-legend"
+                  class="nhsuk-fieldset__legend--m update-general-heading">Anadin
+            Extra</legend>
           <input class="nhsuk-input" type="hidden" id="values0.name" name="values[0].name"
                  value="Parabuthus species scorpion venom antiserum">
 
@@ -56,7 +58,7 @@
                       <input
                           class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
                           inputmode="numeric" maxlength="2" id="vtm-0-start-date-day" type="text"
-                          name="values[0].startDate.day" value="06" />
+                          name="values[0].startDate.day" value="28" />
                     </div>
                   </div>
                   <div class="nhsuk-date-input__item">
@@ -67,7 +69,7 @@
                       <input
                           class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2 js-paste-date"
                           inputmode="numeric" maxlength="2" id="vtm-0-start-date-month"
-                          type="text" name="values[0].startDate.month" value="02" />
+                          type="text" name="values[0].startDate.month" value="01" />
                     </div>
                   </div>
                   <div class="nhsuk-date-input__item">
@@ -78,7 +80,7 @@
                       <input
                           class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4 js-paste-date"
                           inputmode="numeric" maxlength="4" id="vtm-0-start-date-year" type="text"
-                          name="values[0].startDate.year" value="2027" />
+                          name="values[0].startDate.year" value="2020" />
                     </div>
                   </div>
                 </div>
@@ -133,6 +135,14 @@
               </div>
             </div>
           </div>
+          <div class="nhsuk-grid-column-full">
+            <legend id="vtm-0-add-heading" class="nhsuk-fieldset__legend--m nhsuk-u-visually-hidden">
+              Action
+            </legend>
+            <div class="action-update">
+              <button id="update-vtm-0" type="submit" name="_eventId_updateVtm" value="a784c66a-dfad-4b1d-9fdb-10b19767c54b" class="nhsuk-button nhsuk-button--secondary">Change associated VTM</button>
+            </div>
+          </div>
         </fieldset>
       </div>
     </section>
@@ -140,4 +150,22 @@
     <a class="nhsuk-button" href="update-amp-tf-confirm">Confirm</a>
   </div>
 </div>
+
+<script>
+  // Replace tables with placeholder text if empty=true query parameter is present
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check for empty=true query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const isEmpty = urlParams.get('empty') === 'true';
+
+    if (isEmpty) {
+      // Append empty=true to the back link
+      const backLink =
+        document.querySelector('a[href="/trade-families/add-amp#trade-family"]');
+      if (backLink) {
+        backLink.setAttribute('href', `/trade-families/add-amp?empty=true#trade-family`);
+      }
+    }
+  });
+</script>
 {% endblock %}
