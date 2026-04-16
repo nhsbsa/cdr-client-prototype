@@ -820,7 +820,8 @@
                   </tr>
                 </thead>
                 <tbody class="nhsuk-table__body">
-                <tr role="row" class="nhsuk-table__row temporal-future-dated">
+                <tr id="future-dated-trade-family" role="row"
+                    class="nhsuk-table__row temporal-future-dated nhsuk-u-visually-hidden">
                   <td class="nhsuk-table__cell state-column">
                     <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
                   </td>
@@ -929,7 +930,8 @@
                   </tr>
                 </thead>
                 <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row temporal-future-dated">
+                  <tr id="future-dated-trade-family-group" role="row"
+                      class="nhsuk-table__row temporal-future-dated nhsuk-u-visually-hidden">
                     <td class="nhsuk-table__cell state-column">
                       <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
                     </td>
@@ -1721,6 +1723,7 @@
     // Check for empty=true query parameter
     const urlParams = new URLSearchParams(window.location.search);
     const isEmpty = urlParams.get('empty') === 'true';
+    const isFutureDated = urlParams.get('future-dated') === 'true';
 
     if (isEmpty) {
       // Replace trade family details table
@@ -1745,6 +1748,18 @@
       if (updateLink) {
         const currentHref = updateLink.getAttribute('href');
         updateLink.setAttribute('href', currentHref + '?empty=true');
+      }
+    }
+
+    // Show future-dated rows when future-dated=true parameter is present
+    if (isFutureDated) {
+      const futureDatedTf = document.getElementById('future-dated-trade-family');
+      const futureDatedTfg = document.getElementById('future-dated-trade-family-group');
+      if (futureDatedTf) {
+        futureDatedTf.classList.remove('nhsuk-u-visually-hidden');
+      }
+      if (futureDatedTfg) {
+        futureDatedTfg.classList.remove('nhsuk-u-visually-hidden');
       }
     }
   });
