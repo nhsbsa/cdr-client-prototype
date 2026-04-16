@@ -866,7 +866,8 @@
                   <td class="nhsuk-table__cell">28-01-2020</td>
                   <td id="active-end-date-tf" class="nhsuk-table__cell">01-02-3456</td>
                 </tr>
-                <tr role="row" class="nhsuk-table__row temporal-historic">
+                <tr id="historic-trade-family" role="row"
+                    class="nhsuk-table__row temporal-historic">
                   <td class="nhsuk-table__cell status-column">
                     <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                   </td>
@@ -980,7 +981,8 @@
                     <td id="deleted-start-date" class="nhsuk-table__cell">28-01-2020</td>
                     <td id="active-end-date-tfg" class="nhsuk-table__cell">01-02-3456</td>
                   </tr>
-                  <tr role="row" class="nhsuk-table__row temporal-historic">
+                  <tr id="historic-trade-family-group" role="row"
+                      class="nhsuk-table__row temporal-historic">
                     <td class="nhsuk-table__cell status-column">
                       <strong class="nhsuk-tag nhsuk-tag--orange">H</strong>
                     </td>
@@ -1724,6 +1726,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const isEmpty = urlParams.get('empty') === 'true';
     const isFutureDated = urlParams.get('future-dated') === 'true';
+    const afterEmptyUpdate = urlParams.get('after-empty-update') === 'true';
 
     if (isEmpty) {
       // Replace trade family details table
@@ -1770,6 +1773,17 @@
       }
       if (activeEndDateTfg) {
         activeEndDateTfg.textContent = "01-02-3000"
+      }
+    }
+
+    if (afterEmptyUpdate) {
+      const historicTf = document.getElementById('historic-trade-family');
+      const historicTfg = document.getElementById('historic-trade-family-group');
+      if (historicTf) {
+        historicTf.classList.add('nhsuk-u-visually-hidden');
+      }
+      if (historicTfg) {
+        historicTfg.classList.add('nhsuk-u-visually-hidden');
       }
     }
   });

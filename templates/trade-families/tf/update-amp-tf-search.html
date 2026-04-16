@@ -99,7 +99,9 @@
       <div id="results-container"
            class="nhsuk-width-container-fluid  nhsuk-u-margin-left-6 nhsuk-u-margin-right-6 nhsuk-u-visually-hidden">
         <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
+          <div
+                  class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0
+                  nhsuk-u-margin-bottom-4">
             <span id="page-and-result-count-top">Page 1 of 2 (5 total results)</span>
           </div>
           <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
@@ -137,6 +139,40 @@
                 </tr>
                 </thead>
                 <tbody class="nhsuk-table__body" id="table-search-results-body">
+
+                <tr role="row" class="nhsuk-table__row temporal-future-dated">
+                  <td class="nhsuk-table__cell status-column">
+                    <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
+                    <span class="nhsuk-table-responsive__heading">Name</span>
+                    <span class="nhsuk-u-font-size-16 nhsuk-table-content">
+                                              <a id="results-table--name-value-0" href="view-tf"
+                                                 class="nhsuk-link--no-visited-state"
+                                                 target="_blank">Liberim Extra</a>
+                                          </span>
+                  </td>
+                  <td class="nhsuk-table__cell">
+                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                         aria-hidden="true" id="pi-value-0">
+                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
+                      </path>
+                    </svg>
+                  </td>
+                  <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
+                    <span class="nhsuk-table-responsive__heading">Select</span>
+                    <div class="nhsuk-radios">
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-1" name="example"
+                               type="radio" value="email">
+                        <label class="nhsuk-label nhsuk-radios__label" style="width: 0;"
+                               for="example-1">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
 
                 <tr role="row" class="nhsuk-table__row">
                   <td class="nhsuk-table__cell state-column"></td>
@@ -330,19 +366,33 @@
     .status-column {
         width: 72px;
     }
+
+    .nhsuk-table__cell  {
+        padding: 10px 12px;
+    }
+
+    .nhsuk-table__head th {
+        background-color: #f0f4f5;
+        border: 1px solid #d8dde0;
+        padding: 10px 12px;
+    }
 </style>
 
 <script>
   const urlParams = new URLSearchParams(globalThis.window.location.search);
+  const isEmpty = urlParams.get('empty') === 'true';
 
   function setSearched() {
     const container = document.getElementById('button-search');
+
+    // Build reset URL with empty parameter if present
+    const resetUrl = isEmpty ? 'update-amp-tf-search?empty=true' : 'update-amp-tf-search';
 
     container.innerHTML += `
         <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3"
                 role="button"
                 style="color: #425563 !important;"
-                href="update-amp-tf-search">
+                href="${resetUrl}">
             Reset
         </a>
         `;
@@ -353,6 +403,21 @@
 
   if (urlParams.has('searched')) {
     setSearched();
+  }
+
+  // Handle empty=true parameter
+  if (isEmpty) {
+    // Update search button to preserve empty=true
+    const searchButton = document.querySelector('a[href="?searched"]');
+    if (searchButton) {
+      searchButton.setAttribute('href', '?searched&empty=true');
+    }
+
+    // Append empty=true to the back link
+    const backLink = document.querySelector('a[href="update-amp-tf"]');
+    if (backLink) {
+      backLink.setAttribute('href', 'update-amp-tf?empty=true');
+    }
   }
 </script>
 
