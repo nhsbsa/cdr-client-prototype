@@ -6,7 +6,7 @@
     <div class="nhsuk-width-container">
       <div class="nhsuk-grid-row">
         <div class="nhsuk-back-link">
-          <a class="nhsuk-back-link__link" href="view-tf#tf">
+          <a class="nhsuk-back-link__link" href="update-amp-tf">
             <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
               <path
@@ -21,7 +21,8 @@
     <main id="main-content" role="main" class="nhsuk-main-wrapper">
       <form id="new-search-form" method="post">
         <div class="nhsuk-width-container">
-          <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5" id="page-heading">Trade family
+          <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5" id="page-heading">Trade
+            Family
             search</h1>
 
           <div class="nhsuk-form-group autocomplete-wrapper nhsuk-u-width-full"
@@ -49,15 +50,6 @@
                       <div class="nhsuk-grid-column-full">
                         <div class="nhsuk-u-one-third">
                           <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="valid" name="filter"
-                                   type="checkbox" checked>
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="valid">
-                              Valid
-                            </label>
-                          </div>
-                        </div>
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
                             <input class="nhsuk-checkboxes__input" id="extractable"
                                    name="filter" type="checkbox" checked>
                             <label class="nhsuk-label nhsuk-checkboxes__label"
@@ -69,7 +61,7 @@
                         <div class="nhsuk-u-one-third">
                           <div class="nhsuk-checkboxes__item">
                             <input class="nhsuk-checkboxes__input" id="future-dated"
-                                   name="filter" type="checkbox">
+                                   name="filter" type="checkbox" checked>
                             <label class="nhsuk-label nhsuk-checkboxes__label"
                                    for="future-dated">
                               Show future dated Trade Families
@@ -80,15 +72,6 @@
                       <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2">
                         <div class="nhsuk-u-one-third">
                           <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="invalid" name="filter"
-                                   type="checkbox" checked>
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="invalid">
-                              Invalid
-                            </label>
-                          </div>
-                        </div>
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
                             <input class="nhsuk-checkboxes__input" id="unextractable"
                                    name="filter" type="checkbox" checked>
                             <label class="nhsuk-label nhsuk-checkboxes__label"
@@ -97,65 +80,9 @@
                             </label>
                           </div>
                         </div>
-                        <div class="nhsuk-u-one-third">
-                          <div class="nhsuk-checkboxes__item">
-                            <input class="nhsuk-checkboxes__input" id="historic" name="filter"
-                                   type="checkbox">
-                            <label class="nhsuk-label nhsuk-checkboxes__label" for="historic">
-                              Show historic Trade Families
-                            </label>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </fieldset>
-
-                  <!--sort by -->
-                  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-2" style="display: none;">
-                    <div class="nhsuk-form-group">
-                      <fieldset class="nhsuk-fieldset">
-                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-
-                          <label
-                                  class="nhsuk-label nhsuk-checkboxes__label nhsuk-u-visually-hidden"
-                                  for="historic">
-                            Sort by
-                          </label>
-                        </legend>
-                        <h3 class="nhsuk-u-margin-5">Sort by</h3>
-                        <div class="nhsuk-radios" data-module="nhsuk-radios">
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input " name="exampleInline"
-                                   type="radio" value="yes">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              Newest to oldest
-                            </label>
-                          </div>
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"
-                                   value="no">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              Oldest to newest
-                            </label>
-                          </div>
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"
-                                   value="no">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              Z to A
-                            </label>
-                          </div>
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" name="exampleInline" type="radio"
-                                   value="no">
-                            <label class="nhsuk-label nhsuk-radios__label">
-                              A to Z
-                            </label>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </div>
-                  </div>
                 </div>
               </form>
             </div>
@@ -172,7 +99,7 @@
       <div id="results-container" class="nhsuk-width-container-fluid nhsuk-u-visually-hidden">
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-one-half nhsuk-u-padding-left-0 nhsuk-u-padding-right-0">
-            <span id="page-and-result-count-top">Page 1 of 1 (5 total results)</span>
+            <span id="page-and-result-count-top">Page 1 of 2 (5 total results)</span>
           </div>
           <div class="nhsuk-grid-column-one-half nhsuk-u-text-align-right">
             <div class="nhsuk-u-font-size-16" id="tablePageSizeControls">
@@ -192,14 +119,15 @@
                   class="nhsuk-width-container-fluid nhsuk-u-margin-left-6 nhsuk-u-margin-right-6">
             <div id="results-table-container" class="nhsuk-table-responsive">
               <table class="nhsuk-table ">
-                <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">VTM results
+                <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade
+                  Family results
                 </caption>
                 <thead class="nhsuk-table__head">
                 <tr class="nhsuk-table__row">
-                  <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name
+                  <th class="nhsuk-table__header-important columnheader-sticky status-column"
+                      scope="col">Status
                   </th>
-                  <th class="nhsuk-table__header columnheader-sticky" scope="col">
-                    Valid
+                  <th class="nhsuk-table__header-important columnheader-sticky" scope="col">Name
                   </th>
                   <th class="nhsuk-table__header columnheader-sticky" scope="col">
                     Extractable
@@ -212,6 +140,7 @@
                 <tbody class="nhsuk-table__body" id="table-search-results-body">
 
                 <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell state-column"></td>
                   <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
                     <span class="nhsuk-table-responsive__heading">Name</span>
                     <span class="nhsuk-u-font-size-16 nhsuk-table-content">
@@ -228,14 +157,6 @@
                       </path>
                     </svg>
                   </td>
-                  <td class="nhsuk-table__cell">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
-                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
                   <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                     <span class="nhsuk-table-responsive__heading">Select</span>
                     <div class="nhsuk-radios">
@@ -251,6 +172,7 @@
                 </tr>
 
                 <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell state-column"></td>
                   <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
                     <span class="nhsuk-table-responsive__heading">Name</span>
                     <span class="nhsuk-u-font-size-16 nhsuk-table-content">
@@ -267,14 +189,6 @@
                       </path>
                     </svg>
                   </td>
-                  <td class="nhsuk-table__cell">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
-                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
                   <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                     <span class="nhsuk-table-responsive__heading">Select</span>
                     <div class="nhsuk-radios">
@@ -290,6 +204,7 @@
                 </tr>
 
                 <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell state-column"></td>
                   <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
                     <span class="nhsuk-table-responsive__heading">Name</span>
                     <span class="nhsuk-u-font-size-16 nhsuk-table-content">
@@ -306,14 +221,6 @@
                       </path>
                     </svg>
                   </td>
-                  <td class="nhsuk-table__cell">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
-                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
                   <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                     <span class="nhsuk-table-responsive__heading">Select</span>
                     <div class="nhsuk-radios">
@@ -329,6 +236,7 @@
                 </tr>
 
                 <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell state-column"></td>
                   <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
                     <span class="nhsuk-table-responsive__heading">Name</span>
                     <span class="nhsuk-u-font-size-16 nhsuk-table-content">
@@ -345,14 +253,6 @@
                       </path>
                     </svg>
                   </td>
-                  <td class="nhsuk-table__cell">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
-                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
-                  </td>
                   <td class="nhsuk-table__cell nhsuk-u-padding-right-3">
                     <span class="nhsuk-table-responsive__heading">Select</span>
                     <div class="nhsuk-radios">
@@ -368,6 +268,7 @@
                 </tr>
 
                 <tr role="row" class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell state-column"></td>
                   <td class="nhsuk-table__cell nhsuk-table-ellipsis-data">
                     <span class="nhsuk-table-responsive__heading">Name</span>
                     <span class="nhsuk-u-font-size-16 nhsuk-table-content">
@@ -375,14 +276,6 @@
                                                  class="nhsuk-link--no-visited-state"
                                                  target="_blank">Fiasp Extra</a>
                                           </span>
-                  </td>
-                  <td class="nhsuk-table__cell">
-                    <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
-                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                         aria-hidden="true" id="pi-value-0">
-                      <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                      </path>
-                    </svg>
                   </td>
                   <td class="nhsuk-table__cell">
                     <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-green"
@@ -433,6 +326,12 @@
     </main>
   </div>
 </div>
+
+<style>
+    .status-column {
+        width: 72px;
+    }
+</style>
 
 <script>
   const urlParams = new URLSearchParams(globalThis.window.location.search);
