@@ -771,7 +771,9 @@
               <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-full"
                      style="display: flex; justify-content: space-between; align-items: center;">
-                  <h4 class="nhsuk-heading-s nhsuk-u-margin-bottom-2">Trade family details</h4>
+                  <h3 class="nhsuk-heading-m">
+                    Trade family details
+                  </h3>
                   <div class="nhsuk-action-link nhsuk-u-margin-bottom-5">
                     <a class="nhsuk-action-link__link nhsuk-link--no-visited-state"
                        href="/trade-families/tf/update-amp-tf">
@@ -787,7 +789,9 @@
                   </div>
                 </div>
               </div>
-              <table class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-top-5 tfg-data-table">
+
+              <table id ="trade-family-details-table"
+                      class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-bottom-5 tfg-data-table">
                 <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade family details
                 </caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
@@ -887,9 +891,16 @@
                 </tbody>
               </table>
 
-
-              <table class="nhsuk-table nhsuk-table-responsive nhsuk-u-margin-top-5 tfg-data-table">
-                <caption class="nhsuk-table__caption nhsuk-u-margin-bottom-5 ">Trade
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                  <h3 class="nhsuk-heading-m">
+                    Trade family group details
+                  </h3>
+                </div>
+              </div>
+              <table id="trade-family-group-details-table"
+                      class="nhsuk-table nhsuk-table-responsive tfg-data-table">
+                <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Trade
                   family group details
                 </caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
@@ -940,8 +951,8 @@
                       </svg>
                     </td>
                     <td class="nhsuk-table__cell">22002311000001105</td>
-                    <td class="nhsuk-table__cell">01/01/3000</td>
-                    <td class="nhsuk-table__cell">28/01/2020</td>
+                    <td class="nhsuk-table__cell">01-01-3000</td>
+                    <td class="nhsuk-table__cell">28-01-2020</td>
                   </tr>
                   <tr id="deleted-row" role="row" class="nhsuk-table__row">
                     <td class="nhsuk-table__cell state-column"></td>
@@ -964,8 +975,8 @@
                       </svg>
                     </td>
                     <td class="nhsuk-table__cell">22002311000001104</td>
-                    <td id="deleted-start-date" class="nhsuk-table__cell">28/01/2020</td>
-                    <td class="nhsuk-table__cell">01/02/3000</td>
+                    <td id="deleted-start-date" class="nhsuk-table__cell">28-01-2020</td>
+                    <td class="nhsuk-table__cell">01-02-3000</td>
                   </tr>
                   <tr role="row" class="nhsuk-table__row temporal-historic">
                     <td class="nhsuk-table__cell state-column">
@@ -989,11 +1000,12 @@
                       </svg>
                     </td>
                     <td class="nhsuk-table__cell">22002311000001103</td>
-                    <td class="nhsuk-table__cell">01/01/1948</td>
-                    <td class="nhsuk-table__cell">27/01/2020</td>
+                    <td class="nhsuk-table__cell">01-01-1948</td>
+                    <td class="nhsuk-table__cell">27-01-2020</td>
                   </tr>
                 </tbody>
               </table>
+
               <!--              </fieldset>-->
               <!--            </div>-->
             </section>
@@ -1685,6 +1697,41 @@
         });
       });
     });
+  });
+</script>
+
+<script>
+  // Replace tables with placeholder text if empty=true query parameter is present
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check for empty=true query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const isEmpty = urlParams.get('empty') === 'true';
+
+    if (isEmpty) {
+      // Replace trade family details table
+      const tradeFamilyDetailsTable = document.getElementById('trade-family-details-table');
+      if (tradeFamilyDetailsTable) {
+        const placeholderTF = document.createElement('p');
+        placeholderTF.textContent = 'There is no Trade Family associated with this AMP.';
+        tradeFamilyDetailsTable.replaceWith(placeholderTF);
+      }
+
+      // Replace trade family group details table
+      const tradeFamilyGroupDetailsTable = document.getElementById('trade-family-group-details-table');
+      if (tradeFamilyGroupDetailsTable) {
+        const placeholderTFG = document.createElement('p');
+        placeholderTFG.textContent =
+          'There is no Trade Family Group associated with this Amp.';
+        tradeFamilyGroupDetailsTable.replaceWith(placeholderTFG);
+      }
+
+      // Append empty=true to the Update link
+      const updateLink = document.querySelector('a[href="/trade-families/tf/update-amp-tf"]');
+      if (updateLink) {
+        const currentHref = updateLink.getAttribute('href');
+        updateLink.setAttribute('href', currentHref + '?empty=true');
+      }
+    }
   });
 </script>
 {% endblock %}
