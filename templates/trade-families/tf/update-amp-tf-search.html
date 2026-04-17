@@ -389,7 +389,8 @@
             </nav>
           </div>
 
-          <a id="continue-button" href="update-amp-tf" class="nhsuk-button">Continue</a>
+          <a id="continue-button" href="update-amp-tf?after-current-search=true"
+             class="nhsuk-button">Continue</a>
         </div>
       </div>
     </main>
@@ -414,13 +415,22 @@
 
 <script>
   const urlParams = new URLSearchParams(globalThis.window.location.search);
-  const isEmpty = urlParams.get('empty') === 'true';
+  const empty = urlParams.get('empty') === 'true';
+  const afterEmptySearch = urlParams.get('after-empty-search') === 'true';
+  const afterCurrentSearch = urlParams.get('after-current-search') === 'true';
 
   function setSearched() {
     const container = document.getElementById('button-search');
 
-    // Build reset URL with empty parameter if present
-    const resetUrl = isEmpty ? 'update-amp-tf-search?empty=true' : 'update-amp-tf-search';
+    // Build reset URL with preserved query parameters
+    const resetParams = [];
+    if (empty) resetParams.push('empty=true');
+    if (afterEmptySearch) resetParams.push('after-empty-search=true');
+    if (afterCurrentSearch) resetParams.push('after-current-search=true');
+
+    const resetUrl = resetParams.length > 0
+      ? `update-amp-tf-search?${resetParams.join('&')}`
+      : 'update-amp-tf-search';
 
     container.innerHTML += `
         <a class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-left-3"
@@ -440,7 +450,7 @@
   }
 
   // Handle empty=true parameter
-  if (isEmpty) {
+  if (empty) {
     // Update search button to preserve empty=true
     const searchButton = document.querySelector('a[href="?searched"]');
     if (searchButton) {
@@ -451,6 +461,52 @@
     const backLink = document.querySelector('a[href="update-amp-tf"]');
     if (backLink) {
       backLink.setAttribute('href', 'update-amp-tf?empty=true');
+    }
+
+    // Update continue button to use after-empty-search=true instead of after-current-search=true
+    const continueButton = document.getElementById('continue-button');
+    if (continueButton) {
+      continueButton.setAttribute('href', 'update-amp-tf?after-empty-search=true');
+    }
+  }
+
+  if (afterEmptySearch) {
+    // Update search button to preserve after-empty-search=true
+    const searchButton = document.querySelector('a[href="?searched"]');
+    if (searchButton) {
+      searchButton.setAttribute('href', '?searched&after-empty-search=true');
+    }
+
+    // Append after-empty-search=true to the back link
+    const backLink = document.querySelector('a[href="update-amp-tf"]');
+    if (backLink) {
+      backLink.setAttribute('href', 'update-amp-tf?after-empty-search=true');
+    }
+
+    // Update continue button to use after-empty-search=true instead of after-current-search=true
+    const continueButton = document.getElementById('continue-button');
+    if (continueButton) {
+      continueButton.setAttribute('href', 'update-amp-tf?after-empty-search=true');
+    }
+  }
+
+  if (afterCurrentSearch) {
+    // Update search button to preserve after-current-search=true
+    const searchButton = document.querySelector('a[href="?searched"]');
+    if (searchButton) {
+      searchButton.setAttribute('href', '?searched&after-current-search=true');
+    }
+
+    // Append after-current-search=true to the back link
+    const backLink = document.querySelector('a[href="update-amp-tf"]');
+    if (backLink) {
+      backLink.setAttribute('href', 'update-amp-tf?after-current-search=true');
+    }
+
+    // Update continue button to use after-current-search=true instead of after-current-search=true
+    const continueButton = document.getElementById('continue-button');
+    if (continueButton) {
+      continueButton.setAttribute('href', 'update-amp-tf?after-current-search=true');
     }
   }
 </script>

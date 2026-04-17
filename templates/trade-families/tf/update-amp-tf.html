@@ -174,6 +174,8 @@
     // Check for empty=true query parameter
     const urlParams = new URLSearchParams(window.location.search);
     const isEmpty = urlParams.get('empty') === 'true';
+    const afterEmptySearch = urlParams.get('after-empty-search') === 'true';
+    const afterCurrentSearch = urlParams.get('after-current-search') === 'true';
 
     if (isEmpty) {
       // Append empty=true to the back link
@@ -209,6 +211,67 @@
         const currentHref = updateLink.getAttribute('href');
         updateLink.setAttribute('href', currentHref + '?empty=true');
         updateLink.textContent = 'Add associated Trade Family';
+      }
+    }
+
+    if (afterEmptySearch) {
+      const backLink =
+        document.querySelector('a[href="/trade-families/add-amp#trade-family"]');
+      if (backLink) {
+        backLink.setAttribute('href', `/trade-families/add-amp?empty=true#trade-family`);
+      }
+
+      // Change update link to add
+      const updateLink = document.getElementById('update-tf-0');
+      if (updateLink) {
+        const currentHref = updateLink.getAttribute('href');
+        updateLink.setAttribute('href', currentHref + '?after-empty-search=true');
+      }
+
+      // Update the continue button to preserve the parameter
+      const confirmButton = document.querySelector('a[href="update-amp-tf-confirm"]');
+      if (confirmButton) {
+        confirmButton.setAttribute('href',
+          'update-amp-tf-confirm?after-empty-search=true');
+      }
+    }
+
+    if (afterCurrentSearch) {
+      // Update the legend text
+      const legend = document.getElementById('tf-0-name-legend');
+      if (legend) {
+        legend.textContent = 'Liberim Extra';
+      }
+
+      // Update start date to new values (e.g., 15/03/2021)
+      const startDayInput = document.getElementById('tf-0-start-date-day');
+      const startMonthInput = document.getElementById('tf-0-start-date-month');
+      const startYearInput = document.getElementById('tf-0-start-date-year');
+
+      if (startDayInput) startDayInput.value = '02';
+      if (startMonthInput) startMonthInput.value = '02';
+      if (startYearInput) startYearInput.value = '3000';
+
+      // Update end date to new values (e.g., 30/06/2025)
+      const endDayInput = document.getElementById('tf-0-end-date-day');
+      const endMonthInput = document.getElementById('tf-0-end-date-month');
+      const endYearInput = document.getElementById('tf-0-end-date-year');
+
+      if (endDayInput) endDayInput.value = '01';
+      if (endMonthInput) endMonthInput.value = '02';
+      if (endYearInput) endYearInput.value = '3456';
+
+      // Change update link to add
+      const updateLink = document.getElementById('update-tf-0');
+      if (updateLink) {
+        const currentHref = updateLink.getAttribute('href');
+        updateLink.setAttribute('href', currentHref + '?after-current-search=true');
+      }
+
+      // Update the continue button to preserve the parameter
+      const confirmButton = document.querySelector('a[href="update-amp-tf-confirm"]');
+      if (confirmButton) {
+        confirmButton.setAttribute('href', 'update-amp-tf-confirm?after-current-search=true');
       }
     }
   });

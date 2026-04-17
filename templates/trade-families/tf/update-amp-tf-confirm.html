@@ -28,7 +28,29 @@
     <span class="nhsuk-caption-l" id="update-associated-tf-sub-heading">Update amp trade
       family summary</span>
     <span class="nhsuk-u-visually-hidden"> - </span>
-    <h1 class="nhsuk-heading-xl" id="update-associated-tf-heading">Anadin</h1>
+    <h1 class="nhsuk-heading-xl" id="update-associated-tf-heading">Anadin Extra
+      Tablets</h1>
+
+    <div class="nhsuk-warning-callout">
+      <h3 class="nhsuk-warning-callout__label">
+            <span>
+              <span class="nhsuk-u-visually-hidden">Important: </span>
+               Warnings
+            </span>
+      </h3>
+      <p>The submitted data has the following warnings. Check the data is correct
+        before saving.</p>
+      <ul>
+
+        <li>Appliance AMPs are not normally linked to a Trade
+          Family.</li>
+        <li id="future-update-error" class="nhsuk-u-visually-hidden">This change will
+          mean the Trade Family
+          (Anadin Extra) no longer
+          has any
+          valid linked AMPs between the timeframes: 02-02-3000 and 01-02-3456.</li>
+      </ul>
+    </div>
 
     <table role="table" class="nhsuk-table nhsuk-table-responsive nhsuk-u-padding-bottom-4 tf-update-amp-confirm-table">
       <thead role="rowgroup" class="nhsuk-table__head">
@@ -52,37 +74,32 @@
       </tr>
       </thead>
       <tbody class="nhsuk-table__body">
+      <tr id="future-row" role="row"
+          class="nhsuk-table__row nhsuk-u-visually-hidden temporal-future-dated">
+        <td class="nhsuk-table__cell status-column">
+          <strong class="nhsuk-tag nhsuk-tag--purple">F</strong>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span >Liberim Extra</span>
+        </td>
+        <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
+          <span>02-02-3000</span>
+        </td>
+        <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
+          <span>01-02-3456</span>
+        </td>
+      </tr>
       <tr role="row" class="nhsuk-table__row">
         <td role="cell" class="nhsuk-table__cell">
         </td>
         <td role="cell" class="nhsuk-table__cell">
-          <span class="nhsuk-table-responsive__heading">Name</span>
-          <span id="associated-tf-table--name-0">Anadin</span>
+          <span id="associated-tf-table--name-0">Anadin Extra</span>
         </td>
         <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
-          <span class="nhsuk-table-responsive__heading">Start date</span>
-
-
-          <span id="associated-tf-table--start-date-aria-0"
-                class="nhsuk-u-visually-hidden stop-user-selection">6 February 2027</span>
-
-
-          <span id="associated-tf-table--start-date-0" aria-hidden="true">
-            28-01-2020
-          </span>
-
+          <span>28-01-2020</span>
         </td>
         <td role="cell" class="nhsuk-table__cell nhsuk-u--table-date-width">
-          <span class="nhsuk-table-responsive__heading">End date</span>
-
-
-
-          <span class="nhsuk-u-visually-hidden stop-user-selection"
-                id="associated-tf-table--end-date-aria-0">End of time
-                        </span>
-
-          <span id="associated-tf-table--end-date-0" aria-hidden="true">01-02-3456</span>
-
+          <span id="current-row-date">01-02-3456</span>
         </td>
       </tr>
       </tbody>
@@ -93,7 +110,7 @@
         and
         continue</a>
       <a class="nhsuk-button nhsuk-button--secondary"
-         href="../add-amp#trade-family">Cancel update</a>
+         href="../add-amp?empty=true#trade-family">Cancel update</a>
     </div>
   </div>
 </div>
@@ -112,5 +129,59 @@
     padding: 10px 12px;
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const afterEmptySearch = urlParams.get('after-empty-search') === 'true';
+    const afterCurrentSearch = urlParams.get('after-current-search') === 'true';
+
+    if (afterEmptySearch) {
+      // Update the back link to preserve the parameter
+      const backLink = document.querySelector('a[href="update-amp-tf"]');
+      if (backLink) {
+        backLink.setAttribute('href', 'update-amp-tf?after-empty-search=true');
+      }
+    }
+
+    if (afterCurrentSearch) {
+      // Update the back link to preserve the parameter
+      const backLink = document.querySelector('a[href="update-amp-tf"]');
+      if (backLink) {
+        backLink.setAttribute('href', 'update-amp-tf?after-current-search=true');
+      }
+
+      // Add future-dated=true to the continue button
+      const continueButton = document.querySelector('a[href="../add-amp?after-empty-update=true#trade-family"]');
+      if (continueButton) {
+        continueButton.setAttribute('href', '../add-amp?future-dated=true#trade-family');
+      }
+
+      // Remove empty=true from the cancel button
+      const cancelButton = document.querySelector('a[href="../add-amp?empty=true#trade-family"]');
+      if (cancelButton) {
+        cancelButton.setAttribute('href', '../add-amp#trade-family');
+      }
+
+      // Remove visually hidden class from future-update-error
+      const futureUpdateError = document.getElementById('future-update-error');
+      if (futureUpdateError) {
+        futureUpdateError.classList.remove('nhsuk-u-visually-hidden');
+      }
+
+      // Remove visually hidden class from future-row
+      const futureRow = document.getElementById('future-row');
+      if (futureRow) {
+        futureRow.classList.remove('nhsuk-u-visually-hidden');
+      }
+
+      // Update current-row-date to 01-02-3000
+      const currentRowDate = document.getElementById('current-row-date');
+      if (currentRowDate) {
+        currentRowDate.textContent = '01-02-3000';
+      }
+    }
+  });
+</script>
 
 {% endblock %}
