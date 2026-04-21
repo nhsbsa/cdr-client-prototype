@@ -135,6 +135,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const afterEmptySearch = urlParams.get('after-empty-search') === 'true';
     const afterCurrentSearch = urlParams.get('after-current-search') === 'true';
+    const updateDateOnly = urlParams.get('update-date-only') === 'true';
 
     if (afterEmptySearch) {
       // Update the back link to preserve the parameter
@@ -179,6 +180,26 @@
       const currentRowDate = document.getElementById('current-row-date');
       if (currentRowDate) {
         currentRowDate.textContent = '01-02-3000';
+      }
+    }
+
+    if (updateDateOnly) {
+      const currentRowDate = document.getElementById('current-row-date');
+      if (currentRowDate) {
+        currentRowDate.textContent = '01-02-3000';
+      }
+
+      // Add future-dated=true to the continue button
+      const continueButton = document.querySelector('a[href="../add-amp?after-empty-update=true#trade-family"]');
+      if (continueButton) {
+        continueButton.setAttribute('href',
+          '../add-amp?after-update-date-only=true#trade-family');
+      }
+
+      // Remove empty=true from the cancel button
+      const cancelButton = document.querySelector('a[href="../add-amp?empty=true#trade-family"]');
+      if (cancelButton) {
+        cancelButton.setAttribute('href', '../add-amp?update-date-only=true#trade-family');
       }
     }
   });

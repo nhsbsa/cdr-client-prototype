@@ -1727,6 +1727,8 @@
     const isEmpty = urlParams.get('empty') === 'true';
     const isFutureDated = urlParams.get('future-dated') === 'true';
     const afterEmptyUpdate = urlParams.get('after-empty-update') === 'true';
+    const updateDateOnly = urlParams.get('update-date-only') === 'true';
+    const afterUpdateDateOnly = urlParams.get('after-update-date-only') === 'true';
 
     if (isEmpty) {
       // Replace trade family details table
@@ -1784,6 +1786,27 @@
       }
       if (historicTfg) {
         historicTfg.classList.add('nhsuk-u-visually-hidden');
+      }
+    }
+
+    if (updateDateOnly) {
+      // Append empty=true to the Update link
+      const updateLink = document.querySelector('a[href="/trade-families/tf/update-amp-tf"]');
+      if (updateLink) {
+        const currentHref = updateLink.getAttribute('href');
+        updateLink.setAttribute('href', currentHref + '?update-date-only=true');
+      }
+    }
+
+    if (afterUpdateDateOnly) {
+      // Set active end dates to new values
+      const activeEndDateTf = document.getElementById("active-end-date-tf");
+      const activeEndDateTfg = document.getElementById("active-end-date-tfg");
+      if (activeEndDateTf) {
+        activeEndDateTf.textContent = "01-02-3000";
+      }
+      if (activeEndDateTfg) {
+        activeEndDateTfg.textContent = "01-02-3000"
       }
     }
   });

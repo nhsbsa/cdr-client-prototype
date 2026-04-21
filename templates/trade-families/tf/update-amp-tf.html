@@ -176,6 +176,7 @@
     const isEmpty = urlParams.get('empty') === 'true';
     const afterEmptySearch = urlParams.get('after-empty-search') === 'true';
     const afterCurrentSearch = urlParams.get('after-current-search') === 'true';
+    const updateDateOnly = urlParams.get('update-date-only') === 'true';
 
     if (isEmpty) {
       // Append empty=true to the back link
@@ -272,6 +273,14 @@
       const confirmButton = document.querySelector('a[href="update-amp-tf-confirm"]');
       if (confirmButton) {
         confirmButton.setAttribute('href', 'update-amp-tf-confirm?after-current-search=true');
+      }
+    }
+
+    if (updateDateOnly) {
+      // Update the continue button to preserve the parameter
+      const confirmButton = document.querySelector('a[href="update-amp-tf-confirm"]');
+      if (confirmButton) {
+        confirmButton.setAttribute('href', 'update-amp-tf-confirm?update-date-only=true');
       }
     }
   });
