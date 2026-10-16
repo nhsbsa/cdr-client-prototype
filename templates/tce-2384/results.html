@@ -7,18 +7,14 @@
 
 <!--div>
         <ol class="nhsuk-breadcrumb__list">
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#"></a></li>
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
+            <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="#"></a></li>
+            <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="#">Level two</a></li>
         
-            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li>
+            <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="#">Level three</a></li>
         
           </ol>
-          <p class="nhsuk-breadcrumb__back">
-            <a class="nhsuk-breadcrumb__backlink" href="#">
-              <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
-              Level three
-            </a>
-          </p>
+          <a class="nhsuk-back-link" href="#"><span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+              Level three</a>
     </div-->
 
 <main class="nhsuk-main-wrapper" id="main-content">
@@ -86,7 +82,7 @@
                                 <div class="nhsuk-form-group">
                                     <fieldset class="nhsuk-fieldset">
                                         <legend class="nhsuk-fieldset__legend">Filter by</legend>
-                                        <div class="nhsuk-checkboxes">
+                                        <div class="nhsuk-checkboxes" data-module="nhsuk-checkboxes">
 
                                             <div class="nhsuk-grid-column-one-quarter nhsuk-u-padding-top-2">
                                                 <div class="nhsuk-checkboxes__item">
@@ -301,11 +297,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>
@@ -383,11 +378,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>
@@ -464,11 +458,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>
@@ -545,11 +538,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>
@@ -626,11 +618,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>
@@ -707,11 +698,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>
@@ -788,11 +778,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>
@@ -869,11 +858,10 @@
                                 <!--          <td class="nhsuk-table__cell" th:classappend="${vmp.invalid} ? indicator : ''">
                           <span class="nhsuk-table-responsive__heading">Invalid</span>
                           <span th:id="'results-table--invalid-value-' + ${idx.index}" th:if="${vmp.invalid}">
-                              <svg class="nhsuk-icon nhsuk-icon__tick nhsuk-icon__tick-red"
-                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                              <svg style="fill:#d5281b;width:34px;height:34px" class="nhsuk-icon nhsuk-icon--tick"
+                                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                    aria-hidden="true" th:id="'invalid-value-' + ${idx.index}">
-                                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12">
-                                </path>
+                                <path d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"/>
                               </svg>
                             <span class="nhsuk-u-visually-hidden">Invalid</span>
                             </span>

@@ -3,8 +3,8 @@
 <nav id="breadcrumbs" class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
       <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">dm+d browser</a></li>
-          <li class="nhsuk-breadcrumb__item">Product search</li>
+          <li class="nhsuk-breadcrumb__list-item"><a class="nhsuk-breadcrumb__link" href="/">dm+d browser</a></li>
+          <li class="nhsuk-breadcrumb__list-item">Product search</li>
       </ol>
   </div>
 </nav>
@@ -16,7 +16,7 @@
 
               <h1 class="nhsuk-heading-xl" id="pageHeading">Product search</h1>
               <form id="search-form" method="post" action="/search" data-gtm-form-interact-id="0"><input type="hidden" name="_csrf" value="MmJFNhKu4mHWBziDX9fJOrNFCzl-sWMbL-d4nHvX8heCOWu2A1InU3fK0FP7Zg27bfr9AtF0JgBKglA2TN9N-k22wyC0WljU">
-    
+
 
     <div id="nhsuk-inset-text-amp-search" class="nhsuk-grid-column-full  nhsuk-u-padding-0" style="display: none;">
       <div class="nhsuk-inset-text nhsuk-inset-text-unbounded nhsuk-u-margin-0 nhsuk-u-margin-bottom-4">
@@ -48,7 +48,7 @@
             <div>
               <div class="nhsuk-form-group nhsuk-u-width-full">
                 <label class="nhsuk-label" for="search-term">Product name</label>
-                
+
                 <input class="nhsuk-input nhsuk-u-width-full" id="search-term" type="text" name="ampName" value="">
               </div>
             </div>
@@ -107,9 +107,11 @@
     <a class="nhsuk-button" data-module="nhsuk-button" href="/tce-2226/result" draggable="false" role="button">
       Search
     </a>
-    <a class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" href="/tce-2226" draggable="false" role="button">
+    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button"
+            type="button"
+            onclick="window.location.href='/tce-2226'">
       Clear
-    </a>
+    </button>
 
     <script type="application/javascript">
       var prevText = document.getElementById('search-supplier-input').getAttribute("value");

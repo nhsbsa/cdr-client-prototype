@@ -1,13 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="nhsuk-back-link nhsuk-u-margin-bottom-6">
-    <a class="nhsuk-back-link__link" href="home-page">
-        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             aria-hidden="true" height="24" width="24">
-            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-        </svg>
-        <span id="back-link-text">Back to home page </span></a>
-</div>
+<a class="nhsuk-back-link nhsuk-u-margin-bottom-6" href="home-page"><span id="back-link-text">Back to home page </span></a>
 
 <fieldset class="nhsuk-fieldset" aria-describedby="accreditation-body-hint">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--xl">
@@ -49,21 +42,8 @@
                 <section class="nhsuk-u-padding-bottom-4" id="attributes-section">
 
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=attributes"
-                           id="action-link-update-attributes" aria-label="Link to update attributes">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=attributes"
+                           id="action-link-update-attributes" aria-label="Link to update attributes" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
 
                     <h3 class="nhsuk-heading-m" id="attributes-table-heading">Attribute details</h3>
@@ -80,11 +60,10 @@
                                        for="insertAttribute-table--name-filter-input">
                                     Attribute name
                                     <svg id="insertAttribute-table--name-header-search-icon"
-                                         style="height: 1.1875rem; width: 1.1875rem;" class="nhsuk-icon nhsuk-icon__search"
+                                         style="height: 1.1875rem; width: 1.1875rem;fill:#005eb8" class="nhsuk-icon nhsuk-icon--search"
                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
                                          focusable="false">
-                                        <path
-                                                d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                                        <path d="m20.7 18.9-4.1-4.1a7 7 0 1 0-1.4 1.4l4 4.1a1 1 0 0 0 1.5 0c.4-.4.4-1 0-1.4ZM6 10.6a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"/>
                                     </svg>
                                     <br/>
                                 </label>
@@ -1093,21 +1072,8 @@
                 <section class="nhsuk-u-padding-bottom-4" id="snomed-section">
 
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=codes"
-                           id="action-link-update-codes" aria-label="Link to update codes">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=codes"
+                           id="action-link-update-codes" aria-label="Link to update codes" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
                     <h3 class="nhsuk-heading-m">Codes</h3>
                     <table role="table" id="codes-table" class="nhsuk-table-responsive">
@@ -1360,21 +1326,8 @@
                 <!--Summary-->
                 <section class="nhsuk-u-padding-bottom-4" id="summary-section">
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=summary"
-                           id="action-link-update-summary" aria-label="Link to update summary">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=summary"
+                           id="action-link-update-summary" aria-label="Link to update summary" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
                     <h3 class="nhsuk-heading-m">Summary</h3>
 
@@ -1466,21 +1419,8 @@
                 <!--Names-->
                 <section class="nhsuk-u-padding-bottom-4" id="name-section">
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=name"
-                           id="action-link-update-name" aria-label="Link to update name">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=name"
+                           id="action-link-update-name" aria-label="Link to update name" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
                     <h3 class="nhsuk-heading-m">Name details</h3>
                     <table class="nhsuk-table-responsive nhsuk-u-padding-bottom-4" id="names-table" role="table"
@@ -1579,21 +1519,8 @@
 
 
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=altnames"
-                           id="action-link-update-alternative-name" aria-label="Link to update alternative-name">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=altnames"
+                           id="action-link-update-alternative-name" aria-label="Link to update alternative-name" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
 
                     <h3 class="nhsuk-heading-m">Alternative names</h3>
@@ -1603,21 +1530,8 @@
                 <!--Unit Dose/ Form Details-->
                 <section class="nhsuk-u-padding-bottom-4" id="unit-dose-section">
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=unitdose"
-                           id="action-link-update-unit-form-dose" aria-label="Link to update unit-form-dose">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=unitdose"
+                           id="action-link-update-unit-form-dose" aria-label="Link to update unit-form-dose" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
                     <h3 class="nhsuk-heading-m">Unit Dose/ Form details</h3>
                     <table role="table" class="nhsuk-table-responsive">
@@ -1727,21 +1641,8 @@
                 <!--Ingredient Details-->
                 <section class="nhsuk-u-padding-bottom-4" id="ingredients-section">
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=ingredients"
-                           id="action-link-update-ingredients" aria-label="Link to update ingredients">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=ingredients"
+                           id="action-link-update-ingredients" aria-label="Link to update ingredients" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
                     <h3 class="nhsuk-heading-m">Ingredient details</h3>
 
@@ -1872,21 +1773,8 @@
 
 
 
-                    <div class="nhsuk-action-link" style="float: right">
-
-                        <a class="nhsuk-action-link__link" href="/update/vmp?productId=26996&amp;sectionToUpdate=vtms"
-                           id="action-link-update-associated-vtm" aria-label="Link to update associated-vtm">
-                            <svg aria-hidden="true"
-                                 class="nhsuk-icon nhsuk-icon__arrow-right-circle" viewBox="0 0 24 24"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                        d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-                            </svg>
-
-                            <span class="nhsuk-action-link__text">Update</span>
-                        </a>
-                    </div>
+                    <a class="nhsuk-action-link" href="/update/vmp?productId=26996&amp;sectionToUpdate=vtms"
+                           id="action-link-update-associated-vtm" aria-label="Link to update associated-vtm" style="float: right"><svg class="nhsuk-icon nhsuk-icon--arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg><span class="nhsuk-action-link__text">Update</span></a>
 
 
                     <h3 class="nhsuk-heading-m">Associated VTM</h3>

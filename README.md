@@ -17,11 +17,17 @@ or
 git clone git@github.com:nhsbsa/cdr-client-prototype.git
 ```
 ### NPM Setup
-Once the project is cloned, run the following command to download and install node dependencies:
+Dependencies must be installed following the [NHSBSA dependency chain abuse guidance](https://nhsbsa.github.io/nhsbsa-digital-playbook/security/tech-node-dependency-chain-abuse/#safe-execution).
+Scan the lock file for malware **before** installing, check `osvscan.md` for any vulnerabilities:
 ```shell
-npm install
-npm install gulp
+docker run --rm -v "${PWD}:/src" -w /src ghcr.io/google/osv-scanner:latest scan -f markdown --lockfile=package-lock.json --output osvscan.md
 ```
+if no issues found, then run
+```shell
+npm ci
+```
+
+To change dependencies, use the `--package-lock-only` flag (for example `npm install --package-lock-only`), scan again, then run `npm ci`.
 If there are issues downloading dependencies, you may need to add the nhsbsa npm repository.
 To do this:
 - Create the file ~/.npmrc
@@ -31,29 +37,27 @@ registry=https://dps-nexus.service.nhsbsa:8443/repository/npm
 strict-ssl=false
 ```
 
-### Install the live reload plugin
-Install the live reload plugin for your browser
-* [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related)
-
 &ensp;
 ***
 &ensp;
 ## Running the Prototype locally
-To run the prototype locally, use gulp:
-
+To run the prototype locally:
 
 ```shell
-gulp
+npm run dev
 ```
 
-The prototype will then open a window in your browser on http://localhost:3000.
-
-Browser sync settings can be accessed on http://localhost:3001.
+optionally the below command if live reload is not needed
+```shell
+node index.js
+```
+The prototype will be available on http://localhost:3000 (or the PORT set in .env).
+The server restarts and the browser reloads automatically when files in `templates`, `lib` or `public` change.
 
 ## Running Pa11y accessibility checks
  
 ```shell
-pa11y-ci -c pa11y.json
+npm run pa11y
 ```
 &ensp;
 ***
