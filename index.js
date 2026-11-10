@@ -17,6 +17,10 @@ const port = process.env.PORT || "3000";
 
 app.use(auth);
 
+if (process.env.LIVE_RELOAD === 'true' && process.env.NODE_ENV !== 'production') {
+  app.use(require('./lib/dev-live-reload'));
+}
+
 /**
  *  App Configuration
  */

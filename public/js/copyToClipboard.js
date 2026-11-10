@@ -7,7 +7,7 @@ function CopyToClipboard() {
   for (let i = 0; i < targets.length; i++) {
     const element = targets[i];
     element.insertAdjacentHTML('beforeend',
-        '<svg class="nhsuk-icon nhsuk-icon__tick nhsuk-u-inline-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">'
+        '<svg class="nhsuk-icon nhsuk-icon--tick nhsuk-u-inline-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">'
         +
         '<rect x="9" y="5" rx="1" ry="1" width="9" height="11" style="fill:white;stroke:black; stroke-width:1;opacity:1" />'
         +
